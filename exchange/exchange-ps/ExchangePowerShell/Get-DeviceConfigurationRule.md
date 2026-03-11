@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Online, Security & Compliance
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-deviceconfigurationrule
 schema: 2.0.0
 title: Get-DeviceConfigurationRule
@@ -63,6 +61,8 @@ This example shows details about the mobile device configuration rule named Lega
 > Applicable: Exchange Online, Security & Compliance
 
 The Identity parameter specifies the mobile device configuration rule that you want to view. The name of the rule uses the syntax `<Mobile device configuration policy name>{<GUID value>}`. For example, `Legal Team{58b50d1c-2b18-461c-8893-3e20c648b136}`.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: ComplianceRuleIdParameter

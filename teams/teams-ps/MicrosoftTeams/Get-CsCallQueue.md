@@ -46,8 +46,6 @@ This example gets the Call Queue with the identity 5e3a575e-1faa-49ff-83c2-5cf1c
 
 ### -Descending
 
-> Applicable: Microsoft Teams
-
 The Descending parameter sorts Call Queues in descending order
 
 ```yaml
@@ -64,8 +62,6 @@ Accept wildcard characters: False
 
 ### -ExcludeContent
 
-> Applicable: Microsoft Teams
-
 The ExcludeContent parameter only displays the Name and Id of the Call Queues
 
 ```yaml
@@ -81,8 +77,6 @@ Accept wildcard characters: False
 ```
 
 ### -First
-
-> Applicable: Microsoft Teams
 
 The First parameter gets the first N Call Queues, up to a maximum of 100 at a time.
 When not specified, the default behavior is to return the first 100 call queues. It is intended to be used in conjunction with the `-Skip` parameter for pagination purposes.
@@ -102,8 +96,6 @@ Accept wildcard characters: False
 
 ### -Identity
 
-> Applicable: Microsoft Teams
-
 PARAMVALUE: Guid
 
 ```yaml
@@ -119,8 +111,6 @@ Accept wildcard characters: False
 ```
 
 ### -NameFilter
-
-> Applicable: Microsoft Teams
 
 The NameFilter parameter returns Call Queues where name contains specified string
 
@@ -138,8 +128,6 @@ Accept wildcard characters: False
 
 ### -Skip
 
-> Applicable: Microsoft Teams
-
 The Skip parameter skips the first N call queues. It is intended to be used in conjunction with the `-First` parameter for pagination purposes.
 
 ```yaml
@@ -155,8 +143,6 @@ Accept wildcard characters: False
 ```
 
 ### -Sort
-
-> Applicable: Microsoft Teams
 
 The Sort parameter specifies the property used to sort.
 
@@ -174,9 +160,7 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
-PARAMVALUE: Guid
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: Guid
@@ -191,6 +175,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

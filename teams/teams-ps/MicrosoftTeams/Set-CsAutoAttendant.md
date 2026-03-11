@@ -120,8 +120,6 @@ This example modifies an existing AA, removing the Christmas holiday call handli
 
 ### -Instance
 
-> Applicable: Microsoft Teams
-
 The Instance parameter is the object reference to the AA to be modified.
 
 You can retrieve an object reference to an existing AA by using the Get-CsAutoAttendant cmdlet and assigning the returned value to a variable.
@@ -140,9 +138,7 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
-{{ Fill Tenant Description }}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: System.Guid
@@ -157,6 +153,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable`. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

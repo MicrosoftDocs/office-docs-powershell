@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/new-organizationrelationship
 schema: 2.0.0
 title: New-OrganizationRelationship
@@ -49,7 +47,7 @@ New-OrganizationRelationship [-Name] <String> -DomainNames <MultiValuedProperty>
 ```
 
 ## DESCRIPTION
-Before you can create an organization relationship, you must first create a federation trust. For more information, see [Federation](https://learn.microsoft.com/exchange/federation-exchange-2013-help).
+In on-premises Exchange, you must first create a federation trust before you can create an organization relationship. Organizations hosted in the cloud-based service don't need to create a federation trust. For more information, see [Federation](https://learn.microsoft.com/exchange/federation-exchange-2013-help). 
 
 You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -60,40 +58,30 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Get-FederationInformation -DomainName Contoso.com | New-OrganizationRelationship -Name "Contoso" -FreeBusyAccessEnabled $true -FreeBusyAccessLevel LimitedDetails
 ```
 
-This example creates an organization relationship with Contoso. The domain name to connect to is contoso.com. The following settings are used:
+This example creates an organization relationship with Contoso. The following settings are used:
 
-Free/busy access is enabled.
-
-The requesting organization receives time, subject, and location information from the target organization.
-
-This example creates the organization relationship using only the domain name specified in the Get-FederationInformation command.
-
-Before you use this method to create an organization relationship, use the Get-FederatedOrganizationIdentifier cmdlet to verify you created an organization identifier using the Set-FederationOrganizationIdentifier cmdlet. Then you can add any additional domains used by the target organization.
-
-**Tip**: For information about changes made to the Get-FederationInformation cmdlet to improve security and privacy, see [Important Update to the Get-FederationInformation Cmdlet in Exchange Online](https://techcommunity.microsoft.com/blog/exchange/important-update-to-the-get-federationinformation-cmdlet-in-exchange-online/4410095).
+- The domain names of Contoso are contoso.com, northamerica.contoso.com, and europe.contoso.com.
+- Free/busy access is enabled.
+- Contoso can see free/busy information with time, subject, and location information from your organization.
 
 ### Example 2
 ```powershell
-New-OrganizationRelationship -Name "Fourth Coffee" -DomainNames "mail.fourthcoffee.com" -FreeBusyAccessEnabled $true -FreeBusyAccessLevel AvailabilityOnly -TargetAutodiscoverEpr "https://mail.fourthcoffee.com/autodiscover/autodiscover.svc/wssecurity" -TargetApplicationUri "mail.fourthcoffee.com"
+New-OrganizationRelationship -Name "Fabrikam" -DomainNames "fabrikam.com" -FreeBusyAccessEnabled $true -FreeBusyAccessLevel AvailabilityOnly -TargetAutodiscoverEpr "https://autodiscover.outlook.com/autodiscover/autodiscover.svc/WSSecurity" -TargetSharingEPR "https://outlook.office365.com/EWS/Exchange.asmx" -TargetApplicationUri "outlook.com"
 ```
 
-This example creates the organization relationship with Fourth Coffee using the following settings. In this example, the connection settings with the external organization are provided.
+This example creates the organization relationship with Fabrikam, an organization hosted in the online service. The connection settings of Fabrikam are provided which improves reliability of the organization relationship. The following settings are used:
 
-The domain to connect to is mail.fourthcoffee.com.
-
-The Exchange Web Services application URL is mail.fourthcoffee.com.
-
-The Autodiscover URL is `https://mail.fourthcoffee.com/autodiscover/autodiscover.svc/wssecurity`.
-
-Free/busy access is enabled.
-
-The requesting organization only receives free/busy information with the time.
+- The domain name of Fabrikam is fabrikam.com.
+- The Exchange Web Services application URL is `https://outlook.office365.com/EWS/Exchange.asmx`.
+- The Autodiscover URL is `https://autodiscover.outlook.com/autodiscover/autodiscover.svc/WSSecurity`.
+- Free/busy access is enabled.
+- Fabrikam can see free/busy information with the time only.
 
 ## PARAMETERS
 
 ### -Name
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Name parameter specifies the unique name of the organization relationship. The maximum length is 64 characters.
 
@@ -111,7 +99,7 @@ Accept wildcard characters: False
 
 ### -DomainNames
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The DomainNames parameter specifies the SMTP domains of the external organization. You can specify multiple domains separated by commas (for example, "contoso.com","northamerica.contoso.com"), limited to 238 domains in one request.
 
@@ -129,7 +117,7 @@ Accept wildcard characters: False
 
 ### -ArchiveAccessEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ArchiveAccessEnabled parameter specifies whether the organization relationship is configured to provide remote archive access. Valid values are:
 
@@ -150,7 +138,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -171,7 +159,7 @@ Accept wildcard characters: False
 
 ### -DeliveryReportEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The DeliveryReportEnabled parameter specifies whether Delivery Reports should be shared over the organization relationship. Valid values are:
 
@@ -214,7 +202,7 @@ Accept wildcard characters: False
 
 ### -Enabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Enabled parameter specifies whether to enable the organization relationship. Valid values are:
 
@@ -235,7 +223,7 @@ Accept wildcard characters: False
 
 ### -FreeBusyAccessEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The FreeBusyAccessEnabled parameter specifies whether the organization relationship should be used to retrieve free/busy information from the external organization. Valid values are:
 
@@ -258,7 +246,7 @@ Accept wildcard characters: False
 
 ### -FreeBusyAccessLevel
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The FreeBusyAccessLevel parameter specifies the maximum amount of detail returned to the requesting organization. Valid values are:
 
@@ -282,7 +270,7 @@ Accept wildcard characters: False
 
 ### -FreeBusyAccessScope
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The FreeBusyAccessScope parameter specifies an internal mail-enabled security group where member free/busy information is accessible by the external organization. For best performance, the group should have less than 10,000 members. You can use any value that uniquely identifies the group. For example:
 
@@ -307,7 +295,7 @@ Accept wildcard characters: False
 
 ### -MailboxMoveCapability
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -334,7 +322,7 @@ Accept wildcard characters: False
 
 ### -MailboxMoveEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The MailboxMoveEnabled parameter specifies whether the organization relationship enables moving mailboxes to or from the external organization. Valid values are:
 
@@ -355,7 +343,7 @@ Accept wildcard characters: False
 
 ### -MailboxMovePublishedScopes
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -384,7 +372,7 @@ Accept wildcard characters: False
 
 ### -MailTipsAccessEnabled
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The MailTipsAccessEnabled parameter specifies whether MailTips for users in this organization are returned over this organization relationship. Valid values are:
 
@@ -407,7 +395,7 @@ Accept wildcard characters: False
 
 ### -MailTipsAccessLevel
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The MailTipsAccessLevel parameter specifies the level of MailTips data that's externally shared over this organization relationship. This parameter can have the following values:
 
@@ -431,7 +419,7 @@ Accept wildcard characters: False
 
 ### -MailTipsAccessScope
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The MailTipsAccessScope parameter specifies a mail-enabled security group in the internal organization that contains users whose free/busy information is accessible by an external organization. You can use any value that uniquely identifies the group. For example:
 
@@ -466,7 +454,7 @@ Accept wildcard characters: False
 
 ### -OAuthApplicationId
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -486,7 +474,7 @@ Accept wildcard characters: False
 
 ### -OrganizationContact
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The OrganizationContact parameter specifies the email address that can be used to contact the external organization (for example, administrator@fourthcoffee.com).
 
@@ -504,7 +492,7 @@ Accept wildcard characters: False
 
 ### -PhotosEnabled
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The PhotosEnabled parameter specifies whether photos for users in the internal organization are returned over the organization relationship. Valid values are:
 
@@ -525,7 +513,7 @@ Accept wildcard characters: False
 
 ### -TargetApplicationUri
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The TargetApplicationUri parameter specifies the target Uniform Resource Identifier (URI) of the external organization. The TargetApplicationUri parameter is specified by Exchange when requesting a delegated token for the external organization to fetch free and busy information, for example, mail.contoso.com.
 
@@ -543,7 +531,7 @@ Accept wildcard characters: False
 
 ### -TargetAutodiscoverEpr
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The TargetAutodiscoverEpr parameter specifies the Autodiscover URL of Exchange Web Services for the external organization, for example, `https://contoso.com/autodiscover/autodiscover.svc/wssecurity`. Exchange uses the Autodiscover service to automatically detect the correct Exchange server endpoint to use for external requests.
 
@@ -561,7 +549,7 @@ Accept wildcard characters: False
 
 ### -TargetOwaURL
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The TargetOwaURL parameter specifies the Outlook on the web (formerly Outlook Web App) URL of the external organization defined in the organization relationship. It's used for Outlook on the web redirection in a cross-premise Exchange scenario. Configuring this attribute enables users in the organization to use their current Outlook on the web URL to access Outlook on the web in the external organization.
 
@@ -579,11 +567,11 @@ Accept wildcard characters: False
 
 ### -TargetSharingEpr
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The TargetSharingEpr parameter specifies the URL of the target Exchange Web Services for the external organization.
 
-If you use this parameter, this URL is always used to reach the external Exchange server. The URL that's specified by the TargetAutodiscoverEpr parameter isn't used to locate the external Exchange server.
+If you use this parameter, this URL is always used to reach the external Exchange server. The URL that's specified by the TargetAutodiscoverEpr parameter isn't used to locate the external Exchange server. Using this parameter improves reliability of the organization relationship.
 
 ```yaml
 Type: Uri
@@ -599,7 +587,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 

@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
-author: chrisda
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-mailboximportrequeststatistics
 schema: 2.0.0
 title: Get-MailboxImportRequestStatistics
@@ -115,6 +113,8 @@ This example returns additional information for all the import requests that hav
 The Identity parameter specifies the identity of the import request. By default, import requests are named `<alias>\MailboxImportX` (where X = 0-9). If you specified a name when you created the import request, use the following syntax: `Alias\Name`.
 
 **Note**: In Exchange Online, the alias of a soft-deleted mailbox might match the alias of an active mailbox. To ensure uniqueness, use the RequestGuid value from the output of the Get-MailboxImportRequest cmdlet for the value of this parameter.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: MailboxImportRequestIdParameter

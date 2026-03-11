@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentBlockedDays
-Sets a duration based assignment block on all the telephone numbers upon unassignment. ***This feature is currently not available.***
+Sets a duration based assignment block on all the telephone numbers upon unassignment.
 
 ```yaml
 Type: System.Int32
@@ -142,6 +142,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+[Remove-CsPhoneNumberTenantConfiguration](Remove-CsPhoneNumberTenantConfiguration.md)
 
-- [Remove-CsPhoneNumberTenantConfiguration](Remove-CsPhoneNumberTenantConfiguration.md)
-- [Get-CsPhoneNumberTenantConfiguration](Get-CsPhoneNumberTenantConfiguration.md)
+[Get-CsPhoneNumberTenantConfiguration](Get-CsPhoneNumberTenantConfiguration.md)

@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-accesstocustomerdatarequest
 schema: 2.0.0
 title: Get-AccessToCustomerDataRequest
@@ -60,7 +58,7 @@ This example returns detailed information the Customer Lockbox request EXSR12345
 
 ### -ApprovalStatus
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ApprovalStatus parameter filters the results by approval status. Valid values are:
 
@@ -83,7 +81,7 @@ Accept wildcard characters: False
 
 ### -CreatedAfter
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The CreatedAfter parameter filters the results by the creation date in Coordinated Universal Time (UTC).
 
@@ -106,7 +104,7 @@ Accept wildcard characters: False
 
 ### -RequestId
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The RequestId parameter filters the results by reference number (for example, EXSR123456).
 

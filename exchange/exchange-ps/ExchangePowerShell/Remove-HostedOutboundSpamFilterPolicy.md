@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/remove-hostedoutboundspamfilterpolicy
 schema: 2.0.0
 title: Remove-HostedOutboundSpamFilterPolicy
@@ -45,7 +43,7 @@ This example removes the outbound spam filter policy named Contoso Executives.
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the outbound spam filter policy you want to remove. You can use any value that uniquely identifies the policy. For example:
 
@@ -67,7 +65,7 @@ Accept wildcard characters: False
 
 ### -Force
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 

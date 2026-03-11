@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
-author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-logonstatistics
 schema: 2.0.0
 title: Get-LogonStatistics
@@ -77,6 +75,8 @@ The Identity parameter specifies the mailbox to get logon statistics from. You c
 This parameter accepts pipeline input from the Get-Mailbox command.
 
 You can't use this parameter with the Database or Server parameters.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: LogonableObjectIdParameter

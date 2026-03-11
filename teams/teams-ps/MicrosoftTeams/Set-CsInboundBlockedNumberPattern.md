@@ -123,6 +123,9 @@ Accept wildcard characters: False
 ### -ResourceAccount
 The GUID of a resource account to redirect calls to when the pattern matches. If specified, matched calls will be redirected to this resource account instead of being blocked.
 
+> [!NOTE]
+> Currently, redirection to a Resource Account is supported for calls from Operator Connect and Direct Routing.  Calling Plan calls will be blocked. 
+
 ```yaml
 Type: Guid
 Parameter Sets: (All)

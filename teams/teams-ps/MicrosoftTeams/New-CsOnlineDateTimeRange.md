@@ -54,8 +54,6 @@ This example creates a date-time range spanning from December 24, 2017 9AM to De
 
 ### -End
 
-> Applicable: Microsoft Teams
-
 The End parameter represents the end bound of the date-time range.
 
 If not present, the end bound of the date time range is set to 00:00 of the day after the start date.
@@ -74,8 +72,6 @@ Accept wildcard characters: False
 
 ### -Start
 
-> Applicable: Microsoft Teams
-
 The Start parameter represents the start bound of the date-time range.
 
 ```yaml
@@ -92,9 +88,7 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
-{{ Fill Tenant Description }}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: System.Guid
@@ -109,6 +103,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
@@ -124,3 +119,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineschedule)
+
+[New-CsOnlineTimeRange](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinetimerange)
+
+[New-CsAutoAttendantCallFlow](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallflow)
+
+[New-CsAutoAttendantCallHandlingAssociation](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallhandlingassociation)
+
+[New-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendant)

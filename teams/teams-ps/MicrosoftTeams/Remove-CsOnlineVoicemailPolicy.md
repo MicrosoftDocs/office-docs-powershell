@@ -37,8 +37,6 @@ The command shown in Example 1 deletes a per-user online voicemail policy Custom
 
 ### -Confirm
 
-> Applicable: Microsoft Teams
-
 Prompts you for confirmation before executing the command.
 
 ```yaml
@@ -54,8 +52,6 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-
-> Applicable: Microsoft Teams
 
 A unique identifier specifying the scope, and in some cases the name, of the policy.
 
@@ -73,8 +69,6 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Microsoft Teams
-
 Describes what would happen if you executed the command without actually executing the command.
 
 ```yaml
@@ -90,6 +84,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

@@ -20,21 +20,18 @@ Use the New-CsComplianceRecordingForCallQueueTemplate cmdlet to create a Complia
 
 ```
 New-CsComplianceRecordingForCallQueueTemplate -Name <String> -Description <String> -BotApplicationInstanceObjectId <String>
- [-RequiredDuringCall <Boolean>] [-RequiredBeforeCall <Boolean>] [-CurrentInvitationCount <Int32>]
+ [-RequiredDuringCall] [-RequiredBeforeCall] [-CurrentInvitationCount <Int32>]
  [-PairedApplicationInstanceObjectId <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Use the New-CsComplianceRecordingForCallQueueTemplate cmdlet to create a Compliance Recording for Call Queues template.
 
-> [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
-
 ## EXAMPLES
 
 ### Example 1
 ```
-New-CsComplianceRecordingForCallQueueTemplate -Name "Customer Service" -Description "Required before/during call" -BotApplicationInstanceObjectId 14732826-8206-42e3-b51e-6693e2abb698 -RequiredDuringCall $true -RequiredBeforeCall $true
+New-CsComplianceRecordingForCallQueueTemplate -Name "Customer Service" -Description "Required before/during call" -BotApplicationInstanceObjectId 14732826-8206-42e3-b51e-6693e2abb698 -RequiredDuringCall -RequiredBeforeCall
 ```
 
 This example creates a new Compliance Recording for Call Queue template.
@@ -129,13 +126,13 @@ Indicates if the compliance recording for call queues bot must be able to join t
 *Strict recording* - if the bot can't join the call, the call will end.
 
 ```yaml
-Type: System.Booleen
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -146,18 +143,19 @@ Indicates if the compliance recording for call queues bot must remain part of th
 *Strict recording* - if the bot leaves the call, the call will end.
 
 ```yaml
-Type: System.Booleen
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

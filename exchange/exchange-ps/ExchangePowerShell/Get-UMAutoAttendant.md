@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
-author: chrisda
 external help file: Microsoft.Exchange.MediaAndDevices-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-umautoattendant
 schema: 2.0.0
 title: Get-UMAutoAttendant
@@ -65,6 +63,8 @@ This examples displays all the UM auto attendants associated with the UM dial pl
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016
 
 The Identity parameter specifies the identifier for the UM auto attendant that's being viewed. This is the directory object ID for the UM auto attendant.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: UMAutoAttendantIdParameter

@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
-author: chrisda
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-compliancesearch
 schema: 2.0.0
 title: Get-ComplianceSearch
@@ -80,6 +78,8 @@ To improve the performance of this cmdlet, some compliance search properties are
 To view these properties, you need to use the Identity parameter in the command.
 
 **Note**: The NumBindings property includes the primary mailbox, the main archive, and any additional archives for users included in the search. NumBindings is not the number of users included in the search, because each included user could have or not have a combination of a primary mailbox, a main archive, and additional archives.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: ComplianceSearchIdParameter

@@ -58,8 +58,6 @@ Example 3 uses the Filter parameter to return all the voicemail policies that ha
 
 ### -Filter
 
-> Applicable: Microsoft Teams
-
 This parameter accepts a wildcard string and returns all voicemail policies with identities matching that string. For example, a Filter value of Tag:* will return all preconfigured voicemail policy instances (excluding forest default "Global") available to use by the tenant admins.
 
 ```yaml
@@ -76,8 +74,6 @@ Accept wildcard characters: False
 
 ### -Identity
 
-> Applicable: Microsoft Teams
-
 A unique identifier specifying the scope, and in some cases the name, of the policy. If this parameter is omitted, all voicemail policies available for use are returned.
 
 ```yaml
@@ -92,6 +88,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

@@ -29,10 +29,13 @@ Each AA can be associated with phone numbers that allow callers to reach specifi
 
 You can create new AAs by using the New-CsAutoAttendant cmdlet; each newly created AA gets assigned a random string that serves as the identity of the AA.
 
-> [!CAUTION]
-> The following configuration parameters are currently only available in PowerShell and do not appear in Teams admin center. Saving a call queue configuration through Teams admin center will _remove_ any of these configured items:
+> [!IMPORTANT]
+> The following configuration parameters are currently only available in PowerShell and do not appear in Teams admin center:
 >
+> Authorized Users
 > - -HideAuthorizedUsers
+>
+> Dial by name
 > - -UserNameExtension
 >
 > The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
@@ -273,8 +276,6 @@ This example creates a new AA named _Main auto attendant_ that has the following
 
 ### -AuthorizedUsers
 
-> Applicable: Microsoft Teams
-
 This is a list of GUIDs for users who are authorized to make changes to this call queue. The users must also have a TeamsVoiceApplications policy assigned. The GUID should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx).
 
 ```yaml
@@ -290,8 +291,6 @@ Accept wildcard characters: False
 ```
 
 ### -CallFlows
-
-> Applicable: Microsoft Teams
 
 The CallFlows parameter represents call flows, which are required if they are referenced in the CallHandlingAssociations parameter.
 
@@ -310,8 +309,6 @@ Accept wildcard characters: False
 ```
 
 ### -CallHandlingAssociations
-
-> Applicable: Microsoft Teams
 
 The CallHandlingAssociations parameter represents the call handling associations.
 The AA service uses call handling associations to determine which call flow to execute when a specific schedule is in effect.
@@ -332,8 +329,6 @@ Accept wildcard characters: False
 
 ### -DefaultCallFlow
 
-> Applicable: Microsoft Teams
-
 The DefaultCallFlow parameter is the flow to be executed when no other call flow is in effect (for example, during business hours).
 
 You can create the DefaultCallFlow by using the [`New-CsAutoAttendantCallFlow`](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallflow) cmdlet.
@@ -351,12 +346,6 @@ Accept wildcard characters: False
 ```
 
 ### -EnableMainlineAttendant
-
-> Applicable: Microsoft Teams
-
-_Voice applications private preview customers only._
-
-_Saving an auto attendant configuration through Teams admin center will remove this setting._
 
 The EnableMainlineAttendant parameter enables Mainline Attendant features for this Auto attendant.
 
@@ -379,12 +368,6 @@ Accept wildcard characters: False
 
 ### -MainlineAttendantAgentVoiceId
 
-> Applicable: Microsoft Teams
-
-_Voice applications private preview customers only._
-
-_Saving an auto attendant configuration through Teams admin center will remove this setting._
-
 The MainlineAttendantAgentVoiceId parameter sets the voice that will be used with Mainline Attendant.
 
 PARAMVALUE: Alloy | Echo | Shimmer
@@ -403,8 +386,6 @@ Accept wildcard characters: False
 
 ### -EnableVoiceResponse
 
-> Applicable: Microsoft Teams
-
 The EnableVoiceResponse parameter indicates whether voice response for AA is enabled.
 
 ```yaml
@@ -420,8 +401,6 @@ Accept wildcard characters: False
 ```
 
 ### -ExclusionScope
-
-> Applicable: Microsoft Teams
 
 Specifies the users to which call transfers are not allowed through directory lookup feature.
 If not specified, no user in the organization is excluded from directory lookup.
@@ -442,10 +421,6 @@ Accept wildcard characters: False
 
 ### -HideAuthorizedUsers
 
-> Applicable: Microsoft Teams
-
-_Saving an auto attendant configuration through Teams admin center will *remove* this setting._
-
 The GUID should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx).
 
 ```yaml
@@ -461,8 +436,6 @@ Accept wildcard characters: False
 ```
 
 ### -InclusionScope
-
-> Applicable: Microsoft Teams
 
 Specifies the users to which call transfers are allowed through directory lookup feature.
 If not specified, all users in the organization can be reached through directory lookup.
@@ -483,8 +456,6 @@ Accept wildcard characters: False
 
 ### -LanguageId
 
-> Applicable: Microsoft Teams
-
 The LanguageId parameter is the language that is used to read text-to-speech (TTS) prompts.
 
 You can query the supported languages using the [`Get-CsAutoAttendantSupportedLanguage`](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendantsupportedlanguage) cmdlet.
@@ -503,8 +474,6 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Microsoft Teams
-
 The Name parameter is a friendly name that is assigned to the AA.
 
 ```yaml
@@ -520,8 +489,6 @@ Accept wildcard characters: False
 ```
 
 ### -Operator
-
-> Applicable: Microsoft Teams
 
 The Operator parameter represents the SIP address or PSTN number of the operator.
 
@@ -541,9 +508,7 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
-{{ Fill Tenant Description }}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: System.Guid
@@ -558,8 +523,6 @@ Accept wildcard characters: False
 ```
 
 ### -TimeZoneId
-
-> Applicable: Microsoft Teams
 
 The TimeZoneId parameter represents the AA time zone. All schedules are evaluated based on this time zone.
 
@@ -579,14 +542,16 @@ Accept wildcard characters: False
 
 ### -UserNameExtension
 
-> Applicable: Microsoft Teams
-
-_Saving an auto attendant configuration through Teams admin center will *remove* this setting._
-
 The UserNameExtension parameter is a string that specifies how to extend usernames in dial search by appending additional information after the name.
 This parameter is used in dial search when multiple search results are found, as it helps to distinguish users with similar names. Possible values are:
 
-- None: Default value, which means the username is pronounced as is.
+- None: Default value. No additional information is provided.
+  
+  In this case, if there are two John Smiths, the caller will hear:
+  
+     For John Smith, press 1.<br>
+     For John Smith, press 2.
+  
 - Office: Adds office information from the user profile.
 - Department: Adds department information from the user profile.
 
@@ -602,8 +567,6 @@ Accept wildcard characters: False
 ```
 
 ### -VoiceId
-
-> Applicable: Microsoft Teams
 
 The VoiceId parameter represents the voice that is used to read text-to-speech (TTS) prompts.
 
@@ -622,6 +585,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

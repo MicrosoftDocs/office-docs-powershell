@@ -93,8 +93,6 @@ This example creates a fixed schedule that is never active.
 
 ### -Complement
 
-> Applicable: Microsoft Teams
-
 The Complement parameter indicates how the schedule is used.
 When Complement is enabled, the schedule is used as the inverse of the provided configuration.
 For example, if Complement is enabled and the schedule only contains time ranges of Monday to Friday from 9AM to 5PM, then the schedule is active at all times other than the specified time ranges.
@@ -113,8 +111,6 @@ Accept wildcard characters: False
 
 ### -DateTimeRanges
 
-> Applicable: Microsoft Teams
-
 List of date-time ranges for a fixed schedule. At most, 10 date-time ranges can be specified using this parameter.
 
 ```yaml
@@ -130,8 +126,6 @@ Accept wildcard characters: False
 ```
 
 ### -FixedSchedule
-
-> Applicable: Microsoft Teams
 
 The FixedSchedule parameter indicates that a fixed schedule is to be created.
 
@@ -149,8 +143,6 @@ Accept wildcard characters: False
 
 ### -FridayHours
 
-> Applicable: Microsoft Teams
-
 List of time ranges for that day.
 
 ```yaml
@@ -166,8 +158,6 @@ Accept wildcard characters: False
 ```
 
 ### -MondayHours
-
-> Applicable: Microsoft Teams
 
 List of time ranges for that day.
 
@@ -185,8 +175,6 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Microsoft Teams
-
 The Name parameter represents a unique friendly name for the schedule.
 
 ```yaml
@@ -202,8 +190,6 @@ Accept wildcard characters: False
 ```
 
 ### -SaturdayHours
-
-> Applicable: Microsoft Teams
 
 List of time ranges for that day.
 
@@ -221,8 +207,6 @@ Accept wildcard characters: False
 
 ### -SundayHours
 
-> Applicable: Microsoft Teams
-
 List of time ranges for that day.
 
 ```yaml
@@ -239,9 +223,7 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-> Applicable: Microsoft Teams
-
-{{ Fill Tenant Description }}
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: System.Guid
@@ -256,8 +238,6 @@ Accept wildcard characters: False
 ```
 
 ### -ThursdayHours
-
-> Applicable: Microsoft Teams
 
 List of time ranges for that day.
 
@@ -275,8 +255,6 @@ Accept wildcard characters: False
 
 ### -TuesdayHours
 
-> Applicable: Microsoft Teams
-
 List of time ranges for that day.
 
 ```yaml
@@ -292,8 +270,6 @@ Accept wildcard characters: False
 ```
 
 ### -WednesdayHours
-
-> Applicable: Microsoft Teams
 
 List of time ranges for that day.
 
@@ -311,8 +287,6 @@ Accept wildcard characters: False
 
 ### -WeeklyRecurrentSchedule
 
-> Applicable: Microsoft Teams
-
 The WeeklyRecurrentSchedule parameter indicates that a weekly recurrent schedule is to be created. This parameter is mandatory when a weekly recurrent schedule is to be created.
 
 ```yaml
@@ -328,6 +302,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

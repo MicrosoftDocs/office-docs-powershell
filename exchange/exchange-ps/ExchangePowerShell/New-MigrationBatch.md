@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
-author: chrisda
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/new-migrationbatch
 schema: 2.0.0
 title: New-MigrationBatch
@@ -99,7 +97,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]>
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
  [-RemoveOnCopy]
- [-ReportInterval <Timespan>]
+ [-ReportInterval <TimeSpan>]
  [-SkipDelegates]
  [-SkipMerging <MultiValuedProperty>]
  [-SkipProvisioning]
@@ -131,7 +129,7 @@ New-MigrationBatch [-Local] -Name <String> -CSVData <Byte[]> [-DisallowExistingU
  [-Partition <MailboxIdParameter>]
  [-PrimaryOnly]
  [-RemoveOnCopy]
- [-ReportInterval <Timespan>]
+ [-ReportInterval <TimeSpan>]
  [-SkipMoving <MultiValuedProperty>]
  [-SkipReports]
  [-SkipSteps <SkippableMigrationSteps[]>]
@@ -155,7 +153,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]>
  [-IncludeFolders <MultiValuedProperty>]
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
- [-ReportInterval <Timespan>]
+ [-ReportInterval <TimeSpan>]
  [-SkipMerging <MultiValuedProperty>]
  [-SkipReports]
  [-StartAfter <DateTime>]
@@ -180,7 +178,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> -SourcePublicFolderDatabase 
  [-Locale <CultureInfo>]
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
- [-ReportInterval <Timespan>]
+ [-ReportInterval <TimeSpan>]
  [-SkipMerging <MultiValuedProperty>]
  [-SkipReports]
  [-SkipSteps <SkippableMigrationSteps[]>]
@@ -202,7 +200,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-ManagedGmailTeams]
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
  [-RemoveOnCopy]
- [-ReportInterval <Timespan>]
+ [-ReportInterval <TimeSpan>]
  [-SkipCalendar]
  [-SkipContacts]
  [-SkipReports]
@@ -232,7 +230,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-DisallowExistingUsers]
  [-Partition <MailboxIdParameter>]
  [-PrimaryOnly]
  [-RemoveOnCopy]
- [-ReportInterval <Timespan>]
+ [-ReportInterval <TimeSpan>]
  [-SkipMerging <MultiValuedProperty>]
  [-SkipMoving <MultiValuedProperty>]
  [-SkipReports]
@@ -278,7 +276,7 @@ New-MigrationBatch -Name <String> [-CSVData <Byte[]>] [-DisallowExistingUsers] [
  [-PrimaryOnly]
  [-RemoveOnCopy]
  [-RenamePrimaryCalendar]
- [-ReportInterval <Timespan>]
+ [-ReportInterval <TimeSpan>]
  [-Restore]
  [-SimplifiedSwitchOver]
  [-SkipCalendar]
@@ -313,7 +311,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]>
  [-Confirm]
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
- [-ReportInterval <Timespan>]
+ [-ReportInterval <TimeSpan>]
  [-SkipReports]
  [-StartAfter <DateTime>]
  [-TimeZone <ExTimeZoneValue>]
@@ -331,7 +329,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]>
  [-Confirm]
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
- [-ReportInterval <Timespan>]
+ [-ReportInterval <TimeSpan>]
  [-SkipReports]
  [-StartAfter <DateTime>]
  [-TimeZone <ExTimeZoneValue>]
@@ -353,7 +351,7 @@ New-MigrationBatch -Name <String> [-Users] <MultiValuedProperty>
  [-Locale <CultureInfo>]
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
- [-ReportInterval <Timespan>]
+ [-ReportInterval <TimeSpan>]
  [-SkipReports]
  [-SkipSteps <SkippableMigrationSteps[]>]
  [-StartAfter <DateTime>]
@@ -377,7 +375,7 @@ New-MigrationBatch -Name <String> [-UserIds] <MultiValuedProperty>
  [-Locale <CultureInfo>]
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
- [-ReportInterval <Timespan>]
+ [-ReportInterval <TimeSpan>]
  [-SkipReports]
  [-SkipSteps <SkippableMigrationSteps[]>]
  [-StartAfter <DateTime>]
@@ -397,7 +395,7 @@ New-MigrationBatch [-Users] MultiValuedProperty> -Name <String>
  [-DisableOnCopy]
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
- [-ReportInterval <Timespan>]
+ [-ReportInterval <TimeSpan>]
  [-SkipReports]
  [-StartAfter <DateTime>]
  [-TimeZone <ExTimeZoneValue>]
@@ -421,7 +419,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-PublicFolderToUnifiedGroup
  [-Locale <CultureInfo>]
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
- [-ReportInterval <Timespan>]
+ [-ReportInterval <TimeSpan>]
  [-SkipReports]
  [-SkipSteps <SkippableMigrationSteps[]>]
  [-SourceEndpoint <MigrationEndpointIdParameter>]
@@ -441,7 +439,7 @@ New-MigrationBatch -Name <String> -ConnectionLogicalId <String> -SlackWorkspaceI
  [-Confirm]
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
- [-ReportInterval <Timespan>]
+ [-ReportInterval <TimeSpan>]
  [-SkipReports]
  [-SlackPublicDataConnector] 
  [-SourceEndpoint <MigrationEndpointIdParameter>]
@@ -466,7 +464,7 @@ New-MigrationBatch -Name <String> [-WorkflowTemplate <String>]
  [-Locale <CultureInfo>]
  [-NotificationEmails <MultiValuedProperty>]
  [-Partition <MailboxIdParameter>]
- [-ReportInterval <Timespan>]
+ [-ReportInterval <TimeSpan>]
  [-SkipReports]
  [-SkipSteps <SkippableMigrationSteps[]>]
  [-StartAfter <DateTime>]
@@ -675,7 +673,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill Analyze Description }}
+The Analyze switch specifies whether to create a mailbox analysis batch. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -695,7 +693,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill ConnectionLogicalId Description }}
+The ConnectionLogicalId parameter specifies the connection logical ID for the Slack connector migration batch.
 
 ```yaml
 Type: String
@@ -757,7 +755,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill ManagedGmailTeams Description }}
+The ManagedGmailTeams switch specifies whether to create a Gmail calendar sync to Teams migration batch. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -795,7 +793,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill SlackPublicDataConnector Description }}
+The SlackPublicDataConnector switch specifies this is a Slack public data connector migration batch. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -815,7 +813,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill SlackWorkspaceId Description }}
+The SlackWorkspaceId parameter specifies the Slack workspace ID for the Slack public data connector migration batch.
 
 ```yaml
 Type: String
@@ -859,7 +857,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill AdoptPreexisting Description }}
+The AdoptPreexisting switch specifies whether to adopt pre-existing migration users from other batches into this new batch. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -923,7 +921,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill ArchiveDomain Description }}
+The ArchiveDomain parameter specifies the archive domain name for onboarding or offboarding migrations.
 
 ```yaml
 Type: String
@@ -987,7 +985,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill AutoProvisioning Description }}
+The AutoProvisioning switch specifies whether to automatically provision mailboxes for Google Workspace migration or analysis batches. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1047,7 +1045,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill AvoidMergeOverlap Description }}
+The AvoidMergeOverlap switch specifies whether to avoid merge overlap on secondary message identifiers during Google Workspace migrations. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1187,7 +1185,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill DataFusion Description }}
+The DataFusion switch specifies whether to enable Data Fusion for Google Workspace migration batches. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1336,7 +1334,12 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill ForwardingDisposition Description }}
+The ForwardingDisposition parameter specifies how to handle Gmail messages configured for auto-forwarding during Google Workspace migrations. Valid values are:
+
+- 0 or KeepInInbox: Keep the message in the inbox. This is the default value.
+- 1 or Delete: Delete the message.
+- 2 or Archive: Archive the message.
+- 3 or MarkAsRead: Mark the message as read.
 
 ```yaml
 Type: GmailForwardingDisposition
@@ -1354,7 +1357,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-{{ Fill GoogleResource Description }}
+The GoogleResource switch specifies that this is a Google Resource migration batch. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1421,7 +1424,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill IncludeOtherContacts Description }}
+The IncludeOtherContacts switch specifies whether to include other contacts during Google Workspace migration batches. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1489,7 +1492,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill MigrateTasks Description }}
+The MigrateTasks switch specifies whether to migrate Tasks during Google Workspace migration batches. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1611,7 +1614,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill RemoveOnCopy Description }}
+The RemoveOnCopy switch specifies whether to remove the source migration user from its original batch when it is adopted into this new batch. This switch requires the AdoptPreexisting switch. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1631,7 +1634,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill RenamePrimaryCalendar Description }}
+The RenamePrimaryCalendar switch specifies whether to rename the primary calendar during Google Workspace migrations. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1673,7 +1676,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill Restore Description }}
+The Restore switch specifies whether to create an onboarding restore batch. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1693,7 +1696,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill SimplifiedSwitchOver Description }}
+The SimplifiedSwitchOver switch specifies whether to use simplified switchover for Google Workspace migration batches. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1753,7 +1756,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill SkipDelegates Description }}
+The SkipDelegates switch specifies whether to skip migration of delegate permissions during Google Workspace or Google Resource migration batches. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1773,7 +1776,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill SkipDetails Description }}
+The SkipDetails switch specifies whether to skip detailed mailbox analysis in an analysis batch. This switch is used with the Analyze switch. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1851,7 +1854,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill SkipProvisioning Description }}
+The SkipProvisioning switch specifies whether to skip mailbox provisioning during Google Workspace or Google Resource migration batches. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -1957,7 +1960,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill SourcePFPrimaryMailboxGuid Description }}
+The SourcePFPrimaryMailboxGuid parameter specifies the GUID of the source primary mailbox for public folder migration to Exchange Online.
 
 ```yaml
 Type: Guid
@@ -1977,7 +1980,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill StagedRollOutGroupId Description }}
+The StagedRollOutGroupId parameter specifies the group ID for staged rollout of the Slack public data connector migration batch.
 
 ```yaml
 Type: String
@@ -2006,7 +2009,7 @@ In Exchange Online PowerShell, if you specify a date/time value without a time z
 
 ```yaml
 Type: DateTime
-Parameter Sets: Sets: (All)
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -2191,7 +2194,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-The WorkflowTemplate parameter specifies advanced controls for the steps that are performed in the migration. Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
+The WorkflowTemplate parameter specifies the name of an expert migration template to use for the migration batch. Don't use this parameter unless you're directed to do so by Microsoft Customer Service and Support or specific documentation.
 
 ```yaml
 Type: String
@@ -2231,7 +2234,9 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill XMLData Description }}
+The XMLData parameter specifies the XML data file that contains configuration information for a large archive onboarding migration batch.
+
+A valid value for this parameter requires you to read the file to a byte-encoded object using the following syntax: `([System.IO.File]::ReadAllBytes('<Path>\<FileName>'))`. You can use this command as the parameter value, or you can write the output to a variable (`$data = [System.IO.File]::ReadAllBytes('<Path>\<FileName>')`) and use the variable as the parameter value (`$data`).
 
 ```yaml
 Type: Byte[]

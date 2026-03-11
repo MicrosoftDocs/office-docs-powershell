@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Online, Security & Compliance
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-deviceconditionalaccessrule
 schema: 2.0.0
 title: Get-DeviceConditionalAccessRule
@@ -63,6 +61,8 @@ This example shows details for the mobile device conditional access rule named S
 > Applicable: Exchange Online, Security & Compliance
 
 The Identity parameter specifies the mobile device conditional access rule that you want to view. The name of the rule uses the syntax `<Mobile device conditional access policy name>{<GUID value>}`. For example, `Secure Email{914f151c-394b-4da9-9422-f5a2f65dec30}`.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
 
 ```yaml
 Type: ComplianceRuleIdParameter
