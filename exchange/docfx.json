@@ -95,6 +95,18 @@
         "exchange-ps/exchange/**/*.yml": [
           "powershell"
         ]
+        "contributors_to_exclude": [
+        "aditisrivastava07",
+        "AGuentherinWA",
+        "claydetels19",
+        "dstrome",
+        "garycentric",
+        "padmagit77",
+        "rjagiewich",
+        "Ruchika-mittal01",
+        "Shipra-M09",
+        "techtoons"
+      ]
       }
     },
     "template": [],
