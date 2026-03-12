@@ -89,6 +89,18 @@
       "feedback_system": "Standard",
             "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
     },
+    "contributors_to_exclude": [
+       "aditisrivastava07",
+       "AGuentherinWA",
+       "claydetels19",
+       "dstrome",
+       "garycentric",
+       "padmagit77",
+       "rjagiewich",
+       "Ruchika-mittal01",
+       "Shipra-M09",
+       "techtoons"
+     ]
     "fileMetadata": {},
     "template": [],
     "dest": "skype-ps"
