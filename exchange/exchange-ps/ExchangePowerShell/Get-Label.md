@@ -117,7 +117,7 @@ Accept wildcard characters: False
 
 The SkipValidations switch specifies whether to skip the retrieval of encryption properties configured in sensitivity labels. You don't need to specify a value with this switch.
 
-Organizations with more than 1000 labels can use this swtich to reduce the time required to fetch the labels, which helps prevent timeout issues with Get-Label cmdlet.
+Organizations with more than 1000 labels can use this switch to reduce the time required to fetch the labels, which helps prevent timeout issues with Get-Label cmdlet.
 
 **Note**: Using this switch doesn't skip validations when you retrieve labels. It only skips the the retrieval of encryption template properties if they're configured for a label. You can get those properties individually by using the Identity parameter in the Get-Label command.
 
