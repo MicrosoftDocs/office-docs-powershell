@@ -384,11 +384,9 @@ After you register the certificate with your application, you can use the privat
 
    ![Select Upload certificate on the Certificates & secrets page.](media/exo-app-only-auth-select-upload-certificate.png)
 
-   In the dialog that opens, browse to the public certificate (`.cer` file) you exported in [Step 3](#step-3-generate-a-certificate).
+   In the **Upload certificate** flyout that opens, browse to the public certificate (`.cer` file) you exported in [Step 3](#step-3-generate-a-certificate), and then select **Add**.
 
    ![Browse to the certificate and then select Add.](media/exo-app-only-auth-upload-certificate-dialog.png)
-
-   When you're finished, select **Add**.
 
    The certificate is now shown in the **Certificates** section.
 
