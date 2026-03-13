@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-servicedeliveryreport
 schema: 2.0.0
 title: Get-ServiceDeliveryReport
@@ -43,7 +41,7 @@ This example shows the delivery path information for the recipient chris@contoso
 
 ### -ProbeTag
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is reserved for internal Microsoft use.
 
@@ -61,7 +59,7 @@ Accept wildcard characters: False
 
 ### -Recipient
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Recipient parameter specifies the email address of the recipient you want to test.
 

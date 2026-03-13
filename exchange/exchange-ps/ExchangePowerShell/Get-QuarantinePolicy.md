@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-quarantinepolicy
 schema: 2.0.0
 title: Get-QuarantinePolicy
@@ -59,7 +57,7 @@ This example returns detailed information about the default quarantine policy na
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the quarantine policy you want to view. You can use any value that uniquely identifies the quarantine policy. For example:
 
@@ -83,7 +81,7 @@ Accept wildcard characters: False
 
 ### -QuarantinePolicyType
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The QuarantinePolicyType parameter filters the results by the specified quarantine policy type. Valid values are:
 

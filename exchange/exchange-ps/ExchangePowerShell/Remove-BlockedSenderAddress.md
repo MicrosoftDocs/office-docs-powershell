@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/remove-blockedsenderaddress
 schema: 2.0.0
 title: Remove-BlockedSenderAddress
@@ -45,7 +43,7 @@ This example unblocks the user julia@contoso.com.
 
 ### -SenderAddress
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SenderAddress parameter specifies the email address of the user that you want to unblock.
 
@@ -63,7 +61,7 @@ Accept wildcard characters: False
 
 ### -Reason
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Reason parameter specifies the reason the user was blocked (the Reason property value). If the value contains spaces, enclose the value in quotation marks (").
 

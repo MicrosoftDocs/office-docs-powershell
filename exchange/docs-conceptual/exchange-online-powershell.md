@@ -1,13 +1,9 @@
 ---
 title: "Exchange Online PowerShell"
-ms.author: chrisda
-author: chrisda
-manager: orspodek
 ms.date: 05/07/2025
 ms.audience: Admin
 audience: Admin
 ms.topic: article
-ms.service: exchange-powershell
 ms.localizationpriority: medium
 ms.assetid: 1cb603b0-2961-4afe-b879-b048fe0f64a2
 search.appverid: MET150
@@ -16,7 +12,7 @@ description: "Learn about articles that are available for using PowerShell in Ex
 
 # Exchange Online PowerShell
 
-Exchange Online PowerShell is the administrative interface that enables you to manage the Exchange Online part of your Microsoft 365 organization from the command line (including many default email protections for all cloud mailboxes and protections in Microsoft Defender for Office 365). For example, you can use Exchange Online PowerShell to configure mail flow rules (also known as transport rules) and connectors. The following articles provide information about using Exchange Online PowerShell:
+Exchange Online PowerShell is the administrative interface that enables you to manage the Exchange Online part of your Microsoft 365 organization from the command line (including many built-in security features for all cloud mailboxes and protections in Microsoft Defender for Office 365). For example, you can use Exchange Online PowerShell to configure mail flow rules (also known as transport rules) and connectors. The following articles provide information about using Exchange Online PowerShell:
 
 - To learn about the ExchangeOnlineManagement module that's required to connect to Exchange Online PowerShell, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
 

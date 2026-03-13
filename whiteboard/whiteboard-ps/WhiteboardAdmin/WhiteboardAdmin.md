@@ -75,3 +75,6 @@ Sets the owner for a Whiteboard.
 
 ### [Set-WhiteboardSettings](Set-WhiteboardSettings.md)
 Get the users Whiteboard settings.
+
+### [Get-WhiteboardMigrationMapping](Get-WhiteboardMigrationMapping.md)
+Gets all Azure whiteboards for a user and maps them with their migrated Fluid boards in SharePoint OneDrive.

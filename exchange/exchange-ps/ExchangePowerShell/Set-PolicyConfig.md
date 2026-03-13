@@ -1,10 +1,8 @@
 ---
 applicable: Security & Compliance
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-policyconfig
 schema: 2.0.0
 title: Set-PolicyConfig
@@ -664,8 +662,8 @@ Accept wildcard characters: False
 
 The RuleErrorAction parameter specifies what to do if an error is encountered during the evaluation of the rule. Valid values are:
 
-- Ignore
-- RetryThenBlock (default value)
+- Ignore (default value)
+- RetryThenBlock 
 
 ```yaml
 Type: PolicyRuleErrorAction

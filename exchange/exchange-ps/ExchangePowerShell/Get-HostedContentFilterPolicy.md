@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-hostedcontentfilterpolicy
 schema: 2.0.0
 title: Get-HostedContentFilterPolicy
@@ -58,7 +56,7 @@ This example shows the allowed and blocked senders and domains in all spam filte
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the spam filter policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 

@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Security & Compliance, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/remove-tenantallowblocklistitems
 schema: 2.0.0
 title: Remove-TenantAllowBlockListItems
@@ -60,7 +58,7 @@ This example removes the URL allow entry for the specified non-Microsoft phishin
 
 ### -Entries
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Entries parameter specifies the entries that you want to remove based on the ListType parameter value. Valid values are:
 
@@ -89,7 +87,7 @@ Accept wildcard characters: False
 
 ### -Ids
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Ids parameter specifies the entries that you want to remove. This value is shown in the Identity property in the output of the Get-TenantAllowBlockListItems cmdlet.
 
@@ -111,7 +109,7 @@ Accept wildcard characters: False
 
 ### -ListType
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The ListType parameter specifies the type of entry that you want to remove. Valid values are:
 
@@ -134,7 +132,7 @@ Accept wildcard characters: False
 
 ### -ListSubType
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The ListSubType specifies further specifies the type of entry that you want to remove. Valid values are:
 
@@ -155,7 +153,7 @@ Accept wildcard characters: False
 
 ### -OutputJson
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The OutputJson switch specifies whether to return all entries in a single JSON value. You don't need to specify a value with this switch.
 

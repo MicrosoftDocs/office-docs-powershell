@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-hostedconnectionfilterpolicy
 schema: 2.0.0
 title: Get-HostedConnectionFilterPolicy
@@ -49,7 +47,7 @@ This example returns detailed information about the connection filter policy nam
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the connection filter policy that you want to view. You can use any value that uniquely identifies the policy. For example:
 

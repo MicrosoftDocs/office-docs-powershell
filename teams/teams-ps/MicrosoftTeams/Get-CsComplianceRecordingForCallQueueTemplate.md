@@ -45,8 +45,6 @@ This example gets the Compliance Recording for Call Queue template with the iden
 
 ### -Id
 
-> Applicable: Microsoft Teams
-
 The Id parameter is the unique identifier assigned to the Compliance Recording for Call Queue template.
 
 ```yaml
@@ -62,6 +60,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

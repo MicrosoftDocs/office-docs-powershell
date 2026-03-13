@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Security & Compliance, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-mailfilterlistreport
 schema: 2.0.0
 title: Get-MailFilterListReport
@@ -46,7 +44,7 @@ This example uses the Get-MailFilterListReport cmdlet to return information abou
 
 ### -Domain
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Domain parameter filters the results by an accepted domain in the cloud-based organization. You can specify multiple domain values separated by commas, or the value All.
 
@@ -84,7 +82,7 @@ Accept wildcard characters: False
 
 ### -ProbeTag
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 This parameter is reserved for internal Microsoft use.
 
@@ -102,7 +100,7 @@ Accept wildcard characters: False
 
 ### -SelectionTarget
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The SelectionTarget parameter filters the report information by object type. Valid values are:
 

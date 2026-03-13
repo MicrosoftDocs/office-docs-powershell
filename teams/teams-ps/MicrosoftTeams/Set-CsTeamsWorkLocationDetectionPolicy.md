@@ -13,12 +13,14 @@ title: Set-CsTeamsWorkLocationDetectionPolicy
 # Set-CsTeamsWorkLocationDetectionPolicy
 
 ## SYNOPSIS
-This cmdlet is used to update an instance of TeamsWorkLocationDetectionPolicy.
+This cmdlet is used to update an instance of TeamsWorkLocationDetectionPolicy. This policy can be used to tailor the [Automatic Update of work location](https://learn.microsoft.com/microsoft-365/places/configure-auto-detect-work-location) experience in Microsoft Teams. When the EnableWorkLocationDetection parameter is enabled, a user’s work location is updated based on their interaction with organization‑managed networks and devices, such as desks or peripherals configured by IT administrators. To learn how to configure desks to certain work location, please see [Configure buildings and floors - Microsoft Places | Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/places/get-started/quick-setup-buildings-floors).
+
+Microsoft processes this information in accordance with the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839) to provide a consistent location‑based experience and support hybrid work scenarios in Microsoft 365.
 
 ## SYNTAX
 
 ```
-Set-CsTeamsWorkLocationDetectionPolicy [-EnableWorkLocationDetection <Boolean>] [-Identity] <String> [-Force]
+Set-CsTeamsWorkLocationDetectionPolicy [-EnableWorkLocationDetection <Boolean>] [-UserSettingsDefault <String>] [-Identity] <String> [-Force]
  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -34,6 +36,14 @@ PS> Set-CsTeamsWorkLocationDetectionPolicy -Identity ExistingPolicyInstance -Ena
 ```
 
 Updates the `EnableWorkLocationDetection` field of a given policy.
+
+### Example 2
+
+```powershell
+PS> Set-CsTeamsWorkLocationDetectionPolicy -Identity ExistingPolicyInstance -UserSettingsDefault Enabled
+```
+
+Updates the `UserSettingsDefault` field of a given policy to `Enabled`.
 
 ## PARAMETERS
 
@@ -53,8 +63,7 @@ Accept wildcard characters: False
 ```
 
 ### -EnableWorkLocationDetection
-This setting allows your organization to collect the work location of users when they connect, interact, or are detected near your organization's networks and devices. It also captures the geographic location information users share from personal and mobile devices.
-This gives users the ability to consent to the use of this location data to set their current work location.Microsoft collects this information to provide users with a consistent location-based experience and to improve the hybrid work experience in Microsoft 365 according to the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839).
+This parameter specifies whether Microsoft Teams determines a user’s work location based on interaction with organization‑managed networks and devices. When enabled, users' work location gets updated using signals from administrator‑configured resources, such as desks or peripherals managed by the organization. This parameter does not collect or use geographic location data from users’ personal or mobile devices. Location information is used to support consistent location‑based experiences in Microsoft Teams and Microsoft 365 and is processed in accordance with the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/p/?LinkId=521839).
 
 ```yaml
 Type: Boolean
@@ -64,6 +73,28 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UserSettingsDefault
+This parameter specifies the default user consent behavior when automatic update of work location is enabled and only applies to WiFi, and has no impact on device-based detection.
+
+- `Disabled` (default): Users must explicitly opt in (Ask mode).
+- `Enabled`: Automatic update is enabled by default, and users can opt out (Inform mode).
+
+Learn more about the [admin configuration modes](https://learn.microsoft.com/microsoft-365/places/configure-auto-detect-work-location).
+
+The combination of these settings determines whether automatic update runs, which signals are active, and how users are informed.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

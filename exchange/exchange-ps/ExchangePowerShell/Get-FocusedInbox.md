@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.Management-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-focusedinbox
 schema: 2.0.0
 title: Get-FocusedInbox
@@ -45,7 +43,7 @@ This example returns the Focused Inbox configuration for the mailbox of julia@co
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the mailbox that you want to view. You can use any value that uniquely identifies the mailbox. For example:
 
@@ -76,7 +74,7 @@ Accept wildcard characters: False
 
 ### -UseCustomRouting
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 {{ Fill UseCustomRouting Description }}
 

@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Security & Compliance, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-serviceprincipal
 schema: 2.0.0
 title: Get-ServicePrincipal
@@ -54,7 +52,7 @@ This example returns detailed information about the service principal with the O
 
 ### -Identity
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the service principal that you want to view. You can use any value that uniquely identifies the service principal. For example:
 
@@ -80,7 +78,7 @@ Accept wildcard characters: False
 
 ### -Organization
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 This parameter is reserved for internal Microsoft use.
 

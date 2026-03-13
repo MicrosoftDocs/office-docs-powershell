@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-hostedoutboundspamfilterrule
 schema: 2.0.0
 title: Get-HostedOutboundSpamFilterRule
@@ -50,7 +48,7 @@ This example returns detailed information for the outbound spam filter rule name
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the outbound spam filter rule that you want to view. You can use any value that uniquely identifies the rule. For example:
 
@@ -74,7 +72,7 @@ Accept wildcard characters: False
 
 ### -State
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The State parameter filters the results by enabled or disabled rules. Valid values are:
 

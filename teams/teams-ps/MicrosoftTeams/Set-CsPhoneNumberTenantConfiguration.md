@@ -99,7 +99,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentBlockedDays
-Sets a duration based assignment block on all the telephone numbers upon unassignment. ***This feature is currently not available.***
+Sets a duration based assignment block on all the telephone numbers upon unassignment.
 
 ```yaml
 Type: System.Int32

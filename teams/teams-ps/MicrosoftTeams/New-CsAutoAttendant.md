@@ -545,7 +545,13 @@ Accept wildcard characters: False
 The UserNameExtension parameter is a string that specifies how to extend usernames in dial search by appending additional information after the name.
 This parameter is used in dial search when multiple search results are found, as it helps to distinguish users with similar names. Possible values are:
 
-- None: Default value, which means the username is pronounced as is.
+- None: Default value. No additional information is provided.
+  
+  In this case, if there are two John Smiths, the caller will hear:
+  
+     For John Smith, press 1.<br>
+     For John Smith, press 2.
+  
 - Office: Adds office information from the user profile.
 - Department: Adds department information from the user profile.
 
@@ -579,6 +585,7 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS

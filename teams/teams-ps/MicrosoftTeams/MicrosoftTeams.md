@@ -92,6 +92,9 @@ The Get-CsAutoAttendantSupportedTimeZone cmdlet gets supported time zones for th
 ### [Get-CsAutoAttendantTenantInformation](Get-CsAutoAttendantTenantInformation.md)
 Gets the default tenant information for Auto Attendant (AA) feature.
 
+### [Get-CsAutoRecordingTemplate](Get-CsAutoRecordingTemplate.md)
+Use the Get-CsAutoRecordingTemplate cmdlet to retrieve a list of Auto Recording templates.
+
 ### [Get-CsBatchPolicyAssignmentOperation](Get-CsBatchPolicyAssignmentOperation.md)
 This cmdlet is used to retrieve the status of batch policy assignment operations.
 
@@ -139,6 +142,15 @@ Returns information about the Mainline Attendant flows configured in your organi
 
 ### [Get-CsMainlineAttendantQuestionAnswerFlow](Get-CsMainlineAttendantQuestionAnswerFlow.md)
 Returns the identified Mainline attendant question and answer flow.
+
+### [Get-CsMainlineAttendantTenantInformation](Get-CsMainlineAttendantTenantInformation.md)
+Returns the tenant default language and voice for Mainline Attendant.
+
+### [Get-CsMainlineAttendantSupportedLanguages](Get-CsMainlineAttendantSupportedLanguages.md)
+Returns the list of supported languages for Mainline Attendant.
+
+### [Get-CsMainlineAttendantSupportedVoices](Get-CsMainlineAttendantSupportedVoices.md)
+Returns the list of supported voices for Mainline Attendant.
 
 ### [Get-CsMeetingMigrationStatus](Get-CsMeetingMigrationStatus.md)
 You use the `Get-CsMeetingMigrationStatus` cmdlet to check the status of meeting migrations.
@@ -492,7 +504,7 @@ Returns information related to managing the upgrade to Teams from Skype for Busi
 This cmdlet returns the set of instances of this policy.
 
 ### [Get-CsTeamsVdiPolicy](Get-CsTeamsVdiPolicy.md)
-The Get-CsTeamsVdiPolicy cmdlet enables you to return infomration about all the Vdi policies that have been configured for use in your organization.
+The Get-CsTeamsVdiPolicy cmdlet enables you to return information about all the Vdi policies that have been configured for use in your organization.
 
 ### [Get-CsTeamsVideoInteropServicePolicy](Get-CsTeamsVideoInteropServicePolicy.md)
 The Get-CsTeamsVideoInteropServicePolicy cmdlet allows you to identify the pre-constructed policies that you can use in your organization.
@@ -803,6 +815,9 @@ Use the New-CsAutoAttendantMenuOption cmdlet to create a new menu option.
 ### [New-CsAutoAttendantPrompt](New-CsAutoAttendantPrompt.md)
 Use the New-CsAutoAttendantPrompt cmdlet to create a new prompt.
 
+### [New-CsAutoRecordingTemplate](New-CsAutoRecordingTemplate.md)
+Use the New-CsAutoRecordingTemplate cmdlet to create an Auto Recording template for use with call queues.
+
 ### [New-CsBatchPolicyAssignmentOperation](New-CsBatchPolicyAssignmentOperation.md)
 This cmdlet is used to assign or unassign a policy to a batch of users.
 
@@ -890,6 +905,9 @@ Use the `New-CsOnlineTelephoneNumberOrder` cmdlet to create a telephone number s
 ### [New-CsOnlineTelephoneNumberReleaseOrder](New-CsOnlineTelephoneNumberReleaseOrder.md)
 This cmdlet creates a request to release telephone numbers from Microsoft Teams telephone number management inventory.
 
+### [New-CsPhoneNumberUsageChangeOrder](New-CsPhoneNumberUsageChangeOrder.md)
+This cmdlet creates a request to change the TN usage.
+
 ### [New-CsOnlineTimeRange](New-CsOnlineTimeRange.md)
 The New-CsOnlineTimeRange cmdlet creates a new time range.
 
@@ -912,7 +930,7 @@ This cmdlet creates a request for remote log collection for a device.
 Use the New-CsSdgBulkSignInRequest cmdlet to sign in a batch of up to 100 devices.
 
 ### [New-CsSharedCallQueueHistoryTemplate](New-CsSharedCallQueueHistoryTemplate.md)
-Use the New-CsSharedCallQueueHistory cmdlet to create a Shared Call Queue History template.
+Use the New-CsSharedCallQueueHistoryTemplate cmdlet to create a Shared Call Queue History template.
 
 ### [New-CsTag](New-CsTag.md)
 Use the New-CsTag cmdlet to create a new tag that can be added to a Tag template.
@@ -1121,6 +1139,9 @@ Deletes an existing application access policy.
 ### [Remove-CsAutoAttendant](Remove-CsAutoAttendant.md)
 Use the Remove-CsAutoAttendant cmdlet to delete an Auto Attendant (AA).
 
+### [Remove-CsAutoRecordingTemplate](Remove-CsAutoRecordingTemplate.md)
+Use the Remove-CsAutoRecordingTemplate cmdlet to delete an Auto Recording template.
+
 ### [Remove-CsCallingLineIdentity](Remove-CsCallingLineIdentity.md)
 Use the `Remove-CsCallingLineIdentity` cmdlet to remove a Caller ID policy from your organization.
 
@@ -1207,6 +1228,9 @@ This cmdlet will remove/unassign a phone number from a user or a resource accoun
 
 ### [Remove-CsPhoneNumberAssignmentBlock](Remove-CsPhoneNumberAssignmentBlock.md)
 This cmdlet allows the admin to remove an assignment block on a telephone number.
+
+### [Remove-CsPhoneNumberSmsActivation](Remove-CsPhonenumberSmsActivation.md)
+This cmdlet allows the admin to deactivate SMS capabilities for a telephone number.
 
 ### [Remove-CsPhoneNumberTag](Remove-CsPhoneNumberTag.md)
 This cmdlet allows admin to remove a tag from phone number.
@@ -1427,6 +1451,9 @@ Modifies an existing application meeting configuration for the tenant.
 ### [Set-CsAutoAttendant](Set-CsAutoAttendant.md)
 Use the Set-CsAutoAttendant cmdlet to modify the properties of an existing Auto Attendant (AA).
 
+### [Set-CsAutoRecordingTemplate](Set-CsAutoRecordingTemplate.md)
+Use the Set-CsAutoRecordingTemplate cmdlet to modify the properties of an existing Auto Recording template.
+
 ### [Set-CsCallingLineIdentity](Set-CsCallingLineIdentity.md)
 Use the `Set-CsCallingLineIdentity` cmdlet to modify a Caller ID policy in your organization.
 
@@ -1528,6 +1555,9 @@ This cmdlet allows the admin to create and assign a temporary block on telephone
 
 ### [Set-CsPhoneNumberPolicyAssignment](Set-CsPhoneNumberPolicyAssignment.md)
 This cmdlet assigns a policy to a specific telephone number in Microsoft Teams.
+
+### [Set-CsPhoneNumberSmsActivation](Set-CsPhoneNumberSmsActivation.md)
+This cmdlet allows the admin to activate SMS capabilities for a telephone number.
 
 ### [Set-CsPhoneNumberTag](Set-CsPhoneNumberTag.md)
 This cmdlet allows the admin to create and assign a tag to a phone number.

@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Security & Compliance, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-tenantallowblocklistspoofitems
 schema: 2.0.0
 title: Get-TenantAllowBlockListSpoofItems
@@ -73,7 +71,7 @@ This example exports the same list of spoofed pairs to a CSV file.
 
 ### -Identity
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter is available but isn't used.
 
@@ -93,7 +91,7 @@ Accept wildcard characters: False
 
 ### -Action
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The Action parameter filters the results by action type. Valid values are:
 
@@ -114,7 +112,7 @@ Accept wildcard characters: False
 
 ### -SpoofType
 
-> Applicable: Exchange Online, Security & Compliance, Exchange Online Protection
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
 The SpoofType parameter filters the results by spoof type. Valid values are:
 

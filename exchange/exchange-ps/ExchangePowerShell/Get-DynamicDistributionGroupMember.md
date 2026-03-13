@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-dynamicdistributiongroupmember
 schema: 2.0.0
 title: Get-DynamicDistributionGroupMember
@@ -47,7 +45,7 @@ This example returns the existing members for the dynamic distribution group nam
 
 ### -Identity
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Identity parameter specifies the dynamic distribution group. You can use any value that uniquely identifies the group. For example:
 
@@ -74,7 +72,7 @@ Accept wildcard characters: False
 
 ### -Credential
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Credential parameter specifies the username and password that's used to run this command. Typically, you use this parameter in scripts or when you need to provide different credentials that have the required permissions.
 
@@ -94,7 +92,7 @@ Accept wildcard characters: False
 
 ### -IncludeSoftDeletedObjects
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The IncludeSoftDeletedGroups switch specifies whether to include soft-deleted group members in the results. You don't need to specify a value with this switch.
 
@@ -114,7 +112,7 @@ Accept wildcard characters: False
 
 ### -ResultSize
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 

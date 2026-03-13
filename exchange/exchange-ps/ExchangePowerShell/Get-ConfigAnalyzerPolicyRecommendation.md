@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Online
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailControl-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-configanalyzerpolicyrecommendation
 schema: 2.0.0
 title: Get-ConfigAnalyzerPolicyRecommendation
@@ -29,7 +27,7 @@ Get-ConfigAnalyzerPolicyRecommendation -RecommendedPolicyType <RecommendedPolicy
 ```
 
 ## DESCRIPTION
-For information about the policies and their recommended Standard and Strict values, see [Recommended settings for EOP and Microsoft Defender for Office 365 security](https://learn.microsoft.com/defender-office-365/recommended-settings-for-eop-and-office365).
+For information about the policies and their recommended Standard and Strict values, see [Recommended email and collaboration threat policy settings for cloud organizations](https://learn.microsoft.com/defender-office-365/recommended-settings-for-eop-and-office365).
 
 The output of this cmdlet only returns settings that fall below the value that you've specified as a baseline (Standard or Strict).
 

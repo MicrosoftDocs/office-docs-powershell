@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
-author: chrisda
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/add-availabilityaddressspace
 schema: 2.0.0
 title: Add-AvailabilityAddressSpace
@@ -76,7 +74,7 @@ In Exchange Online, this example sets up the sharing of free/busy information wi
 
 ### -AccessMethod
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The AccessMethod parameter specifies how the free/busy data is accessed. Valid values are:
 
@@ -100,7 +98,7 @@ Accept wildcard characters: False
 
 ### -ForestName
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The ForestName parameter specifies the SMTP domain name of the target forest that contains the users you're trying to read free/busy information from. If users are distributed among multiple SMTP domains in the target forest, run the Add-AvailabilityAddressSpace command once for each SMTP domain.
 
@@ -118,7 +116,7 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
@@ -139,7 +137,7 @@ Accept wildcard characters: False
 
 ### -Credentials
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The Credentials parameter specifies the username and password that's used to access the Availability services in the target forest.
 
@@ -201,7 +199,7 @@ Accept wildcard characters: False
 
 ### -TargetAutodiscoverEpr
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The TargetAutodiscoverEpr parameter specifies the Autodiscover URL of Exchange Web Services for the external organization that you're trying to read free/busy information from. For example, `https://contoso.com/autodiscover/autodiscover.xml`. Exchange uses Autodiscover to automatically detect the correct server endpoint for external requests.
 
@@ -219,11 +217,11 @@ Accept wildcard characters: False
 
 ### -TargetServiceEpr
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
-The TargetServiceEpr parameter specifies the Exchange Online Calendar Service URL of the external Microsoft 365 organization that you're trying to read free/busy information from. Valid values are:
+The TargetServiceEpr parameter specifies the Exchange Online address of the external Microsoft 365 organization that you're trying to read free/busy information from. Valid values are:
 
 - Microsoft 365 or Microsoft 365 GCC: outlook.office.com
 - Office 365 operated by 21Vianet: partner.outlook.cn
@@ -245,7 +243,7 @@ Accept wildcard characters: False
 
 ### -TargetTenantId
 
-> Applicable: Exchange Online, Exchange Online Protection
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -290,7 +288,7 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Exchange Online Protection
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
 
