@@ -4,12 +4,13 @@ author: radubulboaca
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-Help.xml
 Locale: en-US
 manager: gauravpa
-Module Name: Microsoft.Teams.ConfigAPI.Cmdlets
+Module Name: MicrosoftTeams
 ms.author: radubulboaca
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csaiagents
 schema: 2.0.0
 title: Get-CsAiAgents
 ---
+
 # Get-CsAiAgents
 
 ## SYNOPSIS
@@ -18,7 +19,9 @@ Retrieves the AI Agents in the tenant that match with the ProviderId.
 
 ## SYNTAX
 
-```
+### Default
+
+```powershell
 Get-CsAiAgents -ProviderId <String> [-AgentId <String>] [-AgentIds <String>] [-ContinuationToken <String>]
  [-DisplayNameContains <String>] [-DisplayNamePrefix <String>] [-IsTeamsIvrEnabled] [-MaxResult <Int32>]
  [-ShowCount] [<CommonParameters>]
@@ -215,6 +218,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
+
+### None
 
 ## OUTPUTS
 
