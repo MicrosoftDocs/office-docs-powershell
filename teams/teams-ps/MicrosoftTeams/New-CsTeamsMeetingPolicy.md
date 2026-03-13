@@ -1558,12 +1558,11 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-Controls whether meeting passcodes use the system‑default complexity or a reduced complexity using numeric‑only digits. When enabled, meetings scheduled by users to whom this policy applies will use **8‑digit numeric‑only passcodes**. Changes apply **only to meetings scheduled after the setting is enabled**. Existing meetings are not affected.
-This setting is **disabled by default**.
+Controls whether meeting passcodes use the system‑default complexity or a reduced complexity using numeric‑only digits. When enabled, meetings scheduled by users to whom this policy applies will use **8‑digit numeric‑only passcodes**. Changes apply **only to meetings scheduled after the setting is enabled**. Existing meetings are not affected. This setting is **disabled by default**.
 
 Possible Values:
-- Default: Alphanumeric passcodes with 8 characters (system default).
-- NumericOnly: 8‑digit numeric‑only passcodes with lower complexity for meetings scheduled by users to whom this policy applies. Numeric‑only passcodes increase the risk of unauthorized access compared to the default setting and **do not align with Microsoft’s recommended meeting security best practices**.
+- **Default**: Alphanumeric passcodes with 8 characters (system default).
+- **NumericOnly**: 8‑digit numeric‑only passcodes with lower complexity for meetings scheduled by users to whom this policy applies. Numeric‑only passcodes increase the risk of unauthorized access compared to the default setting and **do not align with Microsoft’s recommended meeting security best practices**.
 
 ```yaml
 Type: String
