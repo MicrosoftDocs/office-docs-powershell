@@ -27,6 +27,7 @@ Set-HostedContentFilterPolicy [-Identity] <HostedContentFilterPolicyIdParameter>
  [-AllowedSenders <MultiValuedProperty>]
  [-BlockedSenderDomains <MultiValuedProperty>]
  [-BlockedSenders <MultiValuedProperty>]
+ [-BulkMovesEnabled <BulkMovesEnabled>]
  [-BulkQuarantineTag <String>]
  [-BulkSpamAction <SpamFilteringAction>]
  [-BulkThreshold <Int32>]
@@ -257,6 +258,24 @@ To add or remove one or more values without affecting any existing entries, use 
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BulkMovesEnabled
+
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
+
+The BulkMovesEnabled parameter
+
+```yaml
+Type: BulkMovesEnabled
 Parameter Sets: (All)
 Aliases:
 
