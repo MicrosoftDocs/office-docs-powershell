@@ -270,7 +270,15 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
-The BulkMovesEnabled parameter
+**Note**: This parameter is currently in Preview, isn't available in all organizations, and is subject to change.
+
+The BulkMovesEnabled parameter specifies whether to tag all bulk mail as Bulk in supported email clients, and whether bulk mail below the BulkThreshold parameter is delivered to the Promotions folder in user mailboxes. Valid values are:
+
+- Yes
+- No
+- NotSet (this value is the default)
+
+For more information, see zzz.
 
 ```yaml
 Type: BulkMovesEnabled
