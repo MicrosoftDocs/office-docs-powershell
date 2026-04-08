@@ -293,9 +293,6 @@ Get the tenant level summary of all bulk sign in requests executed in the past 3
 ### [Get-CsSdgBulkSignInRequestStatus](Get-CsSdgBulkSignInRequestStatus.md)
 Get the status of an active bulk sign in request.
 
-### [Get-CsSharedCallHistoryTemplate](Get-CsSharedCallHistoryTemplate.md)
-Retrieves the list of Shared Call History templates.
-
 ### [Get-CsSharedCallQueueHistoryTemplate](Get-CsSharedCallQueueHistoryTemplate.md)
 ```powershell Get-CsSharedCallQueueHistoryTemplate -Id <string> [<CommonParameters>] ```
 
@@ -932,9 +929,6 @@ This cmdlet creates a request for remote log collection for a device.
 ### [New-CsSdgBulkSignInRequest](New-CsSdgBulkSignInRequest.md)
 Use the New-CsSdgBulkSignInRequest cmdlet to sign in a batch of up to 100 devices.
 
-### [New-CsSharedCallHistoryTemplate](New-CsSharedCallHistoryTemplate.md)
-Use the New-CsSharedCallHistoryTemplate cmdlet to create a Shared Call History template.
-
 ### [New-CsSharedCallQueueHistoryTemplate](New-CsSharedCallQueueHistoryTemplate.md)
 Use the New-CsSharedCallQueueHistoryTemplate cmdlet to create a Shared Call Queue History template.
 
@@ -1246,9 +1240,6 @@ This cmdlet allows the admins to remove a tenant default configuration that appl
 
 ### [Remove-CsTeamsRemoteLogCollectionDevice](Remove-CsTeamsRemoteLogCollectionDevice.md)
 This cmdlet will remove/delete a device from the remote log collection configuration.
-
-### [Remove-CsSharedCallHistoryTemplate](Remove-CsSharedCallHistoryTemplate.md)
-Removes Shared Call History template.
 
 ### [Remove-CsSharedCallQueueHistoryTemplate](Remove-CsSharedCallQueueHistoryTemplate.md)
 ```powershell Remove-CsSharedCallQueueHistoryTemplate -Id <String> [<CommonParameters>] ```
@@ -1576,9 +1567,6 @@ This cmdlet allows the admins to set a tenant default configuration that applies
 
 ### [Set-CsTeamsRemoteLogCollectionDevice](Set-CsTeamsRemoteLogCollectionDevice.md)
 This cmdlet allows the admin to create and edit a device requested for remote log collection.
-
-### [Set-CsSharedCallHistoryTemplate](Set-CsSharedCallHistoryTemplate.md)
-This cmdlet allows to configure Shared Call History template.
 
 ### [Set-CsSharedCallQueueHistoryTemplate](Set-CsSharedCallQueueHistoryTemplate.md)
 ```powershell Set-CsSharedCallQueueHistoryTemplate -Instance <instance> [<CommonParameters>] ```
