@@ -16,9 +16,6 @@ title: Set-CsSharedCallQueueHistoryTemplate
 ## SYNOPSIS
 This PowerShell cmdlet is being deprecated, please use the new version [Set-CsSharedCallHistoryTemplate](./Set-CsSharedCallHistoryTemplate.md) instead
 
-> [!IMPORTANT]
->This PowerShell cmdlet is being deprecated, please use the new version [Set-CsSharedCallHistoryTemplate](./Set-CsSharedCallHistoryTemplate.md) instead
-
 ## SYNTAX
 
 ```
