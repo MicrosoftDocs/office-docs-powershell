@@ -15,10 +15,6 @@ title: Get-CsSharedCallQueueHistoryTemplate
 ## SYNOPSIS
 This PowerShell cmdlet is being deprecated, please use the new version [Get-CsSharedCallHistoryTemplate](./Get-CsSharedCallHistoryTemplate.md) instead
 
-## SYNTAX
-> [!IMPORTANT]
->This PowerShell cmdlet is being deprecated, please use the new version [Get-CsSharedCallHistoryTemplate](./Get-CsSharedCallHistoryTemplate.md) instead
-
 ```
 Get-CsSharedCallQueueHistoryTemplate [-Id <string>] [<CommonParameters>]
 ```

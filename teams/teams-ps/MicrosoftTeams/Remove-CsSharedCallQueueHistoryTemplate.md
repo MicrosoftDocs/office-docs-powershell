@@ -17,9 +17,6 @@ title: Remove-CsSharedCallQueueHistoryTemplate
 ## SYNOPSIS
 This PowerShell cmdlet is being deprecated, please use the new version [Remove-CsSharedCallHistoryTemplate](./Remove-CsSharedCallHistoryTemplate.md) instead.
 
-> [!IMPORTANT]
->This PowerShell cmdlet is being deprecated, please use the new version [Remove-CsSharedCallHistoryTemplate](./Remove-CsSharedCallHistoryTemplate.md) instead.
-
 ## SYNTAX
 
 ```
