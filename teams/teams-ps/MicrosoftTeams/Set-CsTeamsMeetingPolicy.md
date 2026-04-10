@@ -132,6 +132,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-WhoCanRegister <String>]
  [-EnableRecordingAndTranscriptionCustomMessage <Boolean>]
  [-RecordingAndTranscriptionCustomMessageIdentifier <Guid>]
+ [-FilterProfanityInTranscript <String>]
  [<CommonParameters>]
 ```
 
@@ -2099,6 +2100,26 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FilterProfanityInTranscript
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+FilterProfanityInTranscript is a Microsoft Teams meeting policy that controls whether profane words are masked in live transcription and saved meeting transcripts.
+
+Possible Values:
+- Enabled: Profane words are masked in: Live transcription during the meeting, and the saved meeting transcript.
+- Disabled: Transcription includes the full, unmasked spoken content, including profanity.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
