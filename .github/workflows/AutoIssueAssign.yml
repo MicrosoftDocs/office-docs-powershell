@@ -1,24 +1,41 @@
 name: (Scheduled) Auto issue assign
 
 permissions:
+  contents: read
   issues: write
       
 on:
   schedule:
-    - cron: "0 17 * * *"
+    - cron: "26 21 * * *"
 
   workflow_dispatch:
   
 
 jobs:
 
+  config:
+    if: github.repository_owner == 'MicrosoftDocs'
+    runs-on: ubuntu-latest
+    outputs:
+      ExcludedUserList: ${{ steps.read.outputs.ExcludedUserList }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          sparse-checkout: .github/workflow-config.json
+          sparse-checkout-cone-mode: false
+      - id: read
+        shell: pwsh
+        run: |
+          $Config = (Get-Content '.github/workflow-config.json' | ConvertFrom-Json).AutoIssueAssign
+          "ExcludedUserList=$($Config.ExcludedUserList | ConvertTo-Json -Compress)" >> $Env:GITHUB_OUTPUT
+
   stale-branch:
     if: github.repository_owner == 'MicrosoftDocs'
+    needs: config
     uses: MicrosoftDocs/microsoft-365-docs/.github/workflows/Shared-AutoIssueAssign.yml@workflows-prod
     with:
         PayloadJson: ${{ toJSON(github) }}
-        ExcludedUserList: '["user1", "user2"]'
-
+        ExcludedUserList: ${{ needs.config.outputs.ExcludedUserList }}
     secrets:
         AccessToken: ${{ secrets.GITHUB_TOKEN }}
         PrivateKey: ${{ secrets.M365_APP_PRIVATE_KEY }}

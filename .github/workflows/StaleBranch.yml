@@ -18,15 +18,31 @@ on:
 
 jobs:
 
+  config:
+    if: github.repository_owner == 'MicrosoftDocs'
+    runs-on: ubuntu-latest
+    outputs:
+      RepoBranchSkipList: ${{ steps.read.outputs.RepoBranchSkipList }}
+      ReportOnly: ${{ steps.read.outputs.ReportOnly }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          sparse-checkout: .github/workflow-config.json
+          sparse-checkout-cone-mode: false
+      - id: read
+        shell: pwsh
+        run: |
+          $Config = (Get-Content '.github/workflow-config.json' | ConvertFrom-Json).StaleBranch
+          "RepoBranchSkipList=$($Config.RepoBranchSkipList | ConvertTo-Json -Compress)" >> $Env:GITHUB_OUTPUT
+          "ReportOnly=$("$($Config.ReportOnly)".ToLower())" >> $Env:GITHUB_OUTPUT
+
   stale-branch:
     if: github.repository_owner == 'MicrosoftDocs'
+    needs: config
     uses: MicrosoftDocs/microsoft-365-docs/.github/workflows/Shared-StaleBranch.yml@workflows-prod
     with:
         PayloadJson: ${{ toJSON(github) }}
-        RepoBranchSkipList: '[
-                              "ExampleBranch1",
-                              "ExampleBranch2"
-                             ]'
-        ReportOnly: false
+        RepoBranchSkipList: ${{ needs.config.outputs.RepoBranchSkipList }}
+        ReportOnly: ${{ fromJSON(needs.config.outputs.ReportOnly) }}
     secrets:
         AccessToken: ${{ secrets.GITHUB_TOKEN }}

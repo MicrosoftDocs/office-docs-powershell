@@ -1,6 +1,7 @@
 name: (Scheduled) Mark stale pull requests
 
 permissions:
+  contents: read
   issues: write
   pull-requests: write
 
@@ -10,11 +11,28 @@ on:
   workflow_dispatch:
 
 jobs:
+  config:
+    if: github.repository_owner == 'MicrosoftDocs'
+    runs-on: ubuntu-latest
+    outputs:
+      RunDebug: ${{ steps.read.outputs.RunDebug }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          sparse-checkout: .github/workflow-config.json
+          sparse-checkout-cone-mode: false
+      - id: read
+        shell: pwsh
+        run: |
+          $Config = (Get-Content '.github/workflow-config.json' | ConvertFrom-Json).Stale
+          "RunDebug=$("$($Config.RunDebug)".ToLower())" >> $Env:GITHUB_OUTPUT
+
   stale:
     if: github.repository_owner == 'MicrosoftDocs'
+    needs: config
     uses: MicrosoftDocs/microsoft-365-docs/.github/workflows/Shared-Stale.yml@workflows-prod
     with:
-      RunDebug: false
+      RunDebug: ${{ fromJSON(needs.config.outputs.RunDebug) }}
       RepoVisibility: ${{ github.repository_visibility }}
     secrets:
       AccessToken: ${{ secrets.GITHUB_TOKEN }}
