@@ -49,7 +49,7 @@ This example removes the specified application from the Allowed Apps list of the
 Remove-HVEAppAccess -Identity HVEAccount01@tailspintoys.com -AppIds "11111111-1111-1111-1111-111111111111","22222222-2222-2222-2222-222222222222"
 ```
 
-This example removes the specified applications from the Allowed Apps list of the specified HVE account.
+This example removes multiple specified applications from the Allowed Apps list of the specified HVE account.
 
 ### Example 3
 ```powershell
