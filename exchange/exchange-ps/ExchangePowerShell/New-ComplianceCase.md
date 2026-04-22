@@ -15,7 +15,12 @@ This cmdlet is available only in Security & Compliance PowerShell. For more info
 
 Use the New-ComplianceCase cmdlet to create eDiscovery cases in the Microsoft Purview compliance portal. You use eDiscovery cases to place content locations on hold, perform Content Searches associated with the case, and export search results.
 
-For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.co/powershell/exchange/exchange-cmdlet-syntax).
+
+> [!NOTE]
+> In the cloud, this cmdlet has the following requirements:
+> - Version 3.9.0 or later of the Exchange Online PowerShell module (August 2025).
+> - Use the *EnableSearchOnlySession* parameter when you run the **Connect-IPPSSession** command to connect to Security & Compliance PowerShell.
 
 ## SYNTAX
 
