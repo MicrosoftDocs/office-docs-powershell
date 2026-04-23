@@ -1,4 +1,3 @@
-
 name: (Scheduled) Publish to live
 
 permissions:
@@ -15,14 +14,32 @@ on:
 
 jobs:
 
+  config:
+    if: github.repository_owner == 'MicrosoftDocs' && contains(github.event.repository.topics, 'build')
+    runs-on: ubuntu-latest
+    outputs:
+      EnableAutoPublish: ${{ steps.read.outputs.EnableAutoPublish }}
+      EnableAutoMerge: ${{ steps.read.outputs.EnableAutoMerge }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          sparse-checkout: .github/workflow-config.json
+          sparse-checkout-cone-mode: false
+      - id: read
+        shell: pwsh
+        run: |
+          $Config = (Get-Content '.github/workflow-config.json' | ConvertFrom-Json).AutoPublish
+          "EnableAutoPublish=$("$($Config.EnableAutoPublish)".ToLower())" >> $Env:GITHUB_OUTPUT
+          "EnableAutoMerge=$("$($Config.EnableAutoMerge)".ToLower())" >> $Env:GITHUB_OUTPUT
+
   auto-publish:
     if: github.repository_owner == 'MicrosoftDocs' && contains(github.event.repository.topics, 'build')
+    needs: config
     uses: MicrosoftDocs/microsoft-365-docs/.github/workflows/Shared-AutoPublishV2.yml@workflows-prod
     with:
         PayloadJson: ${{ toJSON(github) }}
-        EnableAutoPublish: true
-        EnableAutoMerge: true
-
+        EnableAutoPublish: ${{ fromJSON(needs.config.outputs.EnableAutoPublish) }}
+        EnableAutoMerge: ${{ fromJSON(needs.config.outputs.EnableAutoMerge) }}
     secrets:
         AccessToken: ${{ secrets.GITHUB_TOKEN }}
         PrivateKey: ${{ secrets.M365_APP_PRIVATE_KEY }}
