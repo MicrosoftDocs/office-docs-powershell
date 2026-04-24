@@ -1637,6 +1637,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Get-AuthServer](Get-AuthServer.md)
 
+### [Get-BillingPolicy](Get-BillingPolicy.md)
+
 ### [Get-CmdletExtensionAgent](Get-CmdletExtensionAgent.md)
 
 ### [Get-ExchangeAssistanceConfig](Get-ExchangeAssistanceConfig.md)
@@ -1654,6 +1656,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 ### [Get-ExchangeSettings](Get-ExchangeSettings.md)
 
 ### [Get-FeatureConfiguration](Get-FeatureConfiguration.md)
+
+### [Get-HVEAccountBillingPolicy](Get-HVEAccountBillingPolicy.md)
 
 ### [Get-HVEAccountSettings](Get-HVEAccountSettings.md)
 
@@ -1730,6 +1734,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 ### [Set-ExchangeSettings](Set-ExchangeSettings.md)
 
 ### [Set-FeatureConfiguration](Set-FeatureConfiguration.md)
+
+### [Set-HVEAccountBillingPolicy](Set-HVEAccountBillingPolicy.md)
 
 ### [Set-HVEAccountSettings](Set-HVEAccountSettings.md)
 
