@@ -30,7 +30,7 @@ jobs:
   stale:
     if: github.repository_owner == 'MicrosoftDocs'
     needs: config
-    uses: MicrosoftDocs/microsoft-365-docs/.github/workflows/Shared-Stale.yml@workflows-prod
+    uses: MicrosoftDocs/tcp-workflows/.github/workflows/Shared-Stale.yml@workflows-prod
     with:
       RunDebug: ${{ fromJSON(needs.config.outputs.RunDebug) }}
       RepoVisibility: ${{ github.repository_visibility }}

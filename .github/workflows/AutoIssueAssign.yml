@@ -32,7 +32,7 @@ jobs:
   stale-branch:
     if: github.repository_owner == 'MicrosoftDocs'
     needs: config
-    uses: MicrosoftDocs/microsoft-365-docs/.github/workflows/Shared-AutoIssueAssign.yml@workflows-prod
+    uses: MicrosoftDocs/tcp-workflows/.github/workflows/Shared-AutoIssueAssign.yml@workflows-prod
     with:
         PayloadJson: ${{ toJSON(github) }}
         ExcludedUserList: ${{ needs.config.outputs.ExcludedUserList }}
