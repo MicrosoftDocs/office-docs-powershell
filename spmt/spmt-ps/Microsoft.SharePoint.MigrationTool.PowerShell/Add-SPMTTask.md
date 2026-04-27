@@ -5,8 +5,8 @@ online version: https://learn.microsoft.com/powershell/module/microsoft.sharepoi
 applicable: SharePoint Migration Tool
 title: Add-SPMTTask
 schema: 2.0.0
-author: serdarsoysal
-ms.author: serdars
+author: officedocspr
+ms.author: odocspr
 ms.reviewer:
 ---
 

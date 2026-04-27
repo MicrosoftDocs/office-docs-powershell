@@ -63,9 +63,9 @@
     "externalReference": [],
     "globalMetadata": {
       "uhfHeaderId": "MSDocsHeader-MicrosoftTeams",
-      "author" : "serdarsoysal",
-      "ms.author" : "serdars",
-      "manager" : "serdars",
+      "author" : "officedocspr",
+      "ms.author" : "odocspr",
+      "manager" : "odocspr",
       "ms.topic" : "reference",
       "ms.service" : "teams-powershell",
       "products" : [
