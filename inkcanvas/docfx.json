@@ -1,0 +1,83 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": ["**/*.md"],
+        "src": "docs-conceptual",
+        "version": "inkcanvas-ps",
+        "dest": "inkcanvas",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"]
+      },
+      {
+         "files": ["toc.yml"],
+        "src": "docs-conceptual",
+        "version": "inkcanvas-ps",
+        "dest": "inkcanvas/inkcanvas-ps"
+      },
+      {
+      "files": ["**/*.yml"],
+      "exclude": ["toc.yml"],
+      "src": "inkcanvas-ps",
+      "version": "inkcanvas-ps",
+      "dest": "module"
+    },
+    {
+      "files": ["toc.yml"],
+      "src": "inkcanvas-ps",
+      "version": "inkcanvas-ps",
+      "dest": "module/inkcanvas-ps"
+    }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      }
+    ],
+    "versions": {
+      "inkcanvas-ps": {
+        "dest": "inkcanvas-ps"
+      }
+    },
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
+      "author" : "peterhu",
+      "ms.author" : "peterhu",
+      "ms.date" : "04/30/2026",
+      "ms.topic" : "reference",
+      "ms.service" : "inkcanvas-powershell",
+      "ms.devlang" : "powershell",
+      "feedback_system": "Standard",
+      "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
+    },
+    "contributors_to_exclude": [
+      "aditisrivastava07",
+      "AGuentherinWA",
+      "claydetels19",
+      "dstrome",
+      "garycentric",
+      "padmagit77",
+      "rjagiewich",
+      "Ruchika-mittal01",
+      "Shipra-M09",
+      "techtoons"
+    ],
+    "fileMetadata": {},
+    "template": [],
+    "dest": "inkcanvas-ps"
+  }
+}
