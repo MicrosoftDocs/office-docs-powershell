@@ -5,7 +5,7 @@ HelpUri: ''
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.date: 04/22/2026
-PlatyPS schema version: 2024-05-01
+schema: 2.0.0
 title: Get-TenantPrivateChannelMigrationStatus
 ---
 
