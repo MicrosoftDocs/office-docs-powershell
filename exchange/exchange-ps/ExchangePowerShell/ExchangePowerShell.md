@@ -1784,6 +1784,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Export-JournalRuleCollection](Export-JournalRuleCollection.md)
 
+### [Export-PurviewConfig](Export-PurviewConfig.md)
+
 ### [Export-TransportRuleCollection](Export-TransportRuleCollection.md)
 
 ### [Get-AdministrativeUnit](Get-AdministrativeUnit.md)

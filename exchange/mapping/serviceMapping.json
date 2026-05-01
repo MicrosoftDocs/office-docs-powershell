@@ -870,6 +870,7 @@
   "Enable-TransportRule": "policy-and-compliance",
   "Execute-AzureADLabelSync": "policy-and-compliance",
   "Export-JournalRuleCollection": "policy-and-compliance",
+  "Export-PurviewConfig": "policy-and-compliance",
   "Export-TransportRuleCollection": "policy-and-compliance",
   "Get-AdministrativeUnit": "policy-and-compliance",
   "Get-AutoSensitivityLabelPolicy": "policy-and-compliance",
