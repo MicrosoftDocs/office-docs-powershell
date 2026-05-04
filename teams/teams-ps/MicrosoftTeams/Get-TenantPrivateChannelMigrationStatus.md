@@ -31,12 +31,8 @@ The `Get-TenantPrivateChannelMigrationStatus` cmdlet allows tenant administrator
 ### Example 1
 
 ```powershell
-Get-TenantPrivateChannelMigrationStatus
-```
+PS> Get-TenantPrivateChannelMigrationStatus
 
-This example gets the migration status for a tenant where all channels have been migrated.
-
-```Output
 TenantId                     : 12345678-1234-1234-1234-123456789abc
 MigrationStatus              : Completed
 MigrationStartTimeStamp      : 2025-10-09T10:15:00.456Z
@@ -44,15 +40,13 @@ MigrationCompletionTimeStamp : 2025-10-09T12:45:00.789Z
 Details                      : {"totalChannels":10,"migratedChannels":10,"failedChannels":0,"ownerlessChannels":0,"remainingChannels":0}
 ```
 
+This example gets the migration status for a tenant where all channels have been migrated.
+
 ### Example 2
 
 ```powershell
-Get-TenantPrivateChannelMigrationStatus
-```
+PS> Get-TenantPrivateChannelMigrationStatus
 
-This example gets the migration status for a tenant where some channels require admin attention.
-
-```Output
 TenantId                     : 94d200e4-2df1-45b9-bc3e-53cfa7cf4997
 MigrationStatus              : RequiresAdminAttention
 MigrationStartTimeStamp      : 2026-02-10T06:48:20.000Z
@@ -63,10 +57,10 @@ Details                      : {"totalChannels":10,"migratedChannels":6,"failedC
 ### Example 3
 
 ```powershell
-$result = Get-TenantPrivateChannelMigrationStatus
-$details = $result.Details | ConvertFrom-Json
-Write-Host "Total: $($details.totalChannels), Migrated: $($details.migratedChannels), Failed: $($details.failedChannels), Ownerless: $($details.ownerlessChannels)"
-if ($details.ownerlessChannelsDetails) { $details.ownerlessChannelsDetails | Format-Table channelThreadId, teamId }
+PS> $result = Get-TenantPrivateChannelMigrationStatus
+PS> $details = $result.Details | ConvertFrom-Json
+PS> Write-Host "Total: $($details.totalChannels), Migrated: $($details.migratedChannels), Failed: $($details.failedChannels), Ownerless: $($details.ownerlessChannels)"
+PS> if ($details.ownerlessChannelsDetails) { $details.ownerlessChannelsDetails | Format-Table channelThreadId, teamId }
 ```
 
 This example parses the Details JSON and lists ownerless channels in a table.
