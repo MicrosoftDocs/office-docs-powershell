@@ -32,6 +32,8 @@ Set-CsTenantFederationConfiguration [-Tenant <Guid>]
  [-AllowedTrialTenantDomains <List>]
  [-ApplyExternalAccessRestrictionsToChatMembership <Boolean>]
  [-ExtendMutualFederationForChatMembership <Boolean>]
+ [-EnableExternalAccessRestrictionsForChatPartipants <Boolean>]
+ [-EnableMutualFederationForChatPartipants <Boolean>]
  [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -43,6 +45,8 @@ Set-CsTenantFederationConfiguration [-Tenant <Guid>] [-AllowedDomains <IAllowedD
  [-AllowedDomainsAsAList <List>]
  [-ApplyExternalAccessRestrictionsToChatMembership <Boolean>]
  [-ExtendMutualFederationForChatMembership <Boolean>]
+ [-EnableExternalAccessRestrictionsForChatPartipants <Boolean>]
+ [-EnableMutualFederationForChatPartipants <Boolean>]
  [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -236,6 +240,20 @@ When this command completes, the domains in the list will be removed from the Al
 Set-CsTenantFederationConfiguration -SecurityTeamAllowBlockListDelegation "Enabled"
 ```
 Example 17 shows how you let your security operations team edit the blocked domains and blocked users lists from Defender for Office 365 (default value is Disabled).
+
+### Example 18
+```
+Set-CsTenantFederationConfiguration -EnableExternalAccessRestrictionsForChatPartipants $True
+```
+
+Example 18 enables external access restrictions for group chat membership. When enabled, users who have `EnableFederationAccess` set to False in their assigned `ExternalAccessPolicy` are blocked from being added to group chats that include external users and are removed from existing active group chats that include external users.
+
+### Example 19
+```
+Set-CsTenantFederationConfiguration -EnableMutualFederationForChatPartipants $True
+```
+
+Example 19 enables participant-level mutual federation enforcement for group chats. When enabled, all participants in the group chat must have mutual federation relationships with every other participant in the chat. Users are blocked from joining or being added to group chats if they do not have mutual federation relationships with all existing participants, and participants can be removed from existing active group chats when required relationships are no longer valid.
 
 ## PARAMETERS
 
@@ -512,6 +530,65 @@ When set to True, **all participants in the group chat must have mutual federati
 
 ```yaml
 Type: ExtendMutualFederationForChatMembership
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableExternalAccessRestrictionsForChatPartipants
+
+> Applicable: Microsoft Teams
+
+When set to False (the default value), users in the tenant who have `EnableFederationAccess` set to False in their assigned `ExternalAccessPolicy` can be added to group chats that include external users only when the chat is initiated by a user in the same tenant who has `EnableFederationAccess` set to True.
+
+When set to True, users in the tenant who have `EnableFederationAccess` set to False are blocked from being added to any group chat that includes external users and are removed from existing active group chats that include external users.
+
+The `EnableExternalAccessRestrictionsForChatPartipants` parameter does not affect the behavior set by `CommunicationWithExternalOrgs` parameter of the `ExternalAccessPolicy`.
+
+> [!NOTE]
+> This setting only applies to group chats and does not affect a user's ability to join meetings with external users or participate in meeting chats with external users.
+
+> [!NOTE]
+> Removal of users only applies to active group chats. An active group chat is defined as a chat in which a message has been sent within the past two hours. Users are removed from inactive group chats when those chats become active.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableMutualFederationForChatPartipants
+
+> Applicable: Microsoft Teams
+
+This parameter specifies whether additional mutual federation requirements are extended across all participants in a group chat. Mutual federation relationships are determined by each user's effective external access configuration (`AllowedDomains`, `BlockedDomains`, and `ExternalAccessPolicy`). When enabled, this parameter adds participant-level mutual federation enforcement to group chat.
+
+When set to False (the default value), only the initiator of the group chat and the user joining or being added are required to have a mutual federation relationship. Users in the tenant can join or be added to group chats that may include other external participants who are not permitted by the user’s own external access configuration, based on the initiating user’s settings. This behavior applies to group chats initiated by users within the tenant or by external users.
+
+When set to True, all participants in the group chat must have mutual federation relationships with every other participant in the chat. Users are blocked from joining or being added to group chats if they do not have mutual federation relationships with all existing participants. These relationships are evaluated continuously for all active chats and participants are automatically removed from existing active group chats when required relationships are no longer valid.
+
+> [!NOTE]
+> This setting only applies to group chats and does not affect a user's ability to join meetings with external users or participate in meeting chats with external users.
+
+> [!NOTE]
+> Removal of users only applies to active group chats. An active group chat is defined as a chat in which a message has been sent within the past two hours. Users are removed from inactive group chats when those chats become active.
+
+> [!NOTE]
+> The user who initiated the chat is never removed from the group chat as a result of this setting.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
