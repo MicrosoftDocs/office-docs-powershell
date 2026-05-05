@@ -929,6 +929,18 @@ Creates a new online voice route.
 ### [New-CsOnlineVoiceRoutingPolicy](New-CsOnlineVoiceRoutingPolicy.md)
 Creates a new online voice routing policy. Online voice routing policies manage online PSTN usages for Phone System users.
 
+### [New-CsPhoneNumberBulkUpdateDrNumberAcquiredCapabilitiesOrder](New-CsPhoneNumberBulkUpdateDrNumberAcquiredCapabilitiesOrder.md)
+Creates a new bulk update order for acquired capabilities update.
+
+### [New-CsPhoneNumberBulkUpdateLocationIdOrder](New-CsPhoneNumberBulkUpdateLocationIdOrder.md)
+Creates a new bulk update order for Location Id update.
+
+### [New-CsPhoneNumberBulkUpdateNetworkSiteIdOrder](New-CsPhoneNumberBulkUpdateNetworkSiteIdOrder.md)
+Creates a new bulk update order for Network Site Id update. 
+
+### [New-CsPhoneNumberBulkUpdateReverseNumberLookupOrder](New-CsPhoneNumberBulkUpdateReverseNumberLookupOrder.md)
+Creates a new bulk update order for reverse number lookup option. 
+
 ### [New-CsPhoneNumberBulkUpdateTagsOrder](New-CsPhoneNumberBulkUpdateTagsOrder.md)
 Creates a new bulk update order for phone number tags. 
 
