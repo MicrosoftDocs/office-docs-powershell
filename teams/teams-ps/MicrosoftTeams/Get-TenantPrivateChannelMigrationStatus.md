@@ -22,7 +22,7 @@ Get-TenantPrivateChannelMigrationStatus [<CommonParameters>]
 
 ## DESCRIPTION
 
-The `Get-TenantPrivateChannelMigrationStatus` cmdlet allows tenant administrators to track the status of the private channel migration for their Microsoft Teams organization. More details about the migration can be found [here](https://techcommunity.microsoft.com/blog/microsoftteamsblog/new-enhancements-in-private-channels-in-microsoft-teams-unlock-their-full-potent/4438767#)
+The `Get-TenantPrivateChannelMigrationStatus` cmdlet allows tenant administrators to track the status of the private channel migration for their Microsoft Teams organization. More details about the migration can be found in the Microsoft Teams blog in [New enhancements in Private Channels in Microsoft Teams unlock their full potentia](https://techcommunity.microsoft.com/blog/microsoftteamsblog/new-enhancements-in-private-channels-in-microsoft-teams-unlock-their-full-potent/4438767#).
 
 **Note:** This cmdlet requires tenant administrator permissions to execute.
 
@@ -30,11 +30,11 @@ The `Get-TenantPrivateChannelMigrationStatus` cmdlet allows tenant administrator
 
 ### Example 1
 
+This example gets the migration status for a tenant where all channels have been migrated.
+
 ```powershell
 Get-TenantPrivateChannelMigrationStatus
 ```
-
-This example gets the migration status for a tenant where all channels have been migrated.
 
 ```Output
 TenantId                     : 12345678-1234-1234-1234-123456789abc
@@ -46,11 +46,11 @@ Details                      : {"totalChannels":10,"migratedChannels":10,"failed
 
 ### Example 2
 
+This example gets the migration status for a tenant where some channels require admin attention.
+
 ```powershell
 Get-TenantPrivateChannelMigrationStatus
 ```
-
-This example gets the migration status for a tenant where some channels require admin attention.
 
 ```Output
 TenantId                     : 94d200e4-2df1-45b9-bc3e-53cfa7cf4997
@@ -62,14 +62,14 @@ Details                      : {"totalChannels":10,"migratedChannels":6,"failedC
 
 ### Example 3
 
+This example parses the Details JSON and lists ownerless channels in a table.
+
 ```powershell
 $result = Get-TenantPrivateChannelMigrationStatus
 $details = $result.Details | ConvertFrom-Json
 Write-Host "Total: $($details.totalChannels), Migrated: $($details.migratedChannels), Failed: $($details.failedChannels), Ownerless: $($details.ownerlessChannels)"
 if ($details.ownerlessChannelsDetails) { $details.ownerlessChannelsDetails | Format-Table channelThreadId, teamId }
 ```
-
-This example parses the Details JSON and lists ownerless channels in a table.
 
 ## PARAMETERS
 
