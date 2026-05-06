@@ -16,6 +16,8 @@ title: Set-CsOnlineVoiceRoutingPolicy
 ## SYNOPSIS
 Modifies an existing online voice routing policy. Online voice routing policies manage online PSTN usages for Phone System users.
 
+For more details, please refer to the article [Voice routing policy considerations.](/microsoftteams/direct-routing-voice-routing)
+
 ## SYNTAX
 
 ### Identity (Default)
