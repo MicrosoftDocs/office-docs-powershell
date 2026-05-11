@@ -17,7 +17,7 @@ title: Set-CsSharedVoicemailTriageSettingsTemplate
 
 The Set‑CsSharedVoicemailTriageSettingsTemplate cmdlet updates the configuration for automatic triage of Shared Voicemails performed by the Substrate Large Language Model (LLM). You can enable or disable individual triage capabilities, including summary generation, message prioritization, suggested actions, and category assignment.
 
-To fully disable LLM‑based triaging for Shared Voicemails, the corresponding triage settings template must be removed, not just updated. Disabling individual capabilities does not stop the LLM from being invoked; removing the template ensures that no LLM processing occurs.
+To fully disable LLM‑based triaging for Shared Voicemails, the corresponding triage settings template must be removed from the associated Call Queue, Auto Attendant, or Main Line Attendant configuration. Alternatively, you can delete the template itself using Remove‑CsSharedVoicemailTriageSettingsTemplate.
 
 ## SYNTAX
 
@@ -33,19 +33,53 @@ Use the Set‑CsSharedVoicemailTriageSettingsTemplate cmdlet to update the triag
 ## EXAMPLES
 
 ### Example 1
+
 ```
-Set-CsSharedVoicemailTriageSettingsTemplate -Instance $templateInstance -Name "Triage without urgency indetification" -Description "Template to triage voicemails while skipping message‑urgency identification" -EnableUrgencyDetection $false -EnableCategoryDetection $true  -EnableVoiceToTextSummary $true -EnableCallToActionDetection $true
+$templateInstance = Get-CsSharedVoicemailTriageSettingsTemplate -Id "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+$templateInstance.Name = "Triage without urgency identification"
+$templateInstance.Description = "Template to triage voicemails while skipping message‑urgency identification"
+$templateInstance.EnableUrgencyDetection = $false
+$templateInstance.EnableCategoryDetection = $true
+$templateInstance.EnableCallToActionDetection = $true
+$templateInstance.EnableVoiceToTextSummary = $true
+Set-CsSharedVoicemailTriageSettingsTemplate -Instance $templateInstance
+
 
 ```
 This example updates the template name and description, and disables identification of voicemail message importance.
 
+### Example 2
 
+```
+$templateInstance = Get-CsSharedVoicemailTriageSettingsTemplate -Id "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+$templateInstance.EnableUrgencyDetection = $true
+$templateInstance.EnableCategoryDetection = $false
+$templateInstance.EnableCallToActionDetection = $false
+$templateInstance.EnableVoiceToTextSummary = $true
+Set-CsSharedVoicemailTriageSettingsTemplate -Instance $templateInstance
+
+```
+This example disables identification of category and actions for shared voicemail messages.
+
+
+### Example 3
+
+```
+$templateInstance = Get-CsSharedVoicemailTriageSettingsTemplate -Id "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+$templateInstance.EnableUrgencyDetection = $false
+$templateInstance.EnableCategoryDetection = $false
+$templateInstance.EnableCallToActionDetection = $false
+$templateInstance.EnableVoiceToTextSummary = $false
+Set-CsSharedVoicemailTriageSettingsTemplate -Instance $templateInstance
+
+```
+This example disables adding LLM‑generated fields to Shared Voicemail messages only. To fully stop LLM involvement, the triage settings template must be removed from the associated Call Queue, Auto Attendant, or Main Line Attendant configuration. Alternatively, you can delete the template itself using Remove‑CsSharedVoicemailTriageSettingsTemplate.
 
 ## PARAMETERS
 
 ### -Instance
 
-Template object ID  includes all config values of the template
+The instance of the Voicemail triage template to change
 
 ```yaml
 Type: System.String
@@ -59,79 +93,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -EnableCallToActionDetection
 
-When enabled, LL identifies all actionable tasks in the voicemail and also assigns standard action types such as Callback, Email Reply, Set Appointment, Reschedule Appointment, or Cancel Appointment.
-
-PARAMVALUE: True| False
-
-```yaml
-Type: bool
-
-Required: True
-Position: Named
-Default value: True
-```
-
-### -EnableCategoryDetection
-
-When enabled, LLM assigns category as short noun representing the voicemail’s primary intent. 
-Standard categories such as Junk or Harmful Content may also be applied when appropriate.
-
-PARAMVALUE: True| False
-
-```yaml
-Type: bool
-
-Required: True
-Position: Named
-Default value: True
-```
-
-### -EnableUrgencyDetection
-
-When enabled, LLM identifies time critical messages and marks them as Important
-
-PARAMVALUE: True| False
-
-```yaml
-Type: bool
-
-Required: True
-Position: Named
-Default value: True
-```
-
-### -EnableVoiceToTextSummary
-
-When enabled, LLM generates a one paragraph summary for a message. The first sentence captures the caller’s intent, followed by key details such as dates, times, required actions, and contact information.
-
-PARAMVALUE: True| False
-
-```yaml
-Type: bool
-
-Required: True
-Position: Named
-Default value: True
-```
-
-
-### -Name
-
-The name of the template.
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### CommonParameters
 
