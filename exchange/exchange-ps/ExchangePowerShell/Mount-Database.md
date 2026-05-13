@@ -37,7 +37,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Mount-Database -Identity ExchangeServer1.Contoso.com\MyDatabase
+Mount-Database -Identity MyDatabase
 ```
 
 This example mounts the database MyDatabase.
