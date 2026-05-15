@@ -19,6 +19,8 @@ title: New-CsTeamsPersonalAttendantPolicy
 
 Use this cmdlet to create a new instance of a Teams Personal Attendant Policy.
 
+When policy modifications are temporarily blocked, new policy instances can be created successfully if the following parameters are kept at their default values (`EnabledUserOverride`): `PersonalAttendant`, `CallScreening`, `CalendarBookings`, `InboundInternalCalls`, `InboundFederatedCalls`, `InboundPSTNCalls`. The **AutomaticTranscription** and **AutomaticRecording** parameters remain fully configurable during this period.
+
 ## SYNTAX
 
 ```

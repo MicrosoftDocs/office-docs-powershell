@@ -67,7 +67,7 @@
     "globalMetadata": {
       "ms.service": "office-online-server-powershell",
       "uhfHeaderId": "MSDocsHeader-Dev_Office",
-      "author": "serdarsoysal",
+      "author": "officedocspr",
       "ms.author": "mikeplum",
       "manager": "laurawi",
       "ms.date": "11/28/2017",
@@ -78,8 +78,20 @@
       ],
       "ms.devlang": "powershell",
       "feedback_system": "Standard",
-            "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
+      "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
     },
+    "contributors_to_exclude": [
+      "aditisrivastava07",
+      "AGuentherinWA",
+      "claydetels19",
+      "dstrome",
+      "garycentric",
+      "padmagit77",
+      "rjagiewich",
+      "Ruchika-mittal01",
+      "Shipra-M09",
+      "techtoons"
+    ],
     "fileMetadata": {},
     "template": [],
     "dest": "officewebapps-ps"

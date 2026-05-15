@@ -708,8 +708,6 @@ The AdfsAudienceUris parameter specifies one or more external URLs that are used
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
 
-To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
-
 For more information about configuring AD FS claims based authentication in Exchange, see [Use AD FS claims-based authentication with Outlook on the web](https://learn.microsoft.com/Exchange/clients/outlook-on-the-web/ad-fs-claims-based-auth).
 
 ```yaml
@@ -797,8 +795,6 @@ The AdfsSignCertificateThumbprints parameter specifies one or more X.509 token-s
 To get the thumbprint values of the primary and secondary token-signing certificates, open Windows PowerShell on the AD FS server and run the command Get-ADFSCertificate -CertificateType "Token-signing". For more information, see [Get-ADFSCertificate](https://learn.microsoft.com/powershell/module/adfs/get-adfscertificate).
 
 To enter multiple values and overwrite any existing entries, use the following syntax: `Value1,Value2,...ValueN`. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-To add or remove one or more values without affecting any existing entries, use the following syntax: `@{Add="Value1","Value2"...; Remove="Value3","Value4"...}`.
 
 ```yaml
 Type: MultiValuedProperty
@@ -4057,7 +4053,7 @@ The RejectDirectSend parameter specifies whether to block Direct Send in your or
 
 - $true: Direct Send is blocked. Exchange Online rejects anonymous messages sent from your own domain to your organization's mailboxes when the following conditions are met:
 
-  • The anonymous incoming messages don't match any inbound connectors.
+  • The anonymous incoming messages don't match any inbound connectors. We only consider inbound connectors configured to match the sender IP or certificate.
 
   • The domain in the MAIL FROM address (also known as the `5321.MailFrom` address, P1 sender, or envelope sender) is an accepted domain in your organization.
 

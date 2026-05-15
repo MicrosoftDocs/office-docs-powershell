@@ -10,11 +10,10 @@ online version: https://learn.microsoft.com/powershell/module/microsoftteams/Get
 schema: 2.0.0
 title: Get-CsSharedCallQueueHistoryTemplate
 ---
-
 # Get-CsSharedCallQueueHistoryTemplate
 
 ## SYNOPSIS
-Use the Get-CsSharedCallQueueHistory cmdlet to list the Shared Call Queue History templates.
+This PowerShell cmdlet is being deprecated, please use the new version [Get-CsSharedCallHistoryTemplate](./Get-CsSharedCallHistoryTemplate.md) instead
 
 ## SYNTAX
 

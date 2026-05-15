@@ -19,6 +19,8 @@ title: Set-CsTeamsPersonalAttendantPolicy
 
 Use this cmdlet to update values in existing Teams Personal Attendant Policies.
 
+When policy modifications are temporarily blocked, only **AutomaticTranscription** and **AutomaticRecording** can be updated. The following parameters are not available for changes during this period: `PersonalAttendant`, `CallScreening`, `CalendarBookings`, `InboundInternalCalls`, `InboundFederatedCalls`, `InboundPSTNCalls`.
+
 ## SYNTAX
 
 ```

@@ -32,6 +32,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-AllowedMimeTypes <MultiValuedProperty>]
  [-AllowedOrganizationAccountDomains <String[]>]
  [-AllowOfflineOn <AllowOfflineOnEnum>]
+ [-AttachmentsOfflineEnabledWin <Boolean>]
  [-BizBarEnabled <Boolean>]
  [-BlockedFileTypes <MultiValuedProperty>]
  [-BlockedMimeTypes <MultiValuedProperty>]
@@ -327,7 +328,7 @@ This parameter is available only in the cloud-based service.
 
 This parameter is deprecated and no longer used.
 
-To enable or disable personal accounts in the new Outlook for Windows, use the PersonalAccountsEnabled parameter.
+To enable or disable personal accounts in Outlook (formerly known as the new Outlook for Windows), use the PersonalAccountsEnabled parameter.
 
 ```yaml
 Type: System.Boolean
@@ -450,7 +451,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The AllowedOrganizationAccountDomains parameter specifies domains where users can add work or school email accounts in the new Outlook for Windows. The default value is blank ($null), which allows work or school accounts from any domain. Setting this parameter to an empty list ([]) prevents any work or school accounts from being added.
+The AllowedOrganizationAccountDomains parameter specifies domains where users can add work or school email accounts in Outlook (formerly known as the new Outlook for Windows). The default value is blank ($null), which allows work or school accounts from any domain. Setting this parameter to an empty list ([]) prevents any work or school accounts from being added.
 
 ```yaml
 Type: String[]
@@ -480,6 +481,35 @@ When offline mode is available, users can turn offline mode on or off themselves
 
 ```yaml
 Type: AllowOfflineOnEnum
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AttachmentsOfflineEnabledWin
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+The AttachmentsOfflineEnabledWin parameter specifies whether file attachments are available for offline use in Outlook (formerly known as the new Outlook for Windows).
+
+This parameter only applies when offline capabilities are enabled in Outlook.
+
+Valid values are:
+
+- $true: Users can access file attachments while working offline in Outlook. This value is the default.
+- $false: Users can't access file attachments while working offline in Outlook.
+
+**Note**: If the OfflineEnabledWin parameter is set to $false, offline file attachments are disabled even if AttachmentsOfflineEnabledWin is set to $true.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -687,12 +717,12 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The ChangeSettingsAccountEnabled parameter specifies whether users can change the email account where app-wide settings (for example, theme and privacy settings) are associated in the new Outlook for Windows. Valid values are:
+The ChangeSettingsAccountEnabled parameter specifies whether users can change the email account where app-wide settings (for example, theme and privacy settings) are associated in Outlook (formerly known as the new Outlook for Windows). Valid values are:
 
-- $true: Users can change their settings account in the new Outlook for Windows. This value is the default.
-- $false: Users can't change their settings account in the new Outlook for Windows.
+- $true: Users can change their settings account in Outlook. This value is the default.
+- $false: Users can't change their settings account in Outlook.
 
-**Note**: The settings account is referred to as the primary account in the new Outlook for Windows setting at Settings \> Accounts \> Email accounts \> Manage.
+**Note**: The settings account is referred to as the primary account in the Outlook setting at Settings \> Accounts \> Email accounts \> Manage.
 
 ```yaml
 Type: System.Boolean
@@ -1786,12 +1816,12 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The OfflineEnabledWin parameter specifies whether offline capabilities are available in the new Outlook for Windows, including saving items to the local device (view items without an internet connection). Valid values are:
+The OfflineEnabledWin parameter specifies whether offline capabilities are available in Outlook (formerly known as the new Outlook for Windows), including saving items to the local device (view items without an internet connection). Valid values are:
 
-- $true: Users can manage offline capabilities in the new Outlook for Windows. This value is the default.
-- $false: Users can't manage offline capabilities in the new Outlook for Windows. No items are saved to the user's device. Previously save items are deleted.
+- $true: Users can manage offline capabilities in Outlook. This value is the default.
+- $false: Users can't manage offline capabilities in Outlook. No items are saved to the user's device. Previously save items are deleted.
 
-When offline capabilities are available, users can turn offline capabilities on or off themselves in the New Outlook for Windows at Settings \> General \> Offline. By default, offline capabilities are turned on.
+When offline capabilities are available, users can turn offline capabilities on or off themselves in the Outlook at Settings \> General \> Offline. By default, offline capabilities are turned on.
 
 ```yaml
 Type: Boolean
@@ -1831,10 +1861,10 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The OneWinNativeOutlookEnabled parameter controls the availability of the new Outlook for Windows App. Valid values are:
+The OneWinNativeOutlookEnabled parameter controls the availability of Outlook (formerly known as the new Outlook for Windows). Valid values are:
 
-- $true: The New Outlook for Windows App is available. This value is the default.
-- $false: The new Outlook for Windows App isn't available.
+- $true: The Outlook app is available. This value is the default.
+- $false: The Outlook App isn't available.
 
 ```yaml
 Type: System.Boolean
@@ -1939,7 +1969,7 @@ This parameter is available only in the cloud-based service.
 
 The OutlookNewslettersAccessLevelAccess parameter specifies the access level in Outlook Newsletters. Valid values are:
 
-- NoAccess: No access to Outlook Newsletters in the New Outlook for Windows or Outlook on the web. Users can still read email messages sent or forwarded to them.
+- NoAccess: No access to Outlook Newsletters in Outlook (formerly known as the new Outlook for Windows) or Outlook on the web. Users can still read email messages sent or forwarded to them.
 - ReadOnly: Read newsletters and browse pages in Outlook Newsletters.
 - ReadWrite: Full authoring permissions to create pages and newsletters in Outlook Newsletters.
 - Undefined: This value is the default. Currently, this value is equivalent to NoAccess.
@@ -1962,7 +1992,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The OutlookDataFile parameter specifies what users can do with .pst files in the new Outlook for Windows. Valid values are:
+The OutlookDataFile parameter specifies what users can do with .pst files in Outlook (formerly known as the new Outlook for Windows). Valid values are:
 
 - Allow: The default value. Users can open .pst files, import from a .pst file to a mailbox, export from a mailbox to a .pst file, and copy items to and from .pst files.
 - NoExport: Users can't export from a mailbox to a .pst file.
@@ -2108,10 +2138,10 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The PersonalAccountsEnabled parameter specifies whether to allow users to add their personal accounts (for example, Outlook.com, Gmail, or Yahoo!) in the new Outlook for Windows. Valid values are:
+The PersonalAccountsEnabled parameter specifies whether to allow users to add their personal accounts (for example, Outlook.com, Gmail, or Yahoo!) in Outlook (formerly known as the new Outlook for Windows). Valid values are:
 
-- $true: Users can add their personal accounts in the new Outlook for Windows. This value is the default.
-- $false: Users can't add their personal accounts in the new Outlook for Windows.
+- $true: Users can add their personal accounts in Outlook. This value is the default.
+- $false: Users can't add their personal accounts in Outlook.
 
 ```yaml
 Type: System.Boolean

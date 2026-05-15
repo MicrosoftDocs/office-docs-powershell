@@ -2,11 +2,9 @@
 title: "Exchange Online PowerShell"
 ms.date: 05/07/2025
 ms.audience: Admin
-audience: Admin
 ms.topic: article
 ms.localizationpriority: medium
 ms.assetid: 1cb603b0-2961-4afe-b879-b048fe0f64a2
-search.appverid: MET150
 description: "Learn about articles that are available for using PowerShell in Exchange Online."
 ---
 

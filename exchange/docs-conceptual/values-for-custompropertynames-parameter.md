@@ -2,7 +2,6 @@
 title: Values for the CustomPropertyNames parameter
 ms.date: 9/7/2023
 ms.audience: Admin
-audience: Admin
 ms.topic: article
 ms.service: exchange-online
 ms.reviewer:
@@ -10,7 +9,6 @@ ms.localizationpriority: high
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
-search.appverid: MET150
 description: "Learn about the valid values for the CustomPropertyNames parameter on the Get-CalendarDiagnosticsLog cmdlet in Exchange Online PowerShell."
 ---
 

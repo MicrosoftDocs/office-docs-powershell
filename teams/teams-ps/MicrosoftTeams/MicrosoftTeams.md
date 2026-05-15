@@ -59,6 +59,9 @@ Use the Find-CsGroup cmdlet to search groups.
 ### [Find-CsOnlineApplicationInstance](Find-CsOnlineApplicationInstance.md)
 Use the Find-CsOnlineApplicationInstance cmdlet to find application instances that match your search criteria.
 
+### [Get-CsAgent](Get-CsAgent.md)
+Retrieves the AI Agent(s) in the tenant.
+
 ### [Get-AllM365TeamsApps](Get-AllM365TeamsApps.md)
 This cmdlet returns all Microsoft Teams apps in the app catalog, including Microsoft, custom, and non-Microsoft apps.
 
@@ -142,6 +145,15 @@ Returns information about the Mainline Attendant flows configured in your organi
 
 ### [Get-CsMainlineAttendantQuestionAnswerFlow](Get-CsMainlineAttendantQuestionAnswerFlow.md)
 Returns the identified Mainline attendant question and answer flow.
+
+### [Get-CsMainlineAttendantTenantInformation](Get-CsMainlineAttendantTenantInformation.md)
+Returns the tenant default language and voice for Mainline Attendant.
+
+### [Get-CsMainlineAttendantSupportedLanguages](Get-CsMainlineAttendantSupportedLanguages.md)
+Returns the list of supported languages for Mainline Attendant.
+
+### [Get-CsMainlineAttendantSupportedVoices](Get-CsMainlineAttendantSupportedVoices.md)
+Returns the list of supported voices for Mainline Attendant.
 
 ### [Get-CsMeetingMigrationStatus](Get-CsMeetingMigrationStatus.md)
 You use the `Get-CsMeetingMigrationStatus` cmdlet to check the status of meeting migrations.
@@ -284,8 +296,11 @@ Get the tenant level summary of all bulk sign in requests executed in the past 3
 ### [Get-CsSdgBulkSignInRequestStatus](Get-CsSdgBulkSignInRequestStatus.md)
 Get the status of an active bulk sign in request.
 
+### [Get-CsSharedCallHistoryTemplate](Get-CsSharedCallHistoryTemplate.md)
+Retrieves the list of Shared Call History templates.
+
 ### [Get-CsSharedCallQueueHistoryTemplate](Get-CsSharedCallQueueHistoryTemplate.md)
-```powershell Get-CsSharedCallQueueHistoryTemplate -Id <string> [<CommonParameters>] ```
+Deprecated - new cmdlet is Get-CsSharedCallHistoryTemplate
 
 ### [Get-CsTagsTemplate](Get-CsTagsTemplate.md)
 Retrieves a list of existing Tag templates.
@@ -495,7 +510,7 @@ Returns information related to managing the upgrade to Teams from Skype for Busi
 This cmdlet returns the set of instances of this policy.
 
 ### [Get-CsTeamsVdiPolicy](Get-CsTeamsVdiPolicy.md)
-The Get-CsTeamsVdiPolicy cmdlet enables you to return infomration about all the Vdi policies that have been configured for use in your organization.
+The Get-CsTeamsVdiPolicy cmdlet enables you to return information about all the Vdi policies that have been configured for use in your organization.
 
 ### [Get-CsTeamsVideoInteropServicePolicy](Get-CsTeamsVideoInteropServicePolicy.md)
 The Get-CsTeamsVideoInteropServicePolicy cmdlet allows you to identify the pre-constructed policies that you can use in your organization.
@@ -779,6 +794,9 @@ Trigger a new direct assignments to group policy assignments cleanup.
 ### [Invoke-StartDirectToGroupAssignmentMigration](Invoke-StartDirectToGroupAssignmentMigration.md)
 Trigger a new direct assignments to group policy assignments migration
 
+### [New-CsAgent](New-CsAgent.md)
+Create an AI Agent that can be associated with a Teams Phone Resource Account.
+
 ### [New-CsApplicationAccessPolicy](New-CsApplicationAccessPolicy.md)
 Creates a new application access policy. Application access policy contains a list of application (client) IDs.
 
@@ -911,6 +929,18 @@ Creates a new online voice route.
 ### [New-CsOnlineVoiceRoutingPolicy](New-CsOnlineVoiceRoutingPolicy.md)
 Creates a new online voice routing policy. Online voice routing policies manage online PSTN usages for Phone System users.
 
+### [New-CsPhoneNumberBulkUpdateDrNumberAcquiredCapabilitiesOrder](New-CsPhoneNumberBulkUpdateDrNumberAcquiredCapabilitiesOrder.md)
+Creates a new bulk update order for acquired capabilities update.
+
+### [New-CsPhoneNumberBulkUpdateLocationIdOrder](New-CsPhoneNumberBulkUpdateLocationIdOrder.md)
+Creates a new bulk update order for Location Id update.
+
+### [New-CsPhoneNumberBulkUpdateNetworkSiteIdOrder](New-CsPhoneNumberBulkUpdateNetworkSiteIdOrder.md)
+Creates a new bulk update order for Network Site Id update. 
+
+### [New-CsPhoneNumberBulkUpdateReverseNumberLookupOrder](New-CsPhoneNumberBulkUpdateReverseNumberLookupOrder.md)
+Creates a new bulk update order for reverse number lookup option. 
+
 ### [New-CsPhoneNumberBulkUpdateTagsOrder](New-CsPhoneNumberBulkUpdateTagsOrder.md)
 Creates a new bulk update order for phone number tags. 
 
@@ -920,8 +950,11 @@ This cmdlet creates a request for remote log collection for a device.
 ### [New-CsSdgBulkSignInRequest](New-CsSdgBulkSignInRequest.md)
 Use the New-CsSdgBulkSignInRequest cmdlet to sign in a batch of up to 100 devices.
 
+### [New-CsSharedCallHistoryTemplate](New-CsSharedCallHistoryTemplate.md)
+Use the New-CsSharedCallHistoryTemplate cmdlet to create a Shared Call History template.
+
 ### [New-CsSharedCallQueueHistoryTemplate](New-CsSharedCallQueueHistoryTemplate.md)
-Use the New-CsSharedCallQueueHistoryTemplate cmdlet to create a Shared Call Queue History template.
+Deprecated - new cmdlet is New-CsSharedCallHistoryTemplate
 
 ### [New-CsTag](New-CsTag.md)
 Use the New-CsTag cmdlet to create a new tag that can be added to a Tag template.
@@ -1124,6 +1157,9 @@ Creates a new app in the Teams tenant app store.
 ### [Register-CsOnlineDialInConferencingServiceNumber](Register-CsOnlineDialInConferencingServiceNumber.md)
 The Register-CsOnlineDialInConferencingServiceNumber command allows you to assign any additional service number that you may have acquired to your conference bridge.
 
+### [Remove-CsAgent](Remove-CsAgent.md)
+Deletes an AI Agent.
+
 ### [Remove-CsApplicationAccessPolicy](Remove-CsApplicationAccessPolicy.md)
 Deletes an existing application access policy.
 
@@ -1232,8 +1268,11 @@ This cmdlet allows the admins to remove a tenant default configuration that appl
 ### [Remove-CsTeamsRemoteLogCollectionDevice](Remove-CsTeamsRemoteLogCollectionDevice.md)
 This cmdlet will remove/delete a device from the remote log collection configuration.
 
+### [Remove-CsSharedCallHistoryTemplate](Remove-CsSharedCallHistoryTemplate.md)
+Removes Shared Call History template.
+
 ### [Remove-CsSharedCallQueueHistoryTemplate](Remove-CsSharedCallQueueHistoryTemplate.md)
-```powershell Remove-CsSharedCallQueueHistoryTemplate -Id <String> [<CommonParameters>] ```
+Deprecated - use new cmdlet CsSharedCallHistoryTemplate
 
 ### [Remove-CsTagsTemplate](Remove-CsTagsTemplate.md)
 Deletes an existing Tag template.
@@ -1433,6 +1472,9 @@ Removes the tenant's hierarchy.
 ### [Remove-TeamUser](Remove-TeamUser.md)
 Remove an owner or member from a team, and from the unified group which backs the team.
 
+### [Set-CsAgent](Set-CsAgent.md)
+Modifies an AI Agent that can be associated with a Teams Phone Resource Account.
+
 ### [Set-CsApplicationAccessPolicy](Set-CsApplicationAccessPolicy.md)
 Modifies an existing application access policy.
 
@@ -1559,8 +1601,11 @@ This cmdlet allows the admins to set a tenant default configuration that applies
 ### [Set-CsTeamsRemoteLogCollectionDevice](Set-CsTeamsRemoteLogCollectionDevice.md)
 This cmdlet allows the admin to create and edit a device requested for remote log collection.
 
+### [Set-CsSharedCallHistoryTemplate](Set-CsSharedCallHistoryTemplate.md)
+This cmdlet allows to configure Shared Call History template.
+
 ### [Set-CsSharedCallQueueHistoryTemplate](Set-CsSharedCallQueueHistoryTemplate.md)
-```powershell Set-CsSharedCallQueueHistoryTemplate -Instance <instance> [<CommonParameters>] ```
+Deprecated - use new cmdlet Set-CsSharedCallHistoryTemplate
 
 ### [Set-CsTagsTemplate](Set-CsTagsTemplate.md)
 Make changes to an existing Tag template.

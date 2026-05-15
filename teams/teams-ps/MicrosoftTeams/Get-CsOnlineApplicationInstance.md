@@ -1,11 +1,11 @@
 ---
 applicable: Microsoft Teams
-author: serdarsoysal
+author: officedocspr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
-ms.author: serdars
+ms.author: odocspr
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineapplicationinstance
 schema: 2.0.0
 title: Get-CsOnlineApplicationInstance

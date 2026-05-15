@@ -31,11 +31,11 @@ Creates a new instance of the TeamsWorkLocationDetectionPolicy. This policy can 
   - `Disabled` (default): Users must explicitly opt in (Ask mode).
   - `Enabled`: Automatic update is enabled by default, and users can opt out (Inform mode).
 
-Learn more about the [admin configuration modes](https://learn.microsoft.com/microsoft-365/places/configure-auto-detect-work-location) 
+Learn more about the [admin configuration modes](https://learn.microsoft.com/microsoft-365/places/configure-auto-detect-work-location).
 
 The combination of these settings determines whether automatic update runs, which signals are active, and how users are informed.
 
-## Behavior matrix
+**Behavior matrix**
 
 | EnableWorkLocationDetection | UserSettingsDefault | Automatic detection behavior |
 |----------------------------|---------------------|------------------------------|
@@ -44,7 +44,7 @@ The combination of these settings determines whether automatic update runs, whic
 | True | Enabled | Peripheral and Wi‑Fi check‑in are enabled. Wi-Fi check-in runs in **Inform mode**, meaning Wi-Fi based update is on by default and users can opt out. |
 | False | Enabled | Peripheral check‑in is disabled. Wi‑Fi check‑in is disabled. UserSettingsDefault is ignored when EnableWorkLocationDetection is set to False. |
 
-### Notes on behavior
+**Notes on behavior**
 
 - When **EnableWorkLocationDetection** is set to **False**, automatic update is fully disabled regardless of user defaults.
 - When **EnableWorkLocationDetection** is set to **True**, **UserSettingsDefault** determines whether users experience **Ask (opt‑in)** or **Inform (opt‑out)** behavior.

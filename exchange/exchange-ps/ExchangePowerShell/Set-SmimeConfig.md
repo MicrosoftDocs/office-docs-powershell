@@ -108,9 +108,10 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-The OWAAllowUserChoiceOfSigningCertificate parameter specifies whether to allow users to select the certificate to use when they digitally sign email messages in Outlook on the web.
+The OWAAllowUserChoiceOfSigningCertificate parameter specifies whether to allow users to select the certificate to use when they digitally sign email messages in Outlook on the web. Valid values are:
 
-Valid input for this parameter is $true or $false. The default value is $false.
+- $true: Users can manually select the certificate that's used to sign messages.
+- $false: Outlook on the web automatically selects the signing certificate. The eligible S/MIME certificate with the most recent NotBefore value is used. The NotBefore value is evaluated as a full date and time value, with comparison precision up to seconds. Certificates issued on the same day are still differentiated if their NotBefore values differ by time. If two or more eligible certificates have the same NotBefore timestamp at seconds precision, the certificate that's selected is unspecified and isn't guaranteed to be the same across signing operations. This behavior is the default.
 
 ```yaml
 Type: Boolean

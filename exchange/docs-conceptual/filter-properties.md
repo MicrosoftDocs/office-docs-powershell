@@ -2,7 +2,6 @@
 title: "Filterable properties for the Filter parameter"
 ms.date: 1/9/2024
 ms.audience: ITPro
-audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
 ms.assetid: b02b0005-2fb6-4bc2-8815-305259fa5432

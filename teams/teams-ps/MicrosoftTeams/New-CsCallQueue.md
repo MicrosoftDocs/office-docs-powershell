@@ -57,13 +57,7 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 > - -NoAgentRedirectVoicemailTextToSpeechPrompt
 > - -NoAgentRedirectVoicemailAudioFilePrompt
 >
-> Shared call queue history
-> - -SharedCallQueueHistoryTemplateId
->  
-> The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
->
-> Shared call queue history
-> - -SharedCallQueueHistoryTemplateId
+> Shared call history
 > - -AutoRecordingTemplateId
 >
 > Authorized users can't edit call queues with these features enabled:
@@ -331,7 +325,7 @@ Accept wildcard characters: False
 
 ### -CustomAudioFileAnnouncementForCRFailure
 
-The CustomAudioFileAnnouncementForCRFailure parameter indicates the unique identifier for the Audio file prompt which is played to callers  if the compliance recording for call queue bot is unable to join or drops from the call.
+The CustomAudioFileAnnouncementForCRFailure parameter indicates the unique identifier for the Audio file prompt which is played to callers if the compliance recording for call queue bot is unable to join or drops from the call.
 
 ```yaml
 Type: Guid
@@ -1175,12 +1169,12 @@ Accept wildcard characters: False
 
 ### -SharedCallQueueHistoryTemplateId
 
-The SharedCallQueueHistoryTemplateId parameter indicates the Shared Call Queue History template to apply to the call queue.
+The SharedCallQueueHistoryTemplateId parameter indicates the Shared Call History template to apply to the call queue.
 
 > [!NOTE]
 > `-ConferenceMode` must be set to $true
 >
-> Shared call queue history is not availble when using a Teams channel for queue membership
+> Shared call history is not availble when using a Teams channel for queue membership
 >  - `-ChannelId` and `-ChannelUserObjectId` are set.
 
 ```yaml

@@ -2,7 +2,6 @@
 title: "Recipient filters in Exchange PowerShell commands"
 ms.date: 09/07/2023
 ms.audience: ITPro
-audience: ITPro
 ms.topic: reference
 ms.localizationpriority: medium
 ms.assetid: fb4b1396-9aae-4037-be1a-b09e336b890e

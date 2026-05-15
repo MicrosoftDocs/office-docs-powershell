@@ -2,7 +2,6 @@
 title: Use Azure managed identities to connect to Exchange Online PowerShell
 ms.date: 8/24/2023
 ms.audience: Admin
-audience: Admin
 ms.topic: article
 ms.service: exchange-online
 ms.reviewer:
@@ -10,7 +9,6 @@ ms.localizationpriority: high
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
-search.appverid: MET150
 description: "Learn about using the Exchange Online PowerShell V3 module and Azure managed identity to connect to Exchange Online PowerShell."
 ---
 

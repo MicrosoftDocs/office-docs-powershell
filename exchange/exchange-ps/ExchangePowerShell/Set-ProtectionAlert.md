@@ -581,7 +581,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The Threshold parameter specifies the number of detections that trigger the alert policy (within the time period specified by the TimeWindow parameter). A valid value is an integer that's greater than or equal to 3.
+The Threshold parameter specifies the number of detections that must be exceeded within the time period defined by the TimeWindow parameter to trigger the alert policy. A valid value is an integer that's greater than or equal to 3.
 
 You can only use this parameter when the AggregationType parameter value is SimpleAggregation.
 
