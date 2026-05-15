@@ -101,7 +101,7 @@ Test-MigrationServerAvailability -Endpoint <MigrationEndpointIdParameter>
 Test-MigrationServerAvailability -RemoteServer <Fqdn> -Port <Int32> [-Imap]
  [-AcceptUntrustedCertificates]
  [-Authentication <AuthenticationMethod>]
- [-Security <NIMAPSecurityMechanism]
+ [-Security <IMAPSecurityMechanism>]
  [-Confirm]
  [-Partition <MailboxIdParameter>]
  [-WhatIf]
@@ -615,7 +615,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill AcceptUntrustedCertificates Description }}
+The AcceptUntrustedCertificates switch specifies whether to accept untrusted certificates from the remote server. You don't need to specify a value with this switch. This switch is applicable to ExchangeOutlookAnywhere and IMAP endpoint types.
 
 ```yaml
 Type: SwitchParameter
@@ -658,7 +658,7 @@ Accept wildcard characters: False
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

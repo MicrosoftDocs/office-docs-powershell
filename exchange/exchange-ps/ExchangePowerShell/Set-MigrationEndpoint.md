@@ -55,7 +55,7 @@ Use the Set-MigrationEndpoint cmdlet to configure settings for different types o
 - Cutover Exchange migration: Migrate all mailboxes in an on-premises Exchange organization to Exchange Online. Cutover Exchange migration requires the use of an Exchange endpoint.
 - Staged Exchange migration: Migrate a subset of mailboxes from an on-premises Exchange organization to Exchange Online. Staged Exchange migration requires the use of an Exchange endpoint.
 - IMAP migration: Migrate mailbox data from an on-premises Exchange organization or other email system to Exchange Online. For an IMAP migration, you must first create the cloud-based mailboxes before you migrate mailbox data. IMAP migrations require the use of an IMAP endpoint.
-- Gmail migration: Migration mailbox data from a Google Workspace tenant to Exchange Online. For a Google Workspace migration, you must first create the cloud-based mail users or mailboxes before you migrate mailbox data. Google Workspace migrations require the use of a Gmail endpoint.
+- Gmail migration: Migrate mailbox data from a Google Workspace tenant to Exchange Online. For a Google Workspace migration, you must first create the cloud-based mail users or mailboxes before you migrate mailbox data. Google Workspace migrations require the use of a Gmail endpoint.
 - Local: Move mailboxes between different servers or databases within a single on-premises Exchange forest. Local moves don't require the use of an endpoint.
 
 For more information about the different move and migration scenarios, see:
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill AcceptUntrustedCertificates Description }}
+The AcceptUntrustedCertificates parameter specifies whether to accept untrusted certificates from the remote server. Valid values are $true or $false. This parameter is applicable to ExchangeOutlookAnywhere and IMAP migration endpoints.
 
 ```yaml
 Type: Boolean
@@ -129,7 +129,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill ApplicationId Description }}
+The ApplicationId parameter specifies the application ID of the app registered in Microsoft Entra ID that's used for cross-tenant authentication in ExchangeRemoteMove migration endpoints. Use this parameter together with AppSecretKeyVaultUrl.
 
 ```yaml
 Type: String
@@ -149,7 +149,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill AppSecretKeyVaultUrl Description }}
+The AppSecretKeyVaultUrl parameter specifies the Azure Key Vault URL that contains the application secret used for cross-tenant authentication in ExchangeRemoteMove migration endpoints. Use this parameter together with ApplicationId.
 
 ```yaml
 Type: String
@@ -190,7 +190,7 @@ Accept wildcard characters: False
 The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -208,7 +208,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-The Credentials parameter specifies the username and password for connecting to the remote endpoint. Credentials should be used when creating either a staged or cutover Exchange endpoint or a RemoteMove endpoint.
+The Credentials parameter specifies the username and password for connecting to the remote endpoint. Credentials should be used when modifying either a staged or cutover Exchange endpoint or a RemoteMove endpoint.
 
 A value for this parameter requires the Get-Credential cmdlet. To pause this command and receive a prompt for credentials, use the value `(Get-Credential)`. Or, before you run this command, store the credentials in a variable (for example, `$cred = Get-Credential`) and then use the variable name (`$cred`) for this parameter. For more information, see [Get-Credential](https://learn.microsoft.com/powershell/module/microsoft.powershell.security/get-credential).
 
@@ -432,7 +432,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-For a staged Exchange migration, the RpcProxyServer parameter specifies the FQDN of the RPC proxy server for the on-premises Exchange server. This parameter is only applicable to staged and cutover Exchange endpoints that don't use Autodiscovery
+For staged and cutover Exchange migrations, the RpcProxyServer parameter specifies the FQDN of the RPC proxy server for the on-premises Exchange server. This parameter is only applicable to staged and cutover Exchange endpoints that don't use Autodiscovery
 
 ```yaml
 Type: Fqdn
@@ -492,7 +492,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-The SkipVerification switch skips verifying that the remote server is reachable when creating a migration endpoint. You don't need to specify a value with this switch.
+The SkipVerification switch skips verifying that the remote server is reachable when modifying a migration endpoint. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
