@@ -624,7 +624,8 @@ Valid values are:
 
 - Browser: For use with policies applied to unmanaged cloud apps in Edge for Business.
 - CopilotExperiences
-- Entra: For use with policies applied to Entra-registered enterprise applications in the organization.
+- Application: For use with policies applied to Entra-registered enterprise applications in the organization. Application replaces the previous value Entra, which is now deprecated.
+
 - Network
 
 ```yaml

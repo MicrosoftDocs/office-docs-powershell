@@ -17,6 +17,11 @@ Use the Remove-ComplianceSearch cmdlet to remove compliance searches from Exchan
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
+> [!NOTE]
+> In the cloud, this cmdlet has the following requirements:
+> - Version 3.9.0 or later of the Exchange Online PowerShell module (August 2025).
+> - Use the *EnableSearchOnlySession* parameter when you run the **Connect-IPPSSession** command to connect to Security & Compliance PowerShell.
+
 ## SYNTAX
 
 ```
@@ -48,14 +53,9 @@ This example removes the compliance search named Case 1234
 
 > Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Security & Compliance
 
-The Identity parameter specifies the compliance search that you want to remove.
+The Identity parameter specifies the name of compliance search that you want to remove.
 
-You can use any value that uniquely identifies the compliance search. For example:
-
-- Name
-- JobRunId (GUID)
-
-You can find these values by running the command Get-ComplianceSearch | Format-Table -Auto Name,JobRunId,Status
+You can find this value by running the command `Get-ComplianceSearch | Format-Table -Auto Name,JobRunId,Status`.
 
 ```yaml
 Type: ComplianceSearchIdParameter

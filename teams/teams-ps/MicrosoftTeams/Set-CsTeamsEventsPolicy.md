@@ -165,11 +165,13 @@ Accept wildcard characters: False
 ```
 
 ### -BroadcastPremiumApps
-This setting will enable Tenant Admins to specify if an organizer of a Teams Premium town hall may add an app that is accessible by everyone, including attendees, in a broadcast style Event including a Town hall. This does not include control over apps (such as AI Producer and Custom Streaming Apps) that are only accessible by the Event group.
+This setting governs if an organizer of a broadcast style event (including town halls) may add an app that is accessible by everyone, including attendees, to the event. This does not include control over apps (such as the AI Producer and Custom Streaming Apps) that are only accessible by the Event group.
+ 
+Please note, only certain apps, such as Polls, are supported for everyone in broadcast style events. 
 
 Possible values are:
-- **Enabled**: An organizer of a Premium town hall can add a Premium App such as Polls to the Town hall
-- **Disabled**: An organizer of a Premium town hall CANNOT add a Premium App such as Polls to the Town hall
+- **Enabled**: An organizer of a broadcast style event can add Apps such as Polls
+- **Disabled**: An organizer of a broadcast style event CANNOT add Apps as Polls
 
 ```yaml
 Type: String

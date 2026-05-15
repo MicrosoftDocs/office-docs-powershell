@@ -1,12 +1,12 @@
-﻿---
+---
 external help file: WhiteboardAdmin-help.xml
 Module Name: WhiteboardAdmin
 online version: https://learn.microsoft.com/powershell/module/whiteboard/remove-whiteboard
 applicable: Microsoft Whiteboard
 title: Remove-Whiteboard
 schema: 2.0.0
-author: serdarsoysal
-ms.author: serdars
+author: officedocspr
+ms.author: odocspr
 ms.reviewer:
 ---
 

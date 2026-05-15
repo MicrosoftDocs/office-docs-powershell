@@ -17,6 +17,11 @@ Use the Remove-ComplianceCase cmdlet to remove compliance cases from the Microso
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
+> [!NOTE]
+> In the cloud, this cmdlet has the following requirements:
+> - Version 3.9.0 or later of the Exchange Online PowerShell module (August 2025).
+> - Use the *EnableSearchOnlySession* parameter when you run the **Connect-IPPSSession** command to connect to Security & Compliance PowerShell.
+
 ## SYNTAX
 
 ```

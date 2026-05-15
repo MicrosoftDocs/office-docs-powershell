@@ -310,7 +310,7 @@ $myEntraAppName = ""
 
 $locations = "[{`"Workload`":`"Applications`",`"Location`":`"$myEntraAppId`",`"LocationDisplayName`":`"$myEntraAppName`",`"LocationSource`":`"Entra`",`"LocationType`":`"Individual`",`"Inclusions`":[{`"Type`":`"Tenant`",`"Identity`":`"All`"}]}]"
 
-New-DlpCompliancePolicy -Name "Test Entra DLP" -Mode Enable -Locations $locations -EnforcementPlanes @("Entra")
+New-DlpCompliancePolicy -Name "Test Entra DLP" -Mode Enable -Locations $locations -EnforcementPlanes @("Application")
 
 New-DlpComplianceRule -Name "Test Entra Rule" -Policy "Test Entra DLP" -ContentContainsSensitiveInformation @{Name = "credit card number"}  -GenerateAlert $true -GenerateIncidentReport @("siteadmin") -NotifyUser @("admin@contonso.onmicrosoft.com") -RestrictAccess @(@{setting="UploadText";value="Block"})
 ```
