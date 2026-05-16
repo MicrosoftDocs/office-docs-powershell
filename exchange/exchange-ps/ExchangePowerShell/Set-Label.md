@@ -1365,8 +1365,6 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-This parameter is reserved for internal Microsoft use.
-
 ```yaml
 Type: SiteAndGroupProtectionLevelParameter
 Parameter Sets: (All)
