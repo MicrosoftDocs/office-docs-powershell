@@ -280,7 +280,7 @@ The BulkMovesEnabled parameter specifies whether to tag all bulk mail as Bulk in
 - No
 - NotSet (this value is the default)
 
-For more information, see zzz.
+For more information, see [Deliver bulk mail below the BCL threshold to the Promotions folder](https://learn.microsoft.com/defender-office-365/anti-spam-bulk-complaint-level-bcl-about#deliver-bulk-mail-below-the-bcl-threshold-to-the-promotions-folder).
 
 ```yaml
 Type: BulkMovesEnabled
