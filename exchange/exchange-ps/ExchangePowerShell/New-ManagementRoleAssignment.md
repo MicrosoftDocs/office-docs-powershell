@@ -273,7 +273,7 @@ The Role parameter specifies the existing role to assign. You can use any value 
 
 If the value contains spaces, enclose the value in quotation marks (").
 
-If you use the App parameter, you can't specify admin or user roles; you can only specify application roles (for example, "Application Mail.Read").
+If you use the App parameter, you can't specify user roles; you can only specify application or management roles.
 
 ```yaml
 Type: RoleIdParameter
