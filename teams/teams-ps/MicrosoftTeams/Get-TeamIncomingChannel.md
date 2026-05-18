@@ -1,9 +1,9 @@
 ---
-author: serdarsoysal
+author: officedocspr
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-ms.author: serdars
+ms.author: odocspr
 ms.reviewer: dedaniel, robharad
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-teamincomingchannel
 schema: 2.0.0

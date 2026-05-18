@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
-author: chrisda
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-mapivirtualdirectory
 schema: 2.0.0
 title: Get-MapiVirtualDirectory
@@ -165,8 +163,6 @@ Accept wildcard characters: False
 ### -ShowMailboxVirtualDirectories
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 The ShowMailboxVirtualDirectories switch shows information about backend virtual directories on Mailbox servers. You don't need to specify a value with this switch.
 

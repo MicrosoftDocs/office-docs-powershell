@@ -1,11 +1,11 @@
 ---
 applicable: Microsoft Teams
-author: serdarsoysal
+author: officedocspr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
-ms.author: serdars
+ms.author: odocspr
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineliscivicaddress
 schema: 2.0.0
 title: New-CsOnlineLisCivicAddress
@@ -312,7 +312,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-Specifies the angular distance of a place north or south of the earth's equator using the decimal degrees format. Required for all countries except Australia and Japan where it's optional.
+Specifies the angular distance of a place north or south of the earth's equator using the decimal degrees format. Required for all countries/regions except Australia and Japan where it's optional.
 
 ```yaml
 Type: String
@@ -330,7 +330,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-Specifies the angular distance of a place east or west of the meridian at Greenwich, England, using the decimal degrees format. Required for all countries except Australia and Japan where it's optional.
+Specifies the angular distance of a place east or west of the meridian at Greenwich, England, using the decimal degrees format. Required for all countries/regions except Australia and Japan where it's optional.
 
 ```yaml
 Type: String

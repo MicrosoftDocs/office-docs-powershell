@@ -1,11 +1,11 @@
 ---
 applicable: Microsoft Teams
-author: serdarsoysal
+author: officedocspr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
-ms.author: serdars
+ms.author: odocspr
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinevoicemailusersettings
 schema: 2.0.0
 title: Set-CsOnlineVoicemailUserSettings
@@ -260,7 +260,7 @@ The following languages are supported:
 - "sl-SI" (Slovenian - Slovenia)
 - "sv-SE" (Swedish - Sweden)
 - "th-TH" (Thai - Thailand)
-- "tr-TR" (Turkish - Turkey)
+- "tr-TR" (Turkish - Türkiye)
 - "vi-VN" (Vietnamese - Viet Nam)
 - "zh-CN" (Chinese - Simplified, PRC)
 - "zh-TW" (Chinese - Traditional, Taiwan)

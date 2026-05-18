@@ -1,7 +1,7 @@
 ---
 applicable: Microsoft Teams
 author: radubulboaca
-external help file: Microsoft.Rtc.Management.dll-Help.xml
+external help file: Microsoft.Teams.ConfigAPI.Cmdlets-Help.xml
 Locale: en-US
 manager: gauravpa
 Module Name: MicrosoftTeams
@@ -10,6 +10,7 @@ online version: https://learn.microsoft.com/powershell/module/microsoftteams/get
 schema: 2.0.0
 title: Get-CsAiAgents
 ---
+
 # Get-CsAiAgents
 
 ## SYNOPSIS
@@ -18,8 +19,12 @@ Retrieves the AI Agents in the tenant that match with the ProviderId.
 
 ## SYNTAX
 
-```
-Get-CsAiAgents -ProviderId <string> [-IsTeamsIvrEnabled] 
+### Default
+
+```powershell
+Get-CsAiAgents -ProviderId <String> [-AgentId <String>] [-AgentIds <String>] [-ContinuationToken <String>]
+ [-DisplayNameContains <String>] [-DisplayNamePrefix <String>] [-IsTeamsIvrEnabled] [-MaxResult <Int32>]
+ [-ShowCount] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -61,9 +66,9 @@ Get-CsAiAgents -IsTeamsIvrEnabled -ProviderId "9d8f559b-5de4-46a4-902a-ad4271e83
 
 ## PARAMETERS
 
-### -ProviderId
+### -AgentId
 
-A filter for ProviderId 
+A filter to retrieve a specific AI Agent by its unique identifier.
 
 ```yaml
 Type: System.String
@@ -71,7 +76,71 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: 0
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AgentIds
+
+A filter to retrieve multiple AI Agents by their unique identifiers.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ContinuationToken
+
+A token used to retrieve the next page of results when the result set is large.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisplayNameContains
+
+A filter to retrieve AI Agents whose display name contains the specified string.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DisplayNamePrefix
+
+A filter to retrieve AI Agents whose display name starts with the specified string.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -82,7 +151,55 @@ Accept wildcard characters: False
 Optional parameter. If specified, it filters the returned results to AI Agents that are compatible with Teams Interactive Voice Response (IVR).
 
 ```yaml
-Type: SwitchParameter
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MaxResult
+
+Specifies the maximum number of results to return.
+
+```yaml
+Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ProviderId
+
+A filter for ProviderId.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShowCount
+
+Optional parameter. If specified, includes the total count of matching AI Agents in the result.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -101,6 +218,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
+
+### None
 
 ## OUTPUTS
 

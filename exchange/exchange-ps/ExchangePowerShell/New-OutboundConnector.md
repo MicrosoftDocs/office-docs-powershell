@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/new-outboundconnector
 schema: 2.0.0
 title: New-OutboundConnector
@@ -32,10 +30,12 @@ New-OutboundConnector [-Name] <String>
  [-Enabled <Boolean>]
  [-IsTransportRuleScoped <Boolean>]
  [-LinkForModifiedConnector <Guid>]
+ [-MtaStsMode <MtaStsMode>]
  [-RecipientDomains <MultiValuedProperty>]
  [-RouteAllMessagesViaOnPremises <Boolean>]
  [-SenderRewritingEnabled <Boolean>]
  [-SmartHosts <MultiValuedProperty>]
+ [-SmtpDaneMode <SmtpDaneMode>]
  [-TestMode <Boolean>]
  [-TlsDomain <SmtpDomainWithSubdomains>]
  [-TlsSettings <TlsAuthLevel>]
@@ -151,10 +151,10 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -273,6 +273,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MtaStsMode
+
+> Applicable: Exchange Online
+
+The MtaStsMode parameter provides admin control over outbound MTA Strict Transport Security (MTA-STS) validation for email sent over the outbound connector. Organizations can choose how strictly to enforce MTA-STS when sending mail to external domains. Valid values are:
+
+- Opportunistic: This value is the default. The connector uses MTA-STS opportunistically.
+
+  • If the destination domain doesn't support MTA-STS, the message is sent using the connector settings or Exchange Online default settings.
+
+  • If the destination domain supports MTA-STS but validation fails while the policy mode is set to Enforce, Exchange Online queues the message and retries delivery for 24 hours. If validation doesn't pass within 24 hours, the message is dropped.  
+
+- None: Messages always attempt delivery without verifying MTA-STS. The security of email sent over the connector is reduced (can't protect against downgrade attacks or spoofed MX redirection). This value can result in messages from this connector being intercepted or redirected to malicious entities.
+
+```yaml
+Type: MtaStsMode
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: Opportunistic
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RecipientDomains
 
 > Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
@@ -361,6 +387,34 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SmtpDaneMode
+
+> Applicable: Exchange Online
+
+The SmtpDaneMode parameter provides admin control over outbound SMTP DNS-based Authentication of Named Entities (DANE) validation for email sent over the outbound connector. Organizations can choose how strictly to enforce SMTP DANE when sending mail to external domains. Valid values are:
+
+- Opportunistic: This value is the default. The connector uses SMTP DANE with DNSSEC opportunistically on messages sent via the connector.
+
+  • If the destination domain doesn't support SMTP DANE with DNSSEC, the message is sent using the connector settings or Exchange Online default settings.
+
+  • If the destination domain supports SMTP DANE with DNSSEC but the DNSSEC or the SMTP DANE validations fail, Exchange Online queues the message and retries delivery for 24 hours while attempting to fall back to a secondary MX record. If validation doesn't pass within 24 hours and there's no secondary MX record, the message is dropped.
+
+- Mandatory: The connector enforces SMTP DANE with DNSSEC on all messages sent via the connector. If the destination domain doesn't support SMTP DANE with DNSSEC, or validation fails at any point, Exchange Online queues the message and retries delivery for 24 hours. The message is eventually dropped if the destination domain doesn't support SMTP DANE with DNSSEC or supports the protocol but continues to fail validation.
+
+- None: Messages always attempt delivery without verifying SMTP DANE with DNSSEC. The security of email sent over the connector is reduced (can't protect against downgrade attacks or spoofed MX redirection). This value can result in messages from this connector being intercepted or redirected to malicious entities.
+
+```yaml
+Type: SmtpDaneMode
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: Opportunistic
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -456,7 +510,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+The WhatIf switch shows what the command does without making any changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

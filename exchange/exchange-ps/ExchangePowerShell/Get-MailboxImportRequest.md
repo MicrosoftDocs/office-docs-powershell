@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
-author: chrisda
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-mailboximportrequest
 schema: 2.0.0
 title: Get-MailboxImportRequest
@@ -135,8 +133,6 @@ Accept wildcard characters: False
 ### -Database
 
 > Applicable: Exchange Server 2010
-
-This parameter is available only in Exchange Server 2010.
 
 The Database parameter specifies the database in which the user's mailbox or archive resides. You can use any value that uniquely identifies the database. For example:
 

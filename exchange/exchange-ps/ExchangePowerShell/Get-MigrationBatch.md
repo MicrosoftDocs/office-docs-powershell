@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
-author: chrisda
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-migrationbatch
 schema: 2.0.0
 title: Get-MigrationBatch
@@ -97,6 +95,13 @@ Get-MigrationBatch -Endpoint exsrv1.contoso.com
 ```
 
 This example displays information about all migration batches associated with the migration endpoint exsrv1.contoso.com.
+
+### Example 3
+```powershell
+Get-MigrationBatch -Status Syncing
+```
+
+This example displays all migration batches that have the status value Syncing.
 
 ## PARAMETERS
 
@@ -270,7 +275,18 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-This parameter is reserved for internal Microsoft use.
+The Partition parameter filters the results for migration batches that were created in a specific migration partition mailbox. You can use any value that uniquely identifies the mailbox. For example:
+
+- Name
+- Alias
+- Distinguished name (DN)
+- Canonical DN
+- Domain\\Username
+- Email address
+- GUID
+- LegacyExchangeDN
+- SamAccountName
+- User ID or user principal name (UPN)
 
 ```yaml
 Type: MailboxIdParameter
@@ -327,7 +343,7 @@ The Status parameter returns a list of migration batches that have the specified
 - Waiting
 
 ```yaml
-Type: MMigrationBatchStatus
+Type: MigrationBatchStatus
 Parameter Sets: Identity, BatchesFromEndpoint, BatchesByStatus
 Aliases:
 

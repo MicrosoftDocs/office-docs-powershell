@@ -27,7 +27,6 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-AllowAnnotations <Boolean>]
  [-AllowAvatarsInGallery <Boolean>]
  [-AllowBreakoutRooms <String>]
- [-AllowCarbonSummary <Boolean>]
  [-AllowCartCaptionsScheduling <string>]
  [-AllowChannelMeetingScheduling <Boolean>]
  [-AllowCloudRecording <Boolean>]
@@ -85,6 +84,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-EnrollUserOverride <String>]
  [-ExplicitRecordingConsent <String>]
  [-ExternalMeetingJoin <String>]
+ [-ExternalBotAccessMode <String>]
  [-Force]
  [-IPAudioMode <String>]
  [-IPVideoMode <String>]
@@ -100,6 +100,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-NewMeetingRecordingExpirationDays <Int32>]
  [-NoiseSuppressionForDialInParticipants <String>]
  [-ParticipantNameChange <String>]
+ [-PasscodeComplexity <String>]
  [-PreferredMeetingProviderForIslandsMode <String>]
  [-QnAEngagementMode <String>]
  [-RecordingStorageMode <String>]
@@ -132,6 +133,9 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
 
 ## DESCRIPTION
 The CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings that users can create or the features that they can access while in a meeting. It also helps determine how meetings deal with anonymous or external users.
+
+> [!NOTE]
+> The `AllowCarbonSummary` parameter is no longer supported and blocked by the service, though it may appear in older documentation or scripts. It can no longer be set using this cmdlet.
 
 ## EXAMPLES
 
@@ -273,25 +277,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: True
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowCarbonSummary
-
-This setting will enable Tenant Admins to enable/disable the sharing of location data necessary to provide the end of meeting carbon summary screen for either the entire tenant or for a particular user. If set to True the meeting organizer will share their location to the client of the participant to enable the calculation of distance and the resulting carbon.
-
->[!NOTE]
->Location data will not be visible to the organizer or participants in this case and only carbon avoided will be shown. If set to False then organizer location data will not be shown and no carbon summary screen will be displayed to the participants.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1258,6 +1243,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExternalBotAccessMode
+
+Controls how external third-party automated bots and meeting assistants are handled when they attempt to join meetings. This policy provides predictable behavior and helps organizers apply intentional control for bot participation.
+
+Possible Values:
+- **AllowAllBots**: Don't detect bots; allow them to join meetings directly.
+- **RequireApprovalWhenDetected**: When detected, require approval before joining by routing detected bots to the meeting lobby. This is the default value.
+- **BlockDetectedBots**: Block detected bots from joining meetings.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: RequireApprovalWhenDetected
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 Specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the switch isn't provided in the command, you're prompted for administrative input if required.
 
@@ -1529,7 +1535,7 @@ Accept wildcard characters: False
 ### -ParticipantNameChange
 This setting will enable Tenant Admins to turn on/off participant renaming feature.
 
-Possible Values: Enabled: Turns on the Participant Renaming feature. Disabled: Turns off the Particpant Renaming feature.
+Possible Values: Enabled: Turns on the Participant Renaming feature. Disabled: Turns off the Participant Renaming feature.
 
 ```yaml
 Type: String
@@ -1566,6 +1572,28 @@ Aliases:
 Required: False
 Position: Named
 Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PasscodeComplexity
+
+> Applicable: Microsoft Teams
+
+Controls whether meeting passcodes use the system‑default complexity or a reduced complexity using numeric‑only digits. When enabled, meetings scheduled by users to whom this policy applies will use **8‑digit numeric‑only passcodes**. Changes apply **only to meetings scheduled after the setting is enabled**. Existing meetings are not affected. This setting is **disabled by default**.
+
+Possible Values:
+- **Default**: Alphanumeric passcodes with 8 characters (system default).
+- **NumericOnly**: 8‑digit numeric‑only passcodes with lower complexity for meetings scheduled by users to whom this policy applies. Numeric‑only passcodes increase the risk of unauthorized access compared to the default setting and **do not align with Microsoft’s recommended meeting security best practices**.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Default
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1685,7 +1713,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScreenSharingMode
-Determines the mode in which a user can share a screen in calls or meetings. Set this to SingleApplication to allow the user to share an  application at a given point in time. Set this to EntireScreen to allow the user to share anything on their screens. Set this to Disabled to prohibit the user from sharing their screens.
+Determines the mode in which a user can share a screen in calls or meetings. Set this to SingleApplication to allow the user to share an application at a given point in time. Set this to EntireScreen to allow the user to share anything on their screens. Set this to Disabled to prohibit the user from sharing their screens.
 
 ```yaml
 Type: String

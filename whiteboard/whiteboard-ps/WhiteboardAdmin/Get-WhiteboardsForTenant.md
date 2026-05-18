@@ -47,6 +47,7 @@ title                    : title1
 createdBy                : 00000000-0000-0000-0000-000000000000
 ownerId                  : 00000000-0000-0000-0000-000000000000
 ownerTenantId            : 00000000-0000-0000-0000-000000000000
+previousOwnerId          : 00000000-0000-0000-0000-000000000000
 isShared                 : False
 createdTime              : 2022-09-10T19:59:03.3407011Z
 invitedTime              :
@@ -65,6 +66,7 @@ title                    : title2
 createdBy                : 00000000-0000-0000-0000-000000000000
 ownerId                  : 00000000-0000-0000-0000-000000000000
 ownerTenantId            : 00000000-0000-0000-0000-000000000000
+previousOwnerId          : 00000000-0000-0000-0000-000000000000
 isShared                 : False
 createdTime              : 2023-01-06T19:23:04.8807147Z
 invitedTime              :

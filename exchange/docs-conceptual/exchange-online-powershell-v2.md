@@ -1,19 +1,13 @@
 ---
 title: About the Exchange Online PowerShell V3 module
-ms.author: chrisda
-author: chrisda
-manager: orspodek
 ms.date: 01/22/2026
 ms.audience: Admin
-audience: Admin
 ms.topic: article
-ms.service: exchange-powershell
 ms.reviewer:
 ms.localizationpriority: high
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
-search.appverid: MET150
 keywords: Exchange Online PowerShell V2 module, Exchange Online PowerShell V3 module, EXO V2 module, EXO V3 module
 description: "Admins can learn about the installation, maintenance, and design of the Exchange Online PowerShell V3 module that they use to connect to all Exchange cloud-related PowerShell environments."
 ---

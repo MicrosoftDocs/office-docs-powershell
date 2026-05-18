@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
-author: chrisda
+applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 external help file: Microsoft.Exchange.WebClient-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-notification
 schema: 2.0.0
 title: Get-Notification
@@ -13,7 +11,7 @@ title: Get-Notification
 # Get-Notification
 
 ## SYNOPSIS
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
+This cmdlet is available only in on-premises Exchange.
 
 > [!NOTE]
 > This cmdlet will be deprecated in the cloud-based service. The classic Exchange admin center was deprecated in the cloud-based service in 2023.
@@ -85,7 +83,7 @@ This example displays detailed information for the specified notification event.
 
 ### -Identity
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Identity parameter specifies the notification event that you want to view. You identify the notification event by its AlternativeID property value (a GUID). You can find this value by running the command Get-Notification | Format-List DisplayName,AlternateID,StartTime,Status,Type.
 
@@ -106,8 +104,6 @@ Accept wildcard characters: False
 ### -Settings
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
-
-This parameter is available only in on-premises Exchange.
 
 The Settings switch includes the ProcessType and NotificationEmail property values in the results. You don't need to specify a value with this switch.
 
@@ -131,8 +127,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-This parameter is available only in on-premises Exchange.
-
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
 ```yaml
@@ -149,7 +143,7 @@ Accept wildcard characters: False
 
 ### -ProcessType
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ProcessType parameter filters the results by the type of notification event. Valid values are:
 
@@ -173,7 +167,7 @@ Accept wildcard characters: False
 
 ### -ResultSize
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ResultSize parameter specifies the maximum number of results to return. If you want to return all requests that match the query, use unlimited for the value of this parameter. The default value is 1000.
 
@@ -191,7 +185,7 @@ Accept wildcard characters: False
 
 ### -StartDate
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The StartDate parameter specifies the start date of the date range.
 
@@ -211,7 +205,7 @@ Accept wildcard characters: False
 
 ### -Summary
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Summary switch includes only the ProcessType and Status property values in the results. You don't need to specify a value with this switch.
 

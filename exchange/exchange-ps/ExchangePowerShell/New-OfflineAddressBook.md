@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
-author: chrisda
 external help file: Microsoft.Exchange.RolesAndAccess-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/new-offlineaddressbook
 schema: 2.0.0
 title: New-OfflineAddressBook
@@ -137,10 +135,10 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -277,8 +275,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-This parameter is available only in Exchange Server 2010.
-
 The PublicFolderDatabase parameter specifies the public folder database that's used to distribute the OAB. You can use any value that uniquely identifies the database. For example:
 
 - Name
@@ -303,8 +299,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-This parameter is available only in Exchange Server 2010.
-
 The PublicFolderDistributionEnabled parameter specifies whether the OAB is distributed via public folders. If the value of the PublicFolderDistributionEnabled parameter is $true, the OAB is distributed via public folders.
 
 ```yaml
@@ -322,8 +316,6 @@ Accept wildcard characters: False
 ### -Schedule
 
 > Applicable: Exchange Server 2010
-
-This parameter is available only in Exchange Server 2010.
 
 The Schedule parameter specifies the interval for generating the OAB in Exchange 2010 or earlier.
 
@@ -362,8 +354,6 @@ Accept wildcard characters: False
 ### -Server
 
 > Applicable: Exchange Server 2010
-
-This parameter is available only in Exchange Server 2010.
 
 The Server parameter specifies the Exchange server where you want to run this command. You can use any value that uniquely identifies the server. For example:
 
@@ -415,8 +405,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-This parameter is available only in Exchange Server 2010.
-
 The SkipPublicFolderInitialization switch specifies whether to skip the immediate creation of the OAB public folders if you're creating an OAB that uses public folder distribution. You don't need to specify a value with this switch.
 
 The OAB isn't available for download until the next site folder maintenance cycle has completed. Omitting this switch might cause the task to pause while it contacts the responsible public folder server to create the necessary public folders. If the server is presently unreachable, or is otherwise costly to contact, the pause could be significant.
@@ -436,8 +424,6 @@ Accept wildcard characters: False
 ### -Versions
 
 > Applicable: Exchange Server 2010
-
-This parameter is available only in Exchange Server 2010.
 
 The Versions parameter specifies the OAB versions that are generated for client download. Valid values are:
 
@@ -495,7 +481,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+The WhatIf switch shows what the command does without making any changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

@@ -25,6 +25,9 @@ Get-CsMainlineAttendantQuestionAnswerFlow [-Identity <Guid>] [-Tenant <Guid>] [-
 ## DESCRIPTION
 The Get-CsMainlineAttendantQuestionAnswerFlow cmdlet lets you retrieve information about the Mainline attendant question and answer flows n your organization.
 
+> [!CAUTION]
+> This cmdlet will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
+
 ## EXAMPLES
 
 ### -------------------------- Example 1 --------------------------

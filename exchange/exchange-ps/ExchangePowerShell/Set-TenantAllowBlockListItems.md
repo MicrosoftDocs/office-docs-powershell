@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-tenantallowblocklistitems
 schema: 2.0.0
 title: Set-TenantAllowBlockListItems

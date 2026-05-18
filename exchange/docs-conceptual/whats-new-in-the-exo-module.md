@@ -1,11 +1,7 @@
 ---
 title: What's new in the Exchange Online PowerShell module
-ms.author: chrisda
-author: chrisda
-manager: orspodek
 ms.date: 01/22/2026
 ms.audience: Admin
-audience: Admin
 ms.topic: article
 ms.service: exchange-online
 ms.reviewer:
@@ -13,7 +9,6 @@ ms.localizationpriority: medium
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
-search.appverid: MET150
 keywords: what's new in exchange online powershell, what's new in security & compliance powershell, EXO V2 module, EXO V3 module
 description: "Learn about the new features and functionality available in the latest release of the Exchange Online PowerShell module."
 ---
