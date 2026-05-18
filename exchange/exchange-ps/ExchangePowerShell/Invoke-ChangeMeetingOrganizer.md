@@ -21,7 +21,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ### ByEventId (Default)
-
 ```
 Invoke-ChangeMeetingOrganizer [-EventId] <String> [-Identity] <MailboxIdParameter> [-NewOrganizer] <String>
  [-TransferSeriesStartDate <DateTime>]
@@ -31,7 +30,6 @@ Invoke-ChangeMeetingOrganizer [-EventId] <String> [-Identity] <MailboxIdParamete
 ```
 
 ### BySubject
-
 ```
 Invoke-ChangeMeetingOrganizer [-Identity] <MailboxIdParameter> -Subject <String>
  [-Confirm]
@@ -40,7 +38,6 @@ Invoke-ChangeMeetingOrganizer [-Identity] <MailboxIdParameter> -Subject <String>
 ```
 
 ## DESCRIPTION
-
 This cmdlet changes the organizer of a meeting or meeting series, effective from the specified date. Meeting instances before the specified date remain unmodified in the original organizer's calendar. Future instances are transferred to the new organizer's calendar. The previous organizer isn't included as an attendee on the transferred portion of the meeting, but can be manually re-invited by the new organizer.
 
 Meeting attendees in the Exchange Online tenant don't need to re-RSVP and the existing instances on their calendar are silently updated with the new meeting organizer information. Customizations attendees made to the meeting Reminder, Category, Show As (Free/Tentative/Busy), and Private are preserved.
@@ -52,20 +49,11 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 ## EXAMPLES
 
 ### Example 1
-
 ```powershell
 Invoke-ChangeMeetingOrganizer -Identity chris@contoso.com -EventId AAMkAGRlMGI0 -NewOrganizer adele@contoso.com
 ```
 
 This example changes the organizer of the specified meeting from chris@contoso.com to adele@contoso.com, effective today.
-
-### Example 2
-
-```powershell
-Invoke-ChangeMeetingOrganizer -Identity chris@contoso.com -Subject "Weekly Status Update"
-```
-
-This example identifies the meeting by subject in the specified mailbox.
 
 ## PARAMETERS
 
@@ -163,10 +151,10 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -206,7 +194,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+The WhatIf switch shows what the command does without making any changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
