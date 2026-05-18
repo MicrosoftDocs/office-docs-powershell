@@ -93,7 +93,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The WhatIf switch shows what the command does without making any changes. You don't need to specify a value with this switch.
+The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
 ```yaml
 Type: SwitchParameter
