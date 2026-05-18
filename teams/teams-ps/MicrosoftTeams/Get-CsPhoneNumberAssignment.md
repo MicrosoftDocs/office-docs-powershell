@@ -1,10 +1,10 @@
 ---
 applicable: Microsoft Teams
-author: serdarsoysal
+author: officedocspr
 external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-ms.author: serdars
+ms.author: odocspr
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csphonenumberassignment
 schema: 2.0.0
 title: Get-CsPhoneNumberAssignment
@@ -356,7 +356,7 @@ AssignmentBlockedState  : BlockedUntil
 AssignmentBlockedUntil  : 2025-10-11T21:30:00.0000000Z
 SmsActivationState      : NotActivated
 ```
-This example displays information about the telephone number +1 (402) 555-1234 which has a temporary assignment block. This block prevents the number from being assigned to any other user. Once the period shown in AssignmentBlockUntil passes, the AssignmentBlock will be automatically removed and the number will become available to be assigned to any user. Admin can also remove the block manually using [Remove-CsPhoneNumberAssignmentBlock](./remove-csphonenumberassignmentblock.md).
+This example displays information about the telephone number +1 (402) 555-1234 which has a temporary assignment block. This block prevents the number from being assigned to any other user. Once the period shown in AssignmentBlockedUntil passes, the AssignmentBlock will be automatically removed and the number will become available to be assigned to any user. Admin can also remove the block manually using [Remove-CsPhoneNumberAssignmentBlock](./remove-csphonenumberassignmentblock.md).
 
 ### Example 16
 ```powershell
@@ -422,6 +422,37 @@ SmsActivationState      : UpdatePending
 ```
 This example displays information about the telephone number +1 (360) 322-7351 where SMS activation is pending.
 
+### Example 18
+```powershell
+Get-CsPhoneNumberAssignment -TelephoneNumber +13603227351
+```
+```output
+TelephoneNumber         : +1555555555
+OperatorId              : 0019adbc-b82a-47b4-a799-4e993a9982f1
+NumberType              : CallingPlan
+ActivationState         : Activated
+AssignedPstnTargetId    : 2d43c5da-649b-406b-9d32-d130d2c53018
+AssignmentCategory      : Alternate
+Capability              : {UserAssignment}
+City                    : Marysville
+CivicAddressId          : 822d4d26-2c43-460f-921c-179163b106f8
+IsoCountryCode          : US
+IsoSubdivision          : Washington
+LocationId              : 4040949c-2424-469c-a9bc-563a5e5964f3
+LocationUpdateSupported : True
+NetworkSiteId           :
+PortInOrderStatus       :
+PstnAssignmentStatus    : UserAssigned
+PstnPartnerId           : 7fc2f2eb-89aa-41d7-93de-73d015d22ff0
+PstnPartnerName         : Microsoft
+NumberSource            : Online
+ReverseNumberLookup     : {}
+Tag                     : {}
+AssignmentBlockedState  : NotBlocked
+AssignmentBlockedUntil  :
+SmsActivationState      : 
+```
+This example displays information about the telephone number +1 (360) 322-7351 which is assigned as an alternate number for the user. (Multi-line feature is in Public Preview)
 
 ## PARAMETERS
 
@@ -700,7 +731,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-Filters the returned results based on the assignment status. Support values are Unassigned, UserAssigned, ConferenceAssigned, VoiceApplicationAssigned, ThirdPartyAppAssigned, and PolicyAssigned.
+Filters the returned results based on the assignment status. Supported values are Unassigned, UserAssigned, ConferenceAssigned, VoiceApplicationAssigned, ThirdPartyAppAssigned, and PolicyAssigned.
 
 ```yaml
 Type: System.String
@@ -863,7 +894,7 @@ The state of the number in terms of blocked assignment: NotBlocked if there is n
 The date until which assignment is blocked for the phone number. Null if the number is blocked for assignment indefinitely.
 
 ### AssignmentCategory
-Contains the assignment category such as Primary or Private.
+Contains the assignment category such as Primary, Alternate or Private.
 
 ### Capability
 The list of capabilities assigned to the phone number.
@@ -925,9 +956,9 @@ The object returned is of type SkypeTelephoneNumberMgmtCmdletAcquiredTelephoneNu
 Status of Reverse Number Lookup (RNL). When it is set to SkipInternalVoip, the calls are handled through external PSTN connection instead of internal VoIP lookup.
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 4.0.0 or later. The parameter AssignmentCategory was introduced in Teams PowerShell module 5.3.1-preview. The parameter NetworkSiteId was introduced in Teams PowerShell module 5.5.0. The output parameter NumberSource was introduced in Teams PowerShell module 5.7.0.
+The cmdlet is available in Teams PowerShell module 4.0.0 or later. The parameter AssignmentCategory was introduced in Teams PowerShell module 5.3.1-preview. The parameter NetworkSiteId was introduced in Teams PowerShell module 5.5.0. The output parameter NumberSource was introduced in Teams PowerShell module 5.7.0. Multi-line related cmdlets are available from Teams PowerShell module 7.6.0.
 
-The cmdlet is only available in commercial and GCC cloud instances.
+The cmdlet is only available in commercial, GCC, GCCH and DoD cloud instances.
 
 ## RELATED LINKS
 [Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csphonenumberassignment)

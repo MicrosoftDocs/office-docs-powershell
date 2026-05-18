@@ -48,9 +48,9 @@ This example assigns a policy to the specified telephone number.
 
 ### Example 2
 ```powershell
-PS C:\> Set-CsPhoneNumberPolicyAssignment -TelephoneNumber 17789493766 -PolicyType TenantDialPlan
+PS C:\> Set-CsPhoneNumberPolicyAssignment -TelephoneNumber +14255551234 -PolicyType OnlineVoiceRoutingPolicy -PolicyName "Redmond Office"
 ```
-This example removes an existing TenantDialPlan previously assigned to the specified telephone number.
+This example assigns an existing OnlineVoiceRoutingPolicy to the specified telephone number.
 
 
 ## PARAMETERS

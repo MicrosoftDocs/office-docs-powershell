@@ -1192,6 +1192,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Import-RecipientDataProperty](Import-RecipientDataProperty.md)
 
+### [Invoke-ChangeMeetingOrganizer](Invoke-ChangeMeetingOrganizer.md)
+
 ### [New-App](New-App.md)
 
 ### [New-InboxRule](New-InboxRule.md)
@@ -1637,6 +1639,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Get-AuthServer](Get-AuthServer.md)
 
+### [Get-BillingPolicy](Get-BillingPolicy.md)
+
 ### [Get-CmdletExtensionAgent](Get-CmdletExtensionAgent.md)
 
 ### [Get-ExchangeAssistanceConfig](Get-ExchangeAssistanceConfig.md)
@@ -1655,6 +1659,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Get-FeatureConfiguration](Get-FeatureConfiguration.md)
 
+### [Get-HVEAccountBillingPolicy](Get-HVEAccountBillingPolicy.md)
+
 ### [Get-HVEAccountSettings](Get-HVEAccountSettings.md)
 
 ### [Get-Notification](Get-Notification.md)
@@ -1668,6 +1674,14 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 ### [Get-ServicePrincipal](Get-ServicePrincipal.md)
 
 ### [Get-SettingOverride](Get-SettingOverride.md)
+
+### [Invoke-ProvisioningAcceptedDomainDiagnostic](Invoke-ProvisioningAcceptedDomainDiagnostic.md)
+
+### [Invoke-ProvisioningCompanyObjectDiagnostic](Invoke-ProvisioningCompanyObjectDiagnostic.md)
+
+### [Invoke-ProvisioningRecipientDiagnostic](Invoke-ProvisioningRecipientDiagnostic.md)
+
+### [Invoke-ProvisioningVerifyRbacDiagnostic](Invoke-ProvisioningVerifyRbacDiagnostic.md)
 
 ### [New-ApplicationAccessPolicy](New-ApplicationAccessPolicy.md)
 
@@ -1723,6 +1737,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Set-FeatureConfiguration](Set-FeatureConfiguration.md)
 
+### [Set-HVEAccountBillingPolicy](Set-HVEAccountBillingPolicy.md)
+
 ### [Set-HVEAccountSettings](Set-HVEAccountSettings.md)
 
 ### [Set-Notification](Set-Notification.md)
@@ -1769,6 +1785,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 ### [Execute-AzureADLabelSync](Execute-AzureADLabelSync.md)
 
 ### [Export-JournalRuleCollection](Export-JournalRuleCollection.md)
+
+### [Export-PurviewConfig](Export-PurviewConfig.md)
 
 ### [Export-TransportRuleCollection](Export-TransportRuleCollection.md)
 

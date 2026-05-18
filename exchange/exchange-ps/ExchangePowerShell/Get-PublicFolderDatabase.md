@@ -146,8 +146,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-This parameter is available only in Exchange Server 2010.
-
 The IncludePreExchange2010 switch specifies whether to include information about Exchange 2003 or Exchange 2007 public folders in the results. You don't need to specify a value with this switch.
 
 This switch isn't useful in commands where you use the Server or Identity parameters.
