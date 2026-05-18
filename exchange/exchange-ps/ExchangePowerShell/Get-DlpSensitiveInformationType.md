@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online, Security & Compliance
+applicable: Security & Compliance
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell

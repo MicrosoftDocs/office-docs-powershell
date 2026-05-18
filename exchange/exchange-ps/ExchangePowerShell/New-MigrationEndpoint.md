@@ -679,7 +679,7 @@ Accept wildcard characters: False
 
 ### -AcceptUntrustedCertificates
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Online
 
 The AcceptUntrustedCertificates switch specifies whether to accept untrusted certificates from the remote server. You don't need to specify a value with this switch.
 

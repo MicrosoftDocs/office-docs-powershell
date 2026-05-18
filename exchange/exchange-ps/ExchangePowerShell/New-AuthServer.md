@@ -22,6 +22,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### AuthMetadataUrl
 ```
 New-AuthServer [-Name] <String> -AuthMetadataUrl <String>
+ [-GraphBaseUrl <String>]
  [-TrustAnySSLCertificate]
  [-Confirm]
  [-DomainController <Fqdn>]
@@ -224,6 +225,24 @@ The Enabled parameter specifies whether the authorization server is enabled. Val
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GraphBaseUrl
+
+> Applicable: Exchange Server 2019, Exchange Server SE
+
+{{ Fill GraphBaseUrl Description }}
+
+```yaml
+Type: String
+Parameter Sets: AuthMetadataUrl
 Aliases:
 
 Required: False
