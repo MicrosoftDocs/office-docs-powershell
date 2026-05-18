@@ -149,8 +149,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-This parameter is available only in Exchange Server 2010.
-
 The Database parameter specifies the database in which the user's mailbox or archive resides. You can use any value that uniquely identifies the database. For example:
 
 - Name

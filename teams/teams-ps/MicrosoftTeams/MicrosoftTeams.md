@@ -59,6 +59,9 @@ Use the Find-CsGroup cmdlet to search groups.
 ### [Find-CsOnlineApplicationInstance](Find-CsOnlineApplicationInstance.md)
 Use the Find-CsOnlineApplicationInstance cmdlet to find application instances that match your search criteria.
 
+### [Get-CsAgent](Get-CsAgent.md)
+Retrieves the AI Agent(s) in the tenant.
+
 ### [Get-AllM365TeamsApps](Get-AllM365TeamsApps.md)
 This cmdlet returns all Microsoft Teams apps in the app catalog, including Microsoft, custom, and non-Microsoft apps.
 
@@ -791,6 +794,9 @@ Trigger a new direct assignments to group policy assignments cleanup.
 ### [Invoke-StartDirectToGroupAssignmentMigration](Invoke-StartDirectToGroupAssignmentMigration.md)
 Trigger a new direct assignments to group policy assignments migration
 
+### [New-CsAgent](New-CsAgent.md)
+Create an AI Agent that can be associated with a Teams Phone Resource Account.
+
 ### [New-CsApplicationAccessPolicy](New-CsApplicationAccessPolicy.md)
 Creates a new application access policy. Application access policy contains a list of application (client) IDs.
 
@@ -922,6 +928,18 @@ Creates a new online voice route.
 
 ### [New-CsOnlineVoiceRoutingPolicy](New-CsOnlineVoiceRoutingPolicy.md)
 Creates a new online voice routing policy. Online voice routing policies manage online PSTN usages for Phone System users.
+
+### [New-CsPhoneNumberBulkUpdateDrNumberAcquiredCapabilitiesOrder](New-CsPhoneNumberBulkUpdateDrNumberAcquiredCapabilitiesOrder.md)
+Creates a new bulk update order for acquired capabilities update.
+
+### [New-CsPhoneNumberBulkUpdateLocationIdOrder](New-CsPhoneNumberBulkUpdateLocationIdOrder.md)
+Creates a new bulk update order for Location Id update.
+
+### [New-CsPhoneNumberBulkUpdateNetworkSiteIdOrder](New-CsPhoneNumberBulkUpdateNetworkSiteIdOrder.md)
+Creates a new bulk update order for Network Site Id update. 
+
+### [New-CsPhoneNumberBulkUpdateReverseNumberLookupOrder](New-CsPhoneNumberBulkUpdateReverseNumberLookupOrder.md)
+Creates a new bulk update order for reverse number lookup option. 
 
 ### [New-CsPhoneNumberBulkUpdateTagsOrder](New-CsPhoneNumberBulkUpdateTagsOrder.md)
 Creates a new bulk update order for phone number tags. 
@@ -1138,6 +1156,9 @@ Creates a new app in the Teams tenant app store.
 
 ### [Register-CsOnlineDialInConferencingServiceNumber](Register-CsOnlineDialInConferencingServiceNumber.md)
 The Register-CsOnlineDialInConferencingServiceNumber command allows you to assign any additional service number that you may have acquired to your conference bridge.
+
+### [Remove-CsAgent](Remove-CsAgent.md)
+Deletes an AI Agent.
 
 ### [Remove-CsApplicationAccessPolicy](Remove-CsApplicationAccessPolicy.md)
 Deletes an existing application access policy.
@@ -1450,6 +1471,9 @@ Removes the tenant's hierarchy.
 
 ### [Remove-TeamUser](Remove-TeamUser.md)
 Remove an owner or member from a team, and from the unified group which backs the team.
+
+### [Set-CsAgent](Set-CsAgent.md)
+Modifies an AI Agent that can be associated with a Teams Phone Resource Account.
 
 ### [Set-CsApplicationAccessPolicy](Set-CsApplicationAccessPolicy.md)
 Modifies an existing application access policy.

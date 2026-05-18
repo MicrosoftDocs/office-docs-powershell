@@ -84,6 +84,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-EnrollUserOverride <String>]
  [-ExplicitRecordingConsent <String>]
  [-ExternalMeetingJoin <String>]
+ [-ExternalBotAccessMode <String>]
  [-Force]
  [-IPAudioMode <String>]
  [-IPVideoMode <String>]
@@ -1242,6 +1243,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExternalBotAccessMode
+
+Controls how external third-party automated bots and meeting assistants are handled when they attempt to join meetings. This policy provides predictable behavior and helps organizers apply intentional control for bot participation.
+
+Possible Values:
+- **AllowAllBots**: Don't detect bots; allow them to join meetings directly.
+- **RequireApprovalWhenDetected**: When detected, require approval before joining by routing detected bots to the meeting lobby. This is the default value.
+- **BlockDetectedBots**: Block detected bots from joining meetings.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: RequireApprovalWhenDetected
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 Specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the switch isn't provided in the command, you're prompted for administrative input if required.
 
@@ -1513,7 +1535,7 @@ Accept wildcard characters: False
 ### -ParticipantNameChange
 This setting will enable Tenant Admins to turn on/off participant renaming feature.
 
-Possible Values: Enabled: Turns on the Participant Renaming feature. Disabled: Turns off the Particpant Renaming feature.
+Possible Values: Enabled: Turns on the Participant Renaming feature. Disabled: Turns off the Participant Renaming feature.
 
 ```yaml
 Type: String
@@ -1691,7 +1713,7 @@ Accept wildcard characters: False
 ```
 
 ### -ScreenSharingMode
-Determines the mode in which a user can share a screen in calls or meetings. Set this to SingleApplication to allow the user to share an  application at a given point in time. Set this to EntireScreen to allow the user to share anything on their screens. Set this to Disabled to prohibit the user from sharing their screens.
+Determines the mode in which a user can share a screen in calls or meetings. Set this to SingleApplication to allow the user to share an application at a given point in time. Set this to EntireScreen to allow the user to share anything on their screens. Set this to Disabled to prohibit the user from sharing their screens.
 
 ```yaml
 Type: String

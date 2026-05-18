@@ -436,8 +436,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-This parameter is available only in Exchange Server 2010.
-
 The CalendarRepairSchedule parameter specifies the intervals each week during which the Calendar Repair Assistant applies checks for calendar failures.
 
 The syntax for this parameter is: `StartDay.Hour:Minute [AM | PM]-EndDay.Hour:Minute [AM | PM]`. You can specify multiple schedules separated by commas: `"Schedule1","Schedule2",..."ScheduleN"`.
@@ -527,10 +525,10 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -547,8 +545,6 @@ Accept wildcard characters: False
 ### -DarTaskStoreTimeBasedAssistantWorkCycle
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -567,8 +563,6 @@ Accept wildcard characters: False
 ### -DarTaskStoreTimeBasedAssistantWorkCycleCheckpoint
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -632,8 +626,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013
 
-This parameter is available only in Exchange Server 2013.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -651,8 +643,6 @@ Accept wildcard characters: False
 ### -DirectoryProcessorWorkCycleCheckpoint
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -760,8 +750,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013
 
-This parameter is available only in Exchange Server 2013.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -779,8 +767,6 @@ Accept wildcard characters: False
 ### -GroupMailboxWorkCycleCheckpoint
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -800,8 +786,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-This parameter is available only in Exchange Server 2010.
-
 The GroupMetricsGenerationTime parameter specifies the time of day when group metrics data is generated on a Mailbox server. You must use the 24-hour clock notation (HH:MM) when specifying the generation time.
 
 ```yaml
@@ -819,8 +803,6 @@ Accept wildcard characters: False
 ### -InferenceDataCollectionWorkCycle
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -840,8 +822,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013
 
-This parameter is available only in Exchange Server 2013.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -859,8 +839,6 @@ Accept wildcard characters: False
 ### -InferenceTrainingWorkCycle
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -880,8 +858,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013
 
-This parameter is available only in Exchange Server 2013.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -899,8 +875,6 @@ Accept wildcard characters: False
 ### -IrmLogEnabled
 
 > Applicable: Exchange Server 2010
-
-This parameter is available only in Exchange Server 2010.
 
 The IrmLogEnabled parameter enables or disables logging of Information Rights Management (IRM) transactions. IRM logging is enabled by default. Values include:
 
@@ -923,8 +897,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-This parameter is available only in Exchange Server 2010.
-
 The IrmLogMaxAge parameter specifies the maximum age for the IRM log file. Log files that are older than the specified value are deleted. The default value is 30 days.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
@@ -946,8 +918,6 @@ Accept wildcard characters: False
 ### -IrmLogMaxDirectorySize
 
 > Applicable: Exchange Server 2010
-
-This parameter is available only in Exchange Server 2010.
 
 The IrmLogMaxDirectorySize parameter specifies the maximum size of all IRM logs in the connectivity log directory. When a directory reaches its maximum file size, the server deletes the oldest log files first. The default value is 250 megabytes (MB). When you enter a value, qualify the value with one of the following units:
 
@@ -977,8 +947,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-This parameter is available only in Exchange Server 2010.
-
 The IrmLogMaxFileSize parameter specifies the maximum size of each IRM log file. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB. When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
@@ -1004,8 +972,6 @@ Accept wildcard characters: False
 ### -IrmLogPath
 
 > Applicable: Exchange Server 2010
-
-This parameter is available only in Exchange Server 2010.
 
 The IrmLogPath parameter specifies the default IRM log directory location. The default value is %ExchangeInstallPath%Logging\\IRMLogs.
 
@@ -1067,8 +1033,6 @@ Accept wildcard characters: False
 ### -JunkEmailOptionsCommitterWorkCycle
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1226,8 +1190,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013
 
-This parameter is available only in Exchange Server 2013.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -1246,8 +1208,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013
 
-This parameter is available only in Exchange Server 2013.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -1265,8 +1225,6 @@ Accept wildcard characters: False
 ### -MailboxProcessorWorkCycle
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 The MailboxProcessorWorkCycle parameter specifies how often to scan for locked mailboxes on the Mailbox server. The default value is 1 day.
 
@@ -1443,8 +1401,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-This parameter is available only in Exchange Server 2010.
-
 The MessageTrackingLogEnabled parameter specifies whether message tracking is enabled. The default value is $true.
 
 ```yaml
@@ -1462,8 +1418,6 @@ Accept wildcard characters: False
 ### -MessageTrackingLogMaxAge
 
 > Applicable: Exchange Server 2010
-
-This parameter is available only in Exchange Server 2010.
 
 The MessageTrackingLogMaxAge parameter specifies the message tracking log maximum file age. Log files older than the specified value are deleted. The default value is 30 days.
 
@@ -1486,8 +1440,6 @@ Accept wildcard characters: False
 ### -MessageTrackingLogMaxDirectorySize
 
 > Applicable: Exchange Server 2010
-
-This parameter is available only in Exchange Server 2010.
 
 The MessageTrackingLogMaxDirectorySize parameter specifies the maximum size of the message tracking log directory. When the maximum directory size is reached, the server deletes the oldest log files first.
 
@@ -1521,8 +1473,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-This parameter is available only in Exchange Server 2010.
-
 The MessageTrackingLogMaxFileSize parameter specifies the maximum size of the message tracking log files. When a log file reaches its maximum file size, a new log file is created. The default value is 10 MB. When you enter a value, qualify the value with one of the following units:
 
 - B (bytes)
@@ -1548,8 +1498,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-This parameter is available only in Exchange Server 2010.
-
 The MessageTrackingLogPath parameter specifies the location of the message tracking logs. The default location is C:\\Program Files\\Microsoft\\Exchange Server TransportRoles\\Logs\\MessageTracking. If you set the value of the MessageTrackingLogPath parameter to $null, you effectively disable message tracking. However, if you set the value of the MessageTrackingLogPath parameter to $null when the value of the MessageTrackingLogEnabled attribute is $true, event log errors occur. The preferred method to disable message tracking is to use the MessageTrackingLogEnabled parameter.
 
 ```yaml
@@ -1567,8 +1515,6 @@ Accept wildcard characters: False
 ### -MessageTrackingLogSubjectLoggingEnabled
 
 > Applicable: Exchange Server 2010
-
-This parameter is available only in Exchange Server 2010.
 
 The MessageTrackingLogSubjectLoggingEnabled parameter specifies if the message subject should be included in the message tracking log. The default value is $true.
 
@@ -1678,8 +1624,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013
 
-This parameter is available only in Exchange Server 2013.
-
 The OABGeneratorWorkCycle parameter specifies the time span in which the OAB generation on the Mailbox server are processed. The default value is 8 hours.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
@@ -1701,8 +1645,6 @@ Accept wildcard characters: False
 ### -OABGeneratorWorkCycleCheckpoint
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 The OABGeneratorWorkCycleCheckpoint parameter specifies the time span at which to run OAB generation on the Mailbox server. The default value is 1 hour.
 
@@ -1726,8 +1668,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013
 
-This parameter is available only in Exchange Server 2013.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -1745,8 +1685,6 @@ Accept wildcard characters: False
 ### -PeopleCentricTriageWorkCycleCheckpoint
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1766,8 +1704,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013
 
-This parameter is available only in Exchange Server 2013.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -1785,8 +1721,6 @@ Accept wildcard characters: False
 ### -PeopleRelevanceWorkCycleCheckpoint
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1806,8 +1740,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013
 
-This parameter is available only in Exchange Server 2013.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -1826,8 +1758,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013
 
-This parameter is available only in Exchange Server 2013.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -1845,8 +1775,6 @@ Accept wildcard characters: False
 ### -PublicFolderWorkCycle
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 The PublicFolderWorkCycle parameter is used by the public folder assistant to determine how often the mailboxes in a database are processed by the assistant on the Mailbox server. The default value is 1 day.
 
@@ -1867,8 +1795,6 @@ Accept wildcard characters: False
 ### -PublicFolderWorkCycleCheckpoint
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 The PublicFolderWorkCycleCheckpoint determines how often the mailbox list for a database is evaluated on the Mailbox server. The processing speed is also calculated. The default value is 1 day.
 
@@ -1912,8 +1838,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013
 
-This parameter is available only in Exchange Server 2013.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -1931,8 +1855,6 @@ Accept wildcard characters: False
 ### -SearchIndexRepairTimeBasedAssistantWorkCycleCheckpoint
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -1952,8 +1874,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013
 
-This parameter is available only in Exchange Server 2013.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -1971,8 +1891,6 @@ Accept wildcard characters: False
 ### -SharePointSignalStoreWorkCycleCheckpoint
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2135,8 +2053,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013
 
-This parameter is available only in Exchange Server 2013.
-
 The SiteMailboxWorkCycle parameter specifies the time span in which the site mailbox information on the Mailbox server are processed. The default value is 6 hours.
 
 To specify a value, enter it as a time span: dd.hh:mm:ss where d = days, h = hours, m = minutes and s = seconds.
@@ -2158,8 +2074,6 @@ Accept wildcard characters: False
 ### -SiteMailboxWorkCycleCheckpoint
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 The SiteMailboxWorkCycleCheckpoint parameter specifies the time span at which to refresh the site mailbox workcycle on the Mailbox server. The default value is 6 hours.
 
@@ -2183,8 +2097,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013
 
-This parameter is available only in Exchange Server 2013.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -2202,8 +2114,6 @@ Accept wildcard characters: False
 ### -StoreDsMaintenanceWorkCycleCheckpoint
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2223,8 +2133,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013
 
-This parameter is available only in Exchange Server 2013.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -2242,8 +2150,6 @@ Accept wildcard characters: False
 ### -StoreIntegrityCheckWorkCycleCheckpoint
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2263,8 +2169,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013
 
-This parameter is available only in Exchange Server 2013.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -2282,8 +2186,6 @@ Accept wildcard characters: False
 ### -StoreMaintenanceWorkCycleCheckpoint
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2303,8 +2205,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013
 
-This parameter is available only in Exchange Server 2013.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -2322,8 +2222,6 @@ Accept wildcard characters: False
 ### -StoreScheduledIntegrityCheckWorkCycleCheckpoint
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2343,8 +2241,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013
 
-This parameter is available only in Exchange Server 2013.
-
 This parameter is reserved for internal Microsoft use.
 
 ```yaml
@@ -2362,8 +2258,6 @@ Accept wildcard characters: False
 ### -StoreUrgentMaintenanceWorkCycleCheckpoint
 
 > Applicable: Exchange Server 2013
-
-This parameter is available only in Exchange Server 2013.
 
 This parameter is reserved for internal Microsoft use.
 
@@ -2547,7 +2441,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+The WhatIf switch shows what the command does without making any changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

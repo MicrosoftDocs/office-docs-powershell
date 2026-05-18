@@ -1,10 +1,10 @@
 ---
 applicable: Microsoft Teams
-author: serdarsoysal
+author: officedocspr
 external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-ms.author: serdars
+ms.author: odocspr
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csphonenumberassignment
 schema: 2.0.0
 title: Get-CsPhoneNumberAssignment
@@ -958,7 +958,7 @@ Status of Reverse Number Lookup (RNL). When it is set to SkipInternalVoip, the c
 ## NOTES
 The cmdlet is available in Teams PowerShell module 4.0.0 or later. The parameter AssignmentCategory was introduced in Teams PowerShell module 5.3.1-preview. The parameter NetworkSiteId was introduced in Teams PowerShell module 5.5.0. The output parameter NumberSource was introduced in Teams PowerShell module 5.7.0. Multi-line related cmdlets are available from Teams PowerShell module 7.6.0.
 
-The cmdlet is only available in commercial and GCC cloud instances.
+The cmdlet is only available in commercial, GCC, GCCH and DoD cloud instances.
 
 ## RELATED LINKS
 [Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csphonenumberassignment)

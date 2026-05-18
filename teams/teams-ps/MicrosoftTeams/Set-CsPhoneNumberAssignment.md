@@ -1,10 +1,10 @@
 ---
 applicable: Microsoft Teams
-author: serdarsoysal
+author: officedocspr
 external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-ms.author: serdars
+ms.author: odocspr
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumberassignment
 schema: 2.0.0
 title: Set-CsPhoneNumberAssignment
@@ -368,7 +368,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 The cmdlet is available in Teams PowerShell module 3.0.0 or later. The parameter set LocationUpdate was introduced in Teams PowerShell module 5.3.1-preview. The parameter NetworkSiteId was introduced in Teams PowerShell module 5.5.0. The parameter set NetworkSiteUpdate was introduced in Teams PowerShell module 5.5.1-preview. Alternate number assignment was introduced in Teams PowerShell module 7.6.0.
 
-The cmdlet is only available in commercial and GCC cloud instances.
+The cmdlet is only available in commercial, GCC, GCCH and DoD cloud instances.
 
 If a user or resource account has a phone number set in Active Directory on-premises and synched into Microsoft 365, you can't use Set-CsPhoneNumberAssignment to set the phone number. You will have to clear the phone number from the on-premises Active Directory and let that change sync into Microsoft 365 first.
 

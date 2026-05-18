@@ -36,7 +36,7 @@ The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity f
 
 >[!IMPORTANT]
 > Authorized users can't edit call queues with these features enabled:
-> - The call exception routing when the destination directly references another another Auto attendant or Call queue
+> - The call exception routing when the destination directly references another Auto attendant or Call queue
 >   - See [Nesting Auto attendants and Call queues](/microsoftteams/plan-auto-attendant-call-queue#nested-auto-attendants-and-call-queues)
 > - Call priorities
 
@@ -157,6 +157,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 ### -SharedVoicemailHistoryTemplateId
+
+>[!IMPORTANT]
+>The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
 
 The SharedVoicemailHistoryTemplateId parameter specifies the ID of the Shared Call History template. When this template is assigned to an Auto Attendant, historical data for shared voicemails is collected and displayed in the Shared Call History within the [Teams Queues app](https://learn.microsoft.com/microsoftteams/manage-queues-app). Removing the SharedVoicemailHistoryTemplateId stops further historical data collection for Queues App. This parameter does not affect the [Shared Voicemail](https://learn.microsoft.com/en-us/microsoftteams/manage-shared-voicemail) experience in Outlook.
 

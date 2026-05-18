@@ -1,11 +1,11 @@
 ---
 applicable: Microsoft Teams
-author: serdarsoysal
+author: officedocspr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
-ms.author: serdars
+ms.author: odocspr
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinevoiceroutingpolicy
 schema: 2.0.0
 title: Set-CsOnlineVoiceRoutingPolicy
@@ -15,6 +15,8 @@ title: Set-CsOnlineVoiceRoutingPolicy
 
 ## SYNOPSIS
 Modifies an existing online voice routing policy. Online voice routing policies manage online PSTN usages for Phone System users.
+
+For more details, please refer to the article [Voice routing policy considerations.](/microsoftteams/direct-routing-voice-routing)
 
 ## SYNTAX
 
