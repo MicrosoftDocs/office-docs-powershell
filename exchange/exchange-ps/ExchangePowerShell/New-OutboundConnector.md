@@ -275,7 +275,7 @@ Accept wildcard characters: False
 
 ### -MtaStsMode
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The MtaStsMode parameter provides admin control over outbound MTA Strict Transport Security (MTA-STS) validation for email sent over the outbound connector. Organizations can choose how strictly to enforce MTA-STS when sending mail to external domains. Valid values are:
 
@@ -283,14 +283,14 @@ The MtaStsMode parameter provides admin control over outbound MTA Strict Transpo
 
   • If the destination domain doesn't support MTA-STS, the message is sent using the connector settings or Exchange Online default settings.
 
-  • If the destination domain supports MTA-STS but validation fails while the policy mode is set to Enforce, Exchange Online queues the message and retries delivery for 24 hours. If validation doesn't pass within 24 hours, the message is dropped.  
+  • If the destination domain supports MTA-STS but validation fails while the policy mode is set to Enforce, Exchange Online queues the message and retries delivery for 24 hours. If validation doesn't pass within 24 hours, the message is dropped.
 
 - None: Messages always attempt delivery without verifying MTA-STS. The security of email sent over the connector is reduced (can't protect against downgrade attacks or spoofed MX redirection). This value can result in messages from this connector being intercepted or redirected to malicious entities.
 
 ```yaml
 Type: MtaStsMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
@@ -393,7 +393,7 @@ Accept wildcard characters: False
 
 ### -SmtpDaneMode
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 The SmtpDaneMode parameter provides admin control over outbound SMTP DNS-based Authentication of Named Entities (DANE) validation for email sent over the outbound connector. Organizations can choose how strictly to enforce SMTP DANE when sending mail to external domains. Valid values are:
 
@@ -410,7 +410,7 @@ The SmtpDaneMode parameter provides admin control over outbound SMTP DNS-based A
 ```yaml
 Type: SmtpDaneMode
 Parameter Sets: (All)
-Aliases: 
+Aliases:
 
 Required: False
 Position: Named
