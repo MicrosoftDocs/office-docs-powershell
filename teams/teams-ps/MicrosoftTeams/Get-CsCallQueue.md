@@ -26,6 +26,15 @@ Get-CsCallQueue [-Identity <Guid>] [-Tenant <Guid>] [-First <Int32>] [-Skip <Int
 ## DESCRIPTION
 The Get-CsCallQueue cmdlet lets you retrieve information about the Call Queues in your organization. Call Queue output contains statistical data on the number of active calls that are in the queue.
 
+>[!IMPORTANT]
+> Notice: 2026.05.19
+>
+> The `Get-CsCallQueue` cmdlet output currently includes the following line of output:
+>
+>`Statistics                                           : Current queue size = 0`
+>
+>This line of output will be removed as of Friday, August 28, 2026.
+
 ## EXAMPLES
 
 ### Example 1
