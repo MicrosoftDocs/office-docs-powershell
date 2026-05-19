@@ -27,6 +27,7 @@ New-HostedContentFilterPolicy [-Name] <String>
  [-AllowedSenders <MultiValuedProperty>]
  [-BlockedSenderDomains <MultiValuedProperty>]
  [-BlockedSenders <MultiValuedProperty>]
+ [-BulkMovesEnabled <BulkMovesEnabled>]
  [-BulkQuarantineTag <String>]
  [-BulkSpamAction <SpamFilteringAction>]
  [-BulkThreshold <Int32>]
@@ -255,6 +256,32 @@ To add or remove one or more values without affecting any existing entries, use 
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BulkMovesEnabled
+
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
+
+**Note**: This parameter is currently in Preview, isn't available in all organizations, and is subject to change.
+
+The BulkMovesEnabled parameter specifies whether to tag all bulk mail as Bulk in supported email clients, and whether bulk mail below the BulkThreshold parameter is delivered to the Promotions folder in user mailboxes. Valid values are:
+
+- Yes
+- No
+- NotSet (this value is the default)
+
+For more information, see [Deliver bulk mail below the BCL threshold to the Promotions folder](https://learn.microsoft.com/defender-office-365/anti-spam-bulk-complaint-level-bcl-about#deliver-bulk-mail-below-the-bcl-threshold-to-the-promotions-folder).
+
+```yaml
+Type: BulkMovesEnabled
 Parameter Sets: (All)
 Aliases:
 
