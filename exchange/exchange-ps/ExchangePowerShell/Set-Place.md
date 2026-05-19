@@ -39,7 +39,6 @@ Set-Place [-Identity] <RecipientIdParameter>
  [-Label <String>]
  [-MTREnabled <Boolean>]
  [-ParentId <String>]
- [-ParentType <Microsoft.Exchange.Management.RecipientTasks.SetPlaceParentType>]
  [-Phone <String>]
  [-PostalCode <String>]
  [-State <String>]
@@ -365,31 +364,6 @@ Organizations that are onboarding Rooms and Workspaces to Microsoft Places need 
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ParentType
-
-> Applicable: Exchange Online
-
-**Note**: This feature is experimental and is available only for organizations using Microsoft Places.
-
-The ParentType parameter specifies the parent type of the ParentId in Microsoft Places. Valid values are:
-
-- Floor
-- Section
-
-Organizations that are onboarding Rooms and Workspaces to Microsoft Places need to use the ParentId and ParentType parameters in a Set-Place command so Microsoft Places works properly.
-
-```yaml
-Type: Microsoft.Exchange.Management.RecipientTasks.SetPlaceParentType
 Parameter Sets: (All)
 Aliases:
 
