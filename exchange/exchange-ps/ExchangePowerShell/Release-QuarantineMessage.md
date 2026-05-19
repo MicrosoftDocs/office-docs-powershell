@@ -27,7 +27,6 @@ Release-QuarantineMessage -User <String[]> [-Identities <QuarantineMessageIdenti
  [-Identity <QuarantineMessageIdentity>]
  [-AllowSender]
  [-Confirm]
- [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
  [-Force]
  [-ReportFalsePositive]
  [-WhatIf]
@@ -40,7 +39,6 @@ Release-QuarantineMessage [-Identities <QuarantineMessageIdentity[]>] [-Identity
  [-ReleaseToAll]
  [-AllowSender]
  [-Confirm]
- [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
  [-Force]
  [-ReportFalsePositive]
  [-WhatIf]
@@ -54,7 +52,6 @@ Release-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
  [-ActionType <ReleaseActionType>]
  [-AllowSender]
  [-Confirm]
- [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
  [-Force]
  [-ReportFalsePositive]
  [-WhatIf]
@@ -66,7 +63,6 @@ Release-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
 Release-QuarantineMessage -Identity <QuarantineMessageIdentity>
  [-AllowSender]
  [-Confirm]
- [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
  [-Force]
  [-ReportFalsePositive]
  [-WhatIf]
@@ -255,29 +251,6 @@ The Confirm switch specifies whether to show or hide the confirmation prompt. Ho
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EntityType
-
-> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
-
-The EntityType parameter filters the results by EntityType. Valid values are:
-
-- Email
-- SharePointOnline
-- Teams (currently in Preview)
-- DataLossPrevention
-
-```yaml
-Type: Microsoft.Exchange.Management.FfoQuarantine.EntityType
-Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named
