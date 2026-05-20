@@ -1,3 +1,13 @@
+Hello,
+
+Does this scale so for example 
+1. I have users scoped to a mail-enabled security group scoped to the Teams app policy. 
+2. I now add another user and remove a user from the same group
+
+Does the app policy in Temas know about this change, or do I need to run the commands again to update the app policy?
+
+Thanks
+
 ---
 author: tomkau
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
