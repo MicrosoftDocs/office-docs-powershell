@@ -28,6 +28,27 @@
       "version": 0
     },
     {
+      "docset_name": "inkcanvas-ps",
+      "build_source_folder": "inkcanvas",
+      "build_output_subfolder": "inkcanvas-ps",
+      "locale": "en-us",
+      "monikers": [],
+      "open_to_public_contributors": false,
+      "type_mapping": {
+        "Conceptual": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes",
+      "base_path": "powershell",
+      "site_name": "Docs",
+      "template": "Powershell_basic",
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/MAML2Yaml/tools/Run.ps1"
+        ]
+      }
+    },
+    {
       "docset_name": "officewebapps-ps",
       "build_source_folder": "officewebapps",
       "build_output_subfolder": "officewebapps-ps",
