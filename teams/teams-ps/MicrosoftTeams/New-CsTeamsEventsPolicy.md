@@ -16,7 +16,7 @@ This cmdlet allows you to create a new TeamsEventsPolicy instance and set its pr
 ## SYNTAX
 
 ```powershell
-New-CsTeamsEventsPolicy [-Identity] <String> [-AllowWebinars <String>] [-AllowTownhalls <String>] [-ImmersiveEvents <String>] [-AllowEmailEditing <String>] [-Description <String>]
+New-CsTeamsEventsPolicy [-Identity] <String> [-AllowWebinars <String>] [-AllowTownhalls <String>] [-BackroomChat <String>] [-ImmersiveEvents <String>] [-AllowEmailEditing <String>] [-Description <String>]
 [-TownhallEventAttendeeAccess <String>] [-RecordingForTownhall <String>] [-RecordingForWebinar <String>]
 [-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>] [-AllowEventIntegrations <Boolean>] [-TownhallChatExperience <String>]
 [-UseMicrosoftECDN <String>] [-EventAccessType <String>] [-BroadcastPremiumApps <String>]  [-TownhallMaxResolution <String>] [-HighBitrateForTownhall <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
@@ -157,6 +157,27 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BackroomChat
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+This setting governs whether the user can create Events with Backroom Chat enabled.
+
+Possible values are:
+ - **Enabled**: Enables creating Events with Backroom Chat.
+ - **Disabled**: Disables creating Events with Backroom Chat.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:    
+
+Required: False
 Position: Named
 Default value: Enabled
 Accept pipeline input: False
