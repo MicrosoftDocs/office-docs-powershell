@@ -4,20 +4,17 @@
       {
         "files": [ "**/*.md", "**/*.yml" ],
         "src": "docs-conceptual",
-        "dest": "docs-conceptual",
-        "version": "samples-v1.0"
+        "dest": "docs-conceptual"
       },
       {
         "files": [ "**/*.yml", "**/About/*.md" ],
         "src": "samples-v2.0",
-        "dest": "module",
-        "version": "samples-v1.0"
+        "dest": "module"
       },
       {
         "files": [ "**/*.yml", "**/About/*.md" ],
         "src": "samples-v3.0",
-        "dest": "module",
-        "version": "testmoniker-1.0"
+        "dest": "module"
       },
       {
         "files": [ "toc.yml" ],
@@ -25,10 +22,6 @@
         "dest": "samples/breadcrumb"
       }
     ],
-    "versions": {
-      "samples-v1.0": { "dest": "samples-v2.0" },
-      "testmoniker-1.0": { "dest": "samples-v3.0" }
-    },
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
