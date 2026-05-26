@@ -387,7 +387,13 @@ Accept wildcard characters: False
 ```
 
 ### -ReportMeeting
-Controls if end users will see the "Report a concern" and "Report as not concern" menu items in the meeting UI and meeting chat. 
+
+Controls whether end users can access the "Report a concern" and "Report as not a concern" options in the meeting experience (including meeting UI and meeting chat).
+
+When this setting is enabled, users can report meetings that they believe involve security risks, such as phishing, vishing, impersonation, or other malicious activity. Reports submitted by users include relevant meeting context and are shared with the organization’s security and compliance administrators for investigation.
+
+Disabling this setting removes these reporting options from the user interface, preventing users from submitting meeting reports.
+
 Possible values:
 
 - Enabled
