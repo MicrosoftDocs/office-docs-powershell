@@ -123,7 +123,7 @@ This parameter uses the following syntax: `"LocationType:App1,LocationType:App2,
 - **Microsoft 365 apps**: For example:
 
   `"User:Exchange,User:OneDriveForBusiness,Group:Exchange,Group:SharePoint"` or `"User:MicrosoftTeams" or "User:Yammer"`or `"User:MicrosoftTeamsCallLog"`
-  
+ 
 - **Microsoft Copilot experiences**: Currently in Preview. You must use *all* of the following values at the same time:
 
   `"User:M365Copilot,CopilotForSecurity,CopilotinFabricPowerBI,CopilotStudio,CopilotinBusinessApplicationplatformsSales,SQLCopilot"`
