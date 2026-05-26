@@ -31,9 +31,17 @@ Get-AdaptiveScopeMembers [-Identity] <ComplianceRuleIdParameter> [<CommonParamet
 ```
 Get-AdaptiveScopeMembers [-Identity] <ComplianceRuleIdParameter>
  [-AdaptiveReportFilters <PswsHashtable>]
+ [-EndDateTime <DateTimeOffset>]
  [-PageResultSize <UnlimitedInt>]
+ [-StartDateTime <DateTimeOffset>]
  [-State <LocationState>]
  [<CommonParameters>]
+```
+
+### AdaptiveReportQuery
+
+```
+Get-AdaptiveScopeMembers [-Identity] <ComplianceRuleIdParameter> -AdaptiveReportQuery <String> [<CommonParameters>]
 ```
 
 ### AdaptiveReportPagination
@@ -207,6 +215,24 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
+### -AdaptiveReportQuery
+
+> Applicable: Exchange Online, Security & Compliance
+
+{{ Fill AdaptiveReportQuery Description }}
+
+```yaml
+Type: String
+Parameter Sets: AdaptiveReportQuery
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AdaptiveReportFilters
 
 > Applicable: Exchange Online, Security & Compliance
@@ -262,6 +288,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EndDateTime
+
+> Applicable: Exchange Online, Security & Compliance
+
+{{ Fill EndDateTime Description }}
+
+```yaml
+Type: DateTimeOffset
+Parameter Sets: Default
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PageCookie
 
 > Applicable: Exchange Online, Security & Compliance
@@ -302,6 +346,24 @@ Aliases:
 Required: False
 Position: Named
 Default value: 10000
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -StartDateTime
+
+> Applicable: Exchange Online, Security & Compliance
+
+{{ Fill StartDateTime Description }}
+
+```yaml
+Type: DateTimeOffset
+Parameter Sets: Default
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

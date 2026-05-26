@@ -28,6 +28,7 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-AddSharePointLocation <MultiValuedProperty>]
  [-AddSharePointLocationException <MultiValuedProperty>]
  [-ApplySensitivityLabel <String>]
+ [-ApplySensitivityLabelOverwriteWorkloads <Workload>]
  [-AutoEnableAfter <TimeSpan>]
  [-Comment <String>]
  [-Confirm]
@@ -245,6 +246,24 @@ The ApplySensitivityLabel parameter selects the label to use for the policy. Thi
 
 ```yaml
 Type: String
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplySensitivityLabelOverwriteWorkloads
+
+> Applicable: Security & Compliance
+
+{{ Fill ApplySensitivityLabelOverwriteWorkloads Description }}
+
+```yaml
+Type: Workload
 Parameter Sets: Identity
 Aliases:
 
