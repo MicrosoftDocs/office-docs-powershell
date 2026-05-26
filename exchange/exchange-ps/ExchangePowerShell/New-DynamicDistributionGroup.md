@@ -45,9 +45,11 @@ New-DynamicDistributionGroup [-Name] <String> -IncludedRecipients <WellKnownReci
  [-Confirm]
  [-DirectMembershipOnly <Boolean>]
  [-DisplayName <String>]
+ [-ManagedBy <GeneralRecipientIdParameter>]
  [-DomainController <Fqdn>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
+ [-Notes <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
@@ -64,9 +66,11 @@ New-DynamicDistributionGroup [-Name] <String> -RecipientFilter <String>
  [-Confirm]
  [-DirectMembershipOnly <Boolean>]
  [-DisplayName <String>]
+ [-ManagedBy <GeneralRecipientIdParameter>]
  [-DomainController <Fqdn>]
  [-ModeratedBy <MultiValuedProperty>]
  [-ModerationEnabled <Boolean>]
+ [-Notes <String>]
  [-OrganizationalUnit <OrganizationalUnitIdParameter>]
  [-PrimarySmtpAddress <SmtpAddress>]
  [-RecipientContainer <OrganizationalUnitIdParameter>]
@@ -728,6 +732,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ManagedBy
+
+> Applicable: Exchange Online, Exchange Online Protection
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill ManagedBy Description }}
+
+```yaml
+Type: GeneralRecipientIdParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ModeratedBy
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
@@ -770,6 +794,26 @@ You use the ModeratedBy parameter to specify the moderators.
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Notes
+
+> Applicable: Exchange Online, Exchange Online Protection
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill Notes Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
