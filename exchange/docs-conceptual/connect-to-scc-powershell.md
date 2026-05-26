@@ -2,14 +2,12 @@
 title: Connect to Security & Compliance PowerShell
 ms.date: 12/05/2025
 ms.audience: Admin
-audience: Admin
 ms.topic: article
 ms.reviewer:
 ms.localizationpriority: high
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
-search.appverid: MET150
 description: "Learn how to use the Exchange Online PowerShell V3 module to connect to Security & Compliance PowerShell with modern authentication and/or multifactor authentication (MFA)."
 ---
 

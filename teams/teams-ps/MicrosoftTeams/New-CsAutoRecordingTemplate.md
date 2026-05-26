@@ -24,16 +24,16 @@ New-CsAutoRecordingTemplate -Name <String> -Description <String> -SharePointHost
 
 ## DESCRIPTION
 
-> [!CAUTION]
-> The functionality provided by this cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
+>[!CAUTION]
+>The functionality provided by this cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
 
-Use the New-CsAutoRecordingTemplate cmdlet to create an Auto Recording tempalte that can be assigned to a call queue.
+Use the New-CsAutoRecordingTemplate cmdlet to create an Auto Recording template that can be assigned to a call queue.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-New-CsAutoRecordingTemplate -Name "Customer Service" -Description "Transcription & Recording enabled" -TranscriptionEnabled $true -RecordingEnabled $true -AgentViewPermission XXXXX -SharePointHostName YYYYYY -SharePointSiteName ZZZZZ -RecordingDocumentOwner GUID -AutoRecordingAnnouncementTextToSpeechPrompt "This call will be reocorded for quality and training purposes."
+New-CsAutoRecordingTemplate -Name "Customer Service" -Description "Transcription & Recording enabled" -TranscriptionEnabled $true -RecordingEnabled $true -AgentViewPermission XXXXX -SharePointHostName YYYYYY -SharePointSiteName ZZZZZ -RecordingDocumentOwner GUID -AutoRecordingAnnouncementTextToSpeechPrompt "This call will be recorded for quality and training purposes."
 ```
 
 This example creates a new Auto Recording template that enabled transcription and recording.
@@ -124,6 +124,9 @@ Accept wildcard characters: False
 
 ### -SharePointHostName
 
+>[!CAUTION]
+>This must already exist. The cmdlet will not create the SharePoint hostname.
+
 The SharePoint hostname where the recordings and transcripts are stored.
 
 ```yaml
@@ -138,12 +141,12 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
->[!CAUTION]
->This must already exist. The cmdlet will not create the SharePoint hostname.
-
 ### -SharePointSiteName
 
-The SharePoint sitename where the recordings and transcripts are stored.
+> [!CAUTION]
+> The SharePoint site specified by `-SharePointSiteName` must be provisioned through the Auto Recording template creation process. Manually created SharePoint sites aren't supported and may result in access or permission errors. SharePoint sites provisioned through this process can be reused across multiple Auto Recording templates.
+
+Specifies the name of the SharePoint site used to store automatic recording and transcription. The site will be provisioned if it doesn't already exist through the Auto Recording template creation process.
 
 ```yaml
 Type: System.String
@@ -156,9 +159,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
->[!CAUTION]
->This must already exist. The cmdlet will not create the SharePoint site.
 
 ### -RecordingDocumentOwner
 
@@ -196,7 +196,10 @@ Accept wildcard characters: False
 
 ### -AutoRecordingAnnouncementTextToSpeechPrompt
 
-The text to speach prompt that will be played to callers telling them their call is being recorded.
+>[!CAUTION]
+>This text needs to be entered in the same language that is set for the call queue.
+
+The text to speech prompt that will be played to callers telling them their call is being recorded.
 
 ```yaml
 Type: System.String
@@ -209,9 +212,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
->[!CAUTION]
->This text needs to be entered in the same language that is set for the call queue.
 
 ### CommonParameters
 

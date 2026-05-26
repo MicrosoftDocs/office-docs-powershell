@@ -1,10 +1,10 @@
 ---
-author: serdarsoysal
+author: officedocspr
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-Help.xml
 Locale: en-US
 manager: amitar
 Module Name: MicrosoftTeams
-ms.author: serdars
+ms.author: odocspr
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csbatchpolicypackageassignmentoperation
 schema: 2.0.0
 title: New-CsBatchPolicyPackageAssignmentOperation

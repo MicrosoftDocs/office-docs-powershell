@@ -11,7 +11,7 @@ jobs:
 
   protected-files:
     if: github.repository_owner == 'MicrosoftDocs'
-    uses: MicrosoftDocs/microsoft-365-docs/.github/workflows/Shared-ProtectedFiles.yml@workflows-prod
+    uses: MicrosoftDocs/tcp-workflows/.github/workflows/Shared-ProtectedFiles.yml@workflows-prod
     with:
       PayloadJson: ${{ toJSON(github) }}
     secrets:

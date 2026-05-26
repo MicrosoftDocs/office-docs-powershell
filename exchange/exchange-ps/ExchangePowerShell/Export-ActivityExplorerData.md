@@ -214,6 +214,9 @@ Export-ActivityExplorerData -StartTime "07/06/2022 07:15 AM" -EndTime "07/08/202
 
 This example exports up to 100 records for the specified date range in JSON format, and filters the output by the Workload value Endpoint for FileArchived or ArchiveCreated activities.
 
+> [!TIP]
+> When exporting large volumes of Activity Explorer data, use multiple sequential Export-ActivityExplorerData calls with smaller StartTime/EndTime ranges instead of one big time window. This method helps reduce timeouts and improves export reliability.
+
 ## PARAMETERS
 
 ### -EndTime

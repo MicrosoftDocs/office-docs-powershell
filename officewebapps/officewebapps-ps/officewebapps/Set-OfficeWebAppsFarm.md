@@ -4,8 +4,8 @@ Module Name: officewebapps
 title: Set-OfficeWebAppsFarm
 online version:
 schema: 2.0.0
-author: serdarsoysal
-ms.author: serdars
+author: officedocspr
+ms.author: odocspr
 ms.reviewer:
 ---
 

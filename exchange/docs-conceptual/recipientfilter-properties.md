@@ -2,7 +2,6 @@
 title: "Filterable properties for the RecipientFilter parameter"
 ms.date: 09/07/2023
 ms.audience: ITPro
-audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
 ms.assetid: cf78aca5-6699-485c-9b15-e0adba252176

@@ -2,7 +2,6 @@
 title: "PowerShell for the Built-in security add-on for on-premises mailboxes"
 ms.date: 12/16/2025
 ms.audience: Admin
-audience: Admin
 ms.topic: article
 ms.localizationpriority: medium
 ms.assetid: f7918a88-774a-405e-945b-bc2f5ee9f748

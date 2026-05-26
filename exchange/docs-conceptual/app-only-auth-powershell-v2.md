@@ -2,7 +2,6 @@
 title: App-only authentication in Exchange Online PowerShell and Security & Compliance PowerShell
 ms.date: 03/11/2026
 ms.audience: Admin
-audience: Admin
 ms.topic: article
 ms.service: exchange-online
 ms.reviewer:
@@ -10,7 +9,6 @@ ms.localizationpriority: high
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
-search.appverid: MET150
 description: "Learn how to configure app-only authentication (also known as certificate based authentication or CBA) using the Exchange Online PowerShell V3 module in scripts and other long-running tasks."
 ---
 

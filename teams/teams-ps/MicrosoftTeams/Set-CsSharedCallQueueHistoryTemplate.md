@@ -14,7 +14,10 @@ title: Set-CsSharedCallQueueHistoryTemplate
 # Set-CsSharedCallQueueHistoryTemplate
 
 ## SYNOPSIS
-Use the Set-CsSharedCallQueueHistoryTemplate cmdlet to change a Shared Call Queue History template
+This PowerShell cmdlet is being deprecated, please use the new version [Set-CsSharedCallHistoryTemplate](./Set-CsSharedCallHistoryTemplate.md) instead
+
+> [!IMPORTANT]
+>This PowerShell cmdlet is being deprecated, please use the new version [Set-CsSharedCallHistoryTemplate](./Set-CsSharedCallHistoryTemplate.md) instead
 
 ## SYNTAX
 

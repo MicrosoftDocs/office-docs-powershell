@@ -1,5 +1,5 @@
 ---
-author: serdarsoysal
+author: officedocspr
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams

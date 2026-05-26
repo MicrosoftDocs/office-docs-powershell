@@ -22,6 +22,7 @@ This cmdlet sets Teams AI policy value for users in the tenant.
 Set-CsTeamsAIPolicy [[-Identity] <string>]
  [-EnrollFace <string>]
  [-EnrollVoice <string>]
+ [-PassiveVoiceEnrollment <string>]
  [-SpeakerAttributionBYOD <string>]
  [-Description <string>]
  [<CommonParameters>]
@@ -29,9 +30,13 @@ Set-CsTeamsAIPolicy [[-Identity] <string>]
 
 ## DESCRIPTION
 
-The new csTeamsAIPolicy will replace the existing enrollment settings in csTeamsMeetingPolicy, providing enhanced flexibility and control for Teams meeting administrators. Unlike the current single setting, EnrollUserOverride, which applies to both face and voice enrollment, the new policy introduces two distinct settings: EnrollFace and EnrollVoice. These can be individually set to Enabled or Disabled, offering more granular control over biometric enrollments. A new setting, SpeakerAttributionBYOD, is also being added to csTeamsAIPolicy. This allows IT admins to turn off speaker attribution in BYOD scenarios, giving them greater control over how voice data is managed in such environments. This setting can be set to Enabled or Disabled, and will be Enabled by default. In addition to improving the management of face and voice data, the csTeamsAIPolicy is designed to support future AI-related settings in Teams, making it a scalable solution for evolving needs.
+The new csTeamsAIPolicy will replace the existing enrollment settings in csTeamsMeetingPolicy, providing enhanced flexibility and control for Teams meeting administrators. Unlike the current single setting, EnrollUserOverride, which applies to both face and voice enrollment, the new policy introduces two distinct settings: _EnrollFace_ and _EnrollVoice_. These can be individually set to Enabled or Disabled, offering more granular control over the available biometric enrollment flows. Enabling these settings will allow your users in your organization the ability to enroll using active enrollment.
 
-This cmdlet sets the EnrollFace, EnrollVoice, and SpeakerAttributionBYOD values within the csTeamsAIPolicy. These policies can be assigned to users, and each setting can be configured as "Enabled" or "Disabled". "
+Starting May 2026, there will be a new setting - _PassiveVoiceEnrollment_, which will allow users in your organization the ability to enroll their voice profile using their in-meeting audio. This is known as Express voice enrollment. This setting can also be individually set to Enabled or Disabled and operates independently of _EnrollVoice_. This setting is typically enabled by default; however any organization that previously had _EnrollVoice_ set to disabled will see a one-time manual state duplication so that both _EnrollVoice_ and _PassiveVoiceEnrollment_ will have the same state when launching this new functionality. As an organization, you have the option to Enable Active enrollment (via _EnrollVoice_) and/or Express enrollment (via _PassiveVoiceEnrollment_) for your users. To turn off voice enrollment completely, make sure to set both parameters to Disable. 
+
+_SpeakerAttributionBYOD_, is also being added to csTeamsAIPolicy. This allows IT admins to turn off speaker attribution in BYOD scenarios, giving them greater control over how voice data is managed in such environments. This setting can be set to Enabled or Disabled, and will be enabled by default. In addition to improving the management of face and voice data, the csTeamsAIPolicy is designed to support future AI-related settings in Teams, making it a scalable solution for evolving needs.
+
+This cmdlet sets the _EnrollFace_, _EnrollVoice_, _PassiveVoiceEnrollment_, and _SpeakerAttributionBYOD_ values within the csTeamsAIPolicy. These policies can be assigned to users, and each setting can be configured as "Enabled" or "Disabled".
 
 ## EXAMPLES
 
@@ -98,6 +103,13 @@ PS C:\> Set-CsTeamsAIPolicy -Identity Test -SpeakerAttributionBYOD Disabled
 
 Set Teams AI policy "SpeakerAttributionBYOD" value to "Disabled" for identity "Test".
 
+### Example 10
+```powershell
+PS C:\> Set-CsTeamsAIPolicy -Identity Global -PassiveVoiceEnrollment Disabled
+```
+
+Set Teams AI policy "PassiveVoiceEnrollment" value to "Disabled" for global as default. 
+
 ## PARAMETERS
 
 ### -Description
@@ -131,7 +143,22 @@ Accept wildcard characters: False
 ```
 
 ### -EnrollVoice
-Policy value of the Teams AI EnrollVoice policy. EnrollVoice controls user access to user voice enrollment in the Teams app settings.
+Policy value of the Teams AI EnrollVoice policy. EnrollVoice controls user access to active voice enrollment in the Teams app settings.
+
+```yaml
+Type: String
+Parameter Sets: ("Enabled","Disabled")
+Aliases:
+
+Required: True
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PassiveVoiceEnrollment
+Policy value of the Teams AI PassiveVoiceEnrollment policy. PassiveVoiceEnrollment controls user access to express voice enrollment in the Teams app settings.
 
 ```yaml
 Type: String

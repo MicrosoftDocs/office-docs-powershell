@@ -2,7 +2,6 @@
 title: "Open the Exchange Management Shell"
 ms.date: 9/7/2023
 ms.audience: ITPro
-audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
 ms.assetid: 63976059-25f8-4b4f-b597-633e78b803c0

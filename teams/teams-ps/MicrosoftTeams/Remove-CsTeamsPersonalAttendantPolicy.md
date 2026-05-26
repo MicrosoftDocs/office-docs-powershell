@@ -19,6 +19,8 @@ title: Remove-CsTeamsPersonalAttendantPolicy
 
 Use this cmdlet to remove an existing instance of a Teams Personal Attendant Policy or reset the Global policy instance to the default values.
 
+When policy modifications are temporarily blocked, this cmdlet is not available and policy removal cannot be performed during this period.
+
 ## SYNTAX
 
 ```

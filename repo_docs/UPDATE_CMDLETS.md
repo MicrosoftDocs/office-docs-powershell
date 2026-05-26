@@ -1,18 +1,18 @@
 ---
-ms.date: 10/03/2025
+ms.date: 05/20/2026
 ---
 
 # Update existing cmdlet articles
 
 Manually adding new parameters to a cmdlet reference article is doable, but there are several obstacles to overcome:
 
-- **Add the parameter and Type value to the SYNTAX block(s)**: Easy to do if there's only one, but what if there are multiple SYNTAX blocks (also known as parameter sets)? Does the new parameter go in one, some, or all of them? And what about the parameter Type value (String? `$true | $ false`? A finite list of values?)
+- **Add the parameter and Type value to the SYNTAX block(s)**: Easy to do if there's only one, but what if there are multiple SYNTAX blocks (also known as parameter sets)? Does the new parameter go in one, some, or all of them? And what about the parameter Type value (String? `$true | $false`? A finite list of values?)
 
 - **Create a new section for each parameter**: It's easy to create the section and write the description, but again, what about the parameter Type value? And which parameter sets does it belong to?
 
 The reality is: you almost always need the open-source [platyPS](https://github.com/PowerShell/platyPS) tool to automatically answer the unknowns about new parameters.
 
-Currently, the best method with platyPS is to create a new version of the article using the **New-MarkdownCommandHelp** cmdlet, and copy whatever you need out of it. Theoretically, platyPS has an **Update-MarkdownCommandHelp** cmdlet that automatically updates an existing local copy of the article for you, which you can then upload in its entirety to the GitHub website to replace the existing article. This approach currently has some issues in our environment:
+Currently, the best method with platyPS is to create a new version of the article using the **New-MarkdownCommandHelp** cmdlet, and copy whatever you need out of it. Theoretically, platyPS has an **Update-MarkdownCommandHelp** cmdlet that automatically updates an existing local copy of the article, which you can then upload to the GitHub website to replace the existing article. This approach currently has some issues in our environment:
 
 - It's difficult to get a local copy of an existing cmdlet article from the GitHub website (unless you're interested in forking the repo and having a local cloned copy on your computer).
   - You need to copy/paste everything from the Raw view of the article on the web site.
@@ -23,7 +23,7 @@ In short, it's easier and faster to generate a new local copy of the cmdlet arti
 
 Removing parameters from articles is a manual exercise, but this article explains the process fully.
 
-## Use platyPS to add new cmdlets to existing articles
+## Use platyPS to add new parameters to existing articles
 
 ### Step 1: Install platyPS
 
@@ -34,13 +34,7 @@ The steps are the same as in [Create new cmdlet articles](NEW_CMDLETS.md#step-1-
 You probably know how to connect, but the available workloads and connection methods are also described in [Create new cmdlet articles](NEW_CMDLETS.md#step-2-connect-to-the-powershell-environment-that-has-the-cmdlet).
 
 > [!NOTE]
-> Remote PowerShell connections are deprecated in Exchange Online PowerShell and Security & Compliance PowerShell in favor of REST API connections. For more information, see the following articles:
->
-> - [REST API connections in the EXO V3 module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2#rest-api-connections-in-the-exo-v3-module).
-> - [Deprecation of Remote PowerShell in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692).
-> - [Deprecation of Remote PowerShell (RPS) Protocol in Security & Compliance PowerShell](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-rps-protocol-in-security-and/ba-p/3815432).
->
-> REST API connections in the Exchange Online PowerShell V3 module incorrectly identify many parameter **Type** values as `Object` or `Object[]`. The true parameter type values are visible in product code.
+> Connections from the Exchange Online PowerShell V3 module incorrectly identify many parameter **Type** values as `Object` or `Object[]`. The true parameter type values are visible in product code.
 
 ### Step 3: Load platyPS in the PowerShell environment
 
@@ -50,16 +44,16 @@ After you connect in PowerShell to the server or service (either in a regular Wi
 Import-Module Microsoft.PowerShell.PlatyPS
 ```
 
-<a name='step-4-use-new-markdownhelp-to-dump-the-latest-version-of-the-cmdlet-to-a-file'></a>
+<a name='step-4-use-new-markdownhelp-to-export-the-latest-version-of-the-cmdlet-to-a-file'></a>
 
-### Step 4: Use New-MarkdownCommandHelp to dump the latest version of the cmdlet to a file
+### Step 4: Use New-MarkdownCommandHelp to export the latest version of the cmdlet to a file
 
-These instructions are basically the same as in [Create new cmdlet articles](NEW_CMDLETS.md):
+These instructions are basically the same as in [Create new cmdlet articles](NEW_CMDLETS.md#step-4-run-platyps-to-generate-article-files):
 
 The basic syntax is:
 
 ```powershell
-New-MarkdownCommandHelp -Command (Get-Command -Name <Cmdlet>) -OutputFolder "<Path">
+New-MarkdownCommandHelp -CommandInfo (Get-Command -Name <Cmdlet>) -OutputFolder "<Path>"
 ```
 
 Or
@@ -67,13 +61,13 @@ Or
 ```powershell
 $x = Get-Command "<Cmdlet1>","<Cmdlet2>",..."<CmdletN>"
 
-New-MarkdownCommandHelp -CommandInfo $x -OutputFolder "<Path">
+New-MarkdownCommandHelp -CommandInfo $x -OutputFolder "<Path>"
 ```
 
 This example creates an article file for the updated cmdlet named **Get-CoolFeature** in the Exchange Online PowerShell session in the folder "C:\My Docs\ExO".
 
 ```powershell
-New-MarkdownCommandHelp -Command (Get-Command "Get-CoolFeature") -OutputFolder "C:\My Docs\ExO"
+New-MarkdownCommandHelp -CommandInfo (Get-Command "Get-CoolFeature") -OutputFolder "C:\My Docs\ExO"
 ```
 
 This example creates article files for the updated cmdlets **Get-CoolFeature**, **New-CoolFeature**, **Remove-CoolFeature**, and **Set-CoolFeature** from the Exchange Online session in the folder C:\My Docs\ExO.
@@ -81,18 +75,18 @@ This example creates article files for the updated cmdlets **Get-CoolFeature**, 
 The first command stores the cmdlet names in a variable. The second command uses that variable to identify the cmdlets and write the output files.
 
 ```powershell
-$Delta = "Get-CoolFeature","New-CoolFeature","Remove-CoolFeature","Set-CoolFeature"
+$Delta = Get-Command "Get-CoolFeature","New-CoolFeature","Remove-CoolFeature","Set-CoolFeature"
 
 New-MarkdownCommandHelp -CommandInfo $Delta -OutputFolder "C:\My Docs\ExO"
 ```
 
 ### Step 5: Document the new parameters
 
-The resulting articles are plain text UTF-8 files that are formatted using [markdown](https://guides.github.com/features/mastering-markdown/). Office writers use [Visual Studio Code](https://code.visualstudio.com/) to edit article files, but you can use Notepad or your favorite text editor.
+The resulting articles are plain text UTF-8 files that are formatted using [markdown](https://guides.github.com/features/mastering-markdown/). Contributors typically use [Visual Studio Code](https://code.visualstudio.com/) to edit article files, but you can use Notepad or your favorite text editor.
 
 1. Find the new parameters in the SYNTAX block and the parameter sections.
 
-2. Add a parameter description. We highly encourage you to plagiarize existing content and formatting from other cmdlet articles. Many parameters are common across a wide variety of cmdlets.
+2. Add a parameter description. Reuse existing content and formatting from other cmdlet articles. Many parameters are common in a wide variety of cmdlets.
 
 3. Create/fill out the parameter metadata like other existing parameters in the article. For a complete description, see [Parameter metadata](NEW_CMDLETS.md#parameter-metadata).
 
@@ -103,15 +97,15 @@ The resulting articles are plain text UTF-8 files that are formatted using [mark
    - Exchange: <https://github.com/MicrosoftDocs/office-docs-powershell/blob/main/exchange/exchange-ps/ExchangePowerShell/>
    - Office Web Apps: <https://github.com/MicrosoftDocs/office-docs-powershell/blob/main/officewebapps/officewebapps-ps/officewebapps/>
    - Skype: <https://github.com/MicrosoftDocs/office-docs-powershell/blob/main/skype/skype-ps/SkypeForBusiness/>
-   - Teams: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/master/teams/teams-ps/teams>
-   - Whiteboard: <https://github.com/MicrosoftDocs/office-docs-powershell/blob/main/teams/teams-ps/MicrosoftTeams/>
+   - Teams: <https://github.com/MicrosoftDocs/office-docs-powershell/tree/main/teams/teams-ps/MicrosoftTeams>
+   - Whiteboard: <https://github.com/MicrosoftDocs/office-docs-powershell/blob/main/whiteboard/whiteboard-ps/WhiteboardAdmin/>
 
 2. Find the existing article and select **Edit this file**.
 
 3. Copy/paste your updates (and only your updates) from your new, local copy of the article into the existing article (select the **Preview** tab to see what they look like).
 
    > [!IMPORTANT]
-   > The layout of headings and subheadings follow a specific schema required for **Get-Help** in PowerShell. As little as one text character in the wrong place can throw errors in the Pull Request. Look at currently publish cmdlet reference articles for formatting and text examples.
+   > The layout of headings and subheadings follow a specific schema required for **Get-Help** in PowerShell. Stray characters, misplaced text, or malformed metadata in a cmdlet reference article can cause build errors that are difficult to diagnose. These errors often appear to affect all articles in the entire repo, not just the article with the problem. Always compare your work against currently published cmdlet reference articles for formatting and text examples.
 
 4. At this point, the steps are identical to [Learn how to contribute](../README.md), but you're starting at Step 4.
 

@@ -2,14 +2,12 @@
 title: Connect to Exchange Online PowerShell
 ms.date: 07/11/2025
 ms.audience: Admin
-audience: Admin
 ms.topic: article
 ms.reviewer:
 ms.localizationpriority: high
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
-search.appverid: MET150
 description: "Learn how to use the Exchange Online PowerShell V3 module to connect to Exchange Online PowerShell with modern authentication and/or multifactor authentication (MFA)."
 ---
 
