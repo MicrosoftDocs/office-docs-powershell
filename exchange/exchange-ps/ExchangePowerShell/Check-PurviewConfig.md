@@ -21,6 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Check-PurviewConfig
+ [[-CaseHoldPolicyNameOrId] <String>]
+ [[-CaseId] <String>]
  [[-Component] <PurviewConfigComponent>]
  [-Confirm]
  [[-DateTimeUTC] <String>]
@@ -30,6 +32,7 @@ Check-PurviewConfig
  [[-IncidentId] <String>]
  [[-ItemId] <String>]
  [[-MessageId] <String>]
+ [[-Organization] <OrganizationIdParameter>]
  [[-PolicyName] <String>]
  [[-RecipientAddress] SmtpAddress>]
  [[-RecordId] <String>]
@@ -95,6 +98,42 @@ Check-PurviewConfig -TestCases "MipLabels_EnabledEntities_ScopedLabels","MipLabe
 This example runs the specified test cases. A UserPrincipalName value is required for the MipLabels_EnabledEntities_ScopedLabels test case.
 
 ## PARAMETERS
+
+### -CaseHoldPolicyNameOrId
+
+> Applicable: Security & Compliance
+
+{{ Fill CaseHoldPolicyNameOrId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CaseId
+
+> Applicable: Security & Compliance
+
+{{ Fill CaseId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Component
 
@@ -270,6 +309,24 @@ Aliases:
 
 Required: False
 Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Organization
+
+> Applicable: Security & Compliance
+
+{{ Fill Organization Description }}
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 10
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
