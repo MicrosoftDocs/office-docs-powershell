@@ -56,6 +56,7 @@ Set-CsTeamsCallingPolicy [-Identity] <string>
  [-ExplicitRecordingConsent <string>]
  [-EnableRecordingAndTranscriptionCustomMessage <Boolean>]
  [-RecordingAndTranscriptionCustomMessageIdentifier <Guid>]
+ [-RecordingAndTranscriptionAudioNotification <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -809,6 +810,23 @@ This attribute holds the unique identifier for the custom recording and transcri
 
 ```yaml
 Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecordingAndTranscriptionAudioNotification
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+This attribute controls whether audio notifications will be played in Teams client when recording or transcription starts/stops for applied users/groups.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
