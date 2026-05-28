@@ -1,7 +1,7 @@
 ---
 external help file: WhiteboardAdmin-help.xml
 Module Name: WhiteboardAdmin
-online version: https://learn.microsoft.com/powershell/module/whiteboard/export-whiteboardhtml
+online version: https://learn.microsoft.com/powershell/module/whiteboardadmin/export-whiteboardhtml
 applicable: Microsoft Whiteboard
 title: Export-WhiteboardHtml
 schema: 2.0.0

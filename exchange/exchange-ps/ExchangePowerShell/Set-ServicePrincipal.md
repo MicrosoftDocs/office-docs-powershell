@@ -24,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 Set-ServicePrincipal [-Identity] <ServicePrincipalIdParameter>
  [-Confirm]
  [-DisplayName <String>]
+ [-OverrideEnforceExoAppRbacPermissions <Boolean>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -103,6 +104,24 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OverrideEnforceExoAppRbacPermissions
+
+> Applicable: Exchange Online, Exchange Online Protection
+
+{{ Fill OverrideEnforceExoAppRbacPermissions Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
