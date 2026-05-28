@@ -362,7 +362,7 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedStreamingMediaInput
-Enables the use of RTMP-In in Teams meetings.
+Enables the use of RTMP-In and SRT-In in Teams meetings.
 
 Possible values are:
 
