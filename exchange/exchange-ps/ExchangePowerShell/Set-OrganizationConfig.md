@@ -29,6 +29,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-AppsForOfficeEnabled <Boolean>]
  [-AsyncSendEnabled <Boolean>]
  [-AuditDisabled <Boolean>]
+ [-AutoArchivingThresholdPercentage <Int16>]
  [-AutodiscoverPartialDirSync <Boolean>]
  [-AutoEnableArchiveMailbox <Boolean>]
  [-AutoExpandingArchive]
@@ -64,6 +65,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-ConnectorsEnabledForYammer <Boolean>]
  [-CustomerLockboxEnabled <Boolean>]
  [-DefaultAuthenticationPolicy <AuthPolicyIdParameter>]
+ [-DefaultFolderPermissionRestricted <Boolean>]
  [-DefaultGroupAccessType <ModernGroupObjectType>]
  [-DefaultMinutesToReduceLongEventsBy <Int32>]
  [-DefaultMinutesToReduceShortEventsBy <Int32>]
@@ -78,12 +80,14 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
  [-DistributionGroupNameBlockedWordsList <MultiValuedProperty>]
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
+ [-DLPViaDcsEnabled <Boolean>]
  [-DLPWaitOnSendEnabled <Boolean>]
  [-DLPWaitOnSendTimeout <Int16>]
  [-ElcProcessingDisabled <Boolean>]
  [-EnableForwardingAddressSyncForMailboxes <Boolean>]
  [-EnableOutlookEvents <Boolean>]
  [-EndUserDLUpgradeFlowsDisabled <Boolean>]
+ [-EnforceExoAppRbacPermissions <Boolean>]
  [-EnforceShortenEventSetting]
  [-EwsAllowEntourage <Boolean>]
  [-EwsAllowList <MultiValuedProperty>]
@@ -92,6 +96,8 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-EwsApplicationAccessPolicy <EwsApplicationAccessPolicy>]
  [-EwsBlockList <MultiValuedProperty>]
  [-EwsEnabled <Boolean>]
+ [-ExchangeAttributesCloudManagedByDefault]
+ [-ExchangeAttributesServerManagedByDefault]
  [-ExchangeNotificationEnabled <Boolean>]
  [-ExchangeNotificationRecipients <MultiValuedProperty>]
  [-FindTimeAttendeeAuthenticationEnabled <Boolean>]
@@ -139,6 +145,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-ReadTrackingEnabled <Boolean>]
  [-RecallReadMessagesEnabled <System.Boolean>]
  [-RefreshSessionEnabled <Boolean>]
+ [-RecipientDelimiters <Boolean>]
  [-RejectDirectSend <Boolean>]
  [-RemotePublicFolderMailboxes <MultiValuedProperty>]
  [-RequiredCharsetCoverage <Int32>]
@@ -165,6 +172,7 @@ Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCe
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <Boolean>]
  [-AppsForOfficeEnabled <Boolean>]
  [-AsyncSendEnabled <Boolean>]
+ [-AutoArchivingThresholdPercentage <Int16>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>]
  [-Confirm]
  [-ConnectorsActionableMessagesEnabled <Boolean>]
@@ -172,6 +180,7 @@ Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCe
  [-CustomerFeedbackEnabled <Boolean>]
  [-DataClassifications <String>]
  [-DefaultAuthenticationPolicy <AuthPolicyIdParameter>]
+ [-DefaultFolderPermissionRestricted <Boolean>]
  [-DefaultPublicFolderAgeLimit <EnhancedTimeSpan>]
  [-DefaultPublicFolderDeletedItemRetention <EnhancedTimeSpan>]
  [-DefaultPublicFolderIssueWarningQuota <Unlimited>]
@@ -181,11 +190,13 @@ Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCe
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
  [-DistributionGroupNameBlockedWordsList <MultiValuedProperty>]
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
+ [-DLPViaDcsEnabled <Boolean>]
  [-DomainController <Fqdn>]
  [-EmptyAddressBookForNonExchangeUsers]
  [-EnableAuthAdminReadSession]
  [-EnableDownloadDomains <Boolean>]
  [-EnableOrgWidePermissionOnScopedRoles]
+ [-EnforceExoAppRbacPermissions <Boolean>]
  [-EwsAllowEntourage <Boolean>]
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
@@ -193,6 +204,8 @@ Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCe
  [-EwsApplicationAccessPolicy <EwsApplicationAccessPolicy>]
  [-EwsBlockList <MultiValuedProperty>]
  [-EwsEnabled <Boolean>]
+ [-ExchangeAttributesCloudManagedByDefault]
+ [-ExchangeAttributesServerManagedByDefault]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
  [-Industry <IndustryType>]
  [-IsAgendaMailEnabled <Boolean>]
@@ -228,6 +241,7 @@ Set-OrganizationConfig [-AdfsAudienceUris <MultiValuedProperty>] [-AdfsEncryptCe
  [-PublicFoldersLockedForMigration <Boolean>]
  [-ReadTrackingEnabled <Boolean>]
  [-RefreshSessionEnabled <Boolean>]
+ [-RecipientDelimiters <Boolean>]
  [-RemotePublicFolderMailboxes <MultiValuedProperty>]
  [-RequiredCharsetCoverage <Int32>]
  [-SCLJunkThreshold <Int32>]
@@ -250,6 +264,7 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <Boolean>]
  [-AppsForOfficeEnabled <Boolean>]
  [-AsyncSendEnabled <Boolean>]
+ [-AutoArchivingThresholdPercentage <Int16>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>]
  [-Confirm]
  [-ConnectorsActionableMessagesEnabled <Boolean>]
@@ -257,6 +272,7 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-CustomerFeedbackEnabled <Boolean>]
  [-DataClassifications <String>]
  [-DefaultAuthenticationPolicy <AuthPolicyIdParameter>]
+ [-DefaultFolderPermissionRestricted <Boolean>]
  [-DefaultPublicFolderAgeLimit <EnhancedTimeSpan>]
  [-DefaultPublicFolderDeletedItemRetention <EnhancedTimeSpan>]
  [-DefaultPublicFolderIssueWarningQuota <Unlimited>]
@@ -266,11 +282,13 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
  [-DistributionGroupNameBlockedWordsList <MultiValuedProperty>]
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
+ [-DLPViaDcsEnabled <Boolean>]
  [-DomainController <Fqdn>]
  [-EmptyAddressBookForNonExchangeUsers]
  [-EnableAuthAdminReadSession]
  [-EnableDownloadDomains <Boolean>]
  [-EnableOrgWidePermissionOnScopedRoles]
+ [-EnforceExoAppRbacPermissions <Boolean>]
  [-EwsAllowEntourage <Boolean>]
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
@@ -278,6 +296,8 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-EwsApplicationAccessPolicy <EwsApplicationAccessPolicy>]
  [-EwsBlockList <MultiValuedProperty>]
  [-EwsEnabled <Boolean>]
+ [-ExchangeAttributesCloudManagedByDefault]
+ [-ExchangeAttributesServerManagedByDefault]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
  [-Industry <IndustryType>]
  [-IsAgendaMailEnabled <Boolean>]
@@ -313,6 +333,7 @@ Set-OrganizationConfig [-AdfsAuthenticationConfiguration <String>]
  [-PublicFoldersLockedForMigration <Boolean>]
  [-ReadTrackingEnabled <Boolean>]
  [-RefreshSessionEnabled <Boolean>]
+ [-RecipientDelimiters <Boolean>]
  [-RemotePublicFolderMailboxes <MultiValuedProperty>]
  [-RequiredCharsetCoverage <Int32>]
  [-SCLJunkThreshold <Int32>]
@@ -336,6 +357,7 @@ Set-OrganizationConfig [-DelayedDelicensingEnabled <Boolean>] [-EndUserMailNotif
  [-AppsForOfficeEnabled <Boolean>]
  [-AsyncSendEnabled <Boolean>]
  [-AuditDisabled <Boolean>]
+ [-AutoArchivingThresholdPercentage <Int16>]
  [-AutodiscoverPartialDirSync <Boolean>]
  [-AutoEnableArchiveMailbox <Boolean>]
  [-AutoExpandingArchive]
@@ -371,6 +393,7 @@ Set-OrganizationConfig [-DelayedDelicensingEnabled <Boolean>] [-EndUserMailNotif
  [-ConnectorsEnabledForYammer <Boolean>]
  [-CustomerLockboxEnabled <Boolean>]
  [-DefaultAuthenticationPolicy <AuthPolicyIdParameter>]
+ [-DefaultFolderPermissionRestricted <Boolean>]
  [-DefaultGroupAccessType <ModernGroupObjectType>]
  [-DefaultPublicFolderAgeLimit <EnhancedTimeSpan>]
  [-DefaultPublicFolderDeletedItemRetention <EnhancedTimeSpan>]
@@ -383,12 +406,14 @@ Set-OrganizationConfig [-DelayedDelicensingEnabled <Boolean>] [-EndUserMailNotif
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
  [-DistributionGroupNameBlockedWordsList <MultiValuedProperty>]
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
+ [-DLPViaDcsEnabled <Boolean>]
  [-DLPWaitOnSendEnabled <Boolean>]
  [-DLPWaitOnSendTimeout <Int16>]
  [-ElcProcessingDisabled <Boolean>]
  [-EnableForwardingAddressSyncForMailboxes <Boolean>]
  [-EnableOutlookEvents <Boolean>]
  [-EndUserDLUpgradeFlowsDisabled <Boolean>]
+ [-EnforceExoAppRbacPermissions <Boolean>]
  [-EwsAllowEntourage <Boolean>]
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
@@ -396,6 +421,8 @@ Set-OrganizationConfig [-DelayedDelicensingEnabled <Boolean>] [-EndUserMailNotif
  [-EwsApplicationAccessPolicy <EwsApplicationAccessPolicy>]
  [-EwsBlockList <MultiValuedProperty>]
  [-EwsEnabled <Boolean>]
+ [-ExchangeAttributesCloudManagedByDefault]
+ [-ExchangeAttributesServerManagedByDefault]
  [-ExchangeNotificationEnabled <Boolean>]
  [-ExchangeNotificationRecipients <MultiValuedProperty>]
  [-FindTimeAttendeeAuthenticationEnabled <Boolean>]
@@ -439,6 +466,7 @@ Set-OrganizationConfig [-DelayedDelicensingEnabled <Boolean>] [-EndUserMailNotif
  [-PublicFolderShowClientControl <Boolean>]
  [-ReadTrackingEnabled <Boolean>]
  [-RefreshSessionEnabled <Boolean>]
+ [-RecipientDelimiters <Boolean>]
  [-RemotePublicFolderMailboxes <MultiValuedProperty>]
  [-RequiredCharsetCoverage <Int32>]
  [-SendFromAliasEnabled <Boolean>]
@@ -461,14 +489,18 @@ Set-OrganizationConfig
  [-ActivityBasedAuthenticationTimeoutEnabled <Boolean>]
  [-ActivityBasedAuthenticationTimeoutInterval <EnhancedTimeSpan>]
  [-ActivityBasedAuthenticationTimeoutWithSingleSignOnEnabled <Boolean>]
+ [-AutoArchivingThresholdPercentage <Int16>]
  [-ByteEncoderTypeFor7BitCharsets <Int32>]
  [-Confirm]
  [-CustomerFeedbackEnabled <Boolean>]
  [-DefaultAuthenticationPolicy <AuthPolicyIdParameter>]
+ [-DefaultFolderPermissionRestricted <Boolean>]
  [-DistributionGroupDefaultOU <OrganizationalUnitIdParameter>]
  [-DistributionGroupNameBlockedWordsList <MultiValuedProperty>]
  [-DistributionGroupNamingPolicy <DistributionGroupNamingPolicy>]
+ [-DLPViaDcsEnabled <Boolean>]
  [-DomainController <Fqdn>]
+ [-EnforceExoAppRbacPermissions <Boolean>]
  [-EwsAllowEntourage <Boolean>]
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
@@ -476,6 +508,8 @@ Set-OrganizationConfig
  [-EwsApplicationAccessPolicy <EwsApplicationAccessPolicy>]
  [-EwsBlockList <MultiValuedProperty>]
  [-EwsEnabled <Boolean>]
+ [-ExchangeAttributesCloudManagedByDefault]
+ [-ExchangeAttributesServerManagedByDefault]
  [-Force]
  [-HierarchicalAddressBookRoot <UserContactGroupIdParameter>]
  [-Industry <IndustryType>]
@@ -497,6 +531,7 @@ Set-OrganizationConfig
  [-PublicFolderMigrationComplete <Boolean>]
  [-PublicFoldersLockedForMigration <Boolean>]
  [-ReadTrackingEnabled <Boolean>]
+ [-RecipientDelimiters <Boolean>]
  [-RequiredCharsetCoverage <Int32>]
  [-SCLJunkThreshold <Int32>]
  [-WhatIf]
@@ -861,6 +896,26 @@ The AuditDisabled parameter specifies whether to disable or enable mailbox audit
 ```yaml
 Type: Boolean
 Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoArchivingThresholdPercentage
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill AutoArchivingThresholdPercentage Description }}
+
+```yaml
+Type: Int16
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -1708,6 +1763,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DefaultFolderPermissionRestricted
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill DefaultFolderPermissionRestricted Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DefaultGroupAccessType
 
 > Applicable: Exchange Online
@@ -2079,6 +2154,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DLPViaDcsEnabled
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill DLPViaDcsEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DLPWaitOnSendEnabled
 
 > Applicable: Exchange Online
@@ -2342,6 +2437,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnforceExoAppRbacPermissions
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill EnforceExoAppRbacPermissions Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnforceShortenEventSetting
 
 > Applicable: Exchange Online
@@ -2499,6 +2614,46 @@ This parameter has no affect on access to REST.
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeAttributesCloudManagedByDefault
+
+> Applicable: Exchange Online, Exchange Online Protection
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill ExchangeAttributesCloudManagedByDefault Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeAttributesServerManagedByDefault
+
+> Applicable: Exchange Online, Exchange Online Protection
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill ExchangeAttributesServerManagedByDefault Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -4056,6 +4211,26 @@ The RejectDirectSend parameter specifies whether to block Direct Send in your or
 ```yaml
 Type: Boolean
 Parameter Sets: ShortenEventScopeParameter
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecipientDelimiters
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill RecipientDelimiters Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
 Aliases:
 
 Required: False

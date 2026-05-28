@@ -21,6 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-AutoSensitivityLabelPolicy [-Name] <String> -ApplySensitivityLabel <String>
+ [-ApplySensitivityLabelOverwriteWorkloads <Workload>]
  [-Comment <String>]
  [-Confirm]
  [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
@@ -46,6 +47,7 @@ New-AutoSensitivityLabelPolicy [-Name] <String> -ApplySensitivityLabel <String>
  [-PolicyRBACScopes <MultiValuedProperty>]
  [-PolicyTemplateInfo <PswsHashtable>]
  [-Priority <System.Int32>]
+ [-RemoveLabel]
  [-SharePointAdaptiveScopes <MultiValuedProperty>]
  [-SharePointAdaptiveScopesException <MultiValuedProperty>]
  [-SharePointLocation <MultiValuedProperty>]
@@ -99,6 +101,24 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplySensitivityLabelOverwriteWorkloads
+
+> Applicable: Security & Compliance
+
+{{ Fill ApplySensitivityLabelOverwriteWorkloads Description }}
+
+```yaml
+Type: Workload
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -623,6 +643,24 @@ The Priority parameter specifies the priority of the policy. The highest priorit
 
 ```yaml
 Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveLabel
+
+> Applicable: Security & Compliance
+
+{{ Fill RemoveLabel Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
