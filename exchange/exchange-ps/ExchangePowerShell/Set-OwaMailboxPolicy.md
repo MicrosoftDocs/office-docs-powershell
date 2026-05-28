@@ -2290,7 +2290,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-This parameter is functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010 and Exchange Online.
 
 The RecoverDeletedItemsEnabled parameter specifies whether a user can use Outlook Web App to view, recover, or delete permanently items that have been deleted from the Deleted Items folder. Valid values are:
 
