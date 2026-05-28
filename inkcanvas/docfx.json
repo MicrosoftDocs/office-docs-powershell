@@ -3,7 +3,8 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "**/*.md",
+          "**/*.yml"
         ],
         "src": "docs-conceptual",
         "version": "inkcanvas-ps",
@@ -14,7 +15,8 @@
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
-          "ThirdPartyNotices"
+          "ThirdPartyNotices",
+          "ThirdPartyNotices.md"
         ]
       },
       {
@@ -66,9 +68,6 @@
     "externalReference": [],
     "globalMetadata": {
       "uhfHeaderId": "MSDocsHeader-M365-IT",
-      "author": "officedocspr",
-      "ms.author": "odocspr",
-      "manager": "odocspr",
       "ms.topic": "reference",
       "ms.service": "inkcanvas-powershell",
       "ms.devlang": "powershell",
