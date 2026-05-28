@@ -59,6 +59,9 @@ Use the Find-CsGroup cmdlet to search groups.
 ### [Find-CsOnlineApplicationInstance](Find-CsOnlineApplicationInstance.md)
 Use the Find-CsOnlineApplicationInstance cmdlet to find application instances that match your search criteria.
 
+### [Get-AIGeneratedKnowledgeContainer](Get-AIGeneratedKnowledgeContainer.md)
+This cmdlet returns the SharePoint Embedded container URLs for AI-generated meeting knowledge in Microsoft Teams meeting.
+
 ### [Get-CsAgent](Get-CsAgent.md)
 Retrieves the AI Agent(s) in the tenant.
 
@@ -1156,6 +1159,9 @@ Creates a new app in the Teams tenant app store.
 
 ### [Register-CsOnlineDialInConferencingServiceNumber](Register-CsOnlineDialInConferencingServiceNumber.md)
 The Register-CsOnlineDialInConferencingServiceNumber command allows you to assign any additional service number that you may have acquired to your conference bridge.
+
+### [Remove-AIGeneratedKnowledge](Remove-AIGeneratedKnowledge.md)
+This cmdlet deletes the AI-generated meeting knowledge for specific metings/calls.
 
 ### [Remove-CsAgent](Remove-CsAgent.md)
 Deletes an AI Agent.
