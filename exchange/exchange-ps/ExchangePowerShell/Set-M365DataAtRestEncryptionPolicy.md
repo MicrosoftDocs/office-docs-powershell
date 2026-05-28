@@ -43,6 +43,18 @@ Set-M365DataAtRestEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter>
  [<CommonParameters>]
 ```
 
+### ReplaceKey
+```
+Set-M365DataAtRestEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> -AzureKeyIDs <MultiValuedProperty> -Replace
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-Name <String>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -64,6 +76,24 @@ This example updates the Microsoft 365 data-at-rest encryption policy named Tena
 
 ## PARAMETERS
 
+### -AzureKeyIDs
+
+> Applicable: Exchange Online
+
+{{ Fill AzureKeyIDs Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: ReplaceKey
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Identity
 
 > Applicable: Exchange Online
@@ -83,6 +113,24 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Replace
+
+> Applicable: Exchange Online
+
+{{ Fill Replace Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ReplaceKey
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

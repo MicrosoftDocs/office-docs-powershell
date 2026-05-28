@@ -33,6 +33,7 @@ Set-SafeLinksPolicy [-Identity] <SafeLinksPolicyIdParameter>
  [-EnableSafeLinksForEmail <Boolean>]
  [-EnableSafeLinksForOffice <Boolean>]
  [-EnableSafeLinksForTeams <Boolean>]
+ [-LocalizedNotificationTextList <Hashtable>]
  [-ScanUrls <Boolean>]
  [-TrackClicks <Boolean>]
  [-UseTranslatedNotificationText <Boolean>]
@@ -321,6 +322,24 @@ The EnableSafeLinksForTeams parameter specifies whether Safe Links is enabled fo
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LocalizedNotificationTextList
+
+> Applicable: Exchange Online
+
+{{ Fill LocalizedNotificationTextList Description }}
+
+```yaml
+Type: Hashtable
 Parameter Sets: (All)
 Aliases:
 
