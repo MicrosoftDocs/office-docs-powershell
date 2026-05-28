@@ -109,6 +109,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-FromScope <Microsoft.Office.CompliancePolicy.PolicyEvaluation.FromScope>]
  [-GenerateAlert <MultiValuedProperty>]
  [-GenerateIncidentReport <MultiValuedProperty>]
+ [-HasActivity <Activity>]
  [-HasSenderOverride <Boolean>]
  [-HeaderContainsWords <PswsHashtable>]
  [-HeaderMatchesPatterns <PswsHashtable>]
@@ -148,6 +149,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-RemoveRMSTemplate <Boolean>]
  [-ReportSeverityLevel <RuleSeverity>]
  [-RestrictAccess <System.Collections.Hashtable[]>]
+ [-RestrictWebGrounding <Boolean>]
  [-RuleErrorAction <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyRuleErrorAction>]
  [-SenderADAttributeContainsWords <PswsHashtable>]
  [-SenderADAttributeMatchesPatterns <PswsHashtable>]
@@ -158,6 +160,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-SentToMemberOf <RecipientIdParameter[]>]
  [-SetHeader <PswsHashtable>]
  [-SharedByIRMUserRisk <MultiValuedProperty>]
+ [-SharepointMoveToQuarantineLocation <Boolean>]
  [-StopPolicyProcessing <Boolean>]
  [-SubjectContainsWords <MultiValuedProperty>]
  [-SubjectMatchesPatterns <MultiValuedProperty>]
@@ -2425,6 +2428,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HasActivity
+
+> Applicable: Security & Compliance
+
+{{ Fill HasActivity Description }}
+
+```yaml
+Type: Activity
+Parameter Sets: Default
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -HasSenderOverride
 
 > Applicable: Security & Compliance
@@ -3337,6 +3358,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RestrictWebGrounding
+
+> Applicable: Security & Compliance
+
+{{ Fill RestrictWebGrounding Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Default
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RuleErrorAction
 
 > Applicable: Security & Compliance
@@ -3613,6 +3652,24 @@ You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharepointMoveToQuarantineLocation
+
+> Applicable: Security & Compliance
+
+{{ Fill SharepointMoveToQuarantineLocation Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 

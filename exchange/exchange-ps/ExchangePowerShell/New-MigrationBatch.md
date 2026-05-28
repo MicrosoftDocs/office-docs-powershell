@@ -49,6 +49,7 @@ New-MigrationBatch -Name <String> -CSVData <Byte[]> [-Analyze]
  [-AutoStart]
  [-CompleteAfter <System.DateTime>]
  [-Confirm]
+ [-Daily]
  [-ExcludeFolders <MultiValuedProperty>]
  [-IncludeFolders <MultiValuedProperty>]
  [-NotificationEmails <MultiValuedProperty>]
@@ -1190,6 +1191,26 @@ The DataFusion switch specifies whether to enable Data Fusion for Google Workspa
 ```yaml
 Type: SwitchParameter
 Parameter Sets: Onboarding
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Daily
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill Daily Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: Analysis
 Aliases:
 
 Required: False

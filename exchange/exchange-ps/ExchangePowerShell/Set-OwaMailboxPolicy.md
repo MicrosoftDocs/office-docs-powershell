@@ -38,6 +38,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-BlockedMimeTypes <MultiValuedProperty>]
  [-BookingsMailboxCreationEnabled <Boolean>]
  [-BookingsMailboxDomain <String>]
+ [-BulkImportEMLEnabled <BulkImportEMLEnabledProperty>]
  [-BoxAttachmentsEnabled <Boolean>]
  [-CalendarEnabled <Boolean>]
  [-ChangePasswordEnabled <Boolean>]
@@ -105,6 +106,7 @@ Set-OwaMailboxPolicy [-Identity] <MailboxPolicyIdParameter>
  [-OWAMiniEnabled <Boolean>]
  [-PersonalAccountCalendarsEnabled <Boolean>]
  [-PersonalAccountsEnabled <System.Boolean>]
+ [-PersonalBookingsDisabled <Boolean>]
  [-PhoneticSupportEnabled <Boolean>]
  [-PlacesEnabled <Boolean>]
  [-PremiumClientEnabled <Boolean>]
@@ -635,6 +637,26 @@ This parameter is available only in the cloud-based service.
 
 ```yaml
 Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BulkImportEMLEnabled
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill BulkImportEMLEnabled Description }}
+
+```yaml
+Type: BulkImportEMLEnabledProperty
 Parameter Sets: (All)
 Aliases:
 
@@ -2153,6 +2175,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PersonalBookingsDisabled
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill PersonalBookingsDisabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PhoneticSupportEnabled
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
@@ -2290,7 +2332,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-This parameter is functional only in Exchange Server 2010.
+This parameter is functional only in Exchange Server 2010 and Exchange Online.
 
 The RecoverDeletedItemsEnabled parameter specifies whether a user can use Outlook Web App to view, recover, or delete permanently items that have been deleted from the Deleted Items folder. Valid values are:
 
