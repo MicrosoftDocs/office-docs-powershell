@@ -1,7 +1,7 @@
 ---
 external help file: WhiteboardAdmin-help.xml
 Module Name: WhiteboardAdmin
-online version: https://learn.microsoft.com/powershell/module/whiteboard/get-whiteboardsettings
+online version: https://learn.microsoft.com/powershell/module/whiteboardadmin/get-whiteboardsettings
 applicable: Microsoft Whiteboard
 title: Get-WhiteboardSettings
 schema: 2.0.0
