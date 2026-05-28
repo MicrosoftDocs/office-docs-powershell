@@ -21,6 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-AutoSensitivityLabelPolicy [-Name] <String> -ApplySensitivityLabel <String>
+ [-ApplySensitivityLabelOverwriteWorkloads <Workload>]
  [-Comment <String>]
  [-Confirm]
  [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
@@ -46,6 +47,7 @@ New-AutoSensitivityLabelPolicy [-Name] <String> -ApplySensitivityLabel <String>
  [-PolicyRBACScopes <MultiValuedProperty>]
  [-PolicyTemplateInfo <PswsHashtable>]
  [-Priority <System.Int32>]
+ [-RemoveLabel]
  [-SharePointAdaptiveScopes <MultiValuedProperty>]
  [-SharePointAdaptiveScopesException <MultiValuedProperty>]
  [-SharePointLocation <MultiValuedProperty>]
@@ -105,6 +107,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ApplySensitivityLabelOverwriteWorkloads
+
+> Applicable: Security & Compliance
+
+{{ Fill ApplySensitivityLabelOverwriteWorkloads Description }}
+
+```yaml
+Type: Workload
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Comment
 
 > Applicable: Security & Compliance
@@ -127,10 +147,10 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -623,6 +643,24 @@ The Priority parameter specifies the priority of the policy. The highest priorit
 
 ```yaml
 Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveLabel
+
+> Applicable: Security & Compliance
+
+{{ Fill RemoveLabel Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 

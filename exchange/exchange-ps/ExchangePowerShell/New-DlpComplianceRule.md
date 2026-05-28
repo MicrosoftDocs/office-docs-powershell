@@ -109,6 +109,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-FromScope <Microsoft.Office.CompliancePolicy.PolicyEvaluation.FromScope>]
  [-GenerateAlert <MultiValuedProperty>]
  [-GenerateIncidentReport <MultiValuedProperty>]
+ [-HasActivity <Activity>]
  [-HasSenderOverride <Boolean>]
  [-HeaderContainsWords <PswsHashtable>]
  [-HeaderMatchesPatterns <PswsHashtable>]
@@ -148,6 +149,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-RemoveRMSTemplate <Boolean>]
  [-ReportSeverityLevel <RuleSeverity>]
  [-RestrictAccess <System.Collections.Hashtable[]>]
+ [-RestrictWebGrounding <Boolean>]
  [-RuleErrorAction <Microsoft.Office.CompliancePolicy.PolicyEvaluation.PolicyRuleErrorAction>]
  [-SenderADAttributeContainsWords <PswsHashtable>]
  [-SenderADAttributeMatchesPatterns <PswsHashtable>]
@@ -158,6 +160,7 @@ New-DlpComplianceRule [-Name] <String> -Policy <PolicyIdParameter>
  [-SentToMemberOf <RecipientIdParameter[]>]
  [-SetHeader <PswsHashtable>]
  [-SharedByIRMUserRisk <MultiValuedProperty>]
+ [-SharepointMoveToQuarantineLocation <Boolean>]
  [-StopPolicyProcessing <Boolean>]
  [-SubjectContainsWords <MultiValuedProperty>]
  [-SubjectMatchesPatterns <MultiValuedProperty>]
@@ -638,10 +641,10 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -2425,6 +2428,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -HasActivity
+
+> Applicable: Security & Compliance
+
+{{ Fill HasActivity Description }}
+
+```yaml
+Type: Activity
+Parameter Sets: Default
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -HasSenderOverride
 
 > Applicable: Security & Compliance
@@ -3337,6 +3358,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -RestrictWebGrounding
+
+> Applicable: Security & Compliance
+
+{{ Fill RestrictWebGrounding Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Default
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -RuleErrorAction
 
 > Applicable: Security & Compliance
@@ -3613,6 +3652,24 @@ You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SharepointMoveToQuarantineLocation
+
+> Applicable: Security & Compliance
+
+{{ Fill SharepointMoveToQuarantineLocation Description }}
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 

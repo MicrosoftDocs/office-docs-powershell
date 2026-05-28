@@ -27,6 +27,7 @@ Search-UnifiedAuditLog -EndDate <ExDateTime> -StartDate <ExDateTime>
  [-FreeText <String>]
  [-HighCompleteness]
  [-IPAddresses <String[]>]
+ [-LegacyFlow]
  [-LongerRetentionEnabled <String>]
  [-ObjectIds <String[]>]
  [-Operations <String[]>]
@@ -217,6 +218,24 @@ The IPAddresses parameter filters the log entries by the specified IP addresses.
 
 ```yaml
 Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LegacyFlow
+
+> Applicable: Exchange Online, Exchange Online Protection
+
+{{ Fill LegacyFlow Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
