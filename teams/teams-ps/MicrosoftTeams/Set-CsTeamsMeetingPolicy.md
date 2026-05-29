@@ -362,14 +362,17 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedStreamingMediaInput
-Enables the use of RTMP-In and SRT-In in Teams meetings.
+Enables the use of RTMP-In and SRT-In in Teams meetings, webinars or town halls.
 
 Possible values are:
 
-- \<blank\>
-- RTMP
+- "" - <blank> setting will not allow any users to access streaming encoders.
 
-- SRT
+- RTMP - this setting will allow users to access RTMP-In streaming encoders during a Teams meeting, webinar or town hall.
+
+- SRT - this setting will allow users to access SRT-In streaming encoders during a Teams meeting, webinar or town hall.
+
+- RTMP, SRT - this setting will allow users to access SRT-In streaming encoders during a Teams meeting, webinar or town hall.
 
 ```yaml
 Type: String
