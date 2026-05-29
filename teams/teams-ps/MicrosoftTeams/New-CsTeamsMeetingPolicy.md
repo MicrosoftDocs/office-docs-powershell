@@ -1517,7 +1517,7 @@ Accept wildcard characters: False
 >[!NOTE]
 >This feature has not been released yet and will have no changes if it is enabled or disabled.
 
-Control Noises Supression Feature for PST legs joining a meeting.
+Control Noise Suppression Feature for PSTN legs joining a meeting.
 
 Possible Values:
 
