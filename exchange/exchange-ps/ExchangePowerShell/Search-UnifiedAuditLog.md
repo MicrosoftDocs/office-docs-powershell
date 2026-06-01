@@ -41,7 +41,11 @@ Search-UnifiedAuditLog -EndDate <ExDateTime> -StartDate <ExDateTime>
 ```
 
 ## DESCRIPTION
-The Search-UnifiedAuditLog cmdlet presents pages of data based on repeated iterations of the same command. Use SessionId and SessionCommand to repeatedly run the cmdlet until you get zero returns, or hit the maximum number of results based on the session command. To gauge progress, look at the ResultIndex (hits in the current iteration), ResultCount (hits for all iterations), and AuditSearchRequestMetadata.moreRecordsAvailable (boolean flag to indicate if the ongoing query is expected to return more results) properties of the data returned by the cmdlet. 
+The Search-UnifiedAuditLog cmdlet presents pages of data based on repeated iterations of the same command. Use SessionId and SessionCommand to repeatedly run the cmdlet until you get zero returns, or hit the maximum number of results based on the session command. To gauge progress, look at the following data returned by the cmdlets:
+
+- ResultIndex: Hits in the current iteration.
+- ResultCount Hits for all iterations.
+- AuditSearchRequestMetadata.moreRecordsAvailable: Boolean flag that indicates if the ongoing query is expected to return more results. 
 
 The Search-UnifiedAuditLog cmdlet is available in Exchange Online PowerShell. You can also view events from the unified auditing log by using the Microsoft Purview compliance portal. For more information, see [Audited activities](https://learn.microsoft.com/purview/audit-log-activities).
 
