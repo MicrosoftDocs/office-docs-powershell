@@ -578,6 +578,7 @@
   "Get-SweepRule": "mailboxes",
   "Get-UserPhoto": "mailboxes",
   "Import-RecipientDataProperty": "mailboxes",
+  "Invoke-ChangeMeetingOrganizer": "mailboxes",
   "New-App": "mailboxes",
   "New-InboxRule": "mailboxes",
   "New-Mailbox": "mailboxes",
