@@ -1192,8 +1192,6 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Import-RecipientDataProperty](Import-RecipientDataProperty.md)
 
-### [Invoke-ChangeMeetingOrganizer](Invoke-ChangeMeetingOrganizer.md)
-
 ### [New-App](New-App.md)
 
 ### [New-InboxRule](New-InboxRule.md)
