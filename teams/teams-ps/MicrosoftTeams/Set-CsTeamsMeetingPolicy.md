@@ -1820,14 +1820,14 @@ Accept wildcard characters: False
 ```
 
 ### -SpeakerAttributionMode
-Determines if users are identified in transcriptions and if they can change the value of the _Automatically identify me in meeting captions and transcripts_ setting.
+Determines if users are identified in captions and transcriptions (both persisted and non-persisted) and if they can change the value of the _Automatically identify me in meeting captions and transcripts_ setting.
 
 Possible values:
 
-- **Enabled**: Speakers are identified in meeting captions and transcripts.
-- **EnabledUserOverride**: By default, speakers are identified in meeting captions and transcripts. Users can override this setting and choose not to be identified in their Teams profile settings.
-- **DisabledUserOverride**: By default, speakers are not identified in meeting captions and transcripts. Users can override this setting and choose to be identified in their Teams profile settings.
-- **Disabled**: Speakers are not identified in meeting captions and transcripts.
+- **Enabled**: Speakers are identified in meeting captions and transcriptions.
+- **EnabledUserOverride**: By default, speakers are identified in meeting captions and transcriptions. Users can override this setting and choose not to be identified in their Teams profile settings.
+- **DisabledUserOverride**: By default, speakers are not identified in meeting captions and transcriptions. Users can override this setting and choose to be identified in their Teams profile settings.
+- **Disabled**: Speakers are not identified in meeting captions and transcriptions.
 
 ```yaml
 Type: String
