@@ -288,7 +288,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
-The Notes parameters specifies additional information about the object. If the value contains spaces, enclose the value in quotation marks ("). If the value contains quotation marks, add a backslash (\) before the quotation mark.
+The Notes parameters specifies additional information about the object. If the value contains spaces, enclose the value in quotation marks ("). If the value contains quotation marks, add a backslash ( \ ) before the quotation mark.
 
 ```yaml
 Type: String
