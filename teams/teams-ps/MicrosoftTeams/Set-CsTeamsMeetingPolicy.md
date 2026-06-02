@@ -1824,10 +1824,10 @@ Determines if users are identified in transcriptions and if they can change the 
 
 Possible values:
 
-- **Enabled**: Speakers are identified in transcription.
-- **EnabledUserOverride**: Speakers are identified in transcription. If enabled, users can override this setting and choose not to be identified in their Teams profile settings.
-- **DisabledUserOverride**: Speakers are not identified in transcription. If enabled, users can override this setting and choose to be identified in their Teams profile settings.
-- **Disabled**: Speakers are not identified in transcription.
+- **Enabled**: Speakers are identified in meeting captions and transcripts.
+- **EnabledUserOverride**: By default, speakers are identified in meeting captions and transcripts. Users can override this setting and choose not to be identified in their Teams profile settings.
+- **DisabledUserOverride**: By default, speakers are not identified in meeting captions and transcripts. Users can override this setting and choose to be identified in their Teams profile settings.
+- **Disabled**: Speakers are not identified in meeting captions and transcripts.
 
 ```yaml
 Type: String
@@ -1836,7 +1836,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: EnabledUserOverride
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
