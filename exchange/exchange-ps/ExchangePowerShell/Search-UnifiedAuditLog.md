@@ -27,6 +27,7 @@ Search-UnifiedAuditLog -EndDate <ExDateTime> -StartDate <ExDateTime>
  [-FreeText <String>]
  [-HighCompleteness]
  [-IPAddresses <String[]>]
+ [-LegacyFlow]
  [-LongerRetentionEnabled <String>]
  [-ObjectIds <String[]>]
  [-Operations <String[]>]
@@ -40,7 +41,11 @@ Search-UnifiedAuditLog -EndDate <ExDateTime> -StartDate <ExDateTime>
 ```
 
 ## DESCRIPTION
-The Search-UnifiedAuditLog cmdlet presents pages of data based on repeated iterations of the same command. Use SessionId and SessionCommand to repeatedly run the cmdlet until you get zero returns, or hit the maximum number of results based on the session command. To gauge progress, look at the ResultIndex (hits in the current iteration) and ResultCount (hits for all iterations) properties of the data returned by the cmdlet.
+The Search-UnifiedAuditLog cmdlet presents pages of data based on repeated iterations of the same command. Use SessionId and SessionCommand to repeatedly run the cmdlet until you get zero returns, or hit the maximum number of results based on the session command. To gauge progress, look at the following data returned by the cmdlets:
+
+- ResultIndex: Hits in the current iteration.
+- ResultCount Hits for all iterations.
+- AuditSearchRequestMetadata.moreRecordsAvailable: Boolean flag that indicates if the ongoing query is expected to return more results. 
 
 The Search-UnifiedAuditLog cmdlet is available in Exchange Online PowerShell. You can also view events from the unified auditing log by using the Microsoft Purview compliance portal. For more information, see [Audited activities](https://learn.microsoft.com/purview/audit-log-activities).
 
@@ -217,6 +222,24 @@ The IPAddresses parameter filters the log entries by the specified IP addresses.
 
 ```yaml
 Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LegacyFlow
+
+> Applicable: Exchange Online, Exchange Online Protection
+
+{{ Fill LegacyFlow Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 

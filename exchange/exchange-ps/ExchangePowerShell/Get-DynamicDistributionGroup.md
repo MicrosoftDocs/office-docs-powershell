@@ -269,7 +269,7 @@ Accept wildcard characters: False
 
 ### -IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -291,7 +291,7 @@ Accept wildcard characters: False
 
 ### -IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -313,7 +313,7 @@ Accept wildcard characters: False
 
 ### -IncludeAcceptMessagesOnlyFromWithDisplayNames
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -335,7 +335,7 @@ Accept wildcard characters: False
 
 ### -IncludeBypassModerationFromSendersOrMembersWithDisplayNames
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -357,7 +357,7 @@ Accept wildcard characters: False
 
 ### -IncludeGrantSendOnBehalfToWithDisplayNames
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -379,7 +379,7 @@ Accept wildcard characters: False
 
 ### -IncludeManagedByWithDisplayNames
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -401,7 +401,7 @@ Accept wildcard characters: False
 
 ### -IncludeModeratedByWithDisplayNames
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 

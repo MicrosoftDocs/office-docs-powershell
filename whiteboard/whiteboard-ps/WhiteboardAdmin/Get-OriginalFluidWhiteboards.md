@@ -1,7 +1,7 @@
-﻿---
+---
 external help file: WhiteboardAdmin-help.xml
 Module Name: WhiteboardAdmin
-online version: https://learn.microsoft.com/powershell/module/whiteboard/get-originalfluidwhiteboards
+online version: https://learn.microsoft.com/powershell/module/whiteboardadmin/get-originalfluidwhiteboards
 applicable: Microsoft Whiteboard
 title: Get-OriginalFluidWhiteboards
 schema: 2.0.0

@@ -29,6 +29,8 @@ Online voice routing policies are used in Microsoft Phone System Direct Routing 
 
 Note that simply assigning a user an online voice routing policy will not enable them to make PSTN calls via  Teams. Among other things, you will also need to enable those users for Phone System and will need to assign them an appropriate online voice policy.
 
+For more details, please refer to the article [Voice routing policy considerations.](/microsoftteams/direct-routing-voice-routing)
+
 ## EXAMPLES
 
 ### Example 1
