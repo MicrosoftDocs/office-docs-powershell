@@ -21,7 +21,9 @@
       },
       {
         "files": [
-          "toc.yml"
+          "toc.yml",
+          "**/*.md",
+          "**/*.yml"
         ],
         "src": "docs-conceptual",
         "version": "inkcanvas-ps",
