@@ -2586,7 +2586,7 @@ To remove all allowed app IDs and stop restricting access by app ID, use the val
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
 Aliases:
 
 Required: False
