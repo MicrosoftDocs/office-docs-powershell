@@ -597,6 +597,15 @@ Set-OrganizationConfig -VisibleMeetingUpdateProperties "Location,Subject,Body,Al
 
 In Exchange Online, this example results in meeting updates being auto-processed (meeting update messages aren't visible in attendee Inbox folders) except any changes to meeting location, subject and body as well as any property changes within 15 minutes of the meeting start time.
 
+### Example 7
+```powershell
+Set-OrganizationConfig -EwsEnabled $true -EwsAllowedAppIDs"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee,11111111-2222-3333-4444-555555555555"
+```
+
+This example restricts EWS access to only the two specified Entra applications. All other applications are blocked from accessing EWS.
+
+**Note**: To remove the application ID restriction on EWS access, use the value `$null`.
+
 ## PARAMETERS
 
 ### -ShortenEventScopeDefault
@@ -2563,7 +2572,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The EwsAllowedAppIDs parameter specifies the Azure AD applications that are allowed to access Exchange WebServices (EWS) when the EwsEnabled parameter is set to $true at the organization level. Applications not in thislist are blocked from accessing EWS. You identify each application by its Azure AD application ID (a GUID).
+The EwsAllowedAppIDs parameter specifies the Azure AD applications that are allowed to access Exchange Web Services (EWS) when the EwsEnabled parameter on this cmdlet is also set to the value $true. Unspecified applications are blocked from accessing EWS. You identify each application by its Azure AD application ID (GUID).
 
 - When EwsEnabled is $true, only applications specified by this parameter can access EWS.
 - When EwsEnabled is $false, all EWS access is blocked regardless of this parameter.
@@ -2571,31 +2580,20 @@ The EwsAllowedAppIDs parameter specifies the Azure AD applications that are allo
 
 To specify multiple values, use a comma-separated list of GUIDs: `"AppId1,AppId2,...AppIdN"`.
 
-To remove all allowed app IDs and stop restricting access by app ID, set this parameter to `$null` or an emptystring.
+To remove all allowed app IDs and stop restricting access by app ID, use the value `$null` for this parameter.
 
 **Note**: This parameter only applies to direct EWS (SOAP) connections. It does not affect requests that arrivethrough the Microsoft Graph API or the REST endpoint.
-
-**Example**: Set-OrganizationConfig -EwsEnabled $true -EwsAllowedAppIDs"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee,11111111-2222-3333-4444-555555555555"
-
-This example restricts EWS access to only the two specified Entra applications. All other applications are blocked from accessing EWS.
-
-**Example**: Set-OrganizationConfig -EwsAllowedAppIDs $null
-
-This example removes the allowed app ID restriction, so EWS access is no longer gated by application ID.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 
-Default value: None
-Supports wildcards: False
-DontShow: False
+Required: False
 Position: Named
-Mandatory: False
-Value from pipeline: False
-Value from pipeline by property name: False
-Value from remaining arguments: False
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
 ```
 
 ### -EwsApplicationAccessPolicy
