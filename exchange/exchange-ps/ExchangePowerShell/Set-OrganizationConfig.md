@@ -93,6 +93,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
  [-EwsAllowOutlook <Boolean>]
+ [-EwsAllowedAppIDs <String>]
  [-EwsApplicationAccessPolicy <EwsApplicationAccessPolicy>]
  [-EwsBlockList <MultiValuedProperty>]
  [-EwsEnabled <Boolean>]
@@ -418,6 +419,7 @@ Set-OrganizationConfig [-DelayedDelicensingEnabled <Boolean>] [-EndUserMailNotif
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
  [-EwsAllowOutlook <Boolean>]
+ [-EwsAllowedAppIDs <String>]
  [-EwsApplicationAccessPolicy <EwsApplicationAccessPolicy>]
  [-EwsBlockList <MultiValuedProperty>]
  [-EwsEnabled <Boolean>]
@@ -2553,6 +2555,47 @@ Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
+```
+
+### -EwsAllowedAppIDs
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+The EwsAllowedAppIDs parameter specifies the Azure AD applications that are allowed to access Exchange WebServices (EWS) when the EwsEnabled parameter is set to $true at the organization level. Applications not in thislist are blocked from accessing EWS. You identify each application by its Azure AD application ID (a GUID).
+
+- When EwsEnabled is $true, only applications specified by this parameter can access EWS.
+- When EwsEnabled is $false, all EWS access is blocked regardless of this parameter.
+- When EwsEnabled is $null (not configured), this parameter has no effect.
+
+To specify multiple values, use a comma-separated list of GUIDs: `"AppId1,AppId2,...AppIdN"`.
+
+To remove all allowed app IDs and stop restricting access by app ID, set this parameter to `$null` or an emptystring.
+
+**Note**: This parameter only applies to direct EWS (SOAP) connections. It does not affect requests that arrivethrough the Microsoft Graph API or the REST endpoint.
+
+**Example**: Set-OrganizationConfig -EwsEnabled $true -EwsAllowedAppIDs"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee,11111111-2222-3333-4444-555555555555"
+
+This example restricts EWS access to only the two specified Entra applications. All other applications are blocked from accessing EWS.
+
+**Example**: Set-OrganizationConfig -EwsAllowedAppIDs $null
+
+This example removes the allowed app ID restriction, so EWS access is no longer gated by application ID.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Default value: None
+Supports wildcards: False
+DontShow: False
+Position: Named
+Mandatory: False
+Value from pipeline: False
+Value from pipeline by property name: False
+Value from remaining arguments: False
 ```
 
 ### -EwsApplicationAccessPolicy
