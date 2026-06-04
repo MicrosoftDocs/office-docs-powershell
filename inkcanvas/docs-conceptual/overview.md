@@ -72,9 +72,9 @@ Get-InkCanvas -UserId 00000000-0000-0000-0000-000000000001 -TenantId <tenantId> 
 
 ## Cmdlet reference
 
-- [Get-InkCanvas](../inkcanvas-ps/InkCanvasAdmin/Get-InkCanvas.md)
-- [Export-InkCanvas](../inkcanvas-ps/InkCanvasAdmin/Export-InkCanvas.md)
-- [Remove-InkCanvas](../inkcanvas-ps/InkCanvasAdmin/Remove-InkCanvas.md)
-- [Set-InkCanvasOwner](../inkcanvas-ps/InkCanvasAdmin/Set-InkCanvasOwner.md)
-- [Invoke-TransferAllInkCanvases](../inkcanvas-ps/InkCanvasAdmin/Invoke-TransferAllInkCanvases.md)
-- [Invoke-InkCanvasAdmin](../inkcanvas-ps/InkCanvasAdmin/Invoke-InkCanvasAdmin.md)
+- [Get-InkCanvas](/powershell/module/inkcanvasadmin/get-inkcanvas)
+- [Export-InkCanvas](/powershell/module/inkcanvasadmin/export-inkcanvas)
+- [Remove-InkCanvas](/powershell/module/inkcanvasadmin/remove-inkcanvas)
+- [Set-InkCanvasOwner](/powershell/module/inkcanvasadmin/set-inkcanvasowner)
+- [Invoke-TransferAllInkCanvases](/powershell/module/inkcanvasadmin/invoke-transferallinkcanvases)
+- [Invoke-InkCanvasAdmin](/powershell/module/inkcanvasadmin/invoke-inkcanvasadmin)
