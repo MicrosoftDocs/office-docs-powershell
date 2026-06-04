@@ -1,6 +1,6 @@
 ---
 title: Connect to Security & Compliance PowerShell
-ms.date: 12/05/2025
+ms.date: 06/04/2026
 ms.audience: Admin
 ms.topic: article
 ms.reviewer:
@@ -41,24 +41,21 @@ Import-Module ExchangeOnlineManagement
 ## Step 2: Connect and authenticate
 
 > [!NOTE]
-> Connect commands likely fail if the profile path of the account that you used to connect contains special PowerShell characters (for example, `$`). The workaround is to connect using a different account that doesn't have special characters in the profile path.
-
-> [!IMPORTANT]
-> If you plan to run any of the compliance search cmdlets used for eDiscovery (for example, `New-ComplianceSearch`, `Start-ComplianceSearch`, `Get-ComplianceSearch`, `New-ComplianceSearchAction`), you must:
 >
-> - Use **version 3.9.0 or later** of the Exchange Online PowerShell module (released August 2025).
-> - Include the `-EnableSearchOnlySession` parameter on **Connect-IPPSSession**.
+> - Connect commands likely fail if the profile path of the account that you used to connect contains special PowerShell characters (for example, `$`). The workaround is to connect using a different account that doesn't have special characters in the profile path.
 >
-> For example: `Connect-IPPSSession -UserPrincipalName navin@contoso.onmicrosoft.com -EnableSearchOnlySession`
+> - If you plan on running eDiscovery cmdlets (**\*-ComplianceSearch** or **New-ComplianceSearchAction**), the connection must meet the following requirements:
+>   - Version 3.9.0 (August 2025) or later of the Exchange Online PowerShell module.
+>   - The connect command must include the _EnableSearchOnlySession_ switch.
 >
-> If you connect without this parameter, compliance search cmdlets fail with an error similar to: *"Please close the current PowerShell session and open a new session using Connect-IPPSSession with the -EnableSearchOnlySession flag. This requires using ExchangeOnlineManagement v3.9.0 or higher."*
+>     If your Security & Compliance PowerShell connection doesn't meet these requirements, you receive the following error when you try to run eDiscovery cmdlets:
 >
-> You only need this parameter when running compliance search cmdlets. For all other Security & Compliance PowerShell tasks, omit it. For more information, see [Connect-IPPSSession](/powershell/module/exchangepowershell/connect-ippssession), [New-ComplianceSearch](/powershell/module/exchangepowershell/new-compliancesearch), and [Start-ComplianceSearch](/powershell/module/exchangepowershell/start-compliancesearch).
+>     `Please close the current PowerShell session and open a new session using Connect-IPPSSession with the -EnableSearchOnlySession flag. This requires using ExchangeOnlineManagement v3.9.0 or higher.`
 
 The command that you need to run uses the following syntax:
 
 ```powershell
-Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <URL>] [-AzureADAuthorizationEndpointUri <URL>] [-DelegatedOrganization <String>] [-PSSessionOption $ProxyOptions]
+Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <URL>] [-AzureADAuthorizationEndpointUri <URL>] [-DelegatedOrganization <String>] [-PSSessionOption $ProxyOptions] [-EnableSearchOnlySession]
 ```
 
 For detailed syntax and parameter information, see [Connect-IPPSSession](/powershell/module/exchangepowershell/connect-ippssession).
