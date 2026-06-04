@@ -2,7 +2,6 @@
 title: "Exchange cmdlet syntax"
 ms.date: 07/11/2025
 ms.audience: Admin
-audience: Admin
 ms.topic: article
 ms.service: exchange-online
 ms.localizationpriority: medium

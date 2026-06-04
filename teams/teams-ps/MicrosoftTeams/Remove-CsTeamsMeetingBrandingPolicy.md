@@ -1,10 +1,10 @@
 ---
-author: serdarsoysal
+author: officedocspr
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Locale: en-US
 manager: stanlythomas
 Module Name: MicrosoftTeams
-ms.author: serdars
+ms.author: odocspr
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsmeetingbrandingpolicy
 schema: 2.0.0
 title: Remove-CsTeamsMeetingBrandingPolicy

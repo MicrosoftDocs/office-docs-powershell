@@ -14,7 +14,11 @@ title: New-CsSharedCallQueueHistoryTemplate
 # New-CsSharedCallQueueHistoryTemplate
 
 ## SYNOPSIS
-Use the New-CsSharedCallQueueHistoryTemplate cmdlet to create a Shared Call Queue History template.
+
+This PowerShell cmdlet is being deprecated, please use the new version [New-CsSharedCallHistoryTemplate](./New-CsSharedCallHistoryTemplate.md) instead
+
+> [!IMPORTANT]
+>This PowerShell cmdlet is being deprecated, please use the new version [New-CsSharedCallHistoryTemplate](./New-CsSharedCallHistoryTemplate.md) instead
 
 ## SYNTAX
 
@@ -41,7 +45,7 @@ This example creates a new Shared CallQueue History template where incoming miss
 
 Who sees answered and outbound calls in the shared call queue history.
 
-PARAMVALUE: Off | AuthorizedUsersOnly | AuthorizedUsersAndAgents
+PARAMVALUE: None | AuthorizedUsersOnly | AuthorizedUsersAndAgents
 
 ```yaml
 Type: Object
@@ -50,7 +54,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Off
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -75,7 +79,7 @@ Accept wildcard characters: False
 
 Who sees incoming missed calls in the shared call queue history.
 
-PARAMVALUE: Off | AuthorizedUsersOnly | AuthorizedUsersAndAgents
+PARAMVALUE: None | AuthorizedUsersOnly | AuthorizedUsersAndAgents
 
 ```yaml
 Type: Object
@@ -84,7 +88,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Off
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

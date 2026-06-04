@@ -2,14 +2,12 @@
 title: Property sets in Exchange Online PowerShell module cmdlets
 ms.date: 9/1/2023
 ms.audience: Admin
-audience: Admin
 ms.topic: article
 ms.reviewer:
 ms.localizationpriority: high
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
-search.appverid: MET150
 description: "Admins can lear about the property sets that are available in the nine exclusive Get-EXO cmdlets in the Exchange Online PowerShell V2 module and V3 module."
 ---
 

@@ -89,6 +89,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-EnrollUserOverride <String>]
  [-ExplicitRecordingConsent <String>]
  [-ExternalMeetingJoin <String>]
+ [-ExternalBotAccessMode <String>]
  [-Force]
  [-InfoShownInReportMode <String>]
  [-IPAudioMode <String>]
@@ -103,6 +104,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-NewMeetingRecordingExpirationDays <Int32>]
  [-NoiseSuppressionForDialInParticipants <String>]
  [-ParticipantNameChange <String>]
+ [-PasscodeComplexity <String>]
  [-PreferredMeetingProviderForIslandsMode <String>]
  [-PreventComplianceRecording <String>]
  [-QnAEngagementMode <String>]
@@ -361,12 +363,17 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedStreamingMediaInput
-Enables the use of RTMP-In in Teams meetings.
+Enables the use of RTMP-In or SRT-In in Teams meetings, webinars or town halls.
 
 Possible values are:
 
-- \<blank\>
-- RTMP
+- "" - this setting will not allow the user access to any streaming encoders.
+
+- RTMP - this setting will allow the user access to RTMP-In streaming encoders during a Teams meeting, webinar or town hall.
+
+- SRT - this setting will allow the user access to SRT-In streaming encoders during a Teams meeting, webinar or town hall.
+
+- RTMP, SRT - this setting will allow the user access to RTMP-In or SRT-In streaming encoders during a Teams meeting, webinar or town hall.
 
 ```yaml
 Type: String
@@ -560,10 +567,10 @@ Accept wildcard characters: False
 
 ### -AllowMeetingCoach
 This setting will allow admins to allow users the option of turning on Meeting Coach during meetings, which provides users with private personalized feedback on their communication and inclusivity.
-            If set to True, then users will see and be able to click the option for turning on Meeting Coach during calls.
-            If set to False, then users will not have the option to turn on Meeting Coach during calls.
-
-```yaml
+```
+        If set to True, then users will see and be able to click the option for turning on Meeting Coach during calls.
+        If set to False, then users will not have the option to turn on Meeting Coach during calls.
+``````yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
@@ -1292,6 +1299,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ExternalBotAccessMode
+
+Controls how external third-party automated bots and meeting assistants are handled when they attempt to join meetings. This policy provides predictable behavior and helps organizers apply intentional control for bot participation.
+
+Possible Values:
+- **AllowAllBots**: Don't detect bots; allow them to join meetings directly.
+- **RequireApprovalWhenDetected**: When detected, require approval before joining by routing detected bots to the meeting lobby. This is the default value.
+- **BlockDetectedBots**: Block detected bots from joining meetings.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: RequireApprovalWhenDetected
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 Specifies whether to suppress warning and confirmation messages. It can be useful in scripting to suppress interactive prompts. If the switch isn't provided in the command, you're prompted for administrative input if required.
 
@@ -1529,7 +1557,7 @@ Accept wildcard characters: False
 >[!NOTE]
 >This feature has not been released yet and will have no changes if it is enabled or disabled.
 
-Control Noises Supression Feature for PST legs joining a meeting.
+Control Noises Suppression Feature for PST legs joining a meeting.
 
 Possible Values:
 
@@ -1596,6 +1624,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PasscodeComplexity
+
+> Applicable: Microsoft Teams
+
+Controls whether meeting passcodes use the system‑default complexity or a reduced complexity using numeric‑only digits. When enabled, meetings scheduled by users to whom this policy applies will use **8‑digit numeric‑only passcodes**. Changes apply **only to meetings scheduled after the setting is enabled**. Existing meetings are not affected. This setting is **disabled by default**.
+
+Possible Values:
+- **Default**: Alphanumeric passcodes with 8 characters (system default).
+- **NumericOnly**: 8‑digit numeric‑only passcodes with lower complexity for meetings scheduled by users to whom this policy applies. Numeric‑only passcodes increase the risk of unauthorized access compared to the default setting and **do not align with Microsoft’s recommended meeting security best practices**.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Default
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PreferredMeetingProviderForIslandsMode
 Determines the Outlook meeting add-in available to users on Islands mode. By default, this is set to TeamsAndSfb, and the users sees both the Skype for Business and Teams add-ins. Set this to Teams to remove the Skype for Business add-in and only show the Teams add-in.
 
@@ -1640,10 +1690,11 @@ Accept wildcard characters: False
 ### -QnAEngagementMode
 
 This setting enables Microsoft 365 Tenant Admins to Enable or Disable the Questions and Answers experience (Q+A).
-            When Enabled, Organizers can turn on Q+A for their meetings. When Disabled, Organizers cannot turn on Q+A in their meetings.
-            The setting is enforced when a meeting is created or is updated by Organizers.
-            Attendees can use Q+A in meetings where it was previously added. Organizers can remove Q+A for those meetings through Teams and Outlook Meeting Options.
-Possible values: Enabled, Disabled
+```
+        When Enabled, Organizers can turn on Q+A for their meetings. When Disabled, Organizers cannot turn on Q+A in their meetings.
+        The setting is enforced when a meeting is created or is updated by Organizers.
+        Attendees can use Q+A in meetings where it was previously added. Organizers can remove Q+A for those meetings through Teams and Outlook Meeting Options.
+```Possible values: Enabled, Disabled
 
 ```yaml
 Type: String
