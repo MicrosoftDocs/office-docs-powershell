@@ -21,7 +21,9 @@
       },
       {
         "files": [
-          "toc.yml"
+          "toc.yml",
+          "**/*.md",
+          "**/*.yml"
         ],
         "src": "docs-conceptual",
         "version": "inkcanvas-ps",
@@ -45,6 +47,14 @@
         "src": "inkcanvas-ps",
         "version": "inkcanvas-ps",
         "dest": "module/inkcanvas-ps"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "virtual-folder",
+        "version": "inkcanvas-ps",
+        "dest": "module"
       }
     ],
     "resource": [
