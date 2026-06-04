@@ -4,6 +4,10 @@ Module Guid: 00000000-0000-0000-0000-000000000000
 Download Help Link:
 Help Version:
 Locale: en-US
+author: bide-hu
+ms.author: bidehu
+manager: chofsetz
+ms.date: 06/03/2026
 ---
 
 # InkCanvasAdmin Module

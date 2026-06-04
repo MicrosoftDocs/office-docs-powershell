@@ -1,6 +1,10 @@
 ---
 title: Ink Canvas Admin PowerShell Overview
 description: "Ink Canvas Admin PowerShell overview."
+author: bide-hu
+ms.author: bidehu
+manager: chofsetz
+ms.date: 06/03/2026
 ---
 
 # Overview

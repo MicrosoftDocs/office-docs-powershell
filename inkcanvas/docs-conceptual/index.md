@@ -1,6 +1,10 @@
 ---
 title: Microsoft Ink Canvas PowerShell
 description: "Learn about Microsoft Ink Canvas PowerShell."
+author: bide-hu
+ms.author: bidehu
+manager: chofsetz
+ms.date: 06/03/2026
 ---
 
 # Microsoft Ink Canvas PowerShell
