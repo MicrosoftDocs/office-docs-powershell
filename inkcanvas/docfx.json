@@ -45,6 +45,14 @@
         "src": "inkcanvas-ps",
         "version": "inkcanvas-ps",
         "dest": "module/inkcanvas-ps"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "virtual-folder",
+        "version": "inkcanvas-ps",
+        "dest": "module"
       }
     ],
     "resource": [
