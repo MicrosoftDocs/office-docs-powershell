@@ -349,12 +349,17 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedStreamingMediaInput
-Enables the use of RTMP-In in Teams meetings.
+Enables the use of RTMP-In or SRT-In in Teams meetings, webinars or town halls.
 
 Possible values are:
 
-- \<blank\>
-- RTMP
+- "" - this setting will not allow the user access to any streaming encoders.
+
+- RTMP - this setting will allow the user access to RTMP-In streaming encoders during a Teams meeting, webinar or town hall.
+
+- SRT - this setting will allow the user access to SRT-In streaming encoders during a Teams meeting, webinar or town hall.
+
+- RTMP, SRT - this setting will allow the user access to RTMP-In or SRT-In streaming encoders during a Teams meeting, webinar or town hall.
 
 ```yaml
 Type: String
@@ -1537,7 +1542,7 @@ Accept wildcard characters: False
 >[!NOTE]
 >This feature has not been released yet and will have no changes if it is enabled or disabled.
 
-Control Noises Supression Feature for PST legs joining a meeting.
+Control Noise Suppression Feature for PSTN legs joining a meeting.
 
 Possible Values:
 
