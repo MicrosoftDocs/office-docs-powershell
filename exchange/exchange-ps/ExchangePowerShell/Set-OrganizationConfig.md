@@ -2576,13 +2576,13 @@ The EwsAllowedAppIDs parameter specifies the Azure AD applications that are allo
 
 - When EwsEnabled is $true, only applications specified by this parameter can access EWS.
 - When EwsEnabled is $false, all EWS access is blocked regardless of this parameter.
-- When EwsEnabled is $null (not configured), this parameter has no effect.
+- When EwsEnabled is blank ($null; not configured), this parameter has no effect.
 
 To specify multiple values, use a comma-separated list of GUIDs: `"AppId1,AppId2,...AppIdN"`.
 
 To remove all allowed app IDs and stop restricting access by app ID, use the value `$null` for this parameter.
 
-**Note**: This parameter only applies to direct EWS (SOAP) connections. It does not affect requests that arrivethrough the Microsoft Graph API or the REST endpoint.
+**Note**: This parameter applies only to direct EWS (SOAP) connections. It doesn't affect requests from the Microsoft Graph API or the REST endpoint.
 
 ```yaml
 Type: String
