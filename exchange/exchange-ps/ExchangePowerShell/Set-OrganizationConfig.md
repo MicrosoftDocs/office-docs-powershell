@@ -2160,7 +2160,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill DLPViaDcsEnabled Description }}
+The DLPViaDcsEnabled parameter migrates OWA from Exchange-based Data Loss prevention (DLP) evaluation to DCS-based DLP evaluation. This enables organisations to have all the goodness of New Outlook DLP into Outlook for Web such as new Oversharing experience, Wait to Send, etc. that were recently released in New Outlook. As part of this migration, some older Exchange-based DLP predicates will no longer be supported after migration. Refer [Data loss prevention policy tip reference for Outlook for Microsoft 365 | Microsoft Learn](https://learn.microsoft.com/purview/dlp-ol365-win32-policy-tips#sensitive-information-types-that-support-policy-tips-for-outlook-perpetual-users) for details of supported features.
 
 ```yaml
 Type: Boolean
@@ -2180,11 +2180,12 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill DLPWaitOnSendEnabled Description }}
+
+The DLPWaitOnSendEnabled parameter ensures evaluation of the mail for Data loss prevention before mail is sent from client to exchange from New Outlook. Further configuration of Wait on Send is possible using DLPWaitOnSendTimeout parameter.
 
 ```yaml
 Type: Boolean
-Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -2200,16 +2201,19 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill DLPWaitOnSendTimeout Description }}
+The DLPWaitOnSendTimeout parameter specifies how long Outlook waits for DLP evaluation to complete before offering override in New Outlook. For Example – If the value is set to 25 seconds, Outlook will wait to complete the evaluation for 25 seconds before it allows user to override and allow to send the mail without completing evaluation. Please note that this does not mean that evaluation is stopped after the set time, it just means that it allows for overriding the evaluation.
+- When DLPWaitOnSendTimeout = 0, user will immediately see “Send Anyway” in the infobar of mail.
+- When DLPWaitOnSendTimeout >= 9999, user will never be allowed to send the email without DLP evaluation getting completed.
+This parameter is checked only when DLPWaitOnSendEnabled parameter is set to true.
 
 ```yaml
 Type: Int16
-Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
+Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 9999
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
