@@ -1,11 +1,7 @@
 ---
 title: Use C# to connect to Exchange Online PowerShell
-ms.author: chrisda
-author: chrisda
-manager: deniseb
 ms.date: 8/21/2023
 ms.audience: Admin
-audience: Admin
 ms.topic: article
 ms.service: exchange-online
 ms.reviewer:
@@ -13,7 +9,6 @@ ms.localizationpriority: high
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
-search.appverid: MET150
 description: "Learn about using the Exchange Online PowerShell V3 module and C# to connect to Exchange Online."
 ---
 
@@ -207,7 +202,7 @@ void ParallelConnectionsToExchangeOnline()
 
         // Set the ThreadOptions to reuse the same threads for the runspaces so that
 
-        // the Exchange Online cmdlets will be available after running Connect-ExchangeOnline in each runspace.
+        // the Exchange Online cmdlets are available after running Connect-ExchangeOnline in each runspace.
 
         pool.ThreadOptions = PSThreadOptions.ReuseThread;
 

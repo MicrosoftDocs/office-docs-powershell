@@ -13,7 +13,7 @@ jobs:
 
   file-count:
     if: github.repository_owner == 'MicrosoftDocs'
-    uses: MicrosoftDocs/microsoft-365-docs/.github/workflows/Shared-PrFileCount.yml@workflows-prod
+    uses: MicrosoftDocs/tcp-workflows/.github/workflows/Shared-PrFileCount.yml@workflows-prod
     with:
       PayloadJson: ${{ toJSON(github) }}
     secrets:

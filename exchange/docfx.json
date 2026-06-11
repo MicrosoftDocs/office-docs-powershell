@@ -78,7 +78,7 @@
       "uhfHeaderId": "MSDocsHeader-M365-IT",
       "author": "chrisda",
       "ms.author": "chrisda",
-      "manager": "serdars",
+      "manager": "bagol",
       "ms.date": "09/25/2017",
       "ms.topic": "reference",
       "ms.service": "exchange-powershell",
@@ -88,12 +88,24 @@
       ],
       "ms.devlang": "powershell",
       "feedback_system": "Standard",
-            "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
+      "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
     },
     "fileMetadata": {
       "apiPlatform": {
         "exchange-ps/exchange/**/*.yml": [
           "powershell"
+        ],
+        "contributors_to_exclude": [
+          "aditisrivastava07",
+          "AGuentherinWA",
+          "claydetels19",
+          "dstrome",
+          "garycentric",
+          "padmagit77",
+          "rjagiewich",
+          "Ruchika-mittal01",
+          "Shipra-M09",
+          "techtoons"
         ]
       }
     },

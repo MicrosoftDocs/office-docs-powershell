@@ -1,0 +1,54 @@
+{
+    "redirections": [
+        {
+            "source_path": "spmt/spmt-ps/spmt/spmt.md",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.migrationtool.powershell",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "spmt/spmt-ps/spmt/Add-SPMTTask.md",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.migrationtool.powershell/add-spmttask",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "spmt/spmt-ps/spmt/Get-SPMTMigration.md",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.migrationtool.powershell/get-spmtmigration",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "spmt/spmt-ps/spmt/Register-SPMTMigration.md",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.migrationtool.powershell/register-spmtmigration",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "spmt/spmt-ps/spmt/Remove-SPMTTask.md",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.migrationtool.powershell/remove-spmttask",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "spmt/spmt-ps/spmt/SharePointMigrationTool.md",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.migrationtool.powershell/sharepointmigrationtool",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "spmt/spmt-ps/spmt/Show-SPMTMigration.md",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.migrationtool.powershell/show-spmtmigration",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "spmt/spmt-ps/spmt/Start-SPMTMigration.md",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.migrationtool.powershell/start-spmtmigration",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "spmt/spmt-ps/spmt/Stop-SPMTMigration.md",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.migrationtool.powershell/stop-spmtmigration",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "spmt/spmt-ps/spmt/Unregister-SPMTMigration.md",
+            "redirect_url": "/powershell/module/microsoft.sharepoint.migrationtool.powershell/unregister-spmtmigration",
+            "redirect_document_id": false
+        }
+    ]
+}

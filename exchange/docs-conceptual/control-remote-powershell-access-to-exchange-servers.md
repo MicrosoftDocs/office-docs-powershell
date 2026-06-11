@@ -1,13 +1,8 @@
 ---
 title: "Control remote PowerShell access to Exchange servers"
-ms.author: chrisda
-author: chrisda
-manager: deniseb
 ms.date: 9/7/2023
 ms.audience: ITPro
-audience: ITPro
 ms.topic: article
-ms.service: exchange-powershell
 ms.localizationpriority: medium
 ms.assetid: 064e3bb0-38bf-495e-9994-784f823b88dd
 description: "Administrators can learn how to block or allow users' remote PowerShell access to Exchange servers."
@@ -36,7 +31,7 @@ For additional management tasks related to remote PowerShell, see [Connect to Ex
 
 - You need to be assigned permissions before you can perform this procedure or procedures. To see what permissions you need, see the "Remote PowerShell" entry in the [Exchange infrastructure and PowerShell permissions](/Exchange/permissions/feature-permissions/infrastructure-permissions) article.
 
-- If you're using third-party tools to customize email addresses of users, you need to disable email address policies on the affected users before you do the procedures in this article. If you don't, the **Set-User** commands change the email addresses of the users to match the applicable email address policy. To disable email address policies on users, set the value of the EmailAddressPolicyEnabled parameter to $false on the [Set-Mailbox](/powershell/module/exchange/set-mailbox) cmdlet.
+- If you're using non-Microsoft tools to customize email addresses of users, you need to disable email address policies on the affected users before you do the procedures in this article. If you don't, the **Set-User** commands change the email addresses of the users to match the applicable email address policy. To disable email address policies on users, set the value of the EmailAddressPolicyEnabled parameter to $false on the [Set-Mailbox](/powershell/module/exchangepowershell/set-mailbox) cmdlet.
 
 > [!TIP]
 > Having problems? Ask for help in the [Exchange Server](https://go.microsoft.com/fwlink/p/?linkId=60612) forums.

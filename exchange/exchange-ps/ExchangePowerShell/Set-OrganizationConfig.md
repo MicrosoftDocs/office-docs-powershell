@@ -2185,6 +2185,11 @@ The DLPWaitOnSendEnabled parameter ensures evaluation of the mail for Data loss 
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
+{{ Fill DLPWaitOnSendEnabled Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
 Aliases:
 
 Required: False

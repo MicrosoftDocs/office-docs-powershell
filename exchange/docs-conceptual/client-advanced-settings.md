@@ -21,8 +21,8 @@ description: "Security & Compliance PowerShell advanced settings for Microsoft P
 
 This article contains the [Security & Compliance PowerShell](/powershell/exchange/office-365-scc/office-365-scc-powershell) advanced settings that are supported by [Microsoft Purview Information Protection client](/purview/information-protection-client) when you use the following cmdlets:
 
-- [New-Label](/powershell/module/exchange/new-label) or [Set-Label](/powershell/module/exchange/set-label)
-- [New-LabelPolicy](/powershell/module/exchange/new-labelpolicy) or [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy)
+- [New-Label](/powershell/module/exchangepowershell/new-label) or [Set-Label](/powershell/module/exchangepowershell/set-label)
+- [New-LabelPolicy](/powershell/module/exchangepowershell/new-labelpolicy) or [Set-LabelPolicy](/powershell/module/exchangepowershell/set-labelpolicy)
 
 The advanced settings that are supported by sensitivity labels built into Microsoft 365 apps and services are included on the cmdlet page itself. You might also find useful [PowerShell tips for specifying the advanced settings](/purview/create-sensitivity-labels#powershell-tips-for-specifying-the-advanced-settings).
 
@@ -317,11 +317,11 @@ Use this advanced setting in conjunction with *ScannerMinCPU* to limit CPU consu
 
 - Value: \<number>**
 
-The value is set to **100** by default, which means there is no limit of maximum CPU consumption. In this case, the scanner process will try to use all available CPU time to maximize your scan rates.
+The value is set to **100** by default, which means there is no limit of maximum CPU consumption. In this case, the scanner process tries to use all available CPU time to maximize your scan rates.
 
-If you set **ScannerMaxCPU** to less than 100, the scanner will monitor the CPU consumption over the last 30 minutes. If the average CPU crossed the limit you set, it will start to reduce the number of threads allocated for new files.
+If you set **ScannerMaxCPU** to less than 100, the scanner monitors the CPU consumption over the last 30 minutes. If the average CPU crossed the limit you set, it starts to reduce the number of threads allocated for new files.
 
-The limit on the number of threads will continue as long as CPU consumption is higher than the limit set for **ScannerMaxCPU**.
+The limit on the number of threads continues as long as CPU consumption is higher than the limit set for **ScannerMaxCPU**.
 
 ## ScannerMinCPU
 
@@ -334,7 +334,7 @@ Used only if *ScannerMaxCPU* is not equal to 100, and cannot be set to a number 
 
 We recommend keeping **ScannerMinCPU** set at least 15 points lower than the value of *ScannerMaxCPU*.
 
-The value is set to **50** by default, which means that if CPU consumption in the last 30 minutes when lower than this value, the scanner will start adding new threads to scan more files in parallel, until the CPU consumption reaches the level you have set for *ScannerMaxCPU*-15.
+The value is set to **50** by default, which means that if CPU consumption in the last 30 minutes when lower than this value, the scanner starts adding new threads to scan more files in parallel, until the CPU consumption reaches the level you have set for *ScannerMaxCPU*-15.
 
 ## ScannerConcurrencyLevel
 
@@ -361,17 +361,17 @@ Set-LabelPolicy -Identity Scanner -AdvancedSettings @{ScannerConcurrencyLevel="8
 
 By default, the information protection scanner scans all relevant files. However, you might want to define specific files to be skipped, such as for archived files or files that have been moved.
 
-Enable the scanner to skip specific files based on their file attributes by using the **ScannerFSAttributesToSkip** advanced setting. In the setting value, list the file attributes that will enable the file to be skipped when they are all set to **true**. This list of file attributes uses the AND logic.
+Enable the scanner to skip specific files based on their file attributes by using the **ScannerFSAttributesToSkip** advanced setting. In the setting value, list the file attributes that enable the file to be skipped when they are all set to **true**. This list of file attributes uses the AND logic.
 
 Example PowerShell commands, where your label policy is named "Global".
 
-**Skip files that are both read-only and archived**
+**Skip files that are both read-only and archived**:
 
 ```PowerShell
 Set-LabelPolicy -Identity Global -AdvancedSettings @{ ScannerFSAttributesToSkip =" FILE_ATTRIBUTE_READONLY, FILE_ATTRIBUTE_ARCHIVE"}
 ```
 
-**Skip files that are either read-only or archived**
+**Skip files that are either read-only or archived**:
 
 To use an OR logic, run the same property multiple times. For example:
 

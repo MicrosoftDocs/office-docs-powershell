@@ -1,0 +1,8 @@
+{
+    "inkcanvas-ps": {
+        "conceptualToc": "docs-conceptual/toc.yml",
+        "conceptualTocUrl": "/powershell/inkcanvas/inkcanvas-ps/toc.json",
+        "referenceTocUrl": "/powershell/module/inkcanvas-ps/toc.json",
+        "packageRoot": "inkcanvas-ps"
+    }
+}

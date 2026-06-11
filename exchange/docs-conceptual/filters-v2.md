@@ -1,19 +1,13 @@
 ---
 title: Filters in the Exchange Online PowerShell module
-ms.author: chrisda
-author: chrisda
-manager: deniseb
 ms.date: 9/1/2023
 ms.audience: Admin
-audience: Admin
 ms.topic: article
-ms.service: exchange-powershell
 ms.reviewer:
 ms.localizationpriority: high
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
-search.appverid: MET150
 description: "Learn about how to use filtering for cmdlets in the Exchange Online V2 module and V3 module."
 ---
 
@@ -40,9 +34,9 @@ The **Get-EXO\*** cmdlets in the module support the majority of [filterable prop
 
 |Cmdlet|Unsupported filterable property|LDAP Display Name|
 |---|---|---|
-|[Get-EXOCASMailbox](/powershell/module/exchange/get-exocasmailbox)|MemberOfGroup <br><br> ExternalDirectoryObjectId|memberOf <br><br> msExchExternalDirectoryObjectId|
-|[Get-EXOMailbox](/powershell/module/exchange/get-exomailbox)|DeletedItemFlags <br><br> LanguagesRaw <p> MasterAccountSid <p> MemberOfGroup <p> RequireAllSendersAreAuthenticated <p> SCLDeleteThresholdInt <p> SCLJunkThresholdInt <p> SCLQuarantineThresholdInt <p> SCLRejectThresholdInt|deletedItemFlags <br><br> msExchUserCulture <p> msExchMasterAccountSid <p> memberOf <p> msExchRequireAuthToSendTo <p> msExchMessageHygieneSCLDeleteThreshold <p> msExchMessageHygieneSCLJunkThreshold <p> msExchMessageHygieneSCLQuarantineThreshold <p> msExchMessageHygieneSCLRejectThreshold|
-|[Get-EXORecipient](/powershell/module/exchange/get-exorecipient)|CountryCode <br><br> ExternalDirectoryObjectId <p> MasterAccountSid <p> MemberOfGroup <p> Members|countryCode <br><br> msExchExternalDirectoryObjectId <p> msExchMasterAccountSid <p> memberOf <p> member|
+|[Get-EXOCASMailbox](/powershell/module/exchangepowershell/get-exocasmailbox)|MemberOfGroup <br><br> ExternalDirectoryObjectId|memberOf <br><br> msExchExternalDirectoryObjectId|
+|[Get-EXOMailbox](/powershell/module/exchangepowershell/get-exomailbox)|DeletedItemFlags <br><br> LanguagesRaw <p> MasterAccountSid <p> MemberOfGroup <p> RequireAllSendersAreAuthenticated <p> SCLDeleteThresholdInt <p> SCLJunkThresholdInt <p> SCLQuarantineThresholdInt <p> SCLRejectThresholdInt|deletedItemFlags <br><br> msExchUserCulture <p> msExchMasterAccountSid <p> memberOf <p> msExchRequireAuthToSendTo <p> msExchMessageHygieneSCLDeleteThreshold <p> msExchMessageHygieneSCLJunkThreshold <p> msExchMessageHygieneSCLQuarantineThreshold <p> msExchMessageHygieneSCLRejectThreshold|
+|[Get-EXORecipient](/powershell/module/exchangepowershell/get-exorecipient)|CountryCode <br><br> ExternalDirectoryObjectId <p> MasterAccountSid <p> MemberOfGroup <p> Members|countryCode <br><br> msExchExternalDirectoryObjectId <p> msExchMasterAccountSid <p> memberOf <p> member|
 
 ## Supported operators
 

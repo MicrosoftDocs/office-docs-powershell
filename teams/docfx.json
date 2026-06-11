@@ -21,18 +21,26 @@
         "dest": "teams/teams-ps"
       },
       {
-      "files": ["**/*.yml"],
-      "exclude": ["toc.yml"],
-      "src": "teams-ps",
-      "version": "teams-ps",
-      "dest": "module"
-    },
-    {
-      "files": ["toc.yml"],
-      "src": "teams-ps",
-      "version": "teams-ps",
-      "dest": "module/teams-ps"
-    }
+        "files": ["**/*.yml"],
+        "exclude": ["toc.yml"],
+        "src": "teams-ps",
+        "version": "teams-ps",
+        "dest": "module"
+      },
+      {
+        "files": ["toc.yml"],
+        "src": "teams-ps",
+        "version": "teams-ps",
+        "dest": "module/teams-ps"
+      },
+      {
+        "files": [
+          "**/*.md"
+        ],
+        "src": "virtual-folder",
+        "version": "teams-ps",
+        "dest": "module"
+      }
     ],
     "resource": [
       {
@@ -55,9 +63,9 @@
     "externalReference": [],
     "globalMetadata": {
       "uhfHeaderId": "MSDocsHeader-MicrosoftTeams",
-      "author" : "serdarsoysal",
-      "ms.author" : "serdars",
-      "manager" : "serdars",
+      "author" : "officedocspr",
+      "ms.author" : "odocspr",
+      "manager" : "odocspr",
       "ms.topic" : "reference",
       "ms.service" : "teams-powershell",
       "products" : [
@@ -66,8 +74,20 @@
         ],
       "ms.devlang" : "powershell",
       "feedback_system": "Standard",
-            "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
+      "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
     },
+    "contributors_to_exclude": [
+      "aditisrivastava07",
+      "AGuentherinWA",
+      "claydetels19",
+      "dstrome",
+      "garycentric",
+      "padmagit77",
+      "rjagiewich",
+      "Ruchika-mittal01",
+      "Shipra-M09",
+      "techtoons"
+    ],
     "fileMetadata": {},
     "template": [],
     "dest": "teams-ps"

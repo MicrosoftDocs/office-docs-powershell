@@ -1,0 +1,165 @@
+---
+applicable: Security & Compliance
+external help file: Microsoft.Exchange.TransportMailflow-Help.xml
+Locale: en-US
+Module Name: ExchangePowerShell
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-label
+schema: 2.0.0
+title: Get-Label
+---
+
+# Get-Label
+
+## SYNOPSIS
+This cmdlet is available only in Security & Compliance PowerShell. For more information, see [Security & Compliance PowerShell](https://learn.microsoft.com/powershell/exchange/scc-powershell).
+
+Use the Get-Label cmdlet to view sensitivity labels in your organization.
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+
+## SYNTAX
+
+```
+Get-Label [[-Identity] <ComplianceRuleIdParameter>]
+ [-IncludeDetailedLabelActions]
+ [-SkipValidations]
+ [-ReturnModernLabelScheme]
+ [-ValidateContentTypeRemoval]
+ [<CommonParameters>]
+```
+
+## DESCRIPTION
+**Note**: If your organization has more han 1000 sensitivity labels, the timeout settings set for the Powershell session may cause performance issues. Use the SkipValidations parameter to retrieve labels more efficiently.
+
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
+
+## EXAMPLES
+
+### Example 1
+```powershell
+Get-Label
+```
+
+This example returns a summary list of all sensitivity labels in the organization.
+
+### Example 2
+```powershell
+Get-Label -Identity "Engineering Group" | Format-List
+```
+
+This example returns detailed information for the sensitivity label named Engineering Group.
+
+## PARAMETERS
+
+### -Identity
+
+> Applicable: Security & Compliance
+
+The Identity parameter specifies the sensitivity label that you want to view. You can use any value that uniquely identifies the label. For example:
+
+- Name
+- Distinguished name (DN)
+- GUID
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
+```yaml
+Type: ComplianceRuleIdParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: True
+Accept wildcard characters: False
+```
+
+### -IncludeDetailedLabelActions
+
+> Applicable: Security & Compliance
+
+The IncludeDetailedLabelActions parameter specifies whether to expand label actions into properties for better readability. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReturnModernLabelScheme
+
+> Applicable: Security & Compliance
+
+{{ Fill ReturnModernLabelScheme Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SkipValidations
+
+> Applicable: Security & Compliance
+
+The SkipValidations switch specifies whether to skip the retrieval of encryption properties configured in sensitivity labels. You don't need to specify a value with this switch.
+
+Organizations with more than 1000 labels can use this switch to reduce the time required to fetch the labels, which helps prevent timeout issues with Get-Label cmdlet.
+
+**Note**: Using this switch doesn't skip validations when you retrieve labels. It only skips the the retrieval of encryption template properties if they're configured for a label. You can get those properties individually by using the Identity parameter in the Get-Label command.
+
+This switch doesn't affect label application or distribution. The limitation exists only when fetching labels for CRUD operations.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ValidateContentTypeRemoval
+
+> Applicable: Security & Compliance
+
+{{ Fill ValidateContentTypeRemoval Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS

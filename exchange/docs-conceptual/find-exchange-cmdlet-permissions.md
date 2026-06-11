@@ -1,13 +1,8 @@
 ---
 title: "Find the permissions required to run any Exchange cmdlet"
-ms.author: chrisda
-author: chrisda
-manager: deniseb
 ms.date: 06/06/2024
 ms.audience: ITPro
-audience: ITPro
 ms.topic: article
-ms.service: exchange-powershell
 ms.localizationpriority: medium
 ms.assetid: 5bcc46d3-8a07-4e9f-b1b0-e4cb0b0afc12
 description: "Admins can learn how to use PowerShell to find the permissions required to run any cmdlet in Exchange Server PowerShell or Exchange Online PowerShell."
@@ -50,8 +45,7 @@ You can use PowerShell to find the permissions required to run any Exchange or E
 ## Use PowerShell to find the permissions required to run a cmdlet
 
 1. If you haven't already, open the Exchange PowerShell environment that you're interested in:
-   - **Exchange Online**: [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
-   - **Exchange Online Protection** (Microsoft 365 organizations without Exchange Online mailboxes): [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md).
+   - **Exchange Online PowerShell**: [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
    - **Exchange Server**: [Open the Exchange Management Shell](open-the-exchange-management-shell.md) or [Connect to Exchange servers using remote PowerShell](connect-to-exchange-servers-using-remote-powershell.md).
 
 2. Replace `<Cmdlet>` and optionally, `<Parameter1>,<Parameter2>,...` with the values that you want to use, and run the following command:
