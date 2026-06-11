@@ -2160,7 +2160,10 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill DLPViaDcsEnabled Description }}
+The DLPViaDcsEnabled parameter specifies whether to migrate Outlook on the web from Exchange-based Data Loss prevention (DLP) evaluation to data classification service (DCS)-based DLP evaluation. Valid values are:
+
+- $true: Migrate to DCS-based DLP evaluation. Organizations get the features of DLP in Outlook for Windows in Outlook on the web. For example, the Oversharing experince and Wait to Send. Some older Exchange-based DLP conditions/exceptions are no longer supported. For more information, see [Data loss prevention policy tip reference for Outlook for Microsoft 365 | Microsoft Learn](https://learn.microsoft.com/purview/dlp-ol365-win32-policy-tips#sensitive-information-types-that-support-policy-tips-for-outlook-perpetual-users).
+- $false: Don't Migrate to DCS-based DLP evaluation. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -2180,11 +2183,18 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill DLPWaitOnSendEnabled Description }}
+The DLPWaitOnSendEnabled specifies whether mail sent from Outlook for Windows is evaluated by data loss prevention (DLP). Valid values are:
+
+- $true: Mail sent from Outlook for Windows to Exchange is evaluated by DLP.
+- $false: Mail sent from Outlook for Windows to Exchange isn't evaluated by DLP. This value is the default.
+
+To set the timeout value, use the DLPWaitOnSendTimeout parameter.
+
+This parameter also applies to Outlook on the web if the value of the DLPViaDcsEnabled parameter is $true.
 
 ```yaml
 Type: Boolean
-Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -2200,16 +2210,24 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill DLPWaitOnSendTimeout Description }}
+The DLPWaitOnSendTimeout parameter specifies how long in seconds Outlook for Windows waits for data loss prevention (DLP) evaluation to complete on a new message before offering an override. A valid value is an integer from 0 to 9999. The default value is 9999.
+
+- The value 0 means the user immeidately sees "Send Anyway" in the infobar of messages they're creating.
+- A value from 1 to 9998 means Outlook waits for the specified number of seconds before it allows the user to override and send the message without completing DLP evaluation. The DLP evaluation doesn't stop after the specified time; it just means users are allowed to override the evaluation.
+- The value 9999 means the user can't send the message unless the DLP evaluation is complete.
+
+The value of this parameter is meaningful only when the value of the DLPWaitOnSendEnabled parameter is $true.
+
+This parameter also applies to Outlook on the web if the value of the DLPViaDcsEnabled parameter is $true.
 
 ```yaml
 Type: Int16
-Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
+Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 9999
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
