@@ -2160,7 +2160,10 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The DLPViaDcsEnabled parameter migrates OWA from Exchange-based Data Loss prevention (DLP) evaluation to DCS-based DLP evaluation. This enables organisations to have all the goodness of New Outlook DLP into Outlook for Web such as new Oversharing experience, Wait to Send, etc. that were recently released in New Outlook. As part of this migration, some older Exchange-based DLP predicates will no longer be supported after migration. Refer [Data loss prevention policy tip reference for Outlook for Microsoft 365 | Microsoft Learn](https://learn.microsoft.com/purview/dlp-ol365-win32-policy-tips#sensitive-information-types-that-support-policy-tips-for-outlook-perpetual-users) for details of supported features.
+The DLPViaDcsEnabled parameter specifies whether to migrate Outlook on the web from Exchange-based Data Loss prevention (DLP) evaluation to data classification service (DCS)-based DLP evaluation. Valid values are:
+
+- $true: Migrate to DCS-based DLP evaluation. Organizations get the features of DLP in Outlook for Windows in Outlook on the web. For example, the Oversharing experince and Wait to Send. Some older Exchange-based DLP conditions/exceptions are no longer supported. For more information, see [Data loss prevention policy tip reference for Outlook for Microsoft 365 | Microsoft Learn](https://learn.microsoft.com/purview/dlp-ol365-win32-policy-tips#sensitive-information-types-that-support-policy-tips-for-outlook-perpetual-users).
+- $false: Don't Migrate to DCS-based DLP evaluation. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -2180,8 +2183,14 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
+The DLPWaitOnSendEnabled specifies whether mail sent from Outlook for Windows is evaluated by data loss prevention (DLP). Valid values are:
 
-The DLPWaitOnSendEnabled parameter ensures evaluation of the mail for Data loss prevention before mail is sent from client to exchange from New Outlook. Further configuration of Wait on Send is possible using DLPWaitOnSendTimeout parameter.
+- $true: Mail sent from Outlook for Windows to Exchange is evaluated by DLP.
+- $false: Mail sent from Outlook for Windows to Exchange isn't evaluated by DLP. This value is the default.
+
+To set the timeout value, use the DLPWaitOnSendTimeout parameter.
+
+This parameter also applies to Outlook on the web if the value of the DLPViaDcsEnabled parameter is $true.
 
 ```yaml
 Type: Boolean
@@ -2201,10 +2210,15 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The DLPWaitOnSendTimeout parameter specifies how long Outlook waits for DLP evaluation to complete before offering override in New Outlook. For Example – If the value is set to 25 seconds, Outlook will wait to complete the evaluation for 25 seconds before it allows user to override and allow to send the mail without completing evaluation. Please note that this does not mean that evaluation is stopped after the set time, it just means that it allows for overriding the evaluation.
-- When DLPWaitOnSendTimeout = 0, user will immediately see “Send Anyway” in the infobar of mail.
-- When DLPWaitOnSendTimeout >= 9999, user will never be allowed to send the email without DLP evaluation getting completed.
-This parameter is checked only when DLPWaitOnSendEnabled parameter is set to true.
+The DLPWaitOnSendTimeout parameter specifies how long in seconds Outlook for Windows waits for data loss prevention (DLP) evaluation to complete on a new message before offering an override. A valid value is an integer from 0 to 9999. The default value is 9999.
+
+- The value 0 means the user immeidately sees "Send Anyway" in the infobar of messages they're creating.
+- A value from 1 to 9998 means Outlook waits for the specified number of seconds before it allows the user to override and send the message without completing DLP evaluation. The DLP evaluation doesn't stop after the specified time; it just means users are allowed to override the evaluation.
+- The value 9999 means the user can't send the message unless the DLP evaluation is complete.
+
+The value of this parameter is meaningful only when the value of the DLPWaitOnSendEnabled parameter is $true.
+
+This parameter also applies to Outlook on the web if the value of the DLPViaDcsEnabled parameter is $true.
 
 ```yaml
 Type: Int16
