@@ -1304,8 +1304,9 @@ Accept wildcard characters: False
 Controls how external third-party meeting bots and meeting assistants are handled when they attempt to join meetings. This policy provides admins with controls to detect and manage external bots when they attempt to join meetings hosted in the organization. Using these controls admins are able to manage or prevent unauthorized joins of external bots to the meetings hosted in their organization.
 
 Possible Values:
-- **AllowAllBots**: Don't detect bots; allow them to join meetings directly.
-- **RequireApprovalWhenDetected**: When detected, bots will be routed to the meeting lobby. They will require approval before getting access to the meetings. This is the default value.
+- **AllowAllBots**: Don't detect bots; Bots will appear the same as other participants. Standard lobby policies will apply to them. They may get mistakenly admitted to meetings.
+
+- **RequireApprovalWhenDetected**: When detected, bots will be enforced to the meeting lobby, regardless of the lobby setting of the meeting. They will require approval before getting access to the meetings. This is the default value.
 
 ```yaml
 Type: String
