@@ -1,6 +1,6 @@
 ---
 title: What's new in the Exchange Online PowerShell module
-ms.date: 01/22/2026
+ms.date: 06/12/2026
 ms.audience: Admin
 ms.topic: article
 ms.service: exchange-online
@@ -16,6 +16,12 @@ description: "Learn about the new features and functionality available in the la
 # What's new in the Exchange Online PowerShell module
 
 This article lists new features in the Exchange Online PowerShell module used for connecting to Exchange Online PowerShell, Security & Compliance PowerShell, and PowerShell for [the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop). Features that are currently in preview are denoted with **(preview)**.
+
+## June 2026
+
+- [Version 3.10.0](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.10.0)
+
+  For information about what's in this release, see [Version 3.10.0](exchange-online-powershell-v2.md#version-3100).
 
 ## January 2026
 
