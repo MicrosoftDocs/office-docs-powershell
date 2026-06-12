@@ -3044,6 +3044,111 @@
             "source_path": "teams/virtual-folder/MicrosoftTeams/Set-CsTeamsRecordingRollOutPolicy.md",
             "redirect_url": "/powershell/module/microsoftteams/",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/Disable-CsTeamsShiftsConnectionErrorReport.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/Get-CsTeamsShiftsConnection.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/Get-CsTeamsShiftsConnectionConnector.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/Get-CsTeamsShiftsConnectionErrorReport.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/Get-CsTeamsShiftsConnectionInstance.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/Get-CsTeamsShiftsConnectionOperation.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/Get-CsTeamsShiftsConnectionSyncResult.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/Get-CsTeamsShiftsConnectionTeamMap.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/Get-CsTeamsShiftsConnectionWfmTeam.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/Get-CsTeamsShiftsConnectionWfmUser.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/New-CsTeamsShiftsConnection.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/New-CsTeamsShiftsConnectionBatchTeamMap.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/New-CsTeamsShiftsConnectionInstance.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/Remove-CsTeamsShiftsConnection.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/Remove-CsTeamsShiftsConnectionInstance.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/Remove-CsTeamsShiftsConnectionTeamMap.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/Set-CsTeamsShiftsConnection.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/Set-CsTeamsShiftsConnectionInstance.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/Test-CsTeamsShiftsConnectionValidate.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/Update-CsTeamsShiftsConnection.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "teams/teams-ps/MicrosoftTeams/Update-CsTeamsShiftsConnectionInstance.md",
+            "redirect_url": "/powershell/module/microsoftteams/",
+            "redirect_document_id": false
         }
     ]
 }
