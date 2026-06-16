@@ -14,9 +14,8 @@ title: Set-CsTeamsEventsPolicy
 This cmdlet allows you to configure options for customizing Teams events experiences. Note that this policy is currently still in preview.
 
 ## SYNTAX
-
-```
-Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-AllowTownhalls <String>] [-ImmersiveEvents <String>]
+```powershell
+Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-AllowTownhalls <String>] [-BackroomChat <String>] [-ImmersiveEvents <String>]
  [-TownhallEventAttendeeAccess <String>] [-AllowEmailEditing <String>] [-AllowedQuestionTypesInRegistrationForm <String>]
  [-AllowEventIntegrations <Boolean>] [-AllowedWebinarTypesForRecordingPublish <String>]
  [-AllowedTownhallTypesForRecordingPublish <String>] [-TownhallChatExperience <String>] [-Description <String>]
@@ -160,6 +159,27 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BackroomChat
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+This setting governs whether the user can create Events with Backroom Chat enabled.
+
+Possible values are:
+ - **Enabled**: Enables creating Events with Backroom Chat.
+ - **Disabled**: Disables creating Events with Backroom Chat.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:    
+
+Required: False
+Position: Named
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
