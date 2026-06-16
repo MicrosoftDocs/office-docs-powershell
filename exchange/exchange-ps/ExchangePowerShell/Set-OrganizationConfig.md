@@ -93,6 +93,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
  [-EwsAllowOutlook <Boolean>]
+ [-EwsAllowedAppIDs <String>]
  [-EwsApplicationAccessPolicy <EwsApplicationAccessPolicy>]
  [-EwsBlockList <MultiValuedProperty>]
  [-EwsEnabled <Boolean>]
@@ -418,6 +419,7 @@ Set-OrganizationConfig [-DelayedDelicensingEnabled <Boolean>] [-EndUserMailNotif
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
  [-EwsAllowOutlook <Boolean>]
+ [-EwsAllowedAppIDs <String>]
  [-EwsApplicationAccessPolicy <EwsApplicationAccessPolicy>]
  [-EwsBlockList <MultiValuedProperty>]
  [-EwsEnabled <Boolean>]
@@ -594,6 +596,15 @@ Set-OrganizationConfig -VisibleMeetingUpdateProperties "Location,Subject,Body,Al
 ```
 
 In Exchange Online, this example results in meeting updates being auto-processed (meeting update messages aren't visible in attendee Inbox folders) except any changes to meeting location, subject and body as well as any property changes within 15 minutes of the meeting start time.
+
+### Example 7
+```powershell
+Set-OrganizationConfig -EwsEnabled $true -EwsAllowedAppIDs"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee,11111111-2222-3333-4444-555555555555"
+```
+
+This example restricts EWS access to only the two specified Entra applications. All other applications are blocked from accessing EWS.
+
+**Note**: To remove the application ID restriction on EWS access, use the value `$null`.
 
 ## PARAMETERS
 
@@ -2160,7 +2171,10 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill DLPViaDcsEnabled Description }}
+The DLPViaDcsEnabled parameter specifies whether to migrate Outlook on the web from Exchange-based Data Loss prevention (DLP) evaluation to data classification service (DCS)-based DLP evaluation. Valid values are:
+
+- $true: Migrate to DCS-based DLP evaluation. Organizations get the features of DLP in Outlook for Windows in Outlook on the web. For example, the Oversharing experince and Wait to Send. Some older Exchange-based DLP conditions/exceptions are no longer supported. For more information, see [Data loss prevention policy tip reference for Outlook for Microsoft 365 | Microsoft Learn](https://learn.microsoft.com/purview/dlp-ol365-win32-policy-tips#sensitive-information-types-that-support-policy-tips-for-outlook-perpetual-users).
+- $false: Don't Migrate to DCS-based DLP evaluation. This value is the default.
 
 ```yaml
 Type: Boolean
@@ -2180,11 +2194,18 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill DLPWaitOnSendEnabled Description }}
+The DLPWaitOnSendEnabled specifies whether mail sent from Outlook for Windows is evaluated by data loss prevention (DLP). Valid values are:
+
+- $true: Mail sent from Outlook for Windows to Exchange is evaluated by DLP.
+- $false: Mail sent from Outlook for Windows to Exchange isn't evaluated by DLP. This value is the default.
+
+To set the timeout value, use the DLPWaitOnSendTimeout parameter.
+
+This parameter also applies to Outlook on the web if the value of the DLPViaDcsEnabled parameter is $true.
 
 ```yaml
 Type: Boolean
-Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -2200,16 +2221,24 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill DLPWaitOnSendTimeout Description }}
+The DLPWaitOnSendTimeout parameter specifies how long in seconds Outlook for Windows waits for data loss prevention (DLP) evaluation to complete on a new message before offering an override. A valid value is an integer from 0 to 9999. The default value is 9999.
+
+- The value 0 means the user immeidately sees "Send Anyway" in the infobar of messages they're creating.
+- A value from 1 to 9998 means Outlook waits for the specified number of seconds before it allows the user to override and send the message without completing DLP evaluation. The DLP evaluation doesn't stop after the specified time; it just means users are allowed to override the evaluation.
+- The value 9999 means the user can't send the message unless the DLP evaluation is complete.
+
+The value of this parameter is meaningful only when the value of the DLPWaitOnSendEnabled parameter is $true.
+
+This parameter also applies to Outlook on the web if the value of the DLPViaDcsEnabled parameter is $true.
 
 ```yaml
 Type: Int16
-Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
+Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: 9999
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -2546,6 +2575,36 @@ The EwsAllowOutlook parameter enables or disables access to mailboxes by Outlook
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EwsAllowedAppIDs
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+The EwsAllowedAppIDs parameter specifies the Azure AD applications that are allowed to access Exchange Web Services (EWS) when the EwsEnabled parameter on this cmdlet is also set to the value $true. Unspecified applications are blocked from accessing EWS. You identify each application by its Azure AD application ID (GUID).
+
+- When EwsEnabled is $true, only applications specified by this parameter can access EWS.
+- When EwsEnabled is $false, all EWS access is blocked regardless of this parameter.
+- When EwsEnabled is blank ($null; not configured), this parameter has no effect.
+
+To specify multiple values, use a comma-separated list of GUIDs: `"AppId1,AppId2,...AppIdN"`.
+
+To remove all allowed app IDs and stop restricting access by app ID, use the value `$null` for this parameter.
+
+**Note**: This parameter applies only to direct EWS (SOAP) connections. It doesn't affect requests from the Microsoft Graph API or the REST endpoint.
+
+```yaml
+Type: String
+Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
 Aliases:
 
 Required: False

@@ -1,15 +1,16 @@
 ---
 title: About the Exchange Online PowerShell V3 module
-ms.date: 01/22/2026
+ms.date: 06/12/2026
 ms.audience: Admin
 ms.topic: article
 ms.reviewer:
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 keywords: Exchange Online PowerShell V2 module, Exchange Online PowerShell V3 module, EXO V2 module, EXO V3 module
-description: "Admins can learn about the installation, maintenance, and design of the Exchange Online PowerShell V3 module that they use to connect to all Exchange cloud-related PowerShell environments."
+description: "Learn how to install, maintain, and use the Exchange Online PowerShell V3 module to connect to all Exchange cloud-related PowerShell environments."
 ---
 
 # About the Exchange Online PowerShell module
@@ -44,7 +45,7 @@ Cmdlets in REST API connections have the following advantages over their histori
   - Delays due to large queries that take a long time to complete.
 - **Better performance**: REST API connections avoid setting up a PowerShell runspace.
 
-The following table compares the benefits of REST API cmdlets to unavailable remote PowerShell cmdlets and the [exclusive Get-EXO\* cmdlets in the EXO V3 module](#cmdlets-in-the-exchange-online-powershell-module)
+The following table compares the benefits of REST API cmdlets to unavailable remote PowerShell cmdlets and the [exclusive Get-EXO\* cmdlets in the EXO V3 module](#cmdlets-in-the-exchange-online-powershell-module).
 
 |&nbsp;|Remote PowerShell cmdlets|Get-EXO\* cmdlets|REST API cmdlets|
 |---|---|---|---|
@@ -140,7 +141,7 @@ The EXO module contains nine exclusive **Get-EXO\*** cmdlets that are optimized 
 |[Get-EXOMailbox](/powershell/module/exchangepowershell/get-exomailbox)|[Get-Mailbox](/powershell/module/exchangepowershell/get-mailbox)|
 |[Get-EXORecipient](/powershell/module/exchangepowershell/get-exorecipient)|[Get-Recipient](/powershell/module/exchangepowershell/get-recipient)|
 |[Get-EXOCasMailbox](/powershell/module/exchangepowershell/get-exocasmailbox)|[Get-CASMailbox](/powershell/module/exchangepowershell/get-casmailbox)|
-|[Get-EXOMailboxPermission](/powershell/module/exchangepowershell/get-exomailboxPermission)|[Get-MailboxPermission](/powershell/module/exchangepowershell/get-mailboxpermission)|
+|[Get-EXOMailboxPermission](/powershell/module/exchangepowershell/get-exomailboxpermission)|[Get-MailboxPermission](/powershell/module/exchangepowershell/get-mailboxpermission)|
 |[Get-EXORecipientPermission](/powershell/module/exchangepowershell/get-exorecipientpermission)|[Get-RecipientPermission](/powershell/module/exchangepowershell/get-recipientpermission)|
 |[Get-EXOMailboxStatistics](/powershell/module/exchangepowershell/get-exomailboxstatistics)|[Get-MailboxStatistics](/powershell/module/exchangepowershell/get-mailboxstatistics)|
 |[Get-EXOMailboxFolderStatistics](/powershell/module/exchangepowershell/get-exomailboxfolderstatistics)|[Get-MailboxFolderStatistics](/powershell/module/exchangepowershell/get-mailboxfolderstatistics)|
@@ -199,7 +200,8 @@ The procedures in this section explain how to install, update, and uninstall the
 
 The module is officially supported in PowerShell 7 on Windows, Linux, and Apple macOS:
 
-- Module versions 3.5.0 (May 2024) or later require PowerShell 7.4.0 (November 2023) or later due to .NET 8.0 assembly dependencies. Earlier versions of PowerShell 7 might encounter compatibility issues (PowerShell 7.3.6 is more compatible than 7.3.7).
+- Module versions 3.10.0 (June 2026) or later require PowerShell 7.6.0 (March 2026) or later due to .NET 10.0 assembly dependencies.
+- Module versions 3.5.0 (May 2024) to 3.9.2 (January 2026) require PowerShell 7.4.0 (November 2023) or later due to .NET 8.0 assembly dependencies. Earlier versions of PowerShell 7 might encounter compatibility issues (PowerShell 7.3.6 is more compatible with the module than 7.3.7).
 - Module versions 3.0.0 (September 2022) to 3.4.0 (October 2023) require PowerShell 7.2.0 (November 2021) or later due to .NET 6.0 assembly dependencies in REST API cmdlets and connections.
 - Support for the module in PowerShell 7 started with version 2.0.4 (February 2021) in PowerShell 7.0.3 (July 2020).
 
@@ -230,13 +232,13 @@ The module is supported in the following versions of macOS:
 
   7.4.0 is the minimum supported version of PowerShell 7 in macOS 13 or later. Module versions 3.0.0 to 3.4.0 are also supported.
 
-- **macOS 12 Monterey** and **mac OS 11 Big Sur**:
+- **macOS 12 Monterey** and **macOS 11 Big Sur**:
 
   |Module version|PowerShell version|
   |---|---|
   |3.5.0 or later|7.4.x|
-  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|
-  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|
+  |3.0.0 to 3.4.0|7.2.0 to 7.3.7|
+  |2.0.4 and 2.0.5|7.0.3 to 7.1.5|
 
   Module versions 3.0.0 or later are supported on all processors.
 
@@ -249,7 +251,7 @@ The module is supported in the following versions of macOS:
   |Module version|PowerShell version|
   |---|---|
   |3.0.0 to 3.4.0|7.2.0 to 7.2.22|
-  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|
+  |2.0.4 and 2.0.5|7.0.3 to 7.1.5|
 
   7.2.22 is the latest supported version of PowerShell 7 in macOS 10.15.
 
@@ -294,15 +296,15 @@ The module is officially supported in the following distributions of Linux:
   |Module version|PowerShell version|
   |---|---|
   |3.5.0 or later|7.4.0 or later|
-  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|
+  |3.0.0 to 3.4.0|7.2.0 to 7.3.7|
 
 - **Ubuntu 20.04 LTS**
 
   |Module version|PowerShell version|
   |---|---|
   |3.5.0 or later|7.4.x|
-  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|
-  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|
+  |3.0.0 to 3.4.0|7.2.0 to 7.3.7|
+  |2.0.4 and 2.0.5|7.0.3 to 7.1.5|
 
   Versions 3.7.0 or later might fail with SSL protocol errors.
 
@@ -311,8 +313,8 @@ The module is officially supported in the following distributions of Linux:
   |Module version|PowerShell version|
   |---|---|
   |3.5.0 or later|7.4.x|
-  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|
-  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|
+  |3.0.0 to 3.4.0|7.2.0 to 7.3.7|
+  |2.0.4 and 2.0.5|7.0.3 to 7.1.5|
 
   Module versions 3.7.0 or later might have reliability issues in Ubuntu 18.04 LTS.
 
@@ -340,7 +342,8 @@ Now you can do the [regular PowerShell prerequisites](#prerequisites-for-the-exc
   - Current versions of Windows include the required versions of the .NET Framework, so you don't need to install the .NET Framework to use the module in Windows PowerShell 5.1.
 
 - **PowerShell 7**:
-  - Module versions 3.5.0 (May 2024) or later require PowerShell 7.4.0 (November 2023) or later due to .NET 8.0 assembly dependencies. Earlier versions of PowerShell 7 might encounter compatibility issues (PowerShell 7.3.6 is more compatible with the module than 7.3.7).
+  - Module versions 3.10.0 (June 2026) or later require PowerShell 7.6.0 (March 2026) or later due to .NET 10.0 assembly dependencies.
+  - Module versions 3.5.0 (May 2024) to 3.9.2 (January 2026) require PowerShell 7.4.0 (November 2023) or later due to .NET 8.0 assembly dependencies. Earlier versions of PowerShell 7 might encounter compatibility issues (PowerShell 7.3.6 is more compatible with the module than 7.3.7).
   - Module versions 3.0.0 (September 2022) to 3.4.0 (October 2023) require PowerShell 7.2.0 (November 2021) or later due to .NET 6.0 assembly dependencies in REST API cmdlets and connections.
   - Support for the module in PowerShell 7 started with version 2.0.4 (February 2021) in PowerShell 7.0.3 (July 2020).
 
@@ -350,47 +353,63 @@ Specific module version support in Windows depends on Windows PowerShell support
 
   |Module version|PowerShell version|.NET requirement|
   |---|---|---|
-  |2.0.5 or later|5.1|.NET Framework 4.7.2 (4.8.x is included, so you don't need to install the .NET Framework)|
-  |3.5.0 or later|7.4.0 or later|.NET 8.0<br/>Included in 24H2 or later.|
-  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|.NET 6.0 (7.2.x)<br/>.NET 7.0 (7.3.x)|
+  |**Windows PowerShell 5.1**|||
+  |2.0.5 or later||.NET Framework 4.7.2 (4.8.x is included, so you don't need to install the .NET Framework)|
+  |**PowerShell 7**|||
+  |3.10.0 or later|7.6.0 or later|.NET 10.0|
+  |3.5.0 to 3.9.2|7.4.0 or later|.NET 8.0|
+  |3.0.0 to 3.4.0|7.2.0 to 7.3.7|.NET 6.0 (7.2.x)<br/>.NET 7.0 (7.3.x)|
 
   7.2.0 (.NET 6.0) is the earliest supported version of PowerShell 7 in Windows 11.
 
-- **Windows Server 2022**:
+- **Windows Server 2022** and **Windows Server 2025**:
 
   |Module version|PowerShell version|.NET requirement|
   |---|---|---|
-  |2.0.5 or later|5.1|.NET Framework 4.7.2 (4.8 is included, so you don't need to install the .NET Framework)|
-  |3.5.0 or later|7.4.0 or later|.NET 8.0|
-  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|.NET 6.0 (7.2.x)<br/>.NET 7.0 (7.3.x)|
+  |**Windows PowerShell 5.1**|||
+  |2.0.5 or later||.NET Framework 4.7.2 (4.8.x is included, so you don't need to install the .NET Framework)|
+  |**PowerShell 7**|||
+  |3.10.0 or later|7.6.0 or later|.NET 10.0|
+  |3.5.0 to 3.9.2|7.4.0 or later|.NET 8.0|
+  |3.0.0 to 3.4.0|7.2.0 to 7.3.7|.NET 6.0 (7.2.x)<br/>.NET 7.0 (7.3.x)|
 
-  7.2.0 (.NET 6.0) is the earliest supported version of PowerShell 7 in Windows Server 2022.
+  7.2.0 (.NET 6.0) is the earliest supported version of PowerShell 7 in Windows Server 2022 and Windows Server 2025.
 
 - **Windows 10**:
 
   |Module version|PowerShell version|Supported Windows version|.NET requirement|
   |---|---|---|---|
-  |2.0.5 or later|5.1|Anniversary Update (version 1607; August 2016) or later|.NET Framework 4.7.2<br/>April 2018 Update (version 1803) or later includes the .NET Framework 4.7.2, so you don't need to download it.|
-  |3.5.0 or later|7.4.0 or later|October 2018 Update (version 1809) or later |.NET 8.0|
-  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|October 2018 Update (version 1809) or later|.NET 6.0 (7.2.x)<br/>.NET 7.0 (7.3.x)|
-  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|Anniversary Update (version 1607; August 2016) or later|.NET Core 3.1 (7.0.x)<br/>.NET 5.0 (7.1.x)|
+  |**Windows PowerShell 5.1**||||
+  |2.0.5 or later||Anniversary Update (version 1607; August 2016) or later|.NET Framework 4.7.2<br/>April 2018 Update (version 1803) or later includes the .NET Framework 4.7.2, so you don't need to download it.|
+  |**PowerShell 7**||||
+  |3.10.0 or later|7.6.0 or later|Enterprise/IoT LTSC editions only (1607, 1809, 21H2)|.NET 10.0|
+  |3.5.0 to 3.9.2|7.4.0 or later|Enterprise/IoT LTSC editions only (1607, 1809, 21H2)|.NET 8.0|
+  |3.0.0 to 3.4.0|7.2.0 to 7.3.7|October 2018 Update (version 1809) or later|.NET 6.0 (7.2.x)<br/>.NET 7.0 (7.3.x)|
+  |2.0.4 and 2.0.5|7.0.3 to 7.1.5|Anniversary Update (version 1607; August 2016) or later|.NET Core 3.1 (7.0.x)<br/>.NET 5.0 (7.1.x)|
+
+  On Windows 10, .NET 8.0 and .NET 10.0 (and therefore PowerShell 7.4 or later and module versions 3.5.0 or later) are supported only on the Enterprise and IoT LTSC editions that are still in support (versions 1607, 1809, and 21H2). Consumer editions of Windows 10 reached end of support in October 2025, and don't support .NET 8.0 and .NET 10.0.
 
 - **Windows Server 2016** and **Windows Server 2019**:
 
   |Module version|PowerShell version|.NET requirement|
   |---|---|---|
-  |2.0.5 or later|5.1|.NET Framework 4.7.2<br/>Included in Windows Server 2019.|
-  |3.5.0 or later|7.4.0 or later|.NET 8.0|
-  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|.NET 6.0 (7.2.x)<br/>.NET 7.0 (7.3.x)|
-  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|.NET Core 3.1 (7.0.x)<br/>.NET 5.0 (7.1.x)|
+  |**Windows PowerShell 5.1**|||
+  |2.0.5 or later||.NET Framework 4.7.2<br/>Included in Windows Server 2019.|
+  |**PowerShell 7**|||
+  |3.10.0 or later|7.6.0 or later|.NET 10.0|
+  |3.5.0 to 3.9.2|7.4.0 or later|.NET 8.0|
+  |3.0.0 to 3.4.0|7.2.0 to 7.3.7|.NET 6.0 (7.2.x)<br/>.NET 7.0 (7.3.x)|
+  |2.0.4 and 2.0.5|7.0.3 to 7.1.5|.NET Core 3.1 (7.0.x)<br/>.NET 5.0 (7.1.x)|
 
 - **Windows 8.1**, **Windows Server 2012**, and **Windows Server 2012 R2**:
 
   |Module version|PowerShell version|.NET requirement|
   |---|---|---|
-  |2.0.5 or later|5.1|.NET Framework 4.7.2|
+  |**Windows PowerShell 5.1**|||
+  |2.0.5 or later||.NET Framework 4.7.2|
+  |**PowerShell 7**|||
   |3.0.0 to 3.4.0|7.2.x|.NET 6.0|
-  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|.NET Core 3.1 (7.0.x)<br/>.NET 5.0 (7.1.x)|
+  |2.0.4 and 2.0.5|7.0.3 to 7.1.5|.NET Core 3.1 (7.0.x)<br/>.NET 5.0 (7.1.x)|
 
   7.2.22 (.NET 6.0) is the latest supported version of PowerShell 7 in Windows 8.1, Windows Server 2012, and Windows Server 2012 R2.
 
@@ -398,7 +417,8 @@ Specific module version support in Windows depends on Windows PowerShell support
 
   |Module version|PowerShell version|.NET requirement|
   |---|---|---|
-  |2.0.3|5.1|.NET Framework 4.7.1|
+  |**Windows PowerShell 5.1**|||
+  |2.0.3||.NET Framework 4.7.1|
 
   > [!NOTE]
   > Although you can install this version of the module, you can't connect to Exchange Online PowerShell. Module version 2.0.3 lacks support for REST API connections.
@@ -428,7 +448,7 @@ For more information about execution policies, see [About Execution Policies](/p
 
 As of October 2023, REST API connections replaced basic authentication (remote PowerShell) connections in [Exchange Online PowerShell](https://techcommunity.microsoft.com/blog/exchange/deprecation-of-remote-powershell-in-exchange-online-%e2%80%93-re-enabling-or-extending-r/3779692) and [Security & Compliance PowerShell](https://techcommunity.microsoft.com/blog/exchange/deprecation-of-remote-powershell-rps-protocol-in-security-and-compliance-powersh/3815432). REST API connections don't require Basic authentication in WinRM.
 
-Version 3.2.0 (June 2023) and later version of the module fully support REST API cmdlets in Exchange Online PowerShell and Security & Compliance PowerShell.
+Version 3.2.0 (June 2023) and later versions of the module fully support REST API cmdlets in Exchange Online PowerShell and Security & Compliance PowerShell.
 
 <a name='powershellget-for-rest-api-connections-in-windows'></a>
 
@@ -698,13 +718,18 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 ### Current release
 
+#### Version 3.10.0
+
+- Starting with this version of the module, the minimum required version of PowerShell 7 is 7.6. Windows PowerShell 5.1 isn't affected.
+- Fixed an issue where certificate-based authentication (CBA) failed in **Connect-IPPSSession** when you used the _EnableSearchOnlySession_ switch.
+
+### Previous releases
+
 #### Version 3.9.2
 
 - New **Add-WorkforceInsightsDelegationAccess**, **Get-WorkforceInsightsDelegationAccess**, and **Remove-WorkforceInsightsDelegationAccess** cmdlets for Workforce Insights delegation.
 - New _EXOModuleBasePath_ parameter in **Connect-ExchangeOnline** and **Connect-IPPSSession** to store temporary EXO module files in a custom path.
 - Deprecated _UseRpsSession_ parameter from **Connect-ExchangeOnline** and **Connect-IPPSSession**.
-
-### Previous releases
 
 #### Version 3.9.0
 
@@ -714,7 +739,7 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 - New _AccessToken_ parameter on **Connect-IPPSSession**.
 - **Get-VivaModuleFeature** now returns information about ParentFeature, ChildFeature, and PolicyModes. These values represent parent and child features of a Viva app feature along with available enablement modes for future policies.  
-- New parameters _IsUserOptedInByDefault_ on the **Add-VivaModuleFeaturePolicy** and **Update-VivaModuleFeaturePolicy** cmdlets and the corresponding property value in all **\*-VivaModuleFeaturePolicy** cmdlets. The value indicates if users are opted in or out by the policy, as long as the user doesn't set a preference.
+- New parameters _IsUserOptedInByDefault_ on the **Add-VivaModuleFeaturePolicy** and **Update-VivaModuleFeaturePolicy** cmdlets and the corresponding property value in all **\*-VivaModuleFeaturePolicy** cmdlets. The value indicates whether users are opted in or out by the policy, as long as the user doesn't set a preference.
 
   You can use this parameter to keep the feature enabled in your organization while opting out the affected users by default, effectively soft disabling the feature for those users.
 
@@ -812,9 +837,9 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 - The module in PowerShell 7 supports browser-based single sign-on (SSO) and other sign in methods. For more information, see [PowerShell 7 exclusive connection methods](connect-to-exchange-online-powershell.md#powershell-7-exclusive-connection-methods).
 
-- The **Get-UserAnalyticsConfig** and **Set-UserAnalyticsConfig** cmdlets were replaced by the **Get-MyAnalyticsConfig** and **Set-MyAnalyticsConfig**. Additionally, you can configure access at feature level. For more information, see [Configure MyAnalytics](/workplace-analytics/myanalytics/setup/configure-myanalytics).
+- The **Get-UserAnalyticsConfig** and **Set-UserAnalyticsConfig** cmdlets were replaced by the **Get-MyAnalyticsConfig** and **Set-MyAnalyticsConfig** cmdlets. You can also configure access at the feature level. For more information, see [Configure MyAnalytics](/workplace-analytics/myanalytics/setup/configure-myanalytics).
 
-- Real-time policy and security enforcement in all user based authentication. Continuous Access Evaluation (CAE) is enabled in the module. Read more about CAE [here](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/moving-towards-real-time-policy-and-security-enforcement/ba-p/1276933).
+- Real-time policy and security enforcement in all user-based authentication. Continuous Access Evaluation (CAE) is enabled in the module. For more information, see [Moving towards real time policy and security enforcement](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/moving-towards-real-time-policy-and-security-enforcement/ba-p/1276933).
 
 - The _LastUserActionTime_ and _LastInteractionTime_ properties are now available in the output of the **Get-EXOMailboxStatistics** cmdlet.
 
@@ -822,13 +847,13 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 #### Version 2.0.3
 
-- General availability of certificate based authentication (CBA), which enables using modern authentication in unattended scripting or background automation scenarios. The available certificate storage locations are:
+- General availability of certificate-based authentication (CBA), which enables using modern authentication in unattended scripting or background automation scenarios. The available certificate storage locations are:
   - Remote in the Azure Key Value (the _Certificate_) parameter. This option enhances security by fetching the certificate only at runtime.
   - Local in the CurrentUser or LocalMachine certificate store (the _CertificateThumbprint_ parameter).
   - Local in an exported certificate file (the _CertificateFilePath_ and _CertificatePassword_ parameters).
   For more information, see the parameter descriptions in [Connect-ExchangeOnline](/powershell/module/exchangepowershell/connect-exchangeonline) and [App-only authentication for unattended scripts in the Exchange Online PowerShell module](app-only-auth-powershell-v2.md).
 - Connect to Exchange Online PowerShell and Security & Compliance PowerShell simultaneously in a single PowerShell window.
-- The new _CommandName_ parameter allows you to specify and restrict the Exchange Online PowerShell cmdlets that are imported in a session. This option reduces the memory footprint for high usage PowerShell applications.
+- The new _CommandName_ parameter allows you to specify and restrict the Exchange Online PowerShell cmdlets that are imported in a session. This option reduces the memory footprint for high-usage PowerShell applications.
 - **Get-EXOMailboxFolderPermission** now supports ExternalDirectoryObjectID in the _Identity_ parameter.
 - Optimized latency of the first V2 cmdlet call. Lab results show the first call latency decreased from 8 seconds to approximately 1 second. Actual results depend on the cmdlet result size and the organization environment.
 
@@ -838,7 +863,7 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 - **Get-EXOMobileDeviceStatistics** cmdlet now supports the _Identity_ parameter.
 - Improved reliability for auto reconnect of sessions in certain scenarios where a script was running for ~50 minutes and threw a "Cmdlet not found" error due to a bug in auto reconnect logic.
 - Fixed data-type issues of two commonly used "User" and "MailboxFolderUser" attributes for easy migration of scripts.
-- Enhanced support for filters as it now supports four more operators: EndsWith, Contains, Not and NotLike support. Check [Filters in the Exchange Online PowerShell module](filters-v2.md) for attributes that aren't supported in filters.
+- Enhanced support for filters as it now supports four more operators: EndsWith, Contains, Not, and NotLike. Check [Filters in the Exchange Online PowerShell module](filters-v2.md) for attributes that aren't supported in filters.
 
 #### Version 0.4578.0
 
