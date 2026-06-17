@@ -599,12 +599,12 @@ In Exchange Online, this example results in meeting updates being auto-processed
 
 ### Example 7
 ```powershell
-Set-OrganizationConfig -EwsEnabled $true -EwsAllowedAppIDs"aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee,11111111-2222-3333-4444-555555555555"
+Set-OrganizationConfig -EwsEnabled $true -EwsAllowedAppIDs "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee,11111111-2222-3333-4444-555555555555"
 ```
 
-This example restricts EWS access to only the two specified Entra applications. All other applications are blocked from accessing EWS.
+This example restricts EWS access to the two specified Entra applications only. All other applications are blocked from accessing EWS.
 
-**Note**: To remove the application ID restriction on EWS access, use the value `$null`.
+**Note**: To remove the application ID restriction on EWS access, use the value `$null` for the EwsAllowedAppIDs parameter. To view the list of configured apps, use the following command: `Get-OrganizationConfig -RetrieveEwsOperationAccessPolicy | Format-List EwsAllowedAppIDs`.
 
 ## PARAMETERS
 
@@ -2601,6 +2601,8 @@ To specify multiple values, use a comma-separated list of GUIDs: `"AppId1,AppId2
 To remove all allowed app IDs and stop restricting access by app ID, use the value `$null` for this parameter.
 
 **Note**: This parameter applies only to direct EWS (SOAP) connections. It doesn't affect requests from the Microsoft Graph API or the REST endpoint.
+
+To retreive the list of configured apps, use the RetrieveEwsOperationAccessPolicy switch on the Get-OrganizationConfig cmdlet.
 
 ```yaml
 Type: String
