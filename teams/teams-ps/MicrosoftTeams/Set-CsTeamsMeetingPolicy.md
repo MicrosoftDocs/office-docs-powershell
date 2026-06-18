@@ -387,37 +387,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowedUsersForMeetingContext
-This policy controls which users should have the ability to see the meeting info details on the join screen. 'None' option should disable the feature completely.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowedUsersForMeetingContext
-
-This policy controls which users should have the ability to see the meeting info details on the join screen. 'None' option should disable the feature completely.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AllowedUsersForMeetingDetails
 Controls which users should have ability to see the meeting info details on join screen. 'None' option should disable the feature completely.
 
@@ -448,22 +417,6 @@ If set to Enabled or ForceEnabled, only meeting organizers and co-organizers wil
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AllowExternalNonTrustedMeetingChat
-
-This field controls whether a user is allowed to chat in external meetings with users from non trusted organizations.
-
-```yaml
-Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -860,23 +813,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowUserToJoinExternalMeeting
-Currently, this parameter has no effect.
-
-Possible values are:
-
-- Enabled
-- FederatedOnly
-- Disabled
+### -AllowWatermarkCustomizationForCameraVideo
+Allows the admin to grant customization permissions to a meeting organizer
 
 ```yaml
-Type: String
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
 Required: False
 Position: Named
-Default value: Disabled
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowWatermarkCustomizationForScreenSharing
+Allows the admin to grant customization permissions to a meeting organizer
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1619,7 +1581,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Enabled
+Default value: EveryoneInOrganization
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -2003,7 +1965,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Disabled
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
