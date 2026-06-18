@@ -16,7 +16,7 @@ description: "Learn about using the Exchange Online PowerShell V3 module and C# 
 
 The code samples in this article use the [Exchange Online PowerShell V3 module](exchange-online-powershell-v2.md#rest-api-connections-in-the-exo-v3-module) module to connect to Exchange Online from C#.
 
-To install the Exchange Online PowerShell module, see [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
+To install the Exchange Online PowerShell module, see [Install and update the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-update-the-exchange-online-powershell-module).
 
 > [!TIP]
 > REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).

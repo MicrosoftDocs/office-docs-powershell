@@ -463,6 +463,8 @@ If you don't have PowerShellGet installed when you try to connect, you get the f
 
 <a name="update-the-exchange-online-powershell-module"> </a>
 
+<a name="install-and-maintain-the-exchange-online-powershell-module"> </a>
+
 ## Install and update the Exchange Online PowerShell module
 
 The module is available in the PowerShell Gallery at <https://www.powershellgallery.com/packages/ExchangeOnlineManagement/>.
