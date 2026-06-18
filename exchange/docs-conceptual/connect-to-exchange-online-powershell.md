@@ -26,7 +26,7 @@ To connect to Exchange Online PowerShell from C#, see [Use C# to connect to Exch
 
 ## What do you need to know before you begin?
 
-- The requirements for installing and using the module are described in [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
+- The requirements for installing and using the module are described in [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
 
 - REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
 
@@ -39,7 +39,7 @@ To connect to Exchange Online PowerShell from C#, see [Use C# to connect to Exch
 > [!NOTE]
 > If the module is already installed, you can typically skip this step and run **Connect-ExchangeOnline** without manually loading the module first.
 
-After you [install the module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module), open a PowerShell window and load the module by running the following command:
+After you [install the module](exchange-online-powershell-v2.md), open a PowerShell window and load the module by running the following command:
 
 ```powershell
 Import-Module ExchangeOnlineManagement
