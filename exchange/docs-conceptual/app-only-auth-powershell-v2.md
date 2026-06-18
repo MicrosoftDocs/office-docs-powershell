@@ -26,7 +26,7 @@ Certificate based authentication (CBA) or app-only authentication as described i
 >   - **Exchange Online PowerShell (Connect-ExchangeOnline)**: Version 2.0.4 or later.
 >   - **Security & Compliance PowerShell (Connect-IPPSSession)**: Version 3.0.0 or later.
 >
->   For instructions on how to install or update the module, see [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module). For instructions on how to use the module in Azure Automation, see [Manage modules in Azure Automation](/azure/automation/shared-resources/modules).
+>   For instructions on how to install or update the module, see [Install and update the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-update-the-exchange-online-powershell-module). For instructions on how to use the module in Azure Automation, see [Manage modules in Azure Automation](/azure/automation/shared-resources/modules).
 >
 > - CBA or app-only authentication is available in Office 365 operated by 21Vianet in China.
 >
