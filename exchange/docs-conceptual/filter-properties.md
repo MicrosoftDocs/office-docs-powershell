@@ -1,16 +1,20 @@
 ---
 title: "Filterable properties for the Filter parameter"
-ms.date: 06/17/2026
+ms.date: 06/19/2026
 ms.audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
 ms.assetid: b02b0005-2fb6-4bc2-8815-305259fa5432
 description: "Learn about the filterable properties for the Filter parameter in Exchange Server, Exchange Online, and Security & Compliance PowerShell."
+ai-usage: ai-assisted
+#customer intent: As an Exchange admin, I want to know which properties I can use with the Filter parameter so that I can build server-side OPATH filters that return the right users and groups.
 ---
 
 # Filterable properties for the Filter parameter on Exchange cmdlets
 
-You use the _Filter_ parameter to create OPATH filters based on the properties of user and group objects in the Exchange Management Shell (Exchange Server PowerShell), in Exchange Online PowerShell, and in Security & Compliance PowerShell. The _Filter_ parameter is available on these user and group related cmdlets:
+You use the _Filter_ parameter to create OPATH filters that find user and group objects based on their property values. The filter runs on the server and returns only the objects that match, which is faster and uses fewer resources than retrieving every object and then filtering the results locally with the **Where-Object** cmdlet. Server-side filtering is especially valuable in large organizations that contain thousands of users and groups.
+
+The _Filter_ parameter is available in Exchange Server PowerShell, Exchange Online PowerShell, and Security & Compliance PowerShell on the following user and group cmdlets:
 
 |Cmdlet|Exchange Server|Exchange Online|Security & Compliance|
 |---|:---:|:---:|:---:|
@@ -31,7 +35,7 @@ You use the _Filter_ parameter to create OPATH filters based on the properties o
 |[Get-User](/powershell/module/exchangepowershell/get-user)|![Supported](../../images/feature_present_icon.png)|![Supported](../../images/feature_present_icon.png)|![Supported](../../images/feature_present_icon.png)|
 |[Get-UnifiedGroup](/powershell/module/exchangepowershell/get-unifiedgroup)|![Not supported](../../images/feature_absent_icon.png)|![Supported](../../images/feature_present_icon.png)|![Not supported](../../images/feature_absent_icon.png)|
 
-The properties that have been _confirmed_ to work with the _Filter_ parameter in user and group cmdlets are described in this article.
+This article describes the user and group properties that are _confirmed_ to work with the _Filter_ parameter on these cmdlets. Each property has its own section that lists the supported environments, the LDAP display name, the cmdlets where the property is available, and the values that you can filter on.
 
 <sup>\*</sup> **Get-UMMailbox** is available only in Exchange Server 2016 and earlier. Unified Messaging was removed in Exchange Server 2019.
 
@@ -40,17 +44,22 @@ For more information about _recipient_ filters in Exchange PowerShell, see [Reci
 > [!NOTE]
 > The _Filter_ parameter is also available on other cmdlets (for example, **Get-MailboxStatistics**, **Get-Queue**, and **Get-Message**). However, the property values on those cmdlets aren't similar to the user and group properties that are described in this article.
 
-The list might include:
+As you review the properties, keep the following points in mind:
 
-- Properties that are used only in one environment: Exchange Online on-premises Exchange, hybrid, or Security & Compliance PowerShell. The property might exist on user or group objects in all environments, but the value is meaningful (a value other than blank or `None`) only in one environment.
-- Properties that are present, but correspond to features that are no longer used.
+- A property might be meaningful in only one environment (Exchange Online, on-premises Exchange, hybrid deployments, or Security & Compliance PowerShell). The property can exist on user and group objects in every environment, but hold a meaningful value (something other than blank or `None`) in only one of them.
+- A property might correspond to a feature that's no longer used.
+- Not all user and group properties have a corresponding Active Directory property. The LDAP display name is "n/a" for these properties, which indicates that Exchange calculates the value.
+- A property is filterable only on the cmdlets listed in its section. Using it on a cmdlet that isn't listed returns a "not a recognized filterable property" error, even when that cmdlet returns the same objects.
 
-Not all user and group properties have a corresponding Active Directory property. The LDAP display name value is "n/a" for these properties, which indicates that the property is calculated (likely by Exchange).
+Keep the following syntax rules in mind when you build a filter:
 
-Enclose the whole OPATH filter in double quotation marks " ". If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks ' ' instead. Although the _Filter_ parameter is a string (not a system block), you can also use braces { }, but only if the filter doesn't contain variables. For more information, see [Additional OPATH syntax information](recipient-filters.md#additional-opath-syntax-information).
-
-- Text string properties that accept wildcard characters require the `-like` operator (for example, `"Property -like 'abc*'"`).
+- Enclose the whole OPATH filter in double quotation marks (`" "`). If the filter contains system values (for example, `$true`, `$false`, or `$null`), use single quotation marks (`' '`) instead.
+- Although the _Filter_ parameter is a string (not a script block), you can also use braces (`{ }`), but only if the filter doesn't contain variables.
+- Wildcards (`*`) work only with the `-like` operator, and only on text string properties (for example, `"Property -like 'abc*'"`). Properties that hold non-string values (for example, SIDs, GUIDs, enumerations, or boolean values) require an exact match with `-eq` or `-ne`.
 - To look for blank or non-blank property values, use the value `$null` (for example, `'Property -eq $null'` or `'Property -ne $null'`).
+- Some non-string properties don't support `$null` comparisons. For example, filtering on a SID property requires an actual value (`-eq '<value>'`) rather than `-eq $null` or `-ne $null`.
+
+For more information about OPATH filter syntax, see [Additional OPATH syntax information](recipient-filters.md#additional-opath-syntax-information).
 
 For filtering considerations for the nine exclusive **Get-EXO\*** cmdlets in the Exchange Online PowerShell module, see [Filters in the Exchange Online PowerShell module](filters-v2.md).
 
@@ -62,13 +71,13 @@ For filtering considerations for the nine exclusive **Get-EXO\*** cmdlets in the
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_authOrig_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|String or `$null`|
+|_authOrig_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name of the individual recipient (a mailbox, mail user, or mail contact). For example, `Get-DistributionGroup -Filter "AcceptMessagesOnlyFrom -eq 'CN=Yuudai Uchida,CN=Users,DC=contoso,DC=com'"` or `Get-DistributionGroup -Filter "AcceptMessagesOnlyFrom -eq 'contoso.com/Users/Angela Gruber'"`.
+This filter requires the distinguished name of the individual recipient (a mailbox, mail user, or mail contact).
 
-To find the distinguished name of the individual recipient, replace _\<RecipientIdentity\>_ with the name, alias, or email address of the recipient, and run this command: `Get-Recipient -Identity "<RecipientIdentity>" | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Recipient "Akia Al-Zuhairi").DistinguishedName`), and then use the variable in the filter (`"AcceptMessagesOnlyFrom -eq '$dn'"`).
 
 Although this property is multi-valued, the filter returns a match if the property _contains_ the specified value.
 
@@ -80,13 +89,13 @@ Although this property is multi-valued, the filter returns a match if the proper
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_dLMemSubmitPerms_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|String or `$null`|
+|_dLMemSubmitPerms_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name or canonical distinguished name of the group (a distribution group, mail-enabled security group, or dynamic distribution group). For example, `Get-Mailbox -Filter "AcceptMessagesOnlyFromDLMembers -eq 'CN=Marketing Department,CN=Users,DC=contoso,DC=com'"`. or `Get-Mailbox -Filter "AcceptMessagesOnlyFromDLMembers -eq 'contoso.com/Users/Marketing Department'"`.
+This filter requires the distinguished name or canonical distinguished name of the group (a distribution group, mail-enabled security group, or dynamic distribution group).
 
-To find the distinguished name of the group, replace _\<GroupIdentity\>_ with the name, alias, or email address of the group, and run one of these commands: `Get-DistributionGroup -Identity "<GroupIdentity>" | Format-List Name,DistinguishedName` or `Get-DynamicDistributionGroup -Identity "<GroupIdentity>" | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-DistributionGroup "Marketing Department").DistinguishedName`), and then use the variable in the filter (`"AcceptMessagesOnlyFromDLMembers -eq '$dn'"`).
 
 Although this property is multi-valued, the filter returns a match if the property _contains_ the specified value.
 
@@ -98,13 +107,13 @@ Although this property is multi-valued, the filter returns a match if the proper
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchMobileAllowedDeviceIds_|**Get-CASMailbox**|String (wildcards accepted) or `$null`|
 
 A device ID is a text string that uniquely identifies the device. Use the **Get-MobileDevice** cmdlet to see the devices that have ActiveSync partnerships with a mailbox. To see the device IDs on a mailbox, replace _\<MailboxIdentity\>_ with the name, alias, or email address of the mailbox, and run this command: `Get-MobileDevice -Mailbox <MailboxIdentity> | Format-List`.
 
-After you have the device ID value, you can use it in the filter. For example, `Get-CasMailbox -Filter "(ActiveSyncAllowedDeviceIDs -like 'text1*') -or (ActiveSyncAllowedDeviceIDs -eq 'text2'"`.
+After you have the device ID value, you can use it in the filter. For example, `Get-CasMailbox -Filter "(ActiveSyncAllowedDeviceIDs -like 'text1*') -or (ActiveSyncAllowedDeviceIDs -eq 'text2')"`.
 
 ## ActiveSyncBlockedDeviceIDs
 
@@ -114,13 +123,13 @@ After you have the device ID value, you can use it in the filter. For example, `
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchMobileBlockedDeviceIds_|**Get-CASMailbox**|String (wildcards accepted) or `$null`|
 
 A device ID is a text string that uniquely identifies the device. Use the **Get-MobileDevice** cmdlet to see the devices that have ActiveSync partnerships with a mailbox. To see the device IDs on a mailbox, replace _\<MailboxIdentity\>_ with the name, alias, or email address of the mailbox, and run this command: `Get-MobileDevice -Mailbox <MailboxIdentity> | Format-List`.
 
-After you have the device ID value, you can use it in a filter. For example, `Get-CasMailbox -Filter "(ActiveSyncBlockedDeviceIDs -like 'text1*') -or (ActiveSyncBlockedDeviceIDs -eq 'text2'"`.
+After you have the device ID value, you can use it in a filter. For example, `Get-CasMailbox -Filter "(ActiveSyncBlockedDeviceIDs -like 'text1*') -or (ActiveSyncBlockedDeviceIDs -eq 'text2')"`.
 
 ## ActiveSyncEnabled
 
@@ -130,11 +139,11 @@ After you have the device ID value, you can use it in a filter. For example, `Ge
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
 
-For example, `Get-CasMailbox -Filter 'ActiveSyncEnable -eq $false'`.
+For example, `Get-CasMailbox -Filter 'ActiveSyncEnabled -eq $false'`.
 
 ## ActiveSyncMailboxPolicy
 
@@ -144,13 +153,13 @@ For example, `Get-CasMailbox -Filter 'ActiveSyncEnable -eq $false'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchMobileMailboxPolicyLink_|**Get-CASMailbox** <br/> **Get-Recipient**|String or `$null`|
+|_msExchMobileMailboxPolicyLink_|**Get-CASMailbox** <br/> **Get-Recipient**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name of the ActiveSync mailbox policy. For example, `Get-CASMailbox -Filter "ActiveSyncMailboxPolicy -eq 'CN=Default,CN=Mobile Mailbox Policies,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com'"`.
+This filter requires the distinguished name of the ActiveSync mailbox policy.
 
-You can find the distinguished names of ActiveSync mailbox policies by running this command: `Get-MobileDeviceMailboxPolicy | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-MobileDeviceMailboxPolicy "Default").DistinguishedName`), and then use the variable in the filter (`"ActiveSyncMailboxPolicy -eq '$dn'"`).
 
 > [!NOTE]
 > For the default assignment of the default ActiveSync mailbox policy (named Default) to a mailbox, the value of the **ActiveSyncMailboxPolicy** property is blank (`$null`).
@@ -163,7 +172,7 @@ You can find the distinguished names of ActiveSync mailbox policies by running t
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
 
@@ -177,13 +186,13 @@ For example, `Get-CasMailbox -Filter 'ActiveSyncSuppressReadReceipt -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchAddressBookPolicyLink_|**Get-Mailbox** <br/> **Get-Recipient**|String or `$null`|
+|_msExchAddressBookPolicyLink_|**Get-Mailbox** <br/> **Get-Recipient**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name of the address book policy. For example, `Get-Mailbox -Filter "AddressBookPolicy -eq 'CN=Contoso ABP,CN=AddressBook Mailbox Policies,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com'"`.
+This filter requires the distinguished name of the address book policy.
 
-You can find the distinguished names of address book policies by running this command: `Get-AddressBookPolicy | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-AddressBookPolicy "Contoso ABP").DistinguishedName`), and then use the variable in the filter (`"AddressBookPolicy -eq '$dn'"`).
 
 ## AddressListMembership
 
@@ -193,23 +202,23 @@ You can find the distinguished names of address book policies by running this co
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_showInAddressBook_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|String or `$null`|
+|_showInAddressBook_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name of the address list. For example, `Get-MailContact -Filter "AddressListMembership -eq 'CN=All Contacts,CN=All Address Lists,CN=Address Lists Container,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com'"`.
+This filter requires the distinguished name of the address list.
 
-You can find the distinguished names of address lists by running this command: `Get-AddressList | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-AddressList "All Contacts").DistinguishedName`), and then use the variable in the filter (`"AddressListMembership -eq '$dn'"`).
 
 ## AdminDisplayName
 
 **Applicable**:
 
 - ![Supported](../../images/feature_present_icon.png) Exchange Server
-- ![Supported](../../images/feature_present_icon.png) Exchange Online
-- ![Supported](../../images/feature_present_icon.png) Security & Compliance
+- ![Not supported](../../images/feature_absent_icon.png) Exchange Online
+- ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_adminDisplayName_|**Get-SecurityPrincipal**|String (wildcards accepted) or `$null`|
 
@@ -223,7 +232,7 @@ For example, `Get-SecurityPrincipal -Filter 'AdminDisplayName -ne $null' | Forma
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchAdministrativeUnitLink_|**Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|`$null`|
 
@@ -237,7 +246,7 @@ For example, `Get-User -Filter 'AdministrativeUnits -ne $null'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchAlternateMailboxes_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String or `$null`|
 
@@ -251,7 +260,7 @@ For example, `Get-Mailbox -Filter 'AggregatedMailboxGuids -ne $null'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_mailNickname_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|String (wildcards accepted)|
 
@@ -265,7 +274,7 @@ For example, `Get-Recipient -Filter "Alias -like 'smith*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchUMListInDirectorySearch_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-UMMailbox** <br/> **Get-User**|`None` (0) or `SearchEnabled` (1)|
 
@@ -279,13 +288,13 @@ For example, `Get-User -Filter "AllowUMCallsFromNonUsers -ne 'SearchEnabled'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchArbitrationMailbox_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String or `$null`|
+|_msExchArbitrationMailbox_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name of the arbitration mailbox. For example, `Get-DistributionGroup -Filter "ArbitrationMailbox -eq 'CN=SystemMailbox"1f05a927-2e8f-4cbb-9039-2cfb8b95e486",CN=Users,DC=contoso,DC=com'"`.
+This filter requires the distinguished name of the arbitration mailbox.
 
-You can find the distinguished names of arbitration mailboxes by running this command: `Get-Mailbox -Arbitration | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Mailbox -Arbitration "SystemMailbox{1f05a927-2e8f-4cbb-9039-2cfb8b95e486}").DistinguishedName`), and then use the variable in the filter (`"ArbitrationMailbox -eq '$dn'"`).
 
 ## ArchiveDatabase
 
@@ -293,15 +302,17 @@ You can find the distinguished names of arbitration mailboxes by running this co
 
 - ![Supported](../../images/feature_present_icon.png) Exchange Server
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
-- ![Supported](../../images/feature_present_icon.png) Security & Compliance
+- ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchArchiveDatabaseLink_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|String or `$null`|
+|_msExchArchiveDatabaseLink_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name of the archive mailbox database. For example, `Get-Mailbox -Filter "ArchiveMailbox -eq 'CN=MBX DB02,CN=Databases,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com'"`.
+In Exchange Server, this filter requires the distinguished name of the archive mailbox database.
 
-You can find the distinguished names of mailbox databases by running this command: `Get-MailboxDatabase | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-MailboxDatabase "Mailbox Database 1234567890").DistinguishedName`), and then use the variable in the filter (`"ArchiveDatabase -eq '$dn'"`).
+
+In Exchange Online, you can filter only on the presence or absence of an archive database. For example, `Get-Mailbox -Filter "ArchiveDatabase -ne $null"` or `Get-Mailbox -Filter "ArchiveDatabase -eq $null"`. Filtering by a specific archive database value isn't supported.
 
 ## ArchiveDomain
 
@@ -311,7 +322,7 @@ You can find the distinguished names of mailbox databases by running this comman
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchArchiveAddress_|**Get-Mailbox**|String (wildcards accepted) or `$null`|
 
@@ -323,13 +334,13 @@ This property is used in on-premises Exchange environments to identify the Excha
 
 - ![Supported](../../images/feature_present_icon.png) Exchange Server
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
-- ![Supported](../../images/feature_present_icon.png) Security & Compliance
+- ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchArchiveGUID_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|String or `$null`|
 
-This filter requires the GUID of the archive mailbox. For example, `Get-Mailbox -Filter "ArchiveMailbox -eq '6476f55e-e5eb-4462-a095-f2cb585d648d'"`.
+This filter requires the GUID of the archive mailbox. For example, `Get-Mailbox -Filter "ArchiveGuid -eq '6476f55e-e5eb-4462-a095-f2cb585d648d'"`.
 
 You can find the GUID of archive mailboxes by running this command: `Get-Mailbox -Archive | Format-Table -Auto Name,ArchiveGUID`.
 
@@ -341,7 +352,7 @@ You can find the GUID of archive mailboxes by running this command: `Get-Mailbox
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchArchiveName_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String (wildcards accepted) or `$null`|
 
@@ -357,7 +368,7 @@ You can find the names of archive mailboxes by running this command: `Get-Mailbo
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchArchiveQuota_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|A byte quantified size value (for example, `300MB` or `1.5GB`), or `Unlimited`. Unqualified values are treated as bytes.|
 
@@ -371,13 +382,13 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 
 - ![Supported](../../images/feature_present_icon.png) Exchange Server
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
-- ![Supported](../../images/feature_present_icon.png) Security & Compliance
+- ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchArchiveRelease_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-User**|`None`, `E14`, `E15`, or `$null`.|
+|_msExchArchiveRelease_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-User**|<ul><li>`None`</li><li>`E14`</li><li>`E15`</li><li>`$null`</li></ul>|
 
-For example, `Get-Recipient -Filter 'ArchiveRelease -ne $null'`.
+For example, `Get-Recipient -Filter "ArchiveRelease -eq 'E15'"`.
 
 ## ArchiveState
 
@@ -385,11 +396,11 @@ For example, `Get-Recipient -Filter 'ArchiveRelease -ne $null'`.
 
 - ![Supported](../../images/feature_present_icon.png) Exchange Server
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
-- ![Supported](../../images/feature_present_icon.png) Security & Compliance
+- ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|n/a|**Get-Mailbox** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|`None` (0), `Local` (1), `HostedProvisioned` (2), `HostedPending` (3), or `OnPremise` (4).|
+|n/a|**Get-Mailbox** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|<ul><li>`None` (0)</li><li>`Local` (1)</li><li>`HostedProvisioned` (2)</li><li>`HostedPending` (3)</li><li>`OnPremise` (4)</li></ul>|
 
 For example, `Get-Recipient -Filter "ArchiveState -eq 'HostedProvisioned'"`.
 
@@ -399,9 +410,9 @@ For example, `Get-Recipient -Filter "ArchiveState -eq 'HostedProvisioned'"`.
 
 - ![Supported](../../images/feature_present_icon.png) Exchange Server
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
-- ![Supported](../../images/feature_present_icon.png) Security & Compliance
+- ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchArchiveStatus_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|`None` (0) or `Active` (1).|
 
@@ -415,7 +426,7 @@ For example, `Get-Recipient -Filter "ArchiveStatus -eq 'Active'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchArchiveWarnQuota_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|A byte quantified size value (for example, `300MB` or `1.5GB`), or `Unlimited`. Unqualified values are treated as bytes.|
 
@@ -431,7 +442,7 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchAssistantName_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -445,7 +456,7 @@ For example, `Get-User -Filter "AssistantName -like 'Julia*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchMailboxAuditEnable_|**Get-Mailbox**|Boolean (`$true` or `$false`)|
 
@@ -459,7 +470,7 @@ For example, `Get-Mailbox -Filter 'AuditEnabled -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchMailboxAuditLogAgeLimit_|**Get-Mailbox** <br/> **Get-UnifiedGroup**|A time span value: _dd.hh:mm:ss_ where _dd_ = days, _hh_ = hours, _mm_ = minutes, and _ss_ = seconds.|
 
@@ -473,11 +484,13 @@ You can't use the _Filter_ parameter to look for time span values for this prope
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchAuthPolicyLink_|**Get-User**|String (wildcards accepted) or `$null`|
+|_msExchAuthPolicyLink_|**Get-User**|Distinguished name (DN) (wildcards accepted) or `$null`.|
 
-For example, `Get-User -Filter "AuthenticationPolicy -eq 'CN=Block Basic Auth,CN=Auth Policies,CN=Configuration,CN=contoso.onmicrosoft.com,CN=ConfigurationUnits,DC=NAMPR11B009,DC=PROD,DC=OUTLOOK,DC=COM'"`.
+This filter requires the distinguished name of the authentication policy.
+
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-AuthenticationPolicy "Block Basic Auth").DistinguishedName`), and then use the variable in the filter (`"AuthenticationPolicy -eq '$dn'"`).
 
 ## BlockedSendersHash
 
@@ -487,11 +500,11 @@ For example, `Get-User -Filter "AuthenticationPolicy -eq 'CN=Block Basic Auth,CN
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchBlockedSendersHash_|**Get-Recipient**|Blank ( `$null`) or a hashed value.|
 
-Realistically, you can only use this value to filter on blank or non-blank values. For example, `Get-Recipient -Filter 'BlockedSendersHash -ne $null'.`
+Realistically, you can only use this value to filter on blank or non-blank values. For example, `Get-Recipient -Filter 'BlockedSendersHash -ne $null'`.
 
 ## c
 
@@ -501,7 +514,7 @@ Realistically, you can only use this value to filter on blank or non-blank value
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_c_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-Recipient** <br/> **Get-SecurityPrincipal** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -517,7 +530,7 @@ For example, `Get-User -Filter "c -eq 'US'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchCalendarLoggingQuota_|**Get-Mailbox**|A byte quantified size value (for example, `300MB` or `1.5GB`), or `Unlimited`. Unqualified values are treated as bytes.|
 
@@ -533,7 +546,7 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchCalendarRepairDisabled_|**Get-Mailbox**|Boolean (`$true` or `$false`)|
 
@@ -547,13 +560,13 @@ For example, `Get-Mailbox -Filter 'CalendarRepairDisabled -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|n/a|**Get-LinkedUser** <br/> **Get-User**|String or `$null`|
+|n/a|**Get-LinkedUser** <br/> **Get-User**|String|
 
 The X509 certificate that's published for the user account (visible on the **Published Certificates** tab in Active Directory Users and Computers).
 
-For example, `Get-User -Filter "CertificateSubject -eq 'X509:<I>C=US,O=InternetCA,CN=APublicCertificateAuthority<S>C=US,O=Fabrikam,OU=Sales,CN=Jeff Smith`')
+For example, `Get-User -Filter "CertificateSubject -eq 'X509:<I>C=US,O=InternetCA,CN=APublicCertificateAuthority<S>C=US,O=Fabrikam,OU=Sales,CN=Felipe Apodaca'"`.
 
 ## City
 
@@ -563,7 +576,7 @@ For example, `Get-User -Filter "CertificateSubject -eq 'X509:<I>C=US,O=InternetC
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_l_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-Recipient** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -577,7 +590,7 @@ For example, `Get-User -Filter "City -eq 'Redmond'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_company_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-Recipient** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -591,7 +604,7 @@ For example, `Get-User -Filter "Company -like 'Contoso*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-Mailbox** <br/> **Get-MailUser**|Boolean (`$true` or `$false`)|
 
@@ -605,7 +618,7 @@ For example, `Get-Mailbox -Filter 'ComplianceTagHoldApplied -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-LinkedUser** <br/> **Get-User**|String or `$null`|
 
@@ -619,7 +632,7 @@ For example, `Get-User -Filter 'ConsumerNetID -ne $null'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_countryCode_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-Recipient** <br/> **Get-SecurityPrincipal** <br/> **Get-User**|Integer|
 
@@ -635,13 +648,11 @@ For example, `Get-User -Filter "countryCode -eq 796"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_co_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-Recipient** <br/> **Get-SecurityPrincipal** <br/> **Get-User**|String|
+|n/a|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-Recipient** <br/> **Get-SecurityPrincipal** <br/> **Get-User**|String (wildcards accepted)|
 
-This filter requires the ISO 3166-1 country name for the user (for example, `United States`). You can select an available value in Active Directory Users and Computers ( **Address** tab > **Country/region** field), or the Exchange admin center (user properties > **Contact information** tab > **Country/Region** field).
-
-When you select a user's country in Active Directory Users and Computers or the EAC, the corresponding values for the _co_ and _countryCode_ properties are automatically configured.
+This calculated property filters on the country/region using either the ISO 3166-1 two-letter country code (for example, `US`) or the country name (for example, `United States`). The underlying _c_, _co_, and _countryCode_ properties store these values, and they're automatically configured when you select a user's country in Active Directory Users and Computers ( **Address** tab > **Country/region** field) or the Exchange admin center (user properties > **Contact information** tab > **Country/Region** field).
 
 For example, `Get-User -Filter "CountryOrRegion -like 'United*'"`.
 
@@ -653,7 +664,7 @@ For example, `Get-User -Filter "CountryOrRegion -like 'United*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_extensionAttribute1_ to _extensionAttribute15_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|String (wildcards accepted) or `$null`|
 
@@ -664,16 +675,16 @@ For example, `Get-Recipient -Filter "CustomAttribute8 -like 'audited*'"`.
 **Applicable**:
 
 - ![Supported](../../images/feature_present_icon.png) Exchange Server
-- ![Supported](../../images/feature_present_icon.png) Exchange Online
-- ![Supported](../../images/feature_present_icon.png) Security & Compliance
+- ![Not supported](../../images/feature_absent_icon.png) Exchange Online
+- ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_homeMDB_|**Get-Mailbox** <br/> **Get-Recipient**|String|
+|_homeMDB_|**Get-Mailbox** <br/> **Get-Recipient**|Distinguished name (DN).|
 
-This filter requires the distinguished name of the mailbox database. For example, `Get-Mailbox -Filter "Database -eq 'CN=MBX DB02,CN=Databases,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com'"`.
+This filter requires the distinguished name of the mailbox database.
 
-You can find the distinguished names of mailbox databases by running this command: `Get-MailboxDatabase | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-MailboxDatabase "Mailbox Database 1234567890").DistinguishedName`), and then use the variable in the filter (`"Database -eq '$dn'"`).
 
 ## DefaultPublicFolderMailbox
 
@@ -683,13 +694,13 @@ You can find the distinguished names of mailbox databases by running this comman
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchPublicFolderMailbox_|**Get-Mailbox**|String or `$null`|
+|_msExchPublicFolderMailbox_|**Get-Mailbox**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name or canonical distinguished name of the public folder mailbox. For example, `Get-Mailbox -Filter "DefaultPublicFolderMailbox -eq 'CN=PF Mailbox01,CN=Users,DC=contoso,DC=com'"` or `Get-Mailbox -Filter "DefaultPublicFolderMailbox -eq 'contoso.com/Users/PF Mailbox01'"`.
+This filter requires the distinguished name or canonical distinguished name of the public folder mailbox.
 
-To find the distinguished names of public folder mailboxes, run this command: `Get-Mailbox -PublicFolder | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Mailbox -PublicFolder "PF Mailbox01").DistinguishedName`), and then use the variable in the filter (`"DefaultPublicFolderMailbox -eq '$dn'"`).
 
 ## DeletedItemFlags
 
@@ -699,9 +710,9 @@ To find the distinguished names of public folder mailboxes, run this command: `G
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_deletedItemFlags_|**Get-Mailbox** <br/> **Get-SecurityPrincipal**|`DatabaseDefault` (0), `RetainUntilBackupOrCustomPeriod` (3), or `RetainForCustomPeriod` (5).|
+|_deletedItemFlags_|**Get-Mailbox** <br/> **Get-SecurityPrincipal**|<ul><li>`DatabaseDefault` (0)</li><li>`RetainUntilBackupOrCustomPeriod` (3)</li><li>`RetainForCustomPeriod` (5)</li></ul>|
 
 For example, `Get-Mailbox -Filter "DeletedItemFlags -ne 'DatabaseDefault'"`.
 
@@ -713,7 +724,7 @@ For example, `Get-Mailbox -Filter "DeletedItemFlags -ne 'DatabaseDefault'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_deliverAndRedirect_|**Get-Mailbox** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-MailPublicFolder**|Boolean (`$true` or `$false`)|
 
@@ -727,7 +738,7 @@ For example, `Get-Mailbox -Filter 'DeliverToMailboxAndForward -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_department_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-Recipient** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -741,13 +752,13 @@ For example, `Get-Recipient -Filter "Department -like 'Engineering*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_directReports_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-User**|String or `$null`|
+|_directReports_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-User**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name or canonical distinguished name of the direct report. For example, `Get-User -Filter "DirectReports -eq 'CN=Angela Gruber,CN=Users,DC=contoso,DC=com'"` or `Get-User -Filter "DirectReports -eq 'contoso.com/Users/Angela Gruber'"`.
+This filter requires the distinguished name or canonical distinguished name of the direct report.
 
-To find the distinguished name of a direct report, replace _\<RecipientIdentity\>_ with the name, alias, or email address of the recipient, and run this command: `Get-Recipient -Identity "<RecipientIdentity>" | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Recipient "Angela Gruber").DistinguishedName`), and then use the variable in the filter (`"DirectReports -eq '$dn'"`).
 
 Although this property is multi-valued, the filter returns a match if the property _contains_ the specified value.
 
@@ -759,13 +770,15 @@ Although this property is multi-valued, the filter returns a match if the proper
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchDisabledArchiveDatabaseLink_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String or `$null`|
+|_msExchDisabledArchiveDatabaseLink_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name of the disabled archive mailbox database. For example, `Get-Mailbox -Filter "DisabledArchiveDatabase -eq 'CN=MBX DB02,CN=Databases,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com'"`.
+In Exchange Server, this filter requires the distinguished name of the disabled archive mailbox database.
 
-You can find the distinguished names of mailbox databases by running this command: `Get-MailboxDatabase | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-MailboxDatabase "Mailbox Database 1234567890").DistinguishedName`), and then use the variable in the filter (`"DisabledArchiveDatabase -eq '$dn'"`).
+
+In Exchange Online, you can filter only on the presence or absence of a disabled archive database. For example, `Get-Mailbox -Filter "DisabledArchiveDatabase -ne $null"` or `Get-Mailbox -Filter "DisabledArchiveDatabase -eq $null"`. Filtering by a specific archive database value isn't supported.
 
 ## DisabledArchiveGuid
 
@@ -775,7 +788,7 @@ You can find the distinguished names of mailbox databases by running this comman
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchDisabledArchiveDatabaseGUID_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String or `$null`|
 
@@ -791,7 +804,7 @@ You can find the GUID of archive mailboxes by running this command: `Get-Mailbox
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_displayName_|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|String (wildcards accepted)|
 
@@ -805,13 +818,13 @@ For example, `Get-Recipient -Filter "DisplayName -like 'Julia*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_distinguishedName_|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|String|
+|_distinguishedName_|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|Distinguished name (DN).|
 
-This filter requires the distinguished name of the recipient. For example, `Get-Mailbox -Filter "DistinguishedName -eq 'CN=Basho Kato,CN=Users,DC=contoso,DC=com'"`.
+This filter requires the distinguished name of the recipient.
 
-You can find the distinguished names of recipients by running this command: `Get-Recipient | Format-List Name,RecipientType,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Recipient "Bishamon Tamura").DistinguishedName`), and then use the variable in the filter (`"DistinguishedName -eq '$dn'"`).
 
 ## EcpEnabled
 
@@ -821,7 +834,7 @@ You can find the distinguished names of recipients by running this command: `Get
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
 
@@ -835,13 +848,13 @@ For example, `Get-CASMailbox -Filter 'EcpEnabled -eq $false'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_proxyAddresses_|**Get-CASMailbox** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-UMMailbox** <br/> **Get-UnifiedGroup**|String (wildcards accepted)|
 
 For example, `Get-Recipient -Filter "EmailAddresses -like 'marketing*'"`.
 
-When you use a complete email address, you don't need to account for the `smtp:` prefix. If you use wildcards, you do. For example, if `"EmailAddresses -eq 'lila@fabrikam.com'"` returns a match, `"EmailAddresses -like 'lila*'"` won't return a match, but `"EmailAddresses -like 'smtp:lila*'"` returns a match.
+When you use a complete email address, you don't need to account for the `smtp:` prefix. If you use wildcards, you do. For example, if `"EmailAddresses -eq 'lila@fabrikam.com'"` returns a match, `"EmailAddresses -like 'lila*'"` doesn't return a match, but `"EmailAddresses -like 'smtp:lila*'"` returns a match.
 
 Although this property is multi-valued, the filter returns a match if the property _contains_ the specified value.
 
@@ -853,7 +866,7 @@ Although this property is multi-valued, the filter returns a match if the proper
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|Boolean (`$true` or `$false`)|
 
@@ -867,7 +880,7 @@ For example, `Get-Recipient -Filter 'EmailAddressPolicyEnabled -eq $false'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchPublicFolderEntryId_|**Get-MailPublicFolder**|String (wildcards accepted)|
 
@@ -883,11 +896,11 @@ You can find the entry IDs of mail-enabled public folders by running this comman
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchEwsApplicationAccessPolicy_|**Get-CASMailbox**|`EnforceAllowList`, `EnforceBlockList`. or `$null`|
+|_msExchEwsApplicationAccessPolicy_|**Get-CASMailbox**|<ul><li>`EnforceAllowList`</li><li>`EnforceBlockList`</li><li>`$null`</li></ul>|
 
-For example, `Get-CASMailbox -Filter 'EwsApplicationAccessPolicy -ne $null'`.
+For example, `Get-CASMailbox -Filter "EwsApplicationAccessPolicy -eq 'EnforceAllowList'"`.
 
 ## EwsEnabled
 
@@ -897,7 +910,7 @@ For example, `Get-CASMailbox -Filter 'EwsApplicationAccessPolicy -ne $null'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchEwsEnabled_|**Get-CASMailbox**|0 (disabled), 1 (enabled) or `$null`.|
 
@@ -911,7 +924,7 @@ For example, `Get-CASMailbox -Filter "EwsEnabled -eq 1"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchMailboxGuid_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|String|
 
@@ -929,7 +942,7 @@ Note that an object's Exchange GUID value is different than its GUID value. Also
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchUserAccountControl_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|`None` (0) or `AccountDisabled` (2)|
 
@@ -943,9 +956,9 @@ For example, `Get-Mailbox -Filter "ExchangeUserAccountControl -eq 'AccountDisabl
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchVersion_|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMMailbox** <br/> **Get-User**|Integer|
+|_msExchVersion_|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMailbox** <br/> **Get-User**|Integer|
 
 This property contains the earliest version of Exchange that you can use to manage the recipient. The property values that you see are different than the values that you need to use in the filter. To see the **ExchangeVersion** property values, run this command: `Get-Recipient | Format-Table Name,RecipientType,ExchangeVersion`.
 
@@ -963,7 +976,7 @@ For example, `Get-Recipient -Filter "ExchangeVersion -lt 88218628259840"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchExpansionServerName_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Recipient**|String (wildcards accepted) or `$null`|
 
@@ -981,11 +994,11 @@ You can find the **ExchangeLegacyDN** value by running this command: `Get-Exchan
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchExtensionCustomAttribute1_ to _msExchExtensionCustomAttribute5_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|String (wildcards accepted) or `$null`|
 
-For example, `Get-Recipient -Filter "ExtensionCustomAttribute8 -like 'audited*'"`.
+For example, `Get-Recipient -Filter "ExtensionCustomAttribute3 -like 'audited*'"`.
 
 ## ExternalDirectoryObjectId
 
@@ -995,7 +1008,7 @@ For example, `Get-Recipient -Filter "ExtensionCustomAttribute8 -like 'audited*'"
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchExternalDirectoryObjectId_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|String or `$null`|
 
@@ -1009,13 +1022,13 @@ For example, `Get-Recipient -Filter 'ExternalDirectoryObjectId -ne $null'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_targetAddress_|**Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient**|String (wildcards accepted) or `$null`|
 
 For example, `Get-Recipient -Filter "ExternalEmailAddress -like '@fabrikam.com*'"`.
 
-When you use a complete email address, you don't need to account for the `smtp:` prefix. If you use wildcards, you do. For example, if `"ExternalEmailAddress -eq 'lila@fabrikam.com'"` returns a match, `"ExternalEmailAddress -like 'lila*'"` won't return a match, but `"ExternalEmailAddress -like 'smtp:lila*'"` returns a match.
+When you use a complete email address, you don't need to account for the `smtp:` prefix. If you use wildcards, you do. For example, if `"ExternalEmailAddress -eq 'lila@fabrikam.com'"` returns a match, `"ExternalEmailAddress -like 'lila*'"` doesn't return a match, but `"ExternalEmailAddress -like 'smtp:lila*'"` returns a match.
 
 ## ExternalOofOptions
 
@@ -1025,7 +1038,7 @@ When you use a complete email address, you don't need to account for the `smtp:`
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchExternalOOFOptions_|**Get-Mailbox**|`External` (0) or `InternalOnly` (1)|
 
@@ -1039,7 +1052,7 @@ For example, `Get-Mailbox -Filter "ExternalOofOptions -eq 'External'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_facsimileTelephoneNumber_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -1053,7 +1066,7 @@ For example, `Get-User -Filter "Fax -like '206*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_givenName_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-Recipient** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -1067,13 +1080,13 @@ For example, `Get-User -Filter "FirstName -like 'Chris*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_altRecipient_|**Get-Mailbox** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String or `$null`|
+|_altRecipient_|**Get-Mailbox** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name or canonical distinguished name of the forwarding recipient. For example, `Get-Mailbox -Filter "ForwardingAddress -eq 'CN=Angela Gruber,CN=Users,DC=contoso,DC=com'"` or `Get-Mailbox -Filter "ForwardingAddress -eq 'contoso.com/Users/Angela Gruber'"`.
+This filter requires the distinguished name or canonical distinguished name of the forwarding recipient.
 
-To find the distinguished name of a forwarding recipient, replace _\<RecipientIdentity\>_ with the name, alias, or email address of the recipient, and run this command: `Get-Recipient -Identity "<RecipientIdentity>" | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Recipient "Daigoro Aoki").DistinguishedName`), and then use the variable in the filter (`"ForwardingAddress -eq '$dn'"`).
 
 ## ForwardingSmtpAddress
 
@@ -1083,7 +1096,7 @@ To find the distinguished name of a forwarding recipient, replace _\<RecipientId
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchGenericForwardingAddress_|**Get-Mailbox**|String (wildcards accepted) or `$null`|
 
@@ -1099,13 +1112,13 @@ When you use a complete email address, you don't need to account for the `smtp:`
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchOABGeneratingMailboxBL_|**Get-Mailbox**|String or `$null`|
+|_msExchOABGeneratingMailboxBL_|**Get-Mailbox**|Distinguished name (DN) or `$null`.|
 
-This property is only meaningful on arbitration mailboxes, so you need to use the _Arbitration_ switch in the filter command. Also, This filter requires the distinguished name of the offline address book. For example, `Get-Mailbox -Arbitration -Filter "GeneratedOfflineAddressBooks -eq 'CN=OAB 1,CN=Offline Address Lists,CN=Address Lists Container,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com'"`.
+This property is only meaningful on arbitration mailboxes, so you need to use the _Arbitration_ switch in the filter command. Also, this filter requires the distinguished name of the offline address book.
 
-You can find the distinguished names of offline address books by running this command: `Get-OfflineAddressBook | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-OfflineAddressBook "Default Offline Address Book").DistinguishedName`), and then use the variable in the filter (`"GeneratedOfflineAddressBooks -eq '$dn'"`).
 
 Although this property is multi-valued, the filter returns a match if the property _contains_ the specified value.
 
@@ -1117,29 +1130,15 @@ Although this property is multi-valued, the filter returns a match if the proper
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_publicDelegates_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|String or `$null`|
+|_publicDelegates_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name or canonical distinguished name of the mail-enabled security principal (mailbox, mail user, or mail-enabled security group). For example, `Get-Mailbox -Filter "GrantSendOnBehalfTo -eq 'CN=Angela Gruber,CN=Users,DC=contoso,DC=com'"` or `Get-Mailbox -Filter "GrantSendOnBehalfTo -eq 'contoso.com/Users/Angela Gruber'"`.
+This filter requires the distinguished name or canonical distinguished name of the mail-enabled security principal (mailbox, mail user, or mail-enabled security group).
 
-To find the distinguished name of a mail-enabled security principal, replace _\<RecipientIdentity\>_ with the name, alias, or email address of the recipient, and run this command: `Get-Recipient -Identity "<RecipientIdentity>" | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Recipient "Elizabeth Brunner").DistinguishedName`), and then use the variable in the filter (`"GrantSendOnBehalfTo -eq '$dn'"`).
 
 Although this property is multi-valued, the filter returns a match if the property _contains_ the specified value.
-
-## GroupMemberCount
-
-**Applicable**:
-
-- ![Not supported](../../images/feature_absent_icon.png) Exchange Server
-- ![Supported](../../images/feature_present_icon.png) Exchange Online
-- ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
-
-|LDAP display name|Available on cmdlets|Value|
-|---|---|---|
-|n/a|**Get-UnifiedGroup**|Integer|
-
-For example, `Get-UnifiedGroup -Filter "GroupMemberCount -gt 100"`.
 
 ## GroupExternalMemberCount
 
@@ -1149,11 +1148,25 @@ For example, `Get-UnifiedGroup -Filter "GroupMemberCount -gt 100"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-UnifiedGroup**|Integer|
 
 For example, `Get-UnifiedGroup -Filter "GroupExternalMemberCount -gt 0"`.
+
+## GroupMemberCount
+
+**Applicable**:
+
+- ![Not supported](../../images/feature_absent_icon.png) Exchange Server
+- ![Supported](../../images/feature_present_icon.png) Exchange Online
+- ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
+
+|LDAP display name|Cmdlets|Value|
+|---|---|---|
+|n/a|**Get-UnifiedGroup**|Integer|
+
+For example, `Get-UnifiedGroup -Filter "GroupMemberCount -gt 100"`.
 
 ## GroupType
 
@@ -1163,9 +1176,9 @@ For example, `Get-UnifiedGroup -Filter "GroupExternalMemberCount -gt 0"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_groupType_|**Get-DistributionGroup** <br/> **Get-Group** <br/> **Get-UnifiedGroup**|`None` (0), `Global` (2), `DomainLocal` (4), `BuiltinLocal` (5), `Universal` (8), or `SecurityEnabled` (-2147483648).|
+|_groupType_|**Get-DistributionGroup** <br/> **Get-Group** <br/> **Get-UnifiedGroup**|<ul><li>`None` (0)</li><li>`Global` (2)</li><li>`DomainLocal` (4)</li><li>`BuiltinLocal` (5)</li><li>`Universal` (8)</li><li>`SecurityEnabled` (-2147483648)</li></ul>|
 
 Distribution groups have the value `Universal`, and mail-enabled security groups have the value `Universal, SecurityEnabled`. You can specify multiple values separated by commas, and the order doesn't matter. For example, `Get-DistributionGroup -Filter "GroupType -eq 'Universal,SecurityEnabled'"` returns the same results as `Get-DistributionGroup -Filter "GroupType -eq 'SecurityEnabled,Universal'"`.
 
@@ -1179,9 +1192,9 @@ This multivalued property returns a match only if the property _equals_ the spec
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_objectGuid_|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|String|
+|_objectGuid_|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|String|
 
 For example, `Get-Recipient -Filter "Guid -eq '8a68c198-be28-4a30-83e9-bffb760c65ba'"`.
 
@@ -1197,7 +1210,7 @@ Note that an object's GUID value is different than its Exchange GUID value.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-CASMailbox** <br/> **Get-Recipient**|Boolean (`$true` or `$false`)|
 
@@ -1211,7 +1224,7 @@ For example, `Get-Recipient -Filter 'HasActiveSyncDevicePartnership -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchHideFromAddressLists_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|Boolean (`$true` or `$false`)|
 
@@ -1225,7 +1238,7 @@ For example, `Get-Recipient -Filter 'HiddenFromAddressListsEnabled -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_hideDLMembership_|**Get-UnifiedGroup**|Boolean (`$true` or `$false`)|
 
@@ -1239,7 +1252,7 @@ For example, `Get-UnifiedGroup -Filter 'HiddenGroupMembershipEnabled -eq $true'`
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_homePhone_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -1253,13 +1266,13 @@ For example, `Get-User -Filter "HomePhone -like '206*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_distinguishedName_|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-UMMMailbox** <br/> **Get-User** <br/> **Get-SecurityPrincipal** <br/> **Get-UnifiedGroup**|String|
+|_distinguishedName_|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-UMMailbox** <br/> **Get-User** <br/> **Get-SecurityPrincipal** <br/> **Get-UnifiedGroup**|Distinguished name (DN).|
 
-This filter requires the distinguished name or canonical distinguished name of the recipient. For example, `Get-Mailbox -Filter "Id -eq 'CN=Angela Gruber,CN=Users,DC=contoso,DC=com'"` or `Get-Mailbox -Filter "Id -eq 'contoso.com/Users/Angela Gruber'"`.
+This filter requires the distinguished name or canonical distinguished name of the recipient.
 
-To find the distinguished name of a recipient, replace _\<RecipientIdentity\>_ with the name, alias, or email address of the recipient, and run this command: `Get-Recipient -Identity "<RecipientIdentity>" | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Recipient "Felipe Apodaca").DistinguishedName`), and then use the variable in the filter (`"Id -eq '$dn'"`).
 
 ## IgnoreMissingFolderLink
 
@@ -1269,7 +1282,7 @@ To find the distinguished name of a recipient, replace _\<RecipientIdentity\>_ w
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-MailPublicFolder**|Boolean (`$true` or `$false`)|
 
@@ -1283,7 +1296,7 @@ For example, `Get-MailPublicFolder -Filter 'IgnoreMissingFolderLink -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
 
@@ -1297,7 +1310,7 @@ For example, `Get-CASMailbox -Filter 'ImapEnabled -eq $false'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchGenericImmutableId_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String or `$null`|
 
@@ -1311,7 +1324,7 @@ For example, `Get-Mailbox -Filter 'ImmutableId -ne $null'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-Mailbox**|Boolean (`$true` or `$false`)|
 
@@ -1325,7 +1338,7 @@ For example, `Get-Mailbox -Filter 'IncludeInGarbageCollection -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_initials_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -1339,7 +1352,7 @@ For example, `Get-User -Filter "Initials -like 'B.'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchUserHoldPolicies_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String|
 
@@ -1357,7 +1370,7 @@ Although this property is multi-valued, the filter returns a match if the proper
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-LinkedUser** <br/> **Get-User**|String|
 
@@ -1375,7 +1388,7 @@ Although this property is multi-valued, the filter returns a match if the proper
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchIsMSODirsynced_|**Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|Boolean (`$true` or `$false`)|
 
@@ -1389,7 +1402,7 @@ For example, `Get-User -Filter 'IsDirSynced -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-Mailbox**|Boolean (`$true` or `$false`)|
 
@@ -1403,7 +1416,7 @@ For example, `Get-Mailbox -Filter 'IsExcludedFromServingHierarchy -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-Mailbox**|Boolean (`$true` or `$false`)|
 
@@ -1417,7 +1430,7 @@ For example, `Get-Mailbox -Filter 'IsHierarchyReady -eq $false'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-Mailbox**|Boolean (`$true` or `$false`)|
 
@@ -1431,7 +1444,7 @@ For example, `Get-Mailbox -Filter 'IsHierarchySyncEnabled -eq $false'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-Mailbox**|Boolean (`$true` or `$false`)|
 
@@ -1445,7 +1458,7 @@ For example, `Get-Mailbox -Filter 'IsInactiveMailbox -eq $false'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-User**|Boolean (`$true` or `$false`)|
 
@@ -1459,7 +1472,7 @@ For example, `Get-Mailbox -Filter 'IsLinked -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-Mailbox**|Boolean (`$true` or `$false`)|
 
@@ -1473,7 +1486,7 @@ For example, `Get-Mailbox -Filter 'IsMailboxEnabled -eq $false'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-Mailbox**|Boolean (`$true` or `$false`)|
 
@@ -1487,7 +1500,7 @@ For example, `Get-Mailbox -Filter 'IsResource -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-LinkedUser** <br/> **Get-User**|Boolean (`$true` or `$false`)|
 
@@ -1501,7 +1514,7 @@ For example, `Get-User -Filter 'IsSecurityPrincipal -eq $false'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-Mailbox**|Boolean (`$true` or `$false`)|
 
@@ -1515,7 +1528,7 @@ For example, `Get-Mailbox -Filter 'IsShared -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-User**|Boolean (`$true` or `$false`)|
 
@@ -1529,7 +1542,7 @@ For example, `Get-Mailbox -Filter 'IsSoftDeletedByDisable -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-User**|Boolean (`$true` or `$false`)|
 
@@ -1543,7 +1556,7 @@ For example, `Get-Mailbox -Filter 'IsSoftDeletedByRemove -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_mDBStorageQuota_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|A byte quantified size value (for example, `300MB` or `1.5GB`), or `Unlimited`. Unqualified values are treated as bytes.|
 
@@ -1559,7 +1572,7 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String|
 
@@ -1573,7 +1586,7 @@ This property uses an SMTP email address. For example, `Get-Mailbox -Filter "Jou
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchUserCulture_|**Get-Mailbox**|String (wildcards accepted) or `$null`|
 
@@ -1591,11 +1604,25 @@ For single values, this multivalued property returns a match only if the propert
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchLastExchangeChangedTime_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|`$null` or a date/time value: 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601 (UTC)|
 
 For example, `Get-Mailbox -Filter 'LastExchangeChangedTime -ne $null'`.
+
+## LastName
+
+**Applicable**:
+
+- ![Supported](../../images/feature_present_icon.png) Exchange Server
+- ![Supported](../../images/feature_present_icon.png) Exchange Online
+- ![Supported](../../images/feature_present_icon.png) Security & Compliance
+
+|LDAP display name|Cmdlets|Value|
+|---|---|---|
+|_sn_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-Recipient** <br/> **Get-User**|String (wildcards accepted) or `$null`|
+
+For example, `Get-User -Filter "LastName -like 'Martin*'"`.
 
 ## LegacyExchangeDN
 
@@ -1605,11 +1632,13 @@ For example, `Get-Mailbox -Filter 'LastExchangeChangedTime -ne $null'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_legacyExchangeDN_|**Get-CASMailbox** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UMMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|String (wildcards accepted)|
 
 For example, `Get-User -Filter "LegacyExchangeDN -like 'Osca*'"`.
+
+Wildcards in filters on this property are supported only in Exchange Server. In Exchange Online and Security & Compliance PowerShell, use an exact value match instead.
 
 You can find LegacyExchangeDN values for users by running this command: `Get-User | Format-List Name,LegacyExchangeDN`
 
@@ -1621,7 +1650,7 @@ You can find LegacyExchangeDN values for users by running this command: `Get-Use
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchLitigationHoldDate_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|`$null` or a date/time value: 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601 (UTC)|
 
@@ -1635,7 +1664,7 @@ For example, `Get-Mailbox -Filter "LitigationHoldDate -gt '8/13/2017'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|Boolean (`$true` or `$false`)|
 
@@ -1649,25 +1678,11 @@ For example, `Get-Mailbox -Filter 'LitigationHoldEnabled -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchLitigationHoldOwner_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String (wildcards accepted) or `$null`|
 
 This property uses the user principal name of the litigation hold owner. For example, `Get-Mailbox -Filter "LitigationHoldOwner -eq 'agruber@contoso.com'"`.
-
-## LastName
-
-**Applicable**:
-
-- ![Supported](../../images/feature_present_icon.png) Exchange Server
-- ![Supported](../../images/feature_present_icon.png) Exchange Online
-- ![Supported](../../images/feature_present_icon.png) Security & Compliance
-
-|LDAP display name|Available on cmdlets|Value|
-|---|---|---|
-|_sn_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-Recipient** <br/> **Get-User**|String (wildcards accepted) or `$null`|
-
-For example, `Get-User -Filter "LastName -like 'Martin*'"`.
 
 ## MailboxContainerGUID
 
@@ -1677,7 +1692,7 @@ For example, `Get-User -Filter "LastName -like 'Martin*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchMailboxContainerGuid_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String or `$null`|
 
@@ -1691,7 +1706,7 @@ For example, `Get-Mailbox -Filter 'MailboxContainerGUID -ne $null'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchMailboxMoveBatchName_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|String (wildcards accepted) or `$null`|
 
@@ -1707,7 +1722,7 @@ You can find the names of migration batches by running the **Get-MigrationBatch*
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchMailboxMoveFlags_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|For valid values, see the description of the _Flags_ parameter in [Get-MoveRequest](/powershell/module/exchangepowershell/get-moverequest#-flags).|
 
@@ -1725,11 +1740,11 @@ This multivalued property returns a match only if the property _equals_ the spec
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchMailboxMoveRemoteHostName_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|String or `$null`|
 
-For example, `Get-Mailbox -Filter 'MailboxMoveRemoteHostName -ne $null'`.
+For example, `Get-Mailbox -Filter "MailboxMoveRemoteHostName -eq 'mail.contoso.com'"`.
 
 ## MailboxMoveSourceMDB
 
@@ -1739,13 +1754,13 @@ For example, `Get-Mailbox -Filter 'MailboxMoveRemoteHostName -ne $null'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchMailboxMoveSourceMDBLink_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|String or `$null`|
+|_msExchMailboxMoveSourceMDBLink_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name of the source mailbox database. For example, `Get-Mailbox -Filter "MailboxMoveSourceMDB -eq 'CN=MBX DB02,CN=Databases,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com'"`.
+This filter requires the distinguished name of the source mailbox database.
 
-You can find the distinguished names of mailbox databases by running this command: `Get-MailboxDatabase | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-MailboxDatabase "Mailbox Database 1234567890").DistinguishedName`), and then use the variable in the filter (`"MailboxMoveSourceMDB -eq '$dn'"`).
 
 ## MailboxMoveStatus
 
@@ -1755,7 +1770,7 @@ You can find the distinguished names of mailbox databases by running this comman
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchMailboxMoveStatus_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|For valid values, see the description of the _MoveStatus_ parameter in [Get-MoveRequest](/powershell/module/exchangepowershell/get-moverequest#-movestatus).|
 
@@ -1769,29 +1784,31 @@ For example, `Get-Mailbox -Filter "MailboxMoveStatus -eq 'Completed'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchMailboxMoveTargetMDBLink_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|String or `$null`|
+|_msExchMailboxMoveTargetMDBLink_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name of the target mailbox database. For example, `Get-Mailbox -Filter "MailboxMoveTargetMDB -eq 'CN=MBX DB02,CN=Databases,CN=Exchange Administrative Group (FYDIBOHF23SPDLT),CN=Administrative Groups,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com'"`.
+This filter requires the distinguished name of the target mailbox database.
 
-You can find the distinguished names of mailbox databases by running this command: `Get-MailboxDatabase | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-MailboxDatabase "Mailbox Database 1234567890").DistinguishedName`), and then use the variable in the filter (`"MailboxMoveTargetMDB -eq '$dn'"`).
 
 ## MailboxPlan
 
 **Applicable**:
 
-- ![Supported](../../images/feature_present_icon.png) Exchange Server
+- ![Not supported](../../images/feature_absent_icon.png) Exchange Server
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchParentPlanLink_|**Get-Mailbox**|String or `$null`|
+|_msExchParentPlanLink_|**Get-Mailbox**|Distinguished name (DN).|
 
-Mailbox plans correspond to Microsoft 365 license types. The availability of a license plans is determined by the selections that you make when you enroll your domain.
+Mailbox plans correspond to Microsoft 365 license types. The availability of license plans is determined by the selections that you make when you enroll your domain.
 
-For example, `Get-Mailbox -Filter 'MailboxPlan -ne $null'`.
+Friendly identifier values like name don't work in the filter.
+
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-MailboxPlan "ExchangeOnlineEnterprise").DistinguishedName`), and then use the variable in the filter (`"MailboxPlan -eq '$dn'"`).
 
 ## MailboxRelease
 
@@ -1801,11 +1818,11 @@ For example, `Get-Mailbox -Filter 'MailboxPlan -ne $null'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchMailboxRelease_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-User**|`None`, `E14`, `E15`, or `$null`.|
+|_msExchMailboxRelease_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-User**|<ul><li>`None`</li><li>`E14`</li><li>`E15`</li><li>`$null`</li></ul>|
 
-For example, `Get-Recipient -Filter 'MailboxRelease -ne $null'`.
+For example, `Get-Recipient -Filter "MailboxRelease -eq 'E15'"`.
 
 ## MailTipTranslations
 
@@ -1815,7 +1832,7 @@ For example, `Get-Recipient -Filter 'MailboxRelease -ne $null'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchSenderHintTranslations_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|String (wildcards accepted) or `$null`|
 
@@ -1829,13 +1846,13 @@ When you use this property in a filter, you need to account for the leading and 
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_managedBy_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-Recipient** <br/> **Get-UnifiedGroup**|String or `$null`|
+|_managedBy_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-Recipient** <br/> **Get-UnifiedGroup**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name or canonical distinguished name of the group owner (a mail-enabled security principal, which is a mailbox, mail user, or mail-enabled security group). For example, `Get-Mailbox -Filter "ManagedBy -eq 'CN=Angela Gruber,CN=Users,DC=contoso,DC=com'"` or `Get-Mailbox -Filter "ManagedBy -eq 'contoso.com/Users/Angela Gruber'"`.
+This filter requires the distinguished name or canonical distinguished name of the group owner (a mail-enabled security principal, which is a mailbox, mail user, or mail-enabled security group).
 
-To find the distinguished name of a mail-enabled security principal, replace _\<RecipientIdentity\>_ with the name, alias, or email address of the recipient, and run this command: `Get-Recipient -Identity "<RecipientIdentity>" | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Recipient "Gabriela Laureano").DistinguishedName`), and then use the variable in the filter (`"ManagedBy -eq '$dn'"`).
 
 Although this property is multi-valued, the filter returns a match if the property _contains_ the specified value.
 
@@ -1847,17 +1864,17 @@ Although this property is multi-valued, the filter returns a match if the proper
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchMailboxTemplateLink_|**Get-Mailbox** <br/> **Get-Recipient**|String or `$null`|
+|_msExchMailboxTemplateLink_|**Get-Mailbox** <br/> **Get-Recipient**|Distinguished name (DN) or `$null`.|
 
 Managed folder mailbox policies aren't available in Exchange 2013 or later.
 
 For example, `Get-Mailbox -Filter 'ManagedFolderMailboxPolicy -eq $null'`.
 
-This filter requires the distinguished name of the managed folder mailbox policy. For example, `Get-Mailbox -Filter "ManagedFolderMailboxPolicy -eq 'CN=MFM Inbox Policy,CN=ELC Mailbox Policies,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com'"`.
+This filter requires the distinguished name of the managed folder mailbox policy.
 
-You can find the distinguished names of managed folder mailbox policies on Exchange 2010 servers by running this command: `Get-ManagedFolderMailboxPolicy | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-ManagedFolderMailboxPolicy "MFM Inbox Policy").DistinguishedName`), and then use the variable in the filter (`"ManagedFolderMailboxPolicy -eq '$dn'"`).
 
 ## Manager
 
@@ -1867,13 +1884,13 @@ You can find the distinguished names of managed folder mailbox policies on Excha
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_manager_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-Recipient** <br/> **Get-User**|String or `$null`|
+|_manager_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-Recipient** <br/> **Get-User**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name or canonical distinguished name of the manager (a mailbox or mail user). For example, `Get-User -Filter "Manager -eq 'CN=Angela Gruber,CN=Users,DC=contoso,DC=com'"` or `Get-Mailbox -Filter "Manager -eq 'contoso.com/Users/Angela Gruber'"`.
+This filter requires the distinguished name or canonical distinguished name of the manager (a mailbox or mail user).
 
-To find the distinguished name of a manager, replace _\<RecipientIdentity\>_ with the name, alias, or email address of the recipient, and run this command: `Get-Recipient -Identity "<RecipientIdentity>" | Format-List Name,DistinguishedName.`
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Recipient "Hyun-Ae Rim").DistinguishedName`), and then use the variable in the filter (`"Manager -eq '$dn'"`).
 
 ## MAPIEnabled
 
@@ -1883,7 +1900,7 @@ To find the distinguished name of a manager, replace _\<RecipientIdentity\>_ wit
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
 
@@ -1897,11 +1914,11 @@ For example, `Get-CASMailbox -Filter 'MAPIEnabled -eq $false'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchMasterAccountSid_|**Get-Mailbox** <br/> **Get-LinkedUser** <br/> **Get-Recipient** <br/> **Get-SecurityPrincipal** <br/> **Get-User**|String or `$null`|
 
-For example, `Get-Mailbox -Filter 'MasterAccountSid -ne $null'`.
+For example, `Get-Mailbox -Filter "MasterAccountSid -eq 'S-1-5-10'"`.
 
 This value is blank ( `$null`) for mailboxes with associated user accounts, and `S-1-5-10` (Self) for mailboxes without associated user accounts (for example, shared mailboxes, resource mailboxes, discovery search mailboxes, arbitration mailboxes, and public folder mailboxes).
 
@@ -1913,7 +1930,7 @@ This value is blank ( `$null`) for mailboxes with associated user accounts, and 
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchMaxBlockedSenders_|**Get-Mailbox**|Integer or `$null`|
 
@@ -1927,7 +1944,7 @@ For example, `Get-Mailbox -Filter "MaxBlockedSenders -gt 0"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_delivContLength_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|A byte quantified size value (for example, `75MB`), or `Unlimited`. Unqualified values are treated as bytes.|
 
@@ -1943,7 +1960,7 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchMaxSafeSenders_|**Get-Mailbox**|Integer or `$null`|
 
@@ -1957,7 +1974,7 @@ For example, `Get-Mailbox -Filter "MaxSafeSenders -gt 0"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_submissionContLength_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|A byte quantified size value (for example, `75MB`), or `Unlimited`. Unqualified values are treated as bytes.|
 
@@ -1973,9 +1990,9 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchGroupDepartRestriction_|**Get-DistributionGroup**|`Closed` (0), `Open` (1), or `ApprovalRequired` (2).|
+|_msExchGroupDepartRestriction_|**Get-DistributionGroup**|<ul><li>`Closed` (0)</li><li>`Open` (1)</li><li>`ApprovalRequired` (2)</li></ul>|
 
 For example, `Get-DistributionGroup -Filter "MemberDepartRestriction -eq 'ApprovalRequired'"`.
 
@@ -1987,9 +2004,9 @@ For example, `Get-DistributionGroup -Filter "MemberDepartRestriction -eq 'Approv
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchGroupDepartRestriction_|**Get-DistributionGroup**|`Closed` (0), `Open` (1), or `ApprovalRequired` (2).|
+|_msExchGroupJoinRestriction_|**Get-DistributionGroup**|<ul><li>`Closed` (0)</li><li>`Open` (1)</li><li>`ApprovalRequired` (2)</li></ul>|
 
 For example, `Get-DistributionGroup -Filter "MemberJoinRestriction -eq 'ApprovalRequired'"`.
 
@@ -2001,13 +2018,13 @@ For example, `Get-DistributionGroup -Filter "MemberJoinRestriction -eq 'Approval
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_memberOf_|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMMailbox** <br/> **Get-User**|String or `$null`|
+|_memberOf_|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMailbox** <br/> **Get-User**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name or canonical distinguished name of the distribution group or mail-enabled security group. For example, `Get-User -Filter "MemberOfGroup -eq 'CN=Marketing Department,CN=Users,DC=contoso,DC=com'"` or `Get-User -Filter "MemberOfGroup -eq 'contoso.com/Users/Marketing Group'"`.
+This filter requires the distinguished name or canonical distinguished name of the distribution group or mail-enabled security group.
 
-To find the distinguished name of a group, replace _\<GroupIdentity\>_ with the name, alias, or email address of the group, and run this command: `Get-DistributionGroup -Identity "<GroupIdentity>" | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-DistributionGroup "Marketing Department").DistinguishedName`), and then use the variable in the filter (`"MemberOfGroup -eq '$dn'"`).
 
 Although this property is multi-valued, the filter returns a match if the property _contains_ the specified value.
 
@@ -2019,13 +2036,13 @@ Although this property is multi-valued, the filter returns a match if the proper
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_member_|**Get-DistributionGroup** <br/> **Get-Group** <br/> **Get-Recipient**|String or `$null`|
+|_member_|**Get-DistributionGroup** <br/> **Get-Group** <br/> **Get-Recipient**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name or canonical distinguished name of the group member. For example, `Get-Group -Filter "Members -eq 'CN=Angela Gruber,CN=Users,DC=contoso,DC=com'"` or `Get-Recipient -Filter "Members -eq 'contoso.com/Users/Angela Gruber'"`.
+This filter requires the distinguished name or canonical distinguished name of the group member.
 
-To find the distinguished name of a group member, replace _\<RecipientIdentity\>_ with the name, alias, or email address of the group member, and run this command: `Get-Recipient -Identity "<RecipientIdentity>" | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Recipient "Jacob Berger").DistinguishedName`), and then use the variable in the filter (`"Members -eq '$dn'"`).
 
 Although this property is multi-valued, the filter returns a match if the property _contains_ the specified value.
 
@@ -2037,7 +2054,7 @@ Although this property is multi-valued, the filter returns a match if the proper
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_mobile_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -2051,13 +2068,13 @@ For example, `Get-User -Filter "MobilePhone -like '555*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchModeratedByLink_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|String|
+|_msExchModeratedByLink_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|Distinguished name (DN).|
 
-This filter requires the distinguished name or canonical distinguished name of the group moderator (a mail-enabled security principal, which is a mailbox, mail-user, or mail-enabled security group). For example, `Get-DistributionGroup -Filter "ModeratedBy -eq 'CN=Angela Gruber,CN=Users,DC=contoso,DC=com'"` or `Get-DistributionGroup -Filter "ModeratedBy -eq 'contoso.com/Users/Angela Gruber'"`.
+This filter requires the distinguished name or canonical distinguished name of the group moderator (a mail-enabled security principal, which is a mailbox, mail-user, or mail-enabled security group).
 
-To find the distinguished name of a mail-enabled security principal, replace _\<RecipientIdentity\>_ with the name, alias, or email address of the recipient, and run this command: `Get-Recipient -Identity "<RecipientIdentity>" | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Recipient "Joanne Schwarz").DistinguishedName`), and then use the variable in the filter (`"ModeratedBy -eq '$dn'"`).
 
 Although this property is multi-valued, the filter returns a match if the property _contains_ the specified value.
 
@@ -2069,7 +2086,7 @@ Although this property is multi-valued, the filter returns a match if the proper
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchEnableModeration_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|Boolean (`$true` or `$false`)|
 
@@ -2083,7 +2100,7 @@ For example, `Get-DistributionGroup -Filter 'ModerationEnabled -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_name_|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|String (wildcards accepted)|
 
@@ -2097,9 +2114,9 @@ For example, `Get-User -Filter "Name -like 'Laura*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|n/a|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-User**|String or `$null`|
+|n/a|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-User**|String|
 
 This property is populated for Exchange Online mailboxes in hybrid environments. A sample value is `1003BFFD9A0CFA03`.
 
@@ -2113,7 +2130,7 @@ For example, `Get-User -Filter 'NetId -ne $null'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_info_|**Get-Contact** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Recipient** <br/> **Get-User** <br/> **Get-UnifiedGroup**|String (wildcards accepted) or `$null`|
 
@@ -2127,13 +2144,18 @@ For example, `Get-User -Filter "Notes -like 'Events Team*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_objectCategory_|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|String|
 
 This filter requires the canonical distinguished name of the object. The value uses the syntax `<domain>/Configuration/Schema/<Type>`.
 
-Valid _\<Type\>_ values are: `Person` for mailboxes, mail users, and mail contacts, `Group` for distribution groups, mail-enabled security groups and Microsoft 365 Groups, `ms-Exch-Public-Folder` for mail-enabled public folders, and `ms-Exch-Dynamic-Distribution-List` for dynamic distribution groups.
+Valid _\<Type\>_ values are:
+
+- `Person` for mailboxes, mail users, and mail contacts
+- `Group` for distribution groups, mail-enabled security groups, and Microsoft 365 Groups
+- `ms-Exch-Public-Folder` for mail-enabled public folders
+- `ms-Exch-Dynamic-Distribution-List` for dynamic distribution groups
 
 For example, `Get-Recipient -Filter "ObjectCategory -eq 'contoso.com/Configuration/Schema/Group'"`.
 
@@ -2145,7 +2167,7 @@ For example, `Get-Recipient -Filter "ObjectCategory -eq 'contoso.com/Configurati
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_objectClass_|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|String|
 
@@ -2163,7 +2185,7 @@ Although this property is multi-valued, the filter returns a match if the proper
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_physicalDeliveryOfficeName_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-Recipient** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -2177,13 +2199,13 @@ For example, `Get-User -Filter "Office -like '22*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchUseOAB_|**Get-Mailbox**|String or `$null`|
+|_msExchUseOAB_|**Get-Mailbox**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name of the offline address book. For example, `Get-Mailbox -Arbitration -Filter "OfflineAddressBook -eq 'CN=OAB 1,CN=Offline Address Lists,CN=Address Lists Container,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com'"`
+This filter requires the distinguished name of the offline address book.
 
-You can find the distinguished names of offline address books by running this command: `Get-OfflineAddressBook | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-OfflineAddressBook "Default Offline Address Book").DistinguishedName`), and then use the variable in the filter (`"OfflineAddressBook -eq '$dn'"`).
 
 ## OnPremisesObjectId
 
@@ -2193,7 +2215,7 @@ You can find the distinguished names of offline address books by running this co
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-MailPublicFolder**|String or `$null`|
 
@@ -2209,7 +2231,7 @@ For example, `Get-MailPublicFolder -Filter 'OnPremisesObjectId -ne $null'`.
 
 <sup>\*</sup> **Get-UMMailbox** is available only in Exchange Server 2016 and earlier. Unified Messaging was removed in Exchange Server 2019.
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchUMOperatorNumber_|**Get-UMMailbox**|String (wildcards accepted) or `$null`|
 
@@ -2223,7 +2245,7 @@ For example, `Get-UMMailbox -Filter "OperatorNumber -eq 5"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_otherFacsimileTelephoneNumber_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -2237,7 +2259,7 @@ For example, `Get-User -Filter "OtherFax -like '206*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_otherHomePhone_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -2251,7 +2273,7 @@ For example, `Get-User -Filter "OtherHomePhone -like '206*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_otherTelephone_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -2265,7 +2287,7 @@ For example, `Get-User -Filter "OtherTelephone -like '206*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
 
@@ -2279,7 +2301,7 @@ The filter operates backwards. For example, `Get-CASMailbox -Filter 'OWAEnabled 
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchOmaAdminWirelessEnable_|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
 
@@ -2293,13 +2315,13 @@ For example, `Get-CASMailbox -Filter 'OWAForDevicesEnabled -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchOWAPolicy_|**Get-CASMailbox** <br/> **Get-Recipient**|String or `$null`|
+|_msExchOWAPolicy_|**Get-CASMailbox** <br/> **Get-Recipient**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name of the Outlook on the web mailbox policy (formerly known as an Outlook Web App mailbox policy). For example, `Get-CASMailbox -Filter "OWAMailboxPolicy -eq 'CN=Default,CN=OWA Mailbox Policies,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com`'".
+This filter requires the distinguished name of the Outlook on the web mailbox policy (formerly known as an Outlook Web App mailbox policy).
 
-You can find the distinguished names of Outlook on the web mailbox policies by running this command: `Get-OwaMailboxPolicy | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-OwaMailboxPolicy "Default").DistinguishedName`), and then use the variable in the filter (`"OWAMailboxPolicy -eq '$dn'"`).
 
 ## Pager
 
@@ -2309,7 +2331,7 @@ You can find the distinguished names of Outlook on the web mailbox policies by r
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_pager_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -2323,9 +2345,9 @@ For example, `Get-User -Filter "Pager -like '206*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|n/a|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String or `$null`|
+|n/a|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String|
 
 Typically, the value of this property something other than `$null` (blank) for Microsoft 365 accounts and mailboxes. For more information about the valid property values, see [Capability enumeration](/previous-versions/office/exchange-server-api/ff441134(v=exchg.150)).
 
@@ -2341,7 +2363,7 @@ Although this property is multi-valued, the filter returns a match if the proper
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_telephoneNumber_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-Recipient** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -2357,7 +2379,7 @@ For example, `Get-User -Filter "Phone -like '206*'"`.
 
 <sup>\*</sup> **Get-UMMailbox** is available only in Exchange Server 2016 and earlier. Unified Messaging was removed in Exchange Server 2019.
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchUMPhoneProvider_|**Get-UMMailbox**|String (wildcards accepted) or `$null`|
 
@@ -2371,7 +2393,7 @@ For example, `Get-UMMailbox -Filter "PhoneProviderId -like '206*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msDS-PhoneticDisplayName_|**Get-Contact** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-MailPublicFolder** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -2385,7 +2407,7 @@ For example, `Get-User -Filter "PhoneticDisplayName -like 'Lila*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchPoliciesExcluded_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|String or `$null`|
 
@@ -2399,7 +2421,7 @@ For example, `Get-Recipient -Filter 'PoliciesExcluded -ne $null'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchPoliciesIncluded_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|String or `$null`|
 
@@ -2413,7 +2435,7 @@ For example, `Get-Recipient -Filter 'PoliciesIncluded -eq $null'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-CASMailbox**|Boolean (`$true` or `$false`)|
 
@@ -2427,7 +2449,7 @@ For example, `Get-CASMailbox -Filter 'POPEnabled -eq $false'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_postalCode_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-Recipient** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -2441,7 +2463,7 @@ For example, `Get-Recipient -Filter "PostalCode -eq 90210"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_postOfficeBox_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -2455,13 +2477,13 @@ For example, `Get-User -Filter "PostOfficeBox -like '555*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchPreviousRecipientTypeDetails_|**Get-LinkedUser** <br/> **Get-User**|String or `$null`|
 
 For valid values, see the description of the _RecipientTypeDetails_ parameter in [Get-Recipient](/powershell/module/exchangepowershell/get-recipient#-recipienttypedetails).
 
-For example, `Get-User -Filter 'PreviousRecipientTypeDetails -ne $null'`.
+For example, `Get-User -Filter "PreviousRecipientTypeDetails -eq 'UserMailbox'"`.
 
 ## PrimarySmtpAddress
 
@@ -2471,11 +2493,11 @@ For example, `Get-User -Filter 'PreviousRecipientTypeDetails -ne $null'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-CASMailbox** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-UMMailbox** <br/> **Get-UnifiedGroup**|String (wildcards accepted)|
 
-Don't use the _PrimarySmtpAddress_ property; use the _EmailAddresses_ property instead. Any filter that uses the _PrimarySmtpAddress_ property also searchs values in the _EmailAddresses_ property. For example, if a mailbox has the primary email address dario@contoso.com, and the additional proxy addresses dario2@contoso.com and dario3@contoso.com, all of the following filters return that mailbox in the result: `"PrimarySmtpAddress -eq 'dario@contoso.com'"`, `"PrimarySmtpAddress -eq 'dario2@contoso.com'"`, or `"PrimarySmtpAddress -eq 'dario3@contoso.com'"`.
+Don't use the _PrimarySmtpAddress_ property; use the _EmailAddresses_ property instead. Any filter that uses the _PrimarySmtpAddress_ property also searches values in the _EmailAddresses_ property. For example, if a mailbox has the primary email address dario@contoso.com, and the additional proxy addresses dario2@contoso.com and dario3@contoso.com, all of the following filters return that mailbox in the result: `"PrimarySmtpAddress -eq 'dario@contoso.com'"`, `"PrimarySmtpAddress -eq 'dario2@contoso.com'"`, or `"PrimarySmtpAddress -eq 'dario3@contoso.com'"`.
 
 ## ProhibitSendQuota
 
@@ -2485,7 +2507,7 @@ Don't use the _PrimarySmtpAddress_ property; use the _EmailAddresses_ property i
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_mDBOverQuotaLimit_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|A byte quantified size value (for example, `300MB` or `1.5GB`), or `Unlimited`. Unqualified values are treated as bytes.|
 
@@ -2501,7 +2523,7 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_mDBOverHardQuotaLimit_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|A byte quantified size value (for example, `300MB` or `1.5GB`), or `Unlimited`. Unqualified values are treated as bytes.|
 
@@ -2517,7 +2539,7 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_protocolSettings_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String (wildcards accepted) or `$null`|
 
@@ -2533,15 +2555,15 @@ For example, `Get-Mailbox -Filter "ProtocolSettings -like 'POP3*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_pFContacts_|**Get-MailPublicFolder**|String or `$null`|
+|_pFContacts_|**Get-MailPublicFolder**|Distinguished name (DN) or `$null`.|
 
 This property is displayed as **Contacts** in the results of the command `Get-MailPublicFolder -Identity <PublicFolderIdentity> | Format-List`, but you need to use the property name **PublicFolderContacts** in the filter.
 
-This filter requires the distinguished name or canonical distinguished name of the public folder contact. For example, `Get-MailPublicFolder -Filter "PublicFolderContacts -eq 'CN=Angela Gruber,CN=Users,DC=contoso,DC=com'"` or `Get-MailPublicFolder -Filter "PublicFolderContacts -eq 'contoso.com/Users/Angela Gruber'"`.
+This filter requires the distinguished name or canonical distinguished name of the public folder contact.
 
-To find the distinguished name of a public folder contact, replace _\<RecipientIdentity\>_ with the name, alias, or email address of the recipient, and run this command: `Get-Recipient -Identity "<RecipientIdentity>" | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Recipient "Kathleen Reiter").DistinguishedName`), and then use the variable in the filter (`"PublicFolderContacts -eq '$dn'"`).
 
 Although this property is multi-valued, the filter returns a match if the property _contains_ the specified value.
 
@@ -2553,7 +2575,7 @@ Although this property is multi-valued, the filter returns a match if the proper
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchQueryBaseDN_|**Get-Mailbox**|String or `$null`|
 
@@ -2569,13 +2591,13 @@ For example, `Get-Mailbox -Filter 'QueryBaseDN -ne $null'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchDynamicDLBaseDN_|**Get-DynamicDistributionGroup**|String or `$null`|
+|_msExchDynamicDLBaseDN_|**Get-DynamicDistributionGroup**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name or canonical distinguished name of the organizational unit or container in Active Directory. For example, `Get-DynamicDistributionGroup -Filter "RecipientContainer -eq 'CN=Users,DC=contoso,DC=com'"` or `Get-DynamicDistributionGroup -Filter "RecipientContainer -eq 'contoso.com/Users'"`
+This filter requires the distinguished name or canonical distinguished name of the organizational unit or container in Active Directory.
 
-To find the distinguished names or canonical distinguished names of organizational units and containers in Active Directory, run this command: `Get-OrganizationalUnit -IncludeContainers | Format-List Name,DistinguishedName,ID`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-OrganizationalUnit "contoso.com/Users").DistinguishedName`), and then use the variable in the filter (`"RecipientContainer -eq '$dn'"`).
 
 ## RecipientLimits
 
@@ -2585,7 +2607,7 @@ To find the distinguished names or canonical distinguished names of organization
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchRecipLimit_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|Integer or `Unlimited`|
 
@@ -2599,9 +2621,9 @@ For example, `Get-Mailbox -Filter "RecipientLimits -ne 'Unlimited'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|n/a|**Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-User** <br/> **Get-UnifiedGroup**|`DynamicDistributionGroup`, `MailContact`, `MailNonUniversalGroup`, `MailUniversalDistributionGroup`, `MailUniversalSecurityGroup`, `MailUser`, `PublicFolder` or `UserMailbox`|
+|n/a|**Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-User** <br/> **Get-UnifiedGroup**|<ul><li>`DynamicDistributionGroup`</li><li>`MailContact`</li><li>`MailNonUniversalGroup`</li><li>`MailUniversalDistributionGroup`</li><li>`MailUniversalSecurityGroup`</li><li>`MailUser`</li><li>`PublicFolder`</li><li>`UserMailbox`</li></ul>|
 
 For example, `Get-Recipient -Filter "RecipientType -eq 'MailContact'"`.
 
@@ -2613,7 +2635,7 @@ For example, `Get-Recipient -Filter "RecipientType -eq 'MailContact'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-User** <br/> **Get-UnifiedGroup**|String|
 
@@ -2629,7 +2651,7 @@ For example, `Get-Recipient -Filter "RecipientTypeDetails -eq 'SharedMailbox'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchDumpsterQuota_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|A byte quantified size value (for example, `300MB` or `1.5GB`), or `Unlimited`. Unqualified values are treated as bytes.|
 
@@ -2645,7 +2667,7 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchDumpsterWarningQuota_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|A byte quantified size value (for example, `300MB` or `1.5GB`), or `Unlimited`. Unqualified values are treated as bytes.|
 
@@ -2661,13 +2683,13 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_unauthOrig_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|String or `$null`|
+|_unauthOrig_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name of the individual recipient (a mailbox, mail user, or mail contact). For example, `Get-DistributionGroup -Filter "RejectMessagesFrom -eq 'CN=Yuudai Uchida,CN=Users,DC=contoso,DC=com'"` or `Get-DistributionGroup -Filter "RejectMessagesFrom -eq 'contoso.com/Users/Angela Gruber'"`.
+This filter requires the distinguished name of the individual recipient (a mailbox, mail user, or mail contact).
 
-To find the distinguished name of the individual recipient, replace _\<RecipientIdentity\>_ with the name, alias, or email address of the recipient, and run this command: `Get-Recipient -Identity "<RecipientIdentity>" | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Recipient "Mai Fujito").DistinguishedName`), and then use the variable in the filter (`"RejectMessagesFrom -eq '$dn'"`).
 
 Although this property is multi-valued, the filter returns a match if the property _contains_ the specified value.
 
@@ -2679,13 +2701,13 @@ Although this property is multi-valued, the filter returns a match if the proper
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_dLMemRejectPerms_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|String or `$null`|
+|_dLMemRejectPerms_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UnifiedGroup**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name or canonical distinguished name of the group (a distribution group, mail-enabled security group, or dynamic distribution group). For example, `Get-Mailbox -Filter "RejectMessagesFromDLMembers -eq 'CN=Marketing Department,CN=Users,DC=contoso,DC=com'"` or `Get-Mailbox -Filter "RejectMessagesFromDLMembers -eq 'contoso.com/Users/Marketing Department'"`.
+This filter requires the distinguished name or canonical distinguished name of the group (a distribution group, mail-enabled security group, or dynamic distribution group).
 
-To find the distinguished name of the group, replace _\<GroupIdentity\>_ with the name, alias, or email address of the group, and run one of these commands: `Get-DistributionGroup -Identity "<GroupIdentity>" | Format-List Name,DistinguishedName` or `Get-DynamicDistributionGroup -Identity "<GroupIdentity>" | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-DistributionGroup "Marketing Department").DistinguishedName`), and then use the variable in the filter (`"RejectMessagesFromDLMembers -eq '$dn'"`).
 
 Although this property is multi-valued, the filter returns a match if the property _contains_ the specified value.
 
@@ -2697,7 +2719,7 @@ Although this property is multi-valued, the filter returns a match if the proper
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchSyncAccountsPolicyDN_|**Get-Mailbox**|String or `$null`|
 
@@ -2711,7 +2733,7 @@ This filter requires the distinguished name of the remote account policy. For ex
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-User**|Boolean (`$true` or `$false`)|
 
@@ -2725,9 +2747,9 @@ For example, `Get-User -Filter 'RemotePowerShellEnabled -eq $false'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchRemoteRecipientType_|**Get-Mailbox** <br/> **Get-RemoteMailbox**|`None` (0), `ProvisionMailbox` (1), `ProvisionArchive` (2), `Migrated` (4), `DeprovisionMailbox` (8), `DeprovisionArchive` (16), `RoomMailbox` (32), `EquipmentMailbox` (64), `SharedMailbox` (96), `TeamMailbox` (128), or `$null`.|
+|_msExchRemoteRecipientType_|**Get-Mailbox** <br/> **Get-RemoteMailbox**|<ul><li>`None` (0)</li><li>`ProvisionMailbox` (1)</li><li>`ProvisionArchive` (2)</li><li>`Migrated` (4)</li><li>`DeprovisionMailbox` (8)</li><li>`DeprovisionArchive` (16)</li><li>`RoomMailbox` (32)</li><li>`EquipmentMailbox` (64)</li><li>`SharedMailbox` (96)</li><li>`TeamMailbox` (128)</li><li>`$null`</li></ul>|
 
 For example, `Get-RemoteMailbox -Filter "RemoteRecipientType -eq 'ProvisionMailbox'"`.
 
@@ -2739,7 +2761,7 @@ For example, `Get-RemoteMailbox -Filter "RemoteRecipientType -eq 'ProvisionMailb
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_reportToOwner_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-UnifiedGroup**|Boolean (`$true` or `$false`)|
 
@@ -2753,7 +2775,7 @@ For example, `Get-DistributionGroup -Filter 'ReportToManagerEnabled -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_reportToOriginator_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-UnifiedGroup**|Boolean (`$true` or `$false`)|
 
@@ -2767,7 +2789,7 @@ For example, `Get-DistributionGroup -Filter 'ReportToOriginatorEnabled -eq $fals
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchRequireAuthToSendTo_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal**|Boolean (`$true` or `$false`)|
 
@@ -2781,9 +2803,9 @@ This property is displayed as **RequireSenderAuthenticationEnabled** in the resu
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|n/a|**Get-UnifiedGroup**|`AllowOnlyMembersToPost`, `CalendarMemberReadOnly`, `ConnectorsEnabled`, `HideGroupInOutlook`, `NotebookForLearningCommunitiesEnabled`, `ReportToOriginator`, `SharePointReadonlyForMembers`, `SubscriptionEnabled`, `SubscribeMembersToCalendarEvents`, `SubscribeMembersToCalendarEventsDisabled`, `SubscribeNewGroupMembers`, `WelcomeEmailDisabled`, `WelcomeEmailEnabled`, or `$null`|
+|n/a|**Get-UnifiedGroup**|<ul><li>`AllowOnlyMembersToPost`</li><li>`CalendarMemberReadOnly`</li><li>`ConnectorsEnabled`</li><li>`HideGroupInOutlook`</li><li>`NotebookForLearningCommunitiesEnabled`</li><li>`ReportToOriginator`</li><li>`SharePointReadonlyForMembers`</li><li>`SubscriptionEnabled`</li><li>`SubscribeMembersToCalendarEvents`</li><li>`SubscribeMembersToCalendarEventsDisabled`</li><li>`SubscribeNewGroupMembers`</li><li>`WelcomeEmailDisabled`</li><li>`WelcomeEmailEnabled`</li><li>`$null`</li></ul>|
 
 For example, `Get-UnifiedGroup -Filter "ResourceBehaviorOptions -eq 'CalendarMemberReadOnly'"`
 
@@ -2795,7 +2817,7 @@ For example, `Get-UnifiedGroup -Filter "ResourceBehaviorOptions -eq 'CalendarMem
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchResourceCapacity_|**Get-Mailbox**|Integer or `$null`|
 
@@ -2809,9 +2831,9 @@ For example, `Get-Mailbox -Filter "ResourceCapacity -gt 15"`
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|n/a|**Get-Mailbox**|String or `$null`|
+|n/a|**Get-Mailbox**|String|
 
 You create custom resource properties by using the Set-ResourceConfig cmdlet. For example, `Set-ResourceConfig -ResourcePropertySchema Room/Whiteboard,Equipment/Van`. After you create the properties, you can assign them to room or equipment mailboxes. For example, `Set-Mailbox -Identity "Conference Room 1" -ResourceCustom Whiteboard`.
 
@@ -2825,7 +2847,7 @@ When you search for values, use the custom resource property that's assigned to 
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-UnifiedGroup**|`Team` or `$null`|
 
@@ -2839,9 +2861,9 @@ For example, `Get-UnifiedGroup -Filter "ResourceProvisioningOptions -eq 'Team'"`
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|n/a|**Get-Mailbox** <br/> **Get-Recipient**|`Room` (0), `Equipment` (1), or `$null`|
+|n/a|**Get-Mailbox** <br/> **Get-Recipient**|`Room` (0) or `Equipment` (1)|
 
 For example, `Get-Mailbox -Filter "ResourceType -eq 'Equipment'"`
 
@@ -2853,7 +2875,7 @@ For example, `Get-Mailbox -Filter "ResourceType -eq 'Equipment'"`
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_garbageCollPeriod_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|A time span value: _dd.hh:mm:ss_ where _dd_ = days, _hh_ = hours, _mm_ = minutes, and _ss_ = seconds.|
 
@@ -2867,7 +2889,7 @@ You can't use the _Filter_ parameter to look for time span values for this prope
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchRetentionComment_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String (wildcards accepted) or `$null`|
 
@@ -2881,13 +2903,13 @@ For example, `Get-Mailbox -Filter "RetentionComment -like '7 years*'"`
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|n/a|**Get-Mailbox** <br/> **Get-Recipient**|String or `$null`|
+|n/a|**Get-Mailbox** <br/> **Get-Recipient**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name of the retention policy. For example, `Get-Mailbox -Filter "RetentionPolicy -eq 'CN=Default MRM Policy,CN=Retention Policies Container,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com'"`.
+This filter requires the distinguished name of the retention policy.
 
-To find the distinguished names of retention policies, run this command: `Get-RetentionPolicy | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-RetentionPolicy "Default MRM Policy").DistinguishedName`), and then use the variable in the filter (`"RetentionPolicy -eq '$dn'"`).
 
 ## RetentionUrl
 
@@ -2897,7 +2919,7 @@ To find the distinguished names of retention policies, run this command: `Get-Re
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchRetentionURL_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|String (wildcards accepted) or `$null`|
 
@@ -2911,13 +2933,13 @@ For example, `Get-Mailbox -Filter "RetentionUrl -like 'https://intranet.contoso.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchRBACPolicyLink_|**Get-Mailbox**|String (wildcards accepted) or `$null`|
+|_msExchRBACPolicyLink_|**Get-Mailbox**|Distinguished name (DN) (wildcards accepted) or `$null`.|
 
-This filter requires the distinguished name of the role assignment policy in Exchange Online. For example, `Get-Mailbox -Filter "RoleAssignmentPolicy -eq 'CN=Default Role Assignment Policy,CN=Policies,CN=RBAC,CN=Configuration,CN=contoso.onmicrosoft.com,CN=ConfigurationUnits,DC=NAMPR10A001,DC=PROD,DC=OUTLOOK,DC=COM'"`.
+This filter requires the distinguished name of the role assignment policy in Exchange Online.
 
-To find the distinguished names of role assignment policies in Exchange Online, run this command: `Get-RoleAssignmentPolicy | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-RoleAssignmentPolicy "Default Role Assignment Policy").DistinguishedName`), and then use the variable in the filter (`"RoleAssignmentPolicy -eq '$dn'"`).
 
 ## RulesQuota
 
@@ -2927,7 +2949,7 @@ To find the distinguished names of role assignment policies in Exchange Online, 
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchMDBRulesQuota_|**Get-Mailbox**|A byte quantified size value (for example, `50B` or `128KB`). Unqualified values are treated as bytes.|
 
@@ -2941,11 +2963,11 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchSafeRecipientsHash_|**Get-Recipient**|Blank ( `$null`) or a hashed value.|
 
-Realistically, you can only use this value to filter on blank or non-blank values. For example, `Get-Recipient -Filter 'SafeRecipientsHash -ne $null'.`
+Realistically, you can only use this value to filter on blank or non-blank values. For example, `Get-Recipient -Filter 'SafeRecipientsHash -ne $null'`.
 
 ## SafeSendersHash
 
@@ -2955,11 +2977,11 @@ Realistically, you can only use this value to filter on blank or non-blank value
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchSafeSendersHash_|**Get-Recipient**|Blank ( `$null`) or a hashed value.|
 
-Realistically, you can only use this value to filter on blank or non-blank values. For example, `Get-Recipient -Filter 'SafeSendersHash -ne $null'.`
+Realistically, you can only use this value to filter on blank or non-blank values. For example, `Get-Recipient -Filter 'SafeSendersHash -ne $null'`.
 
 ## SamAccountName
 
@@ -2969,7 +2991,7 @@ Realistically, you can only use this value to filter on blank or non-blank value
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_SamAccountName_|**Get-CASMailbox** <br/> **Get-DistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-UMMailbox** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -2983,7 +3005,7 @@ For example, `Get-Recipient -Filter "SamAccountName -like 'laura*'"`
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchMessageHygieneSCLDeleteThreshold_|**Get-Mailbox**|-2147483648 (SCL value 0), -2147483647 (SCL value 1), -2147483646 (SCL value 2), -2147483645 (SCL value 3), -2147483644 (SCL value 4), -2147483643 (SCL value 5), -2147483642 (SCL value 6), -2147483641 (SCL value 7), -2147483640 (SCL value 8), -2147483639 (SCL value 9) or `$null`|
 
@@ -2997,7 +3019,7 @@ This property is displayed as **SCLDeleteThreshold** in the results of the comma
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchMessageHygieneSCLJunkThreshold_|**Get-Mailbox**|-2147483648 (SCL value 0), -2147483647 (SCL value 1), -2147483646 (SCL value 2), -2147483645 (SCL value 3), -2147483644 (SCL value 4), -2147483643 (SCL value 5), -2147483642 (SCL value 6), -2147483641 (SCL value 7), -2147483640 (SCL value 8), -2147483639 (SCL value 9) or `$null`|
 
@@ -3011,7 +3033,7 @@ This property is displayed as **SCLJunkThreshold** in the results of the command
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchMessageHygieneSCLQuarantineThreshold_|**Get-Mailbox**|-2147483648 (SCL value 0), -2147483647 (SCL value 1), -2147483646 (SCL value 2), -2147483645 (SCL value 3), -2147483644 (SCL value 4), -2147483643 (SCL value 5), -2147483642 (SCL value 6), -2147483641 (SCL value 7), -2147483640 (SCL value 8), -2147483639 (SCL value 9) or `$null`|
 
@@ -3025,7 +3047,7 @@ This property is displayed as **SCLQuarantineThreshold** in the results of the c
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchMessageHygieneSCLRejectThreshold_|**Get-Mailbox**|-2147483648 (SCL value 0), -2147483647 (SCL value 1), -2147483646 (SCL value 2), -2147483645 (SCL value 3), -2147483644 (SCL value 4), -2147483643 (SCL value 5), -2147483642 (SCL value 6), -2147483641 (SCL value 7), -2147483640 (SCL value 8), -2147483639 (SCL value 9) or `$null`|
 
@@ -3039,7 +3061,7 @@ This property is displayed as **SCLRejectThreshold** in the results of the comma
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_oOFReplyToOriginator_|**Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-UnifiedGroup**|Boolean (`$true` or `$false`)|
 
@@ -3053,7 +3075,7 @@ For example, `Get-DistributionGroup -Filter 'SendOofMessageToOriginatorEnabled -
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchHomeServerName_|**Get-CASMailbox** <br/> **Get-Mailbox** <br/> **Get-Recipient** <br/> **Get-UMMailbox**|String (wildcards accepted) or `$null`|
 
@@ -3069,9 +3091,9 @@ This is an example of a complete **ServerLegacyDN** value: `/o=Contoso Corporati
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|n/a|**Get-CASMailbox** <br/> **Get-Mailbox** <br/> **Get-Recipient** <br/> **Get-UMMailbox**|String or `$null`|
+|n/a|**Get-CASMailbox** <br/> **Get-Mailbox** <br/> **Get-Recipient** <br/> **Get-UMMailbox**|String|
 
 For example, `Get-Recipient -Filter "ServerName -eq 'Mailbox01'"`.
 
@@ -3083,13 +3105,13 @@ For example, `Get-Recipient -Filter "ServerName -eq 'Mailbox01'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchSharingPolicyLink_|**Get-Mailbox** <br/> **Get-Recipient**|String or `$null`|
+|_msExchSharingPolicyLink_|**Get-Mailbox** <br/> **Get-Recipient**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name of the sharing policy. For example, `Get-Mailbox -Filter "SharingPolicy -eq 'CN=Custom Sharing Policy,CN=Federation,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com'"`.
+This filter requires the distinguished name of the sharing policy.
 
-To find the distinguished names of sharing policies, run this command: `Get-SharingPolicy | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-SharingPolicy "Custom Sharing Policy").DistinguishedName`), and then use the variable in the filter (`"SharingPolicy -eq '$dn'"`).
 
 > [!NOTE]
 > For the default assignment of the default sharing policy (named Default Sharing Policy) to a mailbox, the value of the **SharingPolicy** property is blank (`$null`).
@@ -3102,7 +3124,7 @@ To find the distinguished names of sharing policies, run this command: `Get-Shar
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_objectSid_|**Get-Group** <br/> **Get-LinkedUser** <br/> **Get-SecurityPrincipal** <br/> **Get-User**|String|
 
@@ -3116,11 +3138,13 @@ For example, `Get-User -Filter "Sid -eq 's-1-5-21-3628364307-1600040346-81925102
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_SIDHistory_|**Get-Group** <br/> **Get-LinkedUser** <br/> **Get-User**|String or `$null`|
 
 For example, `Get-User -Filter "SidHistory -eq 's-1-5-21-3628364307-1600040346-819251021-2603'"`.
+
+Filtering by the `$null` value on this property is supported only in Exchange Server. In Exchange Online and Security & Compliance PowerShell, use an exact value match instead.
 
 ## SimpleDisplayName
 
@@ -3130,13 +3154,13 @@ For example, `Get-User -Filter "SidHistory -eq 's-1-5-21-3628364307-1600040346-8
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_displayNamePrintable_|**Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
 For example, `Get-User -Filter "SimpleDisplayName -like 'lila*'"`.
 
-## SingleItemrecoveryEnabled
+## SingleItemRecoveryEnabled
 
 **Applicable**:
 
@@ -3144,7 +3168,7 @@ For example, `Get-User -Filter "SimpleDisplayName -like 'lila*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox**|Boolean (`$true` or `$false`)|
 
@@ -3158,7 +3182,7 @@ For example, `Get-Mailbox -Filter 'SingleItemRecoveryEnabled -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-User**|Boolean (`$true` or `$false`) or `$null`.|
 
@@ -3172,7 +3196,7 @@ For example, `Get-User -Filter 'SKUAssigned -eq $true'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-Mailbox**|String (wildcards accepted) or `$null`|
 
@@ -3186,7 +3210,7 @@ For example, `Get-Mailbox -Filter 'SourceAnchor -ne $null'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_st_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-Recipient** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -3200,7 +3224,7 @@ For example, `Get-User -Filter "StateOrProvince -like 'Carolina*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_streetAddress_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -3214,7 +3238,7 @@ For example, `Get-User -Filter "StreetAddress -like '36th Ave NE*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchStsRefreshTokensValidFrom_|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-User**|`$null` or a date/time value: 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601 (UTC)|
 
@@ -3228,7 +3252,7 @@ For example, `Get-User -Filter "StsRefreshTokensValidFrom -gt '8/1/2017'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_telephoneAssistant_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -3242,13 +3266,13 @@ For example, `Get-User -Filter "TelephoneAssistant -like '206*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchThrottlingPolicyDN_|**Get-Mailbox**|String or `$null`|
+|_msExchThrottlingPolicyDN_|**Get-Mailbox**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name of the throttling policy. For example, `Get-Mailbox -Filter "ThrottlingPolicy -eq 'CN=Custom Throttling Policy,CN=Global Settings,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com'"`.
+This filter requires the distinguished name of the throttling policy.
 
-To find the distinguished names of throttling policies, run this command: `Get-ThrottlingPolicy | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-ThrottlingPolicy "Custom Throttling Policy").DistinguishedName`), and then use the variable in the filter (`"ThrottlingPolicy -eq '$dn'"`).
 
 ## Title
 
@@ -3258,7 +3282,7 @@ To find the distinguished names of throttling policies, run this command: `Get-T
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_title_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-Recipient** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -3268,27 +3292,25 @@ For example, `Get-User -Filter "Title -eq 'Dr.'"`.
 
 **Applicable**:
 
-- ![Supported](../../images/feature_present_icon.png) Exchange Server<sup>\*</sup>
+- ![Supported](../../images/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier. Unified Messaging was removed in Exchange 2019)
 - ![Not supported](../../images/feature_absent_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-<sup>\*</sup> **Get-UMMailbox** is available only in Exchange Server 2016 and earlier. Unified Messaging was removed in Exchange Server 2019.
-
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchUMAddresses_|**Get-UMMailbox**|String (wildcards accepted) or `$null`|
 
-For example, `Get-UMMailbox -Filter 'UMAddresses -ne $null'`.
+For example, `Get-UMMailbox -Filter "UMAddresses -like 'EUM:*'"`.
 
 ## UMCallingLineIds
 
 **Applicable**:
 
-- ![Supported](../../images/feature_present_icon.png) Exchange Server
-- ![Supported](../../images/feature_present_icon.png) Exchange Online
-- ![Supported](../../images/feature_present_icon.png) Security & Compliance
+- ![Supported](../../images/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier. Unified Messaging was removed in Exchange 2019)
+- ![Not supported](../../images/feature_absent_icon.png) Exchange Online
+- ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchUMCallingLineIds_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -3300,11 +3322,11 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Supported](../../images/feature_present_icon.png) Exchange Server
-- ![Supported](../../images/feature_present_icon.png) Exchange Online
-- ![Supported](../../images/feature_present_icon.png) Security & Compliance
+- ![Supported](../../images/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier. Unified Messaging was removed in Exchange 2019)
+- ![Not supported](../../images/feature_absent_icon.png) Exchange Online
+- ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchUMDtmfMap_|**Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-UMMailbox** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -3316,11 +3338,11 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Supported](../../images/feature_present_icon.png) Exchange Server
+- ![Supported](../../images/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier. Unified Messaging was removed in Exchange 2019)
 - ![Not supported](../../images/feature_absent_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-Mailbox** <br/> **Get-Recipient** <br/> **Get-UMMailbox**|Boolean (`$true` or `$false`)|
 
@@ -3330,33 +3352,33 @@ For example, `Get-Mailbox -Filter 'UMEnabled -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](../../images/feature_present_icon.png) Exchange Server
-- ![Supported](../../images/feature_present_icon.png) Exchange Online
-- ![Supported](../../images/feature_present_icon.png) Security & Compliance
+- ![Supported](../../images/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier. Unified Messaging was removed in Exchange 2019)
+- ![Not supported](../../images/feature_absent_icon.png) Exchange Online
+- ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchUMTemplateLink_|**Get-Recipient** <br/> **Get-UMMailbox**|String or `$null`|
+|_msExchUMTemplateLink_|**Get-Recipient** <br/> **Get-UMMailbox**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name of the UM mailbox policy. For example, `Get-Recipient -Filter "UMMailboxPolicy -eq 'CN=Contoso Default Policy,CN=UM Mailbox Policies,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com'"`.
+This filter requires the distinguished name of the UM mailbox policy.
 
-To find the distinguished names of UM mailbox policies, run this command: `Get-UMMailboxPolicy | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-UMMailboxPolicy "Contoso Default Policy").DistinguishedName`), and then use the variable in the filter (`"UMMailboxPolicy -eq '$dn'"`).
 
 ## UMRecipientDialPlanId
 
 **Applicable**:
 
-- ![Supported](../../images/feature_present_icon.png) Exchange Server
-- ![Supported](../../images/feature_present_icon.png) Exchange Online
-- ![Supported](../../images/feature_present_icon.png) Security & Compliance
+- ![Supported](../../images/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier. Unified Messaging was removed in Exchange 2019)
+- ![Not supported](../../images/feature_absent_icon.png) Exchange Online
+- ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchUMRecipientDialPlanLink_|**Get-Recipient**|String or `$null`|
+|_msExchUMRecipientDialPlanLink_|**Get-Recipient**|Distinguished name (DN) or `$null`.|
 
-This filter requires the distinguished name of the UM dial plan. For example, `Get-Recipient -Filter "UMMailboxPolicy -eq 'CN=Contoso Dial Plan,CN=UM DialPlan Container,CN=Contoso Corporation,CN=Microsoft Exchange,CN=Services,CN=Configuration,DC=contoso,DC=com'"`.
+This filter requires the distinguished name of the UM dial plan.
 
-To find the distinguished names of UM dial plans, run this command: `Get-UMDialPlan | Format-List Name,DistinguishedName`.
+To use a friendly value, store the DN in a variable (for example, `$dn = (Get-UMDialPlan "Contoso Dial Plan").DistinguishedName`), and then use the variable in the filter (`"UMRecipientDialPlanId -eq '$dn'"`).
 
 ## UpgradeRequest
 
@@ -3366,9 +3388,9 @@ To find the distinguished names of UM dial plans, run this command: `Get-UMDialP
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|n/a|**Get-User**|`None` (0), `TenantUpgrade` (1), `PrestageUpgrade` (2), `CancelPrestageUpgrade` (3), `PilotUpgrade` (4), or `TenantUpgradeDryRun` (5),|
+|n/a|**Get-User**|<ul><li>`None` (0)</li><li>`TenantUpgrade` (1)</li><li>`PrestageUpgrade` (2)</li><li>`CancelPrestageUpgrade` (3)</li><li>`PilotUpgrade` (4)</li><li>`TenantUpgradeDryRun` (5)</li></ul>|
 
 For example, `Get-User -Filter "UpgradeRequest -ne 'None'"`.
 
@@ -3380,9 +3402,9 @@ For example, `Get-User -Filter "UpgradeRequest -ne 'None'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|n/a|**Get-User**|`None` (0), `NotStarted` (1), `InProgress` (2), `Warning` (3), `Error` (4), `Cancelled` (5), `Complete` (6), or `ForceComplete` (7).|
+|n/a|**Get-User**|<ul><li>`None` (0)</li><li>`NotStarted` (1)</li><li>`InProgress` (2)</li><li>`Warning` (3)</li><li>`Error` (4)</li><li>`Cancelled` (5)</li><li>`Complete` (6)</li><li>`ForceComplete` (7)</li></ul>|
 
 For example, `Get-User -Filter "UpgradeStatus -ne 'None'"`.
 
@@ -3394,9 +3416,9 @@ For example, `Get-User -Filter "UpgradeStatus -ne 'None'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchUsageLocation_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient**|String or `$null`|
+|_msExchUsageLocation_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient**|String|
 
 This filter requires the ISO 3166-1 country name (for example, `United States`), or two-letter country code (for example `US`) for the user in Microsoft 365. For more information, see [Country Codes - ISO 3166](https://www.iso.org/iso-3166-country-codes.html).
 
@@ -3410,7 +3432,7 @@ For example, `Get-Recipient -Filter 'UsageLocation -eq "US"'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Not supported](../../images/feature_absent_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_mDBUseDefaults_|**Get-Mailbox**|Boolean (`$true` or `$false`)|
 
@@ -3424,9 +3446,9 @@ For example, `Get-Mailbox -Filter 'UseDatabaseQuotaDefaults -eq $false'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_userAccountControl_|**Get-LinkedUser** <br/> **Get-User**|`AccountDisabled`, `DoNotExpirePassword`, or `NormalAccount`|
+|_userAccountControl_|**Get-LinkedUser** <br/> **Get-User**|<ul><li>`AccountDisabled`</li><li>`DoNotExpirePassword`</li><li>`NormalAccount`</li></ul>|
 
 For example, `Get-User -Filter "UserAccountControl -eq 'NormalAccount'"`.
 
@@ -3442,7 +3464,7 @@ This multivalued property returns a match only if the property _equals_ the spec
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_userPrincipalName_|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-User**|String (wildcards accepted)|
 
@@ -3456,11 +3478,20 @@ For example, `Get-User -Filter "UserPrincipalName -like 'julia@*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
-|_msExchUCVoiceMailSettings_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-User**|String or `$null`|
+|_msExchUCVoiceMailSettings_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-User**|String (wildcards accepted) or `$null`|
+
+Valid values for this property are:
+
+- `ExchangeHostedVoiceMail=0`
+- `ExchangeHostedVoiceMail=1`
+- `CsHostedVoiceMail=0`
+- `CsHostedVoiceMail=1`
 
 For example, `Get-User -Filter 'VoiceMailSettings -ne $null'`.
+
+In Exchange Online, this property holds a legacy hosted voicemail value and is typically blank, so filtering on this property usually returns no results.
 
 ## WebPage
 
@@ -3470,7 +3501,7 @@ For example, `Get-User -Filter 'VoiceMailSettings -ne $null'`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_wWWHomePage_|**Get-Contact** <br/> **Get-LinkedUser** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -3484,7 +3515,7 @@ For example, `Get-User -Filter "WebPage -like 'https://intranet.contoso.com/*'"`
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_WhenChanged_|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|A date/time value: 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601 (UTC)|
 
@@ -3498,7 +3529,7 @@ For example, `Get-Recipient -Filter "WhenChanged -gt '8/1/2017 2:00:00 PM'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|A date/time value: 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601 (UTC)|
 
@@ -3512,7 +3543,7 @@ For example, `Get-Recipient -Filter "WhenChangedUTC -gt '8/1/2017 2:00:00 PM'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_whenCreated_|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|A date/time value: 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601 (UTC)|
 
@@ -3526,7 +3557,7 @@ For example, `Get-Recipient -Filter "WhenCreated -gt '8/1/2017 2:00:00 PM'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |n/a|**Get-CASMailbox** <br/> **Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox** <br/> **Get-SecurityPrincipal** <br/> **Get-UMMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|A date/time value: 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601 (UTC)|
 
@@ -3540,7 +3571,7 @@ For example, `Get-Recipient -Filter "WhenCreatedUTC -gt '8/1/2017 2:00:00 PM'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchWhenMailboxCreated_|**Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-RemoteMailbox**|A date/time value: 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601 (UTC)|
 
@@ -3554,7 +3585,7 @@ For example, `Get-Recipient -Filter "WhenMailboxCreated -gt '8/1/2017 2:00:00 PM
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchWhenSoftDeletedTime_|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-User** <br/> **Get-UnifiedGroup**|A date/time value: 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601 (UTC)|
 
@@ -3570,7 +3601,7 @@ For example, `Get-Mailbox -SoftDeletedMailbox -Filter "WhenSoftDeleted -gt '8/1/
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_mail_|**Get-Contact** <br/> **Get-DistributionGroup** <br/> **Get-DynamicDistributionGroup** <br/> **Get-Group** <br/> **Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailContact** <br/> **Get-MailPublicFolder** <br/> **Get-MailUser** <br/> **Get-RemoteMailbox** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
@@ -3584,11 +3615,11 @@ For example, `Get-Mailbox -Filter "WindowsEmailAddress -like '@fabrikam.com*'"`.
 - ![Supported](../../images/feature_present_icon.png) Exchange Online
 - ![Supported](../../images/feature_present_icon.png) Security & Compliance
 
-|LDAP display name|Available on cmdlets|Value|
+|LDAP display name|Cmdlets|Value|
 |---|---|---|
 |_msExchWindowsLiveID_|**Get-LinkedUser** <br/> **Get-Mailbox** <br/> **Get-MailUser** <br/> **Get-Recipient** <br/> **Get-User**|String (wildcards accepted) or `$null`|
 
-For example, `Get-Mailbox -Filter "WindowsEmailAddress -like '@fabrikam.onmicrosoft.com*'"`.|
+For example, `Get-Mailbox -Filter "WindowsLiveID -like '*@fabrikam.onmicrosoft.com'"`.
 
 ## For more information
 
