@@ -531,6 +531,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SharedVoicemailTriageSettingsTemplateId
+
+The SharedVoicemailTriageSettingsTemplateId enables automatic triage of Shared Voicemails using a compliant Substrate Large Language Model (LLM). It also specifies which additional LLM‑generated fields are added to each shared voicemail message, including the importance flag, summary, suggested actions, and categories. All data is processed in real time and stored in Exchange as part of the delivered voicemail message.
+
+> [!NOTE]
+> Voicemail transcription must be enabled in your Voicemail Policies. The LLM‑based triage process relies exclusively on the voicemail transcription. If the tenant’s configured language is not supported for voicemail transcription, no transcription will be generated and automatic triaging will not occur.
+>
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Tenant
 
 This parameter is reserved for Microsoft internal use only.
