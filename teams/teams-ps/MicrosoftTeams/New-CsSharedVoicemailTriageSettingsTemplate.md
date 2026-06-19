@@ -26,7 +26,7 @@ New-CsSharedVoicemailTriageSettingsTemplate -Name <string> -Description <string>
 ```
 
 ## DESCRIPTION
-Use the New-CsSharedVoicemailTriageSettingsTemplate cmdlet to create a Shared Call History template. The template defines which roles can access Shared Call History and which parts of the history are visible to them.
+Use the New-CsSharedVoicemailTriageSettingsTemplate cmdlet to create a template for AI triage of Shared Voicemails. The template defines which LLM‑generated fields will be added to each shared voicemail message, including the importance flag, summary, suggested actions, and categories.
 
 ## EXAMPLES
 
@@ -64,7 +64,7 @@ Accept wildcard characters: False
 
 ### -EnableCallToActionDetection
 
-When enabled, LL identifies all actionable tasks in the voicemail and also assigns standard action types such as Callback, Email Reply, Set Appointment, Reschedule Appointment, or Cancel Appointment.
+When enabled, LLM identifies all actionable tasks in the voicemail and also assigns standard action types such as Callback, Email Reply, Set Appointment, Reschedule Appointment, or Cancel Appointment.
 
 PARAMVALUE: True| False
 
