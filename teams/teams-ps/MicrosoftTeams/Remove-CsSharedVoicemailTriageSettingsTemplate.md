@@ -68,21 +68,27 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[New-CsSharedCallHistoryTemplate](./New-CsSharedCallHistoryTemplate.md)
+[New-CsSharedVoicemailTriageSettingsTemplate](./New-CsSharedVoicemailTriageSettingsTemplate.md)
 
-[Set-CsSharedCallHistoryTemplate](./Set-CsSharedCallHistoryTemplate.md)
+[Get-CsSharedVoicemailTriageSettingsTemplate](./Get-CsSharedVoicemailTriageSettingsTemplate.md)
 
-[Get-CsSharedCallHistoryTemplate](./Get-CsSharedCallHistoryTemplate.md)
-
-[Get-CsCallQueue](./Get-CsCallQueue.md)
+[Set-CsSharedVoicemailTriageSettingsTemplate](./Set-CsSharedVoicemailTriageSettingsTemplate.md)
 
 [New-CsCallQueue](./New-CsCallQueue.md)
+
+[Get-CsCallQueue](./Get-CsCallQueue.md)
 
 [Set-CsCallQueue](./Set-CsCallQueue.md)
 
 [Remove-CsCallQueue](./Remove-CsCallQueue.md)
 
 [New-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendant)
+
+[Get-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendant)
+
+[Set-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/set-csautoattendant)
+
+[Remove-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csautoattendant)
 
 [Get-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendant)
 
