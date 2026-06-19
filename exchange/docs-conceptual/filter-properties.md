@@ -12,9 +12,7 @@ ai-usage: ai-assisted
 
 # Filterable properties for the Filter parameter on Exchange cmdlets
 
-You use the _Filter_ parameter to create OPATH filters that find user and group objects based on their property values. The filter runs on the server and returns only the objects that match, which is faster and uses fewer resources than retrieving every object and then filtering the results locally with the **Where-Object** cmdlet. Server-side filtering is especially valuable in large organizations that contain thousands of users and groups.
-
-The _Filter_ parameter is available in Exchange Server PowerShell, Exchange Online PowerShell, and Security & Compliance PowerShell on the following user and group cmdlets:
+You use the _Filter_ parameter to create OPATH filters that find user and group objects based on their property values. The _Filter_ parameter is available in Exchange Server PowerShell, Exchange Online PowerShell, and Security & Compliance PowerShell on the following user and group cmdlets:
 
 |Cmdlet|Exchange Server|Exchange Online|Security & Compliance|
 |---|:---:|:---:|:---:|
