@@ -16,22 +16,22 @@ You use the _Filter_ parameter to create OPATH filters that find user and group 
 
 |Cmdlet|Exchange Server|Exchange Online|Security & Compliance|
 |---|:---:|:---:|:---:|
-|[Get-CASMailbox](/powershell/module/exchangepowershell/get-casmailbox)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|![Not supported](media/feature_absent_icon.png)|
-|[Get-Contact](/powershell/module/exchangepowershell/get-contact)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|![Not supported](media/feature_absent_icon.png)|
-|[Get-DistributionGroup](/powershell/module/exchangepowershell/get-distributiongroup)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|![Not supported](media/feature_absent_icon.png)|
-|[Get-DynamicDistributionGroup](/powershell/module/exchangepowershell/get-dynamicdistributiongroup)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|![Not supported](media/feature_absent_icon.png)|
-|[Get-Group](/powershell/module/exchangepowershell/get-group)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|![Not supported](media/feature_absent_icon.png)|
-|[Get-LinkedUser](/powershell/module/exchangepowershell/get-linkeduser)|![Not supported](media/feature_absent_icon.png)|![Supported](media/feature_present_icon.png)|![Not supported](media/feature_absent_icon.png)|
-|[Get-Mailbox](/powershell/module/exchangepowershell/get-mailbox)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|![Not supported](media/feature_absent_icon.png)|
-|[Get-MailContact](/powershell/module/exchangepowershell/get-mailcontact)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|![Not supported](media/feature_absent_icon.png)|
-|[Get-MailPublicFolder](/powershell/module/exchangepowershell/get-mailpublicfolder)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|![Not supported](media/feature_absent_icon.png)|
-|[Get-MailUser](/powershell/module/exchangepowershell/get-mailuser)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|![Not supported](media/feature_absent_icon.png)|
-|[Get-Recipient](/powershell/module/exchangepowershell/get-recipient)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|
-|[Get-RemoteMailbox](/powershell/module/exchangepowershell/get-remotemailbox)|![Supported](media/feature_present_icon.png)|![Not supported](media/feature_absent_icon.png)|![Not supported](media/feature_absent_icon.png)|
-|[Get-SecurityPrincipal](/powershell/module/exchangepowershell/get-securityprincipal)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|
-|[Get-UMMailbox](/powershell/module/exchangepowershell/get-ummailbox)|![Supported](media/feature_present_icon.png)<sup>\*</sup>|![Not supported](media/feature_absent_icon.png)|![Not supported](media/feature_absent_icon.png)|
-|[Get-User](/powershell/module/exchangepowershell/get-user)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|
-|[Get-UnifiedGroup](/powershell/module/exchangepowershell/get-unifiedgroup)|![Not supported](media/feature_absent_icon.png)|![Supported](media/feature_present_icon.png)|![Not supported](media/feature_absent_icon.png)|
+|[Get-CASMailbox](/powershell/module/exchangepowershell/get-casmailbox)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|![Not supported](media/feature-absent-icon.png)|
+|[Get-Contact](/powershell/module/exchangepowershell/get-contact)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|![Not supported](media/feature-absent-icon.png)|
+|[Get-DistributionGroup](/powershell/module/exchangepowershell/get-distributiongroup)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|![Not supported](media/feature-absent-icon.png)|
+|[Get-DynamicDistributionGroup](/powershell/module/exchangepowershell/get-dynamicdistributiongroup)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|![Not supported](media/feature-absent-icon.png)|
+|[Get-Group](/powershell/module/exchangepowershell/get-group)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|![Not supported](media/feature-absent-icon.png)|
+|[Get-LinkedUser](/powershell/module/exchangepowershell/get-linkeduser)|![Not supported](media/feature-absent-icon.png)|![Supported](media/feature-present-icon.png)|![Not supported](media/feature-absent-icon.png)|
+|[Get-Mailbox](/powershell/module/exchangepowershell/get-mailbox)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|![Not supported](media/feature-absent-icon.png)|
+|[Get-MailContact](/powershell/module/exchangepowershell/get-mailcontact)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|![Not supported](media/feature-absent-icon.png)|
+|[Get-MailPublicFolder](/powershell/module/exchangepowershell/get-mailpublicfolder)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|![Not supported](media/feature-absent-icon.png)|
+|[Get-MailUser](/powershell/module/exchangepowershell/get-mailuser)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|![Not supported](media/feature-absent-icon.png)|
+|[Get-Recipient](/powershell/module/exchangepowershell/get-recipient)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|
+|[Get-RemoteMailbox](/powershell/module/exchangepowershell/get-remotemailbox)|![Supported](media/feature-present-icon.png)|![Not supported](media/feature-absent-icon.png)|![Not supported](media/feature-absent-icon.png)|
+|[Get-SecurityPrincipal](/powershell/module/exchangepowershell/get-securityprincipal)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|
+|[Get-UMMailbox](/powershell/module/exchangepowershell/get-ummailbox)|![Supported](media/feature-present-icon.png)<sup>\*</sup>|![Not supported](media/feature-absent-icon.png)|![Not supported](media/feature-absent-icon.png)|
+|[Get-User](/powershell/module/exchangepowershell/get-user)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|
+|[Get-UnifiedGroup](/powershell/module/exchangepowershell/get-unifiedgroup)|![Not supported](media/feature-absent-icon.png)|![Supported](media/feature-present-icon.png)|![Not supported](media/feature-absent-icon.png)|
 
 This article describes the user and group properties that are _confirmed_ to work with the _Filter_ parameter on these cmdlets. Each property has its own section that lists the supported environments, the LDAP display name, the cmdlets where the property is available, and the values that you can filter on.
 
@@ -65,9 +65,9 @@ For filtering considerations for the nine exclusive **Get-EXO\*** cmdlets in the
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -83,9 +83,9 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -101,9 +101,9 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -117,9 +117,9 @@ After you have the device ID value, you can use it in the filter. For example, `
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -133,9 +133,9 @@ After you have the device ID value, you can use it in a filter. For example, `Ge
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -147,9 +147,9 @@ For example, `Get-CasMailbox -Filter 'ActiveSyncEnabled -eq $false'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -166,9 +166,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Mo
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -180,9 +180,9 @@ For example, `Get-CasMailbox -Filter 'ActiveSyncSuppressReadReceipt -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -196,9 +196,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ad
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -212,9 +212,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ad
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -226,9 +226,9 @@ For example, `Get-SecurityPrincipal -Filter 'AdminDisplayName -ne $null' | Forma
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -240,9 +240,9 @@ For example, `Get-User -Filter 'AdministrativeUnits -ne $null'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -254,9 +254,9 @@ For example, `Get-Mailbox -Filter 'AggregatedMailboxGuids -ne $null'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -268,9 +268,9 @@ For example, `Get-Recipient -Filter "Alias -like 'smith*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -282,9 +282,9 @@ For example, `Get-User -Filter "AllowUMCallsFromNonUsers -ne 'SearchEnabled'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -298,9 +298,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ma
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -316,9 +316,9 @@ In Exchange Online, you can filter only on the presence or absence of an archive
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -330,9 +330,9 @@ This property is used in on-premises Exchange environments to identify the Excha
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -346,9 +346,9 @@ You can find the GUID of archive mailboxes by running this command: `Get-Mailbox
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -362,9 +362,9 @@ You can find the names of archive mailboxes by running this command: `Get-Mailbo
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -378,9 +378,9 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -392,9 +392,9 @@ For example, `Get-Recipient -Filter "ArchiveRelease -eq 'E15'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -406,9 +406,9 @@ For example, `Get-Recipient -Filter "ArchiveState -eq 'HostedProvisioned'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -420,9 +420,9 @@ For example, `Get-Recipient -Filter "ArchiveStatus -eq 'Active'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -436,9 +436,9 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -450,9 +450,9 @@ For example, `Get-User -Filter "AssistantName -like 'Julia*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -464,9 +464,9 @@ For example, `Get-Mailbox -Filter 'AuditEnabled -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -478,9 +478,9 @@ You can't use the _Filter_ parameter to look for time span values for this prope
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -494,9 +494,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Au
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -508,9 +508,9 @@ Realistically, you can only use this value to filter on blank or non-blank value
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -524,9 +524,9 @@ For example, `Get-User -Filter "c -eq 'US'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -540,9 +540,9 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -554,9 +554,9 @@ For example, `Get-Mailbox -Filter 'CalendarRepairDisabled -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -570,9 +570,9 @@ For example, `Get-User -Filter "CertificateSubject -eq 'X509:<I>C=US,O=InternetC
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -584,9 +584,9 @@ For example, `Get-User -Filter "City -eq 'Redmond'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -598,9 +598,9 @@ For example, `Get-User -Filter "Company -like 'Contoso*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -612,9 +612,9 @@ For example, `Get-Mailbox -Filter 'ComplianceTagHoldApplied -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -626,9 +626,9 @@ For example, `Get-User -Filter 'ConsumerNetID -ne $null'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -642,9 +642,9 @@ For example, `Get-User -Filter "countryCode -eq 796"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -658,9 +658,9 @@ For example, `Get-User -Filter "CountryOrRegion -like 'United*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -672,9 +672,9 @@ For example, `Get-Recipient -Filter "CustomAttribute8 -like 'audited*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -688,9 +688,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ma
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -704,9 +704,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ma
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -718,9 +718,9 @@ For example, `Get-Mailbox -Filter "DeletedItemFlags -ne 'DatabaseDefault'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -732,9 +732,9 @@ For example, `Get-Mailbox -Filter 'DeliverToMailboxAndForward -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -746,9 +746,9 @@ For example, `Get-Recipient -Filter "Department -like 'Engineering*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -764,9 +764,9 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -782,9 +782,9 @@ In Exchange Online, you can filter only on the presence or absence of a disabled
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -798,9 +798,9 @@ You can find the GUID of archive mailboxes by running this command: `Get-Mailbox
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -812,9 +812,9 @@ For example, `Get-Recipient -Filter "DisplayName -like 'Julia*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -828,9 +828,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -842,9 +842,9 @@ For example, `Get-CASMailbox -Filter 'EcpEnabled -eq $false'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -860,9 +860,9 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -874,9 +874,9 @@ For example, `Get-Recipient -Filter 'EmailAddressPolicyEnabled -eq $false'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -890,9 +890,9 @@ You can find the entry IDs of mail-enabled public folders by running this comman
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -904,9 +904,9 @@ For example, `Get-CASMailbox -Filter "EwsApplicationAccessPolicy -eq 'EnforceAll
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -918,9 +918,9 @@ For example, `Get-CASMailbox -Filter "EwsEnabled -eq 1"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -936,9 +936,9 @@ Note that an object's Exchange GUID value is different than its GUID value. Also
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -950,9 +950,9 @@ For example, `Get-Mailbox -Filter "ExchangeUserAccountControl -eq 'AccountDisabl
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -970,9 +970,9 @@ For example, `Get-Recipient -Filter "ExchangeVersion -lt 88218628259840"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -988,9 +988,9 @@ You can find the **ExchangeLegacyDN** value by running this command: `Get-Exchan
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1002,9 +1002,9 @@ For example, `Get-Recipient -Filter "ExtensionCustomAttribute3 -like 'audited*'"
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1016,9 +1016,9 @@ For example, `Get-Recipient -Filter 'ExternalDirectoryObjectId -ne $null'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1032,9 +1032,9 @@ When you use a complete email address, you don't need to account for the `smtp:`
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1046,9 +1046,9 @@ For example, `Get-Mailbox -Filter "ExternalOofOptions -eq 'External'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1060,9 +1060,9 @@ For example, `Get-User -Filter "Fax -like '206*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1074,9 +1074,9 @@ For example, `Get-User -Filter "FirstName -like 'Chris*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1090,9 +1090,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1106,9 +1106,9 @@ When you use a complete email address, you don't need to account for the `smtp:`
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1124,9 +1124,9 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1142,9 +1142,9 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Not supported](media/feature_absent_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Not supported](media/feature-absent-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1156,9 +1156,9 @@ For example, `Get-UnifiedGroup -Filter "GroupExternalMemberCount -gt 0"`.
 
 **Applicable**:
 
-- ![Not supported](media/feature_absent_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Not supported](media/feature-absent-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1170,9 +1170,9 @@ For example, `Get-UnifiedGroup -Filter "GroupMemberCount -gt 100"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1186,9 +1186,9 @@ This multivalued property returns a match only if the property _equals_ the spec
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1204,9 +1204,9 @@ Note that an object's GUID value is different than its Exchange GUID value.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1218,9 +1218,9 @@ For example, `Get-Recipient -Filter 'HasActiveSyncDevicePartnership -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1232,9 +1232,9 @@ For example, `Get-Recipient -Filter 'HiddenFromAddressListsEnabled -eq $true'`.
 
 **Applicable**:
 
-- ![Not supported](media/feature_absent_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Not supported](media/feature-absent-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1246,9 +1246,9 @@ For example, `Get-UnifiedGroup -Filter 'HiddenGroupMembershipEnabled -eq $true'`
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1260,9 +1260,9 @@ For example, `Get-User -Filter "HomePhone -like '206*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1276,9 +1276,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1290,9 +1290,9 @@ For example, `Get-MailPublicFolder -Filter 'IgnoreMissingFolderLink -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1304,9 +1304,9 @@ For example, `Get-CASMailbox -Filter 'ImapEnabled -eq $false'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1318,9 +1318,9 @@ For example, `Get-Mailbox -Filter 'ImmutableId -ne $null'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1332,9 +1332,9 @@ For example, `Get-Mailbox -Filter 'IncludeInGarbageCollection -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1346,9 +1346,9 @@ For example, `Get-User -Filter "Initials -like 'B.'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1364,9 +1364,9 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1382,9 +1382,9 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1396,9 +1396,9 @@ For example, `Get-User -Filter 'IsDirSynced -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1410,9 +1410,9 @@ For example, `Get-Mailbox -Filter 'IsExcludedFromServingHierarchy -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1424,9 +1424,9 @@ For example, `Get-Mailbox -Filter 'IsHierarchyReady -eq $false'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1438,9 +1438,9 @@ For example, `Get-Mailbox -Filter 'IsHierarchySyncEnabled -eq $false'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1452,9 +1452,9 @@ For example, `Get-Mailbox -Filter 'IsInactiveMailbox -eq $false'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1466,9 +1466,9 @@ For example, `Get-Mailbox -Filter 'IsLinked -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1480,9 +1480,9 @@ For example, `Get-Mailbox -Filter 'IsMailboxEnabled -eq $false'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1494,9 +1494,9 @@ For example, `Get-Mailbox -Filter 'IsResource -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1508,9 +1508,9 @@ For example, `Get-User -Filter 'IsSecurityPrincipal -eq $false'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1522,9 +1522,9 @@ For example, `Get-Mailbox -Filter 'IsShared -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1536,9 +1536,9 @@ For example, `Get-Mailbox -Filter 'IsSoftDeletedByDisable -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1550,9 +1550,9 @@ For example, `Get-Mailbox -Filter 'IsSoftDeletedByRemove -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1566,9 +1566,9 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1580,9 +1580,9 @@ This property uses an SMTP email address. For example, `Get-Mailbox -Filter "Jou
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1598,9 +1598,9 @@ For single values, this multivalued property returns a match only if the propert
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1612,9 +1612,9 @@ For example, `Get-Mailbox -Filter 'LastExchangeChangedTime -ne $null'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1626,9 +1626,9 @@ For example, `Get-User -Filter "LastName -like 'Martin*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1644,9 +1644,9 @@ You can find LegacyExchangeDN values for users by running this command: `Get-Use
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1658,9 +1658,9 @@ For example, `Get-Mailbox -Filter "LitigationHoldDate -gt '8/13/2017'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1672,9 +1672,9 @@ For example, `Get-Mailbox -Filter 'LitigationHoldEnabled -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1686,9 +1686,9 @@ This property uses the user principal name of the litigation hold owner. For exa
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1700,9 +1700,9 @@ For example, `Get-Mailbox -Filter 'MailboxContainerGUID -ne $null'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1716,9 +1716,9 @@ You can find the names of migration batches by running the **Get-MigrationBatch*
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1734,9 +1734,9 @@ This multivalued property returns a match only if the property _equals_ the spec
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1748,9 +1748,9 @@ For example, `Get-Mailbox -Filter "MailboxMoveRemoteHostName -eq 'mail.contoso.c
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1764,9 +1764,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ma
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1778,9 +1778,9 @@ For example, `Get-Mailbox -Filter "MailboxMoveStatus -eq 'Completed'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1794,9 +1794,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ma
 
 **Applicable**:
 
-- ![Not supported](media/feature_absent_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Not supported](media/feature-absent-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1812,9 +1812,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ma
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1826,9 +1826,9 @@ For example, `Get-Recipient -Filter "MailboxRelease -eq 'E15'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1840,9 +1840,9 @@ When you use this property in a filter, you need to account for the leading and 
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1858,9 +1858,9 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1878,9 +1878,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ma
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1894,9 +1894,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1908,9 +1908,9 @@ For example, `Get-CASMailbox -Filter 'MAPIEnabled -eq $false'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1924,9 +1924,9 @@ This value is blank ( `$null`) for mailboxes with associated user accounts, and 
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1938,9 +1938,9 @@ For example, `Get-Mailbox -Filter "MaxBlockedSenders -gt 0"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1954,9 +1954,9 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1968,9 +1968,9 @@ For example, `Get-Mailbox -Filter "MaxSafeSenders -gt 0"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1984,9 +1984,9 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -1998,9 +1998,9 @@ For example, `Get-DistributionGroup -Filter "MemberDepartRestriction -eq 'Approv
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2012,9 +2012,9 @@ For example, `Get-DistributionGroup -Filter "MemberJoinRestriction -eq 'Approval
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2030,9 +2030,9 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2048,9 +2048,9 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2062,9 +2062,9 @@ For example, `Get-User -Filter "MobilePhone -like '555*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2080,9 +2080,9 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2094,9 +2094,9 @@ For example, `Get-DistributionGroup -Filter 'ModerationEnabled -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2108,9 +2108,9 @@ For example, `Get-User -Filter "Name -like 'Laura*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2124,9 +2124,9 @@ For example, `Get-User -Filter 'NetId -ne $null'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2138,9 +2138,9 @@ For example, `Get-User -Filter "Notes -like 'Events Team*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2161,9 +2161,9 @@ For example, `Get-Recipient -Filter "ObjectCategory -eq 'contoso.com/Configurati
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2179,9 +2179,9 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2193,9 +2193,9 @@ For example, `Get-User -Filter "Office -like '22*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2209,9 +2209,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Of
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2223,9 +2223,9 @@ For example, `Get-MailPublicFolder -Filter 'OnPremisesObjectId -ne $null'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server<sup>\*</sup>
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server<sup>\*</sup>
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 <sup>\*</sup> **Get-UMMailbox** is available only in Exchange Server 2016 and earlier. Unified Messaging was removed in Exchange Server 2019.
 
@@ -2239,9 +2239,9 @@ For example, `Get-UMMailbox -Filter "OperatorNumber -eq 5"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2253,9 +2253,9 @@ For example, `Get-User -Filter "OtherFax -like '206*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2267,9 +2267,9 @@ For example, `Get-User -Filter "OtherHomePhone -like '206*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2281,9 +2281,9 @@ For example, `Get-User -Filter "OtherTelephone -like '206*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2295,9 +2295,9 @@ The filter operates backwards. For example, `Get-CASMailbox -Filter 'OWAEnabled 
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2309,9 +2309,9 @@ For example, `Get-CASMailbox -Filter 'OWAForDevicesEnabled -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2325,9 +2325,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ow
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2339,9 +2339,9 @@ For example, `Get-User -Filter "Pager -like '206*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2357,9 +2357,9 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2371,9 +2371,9 @@ For example, `Get-User -Filter "Phone -like '206*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server<sup>\*</sup>
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server<sup>\*</sup>
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 <sup>\*</sup> **Get-UMMailbox** is available only in Exchange Server 2016 and earlier. Unified Messaging was removed in Exchange Server 2019.
 
@@ -2387,9 +2387,9 @@ For example, `Get-UMMailbox -Filter "PhoneProviderId -like '206*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2401,9 +2401,9 @@ For example, `Get-User -Filter "PhoneticDisplayName -like 'Lila*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2415,9 +2415,9 @@ For example, `Get-Recipient -Filter 'PoliciesExcluded -ne $null'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2429,9 +2429,9 @@ For example, `Get-Recipient -Filter 'PoliciesIncluded -eq $null'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2443,9 +2443,9 @@ For example, `Get-CASMailbox -Filter 'POPEnabled -eq $false'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2457,9 +2457,9 @@ For example, `Get-Recipient -Filter "PostalCode -eq 90210"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2471,9 +2471,9 @@ For example, `Get-User -Filter "PostOfficeBox -like '555*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2487,9 +2487,9 @@ For example, `Get-User -Filter "PreviousRecipientTypeDetails -eq 'UserMailbox'"`
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2501,9 +2501,9 @@ Don't use the _PrimarySmtpAddress_ property; use the _EmailAddresses_ property i
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2517,9 +2517,9 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2533,9 +2533,9 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2549,9 +2549,9 @@ For example, `Get-Mailbox -Filter "ProtocolSettings -like 'POP3*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2569,9 +2569,9 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2585,9 +2585,9 @@ For example, `Get-Mailbox -Filter 'QueryBaseDN -ne $null'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2601,9 +2601,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Or
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2615,9 +2615,9 @@ For example, `Get-Mailbox -Filter "RecipientLimits -ne 'Unlimited'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2629,9 +2629,9 @@ For example, `Get-Recipient -Filter "RecipientType -eq 'MailContact'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2645,9 +2645,9 @@ For example, `Get-Recipient -Filter "RecipientTypeDetails -eq 'SharedMailbox'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2661,9 +2661,9 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2677,9 +2677,9 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2695,9 +2695,9 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2713,9 +2713,9 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2727,9 +2727,9 @@ This filter requires the distinguished name of the remote account policy. For ex
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2741,9 +2741,9 @@ For example, `Get-User -Filter 'RemotePowerShellEnabled -eq $false'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2755,9 +2755,9 @@ For example, `Get-RemoteMailbox -Filter "RemoteRecipientType -eq 'ProvisionMailb
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2769,9 +2769,9 @@ For example, `Get-DistributionGroup -Filter 'ReportToManagerEnabled -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2783,9 +2783,9 @@ For example, `Get-DistributionGroup -Filter 'ReportToOriginatorEnabled -eq $fals
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2797,9 +2797,9 @@ This property is displayed as **RequireSenderAuthenticationEnabled** in the resu
 
 **Applicable**:
 
-- ![Not supported](media/feature_absent_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Not supported](media/feature-absent-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2811,9 +2811,9 @@ For example, `Get-UnifiedGroup -Filter "ResourceBehaviorOptions -eq 'CalendarMem
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2825,9 +2825,9 @@ For example, `Get-Mailbox -Filter "ResourceCapacity -gt 15"`
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2841,9 +2841,9 @@ When you search for values, use the custom resource property that's assigned to 
 
 **Applicable**:
 
-- ![Not supported](media/feature_absent_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Not supported](media/feature-absent-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2855,9 +2855,9 @@ For example, `Get-UnifiedGroup -Filter "ResourceProvisioningOptions -eq 'Team'"`
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2869,9 +2869,9 @@ For example, `Get-Mailbox -Filter "ResourceType -eq 'Equipment'"`
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2883,9 +2883,9 @@ You can't use the _Filter_ parameter to look for time span values for this prope
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2897,9 +2897,9 @@ For example, `Get-Mailbox -Filter "RetentionComment -like '7 years*'"`
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2913,9 +2913,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2927,9 +2927,9 @@ For example, `Get-Mailbox -Filter "RetentionUrl -like 'https://intranet.contoso.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2943,9 +2943,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ro
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2957,9 +2957,9 @@ You can't use the _Filter_ parameter to look for size values of this property. I
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2971,9 +2971,9 @@ Realistically, you can only use this value to filter on blank or non-blank value
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2985,9 +2985,9 @@ Realistically, you can only use this value to filter on blank or non-blank value
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -2999,9 +2999,9 @@ For example, `Get-Recipient -Filter "SamAccountName -like 'laura*'"`
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3013,9 +3013,9 @@ This property is displayed as **SCLDeleteThreshold** in the results of the comma
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3027,9 +3027,9 @@ This property is displayed as **SCLJunkThreshold** in the results of the command
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3041,9 +3041,9 @@ This property is displayed as **SCLQuarantineThreshold** in the results of the c
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3055,9 +3055,9 @@ This property is displayed as **SCLRejectThreshold** in the results of the comma
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3069,9 +3069,9 @@ For example, `Get-DistributionGroup -Filter 'SendOofMessageToOriginatorEnabled -
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3085,9 +3085,9 @@ This is an example of a complete **ServerLegacyDN** value: `/o=Contoso Corporati
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3099,9 +3099,9 @@ For example, `Get-Recipient -Filter "ServerName -eq 'Mailbox01'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3118,9 +3118,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Sh
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3132,9 +3132,9 @@ For example, `Get-User -Filter "Sid -eq 's-1-5-21-3628364307-1600040346-81925102
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3148,9 +3148,9 @@ Filtering by the `$null` value on this property is supported only in Exchange Se
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3162,9 +3162,9 @@ For example, `Get-User -Filter "SimpleDisplayName -like 'lila*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3176,9 +3176,9 @@ For example, `Get-Mailbox -Filter 'SingleItemRecoveryEnabled -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3190,9 +3190,9 @@ For example, `Get-User -Filter 'SKUAssigned -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3204,9 +3204,9 @@ For example, `Get-Mailbox -Filter 'SourceAnchor -ne $null'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3218,9 +3218,9 @@ For example, `Get-User -Filter "StateOrProvince -like 'Carolina*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3232,9 +3232,9 @@ For example, `Get-User -Filter "StreetAddress -like '36th Ave NE*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3246,9 +3246,9 @@ For example, `Get-User -Filter "StsRefreshTokensValidFrom -gt '8/1/2017'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3260,9 +3260,9 @@ For example, `Get-User -Filter "TelephoneAssistant -like '206*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3276,9 +3276,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Th
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3290,9 +3290,9 @@ For example, `Get-User -Filter "Title -eq 'Dr.'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier. Unified Messaging was removed in Exchange 2019)
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server (Exchange 2016 or earlier. Unified Messaging was removed in Exchange 2019)
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3304,9 +3304,9 @@ For example, `Get-UMMailbox -Filter "UMAddresses -like 'EUM:*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier. Unified Messaging was removed in Exchange 2019)
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server (Exchange 2016 or earlier. Unified Messaging was removed in Exchange 2019)
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3320,9 +3320,9 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier. Unified Messaging was removed in Exchange 2019)
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server (Exchange 2016 or earlier. Unified Messaging was removed in Exchange 2019)
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3336,9 +3336,9 @@ Although this property is multi-valued, the filter returns a match if the proper
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier. Unified Messaging was removed in Exchange 2019)
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server (Exchange 2016 or earlier. Unified Messaging was removed in Exchange 2019)
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3350,9 +3350,9 @@ For example, `Get-Mailbox -Filter 'UMEnabled -eq $true'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier. Unified Messaging was removed in Exchange 2019)
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server (Exchange 2016 or earlier. Unified Messaging was removed in Exchange 2019)
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3366,9 +3366,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-UM
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier. Unified Messaging was removed in Exchange 2019)
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server (Exchange 2016 or earlier. Unified Messaging was removed in Exchange 2019)
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3382,9 +3382,9 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-UM
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3396,9 +3396,9 @@ For example, `Get-User -Filter "UpgradeRequest -ne 'None'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3410,9 +3410,9 @@ For example, `Get-User -Filter "UpgradeStatus -ne 'None'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3426,9 +3426,9 @@ For example, `Get-Recipient -Filter 'UsageLocation -eq "US"'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Not supported](media/feature_absent_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3440,9 +3440,9 @@ For example, `Get-Mailbox -Filter 'UseDatabaseQuotaDefaults -eq $false'`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3458,9 +3458,9 @@ This multivalued property returns a match only if the property _equals_ the spec
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3472,9 +3472,9 @@ For example, `Get-User -Filter "UserPrincipalName -like 'julia@*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3495,9 +3495,9 @@ In Exchange Online, this property holds a legacy hosted voicemail value and is t
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3509,9 +3509,9 @@ For example, `Get-User -Filter "WebPage -like 'https://intranet.contoso.com/*'"`
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3523,9 +3523,9 @@ For example, `Get-Recipient -Filter "WhenChanged -gt '8/1/2017 2:00:00 PM'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3537,9 +3537,9 @@ For example, `Get-Recipient -Filter "WhenChangedUTC -gt '8/1/2017 2:00:00 PM'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3551,9 +3551,9 @@ For example, `Get-Recipient -Filter "WhenCreated -gt '8/1/2017 2:00:00 PM'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3565,9 +3565,9 @@ For example, `Get-Recipient -Filter "WhenCreatedUTC -gt '8/1/2017 2:00:00 PM'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3579,9 +3579,9 @@ For example, `Get-Recipient -Filter "WhenMailboxCreated -gt '8/1/2017 2:00:00 PM
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3595,9 +3595,9 @@ For example, `Get-Mailbox -SoftDeletedMailbox -Filter "WhenSoftDeleted -gt '8/1/
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|
@@ -3609,9 +3609,9 @@ For example, `Get-Mailbox -Filter "WindowsEmailAddress -like '@fabrikam.com*'"`.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
-- ![Supported](media/feature_present_icon.png) Security & Compliance
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Security & Compliance
 
 |LDAP display name|Cmdlets|Value|
 |---|---|---|

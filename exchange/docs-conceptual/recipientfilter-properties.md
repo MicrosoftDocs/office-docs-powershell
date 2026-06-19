@@ -16,14 +16,14 @@ You use the _RecipientFilter_ parameter to create OPATH filters based on the pro
 
 |Cmdlet|Exchange Server|Exchange Online|
 |---|:---:|:---:|
-|[New-AddressList](/powershell/module/exchangepowershell/new-addresslist)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|
-|[Set-AddressList](/powershell/module/exchangepowershell/set-addresslist)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|
-|[New-DynamicDistributionGroup](/powershell/module/exchangepowershell/new-dynamicdistributiongroup)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|
-|[Set-DynamicDistributionGroup](/powershell/module/exchangepowershell/set-dynamicdistributiongroup)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|
-|[New-EmailAddressPolicy](/powershell/module/exchangepowershell/new-emailaddresspolicy)|![Supported](media/feature_present_icon.png)|![Not supported](media/feature_absent_icon.png)<sup>\*</sup>|
-|[Set-EmailAddressPolicy](/powershell/module/exchangepowershell/set-emailaddresspolicy)|![Supported](media/feature_present_icon.png)|![Not supported](media/feature_absent_icon.png)<sup>\*</sup>|
-|[New-GlobalAddressList](/powershell/module/exchangepowershell/new-globaladdresslist)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|
-|[Set-GlobalAddressList](/powershell/module/exchangepowershell/set-globaladdresslist)|![Supported](media/feature_present_icon.png)|![Supported](media/feature_present_icon.png)|
+|[New-AddressList](/powershell/module/exchangepowershell/new-addresslist)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|
+|[Set-AddressList](/powershell/module/exchangepowershell/set-addresslist)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|
+|[New-DynamicDistributionGroup](/powershell/module/exchangepowershell/new-dynamicdistributiongroup)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|
+|[Set-DynamicDistributionGroup](/powershell/module/exchangepowershell/set-dynamicdistributiongroup)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|
+|[New-EmailAddressPolicy](/powershell/module/exchangepowershell/new-emailaddresspolicy)|![Supported](media/feature-present-icon.png)|![Not supported](media/feature-absent-icon.png)<sup>\*</sup>|
+|[Set-EmailAddressPolicy](/powershell/module/exchangepowershell/set-emailaddresspolicy)|![Supported](media/feature-present-icon.png)|![Not supported](media/feature-absent-icon.png)<sup>\*</sup>|
+|[New-GlobalAddressList](/powershell/module/exchangepowershell/new-globaladdresslist)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|
+|[Set-GlobalAddressList](/powershell/module/exchangepowershell/set-globaladdresslist)|![Supported](media/feature-present-icon.png)|![Supported](media/feature-present-icon.png)|
 
 <sup>\*</sup> In Exchange Online, the _RecipientFilter_ parameter isn't available on the **\*-EmailAddressPolicy** cmdlets (email address policies in Exchange Online apply only to Microsoft 365 Groups).
 
@@ -61,8 +61,8 @@ For filtering considerations for the nine exclusive **Get-EXO\*** cmdlets in the
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -76,8 +76,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -91,8 +91,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -102,8 +102,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -113,8 +113,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -124,8 +124,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -141,8 +141,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ac
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -152,8 +152,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ac
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -167,8 +167,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ad
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -182,8 +182,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ad
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -193,8 +193,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ad
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -208,8 +208,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ad
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -219,8 +219,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ad
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -232,8 +232,8 @@ This property contains the recipient's Exchange alias (also known as the mail ni
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -243,8 +243,8 @@ This property contains the recipient's Exchange alias (also known as the mail ni
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -258,8 +258,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ma
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -275,8 +275,8 @@ In Exchange Online, you can filter only on the presence or absence of an archive
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -286,8 +286,8 @@ In Exchange Online, you can filter only on the presence or absence of an archive
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -297,8 +297,8 @@ In Exchange Online, you can filter only on the presence or absence of an archive
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -308,8 +308,8 @@ In Exchange Online, you can filter only on the presence or absence of an archive
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -319,8 +319,8 @@ In Exchange Online, you can filter only on the presence or absence of an archive
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -330,8 +330,8 @@ In Exchange Online, you can filter only on the presence or absence of an archive
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -341,8 +341,8 @@ In Exchange Online, you can filter only on the presence or absence of an archive
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -352,8 +352,8 @@ In Exchange Online, you can filter only on the presence or absence of an archive
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -363,8 +363,8 @@ In Exchange Online, you can filter only on the presence or absence of an archive
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -376,8 +376,8 @@ The name of the recipient's assistant.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -387,8 +387,8 @@ The name of the recipient's assistant.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -400,8 +400,8 @@ The value of this property is a time span: `dd.hh:mm:ss`, where `dd` is days, `h
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -415,8 +415,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Au
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -428,8 +428,8 @@ This property contains the two-letter country/region designation from the Intern
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -439,8 +439,8 @@ This property contains the two-letter country/region designation from the Intern
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -450,8 +450,8 @@ This property contains the two-letter country/region designation from the Intern
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -463,8 +463,8 @@ This property contains the DER-encoded X.509 v3 certificates issued to the user.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -476,8 +476,8 @@ The X.509 certificate published for the user account (visible on the **Published
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -489,8 +489,8 @@ The recipient's city.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -502,8 +502,8 @@ The name of the recipient's country or region. You can locate valid _Co_ values 
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -513,8 +513,8 @@ The name of the recipient's country or region. You can locate valid _Co_ values 
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -526,8 +526,8 @@ The recipient's company name.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -537,8 +537,8 @@ The recipient's company name.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -550,8 +550,8 @@ This calculated property filters on the country/region using either the two-lett
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -563,8 +563,8 @@ These properties contain custom attributes that you can add to a recipient.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -580,8 +580,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ma
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -595,8 +595,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Da
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -610,8 +610,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ma
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -621,8 +621,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ma
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -632,8 +632,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ma
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -645,8 +645,8 @@ The recipient's department.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -656,8 +656,8 @@ The recipient's department.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -671,8 +671,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -688,8 +688,8 @@ In Exchange Online, you can filter only on the presence or absence of a disabled
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -699,8 +699,8 @@ In Exchange Online, you can filter only on the presence or absence of a disabled
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -710,8 +710,8 @@ In Exchange Online, you can filter only on the presence or absence of a disabled
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -723,8 +723,8 @@ With the **\*-DynamicDistributionGroup** cmdlets, you can also use a text string
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -734,8 +734,8 @@ With the **\*-DynamicDistributionGroup** cmdlets, you can also use a text string
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -747,8 +747,8 @@ This property contains a date/time value.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -760,8 +760,8 @@ This property contains a date/time value.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -771,8 +771,8 @@ This property contains a date/time value.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -784,8 +784,8 @@ This property contains the recipient's email addresses (the primary email addres
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -795,8 +795,8 @@ This property contains the recipient's email addresses (the primary email addres
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -806,8 +806,8 @@ This property contains the recipient's email addresses (the primary email addres
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -817,8 +817,8 @@ This property contains the recipient's email addresses (the primary email addres
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -828,8 +828,8 @@ This property contains the recipient's email addresses (the primary email addres
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -839,8 +839,8 @@ This property contains the recipient's email addresses (the primary email addres
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -850,8 +850,8 @@ This property contains the recipient's email addresses (the primary email addres
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -861,8 +861,8 @@ This property contains the recipient's email addresses (the primary email addres
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -872,8 +872,8 @@ This property contains the recipient's email addresses (the primary email addres
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -885,8 +885,8 @@ In Exchange Online, these attributes are typically blank because Microsoft Entra
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -896,8 +896,8 @@ In Exchange Online, these attributes are typically blank because Microsoft Entra
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -909,8 +909,8 @@ This property contains the external email address for mail contacts and mail use
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -920,8 +920,8 @@ This property contains the external email address for mail contacts and mail use
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -931,8 +931,8 @@ This property contains the external email address for mail contacts and mail use
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -944,8 +944,8 @@ The recipient's first name.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -959,8 +959,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -970,8 +970,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -985,8 +985,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Of
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1000,8 +1000,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1011,8 +1011,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1022,8 +1022,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1033,8 +1033,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1046,8 +1046,8 @@ This property specifies whether the recipient is visible in the global address l
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1057,8 +1057,8 @@ This property specifies whether the recipient is visible in the global address l
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1070,8 +1070,8 @@ You must use the object's distinguished name (DN) in the filter. The object's na
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1081,8 +1081,8 @@ You must use the object's distinguished name (DN) in the filter. The object's na
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1094,8 +1094,8 @@ With the **\*-DynamicDistributionGroup** cmdlets, you can also use a text string
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1105,8 +1105,8 @@ With the **\*-DynamicDistributionGroup** cmdlets, you can also use a text string
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1116,8 +1116,8 @@ With the **\*-DynamicDistributionGroup** cmdlets, you can also use a text string
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1127,8 +1127,8 @@ With the **\*-DynamicDistributionGroup** cmdlets, you can also use a text string
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1138,8 +1138,8 @@ With the **\*-DynamicDistributionGroup** cmdlets, you can also use a text string
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1149,8 +1149,8 @@ With the **\*-DynamicDistributionGroup** cmdlets, you can also use a text string
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1160,8 +1160,8 @@ With the **\*-DynamicDistributionGroup** cmdlets, you can also use a text string
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1173,8 +1173,8 @@ With the **\*-DynamicDistributionGroup** cmdlets, you can't use wildcards for th
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1186,8 +1186,8 @@ For valid values, see the Remarks section in [Encoding Class](/dotnet/api/system
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1197,8 +1197,8 @@ For valid values, see the Remarks section in [Encoding Class](/dotnet/api/system
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1208,8 +1208,8 @@ For valid values, see the Remarks section in [Encoding Class](/dotnet/api/system
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1219,8 +1219,8 @@ For valid values, see the Remarks section in [Encoding Class](/dotnet/api/system
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1230,8 +1230,8 @@ For valid values, see the Remarks section in [Encoding Class](/dotnet/api/system
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1241,8 +1241,8 @@ For valid values, see the Remarks section in [Encoding Class](/dotnet/api/system
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1254,8 +1254,8 @@ This property specifies whether the user is mailbox-enabled.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1265,8 +1265,8 @@ This property specifies whether the user is mailbox-enabled.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1276,8 +1276,8 @@ This property specifies whether the user is mailbox-enabled.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1287,8 +1287,8 @@ This property specifies whether the user is mailbox-enabled.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1298,8 +1298,8 @@ This property specifies whether the user is mailbox-enabled.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1309,8 +1309,8 @@ This property specifies whether the user is mailbox-enabled.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1322,8 +1322,8 @@ This property contains the language preference for this mailbox in the format `<
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1333,8 +1333,8 @@ This property contains the language preference for this mailbox in the format `<
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1344,8 +1344,8 @@ This property contains the language preference for this mailbox in the format `<
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1355,8 +1355,8 @@ This property contains the language preference for this mailbox in the format `<
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1366,8 +1366,8 @@ This property contains the language preference for this mailbox in the format `<
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1377,8 +1377,8 @@ This property contains the language preference for this mailbox in the format `<
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1388,8 +1388,8 @@ This property contains the language preference for this mailbox in the format `<
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1399,8 +1399,8 @@ This property contains the language preference for this mailbox in the format `<
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1412,8 +1412,8 @@ For valid values, see [Microsoft Locale ID Values](/openspecs/office_standards/m
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1423,8 +1423,8 @@ For valid values, see [Microsoft Locale ID Values](/openspecs/office_standards/m
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1434,8 +1434,8 @@ For valid values, see [Microsoft Locale ID Values](/openspecs/office_standards/m
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1445,8 +1445,8 @@ For valid values, see [Microsoft Locale ID Values](/openspecs/office_standards/m
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1460,8 +1460,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ma
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1471,8 +1471,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ma
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1486,8 +1486,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ma
 
 **Applicable**:
 
-- ![Not supported](media/feature_absent_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Not supported](media/feature-absent-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1503,8 +1503,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ma
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1514,8 +1514,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ma
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1525,8 +1525,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ma
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1542,8 +1542,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1559,8 +1559,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1570,8 +1570,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1581,8 +1581,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1592,8 +1592,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1603,8 +1603,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1614,8 +1614,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1625,8 +1625,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1636,8 +1636,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1647,8 +1647,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1660,8 +1660,8 @@ You must use the distinguished name (DN). This property works only with groups t
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1675,8 +1675,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1686,8 +1686,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1697,8 +1697,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1708,8 +1708,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1719,8 +1719,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1730,8 +1730,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1745,8 +1745,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1756,8 +1756,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1769,8 +1769,8 @@ The recipient's unique name.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1782,8 +1782,8 @@ This property is populated for Exchange Online mailboxes in hybrid environments.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1793,8 +1793,8 @@ This property is populated for Exchange Online mailboxes in hybrid environments.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1808,8 +1808,8 @@ With the **\*-DynamicDistributionGroup** cmdlets, you can also use a text string
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1831,8 +1831,8 @@ With the **\*-DynamicDistributionGroup** cmdlets, you can also use a text string
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1842,8 +1842,8 @@ With the **\*-DynamicDistributionGroup** cmdlets, you can also use a text string
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1859,8 +1859,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Of
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1870,8 +1870,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Of
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1881,8 +1881,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Of
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1892,8 +1892,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Of
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1903,8 +1903,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Of
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1914,8 +1914,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Of
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1925,8 +1925,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Of
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1940,8 +1940,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ow
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1951,8 +1951,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ow
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1962,8 +1962,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ow
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1973,8 +1973,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ow
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1984,8 +1984,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ow
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -1995,8 +1995,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ow
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2006,8 +2006,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ow
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2017,8 +2017,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ow
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2028,8 +2028,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ow
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2039,8 +2039,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ow
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2050,8 +2050,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ow
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2061,8 +2061,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ow
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2072,8 +2072,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ow
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2083,8 +2083,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ow
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2094,8 +2094,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ow
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2107,8 +2107,8 @@ For domain users, the value of this property is typically 513, which corresponds
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2120,8 +2120,8 @@ Don't use the _PrimarySmtpAddress_ property; use the _EmailAddresses_ property i
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2131,8 +2131,8 @@ Don't use the _PrimarySmtpAddress_ property; use the _EmailAddresses_ property i
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2142,8 +2142,8 @@ Don't use the _PrimarySmtpAddress_ property; use the _EmailAddresses_ property i
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2153,8 +2153,8 @@ Don't use the _PrimarySmtpAddress_ property; use the _EmailAddresses_ property i
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2168,8 +2168,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2179,8 +2179,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2194,8 +2194,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Or
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2207,8 +2207,8 @@ This property is based on a constructed Active Directory attribute and doesn't c
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2218,8 +2218,8 @@ This property is based on a constructed Active Directory attribute and doesn't c
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2229,8 +2229,8 @@ This property is based on a constructed Active Directory attribute and doesn't c
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2246,8 +2246,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Or
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2257,8 +2257,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Or
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2268,8 +2268,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Or
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2281,8 +2281,8 @@ This property specifies the maximum number of recipients allowed in messages tha
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2292,8 +2292,8 @@ This property specifies the maximum number of recipients allowed in messages tha
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2303,8 +2303,8 @@ This property specifies the maximum number of recipients allowed in messages tha
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2314,8 +2314,8 @@ This property specifies the maximum number of recipients allowed in messages tha
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2325,8 +2325,8 @@ This property specifies the maximum number of recipients allowed in messages tha
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2340,8 +2340,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2355,8 +2355,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Re
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2368,8 +2368,8 @@ Friendly identifier values like name don't work in the filter.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2379,8 +2379,8 @@ Friendly identifier values like name don't work in the filter.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2390,8 +2390,8 @@ Friendly identifier values like name don't work in the filter.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2401,8 +2401,8 @@ Friendly identifier values like name don't work in the filter.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2412,8 +2412,8 @@ Friendly identifier values like name don't work in the filter.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2423,8 +2423,8 @@ Friendly identifier values like name don't work in the filter.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2434,8 +2434,8 @@ Friendly identifier values like name don't work in the filter.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2445,8 +2445,8 @@ Friendly identifier values like name don't work in the filter.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2456,8 +2456,8 @@ Friendly identifier values like name don't work in the filter.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2467,8 +2467,8 @@ Friendly identifier values like name don't work in the filter.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2478,8 +2478,8 @@ Friendly identifier values like name don't work in the filter.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2489,8 +2489,8 @@ Friendly identifier values like name don't work in the filter.
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2502,8 +2502,8 @@ The value of this property is a time span: `dd.hh:mm:ss`, where `dd` is days, `h
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2513,8 +2513,8 @@ The value of this property is a time span: `dd.hh:mm:ss`, where `dd` is days, `h
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2524,8 +2524,8 @@ The value of this property is a time span: `dd.hh:mm:ss`, where `dd` is days, `h
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2535,8 +2535,8 @@ The value of this property is a time span: `dd.hh:mm:ss`, where `dd` is days, `h
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2550,8 +2550,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ro
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2561,8 +2561,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Ro
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2574,8 +2574,8 @@ A user's safe recipients list is one-way hashed with SHA-256 before it's stored 
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2587,8 +2587,8 @@ A user's safe senders list is one-way hashed with SHA-256 before it's stored as 
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2600,8 +2600,8 @@ This property specifies an identifier that's compatible with older versions of M
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2611,8 +2611,8 @@ This property specifies an identifier that's compatible with older versions of M
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2622,8 +2622,8 @@ This property specifies an identifier that's compatible with older versions of M
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2633,8 +2633,8 @@ This property specifies an identifier that's compatible with older versions of M
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2644,8 +2644,8 @@ This property specifies an identifier that's compatible with older versions of M
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2655,8 +2655,8 @@ This property specifies an identifier that's compatible with older versions of M
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2666,8 +2666,8 @@ This property specifies an identifier that's compatible with older versions of M
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2677,8 +2677,8 @@ This property specifies an identifier that's compatible with older versions of M
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2688,8 +2688,8 @@ This property specifies an identifier that's compatible with older versions of M
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2699,8 +2699,8 @@ This property specifies an identifier that's compatible with older versions of M
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2714,8 +2714,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Sh
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2725,8 +2725,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Sh
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2736,8 +2736,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Sh
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2747,8 +2747,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Sh
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2760,8 +2760,8 @@ This property contains the binary encoded S/MIME certificates that are issued to
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2771,8 +2771,8 @@ This property contains the binary encoded S/MIME certificates that are issued to
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2782,8 +2782,8 @@ This property contains the binary encoded S/MIME certificates that are issued to
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2793,8 +2793,8 @@ This property contains the binary encoded S/MIME certificates that are issued to
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2804,8 +2804,8 @@ This property contains the binary encoded S/MIME certificates that are issued to
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2815,8 +2815,8 @@ This property contains the binary encoded S/MIME certificates that are issued to
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2830,8 +2830,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Th
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2841,8 +2841,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Th
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier; Unified Messaging was removed in Exchange 2019)
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server (Exchange 2016 or earlier; Unified Messaging was removed in Exchange 2019)
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2852,8 +2852,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Th
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier; Unified Messaging was removed in Exchange 2019)
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server (Exchange 2016 or earlier; Unified Messaging was removed in Exchange 2019)
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2863,8 +2863,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Th
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier; Unified Messaging was removed in Exchange 2019)
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server (Exchange 2016 or earlier; Unified Messaging was removed in Exchange 2019)
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2874,8 +2874,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-Th
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier; Unified Messaging was removed in Exchange 2019)
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server (Exchange 2016 or earlier; Unified Messaging was removed in Exchange 2019)
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2887,8 +2887,8 @@ This property specifies whether Unified Messaging (UM) is enabled for this mailb
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier; Unified Messaging was removed in Exchange 2019)
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server (Exchange 2016 or earlier; Unified Messaging was removed in Exchange 2019)
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2898,8 +2898,8 @@ This property specifies whether Unified Messaging (UM) is enabled for this mailb
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier; Unified Messaging was removed in Exchange 2019)
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server (Exchange 2016 or earlier; Unified Messaging was removed in Exchange 2019)
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2913,8 +2913,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-UM
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier; Unified Messaging was removed in Exchange 2019)
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server (Exchange 2016 or earlier; Unified Messaging was removed in Exchange 2019)
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2924,8 +2924,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-UM
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier; Unified Messaging was removed in Exchange 2019)
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server (Exchange 2016 or earlier; Unified Messaging was removed in Exchange 2019)
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2939,8 +2939,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-UM
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier; Unified Messaging was removed in Exchange 2019)
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server (Exchange 2016 or earlier; Unified Messaging was removed in Exchange 2019)
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2950,8 +2950,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-UM
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server (Exchange 2016 or earlier; Unified Messaging was removed in Exchange 2019)
-- ![Not supported](media/feature_absent_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server (Exchange 2016 or earlier; Unified Messaging was removed in Exchange 2019)
+- ![Not supported](media/feature-absent-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2961,8 +2961,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-UM
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2972,8 +2972,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-UM
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -2983,8 +2983,8 @@ To use a friendly value, store the DN in a variable (for example, `$dn = (Get-UM
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -3003,8 +3003,8 @@ If the value of this property is `$true`, the values of these properties are ign
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -3014,8 +3014,8 @@ If the value of this property is `$true`, the values of these properties are ign
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -3027,8 +3027,8 @@ This property contains the user principal name (UPN) for this recipient (for exa
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -3047,8 +3047,8 @@ In Exchange Online, this property holds a legacy hosted voicemail value and is t
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -3058,8 +3058,8 @@ In Exchange Online, this property holds a legacy hosted voicemail value and is t
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -3069,8 +3069,8 @@ In Exchange Online, this property holds a legacy hosted voicemail value and is t
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -3080,8 +3080,8 @@ In Exchange Online, this property holds a legacy hosted voicemail value and is t
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -3091,8 +3091,8 @@ In Exchange Online, this property holds a legacy hosted voicemail value and is t
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -3102,8 +3102,8 @@ In Exchange Online, this property holds a legacy hosted voicemail value and is t
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -3113,8 +3113,8 @@ In Exchange Online, this property holds a legacy hosted voicemail value and is t
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -3124,8 +3124,8 @@ In Exchange Online, this property holds a legacy hosted voicemail value and is t
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
@@ -3135,8 +3135,8 @@ In Exchange Online, this property holds a legacy hosted voicemail value and is t
 
 **Applicable**:
 
-- ![Supported](media/feature_present_icon.png) Exchange Server
-- ![Supported](media/feature_present_icon.png) Exchange Online
+- ![Supported](media/feature-present-icon.png) Exchange Server
+- ![Supported](media/feature-present-icon.png) Exchange Online
 
 |LDAP display name|Value|
 |---|---|
