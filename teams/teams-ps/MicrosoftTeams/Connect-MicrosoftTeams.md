@@ -26,6 +26,7 @@ Connect-MicrosoftTeams
 [-LogFilePath <String>]
 [-TeamsEnvironmentName <String>]
 [-UseDeviceAuthentication]
+[-DisableWAM]
 [-WhatIf]
 [-Confirm]
 [<CommonParameters>]
@@ -337,8 +338,27 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+  ### -DisableWAM
+  Disables Web Account Manager (WAM) authentication for the connection. Use this switch only if you encounter WAM-related connection errors.
 
-### -Identity
+  WAM is enabled by default for user-based sign-in flows on Windows starting with Teams PowerShell Module version 7.8.1-preview. For known scenarios where WAM may cause compatibility issues.
+
+  > [!NOTE]
+  > This parameter has been introduced with version 7.8.1-preview. It is intended as a temporary workaround and will be removed in a future release once supported alternatives are available for all scenarios.
+
+  ```yaml
+  Type: SwitchParameter
+  Parameter Sets: UserCredential
+  Aliases:
+
+  Required: False
+  Position: Named
+  Default value: False
+  Accept pipeline input: False
+  Accept wildcard characters: False
+
+```
+  ### -Identity
 Login using managed service identity in the current environment. For *-Cs cmdlets, this is supported from version 5.8.1-preview onwards.
 
 > [!Note]
@@ -525,5 +545,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## OUTPUTS
 
 ## NOTES
+
+**Updates in Teams PowerShell Module version 7.8.1-preview and later:**
+
+- **WAM integration on Windows**: User sign-in flows on Windows (`Connect-MicrosoftTeams` without authentication parameters, `-Credential`, and `-AccountId`) now use Web Account Manager (WAM) as the authentication broker. Service principal with certificate, managed identity, and pre-acquired access token sign-in flows are not affected.
+- **-DisableWAM**: A new temporary `-DisableWAM` switch has been added to `Connect-MicrosoftTeams`. It disables WAM for a single connection and is intended as a temporary workaround for scenarios where WAM is not supported (for example, `RunAs` contexts or Windows Task Scheduler with "Run whether user is logged on or not"). This switch will be removed in a future release once supported alternatives are available for all scenarios.
 
 ## RELATED LINKS
