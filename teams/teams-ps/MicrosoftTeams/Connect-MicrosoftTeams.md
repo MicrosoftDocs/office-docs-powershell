@@ -549,6 +549,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 **Updates in Teams PowerShell Module version 7.8.1-preview and later:**
 
 - **WAM integration on Windows**: User sign-in flows on Windows (`Connect-MicrosoftTeams` without authentication parameters, `-Credential`, and `-AccountId`) now use Web Account Manager (WAM) as the authentication broker. Service principal with certificate, managed identity, and pre-acquired access token sign-in flows are not affected.
-- **-DisableWAM**: A new temporary `-DisableWAM` switch has been added to `Connect-MicrosoftTeams`. It disables WAM for a single connection and is intended as a temporary workaround for scenarios where WAM is not supported (for example, `RunAs` contexts or Windows Task Scheduler with "Run whether user is logged on or not"). This switch will be removed in a future release once supported alternatives are available for all scenarios
+- **-DisableWAM**: A new temporary `-DisableWAM` switch has been added to `Connect-MicrosoftTeams`. It disables WAM for a single connection and is intended as a temporary workaround for scenarios where WAM is not supported (for example, `RunAs` contexts or Windows Task Scheduler with "Run whether user is logged on or not"). This switch will be removed in a future release once supported alternatives are available for all scenarios.
 
 ## RELATED LINKS
