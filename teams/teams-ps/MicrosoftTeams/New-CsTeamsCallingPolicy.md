@@ -72,8 +72,7 @@ The Teams Calling Policy controls which calling and call forwarding features are
 PS C:\> New-CsTeamsCallingPolicy -Identity Sales -AllowPrivateCalling $false
 ```
 
-The cmdlet create the policy instance Sales and sets the value of the parameter AllowPrivateCalling to False. The rest of the parameters are set to the corresponding
-values in the Global policy instance.
+The cmdlet creates the policy instance Sales and sets the value of the parameter AllowPrivateCalling to false. The rest of the parameters are set to the corresponding values in the Global policy instance.
 
 ## PARAMETERS
 
@@ -785,15 +784,17 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
->[!NOTE]
->This feature has not been released yet and will have no changes if it is enabled or disabled.
-
-This setting controls whether users must provide or obtain explicit consent before recording a 1:1 PSTN or Teams call. When enabled, both parties will receive a notification, and consent must be given before recording starts.
+This setting controls whether users must provide or obtain explicit consent before recording a 1:1 Teams call. When enabled, both parties will receive a notification, and consent must be given before recording starts.
 
 Possible values:
 
 - **Enabled**: Requires users to give and obtain explicit consent before starting a call recording.
 - **Disabled**: Users are not required to obtain explicit consent before recording starts.
+
+>[!NOTE]
+>This feature is not yet supported on:
+> - PSTN endpoints
+> - Call queue calls 
 
 ```yaml
 Type: String
