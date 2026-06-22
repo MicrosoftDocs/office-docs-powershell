@@ -13,71 +13,77 @@ title: Get-LdapDirectory
 ## SYNOPSIS
 This cmdlet is available only in the cloud-based service.
 
-Use the Get-LdapDirectory cmdlet to retrieve LDAP directory configuration objects for a tenant.
+Use the Get-LdapDirectory cmdlet to view LDAP directory configurations.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
 ## SYNTAX
 
+### Default
 ```
-Get-LdapDirectory -Organization <String>
- [-Id <String>]
+Get-LdapDirectory -Organization <OrganizationIdParameter>
+ [<CommonParameters>]
+```
+
+### Identity
+```
+Get-LdapDirectory [[-Id] <String>] -Organization <OrganizationIdParameter>
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Returns all configured LDAP directories for the tenant or a specific directory when the Id parameter is supplied.
-
 You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Get-LdapDirectory -Organization contoso.com
+Get-LdapDirectory -Organization contoso.onmicrosoft.com
 ```
 
-This example returns a summary list of all LDAP directories that are configured for the contoso.com tenant.
+This example returns all LDAP directories that are configured for the contoso.onmicrosoft.com organization.
 
 ### Example 2
 ```powershell
-Get-LdapDirectory -Organization contoso.com -Id ContosoLdap
+Get-LdapDirectory -Organization contoso.onmicrosoft.com -Id FabrikamLdap
 ```
 
-This example returns detailed information for the LDAP directory named ContosoLdap in the contoso.com tenant.
+This example returns the LDAP directory named FabrikamLdap only in the contoso.onmicrosoft.com organization.
 
 ## PARAMETERS
-
-### -Organization
-
-> Applicable: Exchange Online
-
-Specifies the tenant identifier (for example, contoso.com).
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Id
 
 > Applicable: Exchange Online
 
-Specifies the unique identifier of a configured LDAP directory. When omitted, all configured LDAP directories for the tenant are returned.
+The Id parameter specifies the unique identifier of the LDAP directory configuration that you want to view.
+
+If you don't use this parameter, all configured LDAP directories in the organization are returned.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Identity
 Aliases:
 
 Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Organization
+
+> Applicable: Exchange Online
+
+The Organization parameter specifies the organization where you want to view LDAP directories: your current organization (for example, contoso.onmicrosoft.com) or a remote organization that you also manage.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
