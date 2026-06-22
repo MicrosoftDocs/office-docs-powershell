@@ -1995,6 +1995,7 @@ The OutlookNewslettersAccessLevelAccess parameter specifies the access level in 
 - ReadOnly: Read newsletters and browse pages in Outlook Newsletters.
 - ReadWrite: Full authoring permissions to create pages and newsletters in Outlook Newsletters.
 - Undefined: This value is the default. Currently, this value is equivalent to NoAccess.
+- The default value is set as Undefined if you don’t set a value for the property explicitly. As of General Availability (GA), if the policy property’s value is left as Undefined, the service defaults to ReadWrite.
 
 ```yaml
 Type: OutlookNewslettersAccessLevel
