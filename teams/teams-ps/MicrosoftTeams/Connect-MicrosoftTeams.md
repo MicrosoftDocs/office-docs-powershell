@@ -338,27 +338,27 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-  ### -DisableWAM
-  Disables Web Account Manager (WAM) authentication for the connection. Use this switch only if you encounter WAM-related connection errors.
+### -DisableWAM
+Disables Web Account Manager (WAM) authentication for the connection. Use this switch only if you encounter WAM-related connection errors.
 
-  WAM is enabled by default for user-based sign-in flows on Windows starting with Teams PowerShell Module version 7.8.1-preview. For known scenarios where WAM may cause compatibility issues.
+WAM is enabled by default for user-based sign-in flows on Windows starting with Teams PowerShell Module version 7.8.1-preview. For known scenarios where WAM may cause compatibility issues.
 
-  > [!NOTE]
-  > This parameter has been introduced with version 7.8.1-preview. It is intended as a temporary workaround and will be removed in a future release once supported alternatives are available for all scenarios.
+> [!NOTE]
+> This parameter has been introduced with version 7.8.1-preview. It is intended as a temporary workaround and will be removed in a future release once supported alternatives are available for all scenarios.
 
-  ```yaml
-  Type: SwitchParameter
-  Parameter Sets: UserCredential
-  Aliases:
+```yaml
+Type: SwitchParameter
+Parameter Sets: UserCredential
+Aliases:
 
-  Required: False
-  Position: Named
-  Default value: False
-  Accept pipeline input: False
-  Accept wildcard characters: False
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
 
 ```
-  ### -Identity
+### -Identity
 Login using managed service identity in the current environment. For *-Cs cmdlets, this is supported from version 5.8.1-preview onwards.
 
 > [!Note]
