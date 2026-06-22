@@ -20,12 +20,13 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-LdapDirectory -Id <String>
+Set-LdapDirectory -Organization <String> -Id <String>
  [-BaseDn <String>]
  [-Host <String>]
  [-Port <Int32>]
  [-TimeoutSec <Int32>]
  [-UseSsl]
+ [-NoSsl]
  [<CommonParameters>]
 ```
 
@@ -38,19 +39,44 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-LdapDirectory -Id ContosoLdap -BaseDn "OU=Employees,DC=contoso,DC=com"
+Set-LdapDirectory -Organization contoso.com -Id ContosoLdap -BaseDn "OU=Employees,DC=contoso,DC=com"
 ```
 
 This example updates the base distinguished name that scopes searches for the LDAP directory named ContosoLdap.
 
 ### Example 2
 ```powershell
-Set-LdapDirectory -Id ContosoLdap -Host ldap2.contoso.com -Port 636 -UseSsl -TimeoutSec 45
+Set-LdapDirectory -Organization contoso.com -Id ContosoLdap -Host ldap2.contoso.com -Port 636 -UseSsl -TimeoutSec 45
 ```
 
 This example updates the connection settings for the LDAP directory named ContosoLdap to use a new host over a secure (SSL/TLS) connection on port 636 with a 45-second timeout.
 
+### Example 3
+```powershell
+Set-LdapDirectory -Organization contoso.com -Id ContosoLdap -Host ldap.contoso.com -Port 389 -NoSsl
+```
+
+This example disables SSL/TLS for the LDAP directory named ContosoLdap by using the NoSsl switch, and updates the connection to use the non-secure LDAP port 389.
+
 ## PARAMETERS
+
+### -Organization
+
+> Applicable: Exchange Online
+
+Specifies the tenant identifier (for example, contoso.com).
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Id
 
@@ -147,6 +173,26 @@ Accept wildcard characters: False
 > Applicable: Exchange Online
 
 Specifies that SSL/TLS is enabled for the updated connection settings. You don't need to specify a value with this switch.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NoSsl
+
+> Applicable: Exchange Online
+
+Specifies that SSL/TLS is disabled for the updated connection settings. Use this switch to turn off a secure connection that was previously enabled (for example, with the UseSsl switch). You don't need to specify a value with this switch.
+
+You can't use this switch with the UseSsl switch in the same command.
 
 ```yaml
 Type: SwitchParameter
