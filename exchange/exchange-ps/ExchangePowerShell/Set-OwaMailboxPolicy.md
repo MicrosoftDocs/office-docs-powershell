@@ -1994,7 +1994,7 @@ The OutlookNewslettersAccessLevelAccess parameter specifies the access level in 
 - NoAccess: No access to Outlook Newsletters in Outlook (formerly known as the new Outlook for Windows) or Outlook on the web. Users can still read email messages sent or forwarded to them.
 - ReadOnly: Read newsletters and browse pages in Outlook Newsletters.
 - ReadWrite: Full authoring permissions to create pages and newsletters in Outlook Newsletters.
-- Undefined: This value is the default. Currently, this value is equivalent to NoAccess.
+- Undefined: This value is the default and is used if you don't explicity set a value. As of General Availability (GA), this value is equivalent to ReadWrite.
 
 ```yaml
 Type: OutlookNewslettersAccessLevel
