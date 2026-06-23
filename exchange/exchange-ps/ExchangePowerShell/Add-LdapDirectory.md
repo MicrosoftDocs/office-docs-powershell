@@ -107,7 +107,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-The Organization parameter specifies your organization where the LDAP directory configuration is created and stored (for example, contoso.onmicrosoft.com). This value identifies your own organization, not the remote directory source that the configuration connects to.
+The Organization parameter specifies your organization where the LDAP directory configuration is created and stored (for example, contoso.onmicrosoft.com).
 
 ```yaml
 Type: OrganizationIdParameter
