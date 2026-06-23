@@ -20,7 +20,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Remove-LdapDirectory [-Id] <String> -Organization <OrganizationIdParameter>
+Remove-LdapDirectory -Id <String> -Organization <OrganizationIdParameter>
  [-Confirm]
  [-Force]
  [-WhatIf]
@@ -53,7 +53,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: True
 Accept wildcard characters: False

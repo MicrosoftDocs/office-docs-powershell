@@ -20,7 +20,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Add-LdapDirectory [-Id] <String> [-Host] <String> [-Port] <Int32> -Organization <OrganizationIdParameter>
+Add-LdapDirectory -Id <String> -Host <String> -Port <Int32> -Organization <OrganizationIdParameter>
  [-BaseDn <String>]
  [-Confirm]
  [-TimeoutSec <Int32>]
@@ -61,7 +61,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 1
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -79,7 +79,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 2
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -97,7 +97,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: 3
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
