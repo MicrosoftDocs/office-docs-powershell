@@ -20,7 +20,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ## SYNTAX
 
 ```
-Set-LdapDirectory -Id <String> -Organization <OrganizationIdParameter>
+Set-LdapDirectory [-Id] <String> -Organization <OrganizationIdParameter>
  [-BaseDn <String>]
  [-Confirm]
  [-Host <String>]
@@ -72,7 +72,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

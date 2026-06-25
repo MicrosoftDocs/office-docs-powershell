@@ -27,7 +27,7 @@ Get-LdapDirectory -Organization <OrganizationIdParameter>
 
 ### Identity
 ```
-Get-LdapDirectory [-Id <String>] -Organization <OrganizationIdParameter>
+Get-LdapDirectory [[-Id] <String>] -Organization <OrganizationIdParameter>
  [<CommonParameters>]
 ```
 
@@ -66,7 +66,7 @@ Parameter Sets: Identity
 Aliases:
 
 Required: False
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
