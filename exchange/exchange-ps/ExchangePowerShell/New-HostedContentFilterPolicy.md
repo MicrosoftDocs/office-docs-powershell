@@ -1251,6 +1251,7 @@ The RedirectToRecipients parameter specifies the email addresses of replacement 
 - BulkSpamAction
 - HighConfidenceSpamAction
 - PhishSpamAction
+- HighConfidencePhishAction
 - SpamAction
 
 You can specify multiple email addresses separated by commas.
