@@ -11,7 +11,7 @@ schema: 2.0.0
 title: Get-CssharedVoicemailTriageSettingsTemplate
 ---
 
-# Get-CssharedVoicemailTriageSettingsTemplate
+# Get-CsSharedVoicemailTriageSettingsTemplate
 
 ## SYNOPSIS
 The Get‑CsSharedVoicemailTriageSettingsTemplate cmdlet retrieves the configuration for automatic triage of Shared Voicemails, including the importance flag, summary, suggested actions, and category settings.
