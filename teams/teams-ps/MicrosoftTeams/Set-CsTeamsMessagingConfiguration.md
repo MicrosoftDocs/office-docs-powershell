@@ -29,6 +29,7 @@ Set-CsTeamsMessagingConfiguration [-Identity] <String>
  [-ReportIncorrectSecurityDetections<string>]
  [-WhatIf]
  [<CommonParameters>]
+ [-Communities <String>]
 ```
 
 ## DESCRIPTION
@@ -195,6 +196,23 @@ Accept wildcard characters: False
 ### -MessagingNotes
 
 This setting enables/disables MessagingNotes integration across the whole tenant. Possible Values: Disabled, Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Communities
+
+This setting enables/disables Viva Engage Communities across the whole tenant. Upon enablement, admins and/or users can consume and interact with the communities.
+Possible Values: True, False
 
 ```yaml
 Type: String
