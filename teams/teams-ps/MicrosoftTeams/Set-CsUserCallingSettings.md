@@ -66,6 +66,22 @@ Set-CsUserCallingSettings -Identity <String> [-HttpPipelinePrepend <SendAsyncSte
  -IsForwardingEnabled <Boolean> [<CommonParameters>]
 ```
 
+### -MaximumConcurrentCalls
+
+Applies only to users of the Resource Account type that are configured for Shared Line Appearance (SLA) with assigned delegates. This setting specifies the maximum number of concurrent calls that can be handled by the delegates of the Resource Account. When the configured limit is reached, any additional incoming calls are automatically routed according to the Resource Account's unanswered call settings.
+
+```yaml
+Type: System.Int32
+Parameter Sets: 1-50
+Aliases:
+
+Required: False
+Position: Named
+Default value: 10
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ## DESCRIPTION
 This cmdlet sets the call forwarding, simultaneous ringing and call group settings for the specified user.
 
