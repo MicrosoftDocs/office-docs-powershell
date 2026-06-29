@@ -13,11 +13,16 @@ title: Set-CsUserCallingSettings
 # Set-CsUserCallingSettings
 
 ## SYNOPSIS
-This cmdlet will set the call forwarding, simultaneous ringing and call group settings for the specified user.
+Configures calling settings for a specified user or Resource Account, including call forwarding, simultaneous ringing, call groups, delegation, and other call-handling options.  
+
+For user accounts, this cmdlet enables configuration of delegates and user-specific call-handling behaviour.
+
+For Resource Accounts, these settings are primarily used in Shared Line Appearance (SLA) scenarios, where the Resource Account is associated with the primary phone number and delegated participants (such as CAP devices or associated users) are configured to handle incoming calls on behalf of the Resource Account.
 
 ## SYNTAX
 
 ### Identity (Default)
+   
 ```
 Set-CsUserCallingSettings -Identity <String> [-HttpPipelinePrepend <SendAsyncStep[]>] [<CommonParameters>]
 ```
@@ -83,7 +88,9 @@ Accept wildcard characters: False
 ```
 
 ## DESCRIPTION
-This cmdlet sets the call forwarding, simultaneous ringing and call group settings for the specified user.
+This cmdlet sets the call forwarding, simultaneous ringing and call group settings for the specified user or Resource Account.
+
+When configuring a Target Type for forwarding or unanswered call settings, calls can be redirected to  ..... either a user or a Resource Account. When a Resource Account is specified as the target  advanced routing scenarios such as forwarding calls to Auto Attendants (AA), Call Queues (CQ), or other Resource Accounts associated Agents.
 
 When specifying settings you need to specify all settings with a settings grouping, for instance, you can't just change a forwarding target. Instead, you need to
 start by  getting the current settings, making the necessary changes, and then setting/writing all settings within the settings group.
