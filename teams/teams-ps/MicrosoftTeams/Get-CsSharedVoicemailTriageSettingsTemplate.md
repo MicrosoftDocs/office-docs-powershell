@@ -6,9 +6,9 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: vijurtse
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Get-CssharedVoicemailTriageSettingsTemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/Get-CsSharedVoicemailTriageSettingsTemplate
 schema: 2.0.0
-title: Get-CssharedVoicemailTriageSettingsTemplate
+title: Get-CsSharedVoicemailTriageSettingsTemplate
 ---
 
 # Get-CsSharedVoicemailTriageSettingsTemplate
