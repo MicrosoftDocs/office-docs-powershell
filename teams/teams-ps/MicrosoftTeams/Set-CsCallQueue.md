@@ -93,8 +93,8 @@ Set-CsCallQueue -Identity e7e00636-47da-449c-a36b-1b3d6ee04440 -DistributionList
 This example updates the Call Queue with new distribution lists and references a new music on hold audio file using the audio file ID  from the stored variable $audioFile created with the [Import-CsOnlineAudioFile cmdlet](https://learn.microsoft.com/powershell/module/microsoftteams/import-csonlineaudiofile)
 
 ### Example 3 
-Set-CsCallQueue -Identity e7e00636-47da-449c-a36b-1b3d6ee04440 -SharedVoicemailTriageSettingsTemplateId "xxxxxxxxxxxxxxxxxx"
-This example enables automatic triage for all shared voicemail messages received by the Call Queue.
+Set-CsCallQueue -Identity e7e00636-47da-449c-a36b-1b3d6ee04440 -SharedVoicemailTriageSettingsTemplateId 3a4b3d9b-91d8-4fbf-bcff-6907f325842c
+This example enables automatic triage with AI for shared voicemail messages received by the Call Queue.
 
 ## PARAMETERS
 
