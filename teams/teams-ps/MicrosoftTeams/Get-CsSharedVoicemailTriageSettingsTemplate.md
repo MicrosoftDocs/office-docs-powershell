@@ -28,7 +28,7 @@ Use the Get‑CsSharedVoicemailTriageSettingsTemplate cmdlet to retrieve the con
 
 ### Example 1
 ```
-Get‑CsSharedVoicemailTriageSettingsTemplate -Id "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxx"
+Get‑CsSharedVoicemailTriageSettingsTemplate -Id 3a4b3d9b-91d8-4fbf-bcff-6907f325842c
 
 ```
 This example retrieves the configuration of the specified Shared Voicemail triage template.
