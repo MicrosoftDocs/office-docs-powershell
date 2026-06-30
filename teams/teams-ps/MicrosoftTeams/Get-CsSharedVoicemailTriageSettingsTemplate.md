@@ -19,9 +19,8 @@ The Get‑CsSharedVoicemailTriageSettingsTemplate cmdlet retrieves the configura
 ## SYNTAX
 
 ```
-
 Get-CsSharedVoicemailTriageSettingsTemplate [[-Id] <string>] [[-HttpPipelinePrepend] <SendAsyncStep[]>] [-Force] [<CommonParameters>]
-
+'
 ```
 
 ## DESCRIPTION
@@ -38,13 +37,9 @@ This example retrieves the configuration of the specified Shared Voicemail triag
 
 ## PARAMETERS
 
-
-```
-
 ### -ID
 
 Template ID
-
 
 ```yaml
 Type: string
@@ -53,7 +48,6 @@ Required: True
 Position: Named
 Default value: None
 ```
-
 
 
 ### CommonParameters
