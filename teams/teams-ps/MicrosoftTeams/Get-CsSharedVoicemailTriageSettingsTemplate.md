@@ -20,7 +20,7 @@ The Get‑CsSharedVoicemailTriageSettingsTemplate cmdlet retrieves the configura
 
 ```
 Get-CsSharedVoicemailTriageSettingsTemplate [[-Id] <string>] [[-HttpPipelinePrepend] <SendAsyncStep[]>] [-Force] [<CommonParameters>]
-'
+
 ```
 
 ## DESCRIPTION
