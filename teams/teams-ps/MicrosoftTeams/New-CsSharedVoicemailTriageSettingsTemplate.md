@@ -14,7 +14,7 @@ title: New-CsSharedVoicemailTriageSettingsTemplate
 # New-CsSharedVoicemailTriageSettingsTemplate
 
 ## SYNOPSIS
-The SharedVoicemailTriageSettingsTemplateId enables automatic triage of Shared Voicemail using a compliant Substrate Large Language Model (LLM). 
+The Shared Voicemail Triage Settings Template enables automatic triage of Shared Voicemail using a compliant Substrate Large Language Model (LLM). 
 It also defines which LLM‑generated fields are added to each shared voicemail message, including the importance flag, summary, suggested actions, and categories.
 All data is processed in real time by the model, and the results are stored in your organization’s Exchange environment as part of the delivered voicemail message.
 
@@ -71,7 +71,7 @@ PARAMVALUE: True| False
 ```yaml
 Type: bool
 
-Required: True
+Required: False
 Position: Named
 Default value: True
 ```
@@ -86,7 +86,7 @@ PARAMVALUE: True| False
 ```yaml
 Type: bool
 
-Required: True
+Required: False
 Position: Named
 Default value: True
 ```
@@ -100,7 +100,7 @@ PARAMVALUE: True| False
 ```yaml
 Type: bool
 
-Required: True
+Required: False
 Position: Named
 Default value: True
 ```
@@ -114,7 +114,7 @@ PARAMVALUE: True| False
 ```yaml
 Type: bool
 
-Required: True
+Required: False
 Position: Named
 Default value: True
 ```
