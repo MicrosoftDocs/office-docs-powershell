@@ -35,7 +35,7 @@ Use the Set‑CsSharedVoicemailTriageSettingsTemplate cmdlet to update the triag
 ### Example 1
 
 ```
-$templateInstance = Get-CsSharedVoicemailTriageSettingsTemplate -Id "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+$templateInstance = Get-CsSharedVoicemailTriageSettingsTemplate -Id 3a4b3d9b-91d8-4fbf-bcff-6907f325842c
 $templateInstance.Name = "Triage without urgency identification"
 $templateInstance.Description = "Template to triage voicemails while skipping message‑urgency identification"
 $templateInstance.EnableUrgencyDetection = $false
@@ -51,7 +51,7 @@ This example updates the template name and description, and disables identificat
 ### Example 2
 
 ```
-$templateInstance = Get-CsSharedVoicemailTriageSettingsTemplate -Id "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+$templateInstance = Get-CsSharedVoicemailTriageSettingsTemplate -Id 3a4b3d9b-91d8-4fbf-bcff-6907f325842c
 $templateInstance.EnableUrgencyDetection = $true
 $templateInstance.EnableCategoryDetection = $false
 $templateInstance.EnableCallToActionDetection = $false
@@ -65,7 +65,7 @@ This example disables identification of category and actions for shared voicemai
 ### Example 3
 
 ```
-$templateInstance = Get-CsSharedVoicemailTriageSettingsTemplate -Id "xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+$templateInstance = Get-CsSharedVoicemailTriageSettingsTemplate -Id 3a4b3d9b-91d8-4fbf-bcff-6907f325842c
 $templateInstance.EnableUrgencyDetection = $false
 $templateInstance.EnableCategoryDetection = $false
 $templateInstance.EnableCallToActionDetection = $false
