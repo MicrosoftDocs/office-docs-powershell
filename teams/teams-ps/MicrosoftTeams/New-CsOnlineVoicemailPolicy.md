@@ -26,7 +26,7 @@ New-CsOnlineVoicemailPolicy [-Identity] <string> [-EnableEditingCallAnswerRulesS
  [-EnableTranscriptionTranslation <boolean>] [-MaximumRecordingLength <timespan>]
  [-PostAmbleAudioFile <string>] [-PreambleAudioFile <string>]
  [-PreamblePostambleMandatory <boolean>] [-PrimarySystemPromptLanguage <string>]
- [-SecondarySystemPromptLanguage <string>] [-ShareData <string>] [-WhatIf] [-Confirm]
+ [-SecondarySystemPromptLanguage <string>] [-ShareData <string>] [-XXXXXXXVoicemailTriagePolicy <string>] [-WhatIf] [-Confirm]
  [-Description <String>] [<CommonParameters>]
 ```
 
@@ -36,7 +36,7 @@ implementation.
 
 By default, users enabled for Phone System will be enabled for Cloud Voicemail. The Online Voicemail
 policy controls whether or not voicemail transcription, profanity masking for the voicemail
-transcriptions, translation for the voicemail transcriptions, and editing call answer rule settings
+transcriptions, translation for the voicemail transcriptions, automatic triage of voicemails by AI and editing call answer rule settings
 are enabled for a user. The policies also specify the voicemail maximum recording length for a user
 and the primary and secondary voicemail system prompt languages.
 
@@ -46,6 +46,7 @@ and the primary and secondary voicemail system prompt languages.
 - Editing call answer rule settings is enabled by default
 - Voicemail maximum recording length is set to 5 minutes by default
 - Primary and secondary system prompt languages are set to null by default and the user's voicemail language setting is used
+- Enable Voicemail triage with AI is disabled by default
 
 Tenant admin would be able to create a customized online voicemail policy to match the organization's requirements.
 

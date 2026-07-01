@@ -44,11 +44,12 @@ $christmasCallHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -
 
 $autoAttendant.CallFlows += @($christmasCallFlow)
 $autoAttendant.CallHandlingAssociations += @($christmasCallHandlingAssociation)
+$autoAttendant.SharedVoicemailTriageSettingsTemplateId = "aaa85a3c-440b-4332-b15c-f70d24030636"
 
 Set-CsAutoAttendant -Instance $autoAttendant
 ```
 
-This example adds a Christmas holiday to an AA that has an Identity of fa9081d6-b4f3-5c96-baec-0b00077709e5.
+This example adds a Christmas holiday to an AA that has an Identity of fa9081d6-b4f3-5c96-baec-0b00077709e5 and enables automatic triage of Shared Voicemails with AI.
 
 ### Example 2
 ```powershell
