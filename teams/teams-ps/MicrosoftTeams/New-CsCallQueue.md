@@ -66,6 +66,11 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 > Automatic triage of Shared Voicemails with AI
 > - -SharedVoicemailTriageSettingsTemplateId
 >
+>  The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
+>
+> - -AutoRecordingTemplateId
+> - -SharedVoicemailTriageSettingsTemplateId 
+>
 > Authorized users can't edit call queues with these features enabled:
 > - The call exception routing when the destination directly references another Auto attendant or Call queue
 >   - See [Nesting Auto attendants and Call queues](/microsoftteams/plan-auto-attendant-call-queue#nested-auto-attendants-and-call-queues)
