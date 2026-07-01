@@ -14,7 +14,7 @@ title: Remove-CsSharedVoicemailTriageSettingsTemplate
 # Remove-CsSharedVoicemailTriageSettingsTemplate
 
 ## SYNOPSIS
-Deletes a Shared Voicemail Triage template.
+This cmdlet deletes a Shared Voicemail Settings Triage template. Before deleting a template, ensure that it is not associated with any Auto Attendant or Call Queue, as templates that are currently in use cannot be removed.
 
 ## SYNTAX
 
