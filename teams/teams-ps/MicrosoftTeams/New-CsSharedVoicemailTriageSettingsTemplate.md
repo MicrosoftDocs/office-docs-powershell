@@ -21,7 +21,7 @@ All data is processed in real time by the model, and the results are stored in y
 ## SYNTAX
 
 ```
-New-CsSharedVoicemailTriageSettingsTemplate -Name <string> -Description <string> [-EnableUrgencyDetection <bool>] [-EnableCategoryDetection <bool>] [-EnableCallToActionDetection <bool>] [-EnableVoiceToTextSummary <bool>] [-HttpPipelinePrepend <SendAsyncStep[]>] [<CommonParameters>]
+New-CsSharedVoicemailTriageSettingsTemplate -Name <string> -Description <string> [-EnableUrgencyDetection <bool>] [-EnableCategoryDetection <bool>] [-EnableCallToActionDetection <bool>] [-EnableVoiceToTextSummary <bool>] [<CommonParameters>]
 
 ```
 
