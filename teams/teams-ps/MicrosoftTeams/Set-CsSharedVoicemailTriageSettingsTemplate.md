@@ -22,8 +22,7 @@ To fully disable LLM‑based triaging for Shared Voicemails, the corresponding t
 ## SYNTAX
 
 ```
-Set-CsSharedVoicemailTriageSettingsTemplate [-Instance] <psobject> [[-Force]] [-HttpPipelinePrepend <SendAsyncStep[]>] [-WhatIf] [-Confirm] [<CommonParameters>]
-
+Set-CsSharedVoicemailTriageSettingsTemplate -Instance <instance> [<CommonParameters>]
 
 ```
 
