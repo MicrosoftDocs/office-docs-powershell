@@ -43,6 +43,7 @@ You can create new AAs by using the New-CsAutoAttendant cmdlet; each newly creat
 > - -EnableMainLineAttendant
 > - -MainlineAttendantAgentVoiceId
 > - -AutoRecordingTemplateId
+> - -SharedVoicemailTriageSettingsTemplateId
 
 **NOTES**:
 
