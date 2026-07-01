@@ -35,7 +35,7 @@ This example retrieves the configuration of the specified Shared Voicemail triag
 
 ### Example 2
 ```
-Get‑CsSharedVoicemailTriageSettingsTemplate -Id
+Get‑CsSharedVoicemailTriageSettingsTemplate
 
 ```
 This example retrieves a list of all available templates for voicemail triage settings.
