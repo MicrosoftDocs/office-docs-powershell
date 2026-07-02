@@ -71,21 +71,7 @@ Set-CsUserCallingSettings -Identity <String> [-HttpPipelinePrepend <SendAsyncSte
  -IsForwardingEnabled <Boolean> [<CommonParameters>]
 ```
 
-### -MaximumConcurrentCalls
 
-Applies only to users of the Resource Account type that are configured for Shared Line Appearance (SLA) with assigned delegates. This setting specifies the maximum number of concurrent calls that can be handled by the delegates of the Resource Account. When the configured limit is reached, any additional incoming calls are automatically routed according to the Resource Account's unanswered call settings.
-
-```yaml
-Type: System.Int32
-Parameter Sets: 1-50
-Aliases:
-
-Required: False
-Position: Named
-Default value: 10
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ## DESCRIPTION
 This cmdlet sets the call forwarding, simultaneous ringing and call group settings for the specified user or Resource Account.
@@ -190,6 +176,15 @@ Set-CsUserCallingSettings -Identity user7@contoso.com -IsUnansweredEnabled $fals
 ```
 
 This example shows turning off unanswered call forwarding for a user. The Microsoft Teams client will show this as _If unanswered Do nothing_.
+
+### Example 12 - Configure Maximum Concurrent Calls for a Resource Account
+```powershell
+Set-CsUserCallingSettings -Identity resource_account1@contoso.com --MaximumConcurrentCalls 10
+```
+
+This example configures the maximum number of concurrent calls that can be forwarded to the CAP phone delegates of a Resource Account. The Identity parameter specifies the Resource Account.
+
+The MaximumConcurrentCalls setting determines how many simultaneous calls can be handled by the Resource Account's CAP phone delegates. A value of 10 is the recommended default and provides the best calling experience for most CAP phone deployments. When this limit is reached, additional incoming calls are handled according to the Resource Account's unanswered call settings.
 
 ## PARAMETERS
 
@@ -376,6 +371,23 @@ Parameter Sets: Unanswered, UnansweredOnOff
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -MaximumConcurrentCalls
+
+Applies only to Resource Accounts configured for a Call Delegation scenario with CAP phones. In this configuration, the Identity parameter must specify a Resource Account, while the delegates are CAP phone users.
+
+The MaximumConcurrentCalls setting defines the maximum number of simultaneous calls that can be handled by the Resource Account's CAP phone delegates. When the configured limit is reached, any additional incoming calls are automatically routed according to the Resource Account's unanswered call settings.
+
+```yaml
+Type: System.Int32
+Parameter Sets: MaximumConcurrentCalls
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
