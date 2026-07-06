@@ -3362,7 +3362,10 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-{{ Fill RestrictWebGrounding Description }}
+The RestrictWebGrounding parameter specifies an action for the DLP rule that blocks web grounding. Valid values are:
+
+- $true: Web grounding is blocked.
+- $False: Web grounding isn't blocked. This value is the default.
 
 ```yaml
 Type: Boolean

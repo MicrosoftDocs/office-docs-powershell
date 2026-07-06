@@ -883,6 +883,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 ### [Update-OfflineAddressBook](Update-OfflineAddressBook.md)
 
 ## encryption-and-certificates Cmdlets
+### [Add-LdapDirectory](Add-LdapDirectory.md)
+
 ### [Enable-ExchangeCertificate](Enable-ExchangeCertificate.md)
 
 ### [Export-ExchangeCertificate](Export-ExchangeCertificate.md)
@@ -892,6 +894,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 ### [Get-ExchangeCertificate](Get-ExchangeCertificate.md)
 
 ### [Get-IRMConfiguration](Get-IRMConfiguration.md)
+
+### [Get-LdapDirectory](Get-LdapDirectory.md)
 
 ### [Get-M365DataAtRestEncryptionPolicy](Get-M365DataAtRestEncryptionPolicy.md)
 
@@ -919,6 +923,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Remove-ExchangeCertificate](Remove-ExchangeCertificate.md)
 
+### [Remove-LdapDirectory](Remove-LdapDirectory.md)
+
 ### [Remove-MailboxIRMAccess](Remove-MailboxIRMAccess.md)
 
 ### [Remove-OMEConfiguration](Remove-OMEConfiguration.md)
@@ -926,6 +932,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 ### [Set-DataEncryptionPolicy](Set-DataEncryptionPolicy.md)
 
 ### [Set-IRMConfiguration](Set-IRMConfiguration.md)
+
+### [Set-LdapDirectory](Set-LdapDirectory.md)
 
 ### [Set-M365DataAtRestEncryptionPolicy](Set-M365DataAtRestEncryptionPolicy.md)
 
