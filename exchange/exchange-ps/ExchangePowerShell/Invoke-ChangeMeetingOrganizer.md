@@ -52,10 +52,15 @@ This cmdlet changes the organizer of a meeting or meeting series. The change is 
 Meeting attendees in the same Exchange Online tenant don't need to re-RSVP and the existing instances on their calendar are silently updated with the new meeting organizer information. Any changes attendees made to local meeting properties, such as Reminder, Category, Show As (Free/Tentative/Busy), and Private are preserved.
 Other meeting attendees, including attendees outside the tenant or with mailboxes hosted on-premises in a hybrid deployment, receive a meeting message from the old organizer ending the meeting series, followed by an invitation message from the new organizer to the new series. Additional cancelation/invitation messages are sent for each meeting exception (e.g. rescheduled meeting time) after the effective date. External attendees will need to re-RSVP and recreate changes to local meeting properties.
 
-Properties of the meeting are transferred to the new organizer's calendar as-is. If the meeting included online meeting information, the new organizer may not have permission to join or manage the existing online meeting and should manually update the series with new online meeting information. In the case of OneDrive attachments, the new organizer may not have permission to access the attachment and should manually remove and reattach a copy.
+Properties of the meeting are transferred to the new organizer's calendar as-is. If the meeting included online meeting information, the new organizer may not have permission to join or manage the existing online meeting and should manually update the series with new online meeting information. In the case of OneDrive attachments and links, the new organizer may not have permission to access the file and should manually remove and re-add a copy.
 
 > [!WARNING]
 > For Teams-enabled meetings, changing the meeting organizer does not update the organizer of the associated Teams online meeting. The new organizer should manually update the series with new Teams meeting information to ensure they can join and manage the online meeting.
+
+#### Additional limitations:
+- Only meetings on the user's default calendar can be transferred. 
+- Meetings in Group or Shared mailboxes cannot be transferred. Instead, add the new organizer to the mailbox.
+- After a meeting is transferred, any portion of the series remaining on the original organizer's calendar cannot be transferred again. You can still transfer future instances from the new organizer's calendar to another new organizer or back to the original organizer.
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
