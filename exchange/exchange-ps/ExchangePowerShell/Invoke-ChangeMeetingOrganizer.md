@@ -20,52 +20,46 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ## SYNTAX
 
-### Subject
+### ByEventId (Default)
 ```
-Invoke-ChangeMeetingOrganizer
- -Identity <MailboxIdParameter>
- -Subject <String>
- -NewOrganizer <String>
+Invoke-ChangeMeetingOrganizer [-Identity] <MailboxIdParameter> [-EventId] <String> [-NewOrganizer] <String>
  [-TransferSeriesStartDate <DateTime>]
  [-Confirm]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
-### EventID
+### BySubject
 ```
-Invoke-ChangeMeetingOrganizer
- -Identity <MailboxIdParameter>
- -EventId <String>
- -NewOrganizer <String>
+Invoke-ChangeMeetingOrganizer [-Identity] <MailboxIdParameter> [-Subject] <String> [-NewOrganizer] <String>
  [-TransferSeriesStartDate <DateTime>]
  [-Confirm]
  [-WhatIf]
  [<CommonParameters>]
 ```
-
-
 
 ## DESCRIPTION
-This cmdlet changes the organizer of a meeting or meeting series. The change is effective starting from the next instance of the series or from a provided future date. Meeting instances before the effective date remain unmodified in the original organizer's calendar. Meeting instances after the effective date are moved to the new organizer's calendar and can be managed by the new organizer. The previous organizer is not included as an attendee on the transferred meeting, but can be manually re-invited by the new organizer.
+This cmdlet changes the organizer of a meeting or meeting series. The change is effective starting from the next instance of the series or from a specified future date. Meeting instances before the effective date remain unchanged in the original organizer's calendar. Meeting instances after the effective date move to the new organizer's calendar, where the new organizer can manage them. The previous organizer isn't included as an attendee on the transferred meeting, but the new organizer can manually re-invite them.
 
-Meeting attendees in the same Exchange Online tenant don't need to re-RSVP and the existing instances on their calendar are silently updated with the new meeting organizer information. Any changes attendees made to local meeting properties, such as Reminder, Category, Show As (Free/Tentative/Busy), and Private are preserved.
-Other meeting attendees, including attendees outside the tenant or with mailboxes hosted on-premises in a hybrid deployment, receive a meeting message from the old organizer ending the meeting series, followed by an invitation message from the new organizer to the new series. Additional cancelation/invitation messages are sent for each meeting exception (e.g. rescheduled meeting time) after the effective date. External attendees will need to re-RSVP and recreate changes to local meeting properties.
+Meeting attendees in the same Exchange Online organization don't need to re-RSVP, and the meeting instances on their calendars are silently updated with the new organizer information. Any changes attendees made to local meeting properties, such as Reminder, Category, Show As (Free/Tentative/Busy), and Private, are preserved.
 
-Properties of the meeting are transferred to the new organizer's calendar as-is. If the meeting included online meeting information, the new organizer may not have permission to join or manage the existing online meeting and should manually update the series with new online meeting information. In the case of OneDrive attachments and links, the new organizer may not have permission to access the file and should manually remove and re-add a copy.
+Other meeting attendees, including attendees outside the organization or with mailboxes hosted on-premises in a hybrid deployment, receive a meeting message from the old organizer that ends the meeting series, followed by an invitation message from the new organizer for the new series. More cancellation and invitation messages are sent for each meeting exception (for example, a rescheduled meeting time) after the effective date. External attendees need to re-RSVP and recreate their changes to local meeting properties.
+
+The meeting's properties are transferred to the new organizer's calendar as-is. If the meeting included online meeting information, the new organizer might not have permission to join or manage the existing online meeting, and should manually update the series with new online meeting information. For OneDrive attachments and links, the new organizer might not have permission to access the file, and should manually remove and re-add a copy.
 
 > [!WARNING]
-> For Teams-enabled meetings, changing the meeting organizer does not update the organizer of the associated Teams online meeting. The new organizer should manually update the series with new Teams meeting information to ensure they can join and manage the online meeting.
+> For Teams-enabled meetings, changing the meeting organizer doesn't update the organizer of the associated Teams online meeting. The new organizer should manually update the series with new Teams meeting information so they can join and manage the online meeting.
 
-#### Additional limitations:
-- Only meetings on the user's default calendar can be transferred. 
-- Meetings in Group or Shared mailboxes cannot be transferred. Instead, add the new organizer to the mailbox.
-- After a meeting is transferred, any portion of the series remaining on the original organizer's calendar cannot be transferred again. You can still transfer future instances from the new organizer's calendar to another new organizer or back to the original organizer.
+This cmdlet has the following limitations:
 
-You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+- You can transfer only meetings on the user's default calendar.
+- You can't transfer meetings in Group or Shared mailboxes. Instead, add the new organizer to the mailbox.
+- After a meeting is transferred, you can't transfer again any portion of the series that remains on the original organizer's calendar. You can still transfer future instances from the new organizer's calendar to another organizer, or back to the original organizer.
 
 > [!NOTE]
-> Rollout for Invoke-ChangeMeetingOrganizer started in June 2026 and may not have reached your tenant yet. Running the cmdlet before it reaches your tenant returns "Transfer meeting action is disabled" and no changes will be made.
+> If the cmdlet isn't available in your organization yet, you get a "Transfer meeting action is disabled", and no changes are made.
+
+You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES
 
@@ -74,14 +68,14 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Invoke-ChangeMeetingOrganizer -Identity chris@contoso.com -Subject "Weekly Status Sync" -NewOrganizer adele@contoso.com
 ```
 
-This example changes the organizer of the specified meeting from chris@contoso.com to adele@contoso.com, effective from the next meeting instance.
+This example changes the organizer of the specified meeting from `chris@contoso.com` to `adele@contoso.com`, effective from the next meeting instance. Because the Subject parameter is used, the change happens only if a single meeting matches the subject. If multiple meetings match, the command returns the list of matches so you can rerun the command using the EventId parameter.
 
 ### Example 2
 ```powershell
 Invoke-ChangeMeetingOrganizer -Identity chris@contoso.com -EventId AAMkAGRlMGI0 -NewOrganizer adele@contoso.com
 ```
 
-This example changes the organizer of the specified meeting from chris@contoso.com to adele@contoso.com, effective from the next meeting instance.
+This example changes the organizer of the meeting that has the specified EventId value from `chris@contoso.com` to `adele@contoso.com`, effective from the next meeting instance.
 
 ## PARAMETERS
 
@@ -118,7 +112,9 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-The Subject parameter identifies the meeting to change the organizer for. If the value contains spaces, enclose the value in quotation marks ("). If multiple meetings are found with the same Subject, a list of matching meetings is returned together with information to aid in the selection of the correct meeting. Find the EventId of the correct meeting and re-run Invoke-ChangeMeetingOrganizer providing the EventId instead of the Subject.
+The Subject parameter specifies the meeting to change the organizer for. If the value contains spaces, enclose the value in quotation marks (").
+
+If multiple meetings are found with the same subject, a list of matching meetings is returned with information to help you select the correct meeting. Find the EventId value of the correct meeting, and then run the command again by using the EventId parameter instead of the Subject parameter.
 
 ```yaml
 Type: String
@@ -126,7 +122,7 @@ Parameter Sets: BySubject
 Aliases:
 
 Required: True
-Position: Named
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -136,7 +132,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-The EventId parameter specifies the meeting to change the organizer for. EventId must be for the series master and not an individual instance.
+The EventId parameter specifies the meeting to change the organizer for. The value must identify the recurring series, not an individual instance.
 
 ```yaml
 Type: String
@@ -154,11 +150,11 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-The NewOrganizer parameter specifies the SMTP email address of the new meeting organizer. The new organizer must be a user within the same Exchange Online tenant. The new organizer does not need to be an attendee of the meeting.
+The NewOrganizer parameter specifies the SMTP email address of the new meeting organizer. The new organizer must be a user in the same Exchange Online organization. The new organizer doesn't need to be an attendee of the meeting.
 
 ```yaml
 Type: String
-Parameter Sets: ByEventId
+Parameter Sets: (All)
 Aliases:
 
 Required: True
@@ -172,15 +168,15 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-The TransferSeriesStartDate parameter specifies the effective date for changing the organizer. Meeting instances before this effective date remain with the original organizer. TransferSeriesStartDate must be a date in the future (previous instances cannot be transferred).
+The TransferSeriesStartDate parameter specifies the effective date for changing the organizer. Meeting instances before this effective date remain with the original organizer. The value must be a date in the future. You can't transfer previous instances.
 
 Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2026 to specify September 1, 2026.
 
-If you don't use this parameter, the series is transferred starting from the next instance.
+If you don't use this parameter, the series transfer starts from the next instance.
 
 ```yaml
 Type: DateTime
-Parameter Sets: ByEventId
+Parameter Sets: (All)
 Aliases:
 
 Required: False
@@ -194,7 +190,10 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-The Confirm switch specifies whether to show or hide the confirmation prompt. When -Confirm is provided or set to true, you must respond to a confirmation prompt before the organizer is changed. If -Confirm is not provided or set to false, the organizer is changed without confirmation. 
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
+
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
