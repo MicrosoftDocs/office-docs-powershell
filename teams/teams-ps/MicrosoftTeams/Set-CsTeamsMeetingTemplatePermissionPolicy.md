@@ -17,7 +17,15 @@ This cmdlet updates an existing TeamsMeetingTemplatePermissionPolicy.
 ## SYNTAX
 
 ```powershell
-    Set-CsTeamsMeetingTemplatePermissionPolicy [-Identity] <string> [-HiddenMeetingTemplates <PSListModifier[HiddenMeetingTemplate]>] [-Description <string>] [-Force][-WhatIf] [-Confirm] [<CommonParameters>]
+    Set-CsTeamsMeetingTemplatePermissionPolicy 
+        [-Identity] <string> 
+        [-HiddenMeetingTemplates <PSListModifier[HiddenMeetingTemplate]>] 
+        [-Description <string>]
+        [-DefaultMeetingTemplateId <string>]
+        [-Force]
+        [-WhatIf]
+        [-Confirm]
+        [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -42,18 +50,25 @@ PS> Set-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar -HiddenMeetingTe
 
 Updates the hidden meeting templates array.
 
+### Example 3 - Updating default meeting template
+
+```powershell
+PS> Set-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar -DefaultMeetingTemplateId "customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056"
+```
+
+Sets the default meeting template that is automatically applied to ad-hoc or standard meetings created by users assigned this policy.
+
 ## PARAMETERS
 
-### -Description
+### -Identity
 
-> Applicable: Microsoft Teams
-
-Pass in a new description if that field needs to be updated.
+Name of the policy instance to be updated.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -63,8 +78,6 @@ Accept wildcard characters: False
 
 ### -HiddenMeetingTemplates
 
-> Applicable: Microsoft Teams
-
 The updated list of meeting template IDs to hide.
 The HiddenMeetingTemplate objects are created with [New-CsTeamsHiddenMeetingTemplate](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamshiddenmeetingtemplate).
 
@@ -72,6 +85,7 @@ The HiddenMeetingTemplate objects are created with [New-CsTeamsHiddenMeetingTemp
 Type: HiddenMeetingTemplate[]
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -79,16 +93,31 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
+### -Description
 
-> Applicable: Microsoft Teams
-
-Name of the policy instance to be updated.
+Pass in a new description if that field needs to be updated.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
+Applicable: Microsoft Teams
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultMeetingTemplateId
+
+Specifies the ID of the meeting template to be applied by default to ad-hoc or standard meetings created by the user. Must use the `customtemplate_<GUID>` format. When set to null, no default template is applied.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
