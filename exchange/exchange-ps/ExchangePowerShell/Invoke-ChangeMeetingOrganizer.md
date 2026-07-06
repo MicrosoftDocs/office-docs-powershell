@@ -169,7 +169,7 @@ Accept wildcard characters: False
 
 The TransferSeriesStartDate parameter specifies the effective date for changing the organizer. Meeting instances before this effective date remain with the original organizer. TransferSeriesStartDate must be a date in the future (previous instances cannot be transferred).
 
-Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2018 to specify September 1, 2018.
+Use the short date format that's defined in the Regional Options settings on the computer where you're running the command. For example, if the computer is configured to use the short date format MM/dd/yyyy, enter 09/01/2026 to specify September 1, 2026.
 
 If you don't use this parameter, the series is transferred starting from the next instance.
 
