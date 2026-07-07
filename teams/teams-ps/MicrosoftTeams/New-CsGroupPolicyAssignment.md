@@ -30,7 +30,7 @@ New-CsGroupPolicyAssignment -GroupId <String> -PolicyType <String> -PolicyName <
 > - Teams Network Roaming Policy
 > - Teams Voice Applications Policy
 > - Teams Upgrade Policy
-> - Dialout Policy (outbound calling restriction policy)
+> - Dialout Policy
 >
 > This cmdlet will be deprecated in the future. Going forward, group policy assignment can be performed by using the corresponding Grant-Cs[PolicyType] cmdlet with the '-Group' parameter.
 
