@@ -187,6 +187,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
+Group policy assignment is not supported for the outbound calling restriction (Dialout) policy. Assign this policy per user with the `-Identity` parameter, or set the tenant global policy with the `-Global` parameter.
+
 The cmdlet is not supported for Teams resource accounts.
 
 ## RELATED LINKS
