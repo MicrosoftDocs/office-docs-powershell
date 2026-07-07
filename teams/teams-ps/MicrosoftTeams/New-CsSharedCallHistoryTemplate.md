@@ -92,7 +92,7 @@ Accept wildcard characters: False
 
 ### -IncomingRedirectedCalls
 
-Who sees AutoAttendant Shared Voicemails events in the shared call  history. 
+Who sees Auto Attendant Shared Voicemails events in the shared call history. 
 
 PARAMVALUE: None | AuthorizedUsersOnly | AuthorizedUsersAndGroupMembers
 
