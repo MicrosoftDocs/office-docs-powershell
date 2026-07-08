@@ -763,6 +763,8 @@ The IsOptimizedForAccessibility parameter specifies whether the mailbox is confi
 - $true: The mailbox is configured to use the light version of Outlook on the web.
 - $false: The mailbox isn't configured to use the light version of Outlook on the web.
 
+To fully utilize Light Version value must be set to $true
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
