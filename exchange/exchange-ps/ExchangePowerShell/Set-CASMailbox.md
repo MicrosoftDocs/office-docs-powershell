@@ -760,7 +760,7 @@ This parameter is functional only in on-premises Exchange.
 
 The IsOptimizedForAccessibility parameter specifies whether the mailbox is configured to use the light version of Outlook on the web. Valid values are:
 
-- $true: The mailbox is configured to use the light version of Outlook on the web.
+- $true: The mailbox is configured to use the light version of Outlook on the web. This value is required to fully utilize the light version of Outlook on the web.
 - $false: The mailbox isn't configured to use the light version of Outlook on the web.
 
 ```yaml
