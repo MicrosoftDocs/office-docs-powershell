@@ -262,7 +262,7 @@ Accept wildcard characters: False
 
 ### -EventAccessType
 
-This setting governs wich users can access the event registration page or the event site to register for events up to 1,000 attendees. It also governs which user type is allowed to join the session/s in the event.
+This setting governs which users can access the event registration page or the event site to register for events up to 1,000 attendees. It also governs which user type is allowed to join the session/s in the event.
 Possible values are:
  - **Everyone**: Enables creating events to allow in-tenant, guests, federated, and anonymous (external to the tenant) users to register and join the event.
  - **EveryoneInCompanyExcludingGuests**: Enables creating events to allow only in-tenant users to register and join the event.
