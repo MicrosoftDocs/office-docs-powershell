@@ -19,26 +19,26 @@ This cmdlet will assign a phone number to a user or a resource account (online a
 
 ### LocationUpdate (Default)
 ```
-Set-CsPhoneNumberAssignment -PhoneNumber <String> -LocationId <String> [-HttpPipelinePrepend <SendAsyncStep[]>]
+Set-CsPhoneNumberAssignment -TelephoneNumber <String> -LocationId <String> [-HttpPipelinePrepend <SendAsyncStep[]>]
  [<CommonParameters>]
 ```
 
 ### NetworkSiteUpdate
 ```
-Set-CsPhoneNumberAssignment -PhoneNumber <String> [-HttpPipelinePrepend <SendAsyncStep[]>]
+Set-CsPhoneNumberAssignment -TelephoneNumber <String> [-HttpPipelinePrepend <SendAsyncStep[]>]
  -NetworkSiteId <String> [<CommonParameters>]
 ```
 
 ### ReverseNumberLookupUpdate
 ```
-Set-CsPhoneNumberAssignment -PhoneNumber <String> [-HttpPipelinePrepend <SendAsyncStep[]>]
+Set-CsPhoneNumberAssignment -TelephoneNumber <String> [-HttpPipelinePrepend <SendAsyncStep[]>]
  -ReverseNumberLookup <String> [<CommonParameters>]
 ```
 
 ### Assignment
 ```
-Set-CsPhoneNumberAssignment -PhoneNumber <String> [-LocationId <String>]
- [-HttpPipelinePrepend <SendAsyncStep[]>] -Identity <String> -PhoneNumberType <String>
+Set-CsPhoneNumberAssignment -TelephoneNumber <String> [-LocationId <String>]
+ [-HttpPipelinePrepend <SendAsyncStep[]>] -Identity <String> -NumberType <String>
  [-NetworkSiteId <String>] [-AssignmentCategory <String>] [-ReverseNumberLookup <String>] [-Notify] [<CommonParameters>]
 ```
 
@@ -59,14 +59,14 @@ To remove a phone number from a user or resource account, use the [Remove-CsPhon
 
 ### Example 1
 ```powershell
-Set-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -PhoneNumberType CallingPlan
+Set-CsPhoneNumberAssignment -Identity user1@contoso.com -TelephoneNumber +12065551234 -NumberType CallingPlan
 ```
 This example assigns the Microsoft Calling Plan phone number +1 (206) 555-1234 to the user user1@contoso.com.
 
 ### Example 2
 ```powershell
 $loc=Get-CsOnlineLisLocation -City Vancouver
-Set-CsPhoneNumberAssignment -Identity user2@contoso.com -PhoneNumber +12065551224 -PhoneNumberType CallingPlan -LocationId $loc.LocationId
+Set-CsPhoneNumberAssignment -Identity user2@contoso.com -TelephoneNumber +12065551224 -NumberType CallingPlan -LocationId $loc.LocationId
 ```
 This example finds the emergency location defined for the corporate location Vancouver and assigns the Microsoft Calling Plan phone number +1 (206) 555-1224 and location to the user user2@contoso.com.
 
@@ -78,25 +78,25 @@ This example sets the EnterpriseVoiceEnabled flag on the user user3@contoso.com.
 
 ### Example 4
 ```powershell
-Set-CsPhoneNumberAssignment -Identity user3@contoso.com -LocationId 'null' -PhoneNumber +12065551226 -PhoneNumberType OperatorConnect
+Set-CsPhoneNumberAssignment -Identity user3@contoso.com -LocationId 'null' -TelephoneNumber +12065551226 -NumberType OperatorConnect
 ```
 This example removes the emergency location from the phone number for user user3@contoso.com.
 
 ### Example 5
 ```powershell
-Set-CsPhoneNumberAssignment -Identity cq1@contoso.com -PhoneNumber +14255551225 -PhoneNumberType DirectRouting
+Set-CsPhoneNumberAssignment -Identity cq1@contoso.com -TelephoneNumber +14255551225 -NumberType DirectRouting
 ```
 This example assigns the Direct Routing phone number +1 (425) 555-1225 to the resource account cq1@contoso.com.
 
 ### Example 6
 ```powershell
-Set-CsPhoneNumberAssignment -Identity user4@contoso.com -PhoneNumber "+14255551000;ext=1234" -PhoneNumberType DirectRouting
+Set-CsPhoneNumberAssignment -Identity user4@contoso.com -TelephoneNumber "+14255551000;ext=1234" -NumberType DirectRouting
 ```
 This example assigns the Direct Routing phone number +1 (425) 555-1000;ext=1234 to the user user4@contoso.com.
 
 ### Example 7
 ```powershell
-Try { Set-CsPhoneNumberAssignment -Identity user5@contoso.com -PhoneNumber "+14255551000;ext=1234" -PhoneNumberType DirectRouting -ErrorAction Stop } Catch { Write-Host An error occurred }
+Try { Set-CsPhoneNumberAssignment -Identity user5@contoso.com -TelephoneNumber "+14255551000;ext=1234" -NumberType DirectRouting -ErrorAction Stop } Catch { Write-Host An error occurred }
 ```
 This example shows how to use Try/Catch and ErrorAction to perform error checking on the assignment cmdlet failing.
 
@@ -107,8 +107,8 @@ $OldLoc=Get-CsOnlineLisLocation -City Vancouver
 $NewLoc=Get-CsOnlineLisLocation -City Seattle
 $Numbers=Get-CsPhoneNumberAssignment -LocationId $OldLoc.LocationId -PstnAssignmentStatus Unassigned -NumberType CallingPlan -CapabilitiesContain UserAssignment
 foreach ($No in $Numbers) {
-    Set-CsPhoneNumberAssignment -Identity $TempUser -PhoneNumberType CallingPlan -PhoneNumber $No.TelephoneNumber -LocationId $NewLoc.LocationId
-    Remove-CsPhoneNumberAssignment -Identity $TempUser -PhoneNumberType CallingPlan -PhoneNumber $No.TelephoneNumber
+    Set-CsPhoneNumberAssignment -Identity $TempUser -NumberType CallingPlan -TelephoneNumber $No.TelephoneNumber -LocationId $NewLoc.LocationId
+    Remove-CsPhoneNumberAssignment -Identity $TempUser -NumberType CallingPlan -TelephoneNumber $No.TelephoneNumber
 }
 ```
 This example shows how to change the location for unassigned Calling Plan subscriber phone numbers by looping through all the phone numbers, assigning each phone number temporarily with the new location to a user, and then unassigning the phone number again from the user.
@@ -116,7 +116,7 @@ This example shows how to change the location for unassigned Calling Plan subscr
 ### Example 9
 ```powershell
 $loc=Get-CsOnlineLisLocation -City Toronto
-Set-CsPhoneNumberAssignment -PhoneNumber +12065551224 -LocationId $loc.LocationId
+Set-CsPhoneNumberAssignment -TelephoneNumber +12065551224 -LocationId $loc.LocationId
 ```
 This example shows how to set the location on a phone number.
 
@@ -130,7 +130,7 @@ Write-Host $pns.count numbers found in old location $OldLocationId
 # Move all those phone numbers to the new location
 foreach ($pn in $pns) {
       Try {
-             Set-CsPhoneNumberAssignment -PhoneNumber $pn.TelephoneNumber -LocationId $NewLocationId -ErrorAction Stop
+             Set-CsPhoneNumberAssignment -TelephoneNumber $pn.TelephoneNumber -LocationId $NewLocationId -ErrorAction Stop
              Write-Host $pn.TelephoneNumber was updated to have location $NewLocationId
       }
       Catch {
@@ -144,25 +144,25 @@ This example shows how to update the LocationID from an old location to a new lo
 
 ### Example 11
 ```powershell
-Set-CsPhoneNumberAssignment -Identity user3@contoso.com -PhoneNumber +12065551226 -ReverseNumberLookup 'SkipInternalVoip'
+Set-CsPhoneNumberAssignment -Identity user3@contoso.com -TelephoneNumber +12065551226 -ReverseNumberLookup 'SkipInternalVoip'
 ```
 This example shows how to turn off reverse number lookup (RNL) on a phone number. When RNL is set to 'SkipInternalVoip', an internal call to this phone number will not attempt to pass through internal VoIP via reverse number lookup in Microsoft Teams. Instead the call will be established through external PSTN connectivity directly. This example is only applicable for Direct Routing phone numbers.
 
 ### Example 12
 ```powershell
-Set-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber '+14255551234' -PhoneNumberType CallingPlan -AssignmentCategory Private
+Set-CsPhoneNumberAssignment -Identity user1@contoso.com -TelephoneNumber '+14255551234' -NumberType CallingPlan -AssignmentCategory Private
 ```
 This example shows how to assign a private phone number (incoming calls only) to a user.
 
 ### Example 13
 ```powershell
-Set-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber '+14255551234' -PhoneNumberType CallingPlan -LocationId "7fda0c0b-6a3d-48b8-854b-3fbe9dcf6513" -Notify
+Set-CsPhoneNumberAssignment -Identity user1@contoso.com -TelephoneNumber '+14255551234' -NumberType CallingPlan -LocationId "7fda0c0b-6a3d-48b8-854b-3fbe9dcf6513" -Notify
 ```
 This example shows how to send an email to Teams phone users informing them about the new telephone number assignment. Note: For assignment of India telephone numbers provided by Airtel, Teams Phone users will automatically receive an email outlining the usage guidelines and restrictions. This notification is mandatory and cannot be opted out of.
 
 ### Example 14
 ```powershell
-Set-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber '+1555555555' -PhoneNumberType CallingPlan -LocationId "7fda0c0b-6a3d-48b8-854b-3fbe9dcf6513" -AssignmentCategory Alternate
+Set-CsPhoneNumberAssignment -Identity user1@contoso.com -TelephoneNumber '+1555555555' -NumberType CallingPlan -LocationId "7fda0c0b-6a3d-48b8-854b-3fbe9dcf6513" -AssignmentCategory Alternate
 ```
 This example shows how to assign an alternate calling plan number to a user. The alternate number can be from any country/region where the tenant can acquire a telephone number from. 
 
@@ -193,7 +193,7 @@ Accept wildcard characters: False
 
 Flag indicating if the user or resource account should be EnterpriseVoiceEnabled.
 
-This parameter is mutual exclusive with PhoneNumber.
+This parameter is mutual exclusive with TelephoneNumber.
 
 ```yaml
 Type: System.Boolean
@@ -305,7 +305,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PhoneNumber
+### -TelephoneNumber
 The phone number to assign to the user or resource account. Supports E.164 format like +12065551234 and non-E.164 format like 12065551234. The phone number can't have "tel:" prefixed.
 
 We support Direct Routing numbers with extensions using the formats +1206555000;ext=1234 or 1206555000;ext=1234 assigned to a user or resource account.
@@ -315,7 +315,7 @@ Setting a phone number will automatically set EnterpriseVoiceEnabled to True.
 ```yaml
 Type: System.String
 Parameter Sets: LocationUpdate, NetworkSiteUpdate, ReverseNumberLookupUpdate, Assignment
-Aliases:
+Aliases: PhoneNumber
 
 Required: True
 Position: Named
@@ -324,13 +324,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PhoneNumberType
+### -NumberType
 The type of phone number to assign to the user or resource account. The supported values are DirectRouting, CallingPlan, and OperatorConnect. When you acquire a phone number you will typically know which type it is.
 
 ```yaml
 Type: System.String
 Parameter Sets: Assignment
-Aliases:
+Aliases: PhoneNumberType
 
 Required: True
 Position: Named

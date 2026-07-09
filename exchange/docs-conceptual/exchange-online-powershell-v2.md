@@ -1,15 +1,16 @@
 ---
 title: About the Exchange Online PowerShell V3 module
-ms.date: 01/22/2026
+ms.date: 06/17/2026
 ms.audience: Admin
 ms.topic: article
 ms.reviewer:
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
 keywords: Exchange Online PowerShell V2 module, Exchange Online PowerShell V3 module, EXO V2 module, EXO V3 module
-description: "Admins can learn about the installation, maintenance, and design of the Exchange Online PowerShell V3 module that they use to connect to all Exchange cloud-related PowerShell environments."
+description: "Learn how to install, maintain, and use the Exchange Online PowerShell V3 module to connect to all Exchange cloud-related PowerShell environments."
 ---
 
 # About the Exchange Online PowerShell module
@@ -44,7 +45,7 @@ Cmdlets in REST API connections have the following advantages over their histori
   - Delays due to large queries that take a long time to complete.
 - **Better performance**: REST API connections avoid setting up a PowerShell runspace.
 
-The following table compares the benefits of REST API cmdlets to unavailable remote PowerShell cmdlets and the [exclusive Get-EXO\* cmdlets in the EXO V3 module](#cmdlets-in-the-exchange-online-powershell-module)
+The following table compares the benefits of REST API cmdlets to unavailable remote PowerShell cmdlets and the [exclusive Get-EXO\* cmdlets in the EXO V3 module](#cmdlets-in-the-exchange-online-powershell-module).
 
 |&nbsp;|Remote PowerShell cmdlets|Get-EXO\* cmdlets|REST API cmdlets|
 |---|---|---|---|
@@ -140,7 +141,7 @@ The EXO module contains nine exclusive **Get-EXO\*** cmdlets that are optimized 
 |[Get-EXOMailbox](/powershell/module/exchangepowershell/get-exomailbox)|[Get-Mailbox](/powershell/module/exchangepowershell/get-mailbox)|
 |[Get-EXORecipient](/powershell/module/exchangepowershell/get-exorecipient)|[Get-Recipient](/powershell/module/exchangepowershell/get-recipient)|
 |[Get-EXOCasMailbox](/powershell/module/exchangepowershell/get-exocasmailbox)|[Get-CASMailbox](/powershell/module/exchangepowershell/get-casmailbox)|
-|[Get-EXOMailboxPermission](/powershell/module/exchangepowershell/get-exomailboxPermission)|[Get-MailboxPermission](/powershell/module/exchangepowershell/get-mailboxpermission)|
+|[Get-EXOMailboxPermission](/powershell/module/exchangepowershell/get-exomailboxpermission)|[Get-MailboxPermission](/powershell/module/exchangepowershell/get-mailboxpermission)|
 |[Get-EXORecipientPermission](/powershell/module/exchangepowershell/get-exorecipientpermission)|[Get-RecipientPermission](/powershell/module/exchangepowershell/get-recipientpermission)|
 |[Get-EXOMailboxStatistics](/powershell/module/exchangepowershell/get-exomailboxstatistics)|[Get-MailboxStatistics](/powershell/module/exchangepowershell/get-mailboxstatistics)|
 |[Get-EXOMailboxFolderStatistics](/powershell/module/exchangepowershell/get-exomailboxfolderstatistics)|[Get-MailboxFolderStatistics](/powershell/module/exchangepowershell/get-mailboxfolderstatistics)|
@@ -189,17 +190,12 @@ Miscellaneous Exchange Online feature cmdlets that happen to be in the module ar
 |[Get-WorkforceInsightsDelegationAccess](/powershell/module/exchangepowershell/get-workforceinsightsdelegationaccess)|Available in v3.9.2-Preview1 or later.|
 |[Remove-WorkforceInsightsDelegationAccess](/powershell/module/exchangepowershell/remove-workforceinsightsdelegationaccess)|Available in v3.9.2-Preview1 or later.|
 
-## Install and maintain the Exchange Online PowerShell module
-
-You download the module from the PowerShell gallery at <https://www.powershellgallery.com/packages/ExchangeOnlineManagement/>.
-
-The procedures in this section explain how to install, update, and uninstall the module.
-
-### Supported operating systems for the Exchange Online PowerShell module
+## Supported operating systems for the Exchange Online PowerShell module
 
 The module is officially supported in PowerShell 7 on Windows, Linux, and Apple macOS:
 
-- Module versions 3.5.0 (May 2024) or later require PowerShell 7.4.0 (November 2023) or later due to .NET 8.0 assembly dependencies. Earlier versions of PowerShell 7 might encounter compatibility issues (PowerShell 7.3.6 is more compatible than 7.3.7).
+- Module versions 3.10.0 (June 2026) or later require PowerShell 7.6.0 (March 2026) or later due to .NET 10.0 assembly dependencies.
+- Module versions 3.5.0 (May 2024) to 3.9.2 (January 2026) require PowerShell 7.4.0 (November 2023) or later due to .NET 8.0 assembly dependencies. Earlier versions of PowerShell 7 might encounter compatibility issues (PowerShell 7.3.6 is more compatible with the module than 7.3.7).
 - Module versions 3.0.0 (September 2022) to 3.4.0 (October 2023) require PowerShell 7.2.0 (November 2021) or later due to .NET 6.0 assembly dependencies in REST API cmdlets and connections.
 - Support for the module in PowerShell 7 started with version 2.0.4 (February 2021) in PowerShell 7.0.3 (July 2020).
 
@@ -215,197 +211,217 @@ For more information about PowerShell 7, see [What is PowerShell?](/powershell/s
 > - Version 3.0.0 (September 2022) or later fully supports REST API cmdlets in Exchange Online PowerShell.
 > - Version 3.2.0 (June 2023) or later fully supports REST API cmdlets in Security & Compliance PowerShell.
 
-#### Apple macOS
+### macOS support for the module
 
 > [!NOTE]
 > Currently, **Connect-IPPSSession** and therefore Security & Compliance PowerShell isn't available in PowerShell 7 on macOS clients.
 
+For instructions on installing PowerShell 7 on macOS, see [Installing PowerShell on macOS](/powershell/scripting/install/installing-powershell-core-on-macos). After you install PowerShell 7, you can do the [regular PowerShell prerequisites](#prerequisites-for-the-exchange-online-powershell-module) and [install and update the Exchange Online PowerShell module](#install-and-update-the-exchange-online-powershell-module).
+
 The module is supported in the following versions of macOS:
 
-- **macOS 13 Ventura or later**:
+#### macOS 14 Sonoma or later
 
-  |Module version|PowerShell version|
-  |---|---|
-  |3.5.0 or later|7.4.0 or later|
+|Module version|PowerShell version|
+|---|---|
+|3.10.0 or later|7.6.0 or later|
+|3.5.0 to 3.9.2|7.4.0 or later|
 
-  7.4.0 is the minimum supported version of PowerShell 7 in macOS 13 or later. Module versions 3.0.0 to 3.4.0 are also supported.
+7.4.0 (.NET 8.0) is the earliest supported version of PowerShell 7 on macOS 14 Sonoma or later.
 
-- **macOS 12 Monterey** and **mac OS 11 Big Sur**:
+#### macOS 13 Ventura
 
-  |Module version|PowerShell version|
-  |---|---|
-  |3.5.0 or later|7.4.x|
-  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|
-  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|
+|Module version|PowerShell version|
+|---|---|
+|3.5.0 to 3.9.2|7.4.0 to 7.5.x|
+|3.0.0 to 3.4.0|7.2.0 to 7.3.7|
 
-  Module versions 3.0.0 or later are supported on all processors.
+The latest supported version of the module is 3.9.2 because the latest supported version of PowerShell 7 is 7.5.x (.NET 9.0).
 
-  Module versions 2.0.4 and 2.0.5 run natively on Intel processors. Apple M1 or Apple M2 processors require Apple Rosetta 2.
+#### macOS 12 Monterey and macOS 11 Big Sur
 
-  7.4.x is the latest supported version of PowerShell 7 in macOS 11 and macOS 12.
+|Module version|PowerShell version|
+|---|---|
+|3.5.0 to 3.9.2|7.4.x|
+|3.0.0 to 3.4.0|7.2.0 to 7.3.7|
+|2.0.4 and 2.0.5|7.0.3 to 7.1.5|
 
-- **macOS 10.15 Catalina**:
+The latest supported version of the module is 3.9.2 because the latest supported version of PowerShell 7 is 7.4.x (.NET 8.0).
 
-  |Module version|PowerShell version|
-  |---|---|
-  |3.0.0 to 3.4.0|7.2.0 to 7.2.22|
-  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|
+Module versions 3.0.0 to 3.9.2 are supported on all processors.
 
-  7.2.22 is the latest supported version of PowerShell 7 in macOS 10.15.
+Module versions 2.0.4 and 2.0.5 run natively on Intel processors. Apple M1 or Apple M2 processors require Apple Rosetta 2.
 
-- **macOS 10.14 Mojave**
+#### macOS 10.15 Catalina
 
-  |Module version|PowerShell version|
-  |---|---|
-  |2.0.4 and 2.0.5|7.0.3 to 7.1.5|
+|Module version|PowerShell version|
+|---|---|
+|3.0.0 to 3.4.0|7.2.0 to 7.2.22|
+|2.0.4 and 2.0.5|7.0.3 to 7.1.5|
 
-  7.1.5 is the latest supported version of PowerShell 7 in macOS 10.14.
+The latest supported version of the module is 3.4.0 because the latest supported version of PowerShell 7 is 7.2.22 (.NET 6.0).
 
-For instructions on installing PowerShell 7 on macOS, see [Installing PowerShell on macOS](/powershell/scripting/install/installing-powershell-core-on-macos).
+#### macOS 10.14 Mojave
 
-As described in the installation article, you need to install OpenSSL, which is required for WSMan.
+|Module version|PowerShell version|
+|---|---|
+|2.0.4 and 2.0.5|7.0.3 to 7.1.5|
 
-After you install PowerShell 7 and OpenSSL, do the following steps:
+The latest supported version of the module is 2.0.5 because the latest supported version of PowerShell 7 is 7.1.5 (.NET 5.0).
 
-1. Run PowerShell as superuser: `sudo pwsh`
-2. In the PowerShell superuser session, run the following commands:
+> [!NOTE]
+> You can connect to Exchange Online PowerShell. The [nine exclusive **Get-EXO\*** cmdlets in the module](#cmdlets-in-the-exchange-online-powershell-module) are supported, but not all Exchange Online PowerShell cmdlets are supported (not all cmdlets support the REST API in this version of the module).
 
-   ```powershell
-   Install-Module -Name PSWSMan
-
-   Install-WSMan
-   ```
-
-   If prompted, accept PSGallery as the source for the cmdlets.
-
-Now you can do the [regular PowerShell prerequisites](#prerequisites-for-the-exchange-online-powershell-module) and [install the Exchange Online PowerShell module](#install-the-exchange-online-powershell-module).
-
-#### Linux
+### Linux support for the module
 
 > [!NOTE]
 > Currently, **Connect-IPPSSession** and therefore Security & Compliance PowerShell isn't available in PowerShell 7 on Linux clients.
 >
 > If you connect to Exchange Online PowerShell on Linux from a network behind a proxy server, you need to use module version 3.0.0 or later.
 
+For instructions on installing PowerShell 7 on Linux, see [Installing PowerShell on Linux](/powershell/scripting/install/installing-powershell-on-linux#ubuntu). After you install PowerShell 7, you can do the [regular PowerShell prerequisites](#prerequisites-for-the-exchange-online-powershell-module) and [install and update the Exchange Online PowerShell module](#install-and-update-the-exchange-online-powershell-module).
+
 The module is officially supported in the following distributions of Linux:
 
-- **Ubuntu 24.04 LTS**
+#### Ubuntu 24.04 LTS
 
-  |Module version|PowerShell version|
-  |---|---|
-  |3.5.0 or later|7.4.0 or later|
-  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|
+|Module version|PowerShell version|
+|---|---|
+|3.10.0 or later|7.6.0 or later|
+|3.5.0 to 3.9.2|7.4.0 or later|
+|3.0.0 to 3.4.0|7.2.0 to 7.3.7|
 
-- **Ubuntu 20.04 LTS**
+7.2.0 (.NET 6.0) is the earliest supported version of PowerShell 7 on Ubuntu 24.04 LTS.
 
-  |Module version|PowerShell version|
-  |---|---|
-  |3.5.0 or later|7.4.x|
-  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|
-  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|
+#### Ubuntu 22.04 LTS
 
-  Versions 3.7.0 or later might fail with SSL protocol errors.
+|Module version|PowerShell version|
+|---|---|
+|3.10.0 or later|7.6.0 or later|
+|3.5.0 to 3.9.2|7.4.0 or later|
+|3.0.0 to 3.4.0|7.2.0 to 7.3.7|
 
-- **Ubuntu 18.04 LTS**
+7.2.0 (.NET 6.0) is the earliest supported version of PowerShell 7 on Ubuntu 22.04 LTS.
 
-  |Module version|PowerShell version|
-  |---|---|
-  |3.5.0 or later|7.4.x|
-  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|
-  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|
+#### Ubuntu 20.04 LTS
 
-  Module versions 3.7.0 or later might have reliability issues in Ubuntu 18.04 LTS.
+|Module version|PowerShell version|
+|---|---|
+|3.5.0 to 3.9.2|7.4.x|
+|3.0.0 to 3.4.0|7.2.0 to 7.3.7|
+|2.0.4 and 2.0.5|7.0.3 to 7.1.5|
 
-For instructions on installing PowerShell 7 on Linux, see [Installing PowerShell on Linux](/powershell/scripting/install/installing-powershell-on-linux?view=powershell-7.4#ubuntu&preserve-view=true).
+The latest supported version of the module is 3.9.2 because the latest supported version of PowerShell 7 is 7.4.x (.NET 8.0).
 
-After you install PowerShell 7, do the following steps:
+Module versions 3.7.0 to 3.9.2 might fail with SSL protocol errors.
 
-1. Run PowerShell as superuser: `sudo pwsh`
-2. In the PowerShell superuser session, run the following commands:
+#### Ubuntu 18.04 LTS
 
-   ```powershell
-   Install-Module -Name PSWSMan
+|Module version|PowerShell version|
+|---|---|
+|3.5.0 to 3.9.2|7.4.x|
+|3.0.0 to 3.4.0|7.2.0 to 7.3.7|
+|2.0.4 and 2.0.5|7.0.3 to 7.1.5|
 
-   Install-WSMan
-   ```
+The latest supported version of the module is 3.9.2 because the latest supported version of PowerShell 7 is 7.4.x (.NET 8.0).
 
-   If prompted, accept PSGallery as the source for the cmdlets.
+Module versions 3.7.0 to 3.9.2 might have reliability issues in Ubuntu 18.04 LTS.
 
-Now you can do the [regular PowerShell prerequisites](#prerequisites-for-the-exchange-online-powershell-module) and [install the Exchange Online PowerShell module](#install-the-exchange-online-powershell-module).
+### Windows support for the module
 
-#### Windows
+Specific module version support in Windows depends on Windows PowerShell support and .NET Framework and/or .NET support as described in the following subsections:
 
-- **Windows PowerShell 5.1**:
-  - All versions of the module are supported.
-  - Current versions of Windows include the required versions of the .NET Framework, so you don't need to install the .NET Framework to use the module in Windows PowerShell 5.1.
+#### Windows 11
 
-- **PowerShell 7**:
-  - Module versions 3.5.0 (May 2024) or later require PowerShell 7.4.0 (November 2023) or later due to .NET 8.0 assembly dependencies. Earlier versions of PowerShell 7 might encounter compatibility issues (PowerShell 7.3.6 is more compatible with the module than 7.3.7).
-  - Module versions 3.0.0 (September 2022) to 3.4.0 (October 2023) require PowerShell 7.2.0 (November 2021) or later due to .NET 6.0 assembly dependencies in REST API cmdlets and connections.
-  - Support for the module in PowerShell 7 started with version 2.0.4 (February 2021) in PowerShell 7.0.3 (July 2020).
+In Windows PowerShell 5.1, the module requires .NET Framework 4.7.2 (4.8.x is included in Windows 11, so you don't need to install the .NET Framework).
 
-Specific module version support in Windows depends on Windows PowerShell support and .NET Framework and/or .NET support as described in the following list:
+|Module version|PowerShell version|
+|---|---|
+|**Windows PowerShell 5.1**||
+|2.0.5 or later|5.1|
+|**PowerShell 7**||
+|3.10.0 or later|7.6.0 or later|
+|3.5.0 to 3.9.2|7.4.0 or later|
+|3.0.0 to 3.4.0|7.2.0 to 7.3.7|
 
-- **Windows 11**:
+7.2.0 (.NET 6.0) is the earliest supported version of PowerShell 7 in Windows 11.
 
-  |Module version|PowerShell version|.NET requirement|
-  |---|---|---|
-  |2.0.5 or later|5.1|.NET Framework 4.7.2 (4.8.x is included, so you don't need to install the .NET Framework)|
-  |3.5.0 or later|7.4.0 or later|.NET 8.0<br/>Included in 24H2 or later.|
-  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|.NET 6.0 (7.2.x)<br/>.NET 7.0 (7.3.x)|
+#### Windows Server 2022 and Windows Server 2025
 
-  7.2.0 (.NET 6.0) is the earliest supported version of PowerShell 7 in Windows 11.
+In Windows PowerShell 5.1, the module requires .NET Framework 4.7.2 (4.8.x is included, so you don't need to install the .NET Framework).
 
-- **Windows Server 2022**:
+|Module version|PowerShell version|
+|---|---|
+|**Windows PowerShell 5.1**||
+|2.0.5 or later|5.1|
+|**PowerShell 7**||
+|3.10.0 or later|7.6.0 or later|
+|3.5.0 to 3.9.2|7.4.0 or later|
+|3.0.0 to 3.4.0|7.2.0 to 7.3.7|
 
-  |Module version|PowerShell version|.NET requirement|
-  |---|---|---|
-  |2.0.5 or later|5.1|.NET Framework 4.7.2 (4.8 is included, so you don't need to install the .NET Framework)|
-  |3.5.0 or later|7.4.0 or later|.NET 8.0|
-  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|.NET 6.0 (7.2.x)<br/>.NET 7.0 (7.3.x)|
+7.2.0 (.NET 6.0) is the earliest supported version of PowerShell 7 in Windows Server 2022 and Windows Server 2025.
 
-  7.2.0 (.NET 6.0) is the earliest supported version of PowerShell 7 in Windows Server 2022.
+#### Windows 10
 
-- **Windows 10**:
+In Windows PowerShell 5.1, the module requires .NET Framework 4.7.2. The Windows 10 April 2018 Update (version 1803) or later includes .NET Framework 4.7.2, so you don't need to download it.
 
-  |Module version|PowerShell version|Supported Windows version|.NET requirement|
-  |---|---|---|---|
-  |2.0.5 or later|5.1|Anniversary Update (version 1607; August 2016) or later|.NET Framework 4.7.2<br/>April 2018 Update (version 1803) or later includes the .NET Framework 4.7.2, so you don't need to download it.|
-  |3.5.0 or later|7.4.0 or later|October 2018 Update (version 1809) or later |.NET 8.0|
-  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|October 2018 Update (version 1809) or later|.NET 6.0 (7.2.x)<br/>.NET 7.0 (7.3.x)|
-  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|Anniversary Update (version 1607; August 2016) or later|.NET Core 3.1 (7.0.x)<br/>.NET 5.0 (7.1.x)|
+|Module version|PowerShell version|Supported Windows version|
+|---|---|---|
+|**Windows PowerShell 5.1**|||
+|2.0.5 or later|5.1|Anniversary Update (version 1607; August 2016) or later|
+|**PowerShell 7**|||
+|3.10.0 or later|7.6.0 or later|Enterprise/IoT LTSC editions only (1607, 1809, 21H2)|
+|3.5.0 to 3.9.2|7.4.0 or later|Enterprise/IoT LTSC editions only (1607, 1809, 21H2)|
+|3.0.0 to 3.4.0|7.2.0 to 7.3.7|October 2018 Update (version 1809) or later|
+|2.0.4 and 2.0.5|7.0.3 to 7.1.5|Anniversary Update (version 1607; August 2016) or later|
 
-- **Windows Server 2016** and **Windows Server 2019**:
+On Windows 10, .NET 8.0 and .NET 10.0 (and therefore PowerShell 7.4 or later and module versions 3.5.0 or later) are supported only on the Enterprise and IoT LTSC editions that are still in support (versions 1607, 1809, and 21H2).
 
-  |Module version|PowerShell version|.NET requirement|
-  |---|---|---|
-  |2.0.5 or later|5.1|.NET Framework 4.7.2<br/>Included in Windows Server 2019.|
-  |3.5.0 or later|7.4.0 or later|.NET 8.0|
-  |3.0.0 to 3.4.0|7.2.0 to 7.3.7 (or later)|.NET 6.0 (7.2.x)<br/>.NET 7.0 (7.3.x)|
-  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|.NET Core 3.1 (7.0.x)<br/>.NET 5.0 (7.1.x)|
+Consumer editions of Windows 10 reached end of support in October 2025, and don't support .NET 8.0 or .NET 10.0.
 
-- **Windows 8.1**, **Windows Server 2012**, and **Windows Server 2012 R2**:
+#### Windows Server 2016 and Windows Server 2019
 
-  |Module version|PowerShell version|.NET requirement|
-  |---|---|---|
-  |2.0.5 or later|5.1|.NET Framework 4.7.2|
-  |3.0.0 to 3.4.0|7.2.x|.NET 6.0|
-  |2.0.4 and 2.0.5|7.0.3 to 7.1.5 (or later)|.NET Core 3.1 (7.0.x)<br/>.NET 5.0 (7.1.x)|
+In Windows PowerShell 5.1, the module requires .NET Framework 4.7.2 (included in Windows Server 2019).
 
-  7.2.22 (.NET 6.0) is the latest supported version of PowerShell 7 in Windows 8.1, Windows Server 2012, and Windows Server 2012 R2.
+|Module version|PowerShell version|
+|---|---|
+|**Windows PowerShell 5.1**||
+|2.0.5 or later|5.1|
+|**PowerShell 7**||
+|3.10.0 or later|7.6.0 or later|
+|3.5.0 to 3.9.2|7.4.0 or later|
+|3.0.0 to 3.4.0|7.2.0 to 7.3.7|
+|2.0.4 and 2.0.5|7.0.3 to 7.1.5|
 
-- **Windows 7.1 SP1** and **Windows Server 2008 R2 SP1**:
+#### Windows 8.1, Windows Server 2012, and Windows Server 2012 R2
 
-  |Module version|PowerShell version|.NET requirement|
-  |---|---|---|
-  |2.0.3|5.1|.NET Framework 4.7.1|
+In Windows PowerShell 5.1, the module requires .NET Framework 4.7.2.
 
-  > [!NOTE]
-  > Although you can install this version of the module, you can't connect to Exchange Online PowerShell. Module version 2.0.3 lacks support for REST API connections.
+|Module version|PowerShell version|
+|---|---|
+|**Windows PowerShell 5.1**||
+|2.0.5 or later|5.1|
+|**PowerShell 7**||
+|3.0.0 to 3.4.0|7.2.x|
+|2.0.4 and 2.0.5|7.0.3 to 7.1.5|
 
-### Prerequisites for the Exchange Online PowerShell module
+7.2.22 (.NET 6.0) is the latest supported version of PowerShell 7 in Windows 8.1, Windows Server 2012, and Windows Server 2012 R2.
 
-#### Set the PowerShell execution policy to RemoteSigned
+#### Windows 7.1 SP1 and Windows Server 2008 R2 SP1
+
+In Windows PowerShell 5.1, the module requires .NET Framework 4.7.1.
+
+|Module version|PowerShell version|
+|---|---|
+|**Windows PowerShell 5.1**||
+|2.0.3|5.1|
+
+> [!NOTE]
+> Although you can install this version of the module, you can't connect to Exchange Online PowerShell or Security & Compliance PowerShell. Module version 2.0.3 lacks support for REST API connections.
+
+## Prerequisites for the Exchange Online PowerShell module
+
+### Set the PowerShell execution policy to RemoteSigned
 
 > [!TIP]
 > The settings in this section apply to all versions of PowerShell on all operating systems.
@@ -414,7 +430,7 @@ PowerShell needs to be configured to run scripts, and by default, it isn't. You 
 
 > Files cannot be loaded because running scripts is disabled on this system. Provide a valid certificate with which to sign the files.
 
-To require trusted publisher signing for all PowerShell scripts downloaded from the internet, run the following command in an elevated PowerShell window (a PowerShell window you open by selecting **Run as administrator**):
+To require trusted publisher signing for all PowerShell scripts downloaded from the internet, run the following command in an elevated PowerShell session (a PowerShell window you open by selecting **Run as administrator**):
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned
@@ -424,15 +440,15 @@ For more information about execution policies, see [About Execution Policies](/p
 
 <a name='turn-on-basic-authentication-in-winrm'></a>
 
-#### Basic authentication in WinRM
+### Basic authentication in WinRM
 
 As of October 2023, REST API connections replaced basic authentication (remote PowerShell) connections in [Exchange Online PowerShell](https://techcommunity.microsoft.com/blog/exchange/deprecation-of-remote-powershell-in-exchange-online-%e2%80%93-re-enabling-or-extending-r/3779692) and [Security & Compliance PowerShell](https://techcommunity.microsoft.com/blog/exchange/deprecation-of-remote-powershell-rps-protocol-in-security-and-compliance-powersh/3815432). REST API connections don't require Basic authentication in WinRM.
 
-Version 3.2.0 (June 2023) and later version of the module fully support REST API cmdlets in Exchange Online PowerShell and Security & Compliance PowerShell.
+Version 3.2.0 (June 2023) and later versions of the module fully support REST API cmdlets in Exchange Online PowerShell and Security & Compliance PowerShell.
 
 <a name='powershellget-for-rest-api-connections-in-windows'></a>
 
-### PowerShellGet required in Windows
+## PowerShellGet required in Windows
 
 REST API connections in Windows require the PowerShellGet module. By dependency, the PowerShellGet module requires the PackageManagement module. Consideration for these modules is more for PowerShell 5.1 than PowerShell 7, but all versions of PowerShell benefit from having the latest versions of the modules installed. For installation and update instructions, see [Installing PowerShellGet on Windows](/powershell/scripting/gallery/installing-psget).
 
@@ -443,143 +459,83 @@ If you don't have PowerShellGet installed when you try to connect, you get the f
 
 > Cannot find a cmdlet Update-Manifest
 
-### Install the Exchange Online PowerShell module
+<a name="install-the-exchange-online-powershell-module"> </a>
 
-To install the module for the first time, complete the following steps:
+<a name="update-the-exchange-online-powershell-module"> </a>
 
-1. Install or update the PowerShellGet module as described in [Installing PowerShellGet](/powershell/scripting/gallery/installing-psget).
+<a name="install-and-maintain-the-exchange-online-powershell-module"> </a>
 
-2. Close and reopen the Windows PowerShell window.
+## Install and update the Exchange Online PowerShell module
 
-3. Now you can use the **Install-Module** cmdlet to install the module from the PowerShell Gallery. Typically, you want the latest public version of the module, but you can also install a Preview version that's newer than the current version.
+The module is available in the PowerShell Gallery at <https://www.powershellgallery.com/packages/ExchangeOnlineManagement/>.
 
-   - To install **the latest public version** of the module, run **one** of the following commands:
+Use the **[Install-Module](/powershell/module/powershellget/install-module)** cmdlet to install the module for the first time, and the **[Update-Module](/powershell/module/powershellget/update-module)** cmdlet to update an existing installation from the PowerShell Gallery. Both cmdlets use the same parameters, so the same syntax applies whether you're installing or updating.
 
-     - In an elevated PowerShell window (all users):
+To see whether the module is already installed and how it was installed, run `Get-InstalledModule ExchangeOnlineManagement | Format-List Name,Version,InstalledLocation`:
 
-       ```powershell
-       Install-Module -Name ExchangeOnlineManagement
-       ```
+- If the module is installed in `%ProgramFiles%\WindowsPowerShell\Modules\`, it's installed for all users.
+- If the module is installed in your Documents folder, it's installed only for your current user account.
 
-     - Only for the current user account:
+Before you install the module for the first time, install or update the PowerShellGet module as described in [Installing PowerShellGet](/powershell/scripting/gallery/installing-psget), and then close and reopen the PowerShell window.
 
-       ```powershell
-       Install-Module -Name ExchangeOnlineManagement -Scope CurrentUser
-       ```
+To install or update the module, use the following syntax:
 
-   - To see **the available Preview versions** of the module, run the following command:
+```powershell
+<Install-Module | Update-Module> -Name ExchangeOnlineManagement [-Scope CurrentUser] [-RequiredVersion <Version>] [-AllowPrerelease]
+```
 
-     ```powershell
-     Find-Module ExchangeOnlineManagement -AllVersions -AllowPrerelease
-     ```
+- Typically, you want the latest public version of the module, but you can also install or update to a Preview version.
+- Requirements for the PowerShell session to install or update the module:
+  - **For all users**: Run the command in an elevated PowerShell session.
+  - **For the current user**: An elevated PowerShell session isn't required.
 
-   - To install **the latest available Preview version** of the module, run **one** of the following commands:
+  When you update the module, use the same scope that you used to originally install it.
 
-     - In an elevated PowerShell window (all users):
+- The _RequiredVersion_ parameter specifies the module version to install or update to. You can use this parameter with or without the _AllowPrerelease_ switch.
+- The _AllowPrerelease_ switch installs or updates to a Preview version of the module. To specify the Preview version, also use the _RequiredVersion_ parameter.
 
-       ```powershell
-       Install-Module -Name ExchangeOnlineManagement -AllowPrerelease
-       ```
+  To see all available versions of the module, including Preview versions, run `Find-Module ExchangeOnlineManagement -AllVersions -AllowPrerelease`. To see only public versions, omit the _AllowPrerelease_ switch.
 
-     - Only for the current user account:
+This example installs the latest public version of the module for all users.
 
-       ```powershell
-       Install-Module -Name ExchangeOnlineManagement -Scope CurrentUser -AllowPrerelease
-       ```
+```powershell
+Install-Module -Name ExchangeOnlineManagement
+```
 
-   - To install **a specific Preview version** of the module, replace \<PreviewVersion\> with the necessary value, and run **one** of the following commands:
+This example updates the module to the latest public version for the current user account.
 
-     - In an elevated PowerShell window (all users):
+```powershell
+Update-Module -Name ExchangeOnlineManagement -Scope CurrentUser
+```
 
-       ```powershell
-       Install-Module -Name ExchangeOnlineManagement -RequiredVersion <PreviewVersion> -AllowPrerelease
-       ```
+This example installs the latest available Preview version of the module for all users.
 
-     - Only for the current user account:
+```powershell
+Install-Module -Name ExchangeOnlineManagement -AllowPrerelease
+```
 
-       ```powershell
-       Install-Module -Name ExchangeOnlineManagement -RequiredVersion <PreviewVersion> -AllowPrerelease -Scope CurrentUser
-       ```
+For detailed syntax and parameter information, see the following articles:
 
-   When you're finished, enter **Y** to accept the license agreement.
+- [Find-Module](/powershell/module/powershellget/find-module)
+- [Install-Module](/powershell/module/powershellget/install-module)
+- [Update-Module](/powershell/module/powershellget/update-module)
+- [Get-InstalledModule](/powershell/module/powershellget/get-installedmodule)
 
-For detailed syntax and parameter information, see [Install-Module](/powershell/module/powershellget/install-module).
+### Uninstall the Exchange Online PowerShell module
 
-### Update the Exchange Online PowerShell module
+To uninstall the module, run the following command. If you originally installed the module for all users, run the command in an elevated PowerShell session.
 
-If the module is already installed on your computer, you can use the procedures in this section to update the module.
+```powershell
+Uninstall-Module -Name ExchangeOnlineManagement
+```
 
-1. To see the version of the module that's currently installed and where it's installed, run the following command:
+To confirm how the module was installed (all users vs. the current user account), use the `Get-InstalledModule` command at the beginning of the [Install and update the Exchange Online PowerShell module](#install-and-update-the-exchange-online-powershell-module) section.
 
-   ```powershell
-   Get-InstalledModule ExchangeOnlineManagement | Format-List Name,Version,InstalledLocation
-   ```
-
-   If the module is installed in C:\Program Files\WindowsPowerShell\Modules\, it's installed for all users. If the module is installed in your Documents folder, it's installed only for the current user account.
-
-2. You can use the **Update-Module** cmdlet to update the module from the PowerShell Gallery. Typically, you want the latest public version of the module, but you can also upgrade to a Preview version if any are available.
-
-   - To upgrade to **the latest public version** of the module, run **one** of the following commands based on how you originally installed the module (all users vs. only for the current user account):
-
-     - In an elevated PowerShell window (all users):
-
-       ```powershell
-       Update-Module -Name ExchangeOnlineManagement
-       ```
-
-     - Only for the current user account:
-
-       ```powershell
-       Update-Module -Name ExchangeOnlineManagement -Scope CurrentUser
-       ```
-
-   - To upgrade to **a Preview version** of the module, you can upgrade to the latest available Preview version, or you can use the _RequiredVersion_ parameter to upgrade to a specific Preview version.
-
-     - To see **the available Preview versions** of the module, run the following command:
-
-       ```powershell
-       Find-Module ExchangeOnlineManagement -AllVersions -AllowPrerelease
-       ```
-
-     - To upgrade to **the latest available Preview version** of the module, run **one** of the following commands:
-
-       - In an elevated PowerShell window (all users):
-
-         ```powershell
-         Update-Module -Name ExchangeOnlineManagement -AllowPrerelease
-         ```
-
-       - Only for the current user account:
-
-         ```powershell
-         Update-Module -Name ExchangeOnlineManagement -Scope CurrentUser -AllowPrerelease
-         ```
-
-     - To upgrade to **a specific Preview version** of the module, replace \<PreviewVersion\> with the necessary value, and run **one** of the following commands:
-
-       - In an elevated PowerShell window (all users):
-
-         ```powershell
-         Update-Module -Name ExchangeOnlineManagement -RequiredVersion <PreviewVersion> -AllowPrerelease
-         ```
-
-       - Only for the current user account:
-
-         ```powershell
-         Update-Module -Name ExchangeOnlineManagement -Scope CurrentUser -RequiredVersion <PreviewVersion> -AllowPrerelease
-         ```
-
-   When you're finished, enter **Y** to accept the license agreement.
-
-3. To confirm that the update was successful, run the following commands to check the version information of the installed module:
-
-   ```powershell
-   Import-Module ExchangeOnlineManagement; Get-Module ExchangeOnlineManagement
-   ```
-
-For detailed syntax and parameter information, see [Update-Module](/powershell/module/powershellget/update-module).
+For detailed syntax and parameter information, see [Uninstall-Module](/powershell/module/powershellget/uninstall-module).
 
 ### Troubleshoot installing the Exchange Online PowerShell module
+
+This section describes errors that you might encounter while installing the module, and how to resolve them.
 
 - You receive one of the following errors:
 
@@ -601,56 +557,7 @@ For detailed syntax and parameter information, see [Update-Module](/powershell/m
   Register-PSRepository -Default
   ```
 
-- As of April 2020, the PowerShell Gallery only supports connections using TLS 1.2 or later. For more information, see [PowerShell Gallery TLS Support](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/).
-
-  To check your current settings in the Microsoft .NET Framework, run the following command in Windows PowerShell:
-
-  ```powershell
-  [Net.ServicePointManager]::SecurityProtocol
-  ```
-
-  As described in the PowerShell Gallery TLS Support article, to _temporarily_ change the security protocol to TLS 1.2 to install the PowerShellGet or ExchangeOnlineManagement modules, run the following command in Windows PowerShell _before_ you install the module:
-
-  ```powershell
-  [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-  ```
-
-  To _permanently_ enable strong cryptography in the Microsoft .NET Framework version 4.x or later, run one of the following commands based on your Windows architecture:
-
-  - x64:
-
-    ```powershell
-    Set-ItemProperty -Path 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319' -Name 'SchUseStrongCrypto' -Type DWord -Value '1'
-    ```
-
-  - x86:
-
-    ```powershell
-    Set-ItemProperty -Path 'HKLM:\SOFTWARE\Microsoft\.NETFramework\v4.0.30319' -Name 'SchUseStrongCrypto' -Type DWord -Value '1'
-    ```
-
-  For more information, see [SchUseStrongCrypto](/dotnet/framework/network-programming/tls#schusestrongcrypto).
-
-### Uninstall the Exchange Online PowerShell module
-
-To see the version of the module that's currently installed and where it's installed, run the following command:
-
-   ```powershell
-   Get-InstalledModule ExchangeOnlineManagement | Format-List Name,Version,InstalledLocation
-   ```
-
-   If the module is installed in C:\Program Files\WindowsPowerShell\Modules\, it was installed for all users. If the module is installed in your Documents folder, it was installed only for the current user account.
-
-To uninstall the module, run the following command in one of the following environments based on how you originally installed the module (all users vs. only for the current user account):
-
-- In an elevated PowerShell window (all users).
-- In a normal PowerShell window (only for the current user account).
-
-  ```powershell
-  Uninstall-Module -Name ExchangeOnlineManagement
-  ```
-
-For detailed syntax and parameter information, see [Uninstall-Module](/powershell/module/powershellget/uninstall-module).
+- In Windows PowerShell 5.1, you receive errors when you try to install the module because the PowerShell Gallery requires TLS 1.2 or later connections (PowerShell 7 already uses TLS 1.2 or later). This issue typically affects only older versions of Windows where the .NET Framework doesn't use TLS 1.2 by default. For more information and the steps to resolve it, see [PowerShell Gallery TLS Support](https://devblogs.microsoft.com/powershell/powershell-gallery-tls-support/).
 
 ## Properties and property sets in the Exchange Online PowerShell module
 
@@ -698,13 +605,18 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 ### Current release
 
+#### Version 3.10.0
+
+- Starting with this version of the module, the minimum required version of PowerShell 7 is 7.6. Windows PowerShell 5.1 isn't affected.
+- Fixed an issue where certificate-based authentication (CBA) failed in **Connect-IPPSSession** when you used the _EnableSearchOnlySession_ switch.
+
+### Previous releases
+
 #### Version 3.9.2
 
 - New **Add-WorkforceInsightsDelegationAccess**, **Get-WorkforceInsightsDelegationAccess**, and **Remove-WorkforceInsightsDelegationAccess** cmdlets for Workforce Insights delegation.
 - New _EXOModuleBasePath_ parameter in **Connect-ExchangeOnline** and **Connect-IPPSSession** to store temporary EXO module files in a custom path.
 - Deprecated _UseRpsSession_ parameter from **Connect-ExchangeOnline** and **Connect-IPPSSession**.
-
-### Previous releases
 
 #### Version 3.9.0
 
@@ -714,7 +626,7 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 - New _AccessToken_ parameter on **Connect-IPPSSession**.
 - **Get-VivaModuleFeature** now returns information about ParentFeature, ChildFeature, and PolicyModes. These values represent parent and child features of a Viva app feature along with available enablement modes for future policies.  
-- New parameters _IsUserOptedInByDefault_ on the **Add-VivaModuleFeaturePolicy** and **Update-VivaModuleFeaturePolicy** cmdlets and the corresponding property value in all **\*-VivaModuleFeaturePolicy** cmdlets. The value indicates if users are opted in or out by the policy, as long as the user doesn't set a preference.
+- New parameters _IsUserOptedInByDefault_ on the **Add-VivaModuleFeaturePolicy** and **Update-VivaModuleFeaturePolicy** cmdlets and the corresponding property value in all **\*-VivaModuleFeaturePolicy** cmdlets. The value indicates whether users are opted in or out by the policy, as long as the user doesn't set a preference.
 
   You can use this parameter to keep the feature enabled in your organization while opting out the affected users by default, effectively soft disabling the feature for those users.
 
@@ -812,9 +724,9 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 - The module in PowerShell 7 supports browser-based single sign-on (SSO) and other sign in methods. For more information, see [PowerShell 7 exclusive connection methods](connect-to-exchange-online-powershell.md#powershell-7-exclusive-connection-methods).
 
-- The **Get-UserAnalyticsConfig** and **Set-UserAnalyticsConfig** cmdlets were replaced by the **Get-MyAnalyticsConfig** and **Set-MyAnalyticsConfig**. Additionally, you can configure access at feature level. For more information, see [Configure MyAnalytics](/workplace-analytics/myanalytics/setup/configure-myanalytics).
+- The **Get-UserAnalyticsConfig** and **Set-UserAnalyticsConfig** cmdlets were replaced by the **Get-MyAnalyticsConfig** and **Set-MyAnalyticsConfig** cmdlets. You can also configure access at the feature level. For more information, see [Configure MyAnalytics](/workplace-analytics/myanalytics/setup/configure-myanalytics).
 
-- Real-time policy and security enforcement in all user based authentication. Continuous Access Evaluation (CAE) is enabled in the module. Read more about CAE [here](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/moving-towards-real-time-policy-and-security-enforcement/ba-p/1276933).
+- Real-time policy and security enforcement in all user-based authentication. Continuous Access Evaluation (CAE) is enabled in the module. For more information, see [Moving towards real time policy and security enforcement](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/moving-towards-real-time-policy-and-security-enforcement/ba-p/1276933).
 
 - The _LastUserActionTime_ and _LastInteractionTime_ properties are now available in the output of the **Get-EXOMailboxStatistics** cmdlet.
 
@@ -822,13 +734,13 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 #### Version 2.0.3
 
-- General availability of certificate based authentication (CBA), which enables using modern authentication in unattended scripting or background automation scenarios. The available certificate storage locations are:
+- General availability of certificate-based authentication (CBA), which enables using modern authentication in unattended scripting or background automation scenarios. The available certificate storage locations are:
   - Remote in the Azure Key Value (the _Certificate_) parameter. This option enhances security by fetching the certificate only at runtime.
   - Local in the CurrentUser or LocalMachine certificate store (the _CertificateThumbprint_ parameter).
   - Local in an exported certificate file (the _CertificateFilePath_ and _CertificatePassword_ parameters).
   For more information, see the parameter descriptions in [Connect-ExchangeOnline](/powershell/module/exchangepowershell/connect-exchangeonline) and [App-only authentication for unattended scripts in the Exchange Online PowerShell module](app-only-auth-powershell-v2.md).
 - Connect to Exchange Online PowerShell and Security & Compliance PowerShell simultaneously in a single PowerShell window.
-- The new _CommandName_ parameter allows you to specify and restrict the Exchange Online PowerShell cmdlets that are imported in a session. This option reduces the memory footprint for high usage PowerShell applications.
+- The new _CommandName_ parameter allows you to specify and restrict the Exchange Online PowerShell cmdlets that are imported in a session. This option reduces the memory footprint for high-usage PowerShell applications.
 - **Get-EXOMailboxFolderPermission** now supports ExternalDirectoryObjectID in the _Identity_ parameter.
 - Optimized latency of the first V2 cmdlet call. Lab results show the first call latency decreased from 8 seconds to approximately 1 second. Actual results depend on the cmdlet result size and the organization environment.
 
@@ -838,7 +750,7 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 - **Get-EXOMobileDeviceStatistics** cmdlet now supports the _Identity_ parameter.
 - Improved reliability for auto reconnect of sessions in certain scenarios where a script was running for ~50 minutes and threw a "Cmdlet not found" error due to a bug in auto reconnect logic.
 - Fixed data-type issues of two commonly used "User" and "MailboxFolderUser" attributes for easy migration of scripts.
-- Enhanced support for filters as it now supports four more operators: EndsWith, Contains, Not and NotLike support. Check [Filters in the Exchange Online PowerShell module](filters-v2.md) for attributes that aren't supported in filters.
+- Enhanced support for filters as it now supports four more operators: EndsWith, Contains, Not, and NotLike. Check [Filters in the Exchange Online PowerShell module](filters-v2.md) for attributes that aren't supported in filters.
 
 #### Version 0.4578.0
 

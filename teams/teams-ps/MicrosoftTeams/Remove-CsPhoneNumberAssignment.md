@@ -19,7 +19,7 @@ This cmdlet will remove/unassign a phone number from a user or a resource accoun
 
 ### RemoveSome (Default)
 ```
-Remove-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String>
+Remove-CsPhoneNumberAssignment -Identity <String> -TelephoneNumber <String> -NumberType <String>
  [-HttpPipelinePrepend <SendAsyncStep[]>] [-Notify] [-AssignmentBlockedForever] [-AssignmentBlockedDays <Integer>] [<CommonParameters>]
 ```
 
@@ -46,7 +46,7 @@ now support the -ErrorAction parameter to control the execution after an error h
 
 ### Example 1
 ```powershell
-Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -PhoneNumberType CallingPlan
+Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -TelephoneNumber +12065551234 -NumberType CallingPlan
 ```
 This example removes/unassigns the Microsoft Calling Plan telephone number +1 (206) 555-1234 from the user user1@contoso.com.
 
@@ -58,7 +58,7 @@ This example removes/unassigns all the telephone number from user2@contoso.com.
 
 ### Example 3
 ```powershell
-Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -PhoneNumberType CallingPlan -Notify
+Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -TelephoneNumber +12065551234 -NumberType CallingPlan -Notify
 ```
 This example removes/unassigns the Microsoft Calling Plan phone number +1 (206) 555-1234 from the user user1@contoso.com and also sends an email notification to the user about the removal of telephone number.
 
@@ -70,13 +70,13 @@ This example removes/unassigns all the telephone number from user2@contoso.com a
 
 ### Example 5
 ```powershell
-Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -AssignmentBlockedForever
+Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -TelephoneNumber +12065551234 -AssignmentBlockedForever
 ```
 This example removes a telephone number assignment from user1@contoso.com and also sets an assignment block on the unassigned number for an indefinite duration.
 
 ### Example 6
 ```powershell
-Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -AssignmentBlockedDays 30
+Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -TelephoneNumber +12065551234 -AssignmentBlockedDays 30
 ```
 This example removes a telephone number assignment from user1@contoso.com and also sets an assignment block on the unassigned number for 30 days. Which means the telephone number will not be available for new assignment for 30 days or until the block is removed manually. The telephone number will automatically become available for assignment for 30 days period is over.
 
@@ -113,13 +113,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PhoneNumber
+### -TelephoneNumber
 The phone number to unassign from the user or resource account. Supports E.164 format and non-E.164 format. Needs to be without the prefixed "tel:".
 
 ```yaml
 Type: System.String
 Parameter Sets: RemoveSome
-Aliases:
+Aliases: PhoneNumber
 
 Required: True
 Position: Named
@@ -128,13 +128,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PhoneNumberType
+### -NumberType
 The type of phone number to unassign from the user or resource account. The supported values are DirectRouting, CallingPlan and OperatorConnect.
 
 ```yaml
 Type: System.String
 Parameter Sets: RemoveSome
-Aliases:
+Aliases: PhoneNumberType
 
 Required: True
 Position: Named

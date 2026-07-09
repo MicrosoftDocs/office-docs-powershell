@@ -19,14 +19,14 @@ Creates new Mainline Attendant appointment booking flow
 ## SYNTAX
 
 ```
-New-CsMainlineAttendantAppointmentBookingFlow -Name <String> -Description <String>  -CallerAuthenticationMethod <Sms | Email | VerificationLink | Voiceprint | UserDetails> -ApiAuthenticationType <Basic | ApiKey | BearerTokenStatic | BearerTokenDynamic> -ApiDefinitions <String> [-Tenant <Guid>] [<CommonParameters>]
+New-CsMainlineAttendantAppointmentBookingFlow -Name <String> -Description <String>  -AppointmentBookingPlatform <String> -BookingLink <String> -CallerAuthenticationMethod <SMS | Email | VerificationLink | Voiceprint | UserDetails> -ApiAuthenticationType <Basic | ApiKey | BearerTokenStatic | BearerTokenDynamic> -ApiDefinitions <String> [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 The New-CsMainlineAttendantAppointmentBookingFlow cmdlet creates a new appointment booking connection that can be used with Mainline Attendant
 
 > [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
+> Teams Phone Agent (formerly Mainline Attendant) is currently only available to customers in the [Frontier](https://www.microsoft.com/microsoft-365-copilot/frontier-program) Public Preview program.
 
 ## EXAMPLES
 
@@ -65,10 +65,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AppointmentBookingPlatform
+The booking platfrom being used.
+
+PARAVALUES: Custom | MicrosoftBookings
+
+If MicrosoftBookings is selected, the `-CallerAuthenticationMethod`, `-ApiAuthenticationType`, and `-ApiDefinitions` will be ignored.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -BookingLink
+The Microsoft Bookings URL for the booking calendar to be used.
+
+This field will be ignored if `-AppointmentBookingPlatform` is set to `Custom`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ###  -CallerAuthenticationMethod
 The method by which the caller is authenticated
 
-PARAVALUES: Sms | Email | VerificationLink | Voiceprint | UserDetails
+PARAVALUES: SMS | Email | VerificationLink | Voiceprint | UserDetails
 
 ```yaml
 Type: String

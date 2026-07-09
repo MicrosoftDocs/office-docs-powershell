@@ -93,6 +93,7 @@ Set-OrganizationConfig -ShortenEventScopeDefault <ShortenEventScopeMode>
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
  [-EwsAllowOutlook <Boolean>]
+ [-EwsAllowedAppIDs <String>]
  [-EwsApplicationAccessPolicy <EwsApplicationAccessPolicy>]
  [-EwsBlockList <MultiValuedProperty>]
  [-EwsEnabled <Boolean>]
@@ -418,6 +419,7 @@ Set-OrganizationConfig [-DelayedDelicensingEnabled <Boolean>] [-EndUserMailNotif
  [-EwsAllowList <MultiValuedProperty>]
  [-EwsAllowMacOutlook <Boolean>]
  [-EwsAllowOutlook <Boolean>]
+ [-EwsAllowedAppIDs <String>]
  [-EwsApplicationAccessPolicy <EwsApplicationAccessPolicy>]
  [-EwsBlockList <MultiValuedProperty>]
  [-EwsEnabled <Boolean>]
@@ -594,6 +596,15 @@ Set-OrganizationConfig -VisibleMeetingUpdateProperties "Location,Subject,Body,Al
 ```
 
 In Exchange Online, this example results in meeting updates being auto-processed (meeting update messages aren't visible in attendee Inbox folders) except any changes to meeting location, subject and body as well as any property changes within 15 minutes of the meeting start time.
+
+### Example 7
+```powershell
+Set-OrganizationConfig -EwsEnabled $true -EwsAllowedAppIDs "aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee,11111111-2222-3333-4444-555555555555"
+```
+
+This example restricts EWS access to the two specified Entra applications only. All other applications are blocked from accessing EWS.
+
+**Note**: To remove the application ID restriction on EWS access, use the value `$null` for the EwsAllowedAppIDs parameter. To view the list of configured apps, use the following command: `Get-OrganizationConfig -RetrieveEwsOperationAccessPolicy | Format-List EwsAllowedAppIDs`.
 
 ## PARAMETERS
 
@@ -2564,6 +2575,38 @@ The EwsAllowOutlook parameter enables or disables access to mailboxes by Outlook
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EwsAllowedAppIDs
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+The EwsAllowedAppIDs parameter specifies the Azure AD applications that are allowed to access Exchange Web Services (EWS) when the EwsEnabled parameter on this cmdlet is also set to the value $true. Unspecified applications are blocked from accessing EWS. You identify each application by its Azure AD application ID (GUID).
+
+- When EwsEnabled is $true, only applications specified by this parameter can access EWS.
+- When EwsEnabled is $false, all EWS access is blocked regardless of this parameter.
+- When EwsEnabled is blank ($null; not configured), this parameter has no effect.
+
+To specify multiple values, use a comma-separated list of GUIDs: `"AppId1,AppId2,...AppIdN"`.
+
+To remove all allowed app IDs and stop restricting access by app ID, use the value `$null` for this parameter.
+
+**Note**: This parameter applies only to direct EWS (SOAP) connections. It doesn't affect requests from the Microsoft Graph API or the REST endpoint.
+
+To retreive the list of configured apps, use the RetrieveEwsOperationAccessPolicy switch on the Get-OrganizationConfig cmdlet.
+
+```yaml
+Type: String
+Parameter Sets: ShortenEventScopeParameter, DelayedDelicensingParameterSet
 Aliases:
 
 Required: False
