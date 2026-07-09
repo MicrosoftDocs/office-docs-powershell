@@ -35,9 +35,6 @@ The Connect-MicrosoftTeams cmdlet connects an authenticated account for use with
 ### [Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
 This cmdlet prevents provisioning of users in Skype for Business Online for the specified domain.
 
-### [Disable-CsTeamsShiftsConnectionErrorReport](Disable-CsTeamsShiftsConnectionErrorReport.md)
-This cmdlet disables an error report.
-
 ### [Disconnect-MicrosoftTeams](Disconnect-MicrosoftTeams.md)
 {{Placeholder}}
 
@@ -448,33 +445,6 @@ Use the Get-CsTeamsSharedCallingRoutingPolicy cmdlet to get Teams shared calling
 
 ### [Get-CsTeamsShiftsAppPolicy](Get-CsTeamsShiftsAppPolicy.md)
 Returns information about the Teams Shifts App policies that have been configured for use in your organization.
-
-### [Get-CsTeamsShiftsConnection](Get-CsTeamsShiftsConnection.md)
-This cmdlet returns the list of existing workforce management (WFM) connections. It can also return the configuration details for a given WFM connection.
-
-### [Get-CsTeamsShiftsConnectionConnector](Get-CsTeamsShiftsConnectionConnector.md)
-This cmdlet supports retrieving the available Shifts Connectors.
-
-### [Get-CsTeamsShiftsConnectionErrorReport](Get-CsTeamsShiftsConnectionErrorReport.md)
-This cmdlet returns the list of all the team mapping error reports. It can also return the configuration details of one mapping error report with its ID provided or other filter parameters.
-
-### [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md)
-This cmdlet returns the list of existing connection instances. It can also return the configuration details for a given connection instance.
-
-### [Get-CsTeamsShiftsConnectionOperation](Get-CsTeamsShiftsConnectionOperation.md)
-This cmdlet gets the requested batch mapping operation.
-
-### [Get-CsTeamsShiftsConnectionSyncResult](Get-CsTeamsShiftsConnectionSyncResult.md)
-This cmdlet supports retrieving the list of user details in the mapped teams of last sync.
-
-### [Get-CsTeamsShiftsConnectionTeamMap](Get-CsTeamsShiftsConnectionTeamMap.md)
-This cmdlet supports retrieving the list of team mappings.
-
-### [Get-CsTeamsShiftsConnectionWfmTeam](Get-CsTeamsShiftsConnectionWfmTeam.md)
-This cmdlet supports retrieving the list of available Workforce management (WFM) teams in the connection instance.
-
-### [Get-CsTeamsShiftsConnectionWfmUser](Get-CsTeamsShiftsConnectionWfmUser.md)
-This cmdlet shows the list of Workforce management (WFM) users in a specified WFM team.
 
 ### [Get-CsTeamsShiftsPolicy](Get-CsTeamsShiftsPolicy.md)
 This cmdlet allows you to get properties of a TeamsShiftPolicy instance, including user's Teams off shift warning message-specific settings.
@@ -1073,15 +1043,6 @@ Creates a new TeamsRoomVideoTeleConferencingPolicy.
 ### [New-CsTeamsSharedCallingRoutingPolicy](New-CsTeamsSharedCallingRoutingPolicy.md)
 Use the New-CsTeamsSharedCallingRoutingPolicy cmdlet to configure a shared calling routing policy.
 
-### [New-CsTeamsShiftsConnection](New-CsTeamsShiftsConnection.md)
-This cmdlet creates a new workforce management (WFM) connection.
-
-### [New-CsTeamsShiftsConnectionBatchTeamMap](New-CsTeamsShiftsConnectionBatchTeamMap.md)
-This cmdlet submits an operation connecting multiple Microsoft Teams teams and Workforce management (WFM) teams.
-
-### [New-CsTeamsShiftsConnectionInstance](New-CsTeamsShiftsConnectionInstance.md)
-This cmdlet creates a Shifts connection instance.
-
 ### [New-CsTeamsShiftsPolicy](New-CsTeamsShiftsPolicy.md)
 This cmdlet allows you to create a new TeamsShiftPolicy instance and set it's properties.
 
@@ -1372,15 +1333,6 @@ Deletes an existing TeamsRoomVideoTeleConferencingPolicy.
 
 ### [Remove-CsTeamsSharedCallingRoutingPolicy](Remove-CsTeamsSharedCallingRoutingPolicy.md)
 Deletes an existing Teams shared calling routing policy instance.
-
-### [Remove-CsTeamsShiftsConnection](Remove-CsTeamsShiftsConnection.md)
-This cmdlet deletes a Shifts connection.
-
-### [Remove-CsTeamsShiftsConnectionInstance](Remove-CsTeamsShiftsConnectionInstance.md)
-This cmdlet deletes a Shifts connection instance.
-
-### [Remove-CsTeamsShiftsConnectionTeamMap](Remove-CsTeamsShiftsConnectionTeamMap.md)
-This cmdlet removes the mapping between the Microsoft Teams team and workforce management (WFM) team.
 
 ### [Remove-CsTeamsShiftsPolicy](Remove-CsTeamsShiftsPolicy.md)
 The `Remove-CsTeamsShiftsPolicy` cmdlet removes a previously created TeamsShiftsPolicy.
@@ -1748,12 +1700,6 @@ Use the Set-CsTeamsSharedCallingRoutingPolicy cmdlet to change a shared calling 
 ### [Set-CsTeamsShiftsAppPolicy](Set-CsTeamsShiftsAppPolicy.md)
 Allows you to set or update properties of a Teams Shifts App Policy instance.
 
-### [Set-CsTeamsShiftsConnection](Set-CsTeamsShiftsConnection.md)
-This cmdlet sets an existing workforce management (WFM) connection.
-
-### [Set-CsTeamsShiftsConnectionInstance](Set-CsTeamsShiftsConnectionInstance.md)
-This cmdlet updates a Shifts connection instance.
-
 ### [Set-CsTeamsShiftsPolicy](Set-CsTeamsShiftsPolicy.md)
 This cmdlet allows you to set or update properties of a TeamsShiftPolicy instance, including Teams off shift warning message-specific settings.
 
@@ -1868,9 +1814,6 @@ Use the Test-CsEffectiveTenantDialPlan cmdlet to test a tenant dial plan.
 ### [Test-CsInboundBlockedNumberPattern](Test-CsInboundBlockedNumberPattern.md)
 This cmdlet tests the given number against the created (by using New-CsInboundBlockedNumberPattern cmdlet) blocked numbers pattern.
 
-### [Test-CsTeamsShiftsConnectionValidate](Test-CsTeamsShiftsConnectionValidate.md)
-This cmdlet validates workforce management (WFM) connection settings.
-
 ### [Test-CsTeamsTranslationRule](Test-CsTeamsTranslationRule.md)
 This cmdlet tests a phone number against the configured number manipulation rules and returns information about the matching rule.
 
@@ -1891,12 +1834,6 @@ Use Update-CsAutoAttendant cmdlet to force an update of resources associated wit
 
 ### [Update-CsPhoneNumberTag](Update-CsPhoneNumberTag.md)
 This cmdlet allows admin to update existing telephone number tags.
-
-### [Update-CsTeamsShiftsConnection](Update-CsTeamsShiftsConnection.md)
-This cmdlet updates an existing workforce management (WFM) connection.
-
-### [Update-CsTeamsShiftsConnectionInstance](Update-CsTeamsShiftsConnectionInstance.md)
-This cmdlet updates Shifts connection instance fields.
 
 ### [Update-CsTeamTemplate](Update-CsTeamTemplate.md)
 This cmdlet submits an operation that updates a custom team template with new team template settings.
