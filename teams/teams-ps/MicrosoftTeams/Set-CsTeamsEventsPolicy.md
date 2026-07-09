@@ -312,11 +312,11 @@ Accept wildcard characters: False
 ```
 
 ### -RecordingForTownhall
-Determines whether recording is allowed in a user's event optimized for a large audience.
+Determines whether recording is allowed in an event optimized for a large audience.
 
 Possible values are:
- - **Enabled**: Allow recording in user's event optimized for a large audience.
- - **Disabled**: Prohibit recording in user's event optimized for a large audience.
+ - **Enabled**: Allow recording in events optimized for large audiences.
+ - **Disabled**: Prohibit recording in events optimized for large audiences.
 
 ```yaml
 Type: String
@@ -331,11 +331,11 @@ Accept wildcard characters: False
 ```
 
 ### -RecordingForWebinar
-Determines whether recording is allowed in a user's event up to 1,000 attendees.
+Determines whether recording is allowed in events up to 1,000 attendees.
 
 Possible values are:
- - **Enabled**: Allow recording in user's event up to 1,000 attendees.
- - **Disabled**: Prohibit recording in user's events up to 1,000 attendees.
+ - **Enabled**: Allow recording in events up to 1,000 attendees.
+ - **Disabled**: Prohibit recording in events up to 1,000 attendees.
 
 ```yaml
 Type: String
@@ -385,11 +385,11 @@ Accept wildcard characters: False
 ```
 
 ### -TranscriptionForTownhall
-Determines whether transcriptions are allowed in a user's event optimized for a large audience.
+Determines whether transcriptions are allowed in a events optimized for a large audience.
 
 Possible values are:
- - **Enabled**: Allow transcriptions in user's event optimized for a large audience.
- - **Disabled**: Prohibit transcriptions in user's event optimized for a large audience.
+ - **Enabled**: Allow transcriptions in events optimized for a large audience.
+ - **Disabled**: Prohibit transcriptions in events optimized for a large audience.
 
 ```yaml
 Type: String
@@ -404,11 +404,11 @@ Accept wildcard characters: False
 ```
 
 ### -TranscriptionForWebinar
-Determines whether transcriptions are allowed in a user's event up to 1,000 attendees.
+Determines whether transcriptions are allowed in events up to 1,000 attendees.
 
 Possible values are:
- - **Enabled**: Allow transcriptions in user's event up to 1,000 attendees.
- - **Disabled**: Prohibit transcriptions in user's event up to 1,000 attendees.
+ - **Enabled**: Allow transcriptions in events up to 1,000 attendees.
+ - **Disabled**: Prohibit transcriptions in events up to 1,000 attendees.
 
 ```yaml
 Type: String
