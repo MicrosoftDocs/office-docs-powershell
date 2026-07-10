@@ -26,7 +26,7 @@ New-CsOnlineVoicemailPolicy [-Identity] <string> [-EnableEditingCallAnswerRulesS
  [-EnableTranscriptionTranslation <boolean>] [-MaximumRecordingLength <timespan>]
  [-PostAmbleAudioFile <string>] [-PreambleAudioFile <string>]
  [-PreamblePostambleMandatory <boolean>] [-PrimarySystemPromptLanguage <string>]
- [-SecondarySystemPromptLanguage <string>] [-ShareData <string>] [-XXXXXXXVoicemailTriagePolicy <string>] [-EnableVoicemailTriage <string>] [-WhatIf] [-Confirm]
+ [-SecondarySystemPromptLanguage <string>] [-ShareData <string>] [-EnableVoicemailTriage <string>] [-WhatIf] [-Confirm]
  [-Description <String>] [<CommonParameters>]
 ```
 
@@ -47,6 +47,9 @@ By default:
 
 Tenant admin would be able to create a customized online voicemail policy to match the organization's requirements.
 
+> [!IMPORTANT]
+> The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
+> --EnableVoicemailTriage
 
 ## EXAMPLES
 
@@ -294,6 +297,9 @@ Accept wildcard characters: False
 ### -ShareData
 
 Specifies whether voicemail and transcription data are shared with the service for training and improving accuracy. Possible values are Defer and Deny.
+
+> [!IMPORTANT]
+> This parameter is deprecated and no longer has any effect. Its value is ignored by the service and is retained only for backward compatibility.
 
 ```yaml
 Type: String
