@@ -45,6 +45,11 @@ By default:
 
 Tenant admin would be able to create a customized online voicemail policy to match the organization's requirements.
 
+> [!IMPORTANT]
+> The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
+>
+> - EnableVoicemailTriage
+
 ## EXAMPLES
 
 ### Example 1
@@ -63,7 +68,7 @@ The command shown in Example 2 changes the EnableTranscriptionProfanityMasking t
 
 ### Example 3
 ```
-Set-CsOnlineVoicemailPolicy -Identity "CustomOnlineVoicemailPolicy" -EnableVoicemailTriage $true
+Set-CsOnlineVoicemailPolicy -Identity "CustomOnlineVoicemailPolicy" -EnableTranscription $true -EnableVoicemailTriage $true
 ```
 This command enables AI-powered voicemail triage for users assigned to the specified Online Voicemail Policy.
 
@@ -295,8 +300,9 @@ Accept wildcard characters: False
 ### -ShareData
 
 Specifies whether voicemail and transcription data are shared with the service for training and improving accuracy. Possible values are Defer and Deny. 
-
-This parameter has been deprecated and is no longer used by the Cloud Voicemail service. Changes to this setting have no effect.
+> [!IMPORTANT]
+> This parameter is deprecated and no longer has any effect. Its value is ignored by the service and is retained only for backward compatibility.
+>
 
 ```yaml
 Type: String
