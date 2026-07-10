@@ -1512,7 +1512,7 @@ Accept wildcard characters: False
 > [!NOTE]
 > This feature has not been fully released yet, so the setting will have no effect.
 
-This setting controls the number of days meeting knowledge data is retained before it is automatically deleted. The default value is 365 days. -1 indicates that meeting knowledge data will never expire.
+This setting controls the number of days meeting knowledge data is retained before it is automatically deleted. The default value is 1825 days.
 
 ```yaml
 Type: Int32
@@ -1521,7 +1521,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: 365
+Default value: 1825
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
