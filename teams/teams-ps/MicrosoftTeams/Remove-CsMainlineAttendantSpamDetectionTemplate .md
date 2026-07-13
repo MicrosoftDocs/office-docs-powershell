@@ -20,7 +20,7 @@ The Remove-CsMainlineAttendantSpamDetectionTemplate cmdlet deletes an existing s
 ## SYNTAX
 
 ```
-Remove-CsMainlineAttendantSpamDetectionTemplate [-Id <string>]
+Remove-CsMainlineAttendantSpamDetectionTemplate -Id <string>
 ```
 
 ## DESCRIPTION
