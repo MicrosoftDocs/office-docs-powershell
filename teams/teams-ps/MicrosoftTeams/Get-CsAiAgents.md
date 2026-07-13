@@ -22,9 +22,9 @@ Retrieves the AI Agents in the tenant that match with the ProviderId.
 ### Default
 
 ```powershell
-Get-CsAiAgents -ProviderId <String> [-AgentId <String>] [-AgentIds <String>] [-ContinuationToken <String>]
- [-DisplayNameContains <String>] [-DisplayNamePrefix <String>] [-IsTeamsIvrEnabled] [-MaxResult <Int32>]
- [-ShowCount] [<CommonParameters>]
+Get-CsAiAgents -ProviderId <String> [-AgentId <String>] [-AgentIds <String>] [-Channel <String>]
+ [-ContinuationToken <String>] [-DisplayNameContains <String>] [-DisplayNamePrefix <String>]
+ [-IsTeamsIvrEnabled] [-MaxResult <Int32>] [-ShowCount] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -64,6 +64,30 @@ This example gets the AI Agents from multiple ProviderIds that are compatible wi
 Get-CsAiAgents -IsTeamsIvrEnabled -ProviderId "9d8f559b-5de4-46a4-902a-ad4271e83efa,905de543-6cf8-44a4-ab05-83bcd500f39e"
 ```
 
+### Example 3 - Get AI agents on a specific channel
+
+This example gets the AI Agents from ProviderId "9d8f559b-5de4-46a4-902a-ad4271e83efa" that are on the `msteams` channel. Other supported values include `skype`, `acschat`, and `msteamsphone`.
+
+```powershell
+Get-CsAiAgents -ProviderId "9d8f559b-5de4-46a4-902a-ad4271e83efa" -Channel "msteams"
+```
+
+### Example 4 - Get AI agents by display name prefix
+
+This example gets the AI Agents from ProviderId "9d8f559b-5de4-46a4-902a-ad4271e83efa" whose display name begins with `Sales`. Use `-DisplayNameContains` instead to match AI Agents whose display name contains a given substring.
+
+```powershell
+Get-CsAiAgents -ProviderId "9d8f559b-5de4-46a4-902a-ad4271e83efa" -DisplayNamePrefix "Sales"
+```
+
+### Example 5 - Include the total count of matching AI agents
+
+This example gets the AI Agents from ProviderId "9d8f559b-5de4-46a4-902a-ad4271e83efa" and includes the total count of matching AI Agents (`AgentCount`) in the result, regardless of pagination.
+
+```powershell
+Get-CsAiAgents -ProviderId "9d8f559b-5de4-46a4-902a-ad4271e83efa" -ShowCount
+```
+
 ## PARAMETERS
 
 ### -AgentId
@@ -85,6 +109,22 @@ Accept wildcard characters: False
 ### -AgentIds
 
 A filter to retrieve multiple AI Agents by their unique identifiers.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Channel
+
+A filter to retrieve AI Agents on a specific channel, for example `msteams`, `skype`, `acschat`, or `msteamsphone`.
 
 ```yaml
 Type: System.String
