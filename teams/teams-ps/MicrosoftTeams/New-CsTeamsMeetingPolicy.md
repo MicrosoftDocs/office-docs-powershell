@@ -4,7 +4,7 @@ external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
-ms.date: 02/26/2025
+ms.date: 07/13/2025
 ms.reviewer: alejandramu
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsmeetingpolicy
 schema: 2.0.0
