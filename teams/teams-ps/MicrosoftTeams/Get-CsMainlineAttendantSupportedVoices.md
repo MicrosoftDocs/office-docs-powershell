@@ -17,8 +17,6 @@ title: Get-CsMainlineAttendantSupportedVoices
 
 The Get-CsMainlineAttendantSupportedVoices cmdlet returns a list of voices that are supported for use with Mainline Attendant.
 
-Change for the sake of change.
-
 ## SYNTAX
 
 ```
