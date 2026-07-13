@@ -299,6 +299,9 @@ Retrieves the list of Shared Call History templates.
 ### [Get-CsSharedCallQueueHistoryTemplate](Get-CsSharedCallQueueHistoryTemplate.md)
 Deprecated - new cmdlet is Get-CsSharedCallHistoryTemplate
 
+### [Get-CsSharedVoicemailTriageSettingsTemplate](Get-CsSharedVoicemailTriageSettingsTemplate.md)
+Retrieves the configuration for automatic triage of Shared Voicemails
+
 ### [Get-CsTagsTemplate](Get-CsTagsTemplate.md)
 Retrieves a list of existing Tag templates.
 
@@ -926,6 +929,9 @@ Use the New-CsSharedCallHistoryTemplate cmdlet to create a Shared Call History t
 ### [New-CsSharedCallQueueHistoryTemplate](New-CsSharedCallQueueHistoryTemplate.md)
 Deprecated - new cmdlet is New-CsSharedCallHistoryTemplate
 
+### [New-CsSharedVoicemailTriageSettingsTemplate](New-CsSharedVoicemailTriageSettingsTemplate.md)
+This cmdlet creates an AI triage settings template for Shared Voicemails.
+
 ### [New-CsTag](New-CsTag.md)
 Use the New-CsTag cmdlet to create a new tag that can be added to a Tag template.
 
@@ -1233,7 +1239,10 @@ This cmdlet will remove/delete a device from the remote log collection configura
 Removes Shared Call History template.
 
 ### [Remove-CsSharedCallQueueHistoryTemplate](Remove-CsSharedCallQueueHistoryTemplate.md)
-Deprecated - use new cmdlet CsSharedCallHistoryTemplate
+Deprecated - use new cmdlet CsSharedCallHistoryTemplate.
+
+### [Remove-CsSharedVoicemailTriageSettingsTemplate](Remove-CsSharedVoicemailTriageSettingsTemplate.md)
+Removes AI Triage SettingsTemplate for Shared Voicemails.
 
 ### [Remove-CsTagsTemplate](Remove-CsTagsTemplate.md)
 Deletes an existing Tag template.
@@ -1557,7 +1566,10 @@ This cmdlet allows the admin to create and edit a device requested for remote lo
 This cmdlet allows to configure Shared Call History template.
 
 ### [Set-CsSharedCallQueueHistoryTemplate](Set-CsSharedCallQueueHistoryTemplate.md)
-Deprecated - use new cmdlet Set-CsSharedCallHistoryTemplate
+Deprecated - use new cmdlet Set-CsSharedCallHistoryTemplate.
+
+### [Set-CsSharedVoicemailTriageSettingsTemplate](Set-CsSharedVoicemailTriageSettingsTemplate.md)
+This cmdlet allows to configure AI Triage Settings Template for Shared Voicemails.
 
 ### [Set-CsTagsTemplate](Set-CsTagsTemplate.md)
 Make changes to an existing Tag template.
