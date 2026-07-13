@@ -21,12 +21,12 @@ Creates a new Online Voicemail policy.
 ### Identity (Default)
 
 ```
-New-CsOnlineVoicemailPolicy -Identity <string> [-EnableEditingCallAnswerRulesSetting <boolean>]
+New-CsOnlineVoicemailPolicy [-Identity] <string> [-EnableEditingCallAnswerRulesSetting <boolean>]
  [-EnableTranscription <boolean>] [-EnableTranscriptionProfanityMasking <boolean>]
  [-EnableTranscriptionTranslation <boolean>] [-MaximumRecordingLength <timespan>]
  [-PostAmbleAudioFile <string>] [-PreambleAudioFile <string>]
  [-PreamblePostambleMandatory <boolean>] [-PrimarySystemPromptLanguage <string>]
- [-SecondarySystemPromptLanguage <string>] [-ShareData <string>] [-EnableVoicemailTriage <string>] [-WhatIf] [-Confirm]
+ [-SecondarySystemPromptLanguage <string>] [-ShareData <string>] [-EnableVoicemailTriage <boolean>] [-WhatIf] [-Confirm]
  [-Description <String>] [<CommonParameters>]
 ```
 
