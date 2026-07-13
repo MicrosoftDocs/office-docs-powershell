@@ -26,8 +26,6 @@ Set-CsOnlineVoicemailPolicy [[-Identity] <string>] [-Description <String>] [-Ena
 [-PrimarySystemPromptLanguage <string>] [-SecondarySystemPromptLanguage <string>] [-ShareData <string>] [-EnableVoicemailTriage <boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-
-
 ## DESCRIPTION
 Cloud Voicemail provides voicemail recording, deposit, and retrieval capabilities for Microsoft Teams and Teams Phone users.
 
