@@ -102,6 +102,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-ParticipantNameChange <String>]
  [-PasscodeComplexity <String>]
  [-PreferredMeetingProviderForIslandsMode <String>]
+ [-PreventComplianceRecording <String>]
  [-QnAEngagementMode <String>]
  [-RecordingStorageMode <String>]
  [-RoomAttributeUserOverride <String>]
@@ -350,12 +351,17 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedStreamingMediaInput
-Enables the use of RTMP-In in Teams meetings.
+Enables the use of RTMP-In or SRT-In in Teams meetings, webinars or town halls.
 
 Possible values are:
 
-- \<blank\>
-- RTMP
+- "" - this setting will not allow the user access to any streaming encoders.
+
+- RTMP - this setting will allow the user access to RTMP-In streaming encoders during a Teams meeting, webinar or town hall.
+
+- SRT - this setting will allow the user access to SRT-In streaming encoders during a Teams meeting, webinar or town hall.
+
+- RTMP, SRT - this setting will allow the user access to RTMP-In or SRT-In streaming encoders during a Teams meeting, webinar or town hall.
 
 ```yaml
 Type: String
@@ -1551,7 +1557,7 @@ Accept wildcard characters: False
 >[!NOTE]
 >This feature has not been released yet and will have no changes if it is enabled or disabled.
 
-Control Noises Supression Feature for PST legs joining a meeting.
+Control Noise Suppression Feature for PSTN legs joining a meeting.
 
 Possible Values:
 
@@ -1648,6 +1654,32 @@ Aliases:
 Required: False
 Position: Named
 Default value: TeamsAndSfb
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreventComplianceRecording
+
+> Applicable: Microsoft Teams
+
+> [!NOTE]
+> This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Controls whether Compliance Recording (CR)-enabled users are blocked from joining meetings organized by the policy-assigned user. When set to `None`, no restriction is applied and compliance recording operates as configured for the tenant. When set to `All`, CR-enabled users are blocked from joining meetings organized by the policy-assigned user. This applies to both internal and external CR-enabled users (including federated and B2B guests). Anonymous and PSTN users are unaffected as they cannot be assigned compliance recording.
+
+Possible values:
+
+- **None**: Compliance recording is not prevented. The tenant's compliance recording configuration applies normally. This is the default value.
+- **All**: CR-enabled users are blocked from joining meetings organized by the policy-assigned user. This applies to all CR-enabled users regardless of whether they are internal or external to the tenant.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

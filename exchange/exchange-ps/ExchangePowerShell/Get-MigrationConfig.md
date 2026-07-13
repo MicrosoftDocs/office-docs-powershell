@@ -13,7 +13,7 @@ title: Get-MigrationConfig
 ## SYNOPSIS
 This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
 
-Use the Get-MigrationConfig cmdlet to retrieve migration configuration settings on Exchange servers.
+Use the Get-MigrationConfig cmdlet to retrieve migration configuration settings for your organization.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -59,7 +59,7 @@ This example retrieves the settings for the migration configuration.
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill AllPartitions Description }}
+The AllPartitions switch specifies whether to retrieve the migration configuration from all migration mailbox partitions. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -99,7 +99,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill IncludeSimplifiedGmailMigrationData Description }}
+The IncludeSimplifiedGmailMigrationData switch specifies whether to include Gmail-related simplified migration data in the results. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

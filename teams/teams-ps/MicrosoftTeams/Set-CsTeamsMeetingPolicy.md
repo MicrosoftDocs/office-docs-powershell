@@ -106,6 +106,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-ParticipantNameChange <String>]
  [-PasscodeComplexity <String>]
  [-PreferredMeetingProviderForIslandsMode <String>]
+ [-PreventComplianceRecording <String>]
  [-QnAEngagementMode <String>]
  [-RecordingStorageMode <String>]
  [-RoomAttributeUserOverride <String>]
@@ -364,12 +365,17 @@ Accept wildcard characters: False
 ```
 
 ### -AllowedStreamingMediaInput
-Enables the use of RTMP-In in Teams meetings.
+Enables the use of RTMP-In or SRT-In in Teams meetings, webinars or town halls.
 
 Possible values are:
 
-- \<blank\>
-- RTMP
+- "" - this setting will not allow the user access to any streaming encoders.
+
+- RTMP - this setting will allow the user access to RTMP-In streaming encoders during a Teams meeting, webinar or town hall.
+
+- SRT - this setting will allow the user access to SRT-In streaming encoders during a Teams meeting, webinar or town hall.
+
+- RTMP, SRT - this setting will allow the user access to RTMP-In or SRT-In streaming encoders during a Teams meeting, webinar or town hall.
 
 ```yaml
 Type: String
@@ -563,10 +569,10 @@ Accept wildcard characters: False
 
 ### -AllowMeetingCoach
 This setting will allow admins to allow users the option of turning on Meeting Coach during meetings, which provides users with private personalized feedback on their communication and inclusivity.
-            If set to True, then users will see and be able to click the option for turning on Meeting Coach during calls.
-            If set to False, then users will not have the option to turn on Meeting Coach during calls.
-
-```yaml
+```
+        If set to True, then users will see and be able to click the option for turning on Meeting Coach during calls.
+        If set to False, then users will not have the option to turn on Meeting Coach during calls.
+``````yaml
 Type: Boolean
 Parameter Sets: (All)
 Aliases:
@@ -1694,13 +1700,40 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PreventComplianceRecording
+
+> Applicable: Microsoft Teams
+
+> [!NOTE]
+> This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Controls whether Compliance Recording (CR)-enabled users are blocked from joining meetings organized by the policy-assigned user. When set to `None`, no restriction is applied and compliance recording operates as configured for the tenant. When set to `All`, CR-enabled users are blocked from joining meetings organized by the policy-assigned user. This applies to both internal and external CR-enabled users (including federated and B2B guests). Anonymous and PSTN users are unaffected as they cannot be assigned compliance recording.
+
+Possible values:
+
+- **None**: Compliance recording is not prevented. The tenant's compliance recording configuration applies normally. This is the default value.
+- **All**: CR-enabled users are blocked from joining meetings organized by the policy-assigned user. This applies to all CR-enabled users regardless of whether they are internal or external to the tenant.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -QnAEngagementMode
 
 This setting enables Microsoft 365 Tenant Admins to Enable or Disable the Questions and Answers experience (Q+A).
-            When Enabled, Organizers can turn on Q+A for their meetings. When Disabled, Organizers cannot turn on Q+A in their meetings.
-            The setting is enforced when a meeting is created or is updated by Organizers.
-            Attendees can use Q+A in meetings where it was previously added. Organizers can remove Q+A for those meetings through Teams and Outlook Meeting Options.
-Possible values: Enabled, Disabled
+```
+        When Enabled, Organizers can turn on Q+A for their meetings. When Disabled, Organizers cannot turn on Q+A in their meetings.
+        The setting is enforced when a meeting is created or is updated by Organizers.
+        Attendees can use Q+A in meetings where it was previously added. Organizers can remove Q+A for those meetings through Teams and Outlook Meeting Options.
+```Possible values: Enabled, Disabled
 
 ```yaml
 Type: String

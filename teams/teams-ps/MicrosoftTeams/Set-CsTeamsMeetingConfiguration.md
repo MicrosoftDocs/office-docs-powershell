@@ -20,10 +20,10 @@ The CsTeamsMeetingConfiguration cmdlets enable administrators to control the mee
 
 ```powershell
 Set-CsTeamsMeetingConfiguration [-Tenant <Guid>] [-LogoURL <String>] [-LegalURL <String>]
- [-HelpURL <String>] [-CustomFooterText <String>] [-DisableAnonymousJoin <Boolean>] [-EnableQoS <Boolean>]
+ [-HelpURL <String>] [-CustomFooterText <String>] [-DisableAnonymousJoin <Boolean>] [-EnableAttributedTranscripts <Boolean>] [-EnableGraphTranscriptAccess <Boolean>] [-EnableQoS <Boolean>]
  [-ClientAudioPort <UInt32>] [-ClientAudioPortRange <UInt32>] [-ClientVideoPort <UInt32>]
  [-ClientVideoPortRange <UInt32>] [-ClientAppSharingPort <UInt32>] [-ClientAppSharingPortRange <UInt32>]
- [-ClientMediaPortRangeEnabled <Boolean>] [-DisableAppInteractionForAnonymousUsers <Boolean>] [[-Identity] <XdsIdentity>] [-FeedbackSurveyForAnonymousUsers <String>] [-LimitPresenterRolePermissions <Boolean>] [-Force] [-WhatIf] [-Confirm]
+ [-ClientMediaPortRangeEnabled <Boolean>] [-DisableAppInteractionForAnonymousUsers <Boolean>] [[-Identity] <XdsIdentity>] [-FeedbackSurveyForAnonymousUsers <String>] [-LimitPresenterRolePermissions <Boolean>] [-ReportMeeting <String>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -31,10 +31,10 @@ Set-CsTeamsMeetingConfiguration [-Tenant <Guid>] [-LogoURL <String>] [-LegalURL 
 
 ```powershell
 Set-CsTeamsMeetingConfiguration [-Tenant <Guid>] [-LogoURL <String>] [-LegalURL <String>]
- [-HelpURL <String>] [-CustomFooterText <String>] [-DisableAnonymousJoin <Boolean>] [-EnableQoS <Boolean>]
+ [-HelpURL <String>] [-CustomFooterText <String>] [-DisableAnonymousJoin <Boolean>] [-EnableAttributedTranscripts <Boolean>] [-EnableGraphTranscriptAccess <Boolean>] [-EnableQoS <Boolean>]
  [-ClientAudioPort <UInt32>] [-ClientAudioPortRange <UInt32>] [-ClientVideoPort <UInt32>]
  [-ClientVideoPortRange <UInt32>] [-ClientAppSharingPort <UInt32>] [-ClientAppSharingPortRange <UInt32>]
- [-ClientMediaPortRangeEnabled <Boolean>] [-DisableAppInteractionForAnonymousUsers <Boolean>] [-FeedbackSurveyForAnonymousUsers <String>] [-LimitPresenterRolePermissions <Boolean>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
+ [-ClientMediaPortRangeEnabled <Boolean>] [-DisableAppInteractionForAnonymousUsers <Boolean>] [-FeedbackSurveyForAnonymousUsers <String>] [-LimitPresenterRolePermissions <Boolean>] [-ReportMeeting <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -242,6 +242,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableAttributedTranscripts
+
+Determines whether transcripts accessed via Microsoft Graph API can include speaker attribution in the tenant. Set this to TRUE to allow Microsoft Graph API callers to retrieve transcript formats that include speaker names, and FALSE to block speaker-attributed transcript formats. When FALSE, callers can still retrieve transcripts in an unattributed format.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableGraphTranscriptAccess
+
+Determines whether transcripts can be accessed via Microsoft Graph API in the tenant. Set this to TRUE to allow Microsoft Graph API access to transcripts, and FALSE to block all Microsoft Graph API access to transcripts in the tenant.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableQoS
 
 Determines whether Quality of Service Marking for real-time media (audio, video, screen/app sharing) is enabled in the tenant. Set this to TRUE to enable and FALSE to disable
@@ -382,6 +414,31 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReportMeeting
+
+Controls whether end users can access the "Report a concern" and "Report as not a concern" options in the meeting experience (including meeting UI and meeting chat).
+
+When this setting is enabled, users can report meetings that they believe involve security risks, such as phishing, vishing, impersonation, or other malicious activity. Reports submitted by users include relevant meeting context and are shared with the organization’s security and compliance administrators for investigation.
+
+Disabling this setting removes these reporting options from the user interface, preventing users from submitting meeting reports.
+
+Possible values:
+
+- Enabled
+- Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

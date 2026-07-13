@@ -50,6 +50,7 @@ New-CsTeamsCallingPolicy [-Identity] <string>
  [-MusicOnHoldEnabledType <string>]
  [-PopoutAppPathForIncomingPstnCalls <string>]
  [-PopoutForIncomingPstnCalls <string>]
+ [-PreventComplianceRecording <string>]
  [-PreventTollBypass <boolean>]
  [-SpamFilteringEnabledType <string>]
  [-VoiceSimulationInInterpreter <string>]
@@ -71,8 +72,7 @@ The Teams Calling Policy controls which calling and call forwarding features are
 PS C:\> New-CsTeamsCallingPolicy -Identity Sales -AllowPrivateCalling $false
 ```
 
-The cmdlet create the policy instance Sales and sets the value of the parameter AllowPrivateCalling to False. The rest of the parameters are set to the corresponding
-values in the Global policy instance.
+The cmdlet creates the policy instance Sales and sets the value of the parameter AllowPrivateCalling to false. The rest of the parameters are set to the corresponding values in the Global policy instance.
 
 ## PARAMETERS
 
@@ -662,6 +662,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PreventComplianceRecording
+
+> Applicable: Microsoft Teams
+
+> [!NOTE]
+> This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Controls whether Compliance Recording (CR)-enabled users are blocked from joining calls owned by the policy-assigned user. When set to `None`, no restriction is applied and compliance recording operates as configured for the tenant. When set to `All`, CR-enabled users are blocked from joining calls initiated by or received by the policy-assigned user. This applies to both internal and external CR-enabled users (including federated and B2B guests). Anonymous and PSTN users are unaffected as they cannot be assigned compliance recording.
+
+Possible values:
+
+- **None**: Compliance recording is not prevented. The tenant's compliance recording configuration applies normally. This is the default value.
+- **All**: CR-enabled users are blocked from joining calls initiated by or received by the policy-assigned user. This applies to all CR-enabled users regardless of whether they are internal or external to the tenant.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PreventTollBypass
 
 > Applicable: Microsoft Teams
@@ -758,15 +784,17 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
->[!NOTE]
->This feature has not been released yet and will have no changes if it is enabled or disabled.
-
-This setting controls whether users must provide or obtain explicit consent before recording a 1:1 PSTN or Teams call. When enabled, both parties will receive a notification, and consent must be given before recording starts.
+This setting controls whether users must provide or obtain explicit consent before recording a 1:1 Teams call. When enabled, both parties will receive a notification, and consent must be given before recording starts.
 
 Possible values:
 
 - **Enabled**: Requires users to give and obtain explicit consent before starting a call recording.
 - **Disabled**: Users are not required to obtain explicit consent before recording starts.
+
+>[!NOTE]
+>This feature is not yet supported on:
+> - PSTN endpoints
+> - Call queue calls 
 
 ```yaml
 Type: String

@@ -208,7 +208,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The Confirm switch doesn't work on this cmdlet.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter
