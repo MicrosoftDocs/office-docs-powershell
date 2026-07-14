@@ -20,7 +20,7 @@ The Get-CsMainlineAttendantSpamDetectionTemplate cmdlet returns a list of spam d
 ## SYNTAX
 
 ```
-Get-CsMainlineAttendantSpamDetectionTemplate [-Id <string>]
+Get-CsMainlineAttendantSpamDetectionTemplate [-Identity <string>]
 ```
 
 ## DESCRIPTION
@@ -41,10 +41,10 @@ This example will return a list of all the spam detection templates configured i
 
 ### -------------------------- Example 2 --------------------------
 ```
-Get-CsMainlineAttendantSpamDetectionTemplate -Id 3a4b3d9b-91d8-4fbf-bcff-6907f325842d
+Get-CsMainlineAttendantSpamDetectionTemplate -Identity 3a4b3d9b-91d8-4fbf-bcff-6907f325842d
 ```
 
-This example retrieves the Spam Detection Template with the Id 3a4b3d9b-91d8-4fbf-bcff-6907f325842d
+This example retrieves the Spam Detection Template with the Identity 3a4b3d9b-91d8-4fbf-bcff-6907f325842d
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
