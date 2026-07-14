@@ -62,13 +62,14 @@ Sets the default meeting template that is automatically applied to ad-hoc or sta
 
 ### -Identity
 
+> Applicable: Microsoft Teams
+
 Name of the policy instance to be updated.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -78,6 +79,8 @@ Accept wildcard characters: False
 
 ### -HiddenMeetingTemplates
 
+> Applicable: Microsoft Teams
+
 The updated list of meeting template IDs to hide.
 The HiddenMeetingTemplate objects are created with [New-CsTeamsHiddenMeetingTemplate](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamshiddenmeetingtemplate).
 
@@ -85,7 +88,6 @@ The HiddenMeetingTemplate objects are created with [New-CsTeamsHiddenMeetingTemp
 Type: HiddenMeetingTemplate[]
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -95,13 +97,14 @@ Accept wildcard characters: False
 
 ### -Description
 
+> Applicable: Microsoft Teams
+
 Pass in a new description if that field needs to be updated.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
@@ -111,13 +114,14 @@ Accept wildcard characters: False
 
 ### -DefaultMeetingTemplateId
 
+> Applicable: Microsoft Teams
+
 Specifies the ID of the meeting template to be applied by default to ad-hoc or standard meetings created by the user. Must use the `customtemplate_<GUID>` format. When set to null, no default template is applied.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
-Applicable: Microsoft Teams
 Required: False
 Position: Named
 Default value: None
