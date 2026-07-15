@@ -56,6 +56,8 @@ New-CsTeamsCallingPolicy [-Identity] <string>
  [-VoiceSimulationInInterpreter <string>]
  [-RealTimeText <string>]
  [-ExplicitRecordingConsent <string>]
+ [-AllowMeetingKnowledgeGeneration <Boolean>]
+ [-VoicePhishingDetection <String>]
  [-WhatIf]
  [-EnableRecordingAndTranscriptionCustomMessage <Boolean>]
  [-RecordingAndTranscriptionCustomMessageIdentifier <Guid>]
@@ -804,6 +806,54 @@ Aliases:
 Required: False
 Position: Named
 Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowMeetingKnowledgeGeneration
+This policy controls whether meeting knowledge generation is allowed for calling when the user starts recording/transcript/copilot.
+
+Possible values are:
+
+- **$true**: Allow meeting knowledge generation for calling.
+- **$false**: Don't allow meeting knowledge generation for calling.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VoicePhishingDetection
+The Voice Phishing Detection policy enables AI-based detection of voice phishing (vishing) attempts during live inbound Microsoft Teams calls.
+
+Possible values are:
+
+- **BannerAndAudio**: Both visual and voice alerts when a voice phishing attempt is detected.
+- **Banner**: Visual alert only.
+- **Audio**: Voice alert only.
+- **None**: No alerts.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: BannerAndAudio
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
