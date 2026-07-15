@@ -22,7 +22,7 @@ Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-
  [-AllowedTownhallTypesForRecordingPublish <String>] [-TownhallChatExperience <String>] [-Description <String>]
  [-RecordingForTownhall <String>] [-RecordingForWebinar <String>] [-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>]
  [-UseMicrosoftECDN <Boolean>] [-BroadcastPremiumApps <String>] [-TownhallMaxResolution <String>] [-HighBitrateForTownhall <String>] [-AllowEngagementReport <String>]
- [-InfoShownInReportMode <String>]
+ [-InfoShownInReportMode <String>] [-Registration <String>]
 ```
 
 ## DESCRIPTION
@@ -524,6 +524,30 @@ Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -Registration
+This setting governs whether registration is enabled or disabled for events.
+
+Possible values are:
+
+- **Enabled**: Enables registration for events.
+- **Disabled**: Disables registration for events.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -WhatIf
 The WhatIf switch does not work with this cmdlet.
