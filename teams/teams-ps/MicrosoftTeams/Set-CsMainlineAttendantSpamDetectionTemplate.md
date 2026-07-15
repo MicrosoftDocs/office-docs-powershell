@@ -14,7 +14,7 @@ title: Set-CsMainlineAttendantSpamDetectionTemplate
 # Set-CsMainlineAttendantSpamDetectionTemplate
 
 ## SYNOPSIS
-Use the Set-CsMainlineAttendantSpamDetectionTemplate cmdlet to change a Spam Detection template. .
+Use the Set-CsMainlineAttendantSpamDetectionTemplate cmdlet to change a Spam Detection template.
 
 ## SYNTAX
 
