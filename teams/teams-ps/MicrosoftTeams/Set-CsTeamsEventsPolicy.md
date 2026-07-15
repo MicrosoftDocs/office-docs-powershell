@@ -21,7 +21,7 @@ Set-CsTeamsEventsPolicy [-AllowWebinars <String>] [-EventAccessType <String>] [-
  [-AllowEventIntegrations <Boolean>] [-AllowedWebinarTypesForRecordingPublish <String>]
  [-AllowedTownhallTypesForRecordingPublish <String>] [-TownhallChatExperience <String>] [-Description <String>]
  [-RecordingForTownhall <String>] [-RecordingForWebinar <String>] [-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>]
- [-UseMicrosoftECDN <Boolean>] [-BroadcastPremiumApps <String>] [-TownhallMaxResolution <String>] [-HighBitrateForTownhall <String>]  [-AllowEngagementReport <String>]
+ [-UseMicrosoftECDN <Boolean>] [-BroadcastPremiumApps <String>] [-TownhallMaxResolution <String>] [-HighBitrateForTownhall <String>] [-AllowEngagementReport <String>]
  [-InfoShownInReportMode <String>]
 ```
 
