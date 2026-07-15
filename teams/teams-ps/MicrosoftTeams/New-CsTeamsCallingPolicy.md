@@ -743,6 +743,9 @@ Possible values are:
 - **Enabled**: Audio notifications play when recording or transcription starts/stops.
 - **Disabled**: Audio notifications do not play when recording or transcription starts/stops.
 
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -762,6 +765,9 @@ Possible values are:
 
 - **Enabled**: Report call toggle is shown in calling settings.
 - **Disabled**: Report call is hidden in calling settings.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
 
 ```yaml
 Type: String
