@@ -125,12 +125,17 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-AllowedUsersForMeetingDetails <String>]
  [-RealTimeText <String>]
  [-ParticipantSlideControl <string>]
- [-WhatIf]
  [-WhoCanRegister <Object>]
  [-EnableRecordingAndTranscriptionCustomMessage <Boolean>]
  [-RecordingAndTranscriptionCustomMessageIdentifier <Guid>]
  [-AllowMeetingKnowledgeGeneration <Boolean>]
  [-MeetingKnowledgeExpirationDays <Int32>]
+ [-ConditionalAccessAttendeeVerification <Boolean>]
+ [-EnablePreMeetingConsent <Boolean>]
+ [-PreMeetingConsentContentIdentifier <Guid>]
+ [-SyntheticMediaDetection <String>]
+ [-SyntheticMediaDetectionAppId <Guid>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -2112,6 +2117,111 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConditionalAccessAttendeeVerification
+Enables Conditional Access Authentication for users joining meetings organized by this user. Uses the AuthenticationContexts published in the TeamsMeetingConfiguration. If the user has the required claims, they will be able to join the meeting. Otherwise, they will be prompted to choose between retrying to get the token or joining the lobby if enabled.
+
+Possible values are:
+
+- **$true**: Conditional Access Authentication contexts are available for the organizer to select from those published in the Teams Meeting Configuration, defaulting to None in the meeting options dropdown.
+- **$false**: Disables conditional access authentication context enforcement for meetings organized by this user.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnablePreMeetingConsent
+Controls whether participants must explicitly accept a custom consent dialog before they can join any meeting hosted by the tenant. Requires at least one consent content entry configured in TeamsPreMeetingConsentConfiguration.
+
+Possible values are:
+
+- **$true**: All participants must explicitly accept a custom consent dialog before joining any meeting hosted by the tenant.
+- **$false**: No consent dialog is shown to participants before joining meetings.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreMeetingConsentContentIdentifier
+A string identifier that references the Id of the PreMeetingConsentContent configuration stored as meeting settings. Used by the Teams client to determine whether its locally cached consent content is up to date. Updated automatically when consent content changes.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyntheticMediaDetection
+Controls whether synthetic audio/video detection is enabled for the user's meetings. When Disabled, no detection occurs regardless of other property values.
+
+Possible values are:
+
+- **Enabled**: Synthetic media detection is active for the user's meetings.
+- **Disabled**: Synthetic media detection is inactive; all other detection properties are ignored.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyntheticMediaDetectionAppId
+The Teams App ID (GUID) of the registered detection bot to use for synthetic media analysis. The zero GUID (00000000-0000-0000-0000-000000000000) represents the platform default: resolves to no provider when 1P is not available, or Microsoft Detection when 1P is available.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 00000000-0000-0000-0000-000000000000
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
