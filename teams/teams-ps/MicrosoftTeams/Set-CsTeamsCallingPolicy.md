@@ -54,6 +54,8 @@ Set-CsTeamsCallingPolicy [-Identity] <string>
  [-SpamFilteringEnabledType <string>]
  [-VoiceSimulationInInterpreter <string>]
  [-RealTimeText <string>]
+ [-RecordingAndTranscriptionAudioNotification <String>]
+ [-ReportCall <String>]
  [-ExplicitRecordingConsent <string>]
  [-EnableRecordingAndTranscriptionCustomMessage <Boolean>]
  [-RecordingAndTranscriptionCustomMessageIdentifier <Guid>]
@@ -738,6 +740,53 @@ Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -RecordingAndTranscriptionAudioNotification
+Policy to control whether audio notifications will be played when recording or transcription starts/stops for applied users/groups.
+
+Possible values are:
+
+- **Enabled**: Audio notifications play when recording or transcription starts/stops.
+- **Disabled**: Audio notifications do not play when recording or transcription starts/stops.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReportCall
+Controls if the Report call toggle should show up in calling settings for a tenant.
+
+Possible values are:
+
+- **Enabled**: Report call toggle is shown in calling settings.
+- **Disabled**: Report call is hidden in calling settings.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -SpamFilteringEnabledType
 
