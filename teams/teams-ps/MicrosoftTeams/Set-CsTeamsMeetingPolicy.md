@@ -1602,10 +1602,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
->[!NOTE]
->This feature has not been released yet and will have no changes if it is enabled or disabled.
-
-Control Noises Suppression Feature for PST legs joining a meeting.
+Control Noises Suppression Feature for PSTN legs joining a meeting.
 
 Possible Values:
 
