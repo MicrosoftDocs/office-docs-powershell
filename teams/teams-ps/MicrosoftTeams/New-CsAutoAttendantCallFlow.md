@@ -157,7 +157,7 @@ Accept wildcard characters: False
 
 **This option applies to Teams Phone Agent only.**
 
-The maximum allowed time in seconds for a Teams Phone Agent call before it terminates. The `-TimeoutThreshold` can be any integer value between 15 and 2400 seconds (inclusive), and is rounded to the nearest 15th interval. The default maximum call length is 4 minutes (2400 seconds).
+The maximum allowed time in seconds for a Teams Phone Agent call before it terminates. The `-TimeoutThreshold` can be any integer value between 15 and 2400 seconds (inclusive), and is rounded to the nearest 15th interval. The default maximum call length is 4 minutes (240 seconds).
 
 ```yaml
 Type: Int16
@@ -166,7 +166,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: 2400
+Default value: 240
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
