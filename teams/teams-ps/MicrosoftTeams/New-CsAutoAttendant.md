@@ -20,7 +20,7 @@ Use the New-CsAutoAttendant cmdlet to create a new Auto Attendant (AA).
 ## SYNTAX
 
 ```powershell
-New-CsAutoAttendant -Name <String> -LanguageId <String> -TimeZoneId <String> -DefaultCallFlow <Object> [-CallFlows <Object>] [-CallHandlingAssociations <Object>] [-Operator <Object>] [-VoiceId <String>] [-EnableVoiceResponse] [-EnableMainlineAttendant] [-MainlineAttendantAgentVoiceId <String>] [-InclusionScope <Object>] [-ExclusionScope <Object>] [-AuthorizedUsers <List>] [-HideAuthorizedUsers <List>] [-UserNameExtension <String>] [-AutoRecordingTemplateId <String>] [-SharedVoicemailTriageSettingsTemplateId <String>] [-Tenant <Guid>] [<CommonParameters>]
+New-CsAutoAttendant -Name <String> -LanguageId <String> -TimeZoneId <String> -DefaultCallFlow <Object> [-CallFlows <Object>] [-CallHandlingAssociations <Object>] [-Operator <Object>] [-VoiceId <String>] [-EnableVoiceResponse] [-EnableMainlineAttendant] [-MainlineAttendantAgentVoiceId <String>] [-InclusionScope <Object>] [-ExclusionScope <Object>] [-AuthorizedUsers <List>] [-HideAuthorizedUsers <List>] [-UserNameExtension <String>] [-AutoRecordingTemplateId <String>] [-SharedVoicemailTriageSettingsTemplateId <String>] [-SpamDetectionTemplateId <string>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -44,6 +44,7 @@ You can create new AAs by using the New-CsAutoAttendant cmdlet; each newly creat
 > - -MainlineAttendantAgentVoiceId
 > - -AutoRecordingTemplateId
 > - -SharedVoicemailTriageSettingsTemplateId
+> - SpamDetectionTemplateId
 
 **NOTES**:
 
@@ -552,6 +553,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SpamDetectionTemplateId
+
+The Spam Detection Template Id to assign to this Teams Phone Agent.
+
+See [Get-CsMainlineAttendantSpamDetectionTemplate](Get-CsMainlineAttendantSpamDetectionTemplate.md) for a list of existing templates..
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -Tenant
 
 This parameter is reserved for Microsoft internal use only.

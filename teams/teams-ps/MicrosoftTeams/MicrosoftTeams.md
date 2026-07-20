@@ -152,6 +152,9 @@ Returns the list of supported languages for Mainline Attendant.
 ### [Get-CsMainlineAttendantSupportedVoices](Get-CsMainlineAttendantSupportedVoices.md)
 Returns the list of supported voices for Mainline Attendant.
 
+### [Get-CsMainlineAttendantSpamDetectionTemplate](Get-CsMainlineAttendantSpamDetectionTemplate.md)
+Returns the list of spam detection templates in the tenant.
+
 ### [Get-CsMeetingMigrationStatus](Get-CsMeetingMigrationStatus.md)
 You use the `Get-CsMeetingMigrationStatus` cmdlet to check the status of meeting migrations.
 
@@ -854,6 +857,9 @@ Creates new Mainline Attendant appointment booking flows.
 ### [New-CsMainlineAttendantQuestionAnswerFlow](New-CsMainlineAttendantQuestionAnswerFlow.md)
 Creates new Mainline Attendant question and answer (FAQ) flows.
 
+### [New-CsMainlineAttendantSpamDetectionTemplate](New-CsMainlineAttendantSpamDetectionTemplate.md)
+Creates a new Mainline Attendant Spam Detection template.
+
 ### [New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md)
 Creates an application instance in Microsoft Entra ID.
 
@@ -1169,6 +1175,9 @@ Removes an existing Mainline attendant appointment booking flow.
 ### [Remove-CsMainlineAttendantQuestionAnswerFlow](Remove-CsMainlineAttendantQuestionAnswerFlow.md)
 Removes an existing Mainline attendant question and answer flow.
 
+### [Remove-CsMainlineAttendantSpamDetectionTemplate](Remove-CsMainlineAttendantSpamDetectionTemplate.md)
+Removes an existing Mainline Attendant Spam Detection template.
+
 ### [Remove-CsOnlineApplicationInstanceAssociation](Remove-CsOnlineApplicationInstanceAssociation.md)
 Use the Remove-CsOnlineApplicationInstanceAssociation cmdlet to remove the association between an application instance and the associated application configuration.
 
@@ -1471,6 +1480,9 @@ Modifies an existing Mainline Attendant appointment booking flow.
 
 ### [Set-CsMainlineAttendantQuestionAnswerFlow](Set-CsMainlineAttendantQuestionAnswerFlow.md)
 Modifies an existing Mainline Attendant question and answer (FAQ) flow.
+
+### [Set-CsMainlineAttendantSpamDetectionTemplate](Set-CsMainlineAttendantSpamDetectionTemplate.md)
+Modifies an existing Mainline Attendant Spam Detection template.
 
 ### [Set-CsPersonalAttendantSettings](Set-CsPersonalAttendantSettings.md)
 Modifies the personal attendant settings for a user.
