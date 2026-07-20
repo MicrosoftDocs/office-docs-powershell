@@ -219,7 +219,7 @@ Accept wildcard characters: False
 
 Customize the AI disclaimer message that Teams Phone Agent plays to callers. The default prompt is:
 
-`XXX`
+`I'm a virtual assistant. How can I help you today.`
 
 To configure a custom prompt, set this value to `Custom` and provide the prompt text with the `-AiDisclaimerCustomText` option.
 
