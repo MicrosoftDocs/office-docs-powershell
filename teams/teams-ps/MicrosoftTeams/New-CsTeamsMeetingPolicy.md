@@ -383,22 +383,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowedUsersForMeetingContext
-
-This policy controls which users should have the ability to see the meeting info details on the join screen. 'None' option should disable the feature completely.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AllowedUsersForMeetingDetails
 Controls which users should have ability to see the meeting info details on join screen. 'None' option should disable the feature completely.
 
@@ -839,25 +823,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -AllowUserToJoinExternalMeeting
-Possible values are:
-
-- Enabled
-- FederatedOnly
-- Disabled
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: Disabled
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -AllowWatermarkCustomizationForCameraVideo
 Allows the admin to grant customization permissions to a meeting organizer
 
@@ -1027,6 +992,22 @@ Aliases:
 Required: False
 Position: Named
 Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoRecording
+
+This setting allows admins to control the visibility of the auto recording feature in the organizer's **Meeting options**. If the you enable this setting, the **Record and transcribe automatically** setting appears in **Meeting options** with the default value set to **Off** (except for webinars and townhalls). Organizers need to manually toggle this setting to **On** to for their meetings to be automatically recorded. If you disable this setting, **Record and transcribe automatically** is hidden, preventing organizers from setting any meetings to be auto-recorded.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1622,7 +1603,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Enabled
+Default value: EveryoneInOrganization
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1804,6 +1785,29 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SetRecordingAndTranscriptOwnership
+This setting allows admins to control the visibility of "Allow meeting organizers to choose who keeps recording and transcript" feature in the organizer's **Meeting options**. If you enable this setting, the **Allow meeting organizers to choose who keeps recording and transcript** setting appears in **Meeting options**. Organizers need to manually select a people from meeting attendees as the recording and transcript owner. If you disable this setting, **Allow meeting organizers to choose who keeps recording and transcript** is hidden, the default value of this setting is disabled.
+
+> [!NOTE]
+> This feature has not been released yet and will have no changes if it is enabled or disabled.
+
+Possible values are:
+
+- Disabled
+- Enabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SmsNotifications
 Participants can sign up for text message meeting reminders.
 
@@ -1972,7 +1976,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: Disabled
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
