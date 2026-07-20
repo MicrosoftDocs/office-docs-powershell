@@ -1176,7 +1176,7 @@ Removes an existing Mainline attendant appointment booking flow.
 Removes an existing Mainline attendant question and answer flow.
 
 ### [Remove-CsMainlineAttendantSpamDetectionTemplate](Remove-CsMainlineAttendantSpamDetectionTemplate.md)
-Removes an existing Mainline Attendant Spam Detection tempalte.
+Removes an existing Mainline Attendant Spam Detection template.
 
 ### [Remove-CsOnlineApplicationInstanceAssociation](Remove-CsOnlineApplicationInstanceAssociation.md)
 Use the Remove-CsOnlineApplicationInstanceAssociation cmdlet to remove the association between an application instance and the associated application configuration.
@@ -1482,7 +1482,7 @@ Modifies an existing Mainline Attendant appointment booking flow.
 Modifies an existing Mainline Attendant question and answer (FAQ) flow.
 
 ### [Set-CsMainlineAttendantSpamDetectionTemplate](Set-CsMainlineAttendantSpamDetectionTemplate.md)
-Modifies an existing Mainline Attendant Spam Detection tempalte.
+Modifies an existing Mainline Attendant Spam Detection template.
 
 ### [Set-CsPersonalAttendantSettings](Set-CsPersonalAttendantSettings.md)
 Modifies the personal attendant settings for a user.
