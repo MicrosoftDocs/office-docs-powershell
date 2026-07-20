@@ -32,7 +32,7 @@ Use the Remove-CsMainlineAttendantSpamDetectionTemplate cmdlet to delete a Teams
 Remove-CsMainlineAttendantSpamDetectionTemplate -Id 5e3a575e-1faa-49ff-83c2-5cf1c36c0e02
 ```
 
-This example deletes the Teams Phone Agent (Mainline Attendant) template with the ide 5e3a575e-1faa-49ff-83c2-5cf1c36c0e02. If no Spam Detection template exists with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e02, then this example generates an error.
+This example deletes the Teams Phone Agent (Mainline Attendant) template with the id 5e3a575e-1faa-49ff-83c2-5cf1c36c0e02. If no Spam Detection template exists with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e02, then this example generates an error.
 
 ## PARAMETERS
 
