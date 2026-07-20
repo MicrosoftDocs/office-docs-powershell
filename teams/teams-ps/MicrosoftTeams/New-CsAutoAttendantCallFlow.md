@@ -206,7 +206,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True (when TimeoutDisconnectPromptType is Custom)
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -248,7 +248,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True (when AiDisclaimerType is Custom)
 Position: Named
 Default value: None
 Accept pipeline input: False
