@@ -15,7 +15,7 @@ title: New-CsPhoneNumberUsageChangeOrder
 # New-CsPhoneNumberUsageChangeOrder
 
 ## SYNOPSIS
-This cmdlet creates a request to to update TN Usage (e.g. from User Type to Service Type).
+This cmdlet creates a request to to update TN Usage (e.g. from User Type to VoiceApp).
 
 ## SYNTAX
 
@@ -24,30 +24,30 @@ New-CsPhoneNumberUsageChangeOrder -TelephoneNumber <String[]> -Usage <String>
 ```
 
 ## DESCRIPTION
-This cmdlet creates a order to update the usage of the given phone numbers (e.g. from User Type to Service Type).
+This cmdlet creates a order to update the usage of the given phone numbers. All posible options are: User, VoiceApp and Conference usage.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> New-CsPhoneNumberUsageChangeOrder -TelephoneNumber "+123456789" -Usage ServiceType
+PS C:\> New-CsPhoneNumberUsageChangeOrder -TelephoneNumber "+123456789" -Usage voiceapp
 ```
 ```output
 cdf3073a-6fbb-4ade-a8af-e8fa1f3b9c13
 ```
 
-In this example, the telephone number "+123456789" would change to Service Type usage.
+In this example, the telephone number "+123456789" would change to VoiceApp.
 
 ### Example 2
 ```powershell
 [string[]]$tns="+14255551234","+14255551233"
-PS C:\> New-CsPhoneNumberUsageChangeOrder -TelephoneNumber $tns -Usage ServiceType
+PS C:\> New-CsPhoneNumberUsageChangeOrder -TelephoneNumber $tns -Usage user
 ```
 ```output
 cdf3073a-6fbb-4ade-a8af-e8fa1f3b9c13
 ```
 
-In this example, the usage of the given list of telephone numbers is being updated to Service Type.
+In this example, the usage of the given list of telephone numbers is being updated to User type.
 
 ## PARAMETERS
 
@@ -67,10 +67,10 @@ Accept wildcard characters: False
 ```
 
 ### -Usage
-Specifies the new usage type for the given telephone numbers.
+Specifies the new usage type for the given telephone numbers. Possible values are: `User`, `VoiceApp` and `Conference`
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
@@ -92,6 +92,6 @@ Accept wildcard characters: False
 ### None
 
 ## NOTES
-This cmdlet is available in Teams PowerShell module 7.5.0 or later.
+This cmdlet is available in Teams PowerShell module 7.7.1 or later.
 
 ## RELATED LINKS
