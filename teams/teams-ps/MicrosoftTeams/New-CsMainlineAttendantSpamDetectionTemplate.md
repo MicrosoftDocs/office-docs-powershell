@@ -37,14 +37,14 @@ The New-CsMainlineAttendantSpamDetectionTemplate cmdlet creates a new spam detec
 New-CsMainlineAttendantSpamDetectionTemplate -Name "Spam Detection - Disconnect" -Description "Calls determined to be spam will be disconnected" -EnableSpamDetection $true -Action "DisconnectCall"
 ```
 
-When assigned to a Teams Phone Agent (formerly Mainline Attenant), this example will create a new Spam Detection Template that will disconnect calls determined to be spam.
+When assigned to a Teams Phone Agent (formerly Mainline Attendant), this example will create a new Spam Detection Template that will disconnect calls determined to be spam.
 
 ### -------------------------- Example 2 --------------------------
 ```
 New-CsMainlineAttendantSpamDetectionTemplate -Name "Spam Detection - Disconnect - Except CEO" -Description "Except CEO - Calls determined to be spam will be disconnected" -EnableSpamDetection $true -Action "DisconnectCall" -ExclusionList @("+14255551212")
 ```
 
-When assigned to a Teams Phone Agent (formerly Mainline Attenant), this example will create a new Spam Detection Template that will disconnect calls determined to be spam except if the call is coming from `+14255551212`.
+When assigned to a Teams Phone Agent (formerly Mainline Attendant), this example will create a new Spam Detection Template that will disconnect calls determined to be spam except if the call is coming from `+14255551212`.
 
 ## PARAMETERS
 
