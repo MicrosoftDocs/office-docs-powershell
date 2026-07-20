@@ -858,7 +858,7 @@ Creates new Mainline Attendant appointment booking flows.
 Creates new Mainline Attendant question and answer (FAQ) flows.
 
 ### [New-CsMainlineAttendantSpamDetectionTemplate](New-CsMainlineAttendantSpamDetectionTemplate.md)
-Creates a new Mainline Attendant Spam Detection tempalte.
+Creates a new Mainline Attendant Spam Detection template.
 
 ### [New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md)
 Creates an application instance in Microsoft Entra ID.
