@@ -19,14 +19,45 @@ This cmdlet creates a request to upload Direct Routing telephone numbers to Micr
 
 ## SYNTAX
 
+### InputByList (Default)
 ```
-New-CsOnlineDirectRoutingTelephoneNumberUploadOrder [-TelephoneNumber <String>] [-StartingNumber <String>] [-EndingNumber <String>] [-FileContent <Byte[]>] [<CommonParameters>]
+New-CsOnlineDirectRoutingTelephoneNumberUploadOrder 
+    [-TelephoneNumber <String>] 
+    [-LocationId <String>]
+    [-AcquiredCapability <String>] 
+    [-NetworkSiteId <String>] 
+    [-ReverseNumberLookup <String>] 
+    [-Tag <String>]
+    [<CommonParameters>]
 ```
+
+### InputByRange
+```
+New-CsOnlineDirectRoutingTelephoneNumberUploadOrder 
+    [-LocationId <String>] 
+    [-AcquiredCapability <String>]
+    [-NetworkSiteId <String>] 
+    [-ReverseNumberLookup <String>] 
+    [-Tag <String>]
+    [-StartingNumber <String>] 
+    [-EndingNumber <String>]
+    [<CommonParameters>]
+```
+
+### InputByFile
+```
+New-CsOnlineDirectRoutingTelephoneNumberUploadOrder 
+    [-FileContent <Byte[]>] 
+    [<CommonParameters>]
+```
+
 
 ## DESCRIPTION
 This cmdlet uploads Direct Routing telephone numbers to Microsoft Teams telephone number management inventory. Once uploaded the phone numbers will be visible in Teams PowerShell as acquired Direct Routing phone numbers. The output of the cmdlet is the "orderId" of the asynchronous Direct Routing Number creation operation. A maximum of 10,000 phone numbers can be uploaded at a time. If more than 10,000 numbers need to be uploaded, the requests should be divided into multiple increments of up to 10,000 numbers.
 
 The cmdlet is an asynchronous operation and will return an OrderId as output. You can use the [Get-CsOnlineTelephoneNumberOrder](./get-csonlinetelephonenumberorder.md) cmdlet to check the status of the OrderId, including any error or warning messages that might result from the operation: `Get-CsOnlineTelephoneNumberOrder -OrderType DirectRoutingNumberCreation -OrderId "orderId"`.
+
+A telephone number can be uploaded by itself or with associated attributes. When uploading a range telephone numbers, attributes are applied equally to all the numbers in range. If the telephone number is alread in Microsoft Teams database, the upload may fail.
 
 ## EXAMPLES
 
@@ -65,12 +96,28 @@ In this example, the content of a file with a list of Direct Routing telephone n
 
 ## PARAMETERS
 
+### -AcquiredCapability
+This is the list of Acquired Capabilities the number(s) have. Supported capabilities are ConferenceAssignment, VoiceApplicationAssignment, UserAssignment, and SharedCalling.
+
+```yaml
+Type: String
+Parameter Sets: InputByList, InputByRange
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
 ### -EndingNumber
 This is the ending number of a range of Direct Routing telephone number you wish to upload to Microsoft Teams telephone number management inventory.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: InputByRange
 Aliases:
 
 Required: False
@@ -81,11 +128,56 @@ Accept wildcard characters: False
 ```
 
 ### -FileContent
-This is the content of a .csv file that includes the Direct Routing telephone numbers to be uploaded to the Microsoft Teams telephone number management inventory. This parameter can be used to upload up to 10,000 numbers at a time.
+This is the content of a .csv file that includes the Direct Routing telephone numbers and associated attributes to be uploaded to the Microsoft Teams telephone number management inventory. This parameter can be used to upload up to 10,000 numbers at a time.
 
 ```yaml
 Type: Byte[]
-Parameter Sets: (All)
+Parameter Sets: InputByFile
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LocationId
+The LocationId of the location to assign to the specific user. You can get it using Get-CsOnlineLisLocation. You can set the location on both assigned and unassigned phone numbers.
+
+```yaml
+Type: String
+Parameter Sets: InputByList, InputByRange
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -NetworkSiteId
+ID of a network site. A network site represents a location where your organization has a physical venue, such as offices, a set of buildings, or a campus.
+
+```yaml
+Type: String
+Parameter Sets: InputByList, InputByRange
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReverseNumberLookup
+This parameter is used to control the behavior of reverse number lookup (RNL) for a phone number. When RNL is set to 'SkipInternalVoip', an internal call to this phone number will not attempt to pass through internal VoIP via reverse number lookup in Microsoft Teams. Instead the call will be established through external PSTN connectivity directly.
+
+```yaml
+Type: String
+Parameter Sets: InputByList, InputByRange
 Aliases:
 
 Required: False
@@ -100,7 +192,22 @@ This is the starting number of a range of Direct Routing telephone number you wi
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: InputByRange
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tag
+Indicates the tag to be assigned or created for telephone number(s).
+
+```yaml
+Type: String
+Parameter Sets: InputByList, InputByRange
 Aliases:
 
 Required: False
@@ -137,7 +244,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.String
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 6.7.1 or later.
+The cmdlet is available in Teams PowerShell module 6.7.1 or later. Telephone number attributes LocationId, AcquiredCapability, NetworkSiteId, ReverseNumberLookup, and Tag are supported from Teams PowerShell module version 7.9.0 or later
 
 ## RELATED LINKS
 [Get-CsOnlineTelephoneNumberOrder](./get-csonlinetelephonenumberorder.md)
