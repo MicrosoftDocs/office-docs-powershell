@@ -23,22 +23,30 @@ Modifies an existing Online Voicemail policy.
 Set-CsOnlineVoicemailPolicy [[-Identity] <string>] [-Description <String>] [-EnableEditingCallAnswerRulesSetting <boolean>] [-EnableTranscription <boolean>]
 [-EnableTranscriptionProfanityMasking <boolean>] [-EnableTranscriptionTranslation <boolean>] [-MaximumRecordingLength <timespan>]
 [-PostambleAudioFile <string>] [-PostambleAudioFile <string>] [-PreamblePostambleMandatory <boolean>]
-[-PrimarySystemPromptLanguage <string>] [-SecondarySystemPromptLanguage <string>] [-ShareData <string>] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-PrimarySystemPromptLanguage <string>] [-SecondarySystemPromptLanguage <string>] [-ShareData <string>] [-EnableVoicemailTriage <boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Cloud Voicemail service provides organizations with voicemail deposit capabilities for Phone System implementation.
+Cloud Voicemail provides voicemail recording, deposit, and retrieval capabilities for Microsoft Teams and Teams Phone users.
 
-By default, users enabled for Phone System will be enabled for Cloud Voicemail. The Online Voicemail policy controls whether or not voicemail transcription, profanity masking for the voicemail transcriptions, translation for the voicemail transcriptions, and editing call answer rule settings are enabled for a user. The policies also specify the voicemail maximum recording length for a user and the primary and secondary voicemail system prompt languages.
+By default, Teams and Teams Phone users are enabled for Cloud Voicemail. The Online Voicemail Policy controls whether voicemail transcription, transcription profanity masking, transcription translation, AI-powered voicemail triage, and call answer rule editing are enabled for a user. The policy also specifies the maximum voicemail recording length and the primary and secondary system prompt languages used by the voicemail service.
 
-- Voicemail transcription is enabled by default
-- Transcription profanity masking is disabled by default
-- Transcription translation is enabled by default
-- Editing call answer rule settings is enabled by default
-- Voicemail maximum recording length is set to 5 minutes by default
-- Primary and secondary system prompt languages are set to null by default and the user's voicemail language setting is used
+By default:
+
+- Voicemail transcription is enabled
+- Transcription profanity masking is disabled
+- Transcription translation is enabled
+- Call answer rule editing is enabled
+- The maximum voicemail recording length is 5 minutes
+- The primary and secondary system prompt languages are not configured. The user's voicemail language setting is used instead
+- AI-powered voicemail triage is disabled
 
 Tenant admin would be able to create a customized online voicemail policy to match the organization's requirements.
+
+> [!IMPORTANT]
+> The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
+>
+> - EnableVoicemailTriage
 
 ## EXAMPLES
 
@@ -55,6 +63,14 @@ Set-CsOnlineVoicemailPolicy -EnableTranscriptionProfanityMasking $false
 ```
 
 The command shown in Example 2 changes the EnableTranscriptionProfanityMasking to false for tenant level global online voicemail policy when calling without Identity parameter.
+
+### Example 3
+```
+Set-CsOnlineVoicemailPolicy -Identity "CustomOnlineVoicemailPolicy" -EnableTranscription $true -EnableVoicemailTriage $true
+```
+This command enables AI-powered voicemail triage for users assigned to the specified Online Voicemail Policy.
+
+When AI-powered voicemail triage is enabled, voicemail messages delivered to users with an eligible Microsoft 365 Copilot license include an AI-generated summary, identified action items, a suggested category, and an importance classification.
 
 ## PARAMETERS
 
@@ -150,6 +166,23 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableVoicemailTriage
+Specifies whether AI-powered voicemail triage is enabled.
+
+When enabled, voicemail messages delivered to users with an eligible Microsoft 365 Copilot license are enriched with AI-generated metadata derived from the voicemail transcription, including a summary, identified action items, a suggested category, and an importance classification.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -264,7 +297,10 @@ Accept wildcard characters: False
 
 ### -ShareData
 
-Specifies whether voicemail and transcription data are shared with the service for training and improving accuracy. Possible values are Defer and Deny.
+Specifies whether voicemail and transcription data are shared with the service for training and improving accuracy. Possible values are Defer and Deny. 
+> [!IMPORTANT]
+> This parameter is deprecated and no longer has any effect. Its value is ignored by the service and is retained only for backward compatibility.
+>
 
 ```yaml
 Type: String
@@ -277,6 +313,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 
 ### -WhatIf
 

@@ -152,6 +152,9 @@ Returns the list of supported languages for Mainline Attendant.
 ### [Get-CsMainlineAttendantSupportedVoices](Get-CsMainlineAttendantSupportedVoices.md)
 Returns the list of supported voices for Mainline Attendant.
 
+### [Get-CsMainlineAttendantSpamDetectionTemplate](Get-CsMainlineAttendantSpamDetectionTemplate.md)
+Returns the list of spam detection templates in the tenant.
+
 ### [Get-CsMeetingMigrationStatus](Get-CsMeetingMigrationStatus.md)
 You use the `Get-CsMeetingMigrationStatus` cmdlet to check the status of meeting migrations.
 
@@ -298,6 +301,9 @@ Retrieves the list of Shared Call History templates.
 
 ### [Get-CsSharedCallQueueHistoryTemplate](Get-CsSharedCallQueueHistoryTemplate.md)
 Deprecated - new cmdlet is Get-CsSharedCallHistoryTemplate
+
+### [Get-CsSharedVoicemailTriageSettingsTemplate](Get-CsSharedVoicemailTriageSettingsTemplate.md)
+Retrieves the configuration for automatic triage of Shared Voicemails
 
 ### [Get-CsTagsTemplate](Get-CsTagsTemplate.md)
 Retrieves a list of existing Tag templates.
@@ -851,6 +857,9 @@ Creates new Mainline Attendant appointment booking flows.
 ### [New-CsMainlineAttendantQuestionAnswerFlow](New-CsMainlineAttendantQuestionAnswerFlow.md)
 Creates new Mainline Attendant question and answer (FAQ) flows.
 
+### [New-CsMainlineAttendantSpamDetectionTemplate](New-CsMainlineAttendantSpamDetectionTemplate.md)
+Creates a new Mainline Attendant Spam Detection template.
+
 ### [New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md)
 Creates an application instance in Microsoft Entra ID.
 
@@ -925,6 +934,9 @@ Use the New-CsSharedCallHistoryTemplate cmdlet to create a Shared Call History t
 
 ### [New-CsSharedCallQueueHistoryTemplate](New-CsSharedCallQueueHistoryTemplate.md)
 Deprecated - new cmdlet is New-CsSharedCallHistoryTemplate
+
+### [New-CsSharedVoicemailTriageSettingsTemplate](New-CsSharedVoicemailTriageSettingsTemplate.md)
+This cmdlet creates an AI triage settings template for Shared Voicemails.
 
 ### [New-CsTag](New-CsTag.md)
 Use the New-CsTag cmdlet to create a new tag that can be added to a Tag template.
@@ -1163,6 +1175,9 @@ Removes an existing Mainline attendant appointment booking flow.
 ### [Remove-CsMainlineAttendantQuestionAnswerFlow](Remove-CsMainlineAttendantQuestionAnswerFlow.md)
 Removes an existing Mainline attendant question and answer flow.
 
+### [Remove-CsMainlineAttendantSpamDetectionTemplate](Remove-CsMainlineAttendantSpamDetectionTemplate.md)
+Removes an existing Mainline Attendant Spam Detection template.
+
 ### [Remove-CsOnlineApplicationInstanceAssociation](Remove-CsOnlineApplicationInstanceAssociation.md)
 Use the Remove-CsOnlineApplicationInstanceAssociation cmdlet to remove the association between an application instance and the associated application configuration.
 
@@ -1233,7 +1248,10 @@ This cmdlet will remove/delete a device from the remote log collection configura
 Removes Shared Call History template.
 
 ### [Remove-CsSharedCallQueueHistoryTemplate](Remove-CsSharedCallQueueHistoryTemplate.md)
-Deprecated - use new cmdlet CsSharedCallHistoryTemplate
+Deprecated - use new cmdlet CsSharedCallHistoryTemplate.
+
+### [Remove-CsSharedVoicemailTriageSettingsTemplate](Remove-CsSharedVoicemailTriageSettingsTemplate.md)
+Removes AI Triage SettingsTemplate for Shared Voicemails.
 
 ### [Remove-CsTagsTemplate](Remove-CsTagsTemplate.md)
 Deletes an existing Tag template.
@@ -1463,6 +1481,9 @@ Modifies an existing Mainline Attendant appointment booking flow.
 ### [Set-CsMainlineAttendantQuestionAnswerFlow](Set-CsMainlineAttendantQuestionAnswerFlow.md)
 Modifies an existing Mainline Attendant question and answer (FAQ) flow.
 
+### [Set-CsMainlineAttendantSpamDetectionTemplate](Set-CsMainlineAttendantSpamDetectionTemplate.md)
+Modifies an existing Mainline Attendant Spam Detection template.
+
 ### [Set-CsPersonalAttendantSettings](Set-CsPersonalAttendantSettings.md)
 Modifies the personal attendant settings for a user.
 
@@ -1557,7 +1578,10 @@ This cmdlet allows the admin to create and edit a device requested for remote lo
 This cmdlet allows to configure Shared Call History template.
 
 ### [Set-CsSharedCallQueueHistoryTemplate](Set-CsSharedCallQueueHistoryTemplate.md)
-Deprecated - use new cmdlet Set-CsSharedCallHistoryTemplate
+Deprecated - use new cmdlet Set-CsSharedCallHistoryTemplate.
+
+### [Set-CsSharedVoicemailTriageSettingsTemplate](Set-CsSharedVoicemailTriageSettingsTemplate.md)
+This cmdlet allows to configure AI Triage Settings Template for Shared Voicemails.
 
 ### [Set-CsTagsTemplate](Set-CsTagsTemplate.md)
 Make changes to an existing Tag template.
