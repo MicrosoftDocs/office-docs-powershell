@@ -438,7 +438,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
-The MailTipsAccessScope parameter specifies a mail-enabled security group in the internal organization that contains users whose free/busy information is accessible by an external organization. You can use any value that uniquely identifies the group. For example:
+The MailTipsAccessScope parameter specifies a mail-enabled security group in the internal organization that contains users whose MailTips information is accessible by an external organization. You can use any value that uniquely identifies the group. For example:
 
 - Name
 - Distinguished name (DN)
