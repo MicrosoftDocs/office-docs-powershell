@@ -1,5 +1,5 @@
 ---
-ms.date: 05/20/2026
+ms.date: 07/22/2026
 ---
 
 # Create new cmdlet articles
@@ -70,18 +70,24 @@ You probably know how to connect, but the available workloads and connection met
 >   - The "Mailbox Search" role is required for **Search-Mailbox**.
 > - Connections from the Exchange Online PowerShell V3 module incorrectly identify many parameter **Type** values as `Object` or `Object[]`. The true parameter type values are visible in product code.
 
-## Step 3: Load platyPS in the PowerShell environment
+### When to dump cmdlets directly from a module instead of a connection
 
-After you connect in PowerShell to the server or service (either in a regular Windows PowerShell window or from a specific PowerShell console shortcut), you likely don't need to do anything to make the platyPS cmdlets available to you in your session. However, if you have issues, run the following command to manually load the Microsoft.PowerShell.PlatyPS module:
+Some cmdlets are built directly into a PowerShell module rather than loaded temporarily when you connect to the PowerShell environment. For these cmdlets:
 
-```powershell
-Import-Module Microsoft.PowerShell.PlatyPS
-```
+- You don't need to connect to the PowerShell environment; you just need to install the module.
+- After you install the module, the module name is permanent and predictable.
 
-### Step 3a: Find your module name
+For example, cmdlets like **Connect-ExchangeOnline** are built directly into the [ExchangeOnlineManagement](https://www.powershellgallery.com/packages/ExchangeOnlineManagement) module, so you document them from the module itself (not from an Exchange Online PowerShell connection).
+
+For cmdlets built into a module, install the module as described in the connection instructions in [Step 2](#step-2-connect-to-the-powershell-environment-that-has-the-cmdlet), but don't connect to the PowerShell environment. Instead, do one of the following steps as described in [Step 4](#step-4-run-platyps-to-generate-article-files):
+
+- Use the cmdlet name in the _CommandInfo_ parameter in **New-MarkdownCommandHelp** to document a specific cmdlet in the module. You don't need to know or specify the module's name.
+- Use the module name in the _ModuleInfo_ parameter in **New-MarkdownCommandHelp** to dump all cmdlets in the module. To make absolutely sure the module is loaded and available, run the command `Import-Module <ModuleName>`. To see all installed modules, run the command `Get-InstalledModule`.
+
+### Step 2a: Find your module name
 
 > [!TIP]
-> This step is required only if you're interested in creating cmdlet reference articles for **all** available cmdlets in the product (using the _ModuleInfo_ parameter in **New-MarkdownCommandHelp**). If you're going to manually specify the cmdlet names (using the _CommandInfo_ parameter in **New-MarkdownCommandHelp**), you can skip this step.
+> This step is required only if you're interested in creating cmdlet reference articles for **all** available cmdlets in the module or PowerShell environment (using the _ModuleInfo_ parameter in **New-MarkdownCommandHelp**). If you're going to manually specify the cmdlet names (using the _CommandInfo_ parameter in **New-MarkdownCommandHelp**), you can skip this step.
 
 platyPS needs the name of the loaded PowerShell module or snap-in that contains the cmdlets you want to document. To find the module name, run the following command:
 
@@ -116,11 +122,19 @@ Script     2.2.5      PowerShellGet                       {Find-Command, Find-Ds
 Script     2.0.0      PSReadline                          {Get-PSReadLineKeyHandler, Get-PSReadLineOption, Remove-PSReadLineKeyHandler, ...}
 ```
 
-For services that use remote connections (Exchange), the module name is a temporary value that changes every time you connect. In the example output, the module name for the Exchange Online PowerShell session is `tmp_byivwzpq.e1k`.
+- For services that use remote connections (Exchange), the module name is a temporary value that changes every time you connect. In the example output, the module name for the Exchange Online PowerShell session is `tmp_byivwzpq.e1k`.
+- For Microsoft Teams, the module name is always `MicrosoftTeams`.
+- For cmdlets built into the module itself, a connection to the PowerShell environment isn't required, and the module name is always the same (for example, `ExchangeOnlineManagement`).
 
-For Microsoft Teams, the module name is always `MicrosoftTeams`.
+Take note of your module name. You need it in the next steps.
 
-Either way, take note of your module name. You need it in the next steps.
+## Step 3: Load platyPS in the PowerShell environment
+
+After you connect in PowerShell to the server or service (either in a regular Windows PowerShell window or from a specific PowerShell console shortcut), you likely don't need to do anything to make the platyPS cmdlets available to you in your session. However, if you have issues, run the following command to manually load the Microsoft.PowerShell.PlatyPS module:
+
+```powershell
+Import-Module Microsoft.PowerShell.PlatyPS
+```
 
 ## Step 4: Run platyPS to generate article files
 
@@ -146,9 +160,7 @@ You have two choices:
   New-MarkdownCommandHelp -CommandInfo $x -OutputFolder "<Path>"
   ```
 
-**Notes**:
-
-- \<ModuleName\> is the value you found in [Step 3a](#step-3a-find-your-module-name) (for example, `tmp_byivwzpq.e1k` or `MicrosoftTeams`).
+- \<ModuleName\> is the value you found in [Step 2a](#step-2a-find-your-module-name) (for example, `tmp_byivwzpq.e1k` or `MicrosoftTeams`) _or_ the name of the module that contains the built-in cmdlets (for example, `ExchangeOnlineManagement`).
 - If the \<Path\> location doesn't exist, the folder structure is created for you.
 - Regardless of the method you use, when the command is associated with a module, a folder matching the module name is automatically created in the _OutputFolder_ path. Commands not associated with a module are written directly to the _OutputFolder_ root.
 
