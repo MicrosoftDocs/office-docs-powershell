@@ -1271,7 +1271,7 @@ Accept wildcard characters: False
 
 ### -DisableAudioAnnouncementsForResourceAccounts
 
-Determines whether Teams plays recording announcements in CCaaS/OPS calls. This setting controls all CVA-driven (Conference Voice Announcement) recording announcements across [Azure Communication Services Call Recording](https://learn.microsoft.com/en-us/azure/communication-services/concepts/voice-video-calling/call-recording) and Teams convenience recording.
+Determines whether Teams plays recording announcements in CCaaS/OPS calls. This setting controls all CVA-driven (Conference Voice Announcement) recording announcements across [Azure Communication Services Call Recording](https://learn.microsoft.com/azure/communication-services/concepts/voice-video-calling/call-recording) and Teams convenience recording.
 
 > [!NOTE]
 > Microsoft Teams provides participant notifications when recording or transcription is active. If you choose to disable these notifications, you are responsible for ensuring that your contact center solution informs participants in real time in accordance with applicable laws. For full details, see the [Microsoft Teams Terms of Service](https://www.microsoft.com/licensing/terms/productoffering/microsoftteams).
