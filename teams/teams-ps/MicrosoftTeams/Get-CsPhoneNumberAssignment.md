@@ -673,7 +673,7 @@ Filters the returned results based on the number type. Supported values are Dire
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: PhoneNumberType
 
 Required: False
 Position: Named
@@ -770,7 +770,7 @@ We support Direct Routing numbers with extensions using the formats +1206555000;
 ```yaml
 Type: System.String
 Parameter Sets: (All)
-Aliases:
+Aliases: PhoneNumber
 
 Required: False
 Position: Named

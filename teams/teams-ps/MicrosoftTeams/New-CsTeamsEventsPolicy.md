@@ -19,7 +19,8 @@ This cmdlet allows you to create a new TeamsEventsPolicy instance and set its pr
 New-CsTeamsEventsPolicy [-Identity] <String> [-AllowWebinars <String>] [-AllowTownhalls <String>] [-ImmersiveEvents <String>] [-AllowEmailEditing <String>] [-Description <String>]
 [-TownhallEventAttendeeAccess <String>] [-RecordingForTownhall <String>] [-RecordingForWebinar <String>]
 [-TranscriptionForTownhall <String>] [-TranscriptionForWebinar <String>] [-AllowEventIntegrations <Boolean>] [-TownhallChatExperience <String>]
-[-UseMicrosoftECDN <String>] [-EventAccessType <String>] [-BroadcastPremiumApps <String>]  [-TownhallMaxResolution <String>] [-HighBitrateForTownhall <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-UseMicrosoftECDN <String>] [-EventAccessType <String>] [-BroadcastPremiumApps <String>]  [-TownhallMaxResolution <String>] [-HighBitrateForTownhall <String>] [-AllowEngagementReport <String>]
+[-InfoShownInReportMode <String>] [-Registration <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -412,6 +413,77 @@ Aliases:
 Required: False
 Position: Named
 Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowEngagementReport
+Controls whether attendance and engagement reports are allowed for events.
+
+Possible values are:
+
+- **Enabled**: On, but organizers can turn it off.
+- **Disabled**: Off, but organizers can turn it on.
+- **ForceEnabled**: On. Organizers cannot turn off attendance and engagement reports.
+- **ForceDisabled**: Off. Organizers cannot view or download attendance and engagement reports.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InfoShownInReportMode
+Controls what information is shown in attendance reports.
+
+Possible values are:
+
+- **FullInformation**: Full attendee information is shown in the report.
+- **IdentityOnly**: Only attendee identity is shown in the report.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: FullInformation
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Registration
+This setting governs whether registration is enabled or disabled for events.
+
+Possible values are:
+
+- **Enabled**: Enables registration for events.
+- **Disabled**: Disables registration for events.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

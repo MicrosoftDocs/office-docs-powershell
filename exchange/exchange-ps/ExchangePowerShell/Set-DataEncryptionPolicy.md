@@ -59,6 +59,18 @@ Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter>
  [<CommonParameters>]
 ```
 
+### ReplaceKey
+```
+Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> -AzureKeyIDs <MultiValuedProperty> -Replace
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-Name <String>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -79,6 +91,24 @@ Set-DataEncryptionPolicy -Identity "Europe Mailboxes" -Refresh
 This example updates the data encryption policy named Europe Mailboxes after one of the associated keys is rotated in the Azure Key Vault.
 
 ## PARAMETERS
+
+### -AzureKeyIDs
+
+> Applicable: Exchange Online
+
+{{ Fill AzureKeyIDs Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: ReplaceKey
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Identity
 
@@ -173,6 +203,24 @@ Use the Refresh switch to update the data encryption policy in Exchange Online a
 ```yaml
 Type: SwitchParameter
 Parameter Sets: RefreshKey
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Replace
+
+> Applicable: Exchange Online
+
+{{ Fill Replace Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ReplaceKey
 Aliases:
 
 Required: True

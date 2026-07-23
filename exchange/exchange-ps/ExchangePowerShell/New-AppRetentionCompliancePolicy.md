@@ -59,7 +59,7 @@ To use this cmdlet in Security & Compliance PowerShell, you need to be assigned 
 
 ### Example 1
 ```powershell
-New-AppRetentionCompliancePolicy -Name "Regulation 567 Compliance" -Applications "User:MicrosoftTeams,VivaEngage","Group:MicrosoftTeams,VivaEngage" -ExchangeLocation "Jennifer Petersen","Kitty Nakamura"
+New-AppRetentionCompliancePolicy -Name "Regulation 567 Compliance" -Applications "User:MicrosoftTeams","Group:MicrosoftTeams" -ExchangeLocation "Jennifer Petersen","Kitty Nakamura"
 ```
 
 This example creates a static scope retention policy named Regulation 567 Compliance for the Viva Engage user messages of Jennifer Petersen and Kitty Nakamura.
@@ -122,8 +122,8 @@ This parameter uses the following syntax: `"LocationType:App1,LocationType:App2,
 
 - **Microsoft 365 apps**: For example:
 
-  `"User:Exchange,User:OneDriveForBusiness,Group:Exchange,Group:SharePoint"` or `"User:MicrosoftTeams","User:VivaEngage"`or `"User:MicrosoftTeamsCallLog"`
-
+  `"User:Exchange,User:OneDriveForBusiness,Group:Exchange,Group:SharePoint"` or `"User:MicrosoftTeams" or "User:Yammer"`or `"User:MicrosoftTeamsCallLog"`
+ 
 - **Microsoft Copilot experiences**: Currently in Preview. You must use *all* of the following values at the same time:
 
   `"User:M365Copilot,CopilotForSecurity,CopilotinFabricPowerBI,CopilotStudio,CopilotinBusinessApplicationplatformsSales,SQLCopilot"`

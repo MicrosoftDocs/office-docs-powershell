@@ -28,6 +28,7 @@ Set-AcceptedDomain [-Identity] <AcceptedDomainIdParameter>
  [-DomainType <AcceptedDomainType>]
  [-EnableNego2Authentication <Boolean>]
  [-MakeDefault <Boolean>]
+ [-MailFlowRegion <String>]
  [-MatchSubDomains <Boolean>]
  [-Name <String>]
  [-OutboundOnly <Boolean>]
@@ -219,6 +220,26 @@ If you don't use non-SMTP email addresses in your organization, you don't need t
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MailFlowRegion
+
+> Applicable: Exchange Online, Exchange Online Protection
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill MailFlowRegion Description }}
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 

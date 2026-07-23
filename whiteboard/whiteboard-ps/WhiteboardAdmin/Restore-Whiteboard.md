@@ -1,7 +1,7 @@
-﻿---
+---
 external help file: WhiteboardAdmin-help.xml
 Module Name: WhiteboardAdmin
-online version: https://learn.microsoft.com/powershell/module/whiteboard/restore-whiteboard
+online version: https://learn.microsoft.com/powershell/module/whiteboardadmin/restore-whiteboard
 applicable: Microsoft Whiteboard
 title: Restore-Whiteboard
 schema: 2.0.0
