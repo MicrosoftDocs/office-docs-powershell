@@ -2059,12 +2059,15 @@ Accept wildcard characters: False
 
 ### -VoiceSimulationInInterpreter
 
-Enables the user to use the voice simulation feature while being AI interpreted.
+Enables the user to use the voice simulation feature while being AI interpreted. 
 
 Possible Values:
 
+- Enabled (default)
+
 - Disabled
-- Enabled
+
+- VoiceSimulationDisabled
 
 ```yaml
 Type: String
