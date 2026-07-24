@@ -2,7 +2,7 @@
 external help file: MicrosoftTeams-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-ms.date: 04/23/2025
+ms.date: 07/22/2026
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamseventspolicy
 schema: 2.0.0
 title: Set-CsTeamsEventsPolicy
@@ -196,9 +196,6 @@ Possible values are:
 - **ForceEnabled**: On. Organizers cannot turn off attendance and engagement reports.
 - **ForceDisabled**: Off. Organizers cannot view or download attendance and engagement reports.
 
-> [!NOTE]
-> This feature has not been fully released yet, so the setting will have no effect.
-
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -218,9 +215,6 @@ Possible values are:
 
 - **FullInformation**: Full attendee information is shown in the report.
 - **IdentityOnly**: Only attendee identity is shown in the report.
-
-> [!NOTE]
-> This feature has not been fully released yet, so the setting will have no effect.
 
 ```yaml
 Type: String
