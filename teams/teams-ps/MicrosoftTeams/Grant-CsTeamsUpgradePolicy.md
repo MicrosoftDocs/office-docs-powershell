@@ -31,13 +31,6 @@ Grant-CsTeamsUpgradePolicy [-MigrateMeetingsToTeams <Boolean>] [-PassThru] [[-Po
  [-MsftInternalProcessingMode <String>] [-Force] [-Global] [<CommonParameters>]
 ```
 
-### GrantToGroup
-```powershell
-Grant-CsTeamsUpgradePolicy [-MigrateMeetingsToTeams <Boolean>] [-PassThru] [[-PolicyName] <String>]
- [-MsftInternalProcessingMode <String>] -Group <String> [-Rank <Int32>]
- [<CommonParameters>]
-```
-
 ## DESCRIPTION
 
 TeamsUpgradePolicy allows administrators to manage the transition from Skype for Business to Teams. As an organization with Skype for Business starts to adopt Teams, administrators can manage the user experience in their organization using the concept of coexistence "mode".  Mode defines in which client incoming chats and calls land as well as in what service (Teams or Skype for Business) new meetings are scheduled in. Mode also governs what functionality is available in the Teams client. Finally, prior to upgrading to TeamsOnly mode administrators can use TeamsUpgradePolicy to trigger notifications in the Skype for Business client to inform users of the pending upgrade.
@@ -190,21 +183,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Group
-Specifies the group used for the group policy assignment.
-
-```yaml
-Type: String
-Parameter Sets: GrantToGroup
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 
 The user you want to grant policy to. This can be specified as SIP address, UserPrincipalName, or ObjectId.
@@ -264,21 +242,6 @@ Aliases:
 
 Required: False
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Rank
-The rank of the policy assignment, relative to other group policy assignments for the same policy type.
-
-```yaml
-Type: Int32
-Parameter Sets: GrantToGroup
-Aliases:
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
