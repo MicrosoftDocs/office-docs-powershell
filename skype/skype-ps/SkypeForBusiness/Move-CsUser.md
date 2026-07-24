@@ -90,6 +90,14 @@ As of July 31, 2022, moving users between an on-premises deployment and the clou
 </br>
 </br>
 
+> [!IMPORTANT]
+> Microsoft Teams PowerShell module versions **later than 7.2** introduced a regression
+> that causes `Move-CsUser` to fail. To continue moving users with these module versions,
+> update **Skype for Business Server 2019 / Subscription Edition** to build
+> **7.0.2046.849** (KB5090660) or later.
+>
+> For details, see [Move-CsUser fails in latest Microsoft Teams module (7.3.0)](https://support.microsoft.com/en-us/topic/move-csuser-fails-in-latest-microsoft-teams-module-7-3-0-561c2b08-4cec-4d7d-ae5b-ac0381524eff).
+
 ## EXAMPLES
 
 ### EXAMPLE 1: Move a user to Teams
