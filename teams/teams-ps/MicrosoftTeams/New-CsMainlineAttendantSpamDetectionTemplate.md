@@ -136,7 +136,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -InclusionList
+### -InclusionScope
 
 A list of e.164 formatted phone numbers that will always be considered as spam.
 
@@ -152,7 +152,7 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ExclusionList
+### -ExclusionScope
 
 A list of e.164 formatted phone numbers that will never be considered as spam.
 
