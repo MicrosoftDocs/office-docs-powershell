@@ -20,7 +20,7 @@ The Get-CsMainlineAttendantSpamDetectionTemplate cmdlet returns a list of spam d
 ## SYNTAX
 
 ```
-Get-CsMainlineAttendantSpamDetectionTemplate [-Id <string>]
+Get-CsMainlineAttendantSpamDetectionTemplate [-Identity <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -48,7 +48,7 @@ This example retrieves the Spam Detection Template with the Identity 3a4b3d9b-91
 
 ## Parameters
 
-### -Id
+### -Identity
 
 Represents the unique identifier of a spam detection template.
 
