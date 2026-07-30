@@ -19,7 +19,7 @@ Deletes a Teams Phone Agent (Mainline Attendant) Spam Detection template.
 ## SYNTAX
 
 ```
-Remove-CsMainlineAttendantSpamDetectionTemplate -Id <Guid> [<CommonParameters>]
+Remove-CsMainlineAttendantSpamDetectionTemplate -Identity <Guid> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -36,7 +36,7 @@ This example deletes the Teams Phone Agent (Mainline Attendant) template with th
 
 ## PARAMETERS
 
-### -Id
+### -Identity
 
 The Id parameter is the unique identifier assigned to the Spam Detection template.
 
