@@ -86,6 +86,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-Description <String>]
  [-DesignatedPresenterRoleMode <String>]
  [-DetectSensitiveContentDuringScreenSharing <Boolean>]
+ [-DisableAudioAnnouncementsForResourceAccounts <Boolean>]
  [-EnrollUserOverride <String>]
  [-ExplicitRecordingConsent <String>]
  [-ExternalMeetingJoin <String>]
@@ -141,7 +142,6 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-SyntheticMediaDetection <String>]
  [-SyntheticMediaDetectionAppId <Guid>]
  [-AllowMultipleScreenshare <Boolean>]
- [-DisableAudioAnnouncementsForResourceAccounts <Boolean>]
  [-FilterProfanityInTranscript <String>]
  [-RecordingAndTranscriptionAudioNotification <String>]
  [-WhatIf]
@@ -1268,6 +1268,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableAudioAnnouncementsForResourceAccounts
+
+Determines whether Teams plays recording announcements in CCaaS/OPS calls. This setting controls all CVA-driven (Conference Voice Announcement) recording announcements across [Azure Communication Services Call Recording](https://learn.microsoft.com/azure/communication-services/concepts/voice-video-calling/call-recording) and Teams convenience recording.
+
+> [!NOTE]
+> Microsoft Teams provides participant notifications when recording or transcription is active. If you choose to disable these notifications, you are responsible for ensuring that your contact center solution informs participants in real time in accordance with applicable laws. For full details, see the [Microsoft Teams Terms of Service](https://www.microsoft.com/licensing/terms/productoffering/microsoftteams).
+
+Possible values:
+
+- False: Teams plays all system recording announcements. This is the default value.
+- True: Teams suppresses all announcements and the CCaaS/ISV solution is responsible for compliance notifications.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnrollUserOverride
 Turn on/off Biometric enrollment
 Possible values are:
@@ -2257,29 +2281,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: True
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DisableAudioAnnouncementsForResourceAccounts
-Determines whether Teams plays any CVA-driven recording announcements (ACS recording, Teams compliance recording, Teams convenience recording) for calls involving CCaaS/OPS scenarios.
-
-Possible values are:
-
-- **$true**: Teams suppresses all CVA-driven recording announcements; the CCaaS/OPS solution is responsible for compliance notifications.
-- **$false**: Teams plays all system recording announcements (default).
-
-> [!NOTE]
-> This feature has not been fully released yet, so the setting will have no effect.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
