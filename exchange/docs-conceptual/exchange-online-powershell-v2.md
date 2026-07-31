@@ -609,12 +609,16 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 
 ### Current release
 
+#### Version 3.10.1
+
+- Fixed certificate-based authentication (CBA) bugs and other minor performance issues.
+
+### Previous releases
+
 #### Version 3.10.0
 
 - Starting with this version of the module, the minimum required version of PowerShell 7 is 7.6. Windows PowerShell 5.1 isn't affected.
 - Fixed an issue where certificate-based authentication (CBA) failed in **Connect-IPPSSession** when you used the _EnableSearchOnlySession_ switch.
-
-### Previous releases
 
 #### Version 3.9.2
 
@@ -629,7 +633,7 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
 #### Version 3.8.0
 
 - New _AccessToken_ parameter on **Connect-IPPSSession**.
-- **Get-VivaModuleFeature** now returns information about ParentFeature, ChildFeature, and PolicyModes. These values represent parent and child features of a Viva app feature along with available enablement modes for future policies.  
+- **Get-VivaModuleFeature** now returns information about ParentFeature, ChildFeature, and PolicyModes. These values represent parent and child features of a Viva app feature along with available enablement modes for future policies.
 - New parameters _IsUserOptedInByDefault_ on the **Add-VivaModuleFeaturePolicy** and **Update-VivaModuleFeaturePolicy** cmdlets and the corresponding property value in all **\*-VivaModuleFeaturePolicy** cmdlets. The value indicates whether users are opted in or out by the policy, as long as the user doesn't set a preference.
 
   You can use this parameter to keep the feature enabled in your organization while opting out the affected users by default, effectively soft disabling the feature for those users.

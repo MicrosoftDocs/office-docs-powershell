@@ -25,6 +25,12 @@ This article lists new features in the Exchange Online PowerShell module used fo
 
   - Added the **Connect-DefenderForOffice365** cmdlet for customers who use [Microsoft Defender Unified RBAC](/defender-xdr/manage-rbac) permissions for features in the Defender portal. For more information, see [Microsoft Defender for Office 365 PowerShell overview](defender-office-365-powershell-overview.md).
 
+## July 2026
+
+- [Version 3.10.1](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.10.1)
+
+  For information about what's in this release, see [Version 3.10.1](exchange-online-powershell-v2.md#version-3101).
+
 ## June 2026
 
 - [Version 3.10.0](https://www.powershellgallery.com/packages/ExchangeOnlineManagement/3.10.0)
