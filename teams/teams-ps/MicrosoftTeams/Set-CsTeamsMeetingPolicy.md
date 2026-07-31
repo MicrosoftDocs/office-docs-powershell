@@ -142,7 +142,6 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-SyntheticMediaDetection <String>]
  [-SyntheticMediaDetectionAppId <Guid>]
  [-AllowMultipleScreenshare <Boolean>]
- [-DisableAudioAnnouncementsForResourceAccounts <Boolean>]
  [-FilterProfanityInTranscript <String>]
  [-RecordingAndTranscriptionAudioNotification <String>]
  [-WhatIf]
@@ -2282,29 +2281,6 @@ Aliases:
 Required: False
 Position: Named
 Default value: True
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -DisableAudioAnnouncementsForResourceAccounts
-Determines whether Teams plays any CVA-driven recording announcements (ACS recording, Teams compliance recording, Teams convenience recording) for calls involving CCaaS/OPS scenarios.
-
-Possible values are:
-
-- **$true**: Teams suppresses all CVA-driven recording announcements; the CCaaS/OPS solution is responsible for compliance notifications.
-- **$false**: Teams plays all system recording announcements (default).
-
-> [!NOTE]
-> This feature has not been fully released yet, so the setting will have no effect.
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
