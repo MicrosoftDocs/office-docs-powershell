@@ -1,21 +1,22 @@
 ---
 title: About the Exchange Online PowerShell V3 module
-ms.date: 06/17/2026
+ms.date: 07/31/2026
 ms.audience: Admin
 ms.topic: article
 ms.reviewer:
 ms.localizationpriority: high
 ai-usage: ai-assisted
 ms.collection: Strat_EX_Admin
-ms.custom:
+ms.custom: msecd-doc-authoring-1015
 ms.assetid:
 keywords: Exchange Online PowerShell V2 module, Exchange Online PowerShell V3 module, EXO V2 module, EXO V3 module
 description: "Learn how to install, maintain, and use the Exchange Online PowerShell V3 module to connect to all Exchange cloud-related PowerShell environments."
+#customer intent: As an admin, I want to install and use the Exchange Online PowerShell module so that I can manage supported Microsoft 365 PowerShell environments.
 ---
 
 # About the Exchange Online PowerShell module
 
-The Exchange Online PowerShell module (also known as the Exchange Online PowerShell V3 module or EXO V3 module since 2022) uses modern authentication and works with or without multifactor authentication (MFA) for connecting to all Exchange cloud-related PowerShell environments: Exchange Online PowerShell, Security & Compliance PowerShell, and PowerShell for [the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop).
+The Exchange Online PowerShell module (also known as the Exchange Online PowerShell V3 module or EXO V3 module since 2022) uses modern authentication and works with or without multifactor authentication (MFA) for connecting to [Exchange Online PowerShell](exchange-online-powershell.md), [Security & Compliance PowerShell](scc-powershell.md), [Microsoft Defender for Office 365 PowerShell](defender-office-365-powershell-overview.md), and PowerShell for [the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop).
 
 For connection instructions using the module, see the following articles:
 
@@ -25,7 +26,8 @@ For connection instructions using the module, see the following articles:
   > Connection instructions for PowerShell in [the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop) are the same as connection instructions for Exchange Online PowerShell.
 
 - [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md)
-- [App-only authentication for unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell](app-only-auth-powershell-v2.md)
+- [Connect to Microsoft Defender for Office 365 PowerShell](connect-to-defender-for-office-365-powershell.md)
+- [App-only authentication for unattended scripts](app-only-auth-powershell-v2.md)
 - [Use Azure managed identities to connect to Exchange Online PowerShell](connect-exo-powershell-managed-identity.md)
 - [Use C# to connect to Exchange Online PowerShell](connect-to-exo-powershell-c-sharp.md)
 
@@ -33,7 +35,7 @@ The rest of this article explains how the module works, how to install and maint
 
 ## REST API connections in the EXO V3 module
 
-Exchange Online PowerShell and Security & Compliance PowerShell use REST API connections for all cmdlets since 2023.
+Exchange Online PowerShell and Security & Compliance PowerShell use REST API connections for all cmdlets since 2023. Defender for Office 365 PowerShell also uses a REST API connection.
 
 REST API connections require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](#powershellget-required-in-windows).
 
@@ -86,7 +88,7 @@ A few cmdlets in Exchange Online PowerShell are updated with the experimental _U
   - **Set-MailboxRegionalConfiguration**
   - **Set-UserPhoto**
 
-- Use the [Get-ConnectionInformation](/powershell/module/exchangepowershell/get-connectioninformation) cmdlet to get information about connections to Exchange Online PowerShell and Security & Compliance PowerShell. This cmdlet is required because the [Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession) cmdlet in Windows PowerShell doesn't return information for REST API connections.
+- Use the [Get-ConnectionInformation](/powershell/module/exchangepowershell/get-connectioninformation) cmdlet to get information about POwerShell connections. This cmdlet is required because the [Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession) cmdlet in Windows PowerShell doesn't return information for REST API connections.
 
   Scenarios where you can use **Get-ConnectionInformation** are described in the following table:
 
@@ -94,6 +96,7 @@ A few cmdlets in Exchange Online PowerShell are updated with the experimental _U
   |---|---|
   |Run after **Connect-ExchangeOnline** or **Connect-IPPSSession** commands.|Returns one connection information object.|
   |Run after multiple **Connect-ExchangeOnline** or **Connect-IPPSSession** commands.|Returns a collection of connection information objects.|
+  |Run after a **Connect-DefenderForOffice365** command.|Returns a connection information object where the `IsMdoSecuritySession` property value is `True`.|
 
 - Use the _SkipLoadingFormatData_ switch on the **Connect-ExchangeOnline** cmdlet to avoid loading format data and to run **Connect-ExchangeOnline** commands faster.
 
@@ -157,6 +160,7 @@ The connection-related cmdlets in the module are listed in the following table:
 |---|---|---|
 |[Connect-ExchangeOnline](/powershell/module/exchangepowershell/connect-exchangeonline)|**Connect-EXOPSSession** in V1 of the module <br/> or <br/> [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession)||
 |[Connect-IPPSSession](/powershell/module/exchangepowershell/connect-ippssession)|**Connect-IPPSSession** in V1 of the module||
+|[Connect-DefenderForOffice365](/powershell/module/exchangepowershell/connect-defenderforoffice365)|**Connect-ExchangeOnline**|Available in v3.10.2-Preview1 or later. Provides Exchange Online cmdlets related to Defender for Office 365 for customers who use [Defender Unified RBAC](/defender-xdr/manage-rbac) permissions for features in the Defender portal.|
 |[Disconnect-ExchangeOnline](/powershell/module/exchangepowershell/disconnect-exchangeonline)|[Remove-PSSession](/powershell/module/microsoft.powershell.core/remove-pssession)||
 |[Get-ConnectionInformation](/powershell/module/exchangepowershell/get-connectioninformation)|[Get-PSSession](/powershell/module/microsoft.powershell.core/get-pssession)|Available in v3.0.0 or later.|
 
@@ -738,7 +742,7 @@ Unless otherwise noted, the current release of the Exchange Online PowerShell mo
   - Remote in the Azure Key Value (the _Certificate_) parameter. This option enhances security by fetching the certificate only at runtime.
   - Local in the CurrentUser or LocalMachine certificate store (the _CertificateThumbprint_ parameter).
   - Local in an exported certificate file (the _CertificateFilePath_ and _CertificatePassword_ parameters).
-  For more information, see the parameter descriptions in [Connect-ExchangeOnline](/powershell/module/exchangepowershell/connect-exchangeonline) and [App-only authentication for unattended scripts in the Exchange Online PowerShell module](app-only-auth-powershell-v2.md).
+  For more information, see the parameter descriptions in [Connect-ExchangeOnline](/powershell/module/exchangepowershell/connect-exchangeonline) and [App-only authentication for unattended scripts](app-only-auth-powershell-v2.md).
 - Connect to Exchange Online PowerShell and Security & Compliance PowerShell simultaneously in a single PowerShell window.
 - The new _CommandName_ parameter allows you to specify and restrict the Exchange Online PowerShell cmdlets that are imported in a session. This option reduces the memory footprint for high-usage PowerShell applications.
 - **Get-EXOMailboxFolderPermission** now supports ExternalDirectoryObjectID in the _Identity_ parameter.

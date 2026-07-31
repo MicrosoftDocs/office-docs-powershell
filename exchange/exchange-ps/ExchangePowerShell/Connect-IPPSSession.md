@@ -15,6 +15,10 @@ This cmdlet is available only in the Exchange Online PowerShell module. For more
 
 Use the Connect-IPPSSession cmdlet in the Exchange Online PowerShell module to connect to Security & Compliance PowerShell using modern authentication. The cmdlet works for MFA or non-MFA enabled accounts.
 
+If you use [Microsoft Defender Unified RBAC](https://learn.microsoft.com/defender-xdr/manage-rbac) permissions for features in the Defender portal, use the [Connect-DefenderForOffice365](https://learn.microsoft.com/powershell/module/exchangepowershell/connect-defenderforoffice365) cmdlet instead.
+
+For more information, see [Microsoft Defender for Office 365 PowerShell overview](https://learn.microsoft.com/powershell/exchange/defender-office-365-powershell-overview).
+
 **Note**: Version 3.2.0 or later of the module supports REST API mode for virtually all Security & Compliance PowerShell cmdlets (Basic authentication in WinRM on the local computer isn't required for REST API mode). For more information, see [Prerequisites for the Exchange Online PowerShell module](https://learn.microsoft.com/powershell/exchange/exchange-online-powershell-v2#prerequisites-for-the-exchange-online-powershell-module).
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
@@ -268,7 +272,7 @@ Accept wildcard characters: False
 
 The AppId parameter specifies the application ID of the service principal that's used in certificate based authentication (CBA). A valid value is the GUID of the application ID (service principal). For example, `36ee4c6c-0812-40a2-b820-b22ebd02bce3`.
 
-For more information, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
+For more information, see [App-only authentication for unattended scripts](https://aka.ms/exo-cba).
 
 ```yaml
 Type: String
@@ -308,7 +312,7 @@ The Certificate parameter specifies the certificate that's used for certificate-
 
 Don't use this parameter with the CertificateFilePath or CertificateThumbprint parameters.
 
-For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
+For more information about CBA, see [App-only authentication for unattended scripts](https://aka.ms/exo-cba).
 
 ```yaml
 Type: X509Certificate2
@@ -330,7 +334,7 @@ The CertificateFilePath parameter specifies the certificate that's used for CBA.
 
 Don't use this parameter with the Certificate or CertificateThumbprint parameters.
 
-For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
+For more information about CBA, see [App-only authentication for unattended scripts](https://aka.ms/exo-cba).
 
 ```yaml
 Type: String
@@ -356,7 +360,7 @@ You can use the following methods as a value for this parameter:
 - Before you run this command, store the password as a variable (for example, `$password = Read-Host "Enter password" -AsSecureString`), and then use the variable (`$password`) for the value.
 - `(Get-Credential).password` to be prompted to enter the password securely when you run this command.
 
-For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
+For more information about CBA, see [App-only authentication for unattended scripts](https://aka.ms/exo-cba).
 
 **Note**: Using a **ConvertTo-SecureString** command to store the password of the certificate locally defeats the purpose of a secure connection method for automation scenarios. Using a **Get-Credential** command to prompt you for the password of the certificate securely isn't ideal for automation scenarios. In other words, there's really no automated _and_ secure way to connect using a local certificate.
 
@@ -382,7 +386,7 @@ Don't use this parameter with the Certificate or CertificateFilePath parameters.
 
 **Note**: The CertificateThumbprint parameter is supported only in Microsoft Windows.
 
-For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
+For more information about CBA, see [App-only authentication for unattended scripts](https://aka.ms/exo-cba).
 
 ```yaml
 Type: String
@@ -550,7 +554,7 @@ Accept wildcard characters: False
 
 The Organization parameter specifies the organization when you connect using CBA. You must use the primary .onmicrosoft.com domain of the organization for the value of this parameter.
 
-For more information about CBA, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](https://aka.ms/exo-cba).
+For more information about CBA, see [App-only authentication for unattended scripts](https://aka.ms/exo-cba).
 
 ```yaml
 Type: String
@@ -635,3 +639,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Connect-DefenderForOffice365](https://learn.microsoft.com/powershell/module/exchangepowershell/connect-defenderforoffice365)
+
+[Microsoft Defender for Office 365 PowerShell overview](https://learn.microsoft.com/powershell/exchange/defender-office-365-powershell-overview)

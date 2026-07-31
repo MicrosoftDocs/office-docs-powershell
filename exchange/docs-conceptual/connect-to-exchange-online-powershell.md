@@ -1,19 +1,24 @@
 ---
 title: Connect to Exchange Online PowerShell
-ms.date: 07/11/2025
+ms.date: 07/31/2026
 ms.audience: Admin
 ms.topic: article
 ms.reviewer:
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ms.collection: Strat_EX_Admin
-ms.custom:
+ms.custom: msecd-doc-authoring-1015
 ms.assetid:
-description: "Learn how to use the Exchange Online PowerShell V3 module to connect to Exchange Online PowerShell with modern authentication and/or multifactor authentication (MFA)."
+description: "Learn how to connect to Exchange Online PowerShell by using the Exchange Online PowerShell module with modern authentication and multifactor authentication (MFA)."
+#customer intent: As an Exchange admin, I want to connect to Exchange Online PowerShell so that I can manage email and security features in my cloud-based organization from the command line.
 ---
 
 # Connect to Exchange Online PowerShell
 
 This article contains instructions for how to connect to Exchange Online PowerShell using the Exchange Online PowerShell module with or without multifactor authentication (MFA).
+
+> [!NOTE]
+> If you use [Microsoft Defender Unified RBAC](/defender-xdr/manage-rbac) permissions for features in the Defender portal, [connect to Microsoft Defender for Office 365 PowerShell](connect-to-defender-for-office-365-powershell.md) instead.
 
 > [!TIP]
 > The connection instructions in this article also apply to [the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop).
@@ -159,7 +164,7 @@ The connection examples in the following sections use modern authentication, and
 
 ### Connect to Exchange Online PowerShell without a sign in prompt (unattended scripts)
 
-For complete instructions, see [App-only authentication for unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell](app-only-auth-powershell-v2.md).
+For complete instructions, see [App-only authentication for unattended scripts](app-only-auth-powershell-v2.md).
 
 ### Connect to Exchange Online PowerShell in customer organizations
 
@@ -416,7 +421,7 @@ This section attempts to compare older connection methods the Exchange Online Po
     Connect-ExchangeOnline -CertificateFilePath "C:\Users\navin\Desktop\automation-cert.pfx" -CertificatePassword (ConvertTo-SecureString -String "<Password>" -AsPlainText -Force) -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contoso.onmicrosoft.com"
     ```
 
-  For more information, see [App-only authentication for unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell](app-only-auth-powershell-v2.md).
+  For more information, see [App-only authentication for unattended scripts](app-only-auth-powershell-v2.md).
 
 - **Basic authentication**:
 
