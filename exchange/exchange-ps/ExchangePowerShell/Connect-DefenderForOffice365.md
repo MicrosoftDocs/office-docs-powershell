@@ -1,8 +1,8 @@
 ---
 applicable: Exchange Online
-external help file: ExchangeOnlineManagementBeta-help.xml
+external help file: ExchangeOnlineManagement-help.xml
 Locale: en-US
-Module Name: ExchangeOnlineManagement
+Module Name: ExchangePowerShell
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/connect-defenderforoffice365
 schema: 2.0.0
 title: Connect-DefenderForOffice365
