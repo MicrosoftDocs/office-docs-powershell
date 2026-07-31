@@ -32,7 +32,7 @@ Set-CsTeamsVoiceApplicationsPolicy
  [-AllowCallQueueMusicOnHoldChange <Boolean>]
  [-AllowCallQueueOverflowSharedVoicemailGreetingChange <Boolean>]
  [-AllowCallQueueTimeoutSharedVoicemailGreetingChange <Boolean>]
- [-AllowCallQueueNoAgentSharedVoicemailGreetingChange <bool>]
+ [-AllowCallQueueNoAgentSharedVoicemailGreetingChange <Boolean>]
  [-AllowCallQueueLanguageChange <Boolean>]
  [-AllowCallQueueMembershipChange <Boolean>]
  [-AllowCallQueueConferenceModeChange <Boolean>]
@@ -65,7 +65,7 @@ Set-CsTeamsVoiceApplicationsPolicy
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1
 
 ```powershell
 Set-CsTeamsVoiceApplicationsPolicy -Identity "SDA-CQ-OverflowGreeting" -AllowCallQueueOverflowSharedVoicemailGreetingChange $true
@@ -487,7 +487,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-PARAMVALUE: Disabled | Monitor | Whisper | Barge | Takeover
+Supported values: Disabled | Monitor | Whisper | Barge | Takeover
 
 When set to `Disabled` (the default value), users affected by the policy won't be allowed to monitor call sessions.
 
@@ -515,7 +515,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-PARAMVALUE: Disabled | Agent
+Supported values: Disabled | Agent
 
 When set to `Disabled` (the default value), users affected by the policy won't be allowed to monitor agents during call sessions.
 
@@ -553,7 +553,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-PARAMVALUE: Disabled | AuthorizedOnly | All
+Supported values: Disabled | AuthorizedOnly | All
 
 When set to `Disabled` (the default value), users affected by the policy won't receive historical metrics for agents.
 
@@ -577,7 +577,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-PARAMVALUE: Disabled | AuthorizedOnly | All
+Supported values: Disabled | AuthorizedOnly | All
 
 When set to `Disabled` (the default value), users affected by the policy won't receive historical metrics for auto attendants.
 
@@ -601,7 +601,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-PARAMVALUE: Disabled | AuthorizedOnly | All
+Supported values: Disabled | AuthorizedOnly | All
 
 When set to `Disabled` (the default value), users affected by the policy won't receive historical metrics for call queues.
 
@@ -649,7 +649,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-PARAMVALUE: Disabled | AuthorizedOnly | All
+Supported values: Disabled | AuthorizedOnly | All
 
 When set to `Disabled` (the default value), users affected by the policy won't receive real-time metrics for agents.
 
@@ -674,7 +674,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-PARAMVALUE: Disabled | AuthorizedOnly | All
+Supported values: Disabled | AuthorizedOnly | All
 
 When set to `Disabled` (the default value), users affected by the policy won't receive real-time metrics for auto attendants.
 
@@ -699,7 +699,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-PARAMVALUE: Disabled | AuthorizedOnly | All
+Supported values: Disabled | AuthorizedOnly | All
 
 When set to `Disabled` (the default value), users affected by the policy won't receive real-time metrics for call queues.
 

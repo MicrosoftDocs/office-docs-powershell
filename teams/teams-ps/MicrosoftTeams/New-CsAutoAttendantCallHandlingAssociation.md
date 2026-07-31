@@ -77,7 +77,7 @@ $scheduleId = $schedule.Id
 $menuPrompt = New-CsAutoAttendantPrompt -TextToSpeechPrompt "We are closed for Christmas. Please call back later."
 $menuOption = New-CsAutoAttendantMenuOption -DtmfResponse Automatic -Action DisconnectCall
 $menu = New-CsAutoAttendantMenu -Name "Christmas Menu" -Prompts @($menuPrompt) -MenuOptions @($menuOption)
-$callFlow = New-CsAutoAttendantCallFlow -Name "Christmas" -Greetings @($greeting) -Menu $menu
+$callFlow = New-CsAutoAttendantCallFlow -Name "Christmas" -Greetings @($menuPrompt) -Menu $menu
 $callFlowId = $callFlow.Id
 
 $callHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -Type Holiday -ScheduleId $scheduleId -CallFlowId $callFlowId
@@ -129,10 +129,10 @@ Accept wildcard characters: False
 
 The ScheduleId parameter represents the schedule to be associated with the call flow.
 
-You can create a schedule by using the [New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineschedule) cmdlet. additionally, you can use [Get-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineschedule) cmdlet to get the schedules configured for your organization.
+You can create a schedule by using the [New-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineschedule) cmdlet. Additionally, you can use [Get-CsOnlineSchedule](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineschedule) cmdlet to get the schedules configured for your organization.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-Globally unique identifier (GUID) of the tenant account whose external user communication policy are being created. For example:
+Globally unique identifier (GUID) of the tenant account whose call handling association is being created. For example:
 
 -Tenant "38aad667-af54-4397-aaa7-e94c79ec2308"
 

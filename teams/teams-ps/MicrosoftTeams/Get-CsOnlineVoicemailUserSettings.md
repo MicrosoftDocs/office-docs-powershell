@@ -56,7 +56,7 @@ Accept wildcard characters: False
 The Identity parameter represents the ID of the specific user in your organization; this can be either a SIP URI or an Object ID.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 

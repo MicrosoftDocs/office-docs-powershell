@@ -69,7 +69,7 @@ In this example, the Import-CsAutoAttendantHolidays cmdlet is used to import hol
 The identity for the AA whose holiday schedules are to be imported.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 The Input parameter specifies the holiday schedule information that is to be imported.
 
 ```yaml
-Type: System.Byte[]
+Type: Byte[]
 Parameter Sets: (All)
 Aliases:
 
@@ -101,7 +101,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 

@@ -74,8 +74,8 @@ Accept wildcard characters: False
 Sets the parameters of the Global policy instance to the values in the specified policy instance.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
 Aliases:
 
 Required: False
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 The Identity parameter represents the ID of the specific user in your organization; this can be either a SIP address or an Object ID.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 

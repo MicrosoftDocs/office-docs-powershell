@@ -6,7 +6,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Get-CsAutoRecordingTemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csautorecordingtemplate
 schema: 2.0.0
 title: Get-CsAutoRecordingTemplate
 ---
@@ -52,11 +52,11 @@ This example retrieves all the Auto Recording templates.
 The Id of the auto recording template.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: false
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

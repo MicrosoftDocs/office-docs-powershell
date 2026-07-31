@@ -59,7 +59,7 @@ In this example, the Export-CsAutoAttendantHolidays cmdlet is used to export hol
 The identity for the AA whose holiday schedules are to be exported.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 

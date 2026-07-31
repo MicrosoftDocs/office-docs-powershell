@@ -45,7 +45,7 @@ This example deletes the AA that has an identity of fa9081d6-b4f3-5c96-baec-0b00
 The identity for the AA to be removed.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 

@@ -1,7 +1,7 @@
 ---
 applicable: Microsoft Teams
 author: tomkau
-external help file: Microsoft.Rtc.Management.dll-Help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
@@ -30,7 +30,7 @@ The Remove-CsMainlineAttendantAppointmentBookingFlow cmdlet deletes an existing 
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Remove-CsMainlineAttendantAppointmentBookingFlow -Identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01
 ```
@@ -40,14 +40,14 @@ This example removes the Mainline attendant appointment booking flow with the id
 ## PARAMETERS
 
 ### -Identity
-PARAMVALUE: Guid
+The identifier of the appointment booking flow.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -55,7 +55,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: Guid
@@ -79,9 +79,14 @@ Represents the unique identifier of a Mainline attendant appointment booking flo
 
 ## OUTPUTS
 
-### Microsoft.Rtc.Management.Hosted.CallQueue.Models.CallQueue
+### None
 
 ## NOTES
 
 ## RELATED LINKS
 
+[Get-CsMainlineAttendantAppointmentBookingFlow](https://learn.microsoft.com/powershell/module/microsoftteams/get-csmainlineattendantappointmentbookingflow)
+
+[New-CsMainlineAttendantAppointmentBookingFlow](https://learn.microsoft.com/powershell/module/microsoftteams/new-csmainlineattendantappointmentbookingflow)
+
+[Set-CsMainlineAttendantAppointmentBookingFlow](https://learn.microsoft.com/powershell/module/microsoftteams/set-csmainlineattendantappointmentbookingflow)

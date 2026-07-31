@@ -81,7 +81,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-The Content parameter represents the content of the audio file. Supported formats are WAV (uncompressed, linear PCM with 8/16/32-bit depth in mono or stereo), WMA (mono only), and MP3. The audio file content cannot be more 5MB.
+The Content parameter represents the content of the audio file. Supported formats are WAV (uncompressed, linear PCM with 8/16/32-bit depth in mono or stereo), WMA (mono only), and MP3. The audio file content cannot be more than 5MB.
 
 ```yaml
 Type: Byte[]

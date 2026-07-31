@@ -6,7 +6,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Set-CsComplianceRecordingForCallQueueTemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-cscompliancerecordingforcallqueuetemplate
 schema: 2.0.0
 title: Set-CsComplianceRecordingForCallQueueTemplate
 ---
@@ -14,7 +14,7 @@ title: Set-CsComplianceRecordingForCallQueueTemplate
 # Set-CsComplianceRecordingForCallQueueTemplate
 
 ## SYNOPSIS
-Use the Set-CsComplianceRecordingForCallQueueTemplate cmdlet to make changes to an existing Compliance Recording for Call Queues template.
+Modifies an existing Compliance Recording for Call Queues template.
 
 ## SYNTAX
 
@@ -29,9 +29,9 @@ Use the Set-CsComplianceRecordingForCallQueueTemplate cmdlet to make changes to 
 
 ### Example 1
 ```
-$template = CsComplianceRecordingForCallQueueTemplate -Id 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01
-$template.BotId = 14732826-8206-42e3-b51e-6693e2abb698
-Set-CsComplianceRecordingForCallQueueTemplate $template
+$template = Get-CsComplianceRecordingForCallQueueTemplate -Id 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01
+$template.BotId = "14732826-8206-42e3-b51e-6693e2abb698"
+Set-CsComplianceRecordingForCallQueueTemplate -Instance $template
 ```
 
 The Set-CsComplianceRecordingForCallQueueTemplate cmdlet lets you modify the properties of a Compliance Recording for Call Queue Template.
@@ -40,14 +40,16 @@ The Set-CsComplianceRecordingForCallQueueTemplate cmdlet lets you modify the pro
 
 ### -Instance
 
-The Instance parameter is the unique identifier assigned to the Compliance Recording for Call Queue template.
+The Instance parameter is the object reference to the Compliance Recording for Call Queue template to be modified.
+
+You can retrieve an object reference to an existing template by using the Get-CsComplianceRecordingForCallQueueTemplate cmdlet and assigning the returned value to a variable.
 
 ```yaml
-Type: System.String
+Type: Object
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -72,9 +74,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CsComplianceRecordingForCallQueueTemplate](./New-CsComplianceRecordingForCallQueueTemplate.md)
 
-[Set-CsComplianceRecordingForCallQueueTemplate](./Set-CsComplianceRecordingForCallQueueTemplate.md)
+[Get-CsComplianceRecordingForCallQueueTemplate](./Get-CsComplianceRecordingForCallQueueTemplate.md)
 
-[Remove-CsComplianceRecordingForCallQueueTemplate](./Remove-CscomplianceRecordingForCallQueueTemplate.md)
+[Remove-CsComplianceRecordingForCallQueueTemplate](./Remove-CsComplianceRecordingForCallQueueTemplate.md)
 
 [Get-CsCallQueue](./Get-CsCallQueue.md)
 
@@ -82,5 +84,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [Set-CsCallQueue](./Set-CsCallQueue.md)
 
-[Remove-CsCallQuuee](./Remove-CsCallQueue.md)
+[Remove-CsCallQueue](./Remove-CsCallQueue.md)
 

@@ -22,7 +22,7 @@ Modifies an existing Online Voicemail policy.
 ```powershell
 Set-CsOnlineVoicemailPolicy [[-Identity] <string>] [-Description <String>] [-EnableEditingCallAnswerRulesSetting <boolean>] [-EnableTranscription <boolean>]
 [-EnableTranscriptionProfanityMasking <boolean>] [-EnableTranscriptionTranslation <boolean>] [-MaximumRecordingLength <timespan>]
-[-PostambleAudioFile <string>] [-PostambleAudioFile <string>] [-PreamblePostambleMandatory <boolean>]
+[-PostambleAudioFile <string>] [-PreambleAudioFile <string>] [-PreamblePostambleMandatory <boolean>]
 [-PrimarySystemPromptLanguage <string>] [-SecondarySystemPromptLanguage <string>] [-ShareData <string>] [-EnableVoicemailTriage <boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 

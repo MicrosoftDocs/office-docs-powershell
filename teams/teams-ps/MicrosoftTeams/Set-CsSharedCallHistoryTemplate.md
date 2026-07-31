@@ -6,7 +6,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Set-CsSharedCallHistoryTemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-cssharedcallhistorytemplate
 schema: 2.0.0
 title: Set-CsSharedCallHistoryTemplate
 ---
@@ -14,16 +14,16 @@ title: Set-CsSharedCallHistoryTemplate
 # Set-CsSharedCallHistoryTemplate
 
 ## SYNOPSIS
-Use the Set-CsSharedCallHistoryTemplate cmdlet to change a Shared Call History template. The template defines which roles can access Shared Call History and which parts of the history are visible to them.
+Modifies an existing Shared Call History template.
 
 ## SYNTAX
 
 ```
-Set-CsSharedCallHistoryTemplate -Instance <instance> [<CommonParameters>]
+Set-CsSharedCallHistoryTemplate -Instance <Object> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use the Set-SharedCallHistoryTemplate cmdlet to change a Shared Call History template. The template defines which roles can access Shared Call History and which parts of the history are visible to them.
+Use the Set-CsSharedCallHistoryTemplate cmdlet to change a Shared Call History template. The template defines which roles can access Shared Call History and which parts of the history are visible to them.
 
 ## EXAMPLES
 
@@ -34,7 +34,7 @@ $SharedCallHistory.AnsweredAndOutboundCalls = "AuthorizedUsersAndAgents"
 Set-CsSharedCallHistoryTemplate -Instance $SharedCallHistory
 ```
 
-This example sets the AnsweredOutboundCalls value in the Shared Call History Template with the Id `66f0dc32-d344-4bb1-b524-027d4635515c`
+This example sets the AnsweredAndOutboundCalls value in the Shared Call History Template with the Id `66f0dc32-d344-4bb1-b524-027d4635515c`
 
 ### Example 2
 ```
@@ -52,7 +52,7 @@ This example sets the IncomingRedirectedCalls value in the Shared Call History T
 The instance of the shared call history template to change.
 
 ```yaml
-Type: System.String
+Type: Object
 Parameter Sets: (All)
 Aliases:
 

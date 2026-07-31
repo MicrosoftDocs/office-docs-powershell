@@ -53,7 +53,7 @@ Accept wildcard characters: False
 The Id of the specific audio file that you would like to mark for deletion.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 

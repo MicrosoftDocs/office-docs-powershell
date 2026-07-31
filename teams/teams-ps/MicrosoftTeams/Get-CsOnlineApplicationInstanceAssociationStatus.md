@@ -42,7 +42,7 @@ This example gets the provisioning status for the association object of the appl
 The identity for the application instance whose association provisioning status is to be retrieved.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -58,7 +58,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 

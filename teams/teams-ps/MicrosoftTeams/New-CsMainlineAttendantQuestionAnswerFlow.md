@@ -1,7 +1,7 @@
 ---
 applicable: Microsoft Teams
 author: tomkau
-external help file: Microsoft.Rtc.Management.dll-Help.xml
+external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
@@ -66,7 +66,7 @@ Accept wildcard characters: False
 ###  -ApiAuthenticationType
 The method of authentication used by the API
 
-PARAVALUES: Basic | ApiKey | BearerTokenStatic | BearerTokenDynamic
+Supported values: Basic | ApiKey | BearerTokenStatic | BearerTokenDynamic
 
 ```yaml
 Type: String
@@ -83,14 +83,28 @@ Accept wildcard characters: False
 ###  -KnowledgeBase
 The knowledge base definition
 
-The parameters used by the API
-
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Tenant
+
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -110,3 +124,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-CsMainlineAttendantQuestionAnswerFlow](https://learn.microsoft.com/powershell/module/microsoftteams/get-csmainlineattendantquestionanswerflow)
+
+[Set-CsMainlineAttendantQuestionAnswerFlow](https://learn.microsoft.com/powershell/module/microsoftteams/set-csmainlineattendantquestionanswerflow)
+
+[Remove-CsMainlineAttendantQuestionAnswerFlow](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csmainlineattendantquestionanswerflow)

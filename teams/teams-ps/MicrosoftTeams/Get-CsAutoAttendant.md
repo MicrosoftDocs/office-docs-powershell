@@ -114,7 +114,7 @@ When not specified, the default behavior is to return the first 100 auto attenda
 If a number greater than 100 is supplied, the request will fail.
 
 ```yaml
-Type: System.UInt32
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 
@@ -131,7 +131,7 @@ The identity for the AA to be retrieved. If this parameter is not specified, the
 If you specify this parameter, you can't specify the other parameters.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 If specified, only auto attendants whose names match that value would be returned.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -179,7 +179,7 @@ Accept wildcard characters: False
 The Skip parameter skips the first N auto attendants. It is intended to be used in conjunction with the `-First` parameter for pagination purposes.
 
 ```yaml
-Type: System.UInt32
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 
@@ -195,7 +195,7 @@ Accept wildcard characters: False
 If specified, the retrieved auto attendants would be sorted by the specified property.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 

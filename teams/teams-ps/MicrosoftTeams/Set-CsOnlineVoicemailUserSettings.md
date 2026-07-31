@@ -58,7 +58,7 @@ This example changes CallAnswerRule setting to PromptOnlyWithTransfer and set Tr
 Set-CsOnlineVoicemailUserSettings -Identity user5@contoso.com -CallAnswerRule VoicemailWithTransferOption -TransferTarget "+14255551234"
 ```
 
-This example changes CallAnswerRule setting to VoicemailWithTransferOption and set TransferTarget to "+14255551234" for user5@contoso.com..
+This example changes CallAnswerRule setting to VoicemailWithTransferOption and set TransferTarget to "+14255551234" for user5@contoso.com.
 
 ### Example 5
 ```
@@ -113,7 +113,7 @@ The DefaultGreetingPromptOverwrite parameter represents the contents that overwr
 If the user's normal custom greeting is not set and DefaultGreetingPromptOverwrite is not empty, the voicemail service will play this overwrite greeting instead of the default normal greeting in the voicemail deposit scenario.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -130,7 +130,7 @@ The DefaultOofGreetingPromptOverwrite parameter represents the contents that ove
 If the user's out-of-office custom greeting is not set and DefaultOofGreetingPromptOverwrite is not empty, the voicemail service will play this overwrite greeting instead of the default out-of-office greeting in the voicemail deposit scenario.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -162,7 +162,7 @@ Accept wildcard characters: False
 The Identity parameter represents the ID of the specific user in your organization; this can be either a SIP URI or an Object ID.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -178,7 +178,7 @@ Accept wildcard characters: False
 The OofGreetingEnabled parameter represents whether to play out-of-office greeting in voicemail deposit scenario.
 
 ```yaml
-Type: System.Boolean
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -194,7 +194,23 @@ Accept wildcard characters: False
 The OofGreetingFollowAutomaticRepliesEnabled parameter represents whether to play out-of-office greeting in voicemail deposit scenario when user set automatic replies in Outlook.
 
 ```yaml
-Type: System.Boolean
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OofGreetingFollowCalendarEnabled
+
+The OofGreetingFollowCalendarEnabled parameter represents whether to play out-of-office greeting in voicemail deposit scenario when user has an out-of-office event set up in their Outlook calendar.
+
+```yaml
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -267,7 +283,7 @@ The following languages are supported:
 - "zh-HK" (Chinese - Traditional, Hong Kong S.A.R.)
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -283,7 +299,7 @@ Accept wildcard characters: False
 Specifies whether voicemail and transcription data is shared with the service for training and improving accuracy.
 
 ```yaml
-Type: System.Boolean
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -301,7 +317,7 @@ Value of this parameter should be a SIP URI of another user in your organization
 For user with Enterprise Voice enabled, a valid telephone number could also be accepted as TransferTarget.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -317,7 +333,7 @@ Accept wildcard characters: False
 The VoicemailEnabled parameter represents whether to enable voicemail service. If set to $false, the user has no voicemail service.
 
 ```yaml
-Type: System.Boolean
+Type: Boolean
 Parameter Sets: (All)
 Aliases:
 

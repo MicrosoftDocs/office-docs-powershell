@@ -86,7 +86,7 @@ This example gets an Office 365 group by name using Find-CsGroup cmdlet. Then th
 
 The Call Priority of the MenuOption, only applies when the `Type` is `ApplicationEndpoint` or `ConfigurationEndpoint`.
 
-PARAMVALUE: 1 | 2 | 3 | 4 | 5
+Supported values: 1 | 2 | 3 | 4 | 5
 
 1 = Very High
 2 = High
@@ -146,7 +146,7 @@ The Identity parameter represents the ID of the callable entity; this can be eit
 - Only PSTN numbers that are acquired and assigned through Skype for Business Online are supported.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -165,7 +165,7 @@ The SharedVoicemailHistoryTemplateId parameter specifies the ID of the Shared Ca
 
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -181,7 +181,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 

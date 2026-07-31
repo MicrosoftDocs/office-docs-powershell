@@ -6,7 +6,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Get-CsComplianceRecordingForCallQueueTemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-cscompliancerecordingforcallqueuetemplate
 schema: 2.0.0
 title: Get-CsComplianceRecordingForCallQueueTemplate
 ---
@@ -48,7 +48,7 @@ This example gets the Compliance Recording for Call Queue template with the iden
 The Id parameter is the unique identifier assigned to the Compliance Recording for Call Queue template.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 

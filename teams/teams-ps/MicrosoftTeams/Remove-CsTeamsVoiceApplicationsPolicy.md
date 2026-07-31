@@ -24,13 +24,13 @@ TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration whi
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1
 ```
 Remove-CsTeamsVoiceApplicationsPolicy -Identity "SDA-Allow-All"
 ```
 The command shown in Example 1 deletes the Teams voice applications policy SDA-Allow-All.
 
-### EXAMPLE 2
+### Example 2
 ```
 Get-CsTeamsVoiceApplicationsPolicy -Filter "tag:*" | Remove-CsTeamsVoiceApplicationsPolicy
 ```

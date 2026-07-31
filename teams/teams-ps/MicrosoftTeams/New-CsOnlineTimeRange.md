@@ -54,7 +54,7 @@ This example creates a 24-hour time range.
 The End parameter represents the end bound of the time range.
 
 ```yaml
-Type: System.TimeSpan
+Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 The Start parameter represents the start bound of the time range.
 
 ```yaml
-Type: System.TimeSpan
+Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 

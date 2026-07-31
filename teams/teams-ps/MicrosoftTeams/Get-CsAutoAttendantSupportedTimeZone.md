@@ -49,7 +49,7 @@ This example gets the timezone that the Identity parameter specifies (Pacific St
 The Identity parameter specifies a time zone to be retrieved. If this parameter is not used, then all supported time zones are returned.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -94,3 +94,9 @@ The Get-CsAutoAttendantSupportedTimeZone cmdlet accepts a string as the Identity
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CsAutoAttendantSupportedLanguage](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendantsupportedlanguage)
+
+[Get-CsAutoAttendantTenantInformation](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendanttenantinformation)
+
+[Get-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendant)

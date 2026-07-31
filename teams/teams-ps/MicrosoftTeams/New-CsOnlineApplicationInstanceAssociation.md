@@ -93,7 +93,7 @@ Get-CsAutoAttendant -Identity $autoAttendantId
 # ApplicationInstances     : {fa2f17ec-ebd5-43f8-81ac-959c245620fa, 56421bbe-5649-4208-a60c-24dbeded6f18, c7af9c3c-ae40-455d-a37c-aeec771e623d}
 ```
 
-This example creates an association between multiple application instances that we had created before and to which we assigned phone numbers starting with "tel:+1206", and an auto attendant configuration that we created with display name "Main Auto Attendant" whose identity is "c2ee3e18-b738-5515-a97b-46be52dfc057". Once the associations are created,  the newly associated application instances would listed under the `ApplicationInstances` property of the AA.
+This example creates an association between multiple application instances that we had created before and to which we assigned phone numbers starting with "tel:+1206", and an auto attendant configuration that we created with display name "Main Auto Attendant" whose identity is "c2ee3e18-b738-5515-a97b-46be52dfc057". Once the associations are created, the newly associated application instances would be listed under the `ApplicationInstances` property of the AA.
 
 ### Example 3
 ```powershell
@@ -118,7 +118,7 @@ This example creates an association between multiple application instances that 
 
 The call priority assigned to calls arriving on this application instance if a priority has not already been assigned.
 
-PARAMVALUE: 1 | 2 | 3 | 4 | 5
+Supported values: 1 | 2 | 3 | 4 | 5
 
 1 = Very High
 2 = High
@@ -143,7 +143,7 @@ Accept wildcard characters: False
 The ConfigurationId parameter is the identity of the configuration that would be associated with the provided application instances.
 
 ```yaml
-Type: System.string
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -164,7 +164,7 @@ It can be one of two values:
 - CallQueue
 
 ```yaml
-Type: System.string
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -180,7 +180,7 @@ Accept wildcard characters: False
 The Identities parameter is the identities of application instances to be associated with the provided configuration ID.
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -196,7 +196,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 

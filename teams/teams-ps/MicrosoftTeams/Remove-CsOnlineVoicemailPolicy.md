@@ -14,7 +14,7 @@ title: Remove-CsOnlineVoicemailPolicy
 # Remove-CsOnlineVoicemailPolicy
 
 ## SYNOPSIS
-Deletes an existing Online Voicemail policy or resets the Global policy instance to the default values.
+Deletes an existing Online Voicemail policy.
 
 ## SYNTAX
 
@@ -60,7 +60,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False

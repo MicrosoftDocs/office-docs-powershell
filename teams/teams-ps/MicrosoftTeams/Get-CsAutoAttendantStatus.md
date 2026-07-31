@@ -49,7 +49,7 @@ In Example 2, the Get-CsAutoAttendantStatus cmdlet is used to get status records
 Represents the identifier for the auto attendant whose provisioning status is to be retrieved.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 
 ### -IncludeResources
 
-The IncludeResources parameter identities the auto attendant resources whose status is to be retrieved. Available resources are:
+The IncludeResources parameter identifies the auto attendant resources whose status is to be retrieved. Available resources are:
 - AudioFile: Indicates status for audio files used by AA.
 - DialByNameVoiceResponses: Indicates status for speech recognition when using dial-by-name (directory lookup) feature with AA.
 - SipProvisioning: Indicates status for calling AA through its SIP (Primary) URI.
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 

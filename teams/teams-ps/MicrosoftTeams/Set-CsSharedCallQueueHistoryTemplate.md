@@ -6,7 +6,7 @@ Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: tomkau
 ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Set-CsSharedCallQueueHistoryTemplate
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-cssharedcallqueuehistorytemplate
 schema: 2.0.0
 title: Set-CsSharedCallQueueHistoryTemplate
 ---
@@ -26,18 +26,18 @@ Set-CsSharedCallQueueHistoryTemplate -Instance <instance> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use the Set-SharedCallQueueHistoryTemplate cmdlet to change a Shared Call Queue History template.
+Use the Set-CsSharedCallQueueHistoryTemplate cmdlet to change a Shared Call Queue History template.
 
 ## EXAMPLES
 
 ### Example 1
 ```
 $SharedCQHistory = Get-CsSharedCallQueueHistoryTemplate -Id 66f0dc32-d344-4bb1-b524-027d4635515c
-$SharedCQHisotry.AnsweredAndOutboundCalls = "AuthorizedUsersAndAgents"
+$SharedCQHistory.AnsweredAndOutboundCalls = "AuthorizedUsersAndAgents"
 Set-CsSharedCallQueueHistoryTemplate -Instance $SharedCQHistory
 ```
 
-This example sets the AnsweredOutboundCalls value in the Shared Call History Template with the Id `66f0dc32-d344-4bb1-b524-027d4635515c`
+This example sets the AnsweredAndOutboundCalls value in the Shared Call Queue History Template with the Id `66f0dc32-d344-4bb1-b524-027d4635515c`
 
 ## PARAMETERS
 
@@ -46,7 +46,7 @@ This example sets the AnsweredOutboundCalls value in the Shared Call History Tem
 The instance of the shared call queue history template to change.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
