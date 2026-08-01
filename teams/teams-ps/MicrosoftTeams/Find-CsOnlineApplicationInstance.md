@@ -19,7 +19,7 @@ Use the Find-CsOnlineApplicationInstance cmdlet to find application instances th
 ## SYNTAX
 
 ```
-Find-CsOnlineApplicationInstance [-SearchQuery] <string> [[-MaxResults] <uint>] [-ExactMatchOnly] [-AssociatedOnly] [-UnAssociatedOnly] [-Force] [<CommonParameters>]
+Find-CsOnlineApplicationInstance [-SearchQuery] <string> [[-MaxResults <uint>] [-ExactMatchOnly] [-AssociatedOnly] [-UnAssociatedOnly] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
