@@ -1,11 +1,11 @@
 ---
 applicable: Microsoft Teams
-author: officedocspr
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
-ms.author: odocspr
+ms.author: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlinevoicemailpolicy
 schema: 2.0.0
 title: Remove-CsOnlineVoicemailPolicy
