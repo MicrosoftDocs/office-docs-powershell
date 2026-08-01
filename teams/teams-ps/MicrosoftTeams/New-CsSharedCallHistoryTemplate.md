@@ -5,7 +5,7 @@ external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: vijurtse
-ms.reviewer: williamlooney
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cssharedcallhistorytemplate
 schema: 2.0.0
 title: New-CsSharedCallHistoryTemplate
