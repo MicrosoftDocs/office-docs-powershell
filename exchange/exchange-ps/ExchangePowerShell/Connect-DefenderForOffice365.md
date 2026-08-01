@@ -1,5 +1,5 @@
 ---
-applicable: Exchange Online
+applicable: Exchange Online, Defender for Office 365
 external help file: ExchangeOnlineManagement-help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
@@ -88,7 +88,7 @@ This example connects to a customer organization by using delegated administrati
 
 ### -AccessToken
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _AccessToken_ parameter specifies the OAuth JSON Web Token (JWT) used to connect to Defender for Office 365 PowerShell.
 
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 
 ### -AppId
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _AppId_ parameter specifies the application ID of the service principal used in certificate-based authentication (CBA). A valid value is the application ID GUID.
 
@@ -128,7 +128,7 @@ Accept wildcard characters: False
 
 ### -AzureADAuthorizationEndpointUri
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _AzureADAuthorizationEndpointUri_ parameter specifies the Microsoft Entra authorization endpoint that can issue OAuth 2.0 access tokens. The supported values are:
 
@@ -153,7 +153,7 @@ Accept wildcard characters: False
 
 ### -BypassMailboxAnchoring
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _BypassMailboxAnchoring_ switch bypasses the mailbox anchoring hint. You don't need to specify a value with this switch.
 
@@ -171,7 +171,7 @@ Accept wildcard characters: False
 
 ### -Certificate
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _Certificate_ parameter specifies the certificate used for CBA. A valid value is the X509Certificate2 object value of the certificate.
 
@@ -191,7 +191,7 @@ Accept wildcard characters: False
 
 ### -CertificateFilePath
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _CertificateFilePath_ parameter specifies the certificate file used for CBA. Use the _CertificatePassword_ parameter with this parameter.
 
@@ -211,7 +211,7 @@ Accept wildcard characters: False
 
 ### -CertificatePassword
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _CertificatePassword_ parameter specifies the password required to open the certificate file identified by the _CertificateFilePath_ parameter.
 
@@ -231,7 +231,7 @@ Accept wildcard characters: False
 
 ### -CertificateThumbprint
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _CertificateThumbprint_ parameter specifies the certificate used for CBA. A valid value is the thumbprint of the certificate.
 
@@ -253,7 +253,7 @@ Accept wildcard characters: False
 
 ### -CommandName
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _CommandName_ parameter specifies the comma-separated list of commands to import into the session. Reducing the number of imported cmdlets improves performance and reduces the memory footprint.
 
@@ -271,7 +271,7 @@ Accept wildcard characters: False
 
 ### -ConnectionUri
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _ConnectionUri_ parameter specifies the connection endpoint for the PowerShell session. The supported values are:
 
@@ -294,7 +294,7 @@ Accept wildcard characters: False
 
 ### -Credential
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _Credential_ parameter specifies the username and password used to connect. Don't use this parameter for accounts that use MFA.
 
@@ -314,7 +314,7 @@ Accept wildcard characters: False
 
 ### -DelegatedOrganization
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _DelegatedOrganization_ parameter specifies the customer organization that you want to manage. Use the primary `.onmicrosoft.com` domain or tenant ID of the customer organization.
 
@@ -334,7 +334,7 @@ Accept wildcard characters: False
 
 ### -DisableWAM
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _DisableWAM_ switch disables Web Account Manager (WAM). You don't need to specify a value with this switch.
 
@@ -354,7 +354,7 @@ Accept wildcard characters: False
 
 ### -EnableErrorReporting
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _EnableErrorReporting_ switch enables error reporting. You don't need to specify a value with this switch.
 
@@ -372,7 +372,7 @@ Accept wildcard characters: False
 
 ### -EXOModuleBasePath
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _EXOModuleBasePath_ parameter specifies the folder where the local temporary copy of the module is stored. Enclose values that contain spaces in quotation marks.
 
@@ -392,7 +392,7 @@ Accept wildcard characters: False
 
 ### -FormatTypeName
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _FormatTypeName_ parameter specifies the output format of the cmdlet.
 
@@ -410,7 +410,7 @@ Accept wildcard characters: False
 
 ### -LogDirectoryPath
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _LogDirectoryPath_ parameter specifies the location of the log files. The default location is `%TMP%\EXOCmdletTelemetry\EXOCmdletTelemetry-yyyymmdd-hhmmss.csv`.
 
@@ -430,7 +430,7 @@ Accept wildcard characters: False
 
 ### -LogLevel
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _LogLevel_ parameter specifies the logging level. Valid values are `Default` and `All`.
 
@@ -449,7 +449,7 @@ Accept wildcard characters: False
 
 ### -Organization
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _Organization_ parameter specifies the organization when you connect by using CBA. Use the primary `.onmicrosoft.com` domain of the organization.
 
@@ -469,7 +469,7 @@ Accept wildcard characters: False
 
 ### -PSSessionOption
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _PSSessionOption_ parameter specifies the PowerShell session options to use in the connection.
 
@@ -489,7 +489,7 @@ Accept wildcard characters: False
 
 ### -Prefix
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _Prefix_ parameter specifies text to add to the names of imported cmdlets. For example, **Get-SafeLinksPolicy** becomes **Get-ContosoSafeLinksPolicy** when you use the value `Contoso`.
 
@@ -509,7 +509,7 @@ Accept wildcard characters: False
 
 ### -ShowBanner
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _ShowBanner_ switch shows or hides the banner message displayed when you connect.
 
@@ -530,7 +530,7 @@ Accept wildcard characters: False
 
 ### -UserPrincipalName
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Defender for Office 365
 
 The _UserPrincipalName_ parameter specifies the account that you want to use to connect, for example, `admin@contoso.com`. This parameter lets you skip entering a username in the authentication prompt.
 
