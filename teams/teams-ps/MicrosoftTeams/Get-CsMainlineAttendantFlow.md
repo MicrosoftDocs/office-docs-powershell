@@ -1,11 +1,11 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
-ms.author: tomkau
+ms.author: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csmainlineattendantflow
 schema: 2.0.0
 title: Get-CsMainlineAttendantFlow
