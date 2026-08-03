@@ -1692,9 +1692,6 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-> [!NOTE]
-> This feature has not been released yet and will have no changes if it is enabled or disabled.
-
 Controls whether Compliance Recording (CR)-enabled users are blocked from joining meetings organized by the policy-assigned user. When set to `None`, no restriction is applied and compliance recording operates as configured for the tenant. When set to `All`, CR-enabled users are blocked from joining meetings organized by the policy-assigned user. This applies to both internal and external CR-enabled users (including federated and B2B guests). Anonymous and PSTN users are unaffected as they cannot be assigned compliance recording.
 
 Possible values:
