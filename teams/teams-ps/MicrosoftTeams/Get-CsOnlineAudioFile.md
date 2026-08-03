@@ -1,10 +1,10 @@
 ---
 applicable: Microsoft Teams
-author: officedocspr
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-ms.author: odocspr
+ms.author: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineaudiofile
 schema: 2.0.0
 title: Get-CsOnlineAudioFile
@@ -69,10 +69,10 @@ This cmdlet returns information about all uploaded audio files with ApplicationI
 ## PARAMETERS
 
 ### -ApplicationId
-The ApplicationId parameter specifies the identifier for the application that was specified when audio file was uploaded. For example, if the audio file is used with an auto attendant, then it should specified as "OrgAutoAttendant".
-If the audio file is used with a hunt group (call queue), then it needs to be specified as "HuntGroup". If the audio file is used for music on hold, the it needs to specified as "TenantGlobal".
+The ApplicationId parameter specifies the identifier for the application that was specified when audio file was uploaded. For example, if the audio file is used with an auto attendant, then it should be specified as "OrgAutoAttendant".
+If the audio file is used with a hunt group (call queue), then it needs to be specified as "HuntGroup". If the audio file is used for music on hold, then it needs to be specified as "TenantGlobal".
 
-If you are not specifying an ApplicationId it is assumed to be TenantGlobal.
+If you are not specifying an ApplicationId, it is assumed to be TenantGlobal.
 
 Supported values:
 
@@ -81,7 +81,7 @@ Supported values:
 - TenantGlobal
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -108,12 +108,12 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Id of the specific audio file that you would like to see information about. If you are only specifying -Identity, the -ApplicationId it is assumed to be TenantGlobal.
+The Id of the specific audio file that you would like to see information about. If you are only specifying -Identity, the -ApplicationId is assumed to be TenantGlobal.
 
 If you need to see the information of a specific audio file with ApplicationId of OrgAutoAttendant or HuntGroup, you need to specify -ApplicationId with the corresponding value and -Identity with the Id of the audio file.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 

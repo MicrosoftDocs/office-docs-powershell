@@ -1,12 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csautoattendant
 schema: 2.0.0
 title: Remove-CsAutoAttendant
@@ -45,7 +45,7 @@ This example deletes the AA that has an identity of fa9081d6-b4f3-5c96-baec-0b00
 The identity for the AA to be removed.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 

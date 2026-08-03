@@ -1,12 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinedatetimerange
 schema: 2.0.0
 title: New-CsOnlineDateTimeRange
@@ -41,7 +41,7 @@ The New-CsOnlineDateTimeRange cmdlet creates a new date-time range to be used wi
 $dtr = New-CsOnlineDateTimeRange -Start "1/1/2017"
 ```
 
-This example creates a date-time range for spanning from January 1, 2017 12AM to January 2, 2017 12AM.
+This example creates a date-time range spanning from January 1, 2017 12AM to January 2, 2017 12AM.
 
 ### Example 2
 ```
@@ -59,7 +59,7 @@ The End parameter represents the end bound of the date-time range.
 If not present, the end bound of the date time range is set to 00:00 of the day after the start date.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -75,7 +75,7 @@ Accept wildcard characters: False
 The Start parameter represents the start bound of the date-time range.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -91,7 +91,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 

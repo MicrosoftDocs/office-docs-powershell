@@ -1,10 +1,10 @@
 ---
 applicable: Microsoft Teams
-author: officedocspr
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-ms.author: odocspr
+ms.author: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlineaudiofile
 schema: 2.0.0
 title: Remove-CsOnlineAudioFile
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 The Id of the specific audio file that you would like to mark for deletion.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
