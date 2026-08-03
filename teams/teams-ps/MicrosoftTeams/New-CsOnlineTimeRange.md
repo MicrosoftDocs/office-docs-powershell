@@ -1,12 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinetimerange
 schema: 2.0.0
 title: New-CsOnlineTimeRange
@@ -54,7 +54,7 @@ This example creates a 24-hour time range.
 The End parameter represents the end bound of the time range.
 
 ```yaml
-Type: System.TimeSpan
+Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 
@@ -70,7 +70,7 @@ Accept wildcard characters: False
 The Start parameter represents the start bound of the time range.
 
 ```yaml
-Type: System.TimeSpan
+Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 
@@ -86,7 +86,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 

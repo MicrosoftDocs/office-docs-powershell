@@ -1,11 +1,11 @@
 ---
 applicable: Microsoft Teams
-author: officedocspr
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
-ms.author: odocspr
+ms.author: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/import-csonlineaudiofile
 schema: 2.0.0
 title: Import-CsOnlineAudioFile
@@ -81,7 +81,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-The Content parameter represents the content of the audio file. Supported formats are WAV (uncompressed, linear PCM with 8/16/32-bit depth in mono or stereo), WMA (mono only), and MP3. The audio file content cannot be more 5MB.
+The Content parameter represents the content of the audio file. Supported formats are WAV (uncompressed, linear PCM with 8/16/32-bit depth in mono or stereo), WMA (mono only), and MP3. The audio file content cannot be more than 5MB.
 
 ```yaml
 Type: Byte[]

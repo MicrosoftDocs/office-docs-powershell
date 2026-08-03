@@ -1,12 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Remove-CsComplianceRecordingForCallQueueTemplate
+ms.author: colongma
+ms.reviewer: colongma
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-cscompliancerecordingforcallqueuetemplate
 schema: 2.0.0
 title: Remove-CsComplianceRecordingForCallQueueTemplate
 ---
@@ -41,11 +41,11 @@ This example deletes the Compliance Recording for Call Queue template with the i
 The Id parameter is the unique identifier assigned to the Compliance Recording for Call Queue template.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -62,7 +62,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Rtc.Management.OAA.Models.AutoAttendant
+### None
 
 ## NOTES
 

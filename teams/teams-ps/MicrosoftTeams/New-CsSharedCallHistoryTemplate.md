@@ -1,12 +1,12 @@
 ---
-applicable: Microsoft Teams Queues App
+applicable: Microsoft Teams
 author: vijurtse
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
 ms.author: vijurtse
-ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/New-CsSharedCallHistoryTemplate
+ms.reviewer: colongma
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cssharedcallhistorytemplate
 schema: 2.0.0
 title: New-CsSharedCallHistoryTemplate
 ---
@@ -14,7 +14,7 @@ title: New-CsSharedCallHistoryTemplate
 # New-CsSharedCallHistoryTemplate
 
 ## SYNOPSIS
-Use the New-CsSharedCallHistoryTemplate cmdlet to create a Shared Call History template. The template defines which roles can access Shared Call History and which parts of the history are visible to them.
+Creates a Shared Call History template.
 
 ## SYNTAX
 
@@ -30,7 +30,7 @@ Use the New-CsSharedCallHistoryTemplate cmdlet to create a Shared Call History t
 
 ### Example 1
 ```
-New-CsSharedCallHistoryTemplate -Name "Customer Service" -Description "Missed:All Answered:Auth" -IncomingMissedCall AuthorizedUsersAndAgents -AnsweredAndOutboundCalls AuthorizedUsersOnly
+New-CsSharedCallHistoryTemplate -Name "Customer Service" -Description "Missed:All Answered:Auth" -IncomingMissedCalls AuthorizedUsersAndAgents -AnsweredAndOutboundCalls AuthorizedUsersOnly
 ```
 
 This example creates a new Shared Call History template where incoming missed calls for Call Queue are shown to authorized users and agents and, answered and outbound calls are shown to authorized users only. 
@@ -42,7 +42,7 @@ Visibility to Auto Attendant Shared Voicemails is not defined, so it will be non
 
 Who sees Call Queue answered and outbound calls in the shared call history.
 
-PARAMVALUE: None | AuthorizedUsersOnly | AuthorizedUsersAndAgents
+Supported values: None | AuthorizedUsersOnly | AuthorizedUsersAndAgents
 
 ```yaml
 Type: Object
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 A description for the shared call history template.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -76,7 +76,7 @@ Accept wildcard characters: False
 
 Who sees Call Queue incoming missed calls and shared voicemails in the shared call  history.
 
-PARAMVALUE: None | AuthorizedUsersOnly | AuthorizedUsersAndAgents
+Supported values: None | AuthorizedUsersOnly | AuthorizedUsersAndAgents
 
 ```yaml
 Type: Object
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 
 Who sees AutoAttendant Shared Voicemails events in the shared call  history. 
 
-PARAMVALUE: None | AuthorizedUsersOnly | AuthorizedUsersAndGroupMembers
+Supported values: None | AuthorizedUsersOnly | AuthorizedUsersAndGroupMembers
 
 ```yaml
 Type: Object
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 The name of the shared call history template.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 

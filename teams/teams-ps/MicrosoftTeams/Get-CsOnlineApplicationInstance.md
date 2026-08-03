@@ -1,11 +1,11 @@
 ---
 applicable: Microsoft Teams
-author: officedocspr
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
-ms.author: odocspr
+ms.author: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineapplicationinstance
 schema: 2.0.0
 title: Get-CsOnlineApplicationInstance
@@ -90,10 +90,10 @@ Accept wildcard characters: False
 
 ### -Identities
 
-The UPNs or the object IDs of the application instances to retrieve, separated with comma. If this parameter nor parameter Identity are not provided, it will retrieve all application instances in the tenant.
+The UPNs or the object IDs of the application instances to retrieve, separated with comma. If neither this parameter nor the Identity parameter is provided, all application instances in the tenant are retrieved.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -106,10 +106,10 @@ Accept wildcard characters: False
 
 ### -Identity
 
-The UPN or the object ID of the application instance to retrieve. If this parameter nor parameter Identities are not provided, it will retrieve all application instances in the tenant.
+The UPN or the object ID of the application instance to retrieve. If neither this parameter nor the Identities parameter is provided, all application instances in the tenant are retrieved.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -125,7 +125,7 @@ Accept wildcard characters: False
 The result size for bulk get. This parameter is currently not working.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -141,7 +141,7 @@ Accept wildcard characters: False
 Skips the first specified number of returned results. The default value is 0. This parameter is currently not working.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 

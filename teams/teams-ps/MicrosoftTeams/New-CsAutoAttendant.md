@@ -1,12 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendant
 schema: 2.0.0
 title: New-CsAutoAttendant
@@ -156,7 +156,7 @@ $christmasCallFlow = New-CsAutoAttendantCallFlow -Name "Christmas" -Greetings @(
 
 $christmasCallHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -Type Holiday -ScheduleId $christmasSchedule.Id -CallFlowId $christmasCallFlow.Id
 
-New-CsAutoAttendant -Name "Customer Support Auto Attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -CallFlows @($afterHoursCallFlow, $christmasCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation, $christmasCallHandlingAssociation) -LanguageId "en-US" -TimeZoneId "UTC"
+New-CsAutoAttendant -Name "Customer Support Auto Attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -CallFlows @($christmasCallFlow) -CallHandlingAssociations @($christmasCallHandlingAssociation) -LanguageId "en-US" -TimeZoneId "UTC"
 
 # Id                       : a65b3434-05a1-48ed-883d-e3ca35a60af8
 # TenantId                 : f6b89083-a2f8-55cc-9f62-33b73af44164
@@ -188,7 +188,7 @@ $christmasCallFlow = New-CsAutoAttendantCallFlow -Name "Christmas" -Greetings @(
 
 $christmasCallHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -Type Holiday -ScheduleId $christmasSchedule.Id -CallFlowId $christmasCallFlow.Id
 
-New-CsAutoAttendant -Name "Main auto attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -CallFlows @($afterHoursCallFlow, $christmasCallFlow) -CallHandlingAssociations @($afterHoursCallHandlingAssociation, $christmasCallHandlingAssociation) -LanguageId "en-US" -TimeZoneId "UTC"
+New-CsAutoAttendant -Name "Main auto attendant" -DefaultCallFlow $defaultCallFlow -EnableVoiceResponse -CallFlows @($christmasCallFlow) -CallHandlingAssociations @($christmasCallHandlingAssociation) -LanguageId "en-US" -TimeZoneId "UTC"
 
 # Id                       : 236450c4-9f1e-4c19-80eb-d68819d36a15
 # TenantId                 : f6b89083-a2f8-55cc-9f62-33b73af44164
@@ -279,7 +279,7 @@ This example creates a new AA named _Main auto attendant_ that has the following
 
 ### -AuthorizedUsers
 
-This is a list of GUIDs for users who are authorized to make changes to this call queue. The users must also have a TeamsVoiceApplications policy assigned. The GUID should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx).
+This is a list of GUIDs for users who are authorized to make changes to this auto attendant. The users must also have a TeamsVoiceApplications policy assigned. The GUID should contain 32 digits with 4 dashes (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx).
 
 ```yaml
 Type: List
@@ -324,7 +324,7 @@ Type: System.Collections.Generic.List
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -343,7 +343,7 @@ Type: System.Collections.Generic.List
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -395,10 +395,10 @@ The MainlineAttendantAgentVoiceId parameter sets the voice that will be used wit
 
 See [Get-CsMainlineAttendantSupportedVoices](get-csmainlineattendantsupportedvoices.md) for a list of supported voices.
 
-PARAMVALUE: Alloy | Echo | Shimmer
+Supported values: Alloy | Echo | Shimmer
 
 ```yaml
-Type: SwitchParameter
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -488,7 +488,7 @@ See [Get-CsMainlineAttendantSupportedLanguages](get-csmainlineattendantsupported
 See [Get-CsAutoAttendantSupportedLanguage](get-csautoattendantsupportedlanguage.md) for a list of languages supported with Auto attendant.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -504,7 +504,7 @@ Accept wildcard characters: False
 The Name parameter is a friendly name that is assigned to the AA.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -557,10 +557,10 @@ Accept wildcard characters: False
 
 The Spam Detection Template Id to assign to this Teams Phone Agent.
 
-See [Get-CsMainlineAttendantSpamDetectionTemplate](Get-CsMainlineAttendantSpamDetectionTemplate.md) for a list of existing templates..
+See [Get-CsMainlineAttendantSpamDetectionTemplate](Get-CsMainlineAttendantSpamDetectionTemplate.md) for a list of existing templates.
 
 ```yaml
-Type: Guid
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -575,7 +575,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -593,7 +593,7 @@ The TimeZoneId parameter represents the AA time zone. All schedules are evaluate
 See [Get-CsAutoAttendantSupportedTimeZone](get-csautoattendantsupportedtimezone.md) for a list of supported time zones.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -620,10 +620,10 @@ This parameter is used in dial search when multiple search results are found, as
 - Department: Adds department information from the user profile.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
-Required: false
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -639,7 +639,7 @@ See [Get-CsMainlineAttendantSupportedVoices](get-csmainlineattendantsupportedvoi
 See [Get-CsAutoAttendantSupportedLanguage](get-csautoattendantsupportedlanguage.md) for a list of voices supported with Auto attendant
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 

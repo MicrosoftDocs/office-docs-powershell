@@ -1,12 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendantsupportedlanguage
 schema: 2.0.0
 title: Get-CsAutoAttendantSupportedLanguage
@@ -49,7 +49,7 @@ This example gets the language that the Identity parameter specifies (en-US).
 The Identity parameter designates a specific language to be retrieved. If this parameter is not specified, then all supported languages are returned.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -65,7 +65,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -92,3 +92,9 @@ The Get-CsAutoAttendantSupportedLanguage cmdlet accepts a string as the Identity
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CsAutoAttendantSupportedTimeZone](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendantsupportedtimezone)
+
+[Get-CsAutoAttendantTenantInformation](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendanttenantinformation)
+
+[Get-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendant)

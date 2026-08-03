@@ -1,11 +1,11 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
-external help file: Microsoft.Rtc.Management.dll-Help.xml
+author: clyvr
+external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
-ms.author: tomkau
+ms.author: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csmainlineattendantquestionanswerflow
 schema: 2.0.0
 title: Get-CsMainlineAttendantQuestionAnswerFlow
@@ -19,25 +19,25 @@ The Get-CsMainlineAttendantQuestionAnswerFlow cmdlet returns the identified Main
 ## SYNTAX
 
 ```
-Get-CsMainlineAttendantQuestionAnswerFlow [-Identity <Guid>] [-Tenant <Guid>] [-First <Int32>] [-Skip <Int32>] [-SortBy <String>] [-Descending <Switch>] [-NameFilter <String>] [<CommonParameters>]
+Get-CsMainlineAttendantQuestionAnswerFlow [-Identity <Guid>] [-Tenant <Guid>] [-First <Int32>] [-Skip <Int32>] [-SortBy <String>] [-Descending] [-NameFilter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-CsMainlineAttendantQuestionAnswerFlow cmdlet lets you retrieve information about the Mainline attendant question and answer flows n your organization.
+The Get-CsMainlineAttendantQuestionAnswerFlow cmdlet lets you retrieve information about the Mainline attendant question and answer flows in your organization.
 
 > [!CAUTION]
 > Teams Phone Agent (formerly Mainline Attendant) is currently only available to customers in the [Frontier](https://www.microsoft.com/microsoft-365-copilot/frontier-program) Public Preview program.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-CsMainlineAttendantQuestionAnswerFlow
 ```
 
 This example gets the first 100 Mainline attendant question and answer flows in the organization.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-CsMainlineAttendantQuestionAnswerFlow -Identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01
 ```
@@ -47,7 +47,7 @@ This example gets the Mainline attendant question and answer flow with the ident
 ## PARAMETERS
 
 ### -Identity
-PARAMVALUE: Guid
+The identifier of the question and answer flow.
 
 ```yaml
 Type: Guid
@@ -62,7 +62,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: Guid
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -First
-The First parameter gets the first N appointment flows, up to a maximum of 100 at a time. 
+The First parameter gets the first N question and answer flows, up to a maximum of 100 at a time. 
 When not specified, the default behavior is to return the first 100 question and answer flows. It is intended to be used in conjunction with the `-Skip` parameter for pagination purposes.
 If a number greater than 100 is supplied, the request will fail.
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 ```
 
 ### -Skip
-The Skip parameter skips the first N appointment flows. It is intended to be used in conjunction with the `-First` parameter for pagination purposes.
+The Skip parameter skips the first N question and answer flows. It is intended to be used in conjunction with the `-First` parameter for pagination purposes.
 
 ```yaml
 Type: Int32
@@ -116,7 +116,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: Name
 Accept pipeline input: False
@@ -124,7 +124,7 @@ Accept wildcard characters: False
 ```
 
 ### -Descending
-The Descending parameter sorts appointment booking flows in descending order
+The Descending parameter sorts question and answer flows in descending order.
 
 ```yaml
 Type: SwitchParameter
@@ -146,7 +146,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -169,3 +169,8 @@ Represents the unique identifier of a question and answer booking flow.
 
 ## RELATED LINKS
 
+[New-CsMainlineAttendantQuestionAnswerFlow](https://learn.microsoft.com/powershell/module/microsoftteams/new-csmainlineattendantquestionanswerflow)
+
+[Set-CsMainlineAttendantQuestionAnswerFlow](https://learn.microsoft.com/powershell/module/microsoftteams/set-csmainlineattendantquestionanswerflow)
+
+[Remove-CsMainlineAttendantQuestionAnswerFlow](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csmainlineattendantquestionanswerflow)
