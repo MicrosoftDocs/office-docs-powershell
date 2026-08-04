@@ -3,9 +3,10 @@ applicable: Microsoft Teams
 author: clyvr
 external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
 ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csmainlineattendantquestionanswerflow
 schema: 2.0.0
 title: Remove-CsMainlineAttendantQuestionAnswerFlow
