@@ -1,7 +1,12 @@
 ---
+applicable: Microsoft Teams
+author: clyvr
 external help file: MicrosoftTeams-help.xml
 Locale: en-US
+manager: roykuntz
 Module Name: MicrosoftTeams
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsvoiceapplicationspolicy
 schema: 2.0.0
 title: Get-CsTeamsVoiceApplicationsPolicy
