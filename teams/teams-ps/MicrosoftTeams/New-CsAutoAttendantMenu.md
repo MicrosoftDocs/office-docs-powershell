@@ -1,12 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantmenu
 schema: 2.0.0
 title: New-CsAutoAttendantMenu
@@ -62,7 +62,7 @@ Type: Microsoft.Rtc.Management.Hosted.OAA.Models.DirectorySearchMethod
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -108,7 +108,7 @@ Accept wildcard characters: False
 The Name parameter represents a friendly name for the menu.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -173,4 +173,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## RELATED LINKS
 
 [New-CsAutoAttendantMenuOption](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantmenuoption)
-[New-CsAutoAttendantPrompt](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantmenuoption)
+[New-CsAutoAttendantPrompt](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantprompt)

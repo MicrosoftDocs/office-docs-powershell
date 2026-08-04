@@ -1,11 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
-external help file: Microsoft.Rtc.Management.dll-Help.xml
+author: clyvr
+external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csmainlineattendantspamdetectiontemplate
 schema: 2.0.0
 title: Get-CsMainlineAttendantSpamDetectionTemplate
@@ -20,7 +21,7 @@ The Get-CsMainlineAttendantSpamDetectionTemplate cmdlet returns a list of spam d
 ## SYNTAX
 
 ```
-Get-CsMainlineAttendantSpamDetectionTemplate [-Id <string>]
+Get-CsMainlineAttendantSpamDetectionTemplate [-Identity <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -32,23 +33,23 @@ The Get-CsMainlineAttendantSpamDetectionTemplate cmdlet returns a list of spam d
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-CsMainlineAttendantSpamDetectionTemplate 
 ```
 
 This example will return a list of all the spam detection templates configured in the tenant.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
-Get-CsMainlineAttendantSpamDetectionTemplate -Id 3a4b3d9b-91d8-4fbf-bcff-6907f325842d
+Get-CsMainlineAttendantSpamDetectionTemplate -Identity 3a4b3d9b-91d8-4fbf-bcff-6907f325842d
 ```
 
 This example retrieves the Spam Detection Template with the Identity 3a4b3d9b-91d8-4fbf-bcff-6907f325842d
 
-## Parameters
+## PARAMETERS
 
-### -Id
+### -Identity
 
 Represents the unique identifier of a spam detection template.
 
@@ -78,3 +79,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[New-CsMainlineAttendantSpamDetectionTemplate](https://learn.microsoft.com/powershell/module/microsoftteams/new-csmainlineattendantspamdetectiontemplate)
+
+[Set-CsMainlineAttendantSpamDetectionTemplate](https://learn.microsoft.com/powershell/module/microsoftteams/set-csmainlineattendantspamdetectiontemplate)
+
+[Remove-CsMainlineAttendantSpamDetectionTemplate](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csmainlineattendantspamdetectiontemplate)

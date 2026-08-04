@@ -1,11 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: officedocspr
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: odocspr
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinevoicemailusersettings
 schema: 2.0.0
 title: Get-CsOnlineVoicemailUserSettings
@@ -56,7 +57,7 @@ Accept wildcard characters: False
 The Identity parameter represents the ID of the specific user in your organization; this can be either a SIP URI or an Object ID.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 

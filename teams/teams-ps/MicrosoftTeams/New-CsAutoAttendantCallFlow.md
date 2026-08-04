@@ -1,12 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallflow
 schema: 2.0.0
 title: New-CsAutoAttendantCallFlow
@@ -107,7 +107,7 @@ The Menu parameter identifies the menu to render when the call flow is executed.
 You can create a new menu by using the [`New-CsAutoAttendantMenu`](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantmenu) cmdlet.
 
 ```yaml
-Type: System.Object
+Type: Object
 Parameter Sets: (All)
 Aliases:
 
@@ -123,7 +123,7 @@ Accept wildcard characters: False
 The Name parameter represents a unique friendly name for the call flow.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -260,7 +260,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -289,4 +289,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CsAutoAttendantMenu](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantmenu)
 
-[Get-CsMainlineAttendantFlow](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantprompt)
+[New-CsAutoAttendantPrompt](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantprompt)

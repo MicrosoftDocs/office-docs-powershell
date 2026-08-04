@@ -1,11 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: officedocspr
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: odocspr
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinevoicemailpolicy
 schema: 2.0.0
 title: Set-CsOnlineVoicemailPolicy
@@ -22,7 +23,7 @@ Modifies an existing Online Voicemail policy.
 ```powershell
 Set-CsOnlineVoicemailPolicy [[-Identity] <string>] [-Description <String>] [-EnableEditingCallAnswerRulesSetting <boolean>] [-EnableTranscription <boolean>]
 [-EnableTranscriptionProfanityMasking <boolean>] [-EnableTranscriptionTranslation <boolean>] [-MaximumRecordingLength <timespan>]
-[-PostambleAudioFile <string>] [-PostambleAudioFile <string>] [-PreamblePostambleMandatory <boolean>]
+[-PostambleAudioFile <string>] [-PreambleAudioFile <string>] [-PreamblePostambleMandatory <boolean>]
 [-PrimarySystemPromptLanguage <string>] [-SecondarySystemPromptLanguage <string>] [-ShareData <string>] [-EnableVoicemailTriage <boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
