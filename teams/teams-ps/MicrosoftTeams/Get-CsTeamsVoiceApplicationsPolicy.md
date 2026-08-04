@@ -32,19 +32,19 @@ TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration whi
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1
 ```
 Get-CsTeamsVoiceApplicationsPolicy
 ```
 The command shown in Example 1 returns information for all the Teams voice applications policies configured for use in the tenant.
 
-### EXAMPLE 2
+### Example 2
 ```
 Get-CsTeamsVoiceApplicationsPolicy -Identity "SDA-Allow-All"
 ```
 In Example 2, information is returned for a single Teams voice applications policy; the policy with the Identity SDA-Allow-All.
 
-### EXAMPLE 3
+### Example 3
 ```
 Get-CsTeamsVoiceApplicationsPolicy -Filter "tag:*"
 ```

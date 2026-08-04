@@ -1,11 +1,11 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
-external help file: Microsoft.Rtc.Management.dll-Help.xml
+author: clyvr
+external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
-ms.author: tomkau
+ms.author: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csmainlineattendantspamdetectiontemplate
 schema: 2.0.0
 title: New-CsMainlineAttendantSpamDetectionTemplate
@@ -32,16 +32,16 @@ The New-CsMainlineAttendantSpamDetectionTemplate cmdlet creates a new spam detec
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 New-CsMainlineAttendantSpamDetectionTemplate -Name "Spam Detection - Disconnect" -Description "Calls determined to be spam will be disconnected" -EnableSpamDetection $true -Action "DisconnectCall"
 ```
 
 When assigned to a Teams Phone Agent (formerly Mainline Attendant), this example will create a new Spam Detection Template that will disconnect calls determined to be spam.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
-New-CsMainlineAttendantSpamDetectionTemplate -Name "Spam Detection - Disconnect - Except CEO" -Description "Except CEO - Calls determined to be spam will be disconnected" -EnableSpamDetection $true -Action "DisconnectCall" -ExclusionList @("+14255551212")
+New-CsMainlineAttendantSpamDetectionTemplate -Name "Spam Detection - Disconnect - Except CEO" -Description "Except CEO - Calls determined to be spam will be disconnected" -EnableSpamDetection $true -Action "DisconnectCall" -ExclusionScope @("+14255551212")
 ```
 
 When assigned to a Teams Phone Agent (formerly Mainline Attendant), this example will create a new Spam Detection Template that will disconnect calls determined to be spam except if the call is coming from `+14255551212`.
@@ -98,9 +98,9 @@ Accept wildcard characters: False
 
 ### -Action
 
-The action to take it the call is spam.
+The action to take if the call is spam.
 
-PARAMVALUE: DisconnectCall | TransferCallToOperator | TransferCallToTarget
+Supported values: DisconnectCall | TransferCallToOperator | TransferCallToTarget
 
 - DisconnectCall - the call will be disconnected.
 - TransferCallToOperator - the call will be transferred to the configured operator. If no operator has been configured, the call will be disconnected.
@@ -129,7 +129,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True - if -Action set to TransferCallToTarget
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -184,3 +184,8 @@ Represents the unique identifier of a question and answer booking flow.
 
 ## RELATED LINKS
 
+[Get-CsMainlineAttendantSpamDetectionTemplate](https://learn.microsoft.com/powershell/module/microsoftteams/get-csmainlineattendantspamdetectiontemplate)
+
+[Set-CsMainlineAttendantSpamDetectionTemplate](https://learn.microsoft.com/powershell/module/microsoftteams/set-csmainlineattendantspamdetectiontemplate)
+
+[Remove-CsMainlineAttendantSpamDetectionTemplate](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csmainlineattendantspamdetectiontemplate)

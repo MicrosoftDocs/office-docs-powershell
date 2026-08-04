@@ -1,12 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/New-CsComplianceRecordingForCallQueueTemplate
+ms.author: colongma
+ms.reviewer: colongma
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cscompliancerecordingforcallqueuetemplate
 schema: 2.0.0
 title: New-CsComplianceRecordingForCallQueueTemplate
 ---
@@ -14,13 +14,13 @@ title: New-CsComplianceRecordingForCallQueueTemplate
 # New-CsComplianceRecordingForCallQueueTemplate
 
 ## SYNOPSIS
-Use the New-CsComplianceRecordingForCallQueueTemplate cmdlet to create a Compliance Recording for Call Queues template.
+Creates a Compliance Recording for Call Queues template.
 
 ## SYNTAX
 
 ```
 New-CsComplianceRecordingForCallQueueTemplate -Name <String> -Description <String> -BotApplicationInstanceObjectId <String>
- [-RequiredDuringCall] [-RequiredBeforeCall] [-CurrentInvitationCount <Int32>]
+ [-RequiredDuringCall] [-RequiredBeforeCall] [-ConcurrentInvitationCount <Int32>]
  [-PairedApplicationInstanceObjectId <String>] [<CommonParameters>]
 ```
 
@@ -45,7 +45,7 @@ The compliance recording bot's application instance object Id.
 Use [Get-CsOnlineApplicationInstance](get-csonlineapplicationinstance.md) to get the `ObjectId`.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -61,7 +61,7 @@ Accept wildcard characters: False
 The number of concurrent invitations to send to the compliance recording for call queue bot.
 
 ```yaml
-Type: System.Int32
+Type: Int32
 Parameter Sets: (All)
 Aliases:
 
@@ -77,7 +77,7 @@ Accept wildcard characters: False
 A description for the compliance recording for call queues template.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -93,7 +93,7 @@ Accept wildcard characters: False
 The name of the compliance recording for call queue template.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 The PairedApplicationInstanceObjectId parameter specifies the paired compliance recording bot application object Id to invite to the call.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
