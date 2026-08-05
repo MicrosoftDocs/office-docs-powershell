@@ -1,11 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: officedocspr
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: odocspr
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinevoicemailpolicy
 schema: 2.0.0
 title: New-CsOnlineVoicemailPolicy
@@ -205,7 +206,7 @@ Accept wildcard characters: False
 A duration of voicemail maximum recording length. The length should be between 30 seconds to 10 minutes.
 
 ```yaml
-Type: Duration
+Type: TimeSpan
 Parameter Sets: (All)
 Aliases:
 
@@ -281,7 +282,7 @@ Accept wildcard characters: False
 
 ### -SecondarySystemPromptLanguage
 
-The secondary language that voicemail system prompts will be presented in. Must also set PrimarySystemPromptLanguage and may not be the same value as PrimarySystemPromptanguage. When set, this overrides the user language choice.  Please see [Set-CsOnlineVoicemailUserSettings](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinevoicemailusersettings) -PromptLanguage for supported languages.
+The secondary language that voicemail system prompts will be presented in. Must also set PrimarySystemPromptLanguage and may not be the same value as PrimarySystemPromptLanguage. When set, this overrides the user language choice.  Please see [Set-CsOnlineVoicemailUserSettings](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinevoicemailusersettings) -PromptLanguage for supported languages.
 
 ```yaml
 Type: String

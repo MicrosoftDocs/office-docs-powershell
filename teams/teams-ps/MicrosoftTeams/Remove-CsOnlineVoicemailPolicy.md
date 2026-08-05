@@ -1,11 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: officedocspr
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: odocspr
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlinevoicemailpolicy
 schema: 2.0.0
 title: Remove-CsOnlineVoicemailPolicy
@@ -14,7 +15,7 @@ title: Remove-CsOnlineVoicemailPolicy
 # Remove-CsOnlineVoicemailPolicy
 
 ## SYNOPSIS
-Deletes an existing Online Voicemail policy or resets the Global policy instance to the default values.
+Deletes an existing Online Voicemail policy.
 
 ## SYNTAX
 
@@ -60,7 +61,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
