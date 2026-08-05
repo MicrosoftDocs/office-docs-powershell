@@ -4287,7 +4287,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill RecipientDelimiters Description }}
+The RecipientDelimiters parameter specifies whether there is a tenant-wide default value for the Mail Compose and Reply setting that controls whether commas are used to separate recipients.
 
 ```yaml
 Type: Boolean
