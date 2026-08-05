@@ -3,7 +3,7 @@ applicable: Microsoft Teams
 author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
 ms.author: colongma
 ms.reviewer: colongma
@@ -298,7 +298,7 @@ Accept wildcard characters: False
 The Auto Recording template ID to apply to the Auto attendant.
 
 > [!NOTE]
-> 1. Requires that Mainline attendant be enabled.
+> 1. Requires that Teams Phone Agent (Mainline Attendant) be enabled.
 > 1. The template must not have an audio file configured.
 
 ```yaml
@@ -370,12 +370,12 @@ Accept wildcard characters: False
 
 ### -EnableMainlineAttendant
 
-The EnableMainlineAttendant parameter enables Mainline Attendant features for this Auto attendant.
+The EnableMainlineAttendant parameter enables Teams Phone Agent (Mainline Attendant) features for this Auto attendant.
 
 > [!NOTE]
-> 1. The Auto attendant must have a Resource account assigned
-> 1. `-LanguageId` options are limited when Mainline Attendant is enabled
-> 1. `-EnableVoiceResponse` will be enabled automatically
+> 1. The Teams Phone Agent (Mainline Attendant) must have a Resource account assigned.
+> 1. `-LanguageId` options are limited when Teams Phone Agent (Mainline Attendant) is enabled.
+> 1. `-EnableVoiceResponse` will be enabled automatically.
 
 ```yaml
 Type: SwitchParameter
@@ -391,11 +391,9 @@ Accept wildcard characters: False
 
 ### -MainlineAttendantAgentVoiceId
 
-The MainlineAttendantAgentVoiceId parameter sets the voice that will be used with Mainline Attendant.
+The MainlineAttendantAgentVoiceId parameter sets the voice that will be used with Teams Phone Agent (Mainline Attendant).
 
 See [Get-CsMainlineAttendantSupportedVoices](get-csmainlineattendantsupportedvoices.md) for a list of supported voices.
-
-Supported values: Alloy | Echo | Shimmer
 
 ```yaml
 Type: String
@@ -483,7 +481,7 @@ Accept wildcard characters: False
 
 The LanguageId parameter is the language that is used to read text-to-speech (TTS) prompts.
 
-See [Get-CsMainlineAttendantSupportedLanguages](get-csmainlineattendantsupportedlanguages.md) for a list of languages supported with Mainline attendant.
+See [Get-CsMainlineAttendantSupportedLanguages](get-csmainlineattendantsupportedlanguages.md) for a list of languages supported with Teams Phone Agent (Mainline Attendant).
 
 See [Get-CsAutoAttendantSupportedLanguage](get-csautoattendantsupportedlanguage.md) for a list of languages supported with Auto attendant.
 
@@ -555,7 +553,7 @@ Accept wildcard characters: False
 
 ### -SpamDetectionTemplateId
 
-The Spam Detection Template Id to assign to this Teams Phone Agent.
+The Spam Detection Template Id to assign to this Teams Phone Agent (Mainline Attendant).
 
 See [Get-CsMainlineAttendantSpamDetectionTemplate](Get-CsMainlineAttendantSpamDetectionTemplate.md) for a list of existing templates.
 
@@ -634,7 +632,7 @@ Accept wildcard characters: False
 
 The VoiceId parameter represents the voice that is used to read text-to-speech (TTS) prompts.
 
-See [Get-CsMainlineAttendantSupportedVoices](get-csmainlineattendantsupportedvoices.md) for a list of voices supported with Mainline attendant.
+See [Get-CsMainlineAttendantSupportedVoices](get-csmainlineattendantsupportedvoices.md) for a list of voices supported with Teams Phone Agent (Mainline Attendant).
 
 See [Get-CsAutoAttendantSupportedLanguage](get-csautoattendantsupportedlanguage.md) for a list of voices supported with Auto attendant
 

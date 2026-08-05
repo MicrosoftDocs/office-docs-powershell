@@ -3,8 +3,9 @@ applicable: Microsoft Teams
 author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: vijurtse
+ms.author: colongma
 ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-cssharedcallhistorytemplate
 schema: 2.0.0
