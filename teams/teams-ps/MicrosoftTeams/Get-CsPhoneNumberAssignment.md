@@ -29,7 +29,9 @@ Get-CsPhoneNumberAssignment [-ActivationState <String>] [-AssignedPstnTargetId <
 ```
 
 ## DESCRIPTION
-This cmdlet displays information about one or more phone numbers. You can filter the phone numbers to return by using different parameters. Returned results are sorted by TelephoneNumber in ascending order. Supported list of attributes for Filter are:
+This cmdlet displays information about one or more phone numbers. You can filter the phone numbers to return by using different parameters. Returned results are sorted by TelephoneNumber in ascending order.
+
+The following attributes are supported for the Filter parameter:
 - TelephoneNumber
 - OperatorId
 - PstnAssignmentStatus (also supported AssignmentStatus)
@@ -54,7 +56,7 @@ This cmdlet displays information about one or more phone numbers. You can filter
 
 If you are using both -Skip X and -Top Y for filtering, the returned results will first be skipped by X, and then the top Y results will be returned.
 
-By default, this cmdlet returns a maximum of 500 results. A maximum of 1000 results can be returned using -Top filter. If you need to get more than 1000 results, a combination of -Skip and -Top filtering can be used to list incremental returns of 1000 numbers. If a full list of telephone numbers acquired by the tenant is required, you can use [Export-CsAcquiredPhoneNumber](./export-csacquiredphonenumber.md) cmdlet to download a list of all acquired telephone numbers.
+By default, this cmdlet returns a maximum of 500 results. You can return up to 1000 results by using the Top parameter. To retrieve more than 1000 results, use the Skip and Top parameters together to page through results in increments of up to 1000 numbers. To download a full list of telephone numbers acquired by the tenant, use the [Export-CsAcquiredPhoneNumber](./export-csacquiredphonenumber.md) cmdlet.
 
 
 ## EXAMPLES
@@ -157,7 +159,7 @@ This example returns information about all phone numbers that contain the digits
 ```powershell
 Get-CsPhoneNumberAssignment -Skip 1000 -Top 1000
 ```
-This example returns all phone numbers sequenced between 1001 to 2000 in the record of phone numbers.
+This example returns phone numbers 1001 through 2000 from the sorted results.
 
 
 ### Example 9
@@ -196,7 +198,7 @@ AssignmentBlockedState  :
 AssignmentBlockedUntil  :
 SmsActivationState      : NotActivated
 ```
-This example displays when SkipInternalVoip option is turned on for a number.
+This example shows a phone number where the SkipInternalVoip reverse number lookup option is enabled.
 
 ### Example 11
 ```powershell
@@ -324,7 +326,7 @@ AssignmentBlockedState  : BlockedForever
 AssignmentBlockedUntil  :
 SmsActivationState      : NotActivated
 ```
-This example displays information about the telephone number +1 (402) 555-1234 which has a permanent assignment block. This block prevents the number from being assigned to any other user. Admin can remove the block using [Remove-CsPhoneNumberAssignmentBlock](./remove-csphonenumberassignmentblock.md).
+This example displays information about the telephone number +1 (402) 555-1234, which has a permanent assignment block. This block prevents the number from being assigned to any other user. An admin can remove the block by using [Remove-CsPhoneNumberAssignmentBlock](./remove-csphonenumberassignmentblock.md).
 
 ### Example 15
 ```powershell
@@ -356,7 +358,7 @@ AssignmentBlockedState  : BlockedUntil
 AssignmentBlockedUntil  : 2025-10-11T21:30:00.0000000Z
 SmsActivationState      : NotActivated
 ```
-This example displays information about the telephone number +1 (402) 555-1234 which has a temporary assignment block. This block prevents the number from being assigned to any other user. Once the period shown in AssignmentBlockedUntil passes, the AssignmentBlock will be automatically removed and the number will become available to be assigned to any user. Admin can also remove the block manually using [Remove-CsPhoneNumberAssignmentBlock](./remove-csphonenumberassignmentblock.md).
+This example displays information about the telephone number +1 (402) 555-1234, which has a temporary assignment block. This block prevents the number from being assigned to any other user. After the date and time shown in AssignmentBlockedUntil passes, the assignment block is automatically removed and the number becomes available for assignment. An admin can also remove the block manually by using [Remove-CsPhoneNumberAssignmentBlock](./remove-csphonenumberassignmentblock.md).
 
 ### Example 16
 ```powershell
@@ -424,7 +426,7 @@ This example displays information about the telephone number +1 (360) 322-7351 w
 
 ### Example 18
 ```powershell
-Get-CsPhoneNumberAssignment -TelephoneNumber +13603227351
+Get-CsPhoneNumberAssignment -TelephoneNumber +1555555555
 ```
 ```output
 TelephoneNumber         : +1555555555
@@ -452,7 +454,13 @@ AssignmentBlockedState  : NotBlocked
 AssignmentBlockedUntil  :
 SmsActivationState      : 
 ```
-This example displays information about the telephone number +1 (360) 322-7351 which is assigned as an alternate number for the user. (Multi-line feature is in Public Preview)
+This example displays information about the telephone number +1 (555) 555-5555, which is assigned as an alternate number for the user. The multiline feature is in public preview.
+
+### Example 19
+```powershell
+Get-CsPhoneNumberAssignment -Filter "SmsActivationState -eq 'Activated'"
+```
+This example returns phone numbers where SMS activation is enabled.
 
 ## PARAMETERS
 
@@ -460,7 +468,7 @@ This example displays information about the telephone number +1 (360) 322-7351 w
 
 > Applicable: Microsoft Teams
 
-Filters the returned results based on the number type. Supported values are Activated, AssignmentPending, AssignmentFailed, UpdatePending, and UpdateFailed.
+Filters the returned results based on activation state. Supported values are Activated, AssignmentPending, AssignmentFailed, UpdatePending, and UpdateFailed.
 
 ```yaml
 Type: System.String
@@ -496,7 +504,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-This parameter is used to differentiate between Primary and Private line assignment for a user.
+Filters the returned results based on assignment category. Supported values include Primary, Alternate, and Private.
 
 ```yaml
 Type: System.String
@@ -511,7 +519,7 @@ Accept wildcard characters: False
 ```
 
 ### -Break
-{{ Fill Break Description }}
+Waits for a .NET debugger to attach before running.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -531,9 +539,7 @@ Accept wildcard characters: False
 
 Filters the returned results based on the capabilities assigned to the phone number. You can specify one or more capabilities delimited by a comma. Supported capabilities are ConferenceAssignment, VoiceApplicationAssignment, UserAssignment, and TeamsPhoneMobile.
 
-If you specify only one capability, you will get all phone numbers returned that have that capability assigned. If you specify a comma separated list for instance like
-ConferenceAssignment, VoiceApplicationAssignment you will get all phone numbers that have both capabilities assigned, but you won't get phone numbers that have only
-VoiceApplicationAssignment or ConferenceAssignment assigned as capability.
+If you specify one capability, the cmdlet returns all phone numbers that have that capability. If you specify a comma-separated list, such as ConferenceAssignment,VoiceApplicationAssignment, the cmdlet returns only phone numbers that have all specified capabilities.
 
 ```yaml
 Type: System.String
@@ -581,7 +587,7 @@ Accept wildcard characters: False
 ```
 
 ### -HttpPipelineAppend
-{{ Fill HttpPipelineAppend Description }}
+Specifies SendAsync pipeline steps to append to the generated HTTP pipeline.
 
 ```yaml
 Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Runtime.SendAsyncStep[]
@@ -596,7 +602,7 @@ Accept wildcard characters: False
 ```
 
 ### -HttpPipelinePrepend
-{{ Fill HttpPipelinePrepend Description }}
+Specifies SendAsync pipeline steps to prepend to the generated HTTP pipeline.
 
 ```yaml
 Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Runtime.SendAsyncStep[]
@@ -683,7 +689,7 @@ Accept wildcard characters: False
 ```
 
 ### -Proxy
-{{ Fill Proxy Description }}
+Specifies the URI of the proxy server to use for the request.
 
 ```yaml
 Type: System.Uri
@@ -698,7 +704,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyCredential
-{{ Fill ProxyCredential Description }}
+Specifies credentials for a proxy server that requires authentication.
 
 ```yaml
 Type: System.Management.Automation.PSCredential
@@ -713,7 +719,7 @@ Accept wildcard characters: False
 ```
 
 ### -ProxyUseDefaultCredentials
-{{ Fill ProxyUseDefaultCredentials Description }}
+Indicates that the cmdlet uses the credentials of the current user for proxy authentication.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -783,8 +789,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-Filters the returned results based on substring match for the specified string on TelephoneNumber. To search for a number with an extension, you need to specify
-the digits of the extension. For supported formats see TelephoneNumber.
+Filters the returned results based on a substring match against TelephoneNumber. To search for a number with an extension, specify the digits of the extension. For supported formats, see TelephoneNumber.
 
 ```yaml
 Type: System.String
@@ -802,8 +807,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-Filters the returned results based on greater than match for the specified string on TelephoneNumber. Can be used together with TelephoneNumberLessThan to specify a
-range of phone numbers to return results for. For supported formats see TelephoneNumber.
+Filters the returned results to phone numbers greater than the specified TelephoneNumber value. You can use this parameter with TelephoneNumberLessThan to specify a range of phone numbers. For supported formats, see TelephoneNumber.
 
 ```yaml
 Type: System.String
@@ -821,8 +825,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-Filters the returned results based on less than match for the specified string on TelephoneNumber. Can be used together with TelephoneNumberGreaterThan to specify a
-range of phone numbers to return results for. For supported formats see TelephoneNumber.
+Filters the returned results to phone numbers less than the specified TelephoneNumber value. You can use this parameter with TelephoneNumberGreaterThan to specify a range of phone numbers. For supported formats, see TelephoneNumber.
 
 ```yaml
 Type: System.String
@@ -840,7 +843,7 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-Filters the returned results based on starts with string match for the specified string on TelephoneNumber. For supported formats see TelephoneNumber.
+Filters the returned results to phone numbers that start with the specified TelephoneNumber value. For supported formats, see TelephoneNumber.
 
 ```yaml
 Type: System.String
@@ -894,7 +897,7 @@ The state of the number in terms of blocked assignment: NotBlocked if there is n
 The date until which assignment is blocked for the phone number. Null if the number is blocked for assignment indefinitely.
 
 ### AssignmentCategory
-Contains the assignment category such as Primary, Alternate or Private.
+Contains the assignment category, such as Primary, Alternate, or Private.
 
 ### Capability
 The list of capabilities assigned to the phone number.
@@ -915,7 +918,7 @@ The subdivision within the country/region assigned to the phone number, for exam
 The ID of the Location assigned to the phone number.
 
 ### LocationUpdateSupported
-Boolean stating if updating of the location assigned to the phone number is allowed.
+Boolean value that indicates whether updating the location assigned to the phone number is allowed.
 
 ### NetworkSiteId
 This parameter is reserved for internal Microsoft use.
@@ -945,10 +948,10 @@ The name of the PSTN partner.
 The SMS activation state of the number.
 
 ### SmsProfileId
-The Id of the SMS partner.
+The ID of the SMS partner.
 
 ### TelephoneNumber
-The phone number. The number is always displayed with prefixed "+", even if it was not assigned using prefixed "+".
+The phone number. The number is always displayed with a prefixed "+", even if it wasn't assigned with a prefixed "+".
 
 The object returned is of type SkypeTelephoneNumberMgmtCmdletAcquiredTelephoneNumber.
 
@@ -956,7 +959,7 @@ The object returned is of type SkypeTelephoneNumberMgmtCmdletAcquiredTelephoneNu
 Status of Reverse Number Lookup (RNL). When it is set to SkipInternalVoip, the calls are handled through external PSTN connection instead of internal VoIP lookup.
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 4.0.0 or later. The parameter AssignmentCategory was introduced in Teams PowerShell module 5.3.1-preview. The parameter NetworkSiteId was introduced in Teams PowerShell module 5.5.0. The output parameter NumberSource was introduced in Teams PowerShell module 5.7.0. Multi-line related cmdlets are available from Teams PowerShell module 7.6.0.
+The cmdlet is available in Teams PowerShell module 4.0.0 or later. The parameter AssignmentCategory was introduced in Teams PowerShell module 5.3.1-preview. The parameter NetworkSiteId was introduced in Teams PowerShell module 5.5.0. The output parameter NumberSource was introduced in Teams PowerShell module 5.7.0. The output parameters AssignmentBlockedState and AssignmentBlockedUntil were introduced in Teams PowerShell module 7.5.0. Multiline related cmdlets are available from Teams PowerShell module 7.6.0. The output parameter SmsActivationState was introduced in Teams PowerShell module 7.7.0. 
 
 The cmdlet is only available in commercial, GCC, GCCH and DoD cloud instances.
 
@@ -964,3 +967,7 @@ The cmdlet is only available in commercial, GCC, GCCH and DoD cloud instances.
 [Remove-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csphonenumberassignment)
 
 [Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumberassignment)
+
+[Set-CsPhoneNumberSmsActivation](https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumbersmsactivation)
+
+[Remove-CsPhoneNumberSmsActivation](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csphonenumbersmsactivation)
