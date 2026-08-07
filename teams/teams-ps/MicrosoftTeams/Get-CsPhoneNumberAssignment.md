@@ -1,10 +1,10 @@
 ---
 applicable: Microsoft Teams
-author: officedocspr
+author: pavellatif
 external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-ms.author: odocspr
+ms.author: pavellatif
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csphonenumberassignment
 schema: 2.0.0
 title: Get-CsPhoneNumberAssignment
