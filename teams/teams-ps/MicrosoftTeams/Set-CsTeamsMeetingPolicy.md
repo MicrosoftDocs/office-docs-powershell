@@ -1,11 +1,11 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: vivekmo
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Locale: en-US
-manager: bulenteg
+manager: vivekmo
 Module Name: MicrosoftTeams
-ms.author: bulenteg
+ms.author: vivekmo
 ms.date: 07/13/2025
 ms.reviewer: alejandramu
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsmeetingpolicy
