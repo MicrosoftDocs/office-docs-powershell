@@ -1,11 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
-external help file: Microsoft.Rtc.Management.dll-Help.xml
+author: clyvr
+external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csmainlineattendantappointmentbookingflow
 schema: 2.0.0
 title: Set-CsMainlineAttendantAppointmentBookingFlow
@@ -26,7 +27,7 @@ Set-CsMainlineAttendantAppointmentBookingFlow -Instance <Object> [-Tenant <Guid>
 The Set-CsMainlineAttendantAppointmentBookingFlow cmdlet changes an existing appointment booking flow that is used with Mainline Attendant
 
 > [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
+> Teams Phone Agent (formerly Mainline Attendant) is currently only available to customers in the [Frontier](https://www.microsoft.com/microsoft-365-copilot/frontier-program) Public Preview program.
 
 ## EXAMPLES
 
@@ -50,6 +51,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Tenant
+
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -63,4 +80,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-CsMainlineAttendantAppointmentBookingFlow](https://learn.microsoft.com/powershell/module/microsoftteams/get-csmainlineattendantappointmentbookingflow)
 
+[New-CsMainlineAttendantAppointmentBookingFlow](https://learn.microsoft.com/powershell/module/microsoftteams/new-csmainlineattendantappointmentbookingflow)
+
+[Remove-CsMainlineAttendantAppointmentBookingFlow](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csmainlineattendantappointmentbookingflow)

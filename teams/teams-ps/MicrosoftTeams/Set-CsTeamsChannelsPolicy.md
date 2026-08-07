@@ -22,18 +22,12 @@ The CsTeamsChannelsPolicy allows you to manage features related to the Teams and
 
 ### Identity (Default)
 ```
-Set-CsTeamsChannelsPolicy [-Tenant <Guid>] [-AllowOrgWideTeamCreation <Boolean>]
- [-EnablePrivateTeamDiscovery <Boolean>] [-AllowPrivateChannelCreation <Boolean>]
- [-AllowUserToParticipateInExternalSharedChannel <Boolean>] [-AllowChannelSharingToExternalUser <Boolean>] [-AllowSharedChannelCreation <Boolean>] [-ThreadedChannelCreation <String>]
- [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsChannelsPolicy [-Tenant <Guid>] [-AllowOrgWideTeamCreation <Boolean>] [-EnablePrivateTeamDiscovery <Boolean>] [-AllowPrivateChannelCreation <Boolean>] [-AllowUserToParticipateInExternalSharedChannel <Boolean>] [-AllowChannelSharingToExternalUser <Boolean>] [-AllowSharedChannelCreation <Boolean>] [-ThreadedChannelCreation <String>]  [-AllowCreateChannel <String>] [-AllowCreateClassicChannel <String>] [-AllowCreatePrivateChannel <String>] [-AllowCreateSharedChannel <String>][-AllowGuestsFromOutsideTeam <String>] [-AllowGuestsFromOutsideTeamInPrivateChannel <String>] [-AllowSharingPrivateChannelWithTeamInOrg <String>] [-AllowSharingWithTeamInOrg <String>] [-AllowUsersFromOutsideTeam <String>] [-AllowUsersFromOutsideTeamInPrivateChannel <String>] [-CreateSharedChannelsByDefault <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Instance
 ```
-Set-CsTeamsChannelsPolicy [-Tenant <Guid>] [-AllowOrgWideTeamCreation <Boolean>]
- [-EnablePrivateTeamDiscovery <Boolean>] [-AllowPrivateChannelCreation <Boolean>]
- [-AllowUserToParticipateInExternalSharedChannel <Boolean>] [-AllowChannelSharingToExternalUser <Boolean>] [-AllowSharedChannelCreation <Boolean>]
- [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+Set-CsTeamsChannelsPolicy [-Tenant <Guid>] [-AllowOrgWideTeamCreation <Boolean>] [-EnablePrivateTeamDiscovery <Boolean>] [-AllowPrivateChannelCreation <Boolean>] [-AllowUserToParticipateInExternalSharedChannel <Boolean>] [-AllowChannelSharingToExternalUser <Boolean>] [-AllowSharedChannelCreation <Boolean>] [-ThreadedChannelCreation <String>]  [-AllowCreateChannel <String>] [-AllowCreateClassicChannel <String>] [-AllowCreatePrivateChannel <String>] [-AllowCreateSharedChannel <String>][-AllowGuestsFromOutsideTeam <String>] [-AllowGuestsFromOutsideTeamInPrivateChannel <String>] [-AllowSharingPrivateChannelWithTeamInOrg <String>] [-AllowSharingWithTeamInOrg <String>] [-AllowUsersFromOutsideTeam <String>] [-AllowUsersFromOutsideTeamInPrivateChannel <String>] [-CreateSharedChannelsByDefault <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -144,6 +138,259 @@ Determines whether a user is allowed to discover private teams in suggestions an
 
 ```yaml
 Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCreateChannel
+This setting enables/disables Next Generation Channel creation and editing.
+
+Possible values are:
+
+- **Enabled**: Users are allowed.
+- **Disabled**: Users are not allowed.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCreateClassicChannel
+This setting enables/disables Classic Channel creation and editing.
+
+Possible values are:
+
+- **Enabled**: Users are allowed.
+- **Disabled**: Users are not allowed.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCreatePrivateChannel
+This setting enables/disables Next Generation Private Channel creation and editing.
+
+Possible values are:
+
+- **Enabled**: Users are allowed.
+- **Disabled**: Users are not allowed.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowCreateSharedChannel
+This setting enables/disables Next Generation Shared Channel creation and editing.
+
+Possible values are:
+
+- **Enabled**: Users are allowed.
+- **Disabled**: Users are not allowed.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowGuestsFromOutsideTeam
+This setting enables/disables whether guests from outside the team are allowed in Next Generation Channels.
+
+Possible values are:
+
+- **Enabled**: Users are allowed.
+- **Disabled**: Users are not allowed.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowGuestsFromOutsideTeamInPrivateChannel
+This setting enables/disables whether guests from outside the team are allowed in Next Generation Private Channels.
+
+Possible values are:
+
+- **Enabled**: Users are allowed.
+- **Disabled**: Users are not allowed.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSharingPrivateChannelWithTeamInOrg
+This setting enables/disables sharing Next Generation Private Channels with Teams in the same organization.
+
+Possible values are:
+
+- **Enabled**: Users are allowed.
+- **Disabled**: Users are not allowed.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowSharingWithTeamInOrg
+This setting enables/disables sharing Next Generation Channels with Teams in the same organization.
+
+Possible values are:
+
+- **Enabled**: Users are allowed.
+- **Disabled**: Users are not allowed.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowUsersFromOutsideTeam
+This setting enables/disables whether users from outside the team are allowed in Next Generation Channels.
+
+Possible values are:
+
+- **Enabled**: Users are allowed.
+- **Disabled**: Users are not allowed.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowUsersFromOutsideTeamInPrivateChannel
+This setting enables/disables whether users from outside the team are allowed in Next Generation Private Channels.
+
+Possible values are:
+
+- **Enabled**: Users are allowed.
+- **Disabled**: Users are not allowed.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CreateSharedChannelsByDefault
+This setting sets whether users are able to create Next Generation Shared Channels by default.
+
+Possible values are:
+
+- **Enabled**: Users are allowed.
+- **Disabled**: Users are not allowed.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 

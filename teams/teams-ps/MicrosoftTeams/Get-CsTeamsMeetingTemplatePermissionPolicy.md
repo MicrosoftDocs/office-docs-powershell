@@ -18,16 +18,16 @@ Fetches the TeamsMeetingTemplatePermissionPolicy. This policy can be used to hid
 
 ### Identity
 ```powershell
-Get-CsTeamsMeetingTemplatePermissionPolicy [[-Identity] <string>] [<CommonParameters>]
+Get-CsTeamsMeetingTemplatePermissionPolicy [[-Identity] <string>]  [<CommonParameters>]
 ```
 
 ### Filter
 ```powershell
-Get-CsTeamsMeetingTemplatePermissionPolicy [-Filter <string>] [<CommonParameters>]
+Get-CsTeamsMeetingTemplatePermissionPolicy [-Filter <string>]  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Fetches the instances of the policy. Each policy object contains a property called `HiddenMeetingTemplates`.This array contains the list of meeting template IDs that will be hidden by that instance of the policy.
+Fetches the instances of the policy. Each policy object contains a property called `HiddenMeetingTemplates`.This array contains the list of meeting template IDs that will be hidden by that instance of the policy. The policy also contains a `DefaultMeetingTemplateId` property that specifies the ID of the meeting template to be applied by default to ad-hoc or standard meetings created by the user.
 
 ## EXAMPLES
 
@@ -36,21 +36,25 @@ Fetches the instances of the policy. Each policy object contains a property call
 ```powershell
 PS C:\> Get-CsTeamsMeetingTemplatePermissionPolicy
 
-Identity               : Global
-HiddenMeetingTemplates : {}
-Description            :
+Identity                  : Global
+HiddenMeetingTemplates    : {}
+Description               :
+DefaultMeetingTemplateId  :
 
-Identity               : Tag:Foobar
-HiddenMeetingTemplates : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056}
-Description            :
+Identity                  : Tag:Foobar
+HiddenMeetingTemplates    : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056}
+Description               :
+DefaultMeetingTemplateId  :
 
-Identity               : Tag:dashbrd test
-HiddenMeetingTemplates : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056}
-Description            : test
+Identity                  : Tag:dashbrd test
+HiddenMeetingTemplates    : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056}
+Description               : test
+DefaultMeetingTemplateId  : customtemplate_1ed47b4c-2a43-4a75-b884-87f4f3e3a1c8
 
-Identity               : Tag:Default
-HiddenMeetingTemplates : {}
-Description            :
+Identity                  : Tag:Default
+HiddenMeetingTemplates    : {}
+Description               :
+DefaultMeetingTemplateId  :
 ```
 
 Fetches all the policy instances currently available.
@@ -60,9 +64,10 @@ Fetches all the policy instances currently available.
 ```powershell
 PS C:\> Get-CsTeamsMeetingTemplatePermissionPolicy -Identity Foobar
 
-Identity               : Tag:Foobar
-HiddenMeetingTemplates : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056}
-Description            :
+Identity                  : Tag:Foobar
+HiddenMeetingTemplates    : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056}
+Description               :
+DefaultMeetingTemplateId  :
 ```
 
 Fetches an instance of a policy with known identity.
@@ -72,9 +77,10 @@ Fetches an instance of a policy with known identity.
 ```powershell
 PS C:\> Get-CsTeamsMeetingTemplatePermissionPolicy -Filter *Foo*
 
-Identity               : Tag:Foobar
-HiddenMeetingTemplates : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056}
-Description            :
+Identity                  : Tag:Foobar
+HiddenMeetingTemplates    : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056}
+Description               :
+DefaultMeetingTemplateId  :
 ```
 
 The `Filter` parameter can be used to fetch policy instances based on partial matches on Identity.

@@ -274,8 +274,8 @@ Accept wildcard characters: False
 
 The BulkMovesEnabled parameter specifies whether to tag all bulk mail as Bulk in supported email clients, and whether bulk mail below the BulkThreshold parameter is delivered to the Promotions folder in user mailboxes. Valid values are:
 
-- Yes
-- No
+- On
+- Off
 - NotSet (this value is the default)
 
 For more information, see [Deliver bulk mail below the BCL threshold to the Promotions folder](https://learn.microsoft.com/defender-office-365/anti-spam-bulk-complaint-level-bcl-about#deliver-bulk-mail-below-the-bcl-threshold-to-the-promotions-folder).
@@ -1251,6 +1251,7 @@ The RedirectToRecipients parameter specifies the email addresses of replacement 
 - BulkSpamAction
 - HighConfidenceSpamAction
 - PhishSpamAction
+- HighConfidencePhishAction
 - SpamAction
 
 You can specify multiple email addresses separated by commas.

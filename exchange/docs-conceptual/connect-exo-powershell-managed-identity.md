@@ -286,7 +286,7 @@ For detailed syntax and parameter information, see [New-AzAutomationModule](/pow
 
 #### Add the Exchange Online PowerShell module to Azure VMs with system-assigned managed identities
 
-Install the Exchange Online PowerShell module in the Azure VM. For instructions, see [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
+Install the Exchange Online PowerShell module in the Azure VM. For instructions, see [Install and update the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-update-the-exchange-online-powershell-module).
 
 ### Step 4: Grant the Exchange.ManageAsApp API permission for the managed identity to call Exchange Online
 

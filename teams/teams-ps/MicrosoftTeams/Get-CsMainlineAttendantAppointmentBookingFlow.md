@@ -1,11 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
-external help file: Microsoft.Rtc.Management.dll-Help.xml
+author: clyvr
+external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csmainlineattendantappointmentbookingflow
 schema: 2.0.0
 title: Get-CsMainlineAttendantAppointmentBookingFlow
@@ -19,25 +20,25 @@ The Get-CsMainlineAttendantAppointmentBookingFlow cmdlet returns the identified 
 ## SYNTAX
 
 ```
-Get-CsMainlineAttendantAppointmentBookingFlow [-Identity <Guid>] [-Tenant <Guid>] [-First <Int32>] [-Skip <Int32>] [-SortBy <String>] [-Descending <Switch>] [-NameFilter <String>] [<CommonParameters>]
+Get-CsMainlineAttendantAppointmentBookingFlow [-Identity <Guid>] [-Tenant <Guid>] [-First <Int32>] [-Skip <Int32>] [-SortBy <String>] [-Descending] [-NameFilter <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The Get-CsMainlineAttendantAppointmentBookingFlow cmdlet lets you retrieve information about the Mainline attendant appointment booking flows n your organization.
+The Get-CsMainlineAttendantAppointmentBookingFlow cmdlet lets you retrieve information about the Mainline attendant appointment booking flows in your organization.
 
 > [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
+> Teams Phone Agent (formerly Mainline Attendant) is currently only available to customers in the [Frontier](https://www.microsoft.com/microsoft-365-copilot/frontier-program) Public Preview program.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-CsMainlineAttendantAppointmentBookingFlow
 ```
 
 This example gets the first 100 Mainline attendant appointment booking flows in the organization.
 
-### -------------------------- Example 2 --------------------------
+### Example 2
 ```
 Get-CsMainlineAttendantAppointmentBookingFlow -Identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01
 ```
@@ -48,7 +49,7 @@ This example gets the Mainline attendant appointment booking flow with the ident
 
 ### -Identity
 
-PARAMVALUE: Guid
+The identifier of the appointment booking flow.
 
 ```yaml
 Type: Guid
@@ -64,7 +65,7 @@ Accept wildcard characters: False
 
 ### -Tenant
 
-PARAMVALUE: Guid
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: Guid
@@ -121,7 +122,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: Name
 Accept pipeline input: False
@@ -153,7 +154,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -175,3 +176,9 @@ Represents the unique identifier of an appointment booking flow.
 ## NOTES
 
 ## RELATED LINKS
+
+[New-CsMainlineAttendantAppointmentBookingFlow](https://learn.microsoft.com/powershell/module/microsoftteams/new-csmainlineattendantappointmentbookingflow)
+
+[Set-CsMainlineAttendantAppointmentBookingFlow](https://learn.microsoft.com/powershell/module/microsoftteams/set-csmainlineattendantappointmentbookingflow)
+
+[Remove-CsMainlineAttendantAppointmentBookingFlow](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csmainlineattendantappointmentbookingflow)

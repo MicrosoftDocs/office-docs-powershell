@@ -1,10 +1,10 @@
 ---
 applicable: Microsoft Teams
-author: officedocspr
+author: pavellatif
 external help file: Microsoft.Open.Teams.CommonLibrary.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-ms.author: odocspr
+ms.author: pavellatif
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csphonenumberassignment
 schema: 2.0.0
 title: Remove-CsPhoneNumberAssignment
@@ -13,13 +13,13 @@ title: Remove-CsPhoneNumberAssignment
 # Remove-CsPhoneNumberAssignment
 
 ## SYNOPSIS
-This cmdlet will remove/unassign a phone number from a user or a resource account (online application instance).
+Removes or unassigns a phone number from a user or resource account (online application instance).
 
 ## SYNTAX
 
 ### RemoveSome (Default)
 ```
-Remove-CsPhoneNumberAssignment -Identity <String> -PhoneNumber <String> -PhoneNumberType <String>
+Remove-CsPhoneNumberAssignment -Identity <String> -TelephoneNumber <String> -NumberType <String>
  [-HttpPipelinePrepend <SendAsyncStep[]>] [-Notify] [-AssignmentBlockedForever] [-AssignmentBlockedDays <Integer>] [<CommonParameters>]
 ```
 
@@ -30,60 +30,57 @@ Remove-CsPhoneNumberAssignment -Identity <String> [-HttpPipelinePrepend <SendAsy
 ```
 
 ## DESCRIPTION
-This cmdlet removes/unassigns a phone number from a user or resource account. The phone number continues to be available in the tenant.
+This cmdlet removes or unassigns a phone number from a user or resource account. The phone number continues to be available in the tenant unless you block assignment by using AssignmentBlockedForever or AssignmentBlockedDays.
 
-Unassigning a phone number from a user or resource account will automatically set EnterpriseVoiceEnabled to False.
+Unassigning a phone number from a user or resource account automatically sets EnterpriseVoiceEnabled to False.
 
-If the cmdlet executes successfully, no result object will be returned. If the cmdlet fails for any reason, a result object will be returned that contains a
-Code string parameter and a Message string parameter with additional details of the failure. Email notification to end user is a best effort operation.  No error message will be displayed if the email fails to send.
+If the cmdlet executes successfully, no result object is returned. If the cmdlet fails for any reason, a result object is returned that contains a Code string parameter and a Message string parameter with additional details about the failure. Email notification to the end user is a best-effort operation. No error message is displayed if the email fails to send.
 
 
-**Note**: In Teams PowerShell Module 4.2.1-preview and later we are changing how the cmdlet reports errors. Instead of using a result object, we will be generating an
-exception in case of an error and we will be appending the exception to the $Error automatic variable. The cmdlet will also
-now support the -ErrorAction parameter to control the execution after an error has occurred.
+**Note**: In Teams PowerShell module 4.2.1-preview and later, the cmdlet reports errors differently. Instead of returning a result object, the cmdlet generates an exception and appends it to the $Error automatic variable. The cmdlet also supports the ErrorAction parameter to control execution after an error occurs.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -PhoneNumberType CallingPlan
+Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -TelephoneNumber +12065551234 -NumberType CallingPlan
 ```
-This example removes/unassigns the Microsoft Calling Plan telephone number +1 (206) 555-1234 from the user user1@contoso.com.
+This example removes or unassigns the Microsoft Calling Plan telephone number +1 (206) 555-1234 from the user user1@contoso.com.
 
 ### Example 2
 ```powershell
 Remove-CsPhoneNumberAssignment -Identity user2@contoso.com -RemoveAll
 ```
-This example removes/unassigns all the telephone number from user2@contoso.com.
+This example removes or unassigns all telephone numbers from user2@contoso.com.
 
 ### Example 3
 ```powershell
-Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -PhoneNumberType CallingPlan -Notify
+Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -TelephoneNumber +12065551234 -NumberType CallingPlan -Notify
 ```
-This example removes/unassigns the Microsoft Calling Plan phone number +1 (206) 555-1234 from the user user1@contoso.com and also sends an email notification to the user about the removal of telephone number.
+This example removes or unassigns the Microsoft Calling Plan phone number +1 (206) 555-1234 from the user user1@contoso.com and sends an email notification to the user about the removal.
 
 ### Example 4
 ```powershell
 Remove-CsPhoneNumberAssignment -Identity user2@contoso.com -RemoveAll -Notify
 ```
-This example removes/unassigns all the telephone number from user2@contoso.com and also sends an email notification to the user about the change.
+This example removes or unassigns all telephone numbers from user2@contoso.com and sends an email notification to the user about the change.
 
 ### Example 5
 ```powershell
-Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -AssignmentBlockedForever
+Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -TelephoneNumber +12065551234 -NumberType CallingPlan -AssignmentBlockedForever
 ```
-This example removes a telephone number assignment from user1@contoso.com and also sets an assignment block on the unassigned number for an indefinite duration.
+This example removes a telephone number assignment from user1@contoso.com and sets an assignment block on the unassigned number for an indefinite duration.
 
 ### Example 6
 ```powershell
-Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -PhoneNumber +12065551234 -AssignmentBlockedDays 30
+Remove-CsPhoneNumberAssignment -Identity user1@contoso.com -TelephoneNumber +12065551234 -NumberType CallingPlan -AssignmentBlockedDays 30
 ```
-This example removes a telephone number assignment from user1@contoso.com and also sets an assignment block on the unassigned number for 30 days. Which means the telephone number will not be available for new assignment for 30 days or until the block is removed manually. The telephone number will automatically become available for assignment for 30 days period is over.
+This example removes a telephone number assignment from user1@contoso.com and sets an assignment block on the unassigned number for 30 days. The telephone number isn't available for new assignment for 30 days or until the block is removed manually. The telephone number automatically becomes available for assignment after the 30-day period ends.
 
 ## PARAMETERS
 
 ### -HttpPipelinePrepend
-{{ Fill HttpPipelinePrepend Description }}
+Specifies SendAsync pipeline steps to prepend to the generated HTTP pipeline.
 
 ```yaml
 Type: Microsoft.Teams.ConfigAPI.Cmdlets.Generated.Runtime.SendAsyncStep[]
@@ -98,8 +95,7 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity of the specific user or resource account. Can be specified using the value in the ObjectId, the SipProxyAddress, or the UserPrincipalName attribute of the user or
-resource account.
+The identity of the specific user or resource account. You can specify the ObjectId, SipProxyAddress, or UserPrincipalName attribute of the user or resource account.
 
 ```yaml
 Type: System.String
@@ -113,13 +109,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PhoneNumber
-The phone number to unassign from the user or resource account. Supports E.164 format and non-E.164 format. Needs to be without the prefixed "tel:".
+### -TelephoneNumber
+The phone number to unassign from the user or resource account. Supports E.164 and non-E.164 formats. The phone number can't have a "tel:" prefix.
 
 ```yaml
 Type: System.String
 Parameter Sets: RemoveSome
-Aliases:
+Aliases: PhoneNumber
 
 Required: True
 Position: Named
@@ -128,13 +124,13 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -PhoneNumberType
-The type of phone number to unassign from the user or resource account. The supported values are DirectRouting, CallingPlan and OperatorConnect.
+### -NumberType
+The type of phone number to unassign from the user or resource account. The supported values are DirectRouting, CallingPlan, and OperatorConnect.
 
 ```yaml
 Type: System.String
 Parameter Sets: RemoveSome
-Aliases:
+Aliases: PhoneNumberType
 
 Required: True
 Position: Named
@@ -144,7 +140,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoveAll
-Unassigns the phone number from the user or resource account.
+Unassigns all phone numbers from the user or resource account.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -189,7 +185,7 @@ Accept wildcard characters: False
 ```
 
 ### -AssignmentBlockedDays
-Sets a duration based assignment block on the telephone number. The value must be a valid integer between 1 and 365.
+Sets a duration-based assignment block on the telephone number. The value must be an integer from 1 through 365.
 
 ```yaml
 Type: System.Int32
@@ -216,9 +212,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Object
 
 ## NOTES
-The cmdlet is available in Teams PowerShell module 3.0.0 or later.
+The cmdlet is available in Teams PowerShell module 3.0.0 or later. The Notify parameter was introduced in Teams PowerShell module 7.3.0. The AssignmentBlockedForever and AssignmentBlockedDays parameters were introduced in Teams PowerShell module 7.5.0. 
 
 ## RELATED LINKS
 [Set-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csphonenumberassignment)
 
 [Get-CsPhoneNumberAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/get-csphonenumberassignment)
+
+[Remove-CsPhoneNumberAssignmentBlock](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csphonenumberassignmentblock)

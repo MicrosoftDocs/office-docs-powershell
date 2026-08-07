@@ -1,11 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
-external help file: Microsoft.Rtc.Management.dll-Help.xml
+author: clyvr
+external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csmainlineattendantquestionanswerflow
 schema: 2.0.0
 title: Remove-CsMainlineAttendantQuestionAnswerFlow
@@ -26,11 +27,11 @@ Remove-CsMainlineAttendantQuestionAnswerFlow -Identity <Guid> [-Tenant <Guid>] [
 The Remove-CsMainlineAttendantQuestionAnswerFlow cmdlet deletes an existing Mainline attendant question and answer flow.
 
 > [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
+> Teams Phone Agent (formerly Mainline Attendant) is currently only available to customers in the [Frontier](https://www.microsoft.com/microsoft-365-copilot/frontier-program) Public Preview program.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Remove-CsMainlineAttendantQuestionAnswerFlow -Identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01
 ```
@@ -40,14 +41,14 @@ This example removes the Mainline attendant question and answer flow with the id
 ## PARAMETERS
 
 ### -Identity
-PARAMVALUE: Guid
+The identifier of the question and answer flow.
 
 ```yaml
 Type: Guid
 Parameter Sets: (All)
 Aliases:
 
-Required: False
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -55,7 +56,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tenant
-PARAMVALUE: Guid
+This parameter is reserved for Microsoft internal use only.
 
 ```yaml
 Type: Guid
@@ -79,9 +80,14 @@ Represents the unique identifier of a Mainline attendant question and answer flo
 
 ## OUTPUTS
 
-### Microsoft.Rtc.Management.Hosted.CallQueue.Models.CallQueue
+### None
 
 ## NOTES
 
 ## RELATED LINKS
 
+[Get-CsMainlineAttendantQuestionAnswerFlow](https://learn.microsoft.com/powershell/module/microsoftteams/get-csmainlineattendantquestionanswerflow)
+
+[New-CsMainlineAttendantQuestionAnswerFlow](https://learn.microsoft.com/powershell/module/microsoftteams/new-csmainlineattendantquestionanswerflow)
+
+[Set-CsMainlineAttendantQuestionAnswerFlow](https://learn.microsoft.com/powershell/module/microsoftteams/set-csmainlineattendantquestionanswerflow)

@@ -27,6 +27,7 @@ Set-CsTeamsMessagingConfiguration [-Identity] <String>
  [-UrlReputationCheck <string>]
  [-ContentBasedPhishingCheck <string>]
  [-ReportIncorrectSecurityDetections<string>]
+ [-Communities <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -253,6 +254,30 @@ Default value: Enabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -Communities
+This setting enables/disables Viva Engage Communities integration across the whole tenant.
+
+Possible values are:
+
+- **Enabled**: Viva Engage Communities integration is enabled for the tenant.
+- **Disabled**: Viva Engage Communities integration is disabled for the tenant.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -WhatIf
 

@@ -1,11 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
-external help file: Microsoft.Rtc.Management.dll-Help.xml
+author: clyvr
+external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csmainlineattendantsupportedvoices
 schema: 2.0.0
 title: Get-CsMainlineAttendantSupportedVoices
@@ -28,14 +29,16 @@ Get-CsMainlineAttendantSupportedVoices
 The Get-CsMainlineAttendantSupportedVoices cmdlet returns a list of voices that are supported for use with Mainline Attendant.
 
 > [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
+> Teams Phone Agent (formerly Mainline Attendant) is currently only available to customers in the [Frontier](https://www.microsoft.com/microsoft-365-copilot/frontier-program) Public Preview program.
 
 ## EXAMPLES
 
-### -------------------------- Example 1 --------------------------
+### Example 1
 ```
 Get-CsMainlineAttendantSupportedVoices
 ```
+
+## PARAMETERS
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
@@ -53,3 +56,6 @@ Represents the unique identifier of a question and answer booking flow.
 
 ## RELATED LINKS
 
+[Get-CsMainlineAttendantSupportedLanguages](https://learn.microsoft.com/powershell/module/microsoftteams/get-csmainlineattendantsupportedlanguages)
+
+[Get-CsMainlineAttendantTenantInformation](https://learn.microsoft.com/powershell/module/microsoftteams/get-csmainlineattendanttenantinformation)

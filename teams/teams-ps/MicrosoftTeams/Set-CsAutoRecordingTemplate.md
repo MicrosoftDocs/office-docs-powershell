@@ -1,12 +1,13 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Set-CsAutoRecordingTemplate
+ms.author: colongma
+ms.reviewer: colongma
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csautorecordingtemplate
 schema: 2.0.0
 title: Set-CsAutoRecordingTemplate
 ---
@@ -19,7 +20,7 @@ Use the Set-CsAutoRecordingTemplate cmdlet to change an Auto Recording template
 ## SYNTAX
 
 ```
-Set-CsAutoRecordingTemplate -Instance <instance> [<CommonParameters>]
+Set-CsAutoRecordingTemplate -Instance <Object> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -47,7 +48,7 @@ This example sets the EnableTranscript value in the Auto Recording Template with
 The instance of the auto recording template to change.
 
 ```yaml
-Type: System.String
+Type: Object
 Parameter Sets: (All)
 Aliases:
 
