@@ -24,7 +24,8 @@ New online voicemail user settings of the user would be returned after executing
 Set-CsOnlineVoicemailUserSettings [-Identity] <string> [-CallAnswerRule <Object>] [-DefaultGreetingPromptOverwrite <string>]
 [-DefaultOofGreetingPromptOverwrite <string>] [-Force] [-OofGreetingEnabled <boolean>] [-OofGreetingFollowAutomaticRepliesEnabled <boolean>]
 [-OofGreetingFollowCalendarEnabled <boolean>] [-PromptLanguage <string>] [-ShareData <boolean>] [-TransferTarget <string>]
-[-VoicemailEnabled <boolean>] [-WhatIf] [-Confirm] [<CommonParameters>]
+[-VoicemailEnabled <boolean>]  [-UrgencyDetectionEnabled <boolean>] [-CategoryDetectionEnabled <boolean>]  [-CallToActionDetectionEnabled <boolean>]
+[-VoiceToTextSummaryEnabled <boolean>]  [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -67,6 +68,11 @@ Set-CsOnlineVoicemailUserSettings -Identity user6@contoso.com -DefaultGreetingPr
 ```
 
 This example changes DefaultGreetingPromptOverwrite setting to "Hi, I am currently not available." for user6@contoso.com.
+
+### Example 6
+Set-CsOnlineVoicemailUserSettings -Identity 345987e0-258d-4278-8b75-ce0d6504a5be -UrgencyDetectionEnabled $true -CategoryDetectionEnabled $true -CallToActionDetectionEnabled $true -VoiceToTextSummaryEnabled $false
+
+This example updates the Voicemail AI triage settings for a user by enabling urgency, category, and actions detection, while disabling voicemail summaries.
 
 ## PARAMETERS
 
@@ -345,6 +351,14 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+###  -UrgencyDetectionEnabled 
+tdb
+### -CategoryDetectionEnabled 
+tbd
+### -CallToActionDetectionEnabled 
+tbd
+### -VoiceToTextSummaryEnabled
+tbd
 ### -WhatIf
 
 Describes what would happen if you executed the command without actually executing the command.
