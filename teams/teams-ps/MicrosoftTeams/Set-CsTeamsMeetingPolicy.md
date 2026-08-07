@@ -5,12 +5,13 @@ external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
-ms.author: tomkau
+ms.author: bulenteg
 ms.date: 07/13/2025
 ms.reviewer: alejandramu
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsmeetingpolicy
 schema: 2.0.0
 title: Set-CsTeamsMeetingPolicy
+description: CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings and the features that are available in those meetings
 ---
 
 # Set-CsTeamsMeetingPolicy
