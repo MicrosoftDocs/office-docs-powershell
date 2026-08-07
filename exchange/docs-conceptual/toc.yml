@@ -57,6 +57,19 @@
               href: filters-v2.md
         - name: Property sets in Exchange Online PowerShell module cmdlets
           href: cmdlet-property-sets.md
+    - name: Microsoft Defender for Office 365 PowerShell
+      href: defender-office-365-powershell-overview.md
+      items:
+        - name: About the Exchange Online PowerShell module
+          href: exchange-online-powershell-v2.md
+        - name: Connect to Microsoft Defender for Office 365 PowerShell
+          href: connect-to-defender-for-office-365-powershell.md
+        - name: App-only authentication for unattended scripts
+          href: app-only-auth-powershell-v2.md
+        - name: Exchange cmdlet syntax
+          href: exchange-cmdlet-syntax.md
+        - name: What's new in the Exchange Online PowerShell module
+          href: whats-new-in-the-exo-module.md
     - name: Security & Compliance PowerShell
       href: scc-powershell.md
       items:
