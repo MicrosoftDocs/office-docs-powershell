@@ -1,0 +1,66 @@
+name: Assign and label PR
+
+permissions:
+  pull-requests: write
+  contents: read
+  actions: read
+      
+on: 
+    workflow_run:
+        workflows: [Background tasks]
+        types:
+            - completed
+
+jobs:
+    config:
+        if: github.repository_owner == 'MicrosoftDocs'
+        runs-on: ubuntu-latest
+        outputs:
+            AutoAssignUsers: ${{ steps.read.outputs.AutoAssignUsers }}
+            AutoAssignReviewers: ${{ steps.read.outputs.AutoAssignReviewers }}
+            AutoLabel: ${{ steps.read.outputs.AutoLabel }}
+            ExcludedUserList: ${{ steps.read.outputs.ExcludedUserList }}
+            ExcludedBranchList: ${{ steps.read.outputs.ExcludedBranchList }}
+        steps:
+            - uses: actions/checkout@v5
+              with:
+                sparse-checkout: .github/workflow-config.json
+                sparse-checkout-cone-mode: false
+            - id: read
+              shell: pwsh
+              run: |
+                $Config = (Get-Content '.github/workflow-config.json' | ConvertFrom-Json).AutoLabelAssign
+                "AutoAssignUsers=$($Config.AutoAssignUsers)" >> $Env:GITHUB_OUTPUT
+                "AutoAssignReviewers=$($Config.AutoAssignReviewers)" >> $Env:GITHUB_OUTPUT
+                "AutoLabel=$($Config.AutoLabel)" >> $Env:GITHUB_OUTPUT
+                "ExcludedUserList=$($Config.ExcludedUserList | ConvertTo-Json -Compress)" >> $Env:GITHUB_OUTPUT
+                "ExcludedBranchList=$($Config.ExcludedBranchList | ConvertTo-Json -Compress)" >> $Env:GITHUB_OUTPUT
+
+    download-payload:
+        name: Download and extract payload artifact
+        if: github.repository_owner == 'MicrosoftDocs'
+        uses: MicrosoftDocs/tcp-workflows/.github/workflows/Shared-ExtractPayload.yml@workflows-prod
+        with:
+            WorkflowId: ${{ github.event.workflow_run.id }}
+            OrgRepo: ${{ github.repository }}
+        secrets:
+            AccessToken: ${{ secrets.GITHUB_TOKEN }}
+
+    label-assign:
+        name: Run assign and label
+        if: github.repository_owner == 'MicrosoftDocs'
+        needs: [config, download-payload]
+        uses: MicrosoftDocs/tcp-workflows/.github/workflows/Shared-AutoLabelAssign.yml@workflows-prod
+        with:
+            PayloadJson: ${{ needs.download-payload.outputs.WorkflowPayload }}
+            AutoAssignUsers: ${{ fromJSON(needs.config.outputs.AutoAssignUsers) }}
+            AutoAssignReviewers: ${{ fromJSON(needs.config.outputs.AutoAssignReviewers) }}
+            AutoLabel: ${{ fromJSON(needs.config.outputs.AutoLabel) }}
+            ExcludedUserList: ${{ needs.config.outputs.ExcludedUserList }}
+            ExcludedBranchList: ${{ needs.config.outputs.ExcludedBranchList }}
+        secrets:
+            AccessToken: ${{ secrets.GITHUB_TOKEN }}
+            PrivateKey: ${{ secrets.M365_APP_PRIVATE_KEY }}
+            ClientId: ${{ secrets.M365_APP_CLIENT_ID }}
+
+

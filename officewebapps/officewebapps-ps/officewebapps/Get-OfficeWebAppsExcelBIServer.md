@@ -4,15 +4,17 @@ Module Name: officewebapps
 title: Get-OfficeWebAppsExcelBIServer
 online version:
 schema: 2.0.0
-author: serdarsoysal
-ms.author: serdars
+author: officedocspr
+ms.author: odocspr
 ms.reviewer:
 ---
 
 # Get-OfficeWebAppsExcelBIServer
 
 ## SYNOPSIS
-Returns the server ID of the instance of Analysis Services that has been configured as a data model server in Office Online Server.
+
+Returns the server ID of the instance of Analysis Services that has been configured as a data model
+server in Office Online Server.
 
 ## SYNTAX
 
@@ -21,12 +23,15 @@ Get-OfficeWebAppsExcelBIServer
 ```
 
 ## DESCRIPTION
-Returns the server ID of the instance of Analysis Services that has been configured as a data model server in Office Online Server.
+
+Returns the server ID of the instance of Analysis Services that has been configured as a data model
+server in Office Online Server.
 
 ## EXAMPLES
 
 ### Example 1
-```
+
+```powershell
 Get-OfficeWebAppsExcelBIServer
 ```
 

@@ -1,0 +1,74 @@
+---
+applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
+external help file: Microsoft.Exchange.ServerStatus-Help.xml
+Locale: en-US
+Module Name: ExchangePowerShell
+online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-externalinoutlook
+schema: 2.0.0
+title: Get-ExternalInOutlook
+---
+
+# Get-ExternalInOutlook
+
+## SYNOPSIS
+This cmdlet is available only in the cloud-based service.
+
+Use the Get-ExternalInOutlook cmdlet to view the configuration of external sender identification that's available in Outlook, Outlook for Mac, Outlook on the web, and Outlook for iOS and Android.
+
+For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
+
+## SYNTAX
+
+```
+Get-ExternalInOutlook [[-Identity] <OrganizationIdParameter>] [<CommonParameters>]
+```
+
+## DESCRIPTION
+The important properties that are returned in the output of this cmdlet are:
+
+- Enabled: True means the feature is enabled; False means the feature is disabled.
+- AllowList: The list of exceptions. Messages received from the specified senders or senders in the specified domains don't receive the External icon in the area of subject line.
+
+You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
+
+## EXAMPLES
+
+### Example 1
+```powershell
+Get-ExternalInOutlook
+```
+
+This example returns the settings of the external sender identification feature for the organization.
+
+## PARAMETERS
+
+### -Identity
+
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
+
+The Identity parameter specifies the GUID of the external sender identification object that you want to view. Although this parameter is available, you don't need to use it.
+
+**Caution**: The value $null or a non-existent value for the Identity parameter returns *all* objects as if you ran the Get- command without the Identity parameter. Verify any lists of values for the Identity parameter are accurate and don't contain non-existent $null values.
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS

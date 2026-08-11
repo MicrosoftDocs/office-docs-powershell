@@ -4,9 +4,13 @@ _site/
 .optemp/
 _themes*/
 .vs/
+common/
+.vscode/
+*.ini
+.DS_Store
+*.db
+\.idea/
 .local/
 
 .openpublishing.buildcore.ps1
 **/node_modules
-
-\.idea/

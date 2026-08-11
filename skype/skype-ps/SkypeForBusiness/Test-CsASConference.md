@@ -1,0 +1,359 @@
+---
+applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+author: hirenshah1
+external help file: Microsoft.Rtc.Management.dll-help.xml
+Locale: en-US
+manager: rogupta
+Module Name: SkypeForBusiness
+ms.author: hirshah
+online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/test-csasconference
+schema: 2.0.0
+title: Test-CsASConference
+---
+
+# Test-CsASConference
+
+## SYNOPSIS
+Tests the ability of a pair of users to take part in an application sharing conference.
+This cmdlet was introduced in Lync Server 2013.
+
+
+## SYNTAX
+
+### ClientPlatform
+```
+Test-CsASConference [[-TargetFqdn] <String>] -ReceiverCredential <PSCredential>
+ -SenderCredential <PSCredential> [-Authentication <AuthenticationMechanism>] [-Force]
+ [-OutLoggerVariable <String>] [-OutVerboseVariable <String>] -ReceiverSipAddress <String>
+ [-RegistrarPort <Int32>] -SenderSipAddress <String> [-TestJoinLauncher] [<CommonParameters>]
+```
+
+### ServerPlatform
+```
+Test-CsASConference [-TargetFqdn] <String> [-Authentication <AuthenticationMechanism>] [-Force]
+ [-OutLoggerVariable <String>] [-OutVerboseVariable <String>] [-ReceiverSipAddress <String>]
+ [-RegistrarPort <Int32>] [-SenderSipAddress <String>] [-TestJoinLauncher] [<CommonParameters>]
+```
+
+## DESCRIPTION
+The `Test-CsASConference` cmdlet verifies that a pair of test users can participate in an online conference that includes application sharing.
+To do this, the cmdlet registers the two users with Skype for Business Server and then it uses one of the user accounts to create a new conference that includes applications sharing.
+The cmdlet then verifies that the second user is able to join that conference.
+
+Note that this command will fail if the test users have been assigned a conferencing policy that prevents them from using application sharing.
+
+Skype for Business Server: The functions carried out by the `Test-CsASConference` cmdlet are not available in the Skype for Business Server.
+
+
+## EXAMPLES
+
+### Example 1
+```
+Test-CsASConference -TargetFqdn "atl-cs-001.litwareinc.com"
+```
+
+The command shown in Example 1 verifies that an Application Sharing conference can be conducted on the pool `atl-cs-001.litwareinc.com`.
+This command assumes that you have configured a pair of test users for the specified pool.
+If no such test users exist, the command will fail.
+
+
+### Example 2
+```
+Test-CsASConference -TargetFqdn "atl-cs-001.litwareinc.com" -TestJoinLauncher
+```
+
+Example 2 tests the ability of the Join Launcher service to participate in an Application Sharing conference on the pool `atl-cs-001.litwareinc.com`.
+Note that this command tests only the service itself; you do not need any mobile devices in order to run the command.
+
+
+### Example 3
+```
+$cred1 = Get-Credential "litwareinc\pilar"
+
+$cred2 = Get-Credential "litwareinc\kenmyer"
+
+Test-CsASConference -TargetFqdn atl-cs-001.litwareinc.com -SenderSipAddress "sip:pilar@litwareinc.com" -SenderCredential $cred1 -ReceiverSipAddress "sip:kenmyer@litwareinc.com" -ReceiverCredential $cred2
+```
+
+The commands shown in Example 2 test the ability of a pair of users (litwareinc\pilar and litwareinc\kenmyer) to log on to Skype for Business Server and then conduct an Application Sharing conference.
+To do this, the first command in the example uses the `Get-Credential` cmdlet to create a Windows PowerShell command-line interface credential object containing the name and password of the user Pilar Ackerman.
+(Because the logon name, litwareinc\pilar, has been included as a parameter, the Windows PowerShell Credential Request dialog box only requires the administrator to enter the password for the Pilar Ackerman account.) The resulting credential object is then stored in a variable named $cred1.
+The second command does the same thing, this time returning a credential object for the Ken Myer account.
+
+With the credential objects in hand, the third command determines whether or not these two users can log on to Skype for Business Server and conduct an Application Sharing conference.
+To carry out this task, the `Test-CsASConference` cmdlet is called, along with the following parameters: TargetFqdn (the FQDN of the Registrar pool); SenderSipAddress (the SIP address for the first test user); SenderCredential (the Windows PowerShell object containing the credentials for this same user); ReceiverSipAddress (the SIP address for the other test user) and ReceiverCredential (the Windows PowerShell object containing the credentials for the other test user).
+
+
+## PARAMETERS
+
+### -Authentication
+
+> Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+Type of authentication used when running the test.
+Allowed values are:
+
+* TrustedServer
+* Negotiate
+* ClientCertificate
+* LiveID
+
+```yaml
+Type: AuthenticationMechanism
+Parameter Sets: (All)
+Aliases: Ath
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Force
+
+> Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+Suppresses the display of any non-fatal error message that might occur when running the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutLoggerVariable
+
+> Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+When present, detailed output from running the cmdlet will be stored in the specified variable.
+This variable includes a pair of methods - ToHTML and ToXML - that can then be used to save that output to either an HTML or an XML file.
+
+To store output in a logger variable named $TestOutput use the following syntax:
+
+`-OutLoggerVariable TestOutput`
+
+Note: Do not prepend a $ character when specifying the variable name.
+
+To save the information stored in the logger variable to an HTML file, use a command similar to this:
+
+`$TestOutput.ToHTML() \> C:\Logs\TestOutput.html`
+
+To save the information stored in the logger variable to an XML file, use a command similar to this:
+
+`$TestOutput.ToXML() \> C:\Logs\TestOutput.xml`
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: olv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -OutVerboseVariable
+
+> Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+When present, detailed output from running the cmdlet will be stored in the specified variable.
+For example, to store output in a variable named $TestOutput use the following syntax:
+
+`-OutVerboseVariable TestOutput`
+
+Do not prepend a $ character when specifying the variable name.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: ovv
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReceiverCredential
+
+> Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+User credential object for the first of the two user accounts to be tested.
+The value passed to ReceiverCredential should be an object reference obtained by using the `Get-Credential` cmdlet.
+For example, this code returns a credentials object for the user litwareinc\pilar and stores that object in a variable named $y:
+
+`$y = Get-Credential "litwareinc\pilar"`
+
+You need to supply the user password when running this command.
+
+The receiver credential is not required if you are running the test under the health monitoring configuration settings for the pool.
+
+```yaml
+Type: PSCredential
+Parameter Sets: ClientPlatform
+Aliases: rc
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReceiverSipAddress
+
+> Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+SIP address for the first of the two user accounts to be tested.
+For example: `-ReceiverSipAddress "sip:pilar@litwareinc.com"`.
+The ReceiverSIPAddress parameter must reference the same user account as ReceiverCredential.
+
+The SIP address is not required if you are running the test under the health monitoring configuration settings for the pool.
+
+```yaml
+Type: String
+Parameter Sets: ClientPlatform, ServerPlatform
+Aliases: ra
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RegistrarPort
+
+> Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+SIP port used by the Registrar service.
+This parameter is not required if the Registrar uses the default port 5061.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases: rp
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SenderCredential
+
+> Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+User credential object for the second of the two user accounts to be tested.
+The value passed to SenderCredential should be an object reference obtained by using the `Get-Credential` cmdlet.
+For example, this code returns a credentials object for the user litwareinc\kenmyer and stores that object in a variable named $x:
+
+`$x = Get-Credential "litwareinc\kenmyer"`
+
+You need to supply the user password when running this command.
+
+The sender credential is not required if you are running the test under the health monitoring configuration settings for the pool.
+
+```yaml
+Type: PSCredential
+Parameter Sets: ClientPlatform
+Aliases: sc
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SenderSipAddress
+
+> Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+SIP address for the second of the two user accounts to be tested.
+For example: `-SenderSipAddress "sip:kenmyer@litwareinc.com"`.
+The SenderSipAddress parameter must reference the same user account as SenderCredential.
+
+The SIP address is not required if you are running the test under the health monitoring configuration settings for the pool.
+
+```yaml
+Type: String
+Parameter Sets: ClientPlatform, ServerPlatform
+Aliases: sa
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TargetFqdn
+
+> Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+Fully qualified domain name (FQDN) of the pool to be tested.
+
+```yaml
+Type: String
+Parameter Sets: ClientPlatform, ServerPlatform
+Aliases: t
+
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -TestJoinLauncher
+
+> Applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
+
+When present, tests the ability of the Join Launcher to participate in a conference.
+The Join Launcher is used to help users of mobile devices (and as a result, users of the Mobility Service) take part in conferences.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### None
+The `Test-CsASConference` cmdlet does not accept pipelined input.
+
+## OUTPUTS
+
+### Microsoft.Rtc.SyntheticTransactions.TaskOutput
+The `Test-CsASConference` cmdlet returns an instance of the Microsoft.Rtc.SyntheticTransactions.TaskOutput object.
+
+## NOTES
+
+## RELATED LINKS
+
+[Get-CsConferencingPolicy](Get-CsConferencingPolicy.md)
+
+[Test-CsDataConference](Test-CsDataConference.md)

@@ -1,28 +1,31 @@
 ---
-title: "Exchange Online Protection PowerShell"
-ms.author: chrisda
-author: chrisda
-manager: dansimp
-ms.date: 2/20/2018
+title: "PowerShell for the Built-in security add-on for on-premises mailboxes"
+ms.date: 12/16/2025
 ms.audience: Admin
 ms.topic: article
-ms.service: exchange-powershell
-localization_priority: Normal
+ms.localizationpriority: medium
 ms.assetid: f7918a88-774a-405e-945b-bc2f5ee9f748
-description: "Learn about using PowerShell in Exchange Online Protection"
+description: "Learn about the articles available for using PowerShell for the Built-in security add-on for on-premises mailboxes."
 ---
 
-# Exchange Online Protection PowerShell
+# PowerShell for the Built-in security add-on for on-premises mailboxes
 
-Exchange Online Protection PowerShell is the administrative interface that enables you to manage your standalone Exchange Online Protection (EOP) organization from the command line. For example, you can use Exchange Online Protection PowerShell to configure mail flow rules (also known as transport rules) and connectors.
+PowerShell is the administrative interface that enables you to manage features in [the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop) from the command line. For example, you can use PowerShell to configure anti-spam policies, mail flow rules (also known as transport rules) and connectors to support on-premises email protection.
 
-> [!NOTE]
-> Exchange Online Protection PowerShell is only used in *standalone* EOP organizations. For example, your Microsoft 365 subscription only includes EOP (no Exchange mailboxes), and you use it to protect your on-premises email environment. If you have a Microsoft 365 subscription that includes Exchange Online mailboxes (E3, E5, etc.), you can't use Exchange Online Protection PowerShell; the same features are available in [Exchange Online PowerShell](exchange-online-powershell.md).
+> [!TIP]
+> All organizations with cloud mailboxes (Microsoft 365 A3/E3/G3, Microsoft 365 Business Standard, Microsoft 365 Business Premium, etc.) use [Exchange Online PowerShell](exchange-online-powershell.md) to manage these same features for cloud email protection.
 
-The following topics provide information about using Exchange Online Protection PowerShell:
+PowerShell in the Built-in security add-on for on-premises mailboxes is available in the following scenarios:
 
-- To create a remote PowerShell session to your standalone Exchange Online Protection organization that supports both modern authentication and multi-factor authentication (MFA), see [Connect to Exchange Online Protection PowerShell](connect-to-exchange-online-protection-powershell.md).
+- **On-premises email environments (not just Microsoft Exchange)**: Mail from the internet passes through the Microsoft cloud organization for protection and filtering before delivery to on-premises recipients. The Microsoft cloud organization contains no cloud mailboxes.
+- **Exchange Enterprise CAL with Services**: The licenses for your on-premises Exchange organization include Exchange Enterprise CAL with Services (the Built-in security add-on for on-premises mailboxes is one of the services).
 
-- To learn about the structure and layout of the cmdlet reference topics in Exchange Online Protection PowerShell, see [Exchange cmdlet syntax](exchange-cmdlet-syntax.md).
+The following articles provide information about using PowerShell in the Built-in security add-on for on-premises mailboxes:
 
-- For a sample script that lets admins who manage multiple organizations apply configuration settings to all of their organizations, see [Sample script for applying EOP settings to multiple tenants](https://docs.microsoft.com/microsoft-365/security/office-365-security/sample-script-for-applying-eop-settings-to-multiple-tenants).
+- To learn about the ExchangeOnlineManagement module that's required to connect to PowerShell, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
+
+  To learn about what's new in the Exchange Online PowerShell module, see [What's new in the Exchange Online PowerShell module](whats-new-in-the-exo-module.md).
+
+- The connection instructions for PowerShell in the Built-in security add-on for on-premises mailboxes and in Exchange Online PowerShell are the same. For instructions, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
+
+- To learn about the structure and layout of the cmdlet reference articles, see [Exchange cmdlet syntax](exchange-cmdlet-syntax.md).

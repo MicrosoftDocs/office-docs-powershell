@@ -1,0 +1,351 @@
+---
+applicable: Microsoft Teams
+author: clyvr
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+Locale: en-US
+manager: roykuntz
+Module Name: MicrosoftTeams
+ms.author: colongma
+ms.reviewer: colongma
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinevoicemailpolicy
+schema: 2.0.0
+title: New-CsOnlineVoicemailPolicy
+---
+
+# New-CsOnlineVoicemailPolicy
+
+## SYNOPSIS
+Creates a new Online Voicemail policy.
+
+## SYNTAX
+
+### Identity (Default)
+
+```
+New-CsOnlineVoicemailPolicy [-Identity] <string> [-EnableEditingCallAnswerRulesSetting <boolean>]
+ [-EnableTranscription <boolean>] [-EnableTranscriptionProfanityMasking <boolean>]
+ [-EnableTranscriptionTranslation <boolean>] [-MaximumRecordingLength <timespan>]
+ [-PostAmbleAudioFile <string>] [-PreambleAudioFile <string>]
+ [-PreamblePostambleMandatory <boolean>] [-PrimarySystemPromptLanguage <string>]
+ [-SecondarySystemPromptLanguage <string>] [-ShareData <string>] [-EnableVoicemailTriage <boolean>] [-WhatIf] [-Confirm]
+ [-Description <String>] [<CommonParameters>]
+```
+
+## DESCRIPTION
+Cloud Voicemail provides voicemail recording, deposit, and retrieval capabilities for Microsoft Teams and Teams Phone users.
+
+By default, Teams and Teams Phone users are enabled for Cloud Voicemail. The Online Voicemail Policy controls whether voicemail transcription, transcription profanity masking, transcription translation, AI-powered voicemail triage, and call answer rule editing are enabled for a user. The policy also specifies the maximum voicemail recording length and the primary and secondary system prompt languages used by the voicemail service.
+
+By default:
+
+- Voicemail transcription is enabled
+- Transcription profanity masking is disabled
+- Transcription translation is enabled
+- Call answer rule editing is enabled
+- The maximum voicemail recording length is 5 minutes
+- The primary and secondary system prompt languages are not configured. The user's voicemail language setting is used instead
+- AI-powered voicemail triage is disabled
+
+Tenant admin would be able to create a customized online voicemail policy to match the organization's requirements.
+
+> [!IMPORTANT]
+> The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
+>
+> - EnableVoicemailTriage
+
+## EXAMPLES
+
+### Example 1
+```
+New-CsOnlineVoicemailPolicy -Identity "CustomOnlineVoicemailPolicy" -MaximumRecordingLength ([TimeSpan]::FromSeconds(60))
+```
+
+The command shown in Example 1 creates a per-user online voicemail policy CustomOnlineVoicemailPolicy with MaximumRecordingLength set to 60 seconds and other fields set to tenant level global value.
+
+### Example 2
+```
+New-CsOnlineVoicemailPolicy -Identity "CustomOnlineVoicemailPolicy" -Description "Test Desc"  -EnableTranscription $true  -EnableTranscriptionProfanityMasking $true -EnableEditingCallAnswerRulesSetting $true -MaximumRecordingLength "00:05:00" -EnableTranscriptionTranslation $true -PreamblePostambleMandatory $false -EnableVoicemailTriage $true
+
+```
+This example creates a custom Online Voicemail policy with transcription, transcription translation, profanity masking, voicemail rule editing, and Voicemail Triage enabled. The policy also limits voicemail recordings to 5 minutes and makes preamble/postamble messages optional.
+
+When Voicemail Triage is enabled, eligible users receive AI-generated insights based on the voicemail transcription, such as a concise summary and additional metadata that help them quickly understand and prioritise voicemail messages without listening to the entire recording.
+
+## PARAMETERS
+
+### -Confirm
+
+Prompts you for confirmation before executing the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: cf
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+
+Enables administrators to provide explanatory text about the policy. For example, the Description might indicate the users the policy should be assigned to.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableEditingCallAnswerRulesSetting
+
+Controls if editing call answer rule settings are enabled or disabled for a user. Possible values are $true or $false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableTranscription
+
+Allows you to disable or enable voicemail transcription. Possible values are $true or $false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableTranscriptionProfanityMasking
+
+Allows you to disable or enable profanity masking for the voicemail transcriptions. Possible values are $true or $false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableTranscriptionTranslation
+
+Allows you to disable or enable translation for the voicemail transcriptions. Possible values are $true or $false.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableVoicemailTriage
+Specifies whether AI-powered voicemail triage is enabled.
+
+When enabled, voicemail messages delivered to users with an eligible Microsoft 365 Copilot license are enriched with AI-generated metadata derived from the voicemail transcription, including a summary, identified action items, a suggested category, and an importance classification.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Identity
+
+A unique identifier specifying the scope, and in some cases the name, of the policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -MaximumRecordingLength
+
+A duration of voicemail maximum recording length. The length should be between 30 seconds to 10 minutes.
+
+```yaml
+Type: TimeSpan
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PostambleAudioFile
+
+The audio file to play to the caller after the user's voicemail greeting has played and before the caller is allowed to leave a voicemail message.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -PreambleAudioFile
+
+The audio file to play to the caller before the user's voicemail greeting is played.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreamblePostambleMandatory
+
+Is playing the Pre- or Post-amble mandatory before the caller can leave a message.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrimarySystemPromptLanguage
+
+The primary (or first) language that voicemail system prompts will be presented in. Must also set SecondarySystemPromptLanguage. When set, this overrides the user language choice. Please see [Set-CsOnlineVoicemailUserSettings](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinevoicemailusersettings) -PromptLanguage for supported languages.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SecondarySystemPromptLanguage
+
+The secondary language that voicemail system prompts will be presented in. Must also set PrimarySystemPromptLanguage and may not be the same value as PrimarySystemPromptLanguage. When set, this overrides the user language choice.  Please see [Set-CsOnlineVoicemailUserSettings](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinevoicemailusersettings) -PromptLanguage for supported languages.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ShareData
+
+Specifies whether voicemail and transcription data are shared with the service for training and improving accuracy. Possible values are Defer and Deny.
+
+> [!IMPORTANT]
+> This parameter is deprecated and no longer has any effect. Its value is ignored by the service and is retained only for backward compatibility.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhatIf
+
+Describes what would happen if you executed the command without actually executing the command.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+## OUTPUTS
+
+## NOTES
+
+## RELATED LINKS
+[Get-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinevoicemailpolicy)
+
+[Set-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinevoicemailpolicy)
+
+[Remove-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlinevoicemailpolicy)
+
+[Grant-CsOnlineVoicemailPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/grant-csonlinevoicemailpolicy)

@@ -1,0 +1,43 @@
+name: Tier management
+
+permissions:
+  pull-requests: write
+  contents: write
+      
+on: 
+  issue_comment:
+    types: [created, edited]
+
+  pull_request_target:
+    types: [opened, reopened]
+
+jobs:
+
+  config:
+    if: github.repository_owner == 'MicrosoftDocs' && github.repository_visibility == 'private'
+    runs-on: ubuntu-latest
+    outputs:
+      EnableWriteSignOff: ${{ steps.read.outputs.EnableWriteSignOff }}
+      EnableReadOnlySignoff: ${{ steps.read.outputs.EnableReadOnlySignoff }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          sparse-checkout: .github/workflow-config.json
+          sparse-checkout-cone-mode: false
+      - id: read
+        shell: pwsh
+        run: |
+          $Config = (Get-Content '.github/workflow-config.json' | ConvertFrom-Json).TierManagement
+          "EnableWriteSignOff=$($Config.EnableWriteSignOff)" >> $Env:GITHUB_OUTPUT
+          "EnableReadOnlySignoff=$($Config.EnableReadOnlySignoff)" >> $Env:GITHUB_OUTPUT
+
+  tier-mgmt:
+    if: github.repository_owner == 'MicrosoftDocs' && github.repository_visibility == 'private'
+    needs: config
+    uses: MicrosoftDocs/tcp-workflows/.github/workflows/Shared-TierManagement.yml@workflows-prod
+    with:
+      PayloadJson: ${{ toJSON(github) }}
+      EnableWriteSignOff: ${{ fromJSON(needs.config.outputs.EnableWriteSignOff) }}
+      EnableReadOnlySignoff: ${{ fromJSON(needs.config.outputs.EnableReadOnlySignoff) }}
+    secrets:
+      AccessToken: ${{ secrets.GITHUB_TOKEN }}
