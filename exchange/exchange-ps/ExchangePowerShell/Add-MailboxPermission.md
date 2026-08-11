@@ -143,7 +143,7 @@ The AccessRights parameter specifies the permission that you want to add for the
 
 You can specify multiple values separated by commas.
 
-Note: In Exchange Online and modern Outlook experiences, a user granted FullAccess to a mailbox can access items in that mailbox, including calendar items marked as Private. This behavior is equivalent to having effective CanViewPrivateItems access for that mailbox. Customers should consider FullAccess as granting visibility to private mailbox content.
+**Note**: In Exchange Online and modern Outlook experiences, a user granted FullAccess to a mailbox can access all items in the mailbox, including calendar items marked as Private. This behavior is equivalent to having CanViewPrivateItems access for the mailbox.
 
 You can't use this parameter with the Owner parameter.
 
