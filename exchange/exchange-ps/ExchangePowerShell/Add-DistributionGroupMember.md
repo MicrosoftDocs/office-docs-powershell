@@ -147,21 +147,21 @@ The Member parameter specifies the recipient that you want to add to the group. 
 
 Following are supported member types that can be added in a distribution group:
 
-UserMailbox
+- UserMailbox
 
-SharedMailbox
+- SharedMailbox
 
-RoomMailbox
+- RoomMailbox
 
-EquipmentMailbox
+- EquipmentMailbox
 
-MailUser
+- MailUser
 
-MailContact
+- MailContact
 
-MailUniversalDistributionGroup
+- MailUniversalDistributionGroup
 
-MailUniversalSecurityGroup
+- MailUniversalSecurityGroup
 
 And following type of members are not supported to be added:
 
