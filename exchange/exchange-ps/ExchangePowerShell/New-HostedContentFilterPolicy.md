@@ -174,7 +174,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
-The AllowedSenderDomains parameter specifies trusted domains that aren't processed by the spam filter. Messages from senders in these domains are stamped with `SFV:SKA` in the `X-Forefront-Antispam-Report header` and receive a spam confidence level (SCL) of -1, so the messages are delivered to the recipient's inbox. Valid values are one or more SMTP domains.
+The AllowedSenderDomains parameter specifies trusted domains that bypass spam filtering. Messages from senders in these domains are stamped with `SFV:SKA` in the `X-Forefront-Antispam-Report` header. The spam confidence level (SCL) value stamped on the message doesn't determine the verdict or action in Exchange Online and might not be -1. Valid values are one or more SMTP domains.
 
 **Caution**: Think very carefully before you add domains here. For more information, see [Create sender allowlists for cloud mailboxes](https://learn.microsoft.com/defender-office-365/create-safe-sender-lists-in-office-365).
 
@@ -198,7 +198,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
-The AllowedSenders parameter specifies a list of trusted senders that skip spam filtering. Messages from these senders are stamped with SFV:SKA in the X-Forefront-Antispam-Report header and receive an SCL of -1, so the messages are delivered to the recipient's inbox. Valid values are one or more SMTP email addresses.
+The AllowedSenders parameter specifies a list of trusted senders that bypass spam filtering. Messages from these senders are stamped with `SFV:SKA` in the `X-Forefront-Antispam-Report` header. The SCL value stamped on the message doesn't determine the verdict or action in Exchange Online and might not be -1. Valid values are one or more SMTP email addresses.
 
 **Caution**: Think very carefully before you add senders here. For more information, see [Create sender allowlists for cloud mailboxes](https://learn.microsoft.com/defender-office-365/create-safe-sender-lists-in-office-365).
 
@@ -222,7 +222,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
-The BlockedSenderDomains parameter specifies domains that are always marked as spam sources. Messages from senders in these domains are stamped with `SFV:SKB` value in the `X-Forefront-Antispam-Report` header and receive an SCL of 6 (spam). Valid values are one or more SMTP domains.
+The BlockedSenderDomains parameter specifies domains that are always marked as spam sources. Messages from senders in these domains are stamped with `SFV:SKB` in the `X-Forefront-Antispam-Report` header. The SCL value stamped on the message doesn't determine the verdict or action in Exchange Online and might not be 6. Valid values are one or more SMTP domains.
 
 **Note**: Manually blocking domains isn't dangerous, but it can increase your administrative workload. For more information, see [Create sender blocklists for cloud mailboxes](https://learn.microsoft.com/defender-office-365/create-block-sender-lists-in-office-365).
 
@@ -246,7 +246,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
-The BlockedSenders parameter specifies senders that are always marked as spam sources. Messages from these senders are stamped with `SFV:SKB` in the `X-Forefront-Antispam-Report` header and receive an SCL of 6 (spam). Valid values are one or more SMTP email addresses.
+The BlockedSenders parameter specifies senders that are always marked as spam sources. Messages from these senders are stamped with `SFV:SKB` in the `X-Forefront-Antispam-Report` header. The SCL value stamped on the message doesn't determine the verdict or action in Exchange Online and might not be 6. Valid values are one or more SMTP email addresses.
 
 **Note**: Manually blocking senders isn't dangerous, but it can increase your administrative workload. For more information, see [Create sender blocklists for cloud mailboxes](https://learn.microsoft.com/defender-office-365/create-block-sender-lists-in-office-365).
 
@@ -682,7 +682,7 @@ Accept wildcard characters: False
 The IncreaseScoreWithBizOrInfoUrls parameter increases the spam score of messages that contain links to .biz or .info domains. Valid values are:
 
 - Off: The setting is disabled. This value is the default, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain links to .biz or .info domains are given a higher spam score and therefore have a higher chance of getting marked as spam with SCL 5 or 6, and the X-header `X-CustomSpam: URL to .biz or .info websites` is added to the message. Not all messages that match this setting are marked as spam.
+- On: The setting is enabled. Messages that contain links to .biz or .info domains are given a higher spam score and therefore have a higher chance of being identified as spam, and the X-header `X-CustomSpam: URL to .biz or .info websites` is added to the message. Not all messages that match this setting are identified as spam.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -704,7 +704,7 @@ Accept wildcard characters: False
 The IncreaseScoreWithImageLinks parameter increases the spam score of messages that contain image links to remote websites. Valid values are:
 
 - Off: The setting is disabled. This value is the default, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain image links to remote websites are given a higher spam score and therefore have a higher chance of getting marked as spam with SCL 5 or 6, and the X-header `X-CustomSpam: Image links to remote sites` is added to the message. Not all messages that match this setting are marked as spam.
+- On: The setting is enabled. Messages that contain image links to remote websites are given a higher spam score and therefore have a higher chance of being identified as spam, and the X-header `X-CustomSpam: Image links to remote sites` is added to the message. Not all messages that match this setting are identified as spam.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -726,7 +726,7 @@ Accept wildcard characters: False
 The IncreaseScoreWithNumericIps parameter increases the spam score of messages that contain links to IP addresses. Valid values are:
 
 - Off: The setting is disabled. This value is the default, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain links to IP addresses are given a higher spam score and therefore have a higher chance of getting marked as spam with SCL 5 or 6, and the X-header `X-CustomSpam: Numeric IP in URL` is added to the message. Not all messages which matches the setting are marked as spam.
+- On: The setting is enabled. Messages that contain links to IP addresses are given a higher spam score and therefore have a higher chance of being identified as spam, and the X-header `X-CustomSpam: Numeric IP in URL` is added to the message. Not all messages that match this setting are identified as spam.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -748,7 +748,7 @@ Accept wildcard characters: False
 The IncreaseScoreWithRedirectToOtherPort parameter increases the spam score of messages that contain links that redirect to TCP ports other than 80 (HTTP), 8080 (alternate HTTP), or 443 (HTTPS). Valid values are:
 
 - Off: The setting is disabled. This value is the default, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain links that redirect to other TCP ports are given a higher spam score and therefore have a higher chance of getting marked as spam with SCL 5 or 6, and the X-header `X-CustomSpam: URL redirect to other port` is added to the message. Not all messages that match this setting are marked as spam.
+- On: The setting is enabled. Messages that contain links that redirect to other TCP ports are given a higher spam score and therefore have a higher chance of being identified as spam, and the X-header `X-CustomSpam: URL redirect to other port` is added to the message. Not all messages that match this setting are identified as spam.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -840,7 +840,7 @@ Accept wildcard characters: False
 The MarkAsSpamBulkMail parameter allows spam filtering to act on bulk email messages. Valid values are:
 
 - Off: The message is stamped with the BCL, but no action is taken for a bulk email filtering verdict. In effect, the values of the BulkThreshold and BulkSpamAction parameters are irrelevant.
-- On: This value is the default. A BCL that's greater than the BulkThreshold value is converted to an SCL 6 that corresponds to a filtering verdict of spam, and the BulkSpamAction value is taken on the message.
+- On: This value is the default. A BCL that's greater than the BulkThreshold value produces a **Bulk complaint level (BCL) met or exceeded** filtering verdict, and the BulkSpamAction value is taken on the message. The SCL value stamped on the message doesn't determine the verdict or action in Exchange Online.
 - Test: This value is available, but isn't used for this parameter.
 
 ```yaml
@@ -862,7 +862,7 @@ Accept wildcard characters: False
 The MarkAsSpamEmbedTagsInHtml parameter marks a message as spam when the message contains HTML \<embed\> tags. Valid values are:
 
 - Off: The setting is disabled. This value is the default, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain HTML \<embed\> tags are given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: Embed tag in html` is added to the message.
+- On: The setting is enabled. Messages that contain HTML \<embed\> tags are identified as high confidence spam, and the X-header `X-CustomSpam: Embed tag in html` is added to the message. The SCL value stamped on the message doesn't determine the verdict or action in Exchange Online.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -884,7 +884,7 @@ Accept wildcard characters: False
 The MarkAsSpamEmptyMessages parameter marks a message as spam when the message contains no subject, no content in the message body, and no attachments. Valid values are:
 
 - Off: The setting is disabled. This value is the default, and we recommend that you don't change it.
-- On: The setting is enabled. Empty messages are given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: Empty Message` is added to the message.
+- On: The setting is enabled. Empty messages are identified as high confidence spam, and the X-header `X-CustomSpam: Empty Message` is added to the message. The SCL value stamped on the message doesn't determine the verdict or action in Exchange Online.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -906,7 +906,7 @@ Accept wildcard characters: False
 The MarkAsSpamFormTagsInHtml parameter marks a message as spam when the message contains HTML \<form\> tags. Valid values are:
 
 - Off: The setting is disabled. This value is the default, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain HTML \<form\> tags are given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: Form tag in html` is added to the message.
+- On: The setting is enabled. Messages that contain HTML \<form\> tags are identified as high confidence spam, and the X-header `X-CustomSpam: Form tag in html` is added to the message. The SCL value stamped on the message doesn't determine the verdict or action in Exchange Online.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -928,7 +928,7 @@ Accept wildcard characters: False
 The MarkAsSpamFramesInHtml parameter marks a message as spam when the message contains HTML \<frame\> or \<iframe\> tags. Valid values are:
 
 - Off: The setting is disabled. This value is the default, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain HTML \<frame\> or \<iframe\> tags are given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: IFRAME or FRAME in HTML` is added to the message.
+- On: The setting is enabled. Messages that contain HTML \<frame\> or \<iframe\> tags are identified as high confidence spam, and the X-header `X-CustomSpam: IFRAME or FRAME in HTML` is added to the message. The SCL value stamped on the message doesn't determine the verdict or action in Exchange Online.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -950,7 +950,7 @@ Accept wildcard characters: False
 The MarkAsSpamFromAddressAuthFail parameter marks a message as spam when Sender ID filtering encounters a hard fail. This setting combines an Sender Policy Framework (SPF) check with a Sender ID check to help protect against message headers that contain forged senders. Valid values are:
 
 - Off: The setting is disabled. This value is the default, and we recommend that you don't change it.
-- On: The setting is enabled. Messages where Sender ID filtering encounters a hard fail are given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: SPF From Record Fail` is added to the message.
+- On: The setting is enabled. Messages where Sender ID filtering encounters a hard fail are identified as high confidence spam, and the X-header `X-CustomSpam: SPF From Record Fail` is added to the message. The SCL value stamped on the message doesn't determine the verdict or action in Exchange Online.
 
 ```yaml
 Type: SpamFilteringOption
@@ -971,7 +971,7 @@ Accept wildcard characters: False
 The MarkAsSpamJavaScriptInHtml parameter marks a message as spam when the message contains JavaScript or VBScript. Valid values are:
 
 - Off: The setting is disabled. This value is the default, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain JavaScript or VBScript are given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: Javascript or VBscript tags in HTML` is added to the message.
+- On: The setting is enabled. Messages that contain JavaScript or VBScript are identified as high confidence spam, and the X-header `X-CustomSpam: Javascript or VBscript tags in HTML` is added to the message. The SCL value stamped on the message doesn't determine the verdict or action in Exchange Online.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -993,7 +993,7 @@ Accept wildcard characters: False
 The MarkAsSpamNdrBackscatter parameter marks a message as spam when the message is a non-delivery report (also known as an NDR or bounce messages) sent to a forged sender (known as *backscatter*). Valid values are:
 
 - Off: The setting is disabled. This value is the default, and we recommend that you don't change it.
-- On: The setting is enabled. Backscatter is given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: Backscatter NDR` is added to the message.
+- On: The setting is enabled. Backscatter is identified as high confidence spam, and the X-header `X-CustomSpam: Backscatter NDR` is added to the message. The SCL value stamped on the message doesn't determine the verdict or action in Exchange Online.
 
 ```yaml
 Type: SpamFilteringOption
@@ -1014,7 +1014,7 @@ Accept wildcard characters: False
 The MarkAsSpamObjectTagsInHtml parameter marks a message as spam when the message contains HTML \<object\> tags. Valid values are:
 
 - Off: The setting is disabled. This value is the default, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain HTML \<object\> tags are given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: Object tag in html` is added to the message.
+- On: The setting is enabled. Messages that contain HTML \<object\> tags are identified as high confidence spam, and the X-header `X-CustomSpam: Object tag in html` is added to the message. The SCL value stamped on the message doesn't determine the verdict or action in Exchange Online.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -1036,7 +1036,7 @@ Accept wildcard characters: False
 The MarkAsSpamSensitiveWordList parameter marks a message as spam when the message contains words from the sensitive words list. Microsoft maintains a dynamic but non-editable list of words that are associated with potentially offensive messages. Valid values are:
 
 - Off: The setting is disabled. This value is the default, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain words from the sensitive word list in the subject or message body are given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: Sensitive word in subject/body` is added to the message.
+- On: The setting is enabled. Messages that contain words from the sensitive word list in the subject or message body are identified as high confidence spam, and the X-header `X-CustomSpam: Sensitive word in subject/body` is added to the message. The SCL value stamped on the message doesn't determine the verdict or action in Exchange Online.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
@@ -1058,7 +1058,7 @@ Accept wildcard characters: False
 The MarkAsSpamSpfRecordHardFail parameter marks a message as spam when SPF record checking encounters a hard fail. Valid values are:
 
 - Off: The setting is disabled. This value is the default, and we recommend that you don't change it.
-- On: The setting is enabled. Messages sent from an IP address that isn't specified in the SPF Sender Policy Framework (SPF) record in DNS are given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: SPF Record Fail` is added to the message.
+- On: The setting is enabled. Messages sent from an IP address that isn't specified in the SPF Sender Policy Framework (SPF) record in DNS are identified as high confidence spam, and the X-header `X-CustomSpam: SPF Record Fail` is added to the message. The SCL value stamped on the message doesn't determine the verdict or action in Exchange Online.
 
 ```yaml
 Type: SpamFilteringOption
@@ -1079,7 +1079,7 @@ Accept wildcard characters: False
 The MarkAsSpamWebBugsInHtml parameter marks a message as spam when the message contains web bugs (also known as web beacons). Valid values are:
 
 - Off: The setting is disabled. This value is the default, and we recommend that you don't change it.
-- On: The setting is enabled. Messages that contain web bugs are given the SCL 9 (high confidence spam), and the X-header `X-CustomSpam: Web bug` is added to the message.
+- On: The setting is enabled. Messages that contain web bugs are identified as high confidence spam, and the X-header `X-CustomSpam: Web bug` is added to the message. The SCL value stamped on the message doesn't determine the verdict or action in Exchange Online.
 - Test: The action specified by the TestModeAction parameter is taken on the message.
 
 ```yaml
