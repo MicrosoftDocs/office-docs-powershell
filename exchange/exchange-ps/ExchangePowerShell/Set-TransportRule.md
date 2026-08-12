@@ -2824,10 +2824,9 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
-The ExceptIfSCLOver parameter specifies an exception that looks for the SCL value of messages. Valid values are:
+The ExceptIfSCLOver parameter specifies an exception that looks for the SCL value stamped on messages. Valid values are -1 or integers 0 through 9.
 
-- -1: The message is from a trusted sender, so the message bypasses spam filtering.
-- Integers 0 through 9: A higher value indicates that a message is more likely to be spam.
+In on-premises Exchange, an SCL value of -1 indicates that the message bypassed spam filtering, and a higher SCL value indicates that a message is more likely to be spam. In Exchange Online, the SCL value doesn't determine the filtering verdict or action.
 
 The rule looks for messages with an SCL value that's greater than or equal to the specified value.
 
@@ -4649,10 +4648,9 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
 
-The SCLOver parameter specifies a condition that looks for the SCL value of messages. Valid values are:
+The SCLOver parameter specifies a condition that looks for the SCL value stamped on messages. Valid values are -1 or integers 0 through 9.
 
-- -1: The message is from a trusted sender, so the message bypasses spam filtering.
-- Integers 0 through 9: A higher value indicates that a message is more likely to be spam.
+In on-premises Exchange, an SCL value of -1 indicates that the message bypassed spam filtering, and a higher SCL value indicates that a message is more likely to be spam. In Exchange Online, the SCL value doesn't determine the filtering verdict or action.
 
 The rule looks for messages with an SCL value that's greater than or equal to the specified value.
 
@@ -5083,10 +5081,11 @@ This parameter specifies an action or part of an action for the rule.
 
 In on-premises Exchange, this action is available on Mailbox servers and Edge Transport servers.
 
-The SetSCL parameter specifies an action that adds or modifies the SCL value of messages. Valid values are:
+The SetSCL parameter specifies an action that submits an SCL value of -1 or an integer from 0 through 9.
 
-- -1: The message is from a trusted sender, so the message bypasses spam filtering.
-- Integers 0 through 9: A higher value indicates that a message is more likely to be spam.
+In on-premises Exchange, the action adds or modifies the SCL value of messages. An SCL value of -1 bypasses spam filtering, and a higher SCL value indicates that a message is more likely to be spam.
+
+In Exchange Online, the value is an input to filtering, not a final decision. The value -1 requests a bypass from most spam filtering, 5 or 6 requests a spam verdict, and 9 requests a high confidence spam verdict. The SCL value actually stamped on the message might differ from the value configured in the rule, and it doesn't determine the final verdict or action.
 
 ```yaml
 Type: SclValue
