@@ -226,7 +226,7 @@ Customize the AI disclaimer message that Teams Phone Agent plays to callers. The
 
 To configure a custom prompt, set this value to `Custom` and provide the prompt text with the `-AiDisclaimerCustomText` option.
 
-PARAM: Default | Custom
+PARAM: Default | None | Custom
 
 ```yaml
 Type: String
