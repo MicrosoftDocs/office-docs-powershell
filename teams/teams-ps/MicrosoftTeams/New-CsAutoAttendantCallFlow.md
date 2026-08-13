@@ -30,6 +30,9 @@ The New-CsAutoAttendantCallFlow cmdlet creates a new call flow for use with the 
 > The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
 >
 > - -RingResourceAccountDelegates
+>
+> The following configuration parameters are available for customers that are participating in the [Frontier](https://www.microsoft.com/microsoft-365-copilot/frontier-program) Public Preview program.
+> 
 > - -TimeoutThreshold
 > - -TimeoutDisconnectPromptType
 > - -TimeoutDisconnectPromptCustomText
