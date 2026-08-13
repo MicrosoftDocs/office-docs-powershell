@@ -1,16 +1,17 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: vivekmo
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Locale: en-US
-manager: bulenteg
+manager: vivekmo
 Module Name: MicrosoftTeams
-ms.author: tomkau
+ms.author: vivekmo
 ms.date: 07/13/2025
 ms.reviewer: alejandramu
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsmeetingpolicy
 schema: 2.0.0
 title: Set-CsTeamsMeetingPolicy
+description: CsTeamsMeetingPolicy cmdlets enable administrators to control the type of meetings and the features that are available in those meetings
 ---
 
 # Set-CsTeamsMeetingPolicy
@@ -1355,12 +1356,12 @@ Accept wildcard characters: False
 
 ### -ExternalBotAccessMode
 
-Controls how external third-party automated bots and meeting assistants are handled when they attempt to join meetings. This policy provides predictable behavior and helps organizers apply intentional control for bot participation.
+Controls how external third-party meeting bots and meeting assistants are handled when they attempt to join meetings. This policy provides admins with controls to detect and manage external bots when they attempt to join meetings hosted in the organization. Using these controls admins are able to manage or prevent unauthorized joins of external bots to the meetings hosted in their organization.
 
 Possible Values:
-- **AllowAllBots**: Don't detect bots; allow them to join meetings directly.
-- **RequireApprovalWhenDetected**: When detected, require approval before joining by routing detected bots to the meeting lobby. This is the default value.
-- **BlockDetectedBots**: Block detected bots from joining meetings.
+- **AllowAllBots**: Don't detect bots; Bots will appear the same as other participants. Standard lobby policies will apply to them. They may get mistakenly admitted to meetings.
+
+- **RequireApprovalWhenDetected**: When detected, bots will be enforced to the meeting lobby, regardless of the lobby setting of the meeting. They will require approval before getting access to the meetings. This is the default value.
 
 ```yaml
 Type: String
