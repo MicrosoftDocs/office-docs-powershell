@@ -19,7 +19,7 @@ title: Remove-CsSharedCallHistoryTemplate
 > [!CAUTION]
 > This PowerShell cmdlet has been deprecated.
 >
-> Please use: [Remove-CsSharedCallHistoryTemplate](./Get-CsSharedCallHistoryTemplate.md)
+> Please use: [Remove-CsSharedCallHistoryTemplate](Remove-CsSharedCallHistoryTemplate.md)
 
 
 ## SYNTAX
