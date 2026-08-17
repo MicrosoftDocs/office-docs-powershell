@@ -19,7 +19,7 @@ title: New-CsSharedCallQueueHistoryTemplate
 > [!CAUTION]
 > This PowerShell cmdlet has been deprecated.
 >
-> Please use: [New-CsSharedCallHistoryTemplate](Get-CsSharedCallHistoryTemplate.md)
+> Please use: [New-CsSharedCallHistoryTemplate](New-CsSharedCallHistoryTemplate.md)
 
 ## SYNTAX
 
