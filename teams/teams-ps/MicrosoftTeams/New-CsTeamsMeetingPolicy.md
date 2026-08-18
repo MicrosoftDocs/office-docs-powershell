@@ -490,7 +490,7 @@ Accept wildcard characters: False
 ### -AllowIntelligentRecap
 > [!NOTE]
 > This feature has not been fully released yet, so the setting will have no effect.
-Controls whether Intelligent Recap is allowed for the user's meetings
+Controls whether Intelligent Recap is allowed for the user's meetings.
 
 ```yaml
 Type: Boolean
@@ -1392,7 +1392,7 @@ Accept wildcard characters: False
 > [!NOTE]
 > This feature has not been fully released yet, so the setting will have no effect.
 
-This setting controls how many days the intelligent recap docx file is stored before it expires. The default value is 120
+This setting controls how many days the intelligent recap docx file is stored before it expires. The default value is 120.
 
 ```yaml
 Type: Int32
