@@ -36,6 +36,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-AllowExternalNonTrustedMeetingChat <Boolean>]
  [-AllowExternalParticipantGiveRequestControl <Boolean>]
  [-AllowImmersiveView <Boolean>]
+ [-AllowIntelligentRecap <Boolean>]
  [-AllowIPAudio <Boolean>]
  [-AllowIPVideo <Boolean>]
  [-AllowLocalRecording]
@@ -91,6 +92,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-IPVideoMode <String>]
  [-InfoShownInReportMode <String>]
  [-InMemory]
+ [-IntelligentRecapDocxFileExpirationDays <Int32>]
  [-LiveCaptionsEnabledType <String>]
  [-LiveInterpretationEnabledType <String>]
  [-LiveStreamingMode <String>]
@@ -472,6 +474,23 @@ Accept wildcard characters: False
 
 ### -AllowImmersiveView
 If admins have disabled avatars, this does not disable using avatars in Immersive view on Teams desktop or web. Additionally, it does not prevent users from joining the Teams meeting on VR headsets.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowIntelligentRecap
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+Controls whether Intelligent Recap is allowed for the user's meetings.
 
 ```yaml
 Type: Boolean
@@ -1365,6 +1384,24 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IntelligentRecapDocxFileExpirationDays
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+This setting controls how many days the intelligent recap docx file is stored before it expires. The default value is 120.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 120
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
