@@ -13,13 +13,19 @@ title: Set-CsUserCallingSettings
 # Set-CsUserCallingSettings
 
 ## SYNOPSIS
-This cmdlet will set the call forwarding, simultaneous ringing and call group settings for the specified user.
+This cmdlet will set the call forwarding, simultaneous ringing, call group and busy on busy settings for the specified user.
 
 ## SYNTAX
 
 ### Identity (Default)
 ```
 Set-CsUserCallingSettings -Identity <String> [-HttpPipelinePrepend <SendAsyncStep[]>] [<CommonParameters>]
+```
+
+### BusyOnBusy
+```
+Set-CsUserCallingSettings -Identity <String> [-HttpPipelinePrepend <SendAsyncStep[]>]
+ -BusyOnBusyOption <String> [<CommonParameters>]
 ```
 
 ### CallGroupNotification
@@ -67,7 +73,7 @@ Set-CsUserCallingSettings -Identity <String> [-HttpPipelinePrepend <SendAsyncSte
 ```
 
 ## DESCRIPTION
-This cmdlet sets the call forwarding, simultaneous ringing and call group settings for the specified user.
+This cmdlet sets the call forwarding, simultaneous ringing, call group and busy on busy settings for the specified user.
 
 When specifying settings you need to specify all settings with a settings grouping, for instance, you can't just change a forwarding target. Instead, you need to
 start by  getting the current settings, making the necessary changes, and then setting/writing all settings within the settings group.
@@ -168,7 +174,52 @@ Set-CsUserCallingSettings -Identity user7@contoso.com -IsUnansweredEnabled $fals
 
 This example shows turning off unanswered call forwarding for a user. The Microsoft Teams client will show this as _If unanswered Do nothing_.
 
+### Example 12
+```powershell
+Set-CsUserCallingSettings -Identity user8@contoso.com -BusyOnBusyOption PlayBusySignal
+```
+
+This example shows setting busy on busy for user8@contoso.com so that a new incoming call is rejected with a busy signal while the user is already in a call or in a conference.
+
+### Example 13
+```powershell
+Set-CsUserCallingSettings -Identity user9@contoso.com -BusyOnBusyOption RedirectAsUnansweredCall
+```
+
+This example shows setting busy on busy for user9@contoso.com so that a new incoming call is routed to the user's unanswered call target while the user is already in a call or in a conference.
+
+### Example 14
+```powershell
+Set-CsUserCallingSettings -Identity user10@contoso.com -BusyOnBusyOption RingUser
+```
+
+This example shows turning off busy on busy for user10@contoso.com so that a new incoming call rings the user even when the user is already in a call or in a conference.
+
 ## PARAMETERS
+
+### -BusyOnBusyOption
+
+The busy on busy setting for the specified user. Busy on busy controls what happens to a new incoming call when the specified user is already in a call or in a conference. The supported values are:
+
+- `PlayBusySignal`: the new incoming call is rejected with a busy signal.
+- `RedirectAsUnansweredCall`: the new incoming call is handled as an unanswered call, that is, it is routed using the user's unanswered call settings (`UnansweredTargetType` and `UnansweredTarget`).
+- `RingUser`: the new incoming call rings the user. This turns busy on busy off for the user.
+
+A per-user setting configured with this parameter applies in addition to the tenant-level and user-level busy on busy configuration set through `Set-CsTeamsCallingPolicy`.
+
+If you omit this parameter, the current busy on busy setting for the user is left unchanged.
+
+```yaml
+Type: System.String
+Parameter Sets: BusyOnBusy
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -CallGroupOrder
 
@@ -428,6 +479,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 The cmdlet is available in Teams PowerShell module 4.0.0 or later.
 
+The `BusyOnBusyOption` parameter is available in Teams PowerShell module 7.10.0 or later.
+
 The specified user need to have the Microsoft Phone System license assigned.
 
 When forwarding to MyDelegates, the specified user needs to have one or more delegates defined that are allowed to receive calls. When forwarding to Group, the
@@ -439,6 +492,8 @@ this behavior. As an example, if you have ForwardingTargetType set to Group and 
 You can specify a SIP URI without 'sip:' on input, but the output from Get-CsUserCallingSettings will show the full SIP URI.
 
 You are not able to configure delegates via this cmdlet. Please use New-CsUserCallingDelegate, Set-CsUserCallingDelegate cmdlets and Remove-CsUserCallingDelegate.
+
+Busy on busy can also be configured at the tenant and per-user level through Set-CsTeamsCallingPolicy. See [Set-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamscallingpolicy) for details.
 
 ## RELATED LINKS
 [Get-CsUserCallingSettings](https://learn.microsoft.com/powershell/module/microsoftteams/get-csusercallingsettings)

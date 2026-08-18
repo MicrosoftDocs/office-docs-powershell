@@ -13,7 +13,7 @@ title: Get-CsUserCallingSettings
 # Get-CsUserCallingSettings
 
 ## SYNOPSIS
-This cmdlet will show the call forwarding, simultaneous ringing, call group and delegation settings for a user.
+This cmdlet will show the call forwarding, simultaneous ringing, call group, busy on busy and delegation settings for a user.
 
 ## SYNTAX
 
@@ -32,7 +32,7 @@ Get-CsUserCallingSettings -InputObject <IConfigApiBasedCmdletsIdentity> [-Break]
 ```
 
 ## DESCRIPTION
-This cmdlet shows the call forwarding, simultaneous ringing, call group and delegation settings for a user. It will also show any call groups the user is a member of and
+This cmdlet shows the call forwarding, simultaneous ringing, call group, busy on busy and delegation settings for a user. It will also show any call groups the user is a member of and
 if someone else has added the user as a delegate.
 
 ## EXAMPLES
@@ -57,6 +57,7 @@ CallGroupOrder            : InOrder
 CallGroupTargets          : {}
 GroupMembershipDetails    :
 GroupNotificationOverride :
+BusyOnBusyOption          :
 ```
 
 This example shows that user1@contoso.com has immediate call forwarding set (IsForwardingEnabled and ForwardingType) to route all incoming calls to voicemail (ForwardingTargetType).
@@ -81,6 +82,7 @@ CallGroupOrder            : InOrder
 CallGroupTargets          : {}
 GroupMembershipDetails    :
 GroupNotificationOverride :
+BusyOnBusyOption          :
 ```
 
 This example shows that user2@contoso.com has simultaneous ringing set (IsForwardingEnabled and ForwardingType) to user3@contoso.com
@@ -107,6 +109,7 @@ CallGroupOrder            : InOrder
 CallGroupTargets          : {sip:user5@contoso.com}
 GroupMembershipDetails    : CallGroupOwnerId:sip:user6@contoso.com
 GroupNotificationOverride : Mute
+BusyOnBusyOption          :
 ```
 ```powershell
 (Get-CsUserCallingSettings -Identity user4@contoso.com).GroupMembershipDetails
@@ -143,6 +146,7 @@ CallGroupOrder            : InOrder
 CallGroupTargets          : {}
 GroupMembershipDetails    :
 GroupNotificationOverride : Ring
+BusyOnBusyOption          :
 ```
 ```powershell
 (Get-CsUserCallingSettings -Identity user7@contoso.com).Delegates
@@ -179,6 +183,7 @@ CallGroupOrder            : InOrder
 CallGroupTargets          : {}
 GroupMembershipDetails    :
 GroupNotificationOverride : Ring
+BusyOnBusyOption          :
 ```
 ```powershell
 (Get-CsUserCallingSettings -Identity user9@contoso.com).Delegators
@@ -215,10 +220,37 @@ CallGroupOrder            : Simultaneous
 CallGroupTargets          : {}
 GroupMembershipDetails    :
 GroupNotificationOverride :
+BusyOnBusyOption          :
 ```
 
 This example shows the default settings for a user that has never changed the call forward settings via Microsoft Teams. Note that for users with settings as shown here,
 unanswered calls will by default be forwarded to voicemail after 30 seconds.
+
+### Example 7
+```powershell
+Get-CsUserCallingSettings -Identity user12@contoso.com
+```
+```output
+SipUri                    : sip:user12@contoso.com
+IsForwardingEnabled       : False
+ForwardingType            : Immediate
+ForwardingTarget          :
+ForwardingTargetType      : Voicemail
+IsUnansweredEnabled       : True
+UnansweredTarget          :
+UnansweredTargetType      : Voicemail
+UnansweredDelay           : 00:00:20
+Delegates                 :
+Delegators                :
+CallGroupOrder            : InOrder
+CallGroupTargets          : {}
+GroupMembershipDetails    :
+GroupNotificationOverride :
+BusyOnBusyOption          : PlayBusySignal
+```
+
+This example shows that user12@contoso.com has busy on busy enabled (BusyOnBusyOption) so that a new incoming call is rejected with a busy signal while the user is
+already in a call or in a conference.
 
 ## PARAMETERS
 
@@ -355,6 +387,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 The cmdlet is available in Teams PowerShell module 4.0.0 or later.
+
+The `BusyOnBusyOption` output property is available in Teams PowerShell module 7.10.0 or later. It shows the per-user busy on busy setting and can be `PlayBusySignal`,
+`RedirectAsUnansweredCall` or `RingUser`. It is empty for a user that has no per-user busy on busy setting. You set this property with Set-CsUserCallingSettings -BusyOnBusyOption.
 
 ## RELATED LINKS
 
