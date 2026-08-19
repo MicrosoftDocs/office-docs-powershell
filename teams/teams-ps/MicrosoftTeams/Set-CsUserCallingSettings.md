@@ -479,7 +479,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 The cmdlet is available in Teams PowerShell module 4.0.0 or later.
 
-The `BusyOnBusyOption` parameter is available in Teams PowerShell module 7.10.0 or later.
+The `BusyOnBusyOption` parameter is available in Teams PowerShell module 8.0.0 or later.
 
 The specified user need to have the Microsoft Phone System license assigned.
 

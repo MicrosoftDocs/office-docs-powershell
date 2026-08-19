@@ -388,7 +388,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 The cmdlet is available in Teams PowerShell module 4.0.0 or later.
 
-The `BusyOnBusyOption` output property is available in Teams PowerShell module 7.10.0 or later. It shows the per-user busy on busy setting and can be `PlayBusySignal`,
+The `BusyOnBusyOption` output property is available in Teams PowerShell module 8.0.0 or later. It shows the per-user busy on busy setting and can be `PlayBusySignal`,
 `RedirectAsUnansweredCall` or `RingUser`. It is empty for a user that has no per-user busy on busy setting. You set this property with Set-CsUserCallingSettings -BusyOnBusyOption.
 
 ## RELATED LINKS
