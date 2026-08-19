@@ -40,6 +40,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-AllowExternalNonTrustedMeetingChat <Boolean>]
  [-AllowExternalParticipantGiveRequestControl <Boolean>]
  [-AllowImmersiveView <Boolean>]
+ [-AllowIntelligentRecap <Boolean>]
  [-AllowIPAudio <Boolean>]
  [-AllowIPVideo <Boolean>]
  [-AllowLocalRecording <Boolean>]
@@ -94,6 +95,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-ExternalBotAccessMode <String>]
  [-Force]
  [-InfoShownInReportMode <String>]
+ [-IntelligentRecapDocxFileExpirationDays <Int32>]
  [-IPAudioMode <String>]
  [-IPVideoMode <String>]
  [-LiveCaptionsEnabledType <String>]
@@ -528,6 +530,23 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowIntelligentRecap
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+Controls whether Intelligent Recap is allowed for the user's meetings.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1420,6 +1439,25 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -IntelligentRecapDocxFileExpirationDays
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+This setting controls how many days the intelligent recap docx file is stored before it expires. The default value is 120.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 120
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -IPAudioMode
 Determines whether audio can be turned on in meetings and group calls. Set this to ENABLEDOUTGOINGINCOMING to allow outgoing and incoming audio in the meeting. Set this to DISABLED to prohibit outgoing and incoming audio in the meeting.
