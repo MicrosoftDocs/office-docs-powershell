@@ -205,7 +205,7 @@ The busy on busy setting for the specified user. Busy on busy controls what happ
 - `RedirectAsUnansweredCall`: the new incoming call is handled as an unanswered call, that is, it is routed using the user's unanswered call settings (`UnansweredTargetType` and `UnansweredTarget`).
 - `RingUser`: the new incoming call rings the user. This turns busy on busy off for the user.
 
-A per-user setting configured with this parameter applies in addition to the tenant-level and user-level busy on busy configuration set through `Set-CsTeamsCallingPolicy`.
+This setting applies when the user's Teams calling policy has `BusyOnBusyEnabledType` set to `UserOverride`. Otherwise, the policy value takes precedence and this setting is ignored.
 
 If you omit this parameter, the current busy on busy setting for the user is left unchanged.
 
