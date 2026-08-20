@@ -89,6 +89,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-DesignatedPresenterRoleMode <String>]
  [-DetectSensitiveContentDuringScreenSharing <Boolean>]
  [-DisableAudioAnnouncementsForResourceAccounts <Boolean>]
+ [-EnableExternalRecordingDetection <Boolean>]
  [-EnrollUserOverride <String>]
  [-ExplicitRecordingConsent <String>]
  [-ExternalMeetingJoin <String>]
@@ -2402,6 +2403,27 @@ Aliases:
 Required: False
 Position: Named
 Default value: Everyone
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableExternalRecordingDetection
+
+Controls whether Teams detects third-party applications, such as screen recorders, audio recorders, and AI note-takers, capturing audio on the user's device during a meeting.
+
+Possible values are:
+
+- **$true**: The user's client runs external recording detection and participants are notified when a third-party application is detected capturing audio.
+- **$false**: External recording detection does not run. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
