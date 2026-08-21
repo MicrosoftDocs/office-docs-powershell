@@ -1,11 +1,14 @@
 ---
 title: "Find the permissions required to run any Exchange cmdlet"
-ms.date: 06/06/2024
+ms.date: 07/31/2026
 ms.audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
+ai-usage: ai-assisted
 ms.assetid: 5bcc46d3-8a07-4e9f-b1b0-e4cb0b0afc12
-description: "Admins can learn how to use PowerShell to find the permissions required to run any cmdlet in Exchange Server PowerShell or Exchange Online PowerShell."
+ms.custom: msecd-doc-authoring-1015
+description: "Learn how to identify the Exchange RBAC roles and role groups required to run Exchange Server or Exchange Online PowerShell cmdlets."
+#customer intent: As an Exchange admin, I want to identify the permissions required for a cmdlet so that I can assign the appropriate Exchange RBAC roles.
 ---
 
 # Find the permissions required to run any Exchange cmdlet
@@ -21,9 +24,9 @@ You can use PowerShell to find the permissions required to run any Exchange or E
 
 - You can only use PowerShell to perform these procedures.
 
-- The procedures in this article don't work in Security & Compliance PowerShell. For more information about Security & Compliance permissions, see the following articles:
-  - [Permissions in the Microsoft Defender portal](/defender-office-365/mdo-portal-permissions)
-  - [Permissions in the Microsoft Purview compliance portal](/purview/purview-compliance-portal-permissions)
+- The procedures in this article don't apply to the following Exchange-related PowerShell environments:
+  - [Security & Compliance PowerShell](scc-powershell.md)
+  - [Microsoft Defender for Office 365 PowerShell](defender-office-365-powershell-overview.md)
 
 - You need to be assigned permissions before you can do the procedures in this article. You have the following options:
   - [Exchange Server permissions](/exchange/permissions/permissions): Membership in one of the following role groups:
