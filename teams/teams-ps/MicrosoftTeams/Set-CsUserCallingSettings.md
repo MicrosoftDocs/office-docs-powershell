@@ -378,6 +378,8 @@ Accept wildcard characters: False
 ```
 ### -MaximumConcurrentCalls
 
+Note: This cmdlet is currently available only to customers participating in a private preview program. General availability has not yet been determined and is subject to change.
+
 Applies only to Resource Accounts configured for a Call Delegation scenario with CAP phones. In this configuration, the Identity parameter must specify a Resource Account, while the delegates are CAP phone users.
 
 The MaximumConcurrentCalls setting defines the maximum number of simultaneous calls that can be handled by the Resource Account's CAP phone delegates. When the configured limit is reached, any additional incoming calls are automatically routed according to the Resource Account's unanswered call settings.
