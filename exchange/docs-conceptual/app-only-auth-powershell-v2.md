@@ -1,6 +1,6 @@
 ---
 title: App-only authentication for unattended scripts
-ms.date: 07/31/2026
+ms.date: 08/24/2026
 ms.audience: Admin
 ms.topic: article
 ms.service: exchange-online
@@ -49,14 +49,7 @@ Certificate based authentication (CBA) or app-only authentication as described i
 >
 >   You can use Microsoft Graph to replace most of the functionality from those cmdlets. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
 >
-> - In Security & Compliance PowerShell, you can't use the procedures in this article with Microsoft Purview cmdlets, including but not limited to:
->   - [Get-ComplianceSearchAction](/powershell/module/exchangepowershell/get-compliancesearchaction)
->   - [New-ComplianceSearch](/powershell/module/exchangepowershell/new-compliancesearch)
->   - [Start-ComplianceSearch](/powershell/module/exchangepowershell/start-compliancesearch)
->   - [New-ComplianceSearchAction](/powershell/module/exchangepowershell/new-compliancesearchaction)
->   - [Invoke-HoldRemovalAction](/powershell/module/exchangepowershell/invoke-holdremovalaction)
->   - [Invoke-ComplianceSecurityFilterAction](/powershell/module/exchangepowershell/invoke-compliancesecurityfilteraction)
->   - [Invoke-ComplianceSearchActionStep](/powershell/module/exchangepowershell/invoke-compliancesearchactionstep)
+> - To run eDiscovery cmdlets with app-only authentication in Security & Compliance PowerShell, use ExchangeOnlineManagement 3.10.1 or later, include the _EnableSearchOnlySession_ switch when you run **Connect-IPPSSession**, and configure the service principal and eDiscovery role-based access control (RBAC). For more information, see [Configure app-only authentication for eDiscovery PowerShell](/purview/edisc-permissions#configure-app-only-authentication-for-ediscovery-powershell).
 >
 > - Delegated scenarios are supported in Exchange Online. The recommended method for connecting with delegation is using GDAP and App Consent. For more information, see [Use the Exchange Online PowerShell v3 Module with GDAP and App Consent](/powershell/partnercenter/exchange-online-gdap-app). You can also use multitenant applications when CSP relationships aren't created with the customer. The required steps for using multitenant applications are called out within the regular instructions in this article.
 >
@@ -91,6 +84,8 @@ The following examples show how to use the Exchange Online PowerShell module wit
 >   <sup>\*</sup> The _AzureADAuthorizationEndpointUri_ value ending in `/organizations` allows only work or school accounts. The older URI value ending in `/common` still works, but might prompt you to choose between a personal account and a work or school account. We recommend the `/organizations` URI value in enterprise scenarios where consumer accounts should be excluded.
 >
 > - If a **Connect-IPPSSession** command presents a sign in prompt, run the command: `$Global:IsWindows = $true` before the **Connect-IPPSSession** command.
+>
+> - To run eDiscovery cmdlets, use ExchangeOnlineManagement 3.10.1 or later and add the _EnableSearchOnlySession_ switch to the **Connect-IPPSSession** command.
 
 - **Connect using a certificate thumbprint**:
 
@@ -172,7 +167,12 @@ For a detailed visual flow about creating applications in Microsoft Entra ID, se
 
 2. [Assign API permissions to the application](#step-2-assign-api-permissions-to-the-application).
 
-   An application object has the **Delegated** API permission **Microsoft Graph** \> **User.Read** by default. For the application object to access resources in Exchange, it needs the **Application** API permission **Office 365 Exchange Online** \> **Exchange.ManageAsApp**.
+   An application object has the **Delegated** API permission **Microsoft Graph** \> **User.Read** by default. Add the **Application** permission that matches the PowerShell connection:
+
+   - **Exchange Online PowerShell (Connect-ExchangeOnline)**: **Office 365 Exchange Online** \> **Exchange.ManageAsApp**.
+   - **Security & Compliance PowerShell (Connect-IPPSSession)**: **Microsoft Exchange Online Protection** \> **Exchange.ManageAsApp**.
+
+   If the application connects to both environments, add both permissions. Grant tenant-wide admin consent for each permission.
 
 3. [Generate a certificate](#step-3-generate-a-certificate)
 
@@ -243,7 +243,14 @@ Choose **one** of the following methods in this section to assign API permission
 
    ![Select Add a permission on the API permissions page of the application.](media/exo-app-only-auth-api-permissions-add-a-permission.png)
 
-3. In the **Request API permissions** flyout that opens, select the **APIs my organization uses** tab, start typing **Office 365 Exchange Online** in the **Search** box, and then select it from the results.
+3. In the **Request API permissions** flyout that opens, select the **APIs my organization uses** tab, and then select the API that matches the PowerShell connection:
+
+   - **Exchange Online PowerShell (Connect-ExchangeOnline)**: Search for and select **Office 365 Exchange Online**.
+   - **Security & Compliance PowerShell (Connect-IPPSSession)**: Search for and select **Microsoft Exchange Online Protection**.
+
+   If the application connects to both environments, repeat steps 2 through 5 for the other API before you continue to step 6.
+
+   The following screenshot shows the Exchange Online PowerShell selection:
 
    ![Find and select Office 365 Exchange Online on the APIs my organization uses tab.](media/exo-app-only-auth-api-permissions-select-o365-exo.png)
 
@@ -253,7 +260,7 @@ Choose **one** of the following methods in this section to assign API permission
 
    ![Find and select Exchange.ManageAsApp permissions from the Application permission tab.](media/exo-app-only-auth-api-permissions-select-exchange-manageasapp.png)
 
-6. Back on the app **API permissions** page, verify **Office 365 Exchange Online** \> **Exchange.ManageAsApp** is listed and contains the following values:
+6. Back on the app **API permissions** page, verify each required **Exchange.ManageAsApp** permission is listed and contains the following values:
    - **Type**: **Application**.
    - **Admin consent required**: **Yes**.
    - **Status**: The current incorrect value is **Not granted for \<Organization\>**.
@@ -275,13 +282,13 @@ Choose **one** of the following methods in this section to assign API permission
 #### Modify the app manifest to assign API permissions
 
 > [!NOTE]
-> The procedures in this section _append_ the existing default permissions on the app (delegated **User.Read** permissions in **Microsoft Graph**) with the required application **Exchange.ManageAsApp** permissions in **Office 365 Exchange Online**.
+> The procedures in this section _append_ the existing default permissions on the app (delegated **User.Read** permissions in **Microsoft Graph**) with the required application **Exchange.ManageAsApp** permission. Use the resource values that match the PowerShell connection. If the application connects to both Exchange Online PowerShell and Security & Compliance PowerShell, include both Exchange resource objects and one Microsoft Graph resource object.
 
 1. On the app **Overview** page, select **Manifest** from the **Manage** section.
 
    ![Select Manifest on the application overview page.](media/exo-app-only-auth-select-manifest.png)
 
-2. On the app **Manifest** page, find the `requiredResourceAccess` entry (on or about line 42), and make the entry look like the following code snippet:
+2. On the app **Manifest** page, find the `requiredResourceAccess` entry (on or about line 42). For Exchange Online PowerShell, make the entry look like the following code snippet:
 
    ```json
    "requiredResourceAccess": [
@@ -307,7 +314,7 @@ Choose **one** of the following methods in this section to assign API permission
    ```
 
    > [!NOTE]
-   > Microsoft 365 GCC High or DoD environments have access to Security & Compliance PowerShell only. Use the following values for the `requiredResourceAccess` entry:
+   > For Security & Compliance PowerShell in any environment, including Microsoft 365 GCC High and DoD, use the following values for the `requiredResourceAccess` entry:
    >
    > ```json
    > "requiredResourceAccess": [
@@ -338,10 +345,10 @@ Choose **one** of the following methods in this section to assign API permission
 
    ![Select API permissions from the Manifest page.](media/exo-app-only-auth-manifest-select-api-permissions.png)
 
-4. On the **API permissions** page, verify **Office 365 Exchange Online** \> **Exchange.ManageAsApp** is listed and contains the following values:
+4. On the **API permissions** page, verify each required **Exchange.ManageAsApp** permission is listed and contains the following values:
    - **Type**: **Application**.
    - **Admin consent required**: **Yes**.
-   - **Status**: The current incorrect value is **Not granted for \<Organization\>** for the **Office 365 Exchange Online** \> **Exchange.ManageAsApp** entry.
+   - **Status**: The current incorrect value is **Not granted for \<Organization\>**.
 
      Change the **Status** value by selecting **Grant admin consent for \<Organization\>**, read the confirmation dialog that opens, and then select **Yes**.
 

@@ -36,6 +36,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-AllowExternalNonTrustedMeetingChat <Boolean>]
  [-AllowExternalParticipantGiveRequestControl <Boolean>]
  [-AllowImmersiveView <Boolean>]
+ [-AllowIntelligentRecap <Boolean>]
  [-AllowIPAudio <Boolean>]
  [-AllowIPVideo <Boolean>]
  [-AllowLocalRecording]
@@ -82,6 +83,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-DesignatedPresenterRoleMode <String>]
  [-DetectSensitiveContentDuringScreenSharing <Boolean>]
  [-DisableAudioAnnouncementsForResourceAccounts <Boolean>]
+ [-EnableExternalRecordingDetection <Boolean>]
  [-EnrollUserOverride <String>]
  [-ExplicitRecordingConsent <String>]
  [-ExternalMeetingJoin <String>]
@@ -91,6 +93,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-IPVideoMode <String>]
  [-InfoShownInReportMode <String>]
  [-InMemory]
+ [-IntelligentRecapDocxFileExpirationDays <Int32>]
  [-LiveCaptionsEnabledType <String>]
  [-LiveInterpretationEnabledType <String>]
  [-LiveStreamingMode <String>]
@@ -481,6 +484,23 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowIntelligentRecap
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+Controls whether Intelligent Recap is allowed for the user's meetings.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1369,6 +1389,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IntelligentRecapDocxFileExpirationDays
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+This setting controls how many days the intelligent recap docx file is stored before it expires. The default value is 120.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 120
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InMemory
 Creates an object reference without actually committing the object as a permanent change. If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-.
 
@@ -2108,6 +2146,27 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableExternalRecordingDetection
+
+Controls whether Teams detects third-party applications, such as screen recorders, audio recorders, and AI note-takers, capturing audio on the user's device during a meeting.
+
+Possible values are:
+
+- **$true**: The user's client runs external recording detection and participants are notified when a third-party application is detected capturing audio.
+- **$false**: External recording detection does not run. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
