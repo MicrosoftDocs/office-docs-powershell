@@ -17,7 +17,7 @@ Configures calling settings for a specified user or Resource Account, including 
 
 For user accounts, this cmdlet enables configuration of delegates and user-specific call-handling behaviour.
 
-For Resource Accounts, these settings are primarily used in Shared Line Appearance (SLA) scenarios, where the Resource Account is associated with the primary phone number and delegated participants (such as CAP devices or associated users) are configured to handle incoming calls on behalf of the Resource Account.
+For Resource Accounts, these settings are primarily used in Shared Line Appearance (SLA) scenarios, where the Resource Account is associated with the primary phone number and delegated participants (such as CAP devices or associated users) are configured to handle incoming calls on behalf of the Resource Account. Resource account settings will only work for customers that are participating in a private preview for this feature. General Availability for this functionality has not been determined at this time.
 
 ## SYNTAX
 
@@ -408,7 +408,8 @@ Accept wildcard characters: False
 ```
 ### -MaximumConcurrentCalls
 
-Note: This cmdlet is currently available only to customers participating in a private preview program. General availability has not yet been determined and is subject to change.
+> [!IMPORTANT] 
+>This cmdlet is currently available only to customers participating in a Private preview program. General Availability for this functionality has not been determined at this time.
 
 Applies only to Resource Accounts configured for a Call Delegation scenario with CAP phones. In this configuration, the Identity parameter must specify a Resource Account, while the delegates are CAP phone users.
 
