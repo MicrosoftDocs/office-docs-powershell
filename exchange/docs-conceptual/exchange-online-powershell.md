@@ -1,11 +1,14 @@
 ---
 title: "Exchange Online PowerShell"
-ms.date: 05/07/2025
+ms.date: 07/31/2026
 ms.audience: Admin
 ms.topic: article
 ms.localizationpriority: medium
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1015
 ms.assetid: 1cb603b0-2961-4afe-b879-b048fe0f64a2
-description: "Learn about articles that are available for using PowerShell in Exchange Online."
+description: "Find guidance for connecting to and using Exchange Online PowerShell to manage recipients, mail flow, and related security features."
+#customer intent: As an Exchange admin, I want to find Exchange Online PowerShell guidance so that I can connect to and manage my organization.
 ---
 
 # Exchange Online PowerShell
@@ -18,9 +21,11 @@ Exchange Online PowerShell is the administrative interface that enables you to m
 
 - To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](connect-to-exchange-online-powershell.md).
 
+  If you use [Microsoft Defender Unified RBAC](/defender-xdr/manage-rbac) permissions for features in the Defender portal, see [Microsoft Defender for Office 365 PowerShell overview](defender-office-365-powershell-overview.md).
+
   To learn about different methods to connect to Exchange Online PowerShell, see the following articles:
 
-  - [App-only authentication for unattended scripts in the Exchange Online PowerShell module](app-only-auth-powershell-v2.md).
+  - [App-only authentication for unattended scripts](app-only-auth-powershell-v2.md).
   - [Use Azure managed identities to connect to Exchange Online PowerShell](connect-exo-powershell-managed-identity.md).
   - [Use C# to connect to Exchange Online PowerShell](connect-to-exo-powershell-c-sharp.md)
 

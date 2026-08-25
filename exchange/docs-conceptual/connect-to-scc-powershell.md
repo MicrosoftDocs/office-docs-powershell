@@ -1,19 +1,24 @@
 ---
 title: Connect to Security & Compliance PowerShell
-ms.date: 06/04/2026
+ms.date: 07/31/2026
 ms.audience: Admin
 ms.topic: article
 ms.reviewer:
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ms.collection: Strat_EX_Admin
-ms.custom:
+ms.custom: msecd-doc-authoring-1015
 ms.assetid:
-description: "Learn how to use the Exchange Online PowerShell V3 module to connect to Security & Compliance PowerShell with modern authentication and/or multifactor authentication (MFA)."
+description: "Learn how to connect to Security & Compliance PowerShell with modern and multifactor authentication (MFA) in the Exchange Online PowerShell module."
+#customer intent: As a compliance admin, I want to connect to Security & Compliance PowerShell so that I can manage Microsoft Purview compliance features.
 ---
 
 # Connect to Security & Compliance PowerShell
 
 This article contains instructions for how to connect to Security & Compliance PowerShell using the Exchange Online PowerShell module with or without multifactor authentication (MFA).
+
+> [!NOTE]
+> Use Security & Compliance PowerShell for Microsoft Purview compliance administration. If you use [Microsoft Defender Unified RBAC](/defender-xdr/manage-rbac) permissions for features in the Defender portal, [connect to Microsoft Defender for Office 365 PowerShell](connect-to-defender-for-office-365-powershell.md) instead.
 
 The Exchange Online PowerShell module uses modern authentication for connecting to Exchange Online PowerShell and Security & Compliance PowerShell. For more information about the Exchange Online PowerShell module, see [About the Exchange Online PowerShell module](exchange-online-powershell-v2.md).
 
@@ -125,7 +130,7 @@ For detailed syntax and parameter information, see [Connect-IPPSSession](/powers
 
 ### Connect to Security & Compliance PowerShell without a sign in prompt (unattended scripts)
 
-For complete instructions, see [App-only authentication for unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell](app-only-auth-powershell-v2.md).
+For complete instructions, see [App-only authentication for unattended scripts](app-only-auth-powershell-v2.md).
 
 ### Connect to Security & Compliance PowerShell in customer organizations
 

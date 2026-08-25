@@ -1,20 +1,22 @@
 ---
-title: App-only authentication in Exchange Online PowerShell and Security & Compliance PowerShell
+title: App-only authentication for unattended scripts
 ms.date: 08/24/2026
 ms.audience: Admin
 ms.topic: article
 ms.service: exchange-online
 ms.reviewer:
 ms.localizationpriority: high
+ai-usage: ai-assisted
 ms.collection: Strat_EX_Admin
-ms.custom:
+ms.custom: msecd-doc-authoring-1015
 ms.assetid:
-description: "Learn how to configure app-only authentication (also known as certificate based authentication or CBA) using the Exchange Online PowerShell V3 module in scripts and other long-running tasks."
+description: "Learn how to configure certificate-based app-only authentication for unattended scripts in the Exchange Online PowerShell module."
+#customer intent: As an admin, I want to configure app-only authentication so that unattended PowerShell scripts don't require user credentials.
 ---
 
-# App-only authentication for unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell
+# App-only authentication for unattended scripts
 
-Auditing and reporting scenarios in Microsoft 365 often involve unattended scripts in Exchange Online PowerShell and Security & Compliance PowerShell. In the past, unattended sign in required you to store the username and password in a local file or in a secret vault accessed at run-time. But, as we all know, storing user credentials locally isn't a good security practice.
+Auditing and reporting scenarios in Microsoft 365 often involve unattended scripts in [Exchange Online PowerShell](exchange-online-powershell.md), [Security & Compliance PowerShell](scc-powershell.md), and [Microsoft Defender for Office 365 PowerShell](defender-office-365-powershell-overview.md). In the past, unattended sign in required you to store the username and password in a local file or in a secret vault accessed at run-time. But, as we all know, storing user credentials locally isn't a good security practice.
 
 Certificate based authentication (CBA) or app-only authentication as described in this article supports unattended script and automation scenarios by using Microsoft Entra apps and certificates.
 
@@ -25,10 +27,15 @@ Certificate based authentication (CBA) or app-only authentication as described i
 > - The features and procedures described in this article require the following versions of the Exchange Online PowerShell module:
 >   - **Exchange Online PowerShell (Connect-ExchangeOnline)**: Version 2.0.4 or later.
 >   - **Security & Compliance PowerShell (Connect-IPPSSession)**: Version 3.0.0 or later.
+>   - **Defender for Office 365 PowerShell (Connect-DefenderForOffice365)**: Version 3.10.2-Preview1 or later.
 >
 >   For instructions on how to install or update the module, see [Install and update the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-update-the-exchange-online-powershell-module). For instructions on how to use the module in Azure Automation, see [Manage modules in Azure Automation](/azure/automation/shared-resources/modules).
 >
 > - CBA or app-only authentication is available in Office 365 operated by 21Vianet in China.
+>
+> - Defender for Office 365 PowerShell isn't currently available in Office 365 operated by 21Vianet.
+>
+> - App-only Defender for Office 365 PowerShell connections use Microsoft Entra role assignments. Unified RBAC role assignments for service principals aren't currently supported.
 >
 > - REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
 >
@@ -99,6 +106,12 @@ The following examples show how to use the Exchange Online PowerShell module wit
     Connect-IPPSSession -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
     ```
 
+  - <u>Defender for Office 365 PowerShell</u>:
+
+    ```powershell
+    Connect-DefenderForOffice365 -CertificateThumbPrint "012THISISADEMOTHUMBPRINT" -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
+    ```
+
 - **Connect using a certificate object**:
 
   The certificate doesn't need to be installed on the computer where you're running the command. You can store the certificate object remotely. The certificate is fetched when the script is run.
@@ -113,6 +126,12 @@ The following examples show how to use the Exchange Online PowerShell module wit
 
     ```powershell
     Connect-IPPSSession -Certificate <%X509Certificate2 Object%> -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
+    ```
+
+  - <u>Defender for Office 365 PowerShell</u>:
+
+    ```powershell
+    Connect-DefenderForOffice365 -Certificate <%X509Certificate2 Object%> -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
     ```
 
 - **Connect using a local certificate**:
@@ -130,6 +149,12 @@ The following examples show how to use the Exchange Online PowerShell module wit
 
      ```powershell
     Connect-IPPSSession -CertificateFilePath "C:\Users\navin\Desktop\automation-cert.pfx" -CertificatePassword (Get-Credential).password -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
+    ```
+
+  - <u>Defender for Office 365 PowerShell</u>:
+
+    ```powershell
+    Connect-DefenderForOffice365 -CertificateFilePath "C:\Users\navin\Desktop\automation-cert.pfx" -CertificatePassword (Get-Credential).password -AppID "36ee4c6c-0812-40a2-b820-b22ebd02bce3" -Organization "contosoelectronics.onmicrosoft.com"
     ```
 
 ## Set up app-only authentication
