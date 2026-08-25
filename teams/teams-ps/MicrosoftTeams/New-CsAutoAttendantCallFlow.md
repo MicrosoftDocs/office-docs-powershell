@@ -1,12 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallflow
 schema: 2.0.0
 title: New-CsAutoAttendantCallFlow
@@ -20,7 +20,7 @@ Use the New-CsAutoAttendantCallFlow cmdlet to create a new call flow.
 ## SYNTAX
 
 ```powershell
-New-CsAutoAttendantCallFlow -Name <String> -Menu <Object> [-Greetings <List>] [-ForceListenMenuEnabled] [-RingResourceAccountDelegates <Boolean>] [-Tenant <Guid>] [<CommonParameters>]
+New-CsAutoAttendantCallFlow -Name <String> -Menu <Object> [-Greetings <List>] [-ForceListenMenuEnabled] [-RingResourceAccountDelegates <Boolean>] [-TimeoutThreshold <Int16>] [-TimeoutDisconnectPromptType <String>] [-TimeoutDisconnectPromptCustomText <String>] [-AiDisclaimerType <String>] [-AiDisclaimerCustomText <String>] [-Tenant <Guid>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,6 +30,14 @@ The New-CsAutoAttendantCallFlow cmdlet creates a new call flow for use with the 
 > The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
 >
 > - -RingResourceAccountDelegates
+>
+> The following configuration parameters are available for customers that are participating in the [Frontier](https://www.microsoft.com/microsoft-365-copilot/frontier-program) Public Preview program.
+> 
+> - -TimeoutThreshold
+> - -TimeoutDisconnectPromptType
+> - -TimeoutDisconnectPromptCustomText
+> - -AiDisclaimerType
+> - -AiDisclaimerCustomText
 
 ## EXAMPLES
 
@@ -102,7 +110,7 @@ The Menu parameter identifies the menu to render when the call flow is executed.
 You can create a new menu by using the [`New-CsAutoAttendantMenu`](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantmenu) cmdlet.
 
 ```yaml
-Type: System.Object
+Type: Object
 Parameter Sets: (All)
 Aliases:
 
@@ -118,7 +126,7 @@ Accept wildcard characters: False
 The Name parameter represents a unique friendly name for the call flow.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -147,12 +155,115 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+
+### -TimeoutThreshold
+
+**This option applies to Teams Phone Agent only.**
+
+The maximum allowed time in seconds for a Teams Phone Agent call before it terminates. The `-TimeoutThreshold` can be any integer value between 15 and 2400 seconds (inclusive), and is rounded to the nearest 15th interval. The default maximum call length is 4 minutes (240 seconds).
+
+```yaml
+Type: Int16
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 240
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TimeoutDisconnectPromptType
+
+**This option applies to Teams Phone Agent only.**
+
+When the `-TimeoutThreshold` has been reached, the timeout disconnect prompt will be played.  The default prompt is:
+
+`I’m sorry the time limit of the call has been reached, and we will be disconnected in a moment, goodbye.`
+
+To configure a custom prompt, set this value to `Custom` and provide the prompt text with the `-TimeoutDisconnectPromptCustomText` option.
+
+PARAM: Default | Custom
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Default
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TimeoutDisconnectPromptCustomText
+
+**This option applies to Teams Phone Agent only.**
+
+The custom prompt played to the Teams Phone Agent caller when the `-TimeoutThreshold` has been reached and the `-TimeoutDisconnectPromptType` is set to `Custom`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True (when TimeoutDisconnectPromptType is Custom)
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AiDisclaimerType
+
+**This option applies to Teams Phone Agent only.**
+
+Customize the AI disclaimer message that Teams Phone Agent plays to callers. The default prompt is:
+
+`I'm a virtual assistant. How can I help you today.`
+
+To configure a custom prompt, set this value to `Custom` and provide the prompt text with the `-AiDisclaimerCustomText` option.
+
+PARAM: Default | None | Custom
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Default
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AiDisclaimerCustomText
+
+**This option applies to Teams Phone Agent only.**
+
+The custom prompt played to the Teams Phone Agent caller when the `-AiDisclaimerType` is set to `Custom`.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True (when AiDisclaimerType is Custom)
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Tenant
 
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -181,4 +292,4 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 [New-CsAutoAttendantMenu](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantmenu)
 
-[Get-CsMainlineAttendantFlow](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantprompt)
+[New-CsAutoAttendantPrompt](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantprompt)

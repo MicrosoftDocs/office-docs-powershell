@@ -14,7 +14,7 @@ title: Grant-CsDialoutPolicy
 # Grant-CsDialoutPolicy
 
 ## SYNOPSIS
-Use the `Grant-CsDialoutPolicy` cmdlet to assign the tenant global, a group of users, or a per-user outbound calling restriction policy to one or more users.
+Use the `Grant-CsDialoutPolicy` cmdlet to assign the tenant global or a per-user outbound calling restriction policy to one or more users.
 
 ## SYNTAX
 
@@ -26,11 +26,6 @@ Grant-CsDialoutPolicy [[-Identity] <string>] [[-PolicyName] <string>] [-PassThru
 ### GrantToTenant
 ```
 Grant-CsDialoutPolicy [[-PolicyName] <string>] [-PassThru] [-Global] [-WhatIf] [-Confirm] [<CommonParameters>]
-```
-
-### GrantToGroup
-```
-Grant-CsDialoutPolicy [-Group] <string> [[-PolicyName] <string>] [-PassThru] [-Rank <int>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -68,13 +63,6 @@ Grant-CsDialoutPolicy -Global -PolicyName "DialoutCPCandPSTNInternational"
 
 This example sets the tenant global policy instance to DialoutCPCandPSTNInternational.
 
-### Example 5
-```
-Grant-CsDialoutPolicy -Group support@contoso.com -Rank 10 -PolicyName "DialoutCPCandPSTNInternational"
-```
-
-This example assigns the policy instance "DialoutCPCandPSTNInternational" to the members of the group support@contoso.com.
-
 ## PARAMETERS
 
 ### -Confirm
@@ -108,24 +96,6 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Group
-
-> Applicable: Microsoft Teams
-
-Specifies the group used for the group policy assignment.
-
-```yaml
-Type: String
-Parameter Sets: GrantToGroup
-Aliases:
-
-Required: True
-Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -187,24 +157,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Rank
-
-> Applicable: Microsoft Teams
-
-The rank of the policy assignment, relative to other group policy assignments for the same policy type.
-
-```yaml
-Type: Int32
-Parameter Sets: GrantToGroup
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -WhatIf
 
 > Applicable: Microsoft Teams
@@ -235,7 +187,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-The GrantToGroup syntax is supported in Teams PowerShell Module 4.5.1-preview or later.
+Group policy assignment is not supported for the outbound calling restriction (Dialout) policy. Assign this policy per user with the `-Identity` parameter, or set the tenant global policy with the `-Global` parameter.
 
 The cmdlet is not supported for Teams resource accounts.
 

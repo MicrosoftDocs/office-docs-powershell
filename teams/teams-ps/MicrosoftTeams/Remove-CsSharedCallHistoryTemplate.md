@@ -1,12 +1,13 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Remove-CsSharedCallHistoryTemplate
+ms.author: colongma
+ms.reviewer: colongma
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-cssharedcallhistorytemplate
 schema: 2.0.0
 title: Remove-CsSharedCallHistoryTemplate
 ---
@@ -14,7 +15,12 @@ title: Remove-CsSharedCallHistoryTemplate
 # Remove-CsSharedCallHistoryTemplate
 
 ## SYNOPSIS
-Deletes a Shared Call  History template.
+
+> [!CAUTION]
+> This PowerShell cmdlet has been deprecated.
+>
+> Please use: [Remove-CsSharedCallHistoryTemplate](Remove-CsSharedCallHistoryTemplate.md)
+
 
 ## SYNTAX
 
@@ -32,16 +38,16 @@ Use the Remove-CsSharedCallHistoryTemplate cmdlet to delete a Shared Call Histor
 Remove-CsSharedCallHistoryTemplate -Id 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01
 ```
 
-This example deletes the Shared Call  History template with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01. If no Shared Call  History template exists with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01, then this example generates an error.
+This example deletes the Shared Call History template with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01. If no Shared Call History template exists with the identity 5e3a575e-1faa-49ff-83c2-5cf1c36c0e01, then this example generates an error.
 
 ## PARAMETERS
 
 ### -Id
 
-The Id parameter is the unique identifier assigned to the Shared Call  History template.
+The Id parameter is the unique identifier assigned to the Shared Call History template.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -62,7 +68,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Rtc.Management.OAA.Models.AutoAttendant
+### None
 
 ## NOTES
 

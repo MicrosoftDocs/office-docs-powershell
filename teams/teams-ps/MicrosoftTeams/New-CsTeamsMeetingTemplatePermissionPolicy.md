@@ -17,7 +17,7 @@ Creates a new instance of the TeamsMeetingTemplatePermissionPolicy.
 ## SYNTAX
 
 ```powershell
-    New-CsTeamsMeetingTemplatePermissionPolicy [-Identity] <string> [-HiddenMeetingTemplates<PSListModifier[HiddenMeetingTemplate]>] [-Description <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+    New-CsTeamsMeetingTemplatePermissionPolicy [-Identity] <string> [-HiddenMeetingTemplates<PSListModifier[HiddenMeetingTemplate]>] [-Description <string>] [-DefaultMeetingTemplateId <string>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -34,22 +34,23 @@ The next step would be to create the policy instance.
 $hiddentemplate_1 = New-CsTeamsHiddenMeetingTemplate -Id customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056
 $hiddentemplate_2 = New-CsTeamsHiddenMeetingTemplate -Id firstparty_e514e598-fba6-4e1f-b8b3-138dd3bca748
 
-New-CsTeamsMeetingTemplatePermissionPolicy -Identity Test_Policy -HiddenMeetingTemplates @($hiddentemplate_1, $hiddentemplate_2) -Description "This is a test policy"
+New-CsTeamsMeetingTemplatePermissionPolicy -Identity Test_Policy -HiddenMeetingTemplates @($hiddentemplate_1, $hiddentemplate_2) -Description "This is a test policy" -DefaultMeetingTemplateId "customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056"
 ```
 
 ```output
-Identity               : Tag:Test_Policy
-HiddenMeetingTemplates : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056, firstparty_e514e598-fba6-4e1f-b8b3-138dd3bca748}
-Description            : This is a test policy
+Identity                  : Tag:Test_Policy
+HiddenMeetingTemplates    : {customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056, firstparty_e514e598-fba6-4e1f-b8b3-138dd3bca748}
+Description               : This is a test policy
+DefaultMeetingTemplateId  : customtemplate_9ab0014a-bba4-4ad6-b816-0b42104b5056
 ```
 
 ## PARAMETERS
 
-### -Description
+### -Identity
 
 > Applicable: Microsoft Teams
 
-Description of the new policy instance to be created.
+Name of the new policy instance to be created.
 
 ```yaml
 Type: String
@@ -80,11 +81,28 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Identity
+### -Description
 
 > Applicable: Microsoft Teams
 
-Name of the new policy instance to be created.
+Description of the new policy instance to be created.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultMeetingTemplateId
+
+> Applicable: Microsoft Teams
+
+Specifies the ID of the meeting template to be applied by default to ad-hoc or standard meetings created by the user. Must use the `customtemplate_<GUID>` format. When set to null, no default template is applied.
 
 ```yaml
 Type: String

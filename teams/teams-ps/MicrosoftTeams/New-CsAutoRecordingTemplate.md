@@ -1,12 +1,13 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/New-CsAutoRecordingTemplate
+ms.author: colongma
+ms.reviewer: colongma
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csautorecordingtemplate
 schema: 2.0.0
 title: New-CsAutoRecordingTemplate
 ---
@@ -23,9 +24,6 @@ New-CsAutoRecordingTemplate -Name <String> -Description <String> -SharePointHost
 ```
 
 ## DESCRIPTION
-
->[!CAUTION]
->The functionality provided by this cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
 
 Use the New-CsAutoRecordingTemplate cmdlet to create an Auto Recording template that can be assigned to a call queue.
 
@@ -51,7 +49,7 @@ Aliases:
 
 Required: True
 Position: Named
-Default value: Off
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -108,7 +106,7 @@ Accept wildcard characters: False
 
 Are agents allowed to access the recordings or transcriptions.
 
-PARAMVALUE: None | All 
+Supported values: None | All
 
 ```yaml
 Type: Object
@@ -130,7 +128,7 @@ Accept wildcard characters: False
 The SharePoint hostname where the recordings and transcripts are stored.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -149,7 +147,7 @@ Accept wildcard characters: False
 Specifies the name of the SharePoint site used to store automatic recording and transcription. The site will be provisioned if it doesn't already exist through the Auto Recording template creation process.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -165,7 +163,7 @@ Accept wildcard characters: False
 The owner of the recording document
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -183,7 +181,7 @@ The audio file Id for the custom recording.
 See [Import-CsOnlineAudioFile](./Import-CsOnlineAudioFile.md)
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -202,7 +200,7 @@ Accept wildcard characters: False
 The text to speech prompt that will be played to callers telling them their call is being recorded.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 

@@ -1,12 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csautoattendant
 schema: 2.0.0
 title: Set-CsAutoAttendant
@@ -44,11 +44,12 @@ $christmasCallHandlingAssociation = New-CsAutoAttendantCallHandlingAssociation -
 
 $autoAttendant.CallFlows += @($christmasCallFlow)
 $autoAttendant.CallHandlingAssociations += @($christmasCallHandlingAssociation)
+$autoAttendant.SharedVoicemailTriageSettingsTemplateId = "aaa85a3c-440b-4332-b15c-f70d24030636"
 
 Set-CsAutoAttendant -Instance $autoAttendant
 ```
 
-This example adds a Christmas holiday to an AA that has an Identity of fa9081d6-b4f3-5c96-baec-0b00077709e5.
+This example adds a Christmas holiday to an AA that has an Identity of fa9081d6-b4f3-5c96-baec-0b00077709e5 and enables automatic triage of Shared Voicemails with AI.
 
 ### Example 2
 ```powershell
@@ -141,7 +142,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 

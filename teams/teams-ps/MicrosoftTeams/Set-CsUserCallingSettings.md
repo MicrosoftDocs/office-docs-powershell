@@ -27,6 +27,12 @@ For Resource Accounts, these settings are primarily used in Shared Line Appearan
 Set-CsUserCallingSettings -Identity <String> [-HttpPipelinePrepend <SendAsyncStep[]>] [<CommonParameters>]
 ```
 
+### BusyOnBusy
+```
+Set-CsUserCallingSettings -Identity <String> [-HttpPipelinePrepend <SendAsyncStep[]>]
+ -BusyOnBusyOption <String> [<CommonParameters>]
+```
+
 ### CallGroupNotification
 ```
 Set-CsUserCallingSettings -Identity <String> [-HttpPipelinePrepend <SendAsyncStep[]>]
@@ -187,6 +193,30 @@ This example configures the maximum number of concurrent calls that can be forwa
 The MaximumConcurrentCalls setting determines how many simultaneous calls can be handled by the Resource Account's CAP phone delegates. A value of 10 is the recommended default and provides the best calling experience for most CAP phone deployments. When this limit is reached, additional incoming calls are handled according to the Resource Account's unanswered call settings.
 
 ## PARAMETERS
+
+### -BusyOnBusyOption
+
+The busy on busy setting for the specified user. Busy on busy controls what happens to a new incoming call when the specified user is already in a call or in a conference. The supported values are:
+
+- `PlayBusySignal`: the new incoming call is rejected with a busy signal.
+- `RedirectAsUnansweredCall`: the new incoming call is handled as an unanswered call, that is, it is routed using the user's unanswered call settings (`UnansweredTargetType` and `UnansweredTarget`).
+- `RingUser`: the new incoming call rings the user. This turns busy on busy off for the user.
+
+This setting applies when the user's Teams calling policy has `BusyOnBusyEnabledType` set to `UserOverride`. Otherwise, the policy value takes precedence and this setting is ignored.
+
+If you omit this parameter, the current busy on busy setting for the user is left unchanged.
+
+```yaml
+Type: System.String
+Parameter Sets: BusyOnBusy
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -CallGroupOrder
 
@@ -465,6 +495,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 The cmdlet is available in Teams PowerShell module 4.0.0 or later.
 
+The `BusyOnBusyOption` parameter is available in Teams PowerShell module 8.0.0 or later.
+
 The specified user need to have the Microsoft Phone System license assigned.
 
 When forwarding to MyDelegates, the specified user needs to have one or more delegates defined that are allowed to receive calls. When forwarding to Group, the
@@ -476,6 +508,8 @@ this behavior. As an example, if you have ForwardingTargetType set to Group and 
 You can specify a SIP URI without 'sip:' on input, but the output from Get-CsUserCallingSettings will show the full SIP URI.
 
 You are not able to configure delegates via this cmdlet. Please use New-CsUserCallingDelegate, Set-CsUserCallingDelegate cmdlets and Remove-CsUserCallingDelegate.
+
+Busy on busy can also be configured at the tenant and per-user level through Set-CsTeamsCallingPolicy. See [Set-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamscallingpolicy) for details.
 
 ## RELATED LINKS
 [Get-CsUserCallingSettings](https://learn.microsoft.com/powershell/module/microsoftteams/get-csusercallingsettings)
