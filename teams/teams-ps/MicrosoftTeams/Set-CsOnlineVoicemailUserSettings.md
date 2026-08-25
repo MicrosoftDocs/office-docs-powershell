@@ -335,12 +335,20 @@ Accept wildcard characters: False
 ```
 
 ###  -UrgencyDetectionEnabled 
+> [!IMPORTANT]
+> The following configuration parameter will only work for customers that are participating in the Voice Applications private preview for Voicemails AI triage feature. General Availability for this functionality has not been determined at this time.
 tdb
 ### -CategoryDetectionEnabled 
+> [!IMPORTANT]
+> The following configuration parameter will only work for customers that are participating in the Voice Applications private preview for Voicemail AI triage feature. General Availability for this functionality has not been determined at this time.
 tbd
 ### -CallToActionDetectionEnabled 
+> [!IMPORTANT]
+> The following configuration parameter will only work for customers that are participating in the Voice Applications private preview for Voicemail AI triage feature. General Availability for this functionality has not been determined at this time.
 tbd
 ### -VoiceToTextSummaryEnabled
+> [!IMPORTANT]
+> The following configuration parameter will only work for customers that are participating in the Voice Applications private preview for Voicemail AI triage feature. General Availability for this functionality has not been determined at this time.
 tbd
 ### -WhatIf
 
