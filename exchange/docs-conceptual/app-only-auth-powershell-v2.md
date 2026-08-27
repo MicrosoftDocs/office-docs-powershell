@@ -44,11 +44,9 @@ Certificate based authentication (CBA) or app-only authentication as described i
 >
 > - App-only authentication remains unsupported for Microsoft Purview eDiscovery cmdlets in Security & Compliance PowerShell, including but not limited to:
 >   - [Get-ComplianceSearchAction](/powershell/module/exchangepowershell/get-compliancesearchaction)
->   - [New-CaseHoldPolicy](/powershell/module/exchangepowershell/new-caseholdpolicy)
 >   - [New-ComplianceSearch](/powershell/module/exchangepowershell/new-compliancesearch)
 >   - [Start-ComplianceSearch](/powershell/module/exchangepowershell/start-compliancesearch)
 >   - [New-ComplianceSearchAction](/powershell/module/exchangepowershell/new-compliancesearchaction)
->   - [Set-CaseHoldPolicy](/powershell/module/exchangepowershell/set-caseholdpolicy)
 >   - [Invoke-HoldRemovalAction](/powershell/module/exchangepowershell/invoke-holdremovalaction)
 >   - [Invoke-ComplianceSecurityFilterAction](/powershell/module/exchangepowershell/invoke-compliancesecurityfilteraction)
 >   - [Invoke-ComplianceSearchActionStep](/powershell/module/exchangepowershell/invoke-compliancesearchactionstep)
