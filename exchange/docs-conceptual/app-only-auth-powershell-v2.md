@@ -1,6 +1,6 @@
 ---
 title: App-only authentication in Exchange Online PowerShell and Security & Compliance PowerShell
-ms.date: 08/24/2026
+ms.date: 08/26/2026
 ms.audience: Admin
 ms.topic: article
 ms.service: exchange-online
@@ -42,7 +42,16 @@ Certificate based authentication (CBA) or app-only authentication as described i
 >
 >   You can use Microsoft Graph to replace most of the functionality from those cmdlets. For more information, see [Working with groups in Microsoft Graph](/graph/api/resources/groups-overview).
 >
-> - To run eDiscovery cmdlets with app-only authentication in Security & Compliance PowerShell, use ExchangeOnlineManagement 3.10.1 or later, include the _EnableSearchOnlySession_ switch when you run **Connect-IPPSSession**, and configure the service principal and eDiscovery role-based access control (RBAC). For more information, see [Configure app-only authentication for eDiscovery PowerShell](/purview/edisc-permissions#configure-app-only-authentication-for-ediscovery-powershell).
+> - App-only authentication remains unsupported for Microsoft Purview eDiscovery cmdlets in Security & Compliance PowerShell, including but not limited to:
+>   - [Get-ComplianceSearchAction](/powershell/module/exchangepowershell/get-compliancesearchaction)
+>   - [New-ComplianceSearch](/powershell/module/exchangepowershell/new-compliancesearch)
+>   - [Start-ComplianceSearch](/powershell/module/exchangepowershell/start-compliancesearch)
+>   - [New-ComplianceSearchAction](/powershell/module/exchangepowershell/new-compliancesearchaction)
+>   - [Invoke-HoldRemovalAction](/powershell/module/exchangepowershell/invoke-holdremovalaction)
+>   - [Invoke-ComplianceSecurityFilterAction](/powershell/module/exchangepowershell/invoke-compliancesecurityfilteraction)
+>   - [Invoke-ComplianceSearchActionStep](/powershell/module/exchangepowershell/invoke-compliancesearchactionstep)
+>
+>   Transition existing automations to Microsoft Graph APIs where available. For automations that continue to use this unsupported configuration, ExchangeOnlineManagement 3.10.1 or later, the _EnableSearchOnlySession_ switch on **Connect-IPPSSession**, and the required service principal and eDiscovery role-based access control (RBAC) configuration can help maintain functionality. This guidance doesn't change the support status of the configuration. For more information, see [Configure app-only authentication for eDiscovery PowerShell](/purview/edisc-permissions#configure-app-only-authentication-for-ediscovery-powershell).
 >
 > - Delegated scenarios are supported in Exchange Online. The recommended method for connecting with delegation is using GDAP and App Consent. For more information, see [Use the Exchange Online PowerShell v3 Module with GDAP and App Consent](/powershell/partnercenter/exchange-online-gdap-app). You can also use multitenant applications when CSP relationships aren't created with the customer. The required steps for using multitenant applications are called out within the regular instructions in this article.
 >
@@ -78,7 +87,7 @@ The following examples show how to use the Exchange Online PowerShell module wit
 >
 > - If a **Connect-IPPSSession** command presents a sign in prompt, run the command: `$Global:IsWindows = $true` before the **Connect-IPPSSession** command.
 >
-> - To run eDiscovery cmdlets, use ExchangeOnlineManagement 3.10.1 or later and add the _EnableSearchOnlySession_ switch to the **Connect-IPPSSession** command.
+> - For existing eDiscovery automations that continue to use the unsupported app-only configuration, use ExchangeOnlineManagement 3.10.1 or later and add the _EnableSearchOnlySession_ switch to the **Connect-IPPSSession** command.
 
 - **Connect using a certificate thumbprint**:
 
