@@ -19,7 +19,7 @@ Designates what meeting features guests using Microsoft Teams will have availabl
 ### Identity (Default)
 ```powershell
 Set-CsTeamsGuestMeetingConfiguration [-Tenant <Guid>] [-AllowIPVideo <Boolean>]
- [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [-AllowTranscription <Boolean>] [-LiveCaptionsEnabledType <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf]
+ [-ScreenSharingMode <String>] [-AllowMeetNow <Boolean>] [-AllowMultipleScreenshare <Boolean>] [-AllowTranscription <Boolean>] [-LiveCaptionsEnabledType <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf]
  [-Confirm] [<CommonParameters>]
 ```
 
@@ -71,6 +71,21 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowMultipleScreenshare
+Determines whether multiple simultaneous screenshares is ON/OFF either in the meeting. If turned ON, organizer/users who create meetings can utilize multiple simultaneous screenshares in their meetings. 
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: TRUE
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
