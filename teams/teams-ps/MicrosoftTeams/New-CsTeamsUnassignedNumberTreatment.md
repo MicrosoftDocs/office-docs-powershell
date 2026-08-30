@@ -36,47 +36,42 @@ This cmdlet creates a treatment for how calls to an unassigned number range shou
 
 ## EXAMPLES
 
+> [!NOTE]
+> When defining patterns, prefer broad regular expressions (such as area-code-based patterns) over listing individual phone numbers. Listing numbers one by one is difficult to maintain and scales poorly. Because these rules are evaluated only after the system has already determined that the called number is not assigned to any user or resource account in the tenant, there is no risk of interfering with calls to numbers that are in service. You do not need to narrow the pattern down to only the specific numbers owned by your organization — if an area-code-level pattern is sufficient to map calls to the desired target, use that instead.
+
 ### Example 1
 ```powershell
 $RAObjectId = (Get-CsOnlineApplicationInstance -Identity aa@contoso.com).ObjectId
-New-CsTeamsUnassignedNumberTreatment -Identity MainAA -Pattern "^\+15552223333$" -TargetType ResourceAccount -Target $RAObjectId -TreatmentPriority 1
+New-CsTeamsUnassignedNumberTreatment -Identity MainAA -Pattern "^\+1555\d{7}$" -TargetType ResourceAccount -Target $RAObjectId -TreatmentPriority 1
+```
+This example creates a treatment that will route all calls to unassigned numbers matching the +1 (555) area code to the resource account aa@contoso.com. The pattern `^\+1555\d{7}$` covers every number in that area code. Because unassigned number treatments are only applied to numbers not already assigned in the tenant, using a broad area-code pattern is the recommended approach.
+
+### Example 2
+```powershell
+$RAObjectId = (Get-CsOnlineApplicationInstance -Identity aa@contoso.com).ObjectId
+New-CsTeamsUnassignedNumberTreatment -Identity SingleNumberAA -Pattern "^\+15552223333$" -TargetType ResourceAccount -Target $RAObjectId -TreatmentPriority 2
 ```
 This example creates a treatment that will route all calls to the number +1 (555) 222-3333 to the resource account aa@contoso.com.
 That resource account is associated with an Auto Attendant (not part of the example).
 
-### Example 2
+### Example 3
 ```powershell
 $Content = Get-Content "C:\Media\MainAnnoucement.wav" -Encoding byte -ReadCount 0
 $AudioFile = Import-CsOnlineAudioFile -FileName "MainAnnouncement.wav" -Content $Content
 $Fid=[System.Guid]::Parse($audioFile.Id)
-New-CsTeamsUnassignedNumberTreatment -Identity TR1 -Pattern "^\+1555333\d{4}$" -TargetType Announcement -Target $Fid.Guid -TreatmentPriority 2
+New-CsTeamsUnassignedNumberTreatment -Identity TR1 -Pattern "^\+1555333\d{4}$" -TargetType Announcement -Target $Fid.Guid -TreatmentPriority 3
 ```
 This example creates a treatment that will route all calls to unassigned numbers in the range +1 (555) 333-0000 to +1 (555) 333-9999 to the announcement service,
 where the audio file MainAnnouncement.wav will be played to the caller.
 
-### Example 3
+### Example 4
 ```powershell
 $UserObjectId = (Get-CsOnlineUser -Identity user@contoso.com).Identity
-New-CsTeamsUnassignedNumberTreatment -Identity TR2 -Pattern "^\+15552224444$" -TargetType User -Target $UserObjectId -TreatmentPriority 3
+New-CsTeamsUnassignedNumberTreatment -Identity TR2 -Pattern "^\+15552224444$" -TargetType User -Target $UserObjectId -TreatmentPriority 4
 ```
 This example creates a treatment that will route all calls to the number +1 (555) 222-4444 to the user user@contoso.com.
 
 ## PARAMETERS
-
-### -Confirm
-Prompts you for confirmation before running the cmdlet.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -Description
 Free format description of this treatment.
@@ -87,7 +82,6 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -98,26 +92,10 @@ The Id of the treatment.
 
 ```yaml
 Type: System.String
-Parameter Sets: Identity
+Parameter Sets: (Identity)
 Aliases:
 
 Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MsftInternalProcessingMode
-{{ Fill MsftInternalProcessingMode Description }}
-
-```yaml
-Type: System.String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -132,8 +110,7 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
-Position: Named
+Required: True
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -143,12 +120,11 @@ Accept wildcard characters: False
 The identity of the destination the call should be routed to. Depending on the TargetType it should either be the ObjectId of the user or application instance/resource account or the AudioFileId of the uploaded audio file.
 
 ```yaml
-Type: System.String
+Type: System.Guid
 Parameter Sets: (All)
 Aliases:
 
-Required: False
-Position: Named
+Required: True
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -162,8 +138,7 @@ Type: System.String
 Parameter Sets: (All)
 Aliases:
 
-Required: False
-Position: Named
+Required: True
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -178,7 +153,6 @@ Parameter Sets: (ParentAndRelativeKey)
 Aliases:
 
 Required: True
-Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -188,35 +162,18 @@ Accept wildcard characters: False
 The priority of the treatment. Used to distinguish identical patterns. The lower the priority the higher preference. The priority needs to be unique.
 
 ```yaml
-Type: System.Int32
+Type: System.Integer
 Parameter Sets: (All)
 Aliases:
 
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WhatIf
-Shows what would happen if the cmdlet runs.
-The cmdlet is not run.
-
-```yaml
-Type: System.Management.Automation.SwitchParameter
-Parameter Sets: (All)
-Aliases: wi
-
-Required: False
-Position: Named
+Required: True
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
@@ -242,12 +199,12 @@ the appropriate target and not routed to the specified unassigned number treatme
 a valid external phone number, outbound calls from Microsoft Teams to that phone number will be routed according to the treatment.
 
 ## RELATED LINKS
-[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/microsoftteams/import-csonlineaudiofile)
+[Import-CsOnlineAudioFile](https://learn.microsoft.com/powershell/module/teams/import-csonlineaudiofile)
 
-[Get-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsunassignednumbertreatment)
+[Get-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/get-csteamsunassignednumbertreatment)
 
-[Remove-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsunassignednumbertreatment)
+[Remove-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/remove-csteamsunassignednumbertreatment)
 
-[Set-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsunassignednumbertreatment)
+[Set-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/set-csteamsunassignednumbertreatment)
 
-[Test-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/microsoftteams/test-csteamsunassignednumbertreatment)
+[Test-CsTeamsUnassignedNumberTreatment](https://learn.microsoft.com/powershell/module/teams/test-csteamsunassignednumbertreatment)
