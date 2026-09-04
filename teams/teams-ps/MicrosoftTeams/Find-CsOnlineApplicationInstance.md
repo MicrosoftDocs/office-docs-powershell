@@ -3,9 +3,10 @@ applicable: Microsoft Teams
 author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
 ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/find-csonlineapplicationinstance
 schema: 2.0.0
 title: Find-CsOnlineApplicationInstance
@@ -19,7 +20,7 @@ Use the Find-CsOnlineApplicationInstance cmdlet to find application instances th
 ## SYNTAX
 
 ```
-Find-CsOnlineApplicationInstance [-SearchQuery] <string> [[-MaxResults <uint>] [-ExactMatchOnly] [-AssociatedOnly] [-UnAssociatedOnly] [-Force] [<CommonParameters>]
+Find-CsOnlineApplicationInstance [-SearchQuery] <string> [[-MaxResults] <uint>] [-ExactMatchOnly] [-AssociatedOnly] [-UnAssociatedOnly] [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -117,7 +118,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -133,7 +134,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

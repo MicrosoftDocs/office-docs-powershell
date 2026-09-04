@@ -3,7 +3,7 @@ applicable: Microsoft Teams
 author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
 ms.author: colongma
 ms.reviewer: colongma
@@ -30,6 +30,9 @@ The New-CsAutoAttendantCallFlow cmdlet creates a new call flow for use with the 
 > The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
 >
 > - -RingResourceAccountDelegates
+>
+> The following configuration parameters are available for customers that are participating in the [Frontier](https://www.microsoft.com/microsoft-365-copilot/frontier-program) Public Preview program.
+> 
 > - -TimeoutThreshold
 > - -TimeoutDisconnectPromptType
 > - -TimeoutDisconnectPromptCustomText
@@ -223,7 +226,7 @@ Customize the AI disclaimer message that Teams Phone Agent plays to callers. The
 
 To configure a custom prompt, set this value to `Custom` and provide the prompt text with the `-AiDisclaimerCustomText` option.
 
-PARAM: Default | Custom
+PARAM: Default | None | Custom
 
 ```yaml
 Type: String

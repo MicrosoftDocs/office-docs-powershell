@@ -3,9 +3,10 @@ applicable: Microsoft Teams
 author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
 ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinevoicemailusersettings
 schema: 2.0.0
 title: Get-CsOnlineVoicemailUserSettings
