@@ -2508,12 +2508,12 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-The SetPhotoEnabled parameter specifies whether users can add, change, and remove their sender photo in Outlook on the web. Valid values are:
+The SetPhotoEnabled parameter specifies whether users can add, change, and remove their sender photo in apps like Outlook on the web and Teams. Valid values are:
 
-- $true: Users can manage their photos in Outlook on the web. This value is the default.
-- $false: Users can't manage their user photo in Outlook on the web.
+- $true: Users can manage their photos in Outlook on the web and Teams. This value is the default.
+- $false: Users can't manage their user photo in Outlook on the web and Teams.
 
-**Note**: To control whether users can update photos for Exchange Online, see [Configure User Administrator support for profile photo updates](https://learn.microsoft.com/graph/profilephoto-configure-settings#configure-user-administrator-support-for-profile-photo-updates).
+**Note**: This parameter controls photo management in Outlook and doesn't control whether users can update photos at myaccount.microsoft.com. To control whether users can update photos there, see [Configure User Administrator support for profile photo updates](https://learn.microsoft.com/graph/profilephoto-configure-settings#configure-user-administrator-support-for-profile-photo-updates).
 
 ```yaml
 Type: Boolean
