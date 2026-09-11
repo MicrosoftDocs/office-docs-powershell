@@ -69,6 +69,13 @@ New-AutoSensitivityLabelPolicy -Name "GlobalPolicy" -Comment "Primary policy" -S
 
 This example creates an auto-labeling policy named GlobalPolicy for the specified SharePoint and OneDrive locations with the label "Test". The new policy has a descriptive comment and is created in simulation mode.
 
+### Example 2
+```powershell
+New-AutoSensitivityLabelPolicy -Name "RemoveLabelPolicy" -SharePointLocation "https://contoso.sharepoint.com/sites/Research" -OneDriveLocation All -Mode TestWithoutNotifications -RemoveLabel -ApplySensitivityLabel "00000000-0000-0000-0000-000000000000"
+```
+
+This example creates an auto-labeling policy in simulation mode that removes an existing sensitivity label from matching content in SharePoint Online and OneDrive. For label removal, the ApplySensitivityLabel parameter requires the empty GUID. The AdvancedRule configuration of the associated rule that you create with New-AutoSensitivityLabelRule identifies the specific label to remove.
+
 ## PARAMETERS
 
 ### -Name
@@ -93,7 +100,9 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The ApplySensitivityLabel parameter specifies the label to use for the auto-labeling policy.
+The ApplySensitivityLabel parameter specifies the label to apply with the auto-labeling policy.
+
+When you use the RemoveLabel switch for SharePoint Online or OneDrive, this parameter is still required, but you must use the empty GUID `00000000-0000-0000-0000-000000000000`. The AdvancedRule configuration of the associated New-AutoSensitivityLabelRule identifies the specific existing label to remove. Don't specify the GUID of the label to remove in this parameter; doing so causes policy deployment errors.
 
 ```yaml
 Type: String
@@ -657,7 +666,11 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-{{ Fill RemoveLabel Description }}
+The RemoveLabel switch specifies that the auto-labeling policy removes an existing sensitivity label from matching content in SharePoint Online or OneDrive, including labels that users manually applied. Matching content is left unlabeled.
+
+When you use this switch, set the ApplySensitivityLabel parameter to the empty GUID `00000000-0000-0000-0000-000000000000`. The AdvancedRule configuration of the associated rule that you create with New-AutoSensitivityLabelRule identifies the specific existing label to remove.
+
+We recommend that you create the policy in simulation mode and review the results before you enable the policy.
 
 ```yaml
 Type: SwitchParameter
