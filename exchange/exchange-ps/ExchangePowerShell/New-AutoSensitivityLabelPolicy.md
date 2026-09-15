@@ -666,7 +666,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The RemoveLabel switch specifies that the auto-labeling policy removes an existing sensitivity label from matching content in SharePoint Online or OneDrive, including labels that users manually applied. Matching content is left unlabeled.
+The RemoveLabel switch specifies that the auto-labeling policy removes an existing sensitivity label from matching content in SharePoint Online or OneDrive, including labels that users manually applied. Matching content is left unlabeled. You don't need to specify a value with this switch.
 
 When you use this switch, set the ApplySensitivityLabel parameter to the empty GUID `00000000-0000-0000-0000-000000000000`. The AdvancedRule configuration of the associated rule that you create with New-AutoSensitivityLabelRule identifies the specific existing label to remove.
 
