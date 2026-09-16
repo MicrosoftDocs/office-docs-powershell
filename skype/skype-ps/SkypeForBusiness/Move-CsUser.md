@@ -73,22 +73,11 @@ When moving a user to the Microsoft 365 cloud to become TeamsOnly (or the revers
 > [!NOTE]
 > As of November 10, 2023, moving users from Teams to On-Premises will no longer migrate their contacts. This is mainly due to our continuous efforts to tighten security and protect customers' data. After carefully analyzing the usage patterns and performing risk assessments with the legacy infrastructure, we decided to deprecate this feature.
 
-**MINIMUM REQUIRED SERVER VERSIONS**:
+**MINIMUM REQUIRED SERVER VERSION**:
 
-As of July 31, 2022, moving users between an on-premises deployment and the cloud requires the following minimum version of either Skype for Business Server or Lync Server. In the future, moves between on-premises and the cloud will no longer be possible if you are using a version earlier than the ones listed below. If you are still using an earlier version of Skype for Business Server, you should upgrade to the specified minimum version (or later) before July 31, 2022.
+Moving users between an on-premises deployment and the cloud is supported only with Skype for Business Server Subscription Edition, build 7.0.2046.810 or later. Earlier versions of Skype for Business Server and Lync Server aren't supported for these moves.
 
-</br>
-</br>
-
-|On-premises product|Required minimum version|Required minimum build|
-|---|---|---|
-|Skype for Business Server 2019| CU6 |7.0.2046.385|
-|Skype for Business Server 2015| CU12|6.0.9319.619|
-|Lync Server 2013| CU10 with Hotfix 7|5.0.8308.1182|
-||||
-
-</br>
-</br>
+For lifecycle and installation information, see [Skype for Business Subscription Edition](https://learn.microsoft.com/lifecycle/products/skype-for-business-subscription-edition).
 
 > [!IMPORTANT]
 > Microsoft Teams PowerShell module versions **later than 7.2** introduced a regression
