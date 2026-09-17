@@ -25,9 +25,6 @@ Set-CsAutoRecordingTemplate -Instance <Object> [<CommonParameters>]
 
 ## DESCRIPTION
 
-> [!CAUTION]
-> The functionality provided by this cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
-
 Use the Set-CsAutoRecordingTemplate cmdlet to change an Auto Recording template.
 
 ## EXAMPLES
@@ -35,11 +32,11 @@ Use the Set-CsAutoRecordingTemplate cmdlet to change an Auto Recording template.
 ### Example 1
 ```
 $AutoRecording = Get-CsAutoRecordingTemplate -Id 66f0dc32-d344-4bb1-b524-027d4635515c
-$AutoRecording.EnableTranscript = $true
+$AutoRecording.TranscriptionEnabled = $true
 Set-CsAutoRecordingTemplate -Instance $AutoRecording
 ```
 
-This example sets the EnableTranscript value in the Auto Recording Template with the Id `66f0dc32-d344-4bb1-b524-027d4635515c`
+This example sets the TranscriptionEnabled value in the Auto Recording Template with the Id `66f0dc32-d344-4bb1-b524-027d4635515c`
 
 ## PARAMETERS
 

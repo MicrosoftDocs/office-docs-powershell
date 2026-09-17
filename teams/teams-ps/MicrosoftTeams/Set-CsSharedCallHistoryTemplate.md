@@ -15,7 +15,11 @@ title: Set-CsSharedCallHistoryTemplate
 # Set-CsSharedCallHistoryTemplate
 
 ## SYNOPSIS
-Modifies an existing Shared Call History template.
+
+> [!CAUTION]
+> This PowerShell cmdlet has been deprecated.
+>
+> Please use: [Set-CsSharedCallHistoryTemplate](Set-CsSharedCallHistoryTemplate.md)
 
 ## SYNTAX
 

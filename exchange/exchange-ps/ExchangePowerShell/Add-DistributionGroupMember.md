@@ -145,6 +145,22 @@ The Member parameter specifies the recipient that you want to add to the group. 
 - Email address
 - GUID
 
+The following recipient types are supported as members of a distribution group:
+
+- `UserMailbox`
+- `SharedMailbox`
+- `RoomMailbox`
+- `EquipmentMailbox`
+- `MailUser`
+- `MailContact`
+- `MailUniversalDistributionGroup`
+- `MailUniversalSecurityGroup`
+
+The following recipient types aren't supported as members:
+
+- Microsoft 365 groups
+- Non-mail-enabled Microsoft Entra users
+
 Although it isn't required, it's a good idea to add only security principals (for example, mailboxes and mail users with user accounts or other mail-enabled security groups) to mail-enabled security groups. If you assign permissions to a mail-enabled security group, any members that aren't security principals (for example, mail contacts or distribution groups) don't have the permissions assigned.
 
 ```yaml

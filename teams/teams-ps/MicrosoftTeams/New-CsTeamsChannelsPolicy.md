@@ -16,7 +16,7 @@ The CsTeamsChannelsPolicy allows you to manage features related to the Teams & C
 
 ## SYNTAX
 ```
-New-CsTeamsChannelsPolicy [-Tenant <Guid>] [-AllowOrgWideTeamCreation <Boolean>] [-EnablePrivateTeamDiscovery <Boolean>] [-AllowPrivateChannelCreation <Boolean>] [-AllowUserToParticipateInExternalSharedChannel <Boolean>] [-AllowChannelSharingToExternalUser <Boolean>] [-AllowSharedChannelCreation <Boolean>] [-ThreadedChannelCreation <String>]  [-AllowCreateChannel <String>] [-AllowCreateClassicChannel <String>] [-AllowCreatePrivateChannel <String>] [-AllowCreateSharedChannel <String>][-AllowGuestsFromOutsideTeam <String>] [-AllowGuestsFromOutsideTeamInPrivateChannel <String>] [-AllowSharingPrivateChannelWithTeamInOrg <String>] [-AllowSharingWithTeamInOrg <String>] [-AllowUsersFromOutsideTeam <String>] [-AllowUsersFromOutsideTeamInPrivateChannel <String>] [-CreateSharedChannelsByDefault <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
+New-CsTeamsChannelsPolicy [-Tenant <Guid>] [-AllowOrgWideTeamCreation <Boolean>] [-EnablePrivateTeamDiscovery <Boolean>] [-AllowPrivateChannelCreation <Boolean>] [-AllowUserToParticipateInExternalSharedChannel <Boolean>] [-AllowChannelSharingToExternalUser <Boolean>] [-AllowSharedChannelCreation <Boolean>] [-ThreadedChannelCreation <String>]  [-AllowCreateChannel <String>] [-AllowCreateClassicChannel <String>] [-AllowCreatePrivateChannel <String>] [-AllowCreateSharedChannel <String>][-AllowGuestsFromOutsideTeam <String>] [-AllowGuestsFromOutsideTeamInPrivateChannel <String>] [-AllowSharingPrivateChannelWithTeamInOrg <String>] [-AllowSharingWithTeamInOrg <String>] [-AllowUsersFromOutsideTeam <String>] [-AllowUsersFromOutsideTeamInPrivateChannel <String>] [-CreateSharedChannelsByDefault <String>] [-DefaultChannelTypeOnCreation <String>] [[-Identity] <XdsIdentity>] [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -392,6 +392,31 @@ Possible values are:
 
 - **Enabled**: Users are allowed.
 - **Disabled**: Users are not allowed.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DefaultChannelTypeOnCreation
+This setting sets the default channel type that users will have available.
+
+Possible values are:
+
+- **Flexible**: Open access channels.
+- **Private**: Private access channels.
+- **Standard**: Standard channels.
+- **Shared**: Shared channels.
 
 > [!NOTE]
 > This feature has not been fully released yet, so the setting will have no effect.
