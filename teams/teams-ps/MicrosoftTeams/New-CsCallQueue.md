@@ -6,6 +6,7 @@ Locale: en-US
 manager: roykuntz
 Module Name: MicrosoftTeams
 ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cscallqueue
 schema: 2.0.0
 title: New-CsCallQueue
