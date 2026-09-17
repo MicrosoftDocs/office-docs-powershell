@@ -36,13 +36,6 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 > - -TimeoutActionCallPriority
 > - -NoAgentActionCallPriority
 >
-> Compliance recording for Call queues
-> - -ComplianceRecordingForCallQueueTemplateId
-> - -TextAnnouncementForCR
-> - -CustomAudioFileAnnouncementForCR
-> - -TextAnnouncementForCRFailure
-> - -CustomAudioFileAnnouncementForCRFailure
->
 > Redirect Prompts
 > - -OverflowRedirectPersonTextToSpeechPrompt
 > - -OverflowRedirectPersonAudioFilePrompt
@@ -57,12 +50,6 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 > - -NoAgentRedirectVoicemailTextToSpeechPrompt
 > - -NoAgentRedirectVoicemailAudioFilePrompt
 >
-> Shared call history
-> - -SharedCallQueueHistoryTemplateId
->   
-> Automatic recording
-> - -AutoRecordingTemplateId
->   
 > Automatic triage of Shared Voicemails with AI
 > - -SharedVoicemailTriageSettingsTemplateId
 >
