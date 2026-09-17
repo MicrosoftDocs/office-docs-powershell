@@ -38,13 +38,6 @@ Set-CsCallQueue cmdlet provides a way for you to modify the properties of an exi
 > - -TimeoutActionCallPriority
 > - -NoAgentActionCallPriority
 >
-> Compliance recording for Call queues
-> - -ComplianceRecordingForCallQueueTemplateId
-> - -TextAnnouncementForCR
-> - -CustomAudioFileAnnouncementForCR
-> - -TextAnnouncementForCRFailure
-> - -CustomAudioFileAnnouncementForCRFailure
->
 > Redirect Prompts
 > - -OverflowRedirectPersonTextToSpeechPrompt
 > - -OverflowRedirectPersonAudioFilePrompt
@@ -58,12 +51,6 @@ Set-CsCallQueue cmdlet provides a way for you to modify the properties of an exi
 > - -NoAgentRedirectPersonAudioFilePrompt
 > - -NoAgentRedirectVoicemailTextToSpeechPrompt
 > - -NoAgentRedirectVoicemailAudioFilePrompt
->
-> Shared call history
-> - -SharedCallQueueHistoryTemplateId
->   
-> Automatic Recording
-> - -AutoRecordingTemplateId
 >
 > Automatic triage of Shared Voicemails with AI
 > - -SharedVoicemailTriageSettingsTemplateId
