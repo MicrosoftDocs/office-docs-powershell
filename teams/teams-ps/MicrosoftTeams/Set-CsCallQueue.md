@@ -5,8 +5,8 @@ external help file: Microsoft.Rtc.Management.dll-Help.xml
 Locale: en-US
 manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: clyvr
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-cscallqueue
 schema: 2.0.0
 title: Set-CsCallQueue
