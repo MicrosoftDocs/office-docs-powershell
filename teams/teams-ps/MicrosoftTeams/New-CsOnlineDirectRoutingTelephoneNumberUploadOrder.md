@@ -53,11 +53,14 @@ New-CsOnlineDirectRoutingTelephoneNumberUploadOrder
 
 
 ## DESCRIPTION
-This cmdlet uploads Direct Routing telephone numbers to Microsoft Teams telephone number management inventory. Once uploaded the phone numbers will be visible in Teams PowerShell as acquired Direct Routing phone numbers. The output of the cmdlet is the "orderId" of the asynchronous Direct Routing Number creation operation. A maximum of 10,000 phone numbers can be uploaded at a time. If more than 10,000 numbers need to be uploaded, the requests should be divided into multiple increments of up to 10,000 numbers.
+This cmdlet uploads Direct Routing telephone numbers to Microsoft Teams telephone number management inventory. Once uploaded the phone numbers will be visible in Teams PowerShell as acquired Direct Routing phone numbers. The output of the cmdlet is the "orderId" of the asynchronous Direct Routing Number creation operation. Each upload request supports a maximum of 10,000 telephone numbers, including CSV uploads with additional attributes. Split larger lists into separate upload requests of no more than 10,000 numbers each.
 
 The cmdlet is an asynchronous operation and will return an OrderId as output. You can use the [Get-CsOnlineTelephoneNumberOrder](./get-csonlinetelephonenumberorder.md) cmdlet to check the status of the OrderId, including any error or warning messages that might result from the operation: `Get-CsOnlineTelephoneNumberOrder -OrderType DirectRoutingNumberCreation -OrderId "orderId"`.
 
 A telephone number can be uploaded by itself or with associated attributes. When uploading a range telephone numbers, attributes are applied equally to all the numbers in range. If the telephone number is alread in Microsoft Teams database, the upload may fail.
+
+> [!NOTE]
+> CSV uploads that include additional telephone number attributes are supported in Teams PowerShell but aren't yet available in the Teams admin center. Use Teams PowerShell to upload numbers with these attributes.
 
 ## EXAMPLES
 
@@ -86,13 +89,68 @@ cdf3073a-6fbb-4ade-a8af-e8fa1f3b9c13
 In this example, a range of Direct Routing telephone numbers from "+12000000" to "+12000009" are being uploaded to Microsoft Teams telephone number management inventory. The output of the cmdlet is the OrderId that can be used with the [Get-CsOnlineTelephoneNumberOrder](./get-csonlinetelephonenumberorder.md) cmdlet to retrieve the status of the order: `Get-CsOnlineTelephoneNumberOrder -OrderType DirectRoutingNumberCreation -OrderId "orderId"`.
 
 ### Example 4
-```powershell
-PS C:\> $drlist = [System.IO.File]::ReadAllBytes("C:\Users\testuser\DrNumber.csv")
-PS C:\> New-CsOnlineDirectRoutingTelephoneNumberUploadOrder -FileContent $drlist
-cdf3073a-6fbb-4ade-a8af-e8fa1f3b9c19
+
+This example uploads Direct Routing telephone numbers from a CSV file without additional attributes.
+
+Create a comma-separated CSV file with a `TelephoneNumber` header and one telephone number per row:
+
+```csv
+TelephoneNumber
++12065550100
++12065550101
 ```
 
-In this example, the content of a file with a list of Direct Routing telephone numbers are being uploaded via file upload. The file should be in Comma Separated Values (CSV) file format and only containing the list of DR numbers. Only the content of the file can be passed to the New-CsOnlineDirectRoutingTelephoneNumberUploadOrder cmdlet. Additional fields will be supported via file upload in future releases. The output of the cmdlet is the OrderId that can be used with the [Get-CsOnlineTelephoneNumberOrder](./get-csonlinetelephonenumberorder.md) cmdlet to retrieve the status of the order: `Get-CsOnlineTelephoneNumberOrder -OrderType DirectRoutingNumberCreation -OrderId "orderId"`.
+Save the file as `C:\Temp\DrNumber.csv` using UTF-8 encoding. If you use a spreadsheet editor, format the telephone number column as text to preserve the leading `+` sign. Replace the sample numbers with your Direct Routing telephone numbers and use a file path that exists on your computer.
+
+After connecting to Microsoft Teams with [Connect-MicrosoftTeams](./Connect-MicrosoftTeams.md), read the file as a byte array and pass its contents to `-FileContent`:
+
+```powershell
+$drlist = [System.IO.File]::ReadAllBytes("C:\Temp\DrNumber.csv")
+$orderId = New-CsOnlineDirectRoutingTelephoneNumberUploadOrder -FileContent $drlist
+Get-CsOnlineTelephoneNumberOrder -OrderType DirectRoutingNumberCreation -OrderId $orderId
+```
+
+The upload runs asynchronously. The returned OrderId identifies the request; it doesn't indicate that the upload has completed. Run [Get-CsOnlineTelephoneNumberOrder](./Get-CsOnlineTelephoneNumberOrder.md) again to check progress and review any errors or warnings. Each upload can contain up to 10,000 telephone numbers.
+
+### Example 5
+
+This example uploads Direct Routing telephone numbers with different attributes for each number. Use Teams PowerShell module version 7.9.0 or later.
+
+Create a comma-separated CSV file using the following column names. Column names are case-sensitive. Use the plural names `Tags` and `AcquiredCapabilities` in the file, not the singular PowerShell parameter names `Tag` and `AcquiredCapability`.
+
+| Column | Required | Description |
+| --- | --- | --- |
+| `TelephoneNumber` | Yes | The Direct Routing telephone number to upload. Include one number per row. |
+| `LocationId` | No | The location ID to associate with the number. Retrieve a location ID with [Get-CsOnlineLisLocation](./Get-CsOnlineLisLocation.md). |
+| `Tags` | No | Tags to assign or create for the number. Separate multiple tags with semicolons (`;`), for example, `Seattle;Reception`. |
+| `AcquiredCapabilities` | No | Capabilities for the number: `ConferenceAssignment`, `VoiceApplicationAssignment`, `UserAssignment`, or `SharedCalling`. Separate multiple capabilities with semicolons (`;`). |
+| `NetworkSiteId` | No | The network site ID to associate with the number. Retrieve network sites with [Get-CsTenantNetworkSite](./Get-CsTenantNetworkSite.md). |
+| `ReverseNumberLookup` | No | Set to `SkipInternalVoip` to route internal calls to the number through external PSTN connectivity instead of internal VoIP reverse number lookup. |
+
+Omit optional columns that you don't need, or leave their cells empty for individual numbers. An empty optional cell supplies no value for that attribute. Keep the comma separators for empty cells so that the remaining values stay in the correct columns. Separate columns with commas, not semicolons; semicolons separate multiple values within a cell.
+
+The following sample includes all six supported columns:
+
+```csv
+TelephoneNumber,LocationId,Tags,AcquiredCapabilities,NetworkSiteId,ReverseNumberLookup
++12065550100,11111111-2222-3333-4444-555555555555,Seattle;Reception,UserAssignment;ConferenceAssignment,Seattle,SkipInternalVoip
++12065550101,,Support,VoiceApplicationAssignment,,
++12065550102,,,,,
+```
+
+The first row supplies all five additional attributes, including two tags and two capabilities. The second row supplies only a tag and a capability. The third row uploads a number without additional attributes.
+
+Replace the sample telephone numbers, location ID, network site ID, and tags with values for your organization. Use an existing location ID and network site ID from your tenant, and select the capabilities and reverse number lookup behavior appropriate for each number. Save the file as `C:\Temp\DrNumberWithAttributes.csv` using UTF-8 encoding, preserving the telephone numbers as text.
+
+After connecting to Microsoft Teams, upload the file and check the order status:
+
+```powershell
+$drlist = [System.IO.File]::ReadAllBytes("C:\Temp\DrNumberWithAttributes.csv")
+$orderId = New-CsOnlineDirectRoutingTelephoneNumberUploadOrder -FileContent $drlist
+Get-CsOnlineTelephoneNumberOrder -OrderType DirectRoutingNumberCreation -OrderId $orderId
+```
+
+For a CSV upload, specify the attributes in the file. Don't combine `-FileContent` with `-TelephoneNumber`, `-StartingNumber`, `-EndingNumber`, or the individual attribute parameters.
 
 ## PARAMETERS
 
@@ -129,6 +187,8 @@ Accept wildcard characters: False
 
 ### -FileContent
 This is the content of a .csv file that includes the Direct Routing telephone numbers and associated attributes to be uploaded to the Microsoft Teams telephone number management inventory. This parameter can be used to upload up to 10,000 numbers at a time.
+
+Pass a byte array, such as the output of `[System.IO.File]::ReadAllBytes()`, not a file path or the objects returned by `Import-Csv`. The file must contain the case-sensitive `TelephoneNumber` header. Optional columns are `LocationId`, `Tags`, `AcquiredCapabilities`, `NetworkSiteId`, and `ReverseNumberLookup`. Attribute values apply to the number on the same row. See Examples 4 and 5 for CSV preparation and upload instructions.
 
 ```yaml
 Type: Byte[]
