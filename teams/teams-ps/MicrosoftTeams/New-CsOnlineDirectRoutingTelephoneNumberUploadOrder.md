@@ -57,7 +57,7 @@ This cmdlet uploads Direct Routing telephone numbers to Microsoft Teams telephon
 
 The cmdlet is an asynchronous operation and will return an OrderId as output. You can use the [Get-CsOnlineTelephoneNumberOrder](./get-csonlinetelephonenumberorder.md) cmdlet to check the status of the OrderId, including any error or warning messages that might result from the operation: `Get-CsOnlineTelephoneNumberOrder -OrderType DirectRoutingNumberCreation -OrderId "orderId"`.
 
-A telephone number can be uploaded by itself or with associated attributes. When uploading a range telephone numbers, attributes are applied equally to all the numbers in range. If the telephone number is alread in Microsoft Teams database, the upload may fail.
+A telephone number can be uploaded by itself or with associated attributes. When uploading a range telephone numbers, attributes are applied equally to all the numbers in range. If the telephone number is already in Microsoft Teams database, the upload may fail.
 
 > [!NOTE]
 > CSV uploads that include additional telephone number attributes are supported in Teams PowerShell but aren't yet available in the Teams admin center. Use Teams PowerShell to upload numbers with these attributes.
