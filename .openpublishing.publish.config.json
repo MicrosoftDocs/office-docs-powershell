@@ -56,7 +56,8 @@
       "type_mapping": {
         "Conceptual": "Content"
       },
-      "build_entry_point": "docs"
+      "build_entry_point": "docs",
+      "monikerPath": []
     },
     {
       "docset_name": "officewebapps-ps",
