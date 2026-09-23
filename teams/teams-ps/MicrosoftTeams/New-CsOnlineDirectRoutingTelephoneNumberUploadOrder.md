@@ -92,20 +92,22 @@ In this example, a range of Direct Routing telephone numbers from "+12000000" to
 
 This example uploads Direct Routing telephone numbers from a CSV file without additional attributes.
 
-Create a comma-separated CSV file with a `TelephoneNumber` header and one telephone number per row:
+Create a comma-separated CSV file with a `TelephoneNumber` header and one telephone number per row.
 
-```csv
+Before running the example, replace the sample numbers with your Direct Routing telephone numbers and set `$csvPath` to a file in an existing folder on your computer. The example creates or overwrites that file using UTF-8 encoding. If you use a spreadsheet editor, format the telephone number column as text to preserve the leading `+` sign.
+
+After connecting to Microsoft Teams with [Connect-MicrosoftTeams](./Connect-MicrosoftTeams.md), create the CSV file from a PowerShell here-string, read the file as a byte array, and pass its contents to `-FileContent`:
+
+```powershell
+$csvPath = "C:\Temp\DrNumber.csv"
+$csvContent = @'
 TelephoneNumber
 +12065550100
 +12065550101
-```
+'@
 
-Save the file as `C:\Temp\DrNumber.csv` using UTF-8 encoding. If you use a spreadsheet editor, format the telephone number column as text to preserve the leading `+` sign. Replace the sample numbers with your Direct Routing telephone numbers and use a file path that exists on your computer.
-
-After connecting to Microsoft Teams with [Connect-MicrosoftTeams](./Connect-MicrosoftTeams.md), read the file as a byte array and pass its contents to `-FileContent`:
-
-```powershell
-$drlist = [System.IO.File]::ReadAllBytes("C:\Temp\DrNumber.csv")
+Set-Content -LiteralPath $csvPath -Value $csvContent -Encoding UTF8 -ErrorAction Stop
+$drlist = [System.IO.File]::ReadAllBytes($csvPath)
 $orderId = New-CsOnlineDirectRoutingTelephoneNumberUploadOrder -FileContent $drlist
 Get-CsOnlineTelephoneNumberOrder -OrderType DirectRoutingNumberCreation -OrderId $orderId
 ```
@@ -129,26 +131,28 @@ Create a comma-separated CSV file using the following column names. Column names
 
 Omit optional columns that you don't need, or leave their cells empty for individual numbers. An empty optional cell supplies no value for that attribute. Keep the comma separators for empty cells so that the remaining values stay in the correct columns. Separate columns with commas, not semicolons; semicolons separate multiple values within a cell.
 
-The following sample includes all six supported columns:
+The following example includes all six supported columns.
 
-```csv
+Before running the example, replace the sample telephone numbers, location ID, network site ID, and tags with values for your organization. Use an existing location ID and network site ID from your tenant, and select the capabilities and reverse number lookup behavior appropriate for each number. Set `$csvPath` to a file in an existing folder on your computer. The example creates or overwrites that file using UTF-8 encoding, preserving the telephone numbers as text.
+
+After connecting to Microsoft Teams, create the CSV file from a PowerShell here-string, upload its contents, and check the order status:
+
+```powershell
+$csvPath = "C:\Temp\DrNumberWithAttributes.csv"
+$csvContent = @'
 TelephoneNumber,LocationId,Tags,AcquiredCapabilities,NetworkSiteId,ReverseNumberLookup
 +12065550100,11111111-2222-3333-4444-555555555555,Seattle;Reception,UserAssignment;ConferenceAssignment,Seattle,SkipInternalVoip
 +12065550101,,Support,VoiceApplicationAssignment,,
 +12065550102,,,,,
-```
+'@
 
-The first row supplies all five additional attributes, including two tags and two capabilities. The second row supplies only a tag and a capability. The third row uploads a number without additional attributes.
-
-Replace the sample telephone numbers, location ID, network site ID, and tags with values for your organization. Use an existing location ID and network site ID from your tenant, and select the capabilities and reverse number lookup behavior appropriate for each number. Save the file as `C:\Temp\DrNumberWithAttributes.csv` using UTF-8 encoding, preserving the telephone numbers as text.
-
-After connecting to Microsoft Teams, upload the file and check the order status:
-
-```powershell
-$drlist = [System.IO.File]::ReadAllBytes("C:\Temp\DrNumberWithAttributes.csv")
+Set-Content -LiteralPath $csvPath -Value $csvContent -Encoding UTF8 -ErrorAction Stop
+$drlist = [System.IO.File]::ReadAllBytes($csvPath)
 $orderId = New-CsOnlineDirectRoutingTelephoneNumberUploadOrder -FileContent $drlist
 Get-CsOnlineTelephoneNumberOrder -OrderType DirectRoutingNumberCreation -OrderId $orderId
 ```
+
+The first data row supplies all five additional attributes, including two tags and two capabilities. The second data row supplies only a tag and a capability. The third data row uploads a number without additional attributes.
 
 For a CSV upload, specify the attributes in the file. Don't combine `-FileContent` with `-TelephoneNumber`, `-StartingNumber`, `-EndingNumber`, or the individual attribute parameters.
 
