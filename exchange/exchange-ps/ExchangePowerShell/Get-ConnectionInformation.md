@@ -13,7 +13,7 @@ title: Get-ConnectionInformation
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module version 3.0.0 or later. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-Use the Get-ConnectionInformation cmdlet to get information about all REST-based connections in the current PowerShell instance with Exchange Online.
+Use the Get-ConnectionInformation cmdlet to get information about all REST-based Exchange Online PowerShell, Security & Compliance PowerShell, and Microsoft Defender for Office 365 PowerShell connections in the current PowerShell instance.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -49,15 +49,16 @@ The output of the cmdlet contains the following properties:
 - TokenExpiryTimeUTC: When the connection token expires. For example, 9/30/2023 6:42:24 PM +00:00.
 - CertificateAuthentication: Whether certificate based authentication (also known as CBA or app-only authentication) was used to connect. Values are True or False.
 - ModuleName: The filename and path of the temporary data for the session. For example, C:\Users\laura\AppData\Local\Temp\tmpEXO_a54z135k.qgv
-- ModulePrefix: The value specified using the Prefix parameter in the Connect-ExchangeOnline or Connect-IPPSSession command.
-- Organization: The value specified using the Organization parameter in the Connect-ExchangeOnline or Connect-IPPSSession command for CBA or managed identity connections.
-- DelegatedOrganization: The value specified using the DelegatedOrganization parameter in the Connect-ExchangeOnline or Connect-IPPSSession command.
-- AppId: The value specified using the AppId parameter in the Connect-ExchangeOnline or Connect-IPPSSession command for CBA connections.
+- ModulePrefix: The value specified using the Prefix parameter in the Connect-ExchangeOnline, Connect-IPPSSession, or Connect-DefenderForOffice365 command.
+- Organization: The value specified using the Organization parameter in the Connect-ExchangeOnline, Connect-IPPSSession, or Connect-DefenderForOffice365 command for CBA or managed identity connections.
+- DelegatedOrganization: The value specified using the DelegatedOrganization parameter in the Connect-ExchangeOnline, Connect-IPPSSession, or Connect-DefenderForOffice365 command.
+- AppId: The value specified using the AppId parameter in the Connect-ExchangeOnline, Connect-IPPSSession, or Connect-DefenderForOffice365 command for CBA connections.
 - PageSize: The default maximum number of entries per page in the connection. The default value is 1000, or you can use the PageSize parameter in the Connect-ExchangeOnline command to specify a lower number. Individual cmdlets might also have a PageSize parameter.
 - TenantID: The tenant ID GUID value. For example, 3750b40b-a68b-4632-9fb3-5b1aff664079.
 - TokenStatus: For example, Active.
 - ConnectionUsedForInbuiltCmdlets
 - IsEopSession: For Exchange Online PowerShell connections, the value is False. For Security & Compliance PowerShell connections, the value is True.
+- IsMdoSecuritySession: For Defender for Office 365 PowerShell connections, the value is True. For other connection types, the value is False.
 
 ## EXAMPLES
 
@@ -81,6 +82,13 @@ Get-ConnectionInformation -ModulePrefix Contoso,Fabrikam
 ```
 
 This example returns a list of active REST-based connections that are using the specified prefix values.
+
+### Example 4
+```powershell
+Get-ConnectionInformation | Where-Object {$_.IsMdoSecuritySession -eq $true}
+```
+
+This example returns active Defender for Office 365 PowerShell connections.
 
 ## PARAMETERS
 
@@ -112,7 +120,7 @@ Accept wildcard characters: False
 
 **Note**: This parameter is available in module version 3.2.0-Preview2 or later.
 
-The ModulePrefix parameter filters the connections by ModulePrefix. When you use the Prefix parameter with the Connect-ExchangeOnline cmdlet, the specified text is added to the names of all Exchange Online cmdlets (for example, Get-InboundConnector becomes Get-ContosoInboundConnector). The ModulePrefix value is visible in the output of the Get-ConnectionInformation cmdlet. You can specify multiple ModulePrefix values separated by commas.
+The ModulePrefix parameter filters the connections by ModulePrefix. When you use the Prefix parameter with the Connect-ExchangeOnline, Connect-IPPSSession, or Connect-DefenderForOffice365 cmdlet, the specified text is added to the names of all imported cmdlets (for example, Get-User becomes Get-ContosoUser). The ModulePrefix value is visible in the output of the Get-ConnectionInformation cmdlet. You can specify multiple ModulePrefix values separated by commas.
 
 This parameter is meaningful only for connections that were created with the Prefix parameter.
 
