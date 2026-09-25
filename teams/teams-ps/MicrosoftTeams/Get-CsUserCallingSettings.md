@@ -53,6 +53,7 @@ UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
 Delegates                 :
 Delegators                :
+MaximumConcurrentCalls    :
 CallGroupOrder            : InOrder
 CallGroupTargets          : {}
 GroupMembershipDetails    :
@@ -78,6 +79,7 @@ UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
 Delegates                 :
 Delegators                :
+MaximumConcurrentCalls    :
 CallGroupOrder            : InOrder
 CallGroupTargets          : {}
 GroupMembershipDetails    :
@@ -105,6 +107,7 @@ UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
 Delegates                 :
 Delegators                :
+MaximumConcurrentCalls    :
 CallGroupOrder            : InOrder
 CallGroupTargets          : {sip:user5@contoso.com}
 GroupMembershipDetails    : CallGroupOwnerId:sip:user6@contoso.com
@@ -142,6 +145,7 @@ UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
 Delegates                 : Id:sip:user8@contoso.com
 Delegators                :
+MaximumConcurrentCalls    :
 CallGroupOrder            : InOrder
 CallGroupTargets          : {}
 GroupMembershipDetails    :
@@ -179,6 +183,7 @@ UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
 Delegates                 :
 Delegators                : Id:sip:user10@contoso.com
+MaximumConcurrentCalls    :
 CallGroupOrder            : InOrder
 CallGroupTargets          : {}
 GroupMembershipDetails    :
@@ -216,6 +221,7 @@ UnansweredTargetType      :
 UnansweredDelay           : 00:00:20
 Delegates                 :
 Delegators                :
+MaximumConcurrentCalls    :
 CallGroupOrder            : Simultaneous
 CallGroupTargets          : {}
 GroupMembershipDetails    :
@@ -226,31 +232,30 @@ BusyOnBusyOption          :
 This example shows the default settings for a user that has never changed the call forward settings via Microsoft Teams. Note that for users with settings as shown here,
 unanswered calls will by default be forwarded to voicemail after 30 seconds.
 
-### Example 7
+### Example 7 - View Resource Account Calling Settings
 ```powershell
-Get-CsUserCallingSettings -Identity user12@contoso.com
+Get-CsUserCallingSettings -Identity resource_account1@contoso.com
 ```
 ```output
-SipUri                    : sip:user12@contoso.com
-IsForwardingEnabled       : False
-ForwardingType            : Immediate
+SipUri                    : 
+IsForwardingEnabled       : True
+ForwardingType            : Simultaneous
 ForwardingTarget          :
-ForwardingTargetType      : Voicemail
+ForwardingTargetType      : MyDelegates
 IsUnansweredEnabled       : True
 UnansweredTarget          :
-UnansweredTargetType      : Voicemail
+UnansweredTargetType      : ResourceAccount
 UnansweredDelay           : 00:00:20
-Delegates                 :
+Delegates                 : CAPphone1@contoso.com
 Delegators                :
-CallGroupOrder            : InOrder
+MaximumConcurrentCalls    : 10
+CallGroupOrder            : Simultaneous
 CallGroupTargets          : {}
 GroupMembershipDetails    :
 GroupNotificationOverride :
-BusyOnBusyOption          : PlayBusySignal
 ```
 
-This example shows that user12@contoso.com has busy on busy enabled (BusyOnBusyOption) so that a new incoming call is rejected with a busy signal while the user is
-already in a call or in a conference.
+This example displays the calling settings of a Resource Account configured with CAP phone delegates. The output shows that calls are simultaneously forwarded to the assigned delegates, with a maximum of 10 concurrent calls allowed. Any additional incoming calls are handled according to the Resource Account's unanswered call settings.
 
 ## PARAMETERS
 
