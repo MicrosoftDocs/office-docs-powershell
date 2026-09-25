@@ -94,6 +94,38 @@
     ],
     "fileMetadata": {},
     "template": [],
-    "dest": "officewebapps-ps"
+    "dest": "officewebapps-ps",
+    "rules": {
+        "filename-incomplete": {
+            "exclude": [
+                "**/*.md",
+                "**/*.yml"
+            ]
+        },
+        "image-name-incomplete": {
+            "exclude": [
+                "**/*.gif",
+                "**/*.jpeg",
+                "**/*.jpg",
+                "**/*.png",
+                "**/*.svg"
+            ]
+        },
+        "image-structure-incorrect": {
+            "exclude": [
+                "**/*.gif",
+                "**/*.jpeg",
+                "**/*.jpg",
+                "**/*.png",
+                "**/*.svg"
+            ]
+        },
+        "include-structure-incorrect": {
+            "exclude": [
+                "**/*.md",
+                "**/*.yml"
+            ]
+        }
+    }
   }
 }
