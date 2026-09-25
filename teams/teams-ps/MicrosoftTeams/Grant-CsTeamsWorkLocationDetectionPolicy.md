@@ -69,7 +69,7 @@ Assigns a given policy to the tenant.
 
 ### Example 3
 ```powershell
-PS C:\> Grant-CsTeamsWorkLocationDetectionPolicy -Global -PolicyName wld-policy
+PS C:\> Grant-CsTeamsWorkLocationDetectionPolicy -Global -PolicyName $null
 ```
 
 Note: _Using $null in place of a policy name can be used to unassigned a policy instance._
