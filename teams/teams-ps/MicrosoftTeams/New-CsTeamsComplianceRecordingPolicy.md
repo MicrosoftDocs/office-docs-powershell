@@ -115,8 +115,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -CustomPromptsEnabled
-Indicates whether compliance recording custom prompts feature is enabled for this tenant / user.
+### -CustomPromptsEnabled 
+Indicates whether compliance recording custom prompts feature in 1:1 calls is enabled for this tenant / user. Currently only available in private preview.
 
 ```yaml
 Type: Boolean
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomPromptsPackageId
-Reference to custom prompts package.
+Reference to custom prompts package. Currently only available in private preview.
 
 ```yaml
 Type: String
