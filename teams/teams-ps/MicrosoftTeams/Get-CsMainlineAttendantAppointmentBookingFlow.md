@@ -26,9 +26,6 @@ Get-CsMainlineAttendantAppointmentBookingFlow [-Identity <Guid>] [-Tenant <Guid>
 ## DESCRIPTION
 The Get-CsMainlineAttendantAppointmentBookingFlow cmdlet lets you retrieve information about the Mainline attendant appointment booking flows in your organization.
 
-> [!CAUTION]
-> Teams Phone Agent (formerly Mainline Attendant) is currently only available to customers in the [Frontier](https://www.microsoft.com/microsoft-365-copilot/frontier-program) Public Preview program.
-
 ## EXAMPLES
 
 ### Example 1
