@@ -33,7 +33,7 @@ The Get-CsCallQueue cmdlet lets you retrieve information about the Call Queues i
 >
 >`Statistics                                           : Current queue size = 0`
 >
->This line of output will be removed as of Friday, August 28, 2026.
+>This line of output will be removed by the end of October, 2026.
 
 ## EXAMPLES
 
