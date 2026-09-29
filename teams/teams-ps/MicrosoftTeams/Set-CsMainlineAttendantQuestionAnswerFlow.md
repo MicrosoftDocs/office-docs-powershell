@@ -26,9 +26,6 @@ Set-CsMainlineAttendantQuestionAnswerFlow -Instance <Object> [-Tenant <Guid>] [<
 ## DESCRIPTION
 The Set-CsMainlineAttendantQuestionAnswerFlow cmdlet changes an existing question and answer connection that can be used with Mainline Attendant
 
-> [!CAUTION]
-> Teams Phone Agent (formerly Mainline Attendant) is currently only available to customers in the [Frontier](https://www.microsoft.com/microsoft-365-copilot/frontier-program) Public Preview program.
-
 ## EXAMPLES
 
 
