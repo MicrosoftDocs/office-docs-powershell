@@ -101,8 +101,6 @@ The report submission policy controls most of the settings for user submissions 
 - Email user reported settings: <https://security.microsoft.com/securitysettings/userSubmission>.
 - Teams user reported settings: <https://security.microsoft.com/securitysettings/teamsUserSubmission>.
 
-The report submission rule (the SentTo parameter on \*-ReportSubmissionRule cmdlets) controls the email address of the reporting mailbox where user reported messages from Outlook are sent. The ReportChatMessageAddresses parameter controls the reporting mailbox where user reported messages and calls from Teams are sent.
-
 When you set the email address of the reporting mailbox in the Microsoft Defender portal, the same email address is also set in the following parameters in the \*-ReportSubmissionPolicy cmdlets:
 
 - Microsoft integrated reporting using Microsoft reporting tools in Outlook: The ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhishAddresses parameters.
