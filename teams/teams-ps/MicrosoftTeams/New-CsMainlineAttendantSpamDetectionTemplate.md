@@ -28,9 +28,6 @@ New-CsMainlineAttendantSpamDetectionTemplate -Name <string> -Description <string
 
 The New-CsMainlineAttendantSpamDetectionTemplate cmdlet creates a new spam detection template.
 
-> [!CAUTION]
-> Teams Phone Agent (formerly Mainline Attendant) is currently only available to customers in the [Frontier](https://www.microsoft.com/microsoft-365-copilot/frontier-program) Public Preview program.
-
 ## EXAMPLES
 
 ### Example 1
