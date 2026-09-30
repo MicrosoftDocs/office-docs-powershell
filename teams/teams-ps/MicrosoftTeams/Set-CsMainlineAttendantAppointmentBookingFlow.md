@@ -26,9 +26,6 @@ Set-CsMainlineAttendantAppointmentBookingFlow -Instance <Object> [-Tenant <Guid>
 ## DESCRIPTION
 The Set-CsMainlineAttendantAppointmentBookingFlow cmdlet changes an existing appointment booking flow that is used with Mainline Attendant
 
-> [!CAUTION]
-> Teams Phone Agent (formerly Mainline Attendant) is currently only available to customers in the [Frontier](https://www.microsoft.com/microsoft-365-copilot/frontier-program) Public Preview program.
-
 ## EXAMPLES
 
 

@@ -26,17 +26,6 @@ New-CsAutoAttendantMenuOption -Action <List> [-DtmfResponse <List>] [-VoiceRespo
 ## DESCRIPTION
 The New-CsAutoAttendantMenuOption cmdlet creates a new menu option for the Auto Attendant (AA) service. The AA service uses the menu options to respond to a caller with the appropriate action.
 
-> [!IMPORTANT]
-> The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
->
-> - -Description
-> - -Action AgentsAndQueues
-> - -Action MainLineAttendantFlow
-> - -MainlineAttendantTarget
-> - -AgentTargetType
-> - -AgentTarget
-> - -AgentTargetTagTemplateId
-
 ## EXAMPLES
 
 ### Example 1
