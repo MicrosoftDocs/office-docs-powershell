@@ -2392,6 +2392,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Add-WorkforceInsightsDelegationAccess](Add-WorkforceInsightsDelegationAccess.md)
 
+### [Connect-DefenderForOffice365](Connect-DefenderForOffice365.md)
+
 ### [Connect-ExchangeOnline](Connect-ExchangeOnline.md)
 
 ### [Connect-IPPSSession](Connect-IPPSSession.md)
