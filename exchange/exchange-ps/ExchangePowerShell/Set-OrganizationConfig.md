@@ -2691,7 +2691,13 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill ExchangeAttributesCloudManagedByDefault Description }}
+The ExchangeAttributesCloudManagedByDefault switch configures Exchange attributes to be cloud managed by default for newly synchronized users. It sets `BlockExchangeProvisioningFromOnPremEnabled` to `true`.
+
+Enable this setting only after all on-premises mailboxes have been migrated to Exchange Online and you no longer create Exchange mailboxes, mail-enabled users, or remote mailboxes on-premises.
+
+This setting doesn't change the Exchange-attribute Source of Authority for existing users. To transfer Exchange-attribute Source of Authority for an existing Exchange Online mailbox, use `Set-Mailbox -IsExchangeCloudManaged $true`.
+
+You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter
@@ -2711,7 +2717,13 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill ExchangeAttributesServerManagedByDefault Description }}
+The ExchangeAttributesServerManagedByDefault switch configures Exchange attributes to be managed on-premises by default for newly synchronized users. It sets `BlockExchangeProvisioningFromOnPremEnabled` to `false`.
+
+This setting changes the default for users synchronized in the future. It doesn't automatically return Exchange-attribute Source of Authority to on-premises management for existing users that were synchronized while tenant-wide cloud management was enabled.
+
+To recover an existing affected user, first use this switch to disable tenant-wide cloud management, and then run `Set-User -Identity <User> -ExchangeAttributesServerManaged`.
+
+You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

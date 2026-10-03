@@ -38,6 +38,7 @@ Set-User [-Identity] <UserIdParameter>
  [-DesiredWorkloads <MailboxWorkloadFlags>]
  [-DisplayName <String>]
  [-DomainController <Fqdn>]
+ [-ExchangeAttributesServerManaged]
  [-EXOModuleEnabled <Boolean>]
  [-Fax <String>]
  [-FirstName <String>]
@@ -477,6 +478,30 @@ The DomainController parameter specifies the domain controller that's used by th
 
 ```yaml
 Type: Fqdn
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExchangeAttributesServerManaged
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+The ExchangeAttributesServerManaged switch returns Exchange-attribute Source of Authority for a directory-synchronized user to on-premises management.
+
+Use this switch to recover a user who synchronized while tenant-wide Exchange attribute SOA was enabled and was created in Microsoft Entra ID as a regular user instead of the expected Exchange recipient.
+
+Before you use this switch, disable tenant-wide Exchange attribute SOA.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
