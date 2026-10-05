@@ -28,9 +28,6 @@ Get-CsMainlineAttendantSpamDetectionTemplate [-Identity <string>] [<CommonParame
 
 The Get-CsMainlineAttendantSpamDetectionTemplate cmdlet returns a list of spam detection templates that have been configured in the tenant.
 
-> [!CAUTION]
-> Teams Phone Agent (formerly Mainline Attendant) is currently only available to customers in the [Frontier](https://www.microsoft.com/microsoft-365-copilot/frontier-program) Public Preview program.
-
 ## EXAMPLES
 
 ### Example 1

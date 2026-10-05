@@ -1,12 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.dll-Help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-cscallqueue
 schema: 2.0.0
 title: Get-CsCallQueue
@@ -33,7 +33,7 @@ The Get-CsCallQueue cmdlet lets you retrieve information about the Call Queues i
 >
 >`Statistics                                           : Current queue size = 0`
 >
->This line of output will be removed as of Friday, August 28, 2026.
+>This line of output will be removed by the end of October 2026.
 
 ## EXAMPLES
 
