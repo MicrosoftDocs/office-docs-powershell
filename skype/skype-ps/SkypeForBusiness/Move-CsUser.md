@@ -43,6 +43,12 @@ Move-CsUser [-Credential <PSCredential>] [-Target] <Fqdn> [-MoveToTeams] [-Hoste
 
 - Install or update the Microsoft Teams PowerShell module to version 6.2.1 or later
 
+> [!IMPORTANT]
+> Due to a regression issue in MicrosoftTeams module versions **greater than 7.1**, customers are advised to use module versions **7.1 or earlier** until a fix is available.
+> [!NOTE]
+>
+> A fix for this regression is being worked on and will be included in the next Skype for Business on-premises cumulative update (CU). After applying the upcoming CU, customers can upgrade to the latest MicrosoftTeams module version.
+
 **PRE-REQUISITES steps for** [Office 365 operated by 21Vianet](/microsoft-365/admin/services-in-china/services-in-china?view=o365-21vianet)
 
 - Install or update the Microsoft Teams PowerShell module to version 6.2.1 or later
