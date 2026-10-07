@@ -28,9 +28,9 @@ New-CsGroupPolicyAssignment -GroupId <String> -PolicyType <String> -PolicyName <
 > As of May 2023, group policy assignment functionality in Teams PowerShell Module has been extended to support all policy types used in Teams except for the following:
 > - Teams App Permission Policy
 > - Teams Network Roaming Policy
-> - Teams Emergency Call Routing Policy
 > - Teams Voice Applications Policy
 > - Teams Upgrade Policy
+> - Dialout Policy
 >
 > This cmdlet will be deprecated in the future. Going forward, group policy assignment can be performed by using the corresponding Grant-Cs[PolicyType] cmdlet with the '-Group' parameter.
 
