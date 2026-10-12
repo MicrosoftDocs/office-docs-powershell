@@ -733,7 +733,9 @@ Accept wildcard characters: False
 ```
 
 ### -RecordingAndTranscriptionAudioNotification
-Policy to control whether audio notifications will be played when recording or transcription starts/stops for applied users/groups.
+Policy to control whether audio notifications will be played when recording or transcription starts/stops for applied users/groups. This policy applies only to Teams client users in VoIP calls. It does not control audio announcements for PSTN users or for Teams client users in one-to-one calls between Teams and PSTN. Audio announcements are enabled by default in both of these scenarios.
+
+Supported clients include Windows and macOS desktop, web, Microsoft Teams Rooms (MTR), Android, iOS, and VDI 2.0. VDI 1.0 is not supported.
 
 Possible values are:
 
