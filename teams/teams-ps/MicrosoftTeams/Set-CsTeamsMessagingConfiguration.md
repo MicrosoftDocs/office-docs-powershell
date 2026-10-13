@@ -22,6 +22,8 @@ Set-CsTeamsMessagingConfiguration [-Identity] <String>
  [-EnableInOrganizationChatControl <Boolean>]
  [-EnableVideoMessageCaptions <Boolean>]
  [-FileTypeCheck <string>]
+ [-FileTypeCustomizationSetting <string>]
+ [-FileTypeBlockList <string[]>]
  [-Force]
  [-MessagingNotes <String>]
  [-UrlReputationCheck <string>]
@@ -140,9 +142,6 @@ Accept wildcard characters: False
 
 ### -FileTypeCheck
 
-> [!NOTE]
-> This cmdlet is not available in GCC, GCCH and DOD.
-
 This setting enables weaponizable file detection in Teams messages in the tenant.
 
 Possible Values:
@@ -157,6 +156,59 @@ Aliases:
 Required: False
 Position: Named
 Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FileTypeCustomizationSetting
+
+> [!NOTE]
+> This cmdlet is not available in GCC, GCCH and DOD.
+
+*This setting applies only when FileTypeCheck is set to Enabled.*
+
+Specifies which list of file types is used to detect and block weaponizable files in Teams messages. 
+
+When this setting is set to *CustomBlockList*, *FileTypeBlockList* must contain at least one string.
+
+Possible Values:
+- **MicrosoftRecommendedBlockList**: Blocks the file types on the Microsoft-recommended list. This keeps the existing behavior. For the list of blocked file types, see [Weaponizable file protection in Teams](https://learn.microsoft.com/en-us/microsoftteams/weaponizable-file-protection-teams).
+- **CustomBlockList**: Blocks the file types you specify in the FileTypeBlockList parameter instead of the Microsoft-recommended list.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: MicrosoftRecommendedBlockList
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FileTypeBlockList
+
+> [!NOTE]
+> This cmdlet is not available in GCC, GCCH and DOD.
+
+*This setting applies only when FileTypeCheck is set to Enabled. This setting applies only when FileTypeCustomizationSetting is set to CustomBlockList.*
+
+This setting specifies the list of file types that weaponizable file detection uses to block files in Teams messages in the tenant.
+
+This setting will clear when FileTypeCustomizationSetting is set to MicrosoftRecommendedBlockList.
+
+Possible Values:
+- Array of String
+
+```yaml
+Type: Array of String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -233,9 +285,6 @@ Accept wildcard characters: False
 ```
 
 ### -UrlReputationCheck
-
-> [!NOTE]
-> This cmdlet is not available in GCC, GCCH and DOD.
 
 This setting enables malicious URL detection in Teams messages in the tenant.
 
