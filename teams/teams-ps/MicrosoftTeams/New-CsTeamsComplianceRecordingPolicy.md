@@ -116,7 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -CustomPromptsEnabled 
-Indicates whether compliance recording custom prompts feature in 1:1 calls is enabled for this tenant / user. Currently only available in private preview.
+Indicates whether compliance recording custom prompts feature in 1:1 PSTN calls is enabled for this tenant / user. Currently only available in private preview.
 
 ```yaml
 Type: Boolean
