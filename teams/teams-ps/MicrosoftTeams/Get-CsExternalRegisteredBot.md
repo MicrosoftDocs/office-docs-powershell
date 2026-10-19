@@ -3,6 +3,7 @@ applicable: Microsoft Teams
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
+ms.author: yashaswinih
 ms.date: 10/19/2026
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csexternalregisteredbot
 schema: 2.0.0
