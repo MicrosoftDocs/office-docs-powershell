@@ -4,7 +4,7 @@ external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
-ms.date: 07/13/2025
+ms.date: 10/19/2026
 ms.reviewer: alejandramu
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsmeetingpolicy
 schema: 2.0.0
@@ -31,6 +31,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-AllowChannelMeetingScheduling <Boolean>]
  [-AllowCloudRecording <Boolean>]
  [-AllowDocumentCollaboration <String>]
+ [-AllowedExternalBotAppIds <PSListModifier>]
  [-AllowedUsersForMeetingContext <String>]
  [-AllowEngagementReport <String>]
  [-AllowExternalNonTrustedMeetingChat <Boolean>]
@@ -170,6 +171,14 @@ New-CsTeamsMeetingPolicy -Identity HrMeetingPolicy -AutoAdmittedUsers "Everyone"
 In Example 2, the New-CsTeamsMeetingPolicy cmdlet is used to create a meeting policy with the Identity HrMeetingPolicy.
 In this example two different property values are configured: AutoAdmittedUsers is set to Everyone and AllowMeetNow is set to False.
 All other policy properties will use the default values.
+
+### EXAMPLE 3
+
+```powershell
+New-CsTeamsMeetingPolicy -Identity ApprovedBotsMeetingPolicy -ExternalBotAccessMode RequireApprovalWhenDetected -AllowedExternalBotAppIds "11111111-1111-1111-1111-111111111111","22222222-2222-2222-2222-222222222222"
+```
+
+Creates a meeting policy with an allowlist containing two external bots. Replace the example GUIDs with the `appId` values of bots returned by [Get-CsExternalRegisteredBot](Get-CsExternalRegisteredBot.md). Other meeting policy settings retain their default values.
 
 ## PARAMETERS
 
@@ -358,6 +367,31 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowedExternalBotAppIds
+
+Specifies the Microsoft Entra application (client) IDs of external meeting bots to allow in meetings governed by this policy. Other meeting policies and admission requirements still apply.
+
+Use [Get-CsExternalRegisteredBot](Get-CsExternalRegisteredBot.md) to find registered bots and their `appId` values. The list can contain up to 400 unique IDs in GUID format. Each ID is validated against the registered bot catalog when the list is saved. Invalid, duplicate, or unregistered IDs are rejected.
+
+Use this parameter with `ExternalBotAccessMode` set to `RequireApprovalWhenDetected` or `BlockDetectedBots`. The service rejects this parameter when `ExternalBotAccessMode` is `AllowAllBots`.
+
+The default is an empty list. Pass a comma-separated list of IDs to populate the allowlist.
+
+> [!NOTE]
+> This parameter is available only for organizations where the external bot allowlist feature is enabled.
+
+```yaml
+Type: PSListModifier
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Empty List
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1331,6 +1365,8 @@ Possible Values:
 - **AllowAllBots**: Don't detect bots; allow them to join meetings directly.
 - **RequireApprovalWhenDetected**: When detected, require approval before joining by routing detected bots to the meeting lobby. This is the default value.
 - **BlockDetectedBots**: Block detected bots from joining meetings.
+
+Use **AllowedExternalBotAppIds** to configure an allowlist of registered bots when this parameter is `RequireApprovalWhenDetected` or `BlockDetectedBots`.
 
 ```yaml
 Type: String
@@ -2392,3 +2428,5 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CsExternalRegisteredBot](Get-CsExternalRegisteredBot.md)

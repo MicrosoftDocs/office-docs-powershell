@@ -125,6 +125,9 @@ This cmdlet shows the status of the [Export-CsAcquiredPhoneNumber](https://learn
 ### [Get-CsExternalAccessPolicy](Get-CsExternalAccessPolicy.md)
 Returns information about the external access policies that have been configured for use in your organization.
 
+### [Get-CsExternalRegisteredBot](Get-CsExternalRegisteredBot.md)
+Returns registered external meeting bots that administrators can use to configure an external bot allowlist.
+
 ### [Get-CsGroupPolicyAssignment](Get-CsGroupPolicyAssignment.md)
 This cmdlet is used to return group policy assignments.
 
