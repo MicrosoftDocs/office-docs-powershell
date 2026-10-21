@@ -1383,6 +1383,8 @@ Possible Values:
 
 - **RequireApprovalWhenDetected**: When detected, bots will be enforced to the meeting lobby, regardless of the lobby setting of the meeting. They will require approval before getting access to the meetings. This is the default value.
 
+- **BlockDetectedBots**: When detected, external third-party meeting bots and meeting assistants are blocked from joining meetings hosted in the organization.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
