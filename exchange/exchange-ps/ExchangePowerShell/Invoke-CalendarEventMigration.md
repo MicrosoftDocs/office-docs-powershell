@@ -23,9 +23,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### TimeZoneMigration (Default)
 
 ```
-Invoke-CalendarEventMigration [-Identity] <Object> -FromWindowsTimeZoneId <string>
- -QueryWindowInDays <int> -ToWindowsTimeZoneId <string> [-Force] [-PreviewOnly]
- [-QueryStartDate <Object>] [-UseCustomRouting] [-WhatIf] [-Confirm]
+Invoke-CalendarEventMigration [-Identity] <MailboxIdParameter> -FromWindowsTimeZoneId <string>
+ -ToWindowsTimeZoneId <string> [-QueryStartDate <DateTime>] -QueryWindowInDays <int> [-Force] [-PreviewOnly] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
