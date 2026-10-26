@@ -5842,7 +5842,7 @@ The default value is 14 days (14.00:00:00). In Exchange Online, you can increase
 
 In Exchange Online, you use this parameter to configure the deleted item retention on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the RetainDeletedItemsFor value for all new mailboxes that you create in the future.
 
-In on-premises Exchange, when the UseDatabaseRetentionDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the DeletedItemRetention value from the mailbox database. To use the RetainDeletedItemsFor parameter on the mailbox, you need to set the UseDatabaseRetentionDefaults parameter to the value $false.
+In on-premises Exchange, when the UseDatabaseRetentionDefaults parameter on the mailbox is set to the value $true (the default value), the value of this parameter is ignored, and the mailbox uses the DeletedItemRetention value from the mailbox database. To use the RetainDeletedItemsFor parameter on the mailbox, you need to set the UseDatabaseRetentionDefaults parameter to the value $false.
 
 ```yaml
 Type: EnhancedTimeSpan
@@ -5867,7 +5867,7 @@ The RetainDeletedItemsUntilBackup parameter specifies whether to keep items in t
 - $true: Deleted items are kept until the next mailbox database backup. This value could effectively override the DeletedItemRetention and RecoverableItemsQuota parameter values.
 - $false: This value is the default. Retention of deleted items in mailboxes is controlled by the DeletedItemRetention and RecoverableItemsQuota parameter values.
 
-When the UseDatabaseRetentionDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the RetainDeletedItemsUntilBackup parameter value from the mailbox database. To use the RetainDeletedItemsUntilBackup parameter on the mailbox, you need to set the UseDatabaseRetentionDefaults parameter to the value $false.
+When the UseDatabaseRetentionDefaults parameter on the mailbox is set to the value $true (the default value), the value of this parameter is ignored, and the mailbox uses the RetainDeletedItemsUntilBackup parameter value from the mailbox database. To use the RetainDeletedItemsUntilBackup parameter on the mailbox, you need to set the UseDatabaseRetentionDefaults parameter to the value $false.
 
 For more information, see [Recoverable Items folder in Exchange Server](https://learn.microsoft.com/Exchange/policy-and-compliance/recoverable-items-folder/recoverable-items-folder).
 
@@ -6764,7 +6764,7 @@ The following retention settings are affected by this parameter:
 **Note**: If you set the RetainDeletedItemsUntilBackup parameter on the mailbox database to the value $true when the value of the UseDatabaseRetentionDefaults parameter on a mailbox is also $true (the default value), the value of the UseDatabaseRetentionDefaults property in the output of the Get-Mailbox cmdlet erroneously appears as False. To verify the value of the UseDatabaseRetentionDefaults property on the mailbox, do the following steps in the Exchange Management Shell:
 
 - Run the following command: `Import-Module ActiveDirectory`.
-- Replace \<Alias\> with the Alias value of the mailbox, and run the following command: `Get-ADUser <Alias> -Properties mDBUseDefaults | Format-List mDBUseDefaults`.
+- Replace \<Identity\> with the mailbox user's sAMAccountName or distinguished name, and run the following command: `Get-ADUser -Identity <Identity> -Properties deletedItemFlags | Format-List deletedItemFlags`.
 
 ```yaml
 Type: Boolean
