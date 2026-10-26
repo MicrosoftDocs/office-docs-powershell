@@ -5842,7 +5842,7 @@ The default value is 14 days (14.00:00:00). In Exchange Online, you can increase
 
 In Exchange Online, you use this parameter to configure the deleted item retention on existing mailboxes. Use the Set-MailboxPlan cmdlet to change the RetainDeletedItemsFor value for all new mailboxes that you create in the future.
 
-In on-premises Exchange, when the UseDatabaseQuotaDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the DeletedItemRetention value from the mailbox database. To use the RetainDeletedItemsFor parameter on the mailbox, you need to set the UseDatabaseQuotaDefaults parameter to the value $false.
+In on-premises Exchange, when the UseDatabaseRetentionDefaults parameter on the mailbox is set to the value $true (the default value), the value of the this parameter is ignored, and the mailbox uses the DeletedItemRetention value from the mailbox database. To use the RetainDeletedItemsFor parameter on the mailbox, you need to set the UseDatabaseRetentionDefaults parameter to the value $false.
 
 ```yaml
 Type: EnhancedTimeSpan
