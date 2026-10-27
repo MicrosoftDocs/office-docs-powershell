@@ -13,11 +13,13 @@ title: Set-CsUserCallingSettings
 # Set-CsUserCallingSettings
 
 ## SYNOPSIS
-Configures calling settings for a specified user or Resource Account, including call forwarding, simultaneous ringing, call groups, delegation, and other call-handling options.  
 
-For user accounts, this cmdlet enables configuration of delegates and user-specific call-handling behaviour.
+Configures calling settings for a specified user or resource account, including call forwarding, simultaneous ringing, call groups, delegation, and other call-handling options.
 
-For Resource Accounts, these settings are primarily used in Shared Line Appearance (SLA) scenarios, where the Resource Account is associated with the primary phone number and delegated participants (such as CAP devices or associated users) are configured to handle incoming calls on behalf of the Resource Account. Resource account settings will only work for customers that are participating in a private preview for this feature. General Availability for this functionality has not been determined at this time.
+For user accounts, this cmdlet enables configuration of delegates and user-specific call-handling behavior.
+
+For phone-centric scenarios, this cmdlet also supports resource account identities configured for Teams Phone Agents, Call Queues, Auto Attendants, and standalone resource accounts. For these resource accounts, the cmdlet configures immediate forwarding, unanswered call settings, and the maximum number of concurrent calls. It also configures Common Area Phone (CAP) users or regular users as delegates for the resource account.
+
 
 ## SYNTAX
 
@@ -77,15 +79,33 @@ Set-CsUserCallingSettings -Identity <String> [-HttpPipelinePrepend <SendAsyncSte
  -IsForwardingEnabled <Boolean> [<CommonParameters>]
 ```
 
+### MaximumConcurrentCalls
+```
+Set-CsUserCallingSettings -Identity <String> [-MaximumConcurrentCalls <Int32>]
+ [-HttpPipelinePrepend <SendAsyncStep[]>] [<CommonParameters>]
 
+```
 
 ## DESCRIPTION
-This cmdlet sets the call forwarding, simultaneous ringing and call group settings for the specified user or Resource Account.
 
-When configuring a Target Type for forwarding or unanswered call settings, calls can be redirected to  ..... either a user or a Resource Account. When a Resource Account is specified as the target  advanced routing scenarios such as forwarding calls to Auto Attendants (AA), Call Queues (CQ), or other Resource Accounts associated Agents.
+This cmdlet sets call forwarding, simultaneous ringing, call group, delegation, and other applicable call-handling settings for the specified user or resource account.
+For user accounts, the following target types are supported:
 
-When specifying settings you need to specify all settings with a settings grouping, for instance, you can't just change a forwarding target. Instead, you need to
-start by  getting the current settings, making the necessary changes, and then setting/writing all settings within the settings group.
+- Forwarding: SingleTarget, Voicemail, MyDelegates, and Group.
+- Unanswered: "" (no target type), SingleTarget, Voicemail, MyDelegates, and Group.
+  
+For resource accounts, the supported target types differ:
+- Forwarding:  SingleTarget, MyDelegates, and Group.
+- Unanswered: "" (no target type), SingleTarget, and Group. MyDelegates isn't supported for resource account unanswered call settings.
+
+For both users and resource accounts, SingleTarget can specify a user, phone number, or resource account. 
+
+For resource accounts Shared Voicemail can be reached by using SingleTarget to target a resource account associated with an Auto Attendant (AA) configured to route calls to Shared Voicemail.
+
+When a resource account is associated with an Auto Attendant (AA), Call Queue (CQ), or Teams Phone Agent (TPA), and immediate forwarding is enabled, incoming calls are forwarded immediately according to the resource account's forwarding settings. In this case, the calls don't reach the associated AA, CQ, or TPA.
+
+When changing settings, all settings within the applicable settings group must be specified together. For example, you can't update only a forwarding target. First retrieve the current settings, modify the required values, and then use this cmdlet to write the complete settings group.
+
 
 ## EXAMPLES
 
@@ -185,12 +205,27 @@ This example shows turning off unanswered call forwarding for a user. The Micros
 
 ### Example 12 - Configure Maximum Concurrent Calls for a Resource Account
 ```powershell
-Set-CsUserCallingSettings -Identity resource_account1@contoso.com --MaximumConcurrentCalls 10
+Set-CsUserCallingSettings -Identity resource_account1@contoso.com -MaximumConcurrentCalls 5
 ```
 
-This example configures the maximum number of concurrent calls that can be forwarded to the CAP phone delegates of a Resource Account. The Identity parameter specifies the Resource Account.
+This example configures the maximum number of concurrent calls that can be forwarded to delegates assigned to a resource account. The Identity parameter specifies the resource account.
 
-The MaximumConcurrentCalls setting determines how many simultaneous calls can be handled by the Resource Account's CAP phone delegates. A value of 10 is the recommended default and provides the best calling experience for most CAP phone deployments. When this limit is reached, additional incoming calls are handled according to the Resource Account's unanswered call settings.
+The MaximumConcurrentCalls setting determines how many simultaneous calls can be handled by the resource account's delegates. In this example, a maximum of five concurrent calls is allowed. When this limit is reached, additional incoming calls are handled according to the resource account's unanswered call settings.
+
+### Example 13 - Configure Call Handling for an Auto Attendant Resource Account with Delegates
+
+The following example configures calling settings for a resource account associated with an Auto Attendant (AA). Immediate forwarding is disabled, delegates have been assigned to the resource account, unanswered calls are forwarded to a specific user after 20 seconds, and a maximum of five concurrent calls is allowed.
+```powershell
+Set-CsUserCallingSettings -Identity resource_account1@contoso.com -IsForwardingEnabled $false
+Set-CsUserCallingSettings -Identity resource_account1@contoso.com -IsUnansweredEnabled $true -UnansweredDelay 00:00:20 -UnansweredTargetType SingleTarget -UnansweredTarget user1@contoso.com
+Set-CsUserCallingSettings -Identity resource_account1@contoso.com -MaximumConcurrentCalls 5
+```
+> [!NOTE]
+> Common Area Phone (CAP) users or regular users can be assigned as delegates for a resource account by using the Set-CsUserCallingDelegate cmdlet.
+
+When the Ring delegates first toggle is enabled in the Auto Attendant's business-hours, after-hours, or holiday call flow, incoming calls are redirected to the delegates assigned to the resource account.
+The resource account allows a maximum of five concurrent calls. If none of the delegates answers within the configured 20-second delay, the call is forwarded to user1@contoso.com according to the resource account's unanswered call settings. When the maximum number of concurrent calls is reached, additional incoming calls are also handled according to the resource account's unanswered call settings.
+
 
 ## PARAMETERS
 
@@ -255,10 +290,14 @@ Accept wildcard characters: False
 
 ### -ForwardingTarget
 
-The forwarding target. Supported types of values are ObjectId's, SIP addresses and phone numbers.
-For phone numbers we support the following types of formats: E.164 (+12065551234 or +1206555000;ext=1234) or non-E.164 like 1234.
+Specifies the target for forwarded calls. The target can be a user, resource account, or phone number.
 
-Only used when ForwardingTargetType is SingleTarget.
+A user or resource account can be specified using its ObjectId or SIP address, as applicable.
+
+For phone numbers, supported formats include E.164 (+12065551234 or +1206555000;ext=1234) and non-E.164 formats such as 1234.
+
+This parameter is used only when ForwardingTargetType is set to SingleTarget.
+
 
 ```yaml
 Type: System.String
@@ -274,10 +313,21 @@ Accept wildcard characters: False
 
 ### -ForwardingTargetType
 
-The forwarding target type. Supported values are Voicemail, SingleTarget, MyDelegates and Group. Voicemail is only supported for Immediate forwarding.
+The forwarding target type.
 
-SingleTarget is used when forwarding to another user or PSTN phone number. MyDelegates is used when forwarding to the users's delegates (there needs to be at least 1
-delegate). Group is used when forwarding to the user's call group (it needs to have at least 1 member).
+For a user, supported values are Voicemail, SingleTarget, MyDelegates, and Group. Voicemail is supported only for immediate forwarding.
+
+For a resource account, supported values are SingleTarget, MyDelegates, and Group.
+
+SingleTarget is used when forwarding to a user, PSTN phone number, or resource account.
+
+MyDelegates is used when forwarding to delegates assigned to the user or resource account. At least one delegate must be assigned. For resource accounts, Common Area Phone (CAP) users or regular users can be assigned as delegates.
+
+Group is used when forwarding to a call group. The call group must contain at least one member.
+
+For resource accounts, Shared Voicemail can be reached by using SingleTarget to target a resource account associated with an Auto Attendant (AA) configured to route calls to Shared Voicemail.
+When a resource account is associated with an Auto Attendant (AA), Call Queue (CQ), or Teams Phone Agent (TPA), and immediate forwarding is enabled, incoming calls are forwarded according to the resource account's forwarding settings and don't reach the associated AA, CQ, or TPA.
+
 
 ```yaml
 Type: System.String
@@ -361,7 +411,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity of the user to set call forwarding, simultaneous ringing and call group settings for. Can be specified using the ObjectId or the SIP address.
+
+The identity of the user or resource account to set call forwarding, simultaneous ringing, call group, delegation, and other applicable calling settings for. A user or resource account can be specified using the ObjectId or SIP address.
 
 ```yaml
 Type: System.String
@@ -409,11 +460,12 @@ Accept wildcard characters: False
 ### -MaximumConcurrentCalls
 
 > [!IMPORTANT] 
->This cmdlet is currently available only to customers participating in a Private preview program. General Availability for this functionality has not been determined at this time.
+> This cmdlet is currently available only to customers participating in a Private preview program. General Availability for this functionality has not been determined at this time.
 
-Applies only to Resource Accounts configured for a Call Delegation scenario with CAP phones. In this configuration, the Identity parameter must specify a Resource Account, while the delegates are CAP phone users.
+Specifies the maximum number of concurrent calls that can be handled by delegates assigned to a resource account. Supported values are from 0 through 50.
 
-The MaximumConcurrentCalls setting defines the maximum number of simultaneous calls that can be handled by the Resource Account's CAP phone delegates. When the configured limit is reached, any additional incoming calls are automatically routed according to the Resource Account's unanswered call settings.
+When the configured limit is reached, additional incoming calls are handled according to the resource account's unanswered call settings.
+
 
 ```yaml
 Type: System.Int32
@@ -446,10 +498,15 @@ Accept wildcard characters: False
 
 ### -UnansweredTarget
 
-The unanswered target. Supported type of values are ObjectId, SIP address and phone number.
-For phone numbers we support the following types of formats: E.164 (+12065551234 or +1206555000;ext=1234) or non-E.164 like 1234.
+Specifies the target for unanswered calls. Supported values include a user, resource account, or phone number.
+A user or resource account can be specified using its ObjectId or SIP address, as applicable.
 
-Only used when UnansweredTargetType is SingleTarget.
+For phone numbers, the following types of formats are supported E.164 (+12065551234 or +1206555000;ext=1234) or non-E.164 like 1234.
+
+This parameter is used only when UnansweredTargetType is set to SingleTarget.
+
+When a resource account is specified as the SingleTarget, the call is routed according to the configuration associated with that resource account. This can be used for scenarios such as routing unanswered calls to an Auto Attendant (AA), Call Queue (CQ), or another resource account.
+
 
 ```yaml
 Type: System.String
@@ -465,10 +522,18 @@ Accept wildcard characters: False
 
 ### -UnansweredTargetType
 
-The unanswered target type. Supported values are Voicemail, SingleTarget, MyDelegates and Group.
+The unanswered call target type.
 
-SingleTarget is used when forwarding the unanswered call to another user or phone number. MyDelegates is used when forwarding the unanswered call to the users's
-delegates. Group is used when forwarding the unanswered call to the specified user's call group.
+For a user, supported values are Voicemail, SingleTarget, MyDelegates, and Group.
+
+For a resource account, supported values are "" (no target type), SingleTarget, and Group. Voicemail and MyDelegates aren't supported as unanswered target types for resource accounts.
+SingleTarget is used when forwarding an unanswered call to a user, PSTN phone number, or resource account.
+
+MyDelegates is used when forwarding an unanswered call to the user's delegates. This option is supported for users but isn't supported for resource accounts.
+
+Group is used when forwarding an unanswered call to the specified user's or resource account's call group.
+
+For resource accounts, Shared Voicemail can be reached by using SingleTarget to target a resource account associated with an Auto Attendant (AA) configured to route calls to Shared Voicemail.
 
 ```yaml
 Type: System.String
@@ -494,13 +559,17 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Object
 
 ## NOTES
+
+> [!IMPORTANT]
+> Resource account calling settings are currently available to customers in Private Preview. The General Availability (GA) date has not yet been determined.
+
 The cmdlet is available in Teams PowerShell module 4.0.0 or later.
 
 The `BusyOnBusyOption` parameter is available in Teams PowerShell module 8.0.0 or later.
 
 The specified user need to have the Microsoft Phone System license assigned.
 
-When forwarding to MyDelegates, the specified user needs to have one or more delegates defined that are allowed to receive calls. When forwarding to Group, the
+When forwarding to MyDelegates, the specified user or resource account must have one or more delegates configured to receive calls. When forwarding to Group, the
 specified user needs to have one or more members of the user's call group.
 
 The cmdlet is validating the different settings and is always writing all the parameters in a settings group. You might see validation errors from the cmdlet due to
@@ -511,6 +580,7 @@ You can specify a SIP URI without 'sip:' on input, but the output from Get-CsUse
 You are not able to configure delegates via this cmdlet. Please use New-CsUserCallingDelegate, Set-CsUserCallingDelegate cmdlets and Remove-CsUserCallingDelegate.
 
 Busy on busy can also be configured at the tenant and per-user level through Set-CsTeamsCallingPolicy. See [Set-CsTeamsCallingPolicy](https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamscallingpolicy) for details.
+
 
 ## RELATED LINKS
 [Get-CsUserCallingSettings](https://learn.microsoft.com/powershell/module/microsoftteams/get-csusercallingsettings)
