@@ -24,6 +24,9 @@ Get-CsExternalRegisteredBot [<CommonParameters>]
 
 ## DESCRIPTION
 
+> [!NOTE]
+> This cmdlet is available only in the MicrosoftTeams PowerShell Preview module.
+
 The `Get-CsExternalRegisteredBot` cmdlet retrieves external meeting bots from the registered bot catalog. Use the returned `appId` values with the **AllowedExternalBotAppIds** parameter of [New-CsTeamsMeetingPolicy](New-CsTeamsMeetingPolicy.md) or [Set-CsTeamsMeetingPolicy](Set-CsTeamsMeetingPolicy.md).
 
 Before running this cmdlet, sign in with an administrator account using [Connect-MicrosoftTeams](Connect-MicrosoftTeams.md). Application-only authentication isn't supported.
