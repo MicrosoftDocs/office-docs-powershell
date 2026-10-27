@@ -105,6 +105,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-LiveStreamingMode <String>]
  [-LobbyChat <String> ]
  [-MediaBitRateKb <UInt32>]
+ [-MeetingAI <String>]
  [-MeetingChatEnabledType <String>]
  [-MeetingInviteLanguages <String>]
  [-NewMeetingRecordingExpirationDays <Int32>]
@@ -124,6 +125,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-StreamingAttendeeMode <String>]
  [-TeamsCameraFarEndPTZMode <String>]
  [-Tenant <Guid>]
+ [-TranscriptionWithMeetingAI <String>]
  [-UsersCanAdmitFromLobby <String>]
  [-VideoFiltersMode <String>]
  [-VoiceIsolation <String>]
@@ -1433,7 +1435,7 @@ Possible Values:
 
 - **RequireApprovalWhenDetected**: When detected, bots will be enforced to the meeting lobby, regardless of the lobby setting of the meeting. They will require approval before getting access to the meetings. This is the default value.
 
-- **BlockDetectedBots**: Blocks detected external bots from joining meetings.
+- **BlockDetectedBots**: When detected, external third-party meeting bots and meeting assistants are blocked from joining meetings hosted in the organization.
 
 Use **AllowedExternalBotAppIds** to configure an allowlist of registered bots when this parameter is `RequireApprovalWhenDetected` or `BlockDetectedBots`.
 
@@ -1633,6 +1635,32 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MeetingAI
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+Determines whether AI (Copilot, Facilitator, or Intelligent Recap) can be used in meetings.
+
+This parameter must be used together with -TranscriptionWithMeetingAI.
+
+Possible values are:
+
+- EnabledAllowOrganizerOverride
+- DisabledAllowOrganizerOverride
+- DisabledNoOverride
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: EnabledAllowOrganizerOverride
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -2089,6 +2117,32 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TranscriptionWithMeetingAI
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+Determines whether transcription is turned on along with Copilot. Transcription allows Copilot to continue to use meeting data for questions after the meeting ends.
+
+This parameter must be used together with -MeetingAI.
+
+Possible values are:
+
+- EnabledAllowOrganizerOverride
+- DisabledAllowOrganizerOverride
+- EnabledNoOverride
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: EnabledNoOverride
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
