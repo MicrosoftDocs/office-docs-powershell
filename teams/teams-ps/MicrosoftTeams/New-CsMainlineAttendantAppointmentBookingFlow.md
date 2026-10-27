@@ -26,9 +26,6 @@ New-CsMainlineAttendantAppointmentBookingFlow -Name <String> -Description <Strin
 ## DESCRIPTION
 The New-CsMainlineAttendantAppointmentBookingFlow cmdlet creates a new appointment booking connection that can be used with Mainline Attendant
 
-> [!CAUTION]
-> Teams Phone Agent (formerly Mainline Attendant) is currently only available to customers in the [Frontier](https://www.microsoft.com/microsoft-365-copilot/frontier-program) Public Preview program.
-
 ## EXAMPLES
 
 

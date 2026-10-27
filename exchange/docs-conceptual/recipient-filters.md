@@ -10,7 +10,7 @@ description: "Learn about creating different kinds of recipient filters in the E
 
 # Recipient filters in Exchange PowerShell commands
 
-The cmdlets in the [Exchange Management Shell](exchange-management-shell.md) and [Exchange Online PowerShell](exchange-online-powershell.md)l support different types of filters in recipient related cmdlets:
+The cmdlets in the [Exchange Management Shell](exchange-management-shell.md) and [Exchange Online PowerShell](exchange-online-powershell.md) support different types of filters in recipient related cmdlets:
 
 - Precanned filters.
 - Custom filters using the _RecipientFilter_ parameter.

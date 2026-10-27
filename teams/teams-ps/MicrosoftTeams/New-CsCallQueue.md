@@ -1,11 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.dll-Help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cscallqueue
 schema: 2.0.0
 title: New-CsCallQueue
@@ -36,13 +37,6 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 > - -TimeoutActionCallPriority
 > - -NoAgentActionCallPriority
 >
-> Compliance recording for Call queues
-> - -ComplianceRecordingForCallQueueTemplateId
-> - -TextAnnouncementForCR
-> - -CustomAudioFileAnnouncementForCR
-> - -TextAnnouncementForCRFailure
-> - -CustomAudioFileAnnouncementForCRFailure
->
 > Redirect Prompts
 > - -OverflowRedirectPersonTextToSpeechPrompt
 > - -OverflowRedirectPersonAudioFilePrompt
@@ -57,12 +51,6 @@ The New-CsCallQueue cmdlet creates a new Call Queue.
 > - -NoAgentRedirectVoicemailTextToSpeechPrompt
 > - -NoAgentRedirectVoicemailAudioFilePrompt
 >
-> Shared call history
-> - -SharedCallQueueHistoryTemplateId
->   
-> Automatic recording
-> - -AutoRecordingTemplateId
->   
 > Automatic triage of Shared Voicemails with AI
 > - -SharedVoicemailTriageSettingsTemplateId
 >

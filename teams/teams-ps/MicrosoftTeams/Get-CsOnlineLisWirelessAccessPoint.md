@@ -1,10 +1,11 @@
 ---
 applicable: Microsoft Teams
-author: officedocspr
+author: pavellatif
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: odocspr
+ms.author: pavellatif
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineliswirelessaccesspoint
 schema: 2.0.0
 title: Get-CsOnlineLisWirelessAccessPoint
@@ -18,69 +19,85 @@ Retrieves one or more wireless access points (WAPs) from the location configurat
 ## SYNTAX
 
 ```
-Get-CsOnlineLisWirelessAccessPoint [[-BSSID] <string>] [-Force] [-IsDebug <bool>] [-NCSApiUrl <string>] [-TargetStore <string>] [<CommonParameters>]
+Get-CsOnlineLisWirelessAccessPoint [[-BSSID] <string>] [-Filter <string>] [-Force] [-IsDebug <bool>] [-NCSApiUrl <string>] [-TargetStore <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Each WAP can be associated with a location, in which case this cmdlet will also retrieve the location information of the WAPs. This location association is used in an Enhanced 9-1-1 (E9-1-1) Enterprise Voice implementation to notify an emergency services operator of the caller's location.
+Each WAP can be associated with a location. When you use this cmdlet, it retrieves the location information for the WAPs. Use this location association in an Enhanced 9-1-1 (E9-1-1) Enterprise Voice implementation to notify an emergency services operator of the caller's location.
 
-Enhanced 9-1-1 allows an emergency operator to identify the location of a caller without having to ask the caller for that information. In the case where a caller is calling from a Voice over Internet Protocol (VoIP) connection, that information must be extracted based on various connection factors. The VoIP administrator must configure a location map (called a wiremap) that will determine a caller's location. This cmdlet retrieves information on associations between physical locations and the WAP through which the client is connected.
+Enhanced 9-1-1 allows an emergency operator to identify the location of a caller without asking the caller for that information. When a caller uses a Voice over Internet Protocol (VoIP) connection, the operator extracts location information based on various connection factors. The VoIP administrator configures a location map (called a wiremap) that determines a caller's location. This cmdlet retrieves information on associations between physical locations and the WAP through which the client is connected.
 
-The BSSID (Basic Service Set Identifiers) is used to describe sections of a wireless local area network. It is the MAC of the 802.11 side of the access point. The BSSID parameter in this command also supports the wildcard format to cover all BSSIDs in the range which are sharing the same description and Location ID. The wildcard '*' can be on either the last one or two character(s).
+Use the BSSID (Basic Service Set Identifiers) to describe sections of a wireless local area network. It's the MAC of the 802.11 side of the access point. The BSSID parameter in this command supports the wildcard format to cover all BSSIDs in the range that share the same description and Location ID. The wildcard `*` can be on either the last one or two characters.
 
-If a BSSID with a wildcard format is already exists, a location request with a WAP which is within this wildcard range will return the access point that is configured with the wildcard format.
+If a BSSID with a wildcard format exists, a location request with a WAP in this wildcard range returns the access point that you configured with the wildcard format.
+
+Use the `Filter` parameter to retrieve access points that match a filter expression, such as a list of configured BSSIDs.
 
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-CsOnlineLisWirelessAccessPoint
 ```
 ```output
 BSSID             LocationId                           Description
 -----             ----------                           -----------
-F0-6E-0B-C2-03-23 d7714269-ee52-4635-97b0-d7c228801d24 USWAP1
-34-E3-80-D5-AB-60 9905bca0-6fb0-11ec-84a4-25019013784a DKWAP1
-F0-6E-0B-C2-03-*  b2804a1a-e4cf-47df-8964-3eaf6fe1ae3a SEWAPs
+AA-BB-CC-DD-EE-01 11111111-1111-1111-1111-111111111111 AccessPoint1
+AA-BB-CC-DD-EE-02 22222222-2222-2222-2222-222222222222 AccessPoint2
+AA-BB-CC-DD-EE-*  33333333-3333-3333-3333-333333333333 AccessPointGroup
 ```
 
-Example 1 retrieves all Location Information Server (LIS) wireless access points and any associated locations.
+This example retrieves all Location Information Server (LIS) wireless access points and any associated locations.
 
 ### Example 2
-```
-Get-CsOnlineLisWirelessAccessPoint -BSSID F0-6E-0B-C2-03-23
+```powershell
+Get-CsOnlineLisWirelessAccessPoint -BSSID AA-BB-CC-DD-EE-01
 ```
 ```output
 BSSID             LocationId                           Description
 -----             ----------                           -----------
-F0-6E-0B-C2-03-23 d7714269-ee52-4635-97b0-d7c228801d24 USWAP1
+AA-BB-CC-DD-EE-01 11111111-1111-1111-1111-111111111111 AccessPoint1
 ```
 
-Example 2 retrieves Location Information Server (LIS) wireless access point "F0-6E-0B-C2-03-23" and associated location.
+This example retrieves Location Information Server (LIS) wireless access point `AA-BB-CC-DD-EE-01` and associated location.
 
 ### Example 3
-```
-Get-CsOnlineLisWirelessAccessPoint -BSSID F0-6E-0B-C2-03-*
+```powershell
+Get-CsOnlineLisWirelessAccessPoint -BSSID AA-BB-CC-DD-EE-*
 ```
 ```output
 BSSID             LocationId                           Description
 -----             ----------                           -----------
-F0-6E-0B-C2-03-*  b2804a1a-e4cf-47df-8964-3eaf6fe1ae3a SEWAPs
+AA-BB-CC-DD-EE-*  33333333-3333-3333-3333-333333333333 AccessPointGroup
 ```
 
-Example 3 retrieves Location Information Server (LIS) wireless access point "F0-6E-0B-C2-03-*" and associated location.
+Example 3 retrieves Location Information Server (LIS) wireless access point `AA-BB-CC-DD-EE-*` and associated location.
 
 ### Example 4
-```
-Get-CsOnlineLisWirelessAccessPoint -BSSID F0-6E-0B-C2-03-12
+```powershell
+Get-CsOnlineLisWirelessAccessPoint -BSSID AA-BB-CC-DD-EE-03
 ```
 ```output
 BSSID             LocationId                           Description
 -----             ----------                           -----------
-F0-6E-0B-C2-03-*  b2804a1a-e4cf-47df-8964-3eaf6fe1ae3a SEWAPs
+AA-BB-CC-DD-EE-*  33333333-3333-3333-3333-333333333333 AccessPointGroup
 ```
 
-Example 4 retrieves Location Information Server (LIS) wireless access point "F0-6E-0B-C2-03-12" and associated location.
+Example 4 retrieves Location Information Server (LIS) wireless access point `AA-BB-CC-DD-EE-03` and associated location.
+
+### Example 5: Filter by multiple BSSIDs
+```powershell
+Get-CsOnlineLisWirelessAccessPoint -Filter "BSSID -in ['AA-BB-CC-DD-EE-01', 'AA-BB-CC-DD-EE-*']"
+```
+```output
+BSSID             LocationId                           Description
+-----             ----------                           -----------
+AA-BB-CC-DD-EE-01 11111111-1111-1111-1111-111111111111 AccessPoint1
+AA-BB-CC-DD-EE-*  33333333-3333-3333-3333-333333333333 AccessPointGroup
+```
+
+This example returns access points whose BSSID matches either value in the filter, together with their associated location information.
+The list includes both a specific BSSID and a configured wildcard BSSID.
 
 ## PARAMETERS
 
@@ -88,7 +105,7 @@ Example 4 retrieves Location Information Server (LIS) wireless access point "F0-
 
 > Applicable: Microsoft Teams
 
-The Basic Service Set Identifier (BSSID) of the wireless access point. This value must be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab. It can be presented in wildcard format. The wildcard '*' can be on either the last one or two character(s).
+The Basic Service Set Identifier (BSSID) of the wireless access point. This value must be in the form `nn-nn-nn-nn-nn-nn`, such as `12-34-56-78-90-ab`. You can present it in wildcard format. The wildcard `*` can be on either the last one or two characters.
 
 ```yaml
 Type: String
@@ -102,13 +119,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Filter
+
+> Applicable: Microsoft Teams
+
+Filters wireless access points by property values.
+For example, use `BSSID -in ['AA-BB-CC-DD-EE-01', 'AA-BB-CC-DD-EE-*']` to retrieve the access points identified by either configured BSSID.
+
+Pass the filter expression as a string, with double quotation marks around the expression and single quotation marks around string values.
+For `-in`, enclose the comma-separated values in square brackets.
+
+> [!NOTE]
+> The `-Filter` parameter is available in Teams PowerShell module 8.0.0 or later.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 
 > Applicable: Microsoft Teams
 
 The Force switch specifies whether to suppress warning and confirmation messages.
 It can be useful in scripting to suppress interactive prompts.
-If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+If you don't provide the Force switch in the command, the command prompts you for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -189,8 +231,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## NOTES
 
-## RELATED LINKS
+## Related links
 
-[Set-CsOnlineLisWirelessAccessPoint](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlineliswirelessaccesspoint)
+[Set-CsOnlineLisWirelessAccessPoint](./Set-CsOnlineLisWirelessAccessPoint.md)
 
-[Remove-CsOnlineLisWirelessAccessPoint](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlineliswirelessaccesspoint)
+[Remove-CsOnlineLisWirelessAccessPoint](./Remove-CsOnlineLisWirelessAccessPoint.md)

@@ -25,9 +25,6 @@ Remove-CsAutoRecordingTemplate -Id <String> [<CommonParameters>]
 
 ## DESCRIPTION
 
-> [!CAUTION]
-> The functionality provided by this cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
-
 Use the Remove-CsAutoRecordingTemplate cmdlet to delete an Auto Recording template. If the template is currently assigned to a call queue, an error will be returned.
 
 ## EXAMPLES

@@ -670,9 +670,6 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-> [!NOTE]
-> This feature has not been released yet and will have no changes if it is enabled or disabled.
-
 Controls whether Compliance Recording (CR)-enabled users are blocked from joining calls owned by the policy-assigned user. When set to `None`, no restriction is applied and compliance recording operates as configured for the tenant. When set to `All`, CR-enabled users are blocked from joining calls initiated by or received by the policy-assigned user. This applies to both internal and external CR-enabled users (including federated and B2B guests). Anonymous and PSTN users are unaffected as they cannot be assigned compliance recording.
 
 Possible values:
@@ -736,7 +733,9 @@ Accept wildcard characters: False
 ```
 
 ### -RecordingAndTranscriptionAudioNotification
-Policy to control whether audio notifications will be played when recording or transcription starts/stops for applied users/groups.
+Policy to control whether audio notifications will be played when recording or transcription starts/stops for applied users/groups. This policy applies only to Teams client users in VoIP calls. This policy does not control audio announcements for PSTN users or for Teams client users in one-to-one calls between Teams and PSTN, where audio announcements are enabled by default in both scenarios.
+
+Supported clients include Windows and macOS desktop, web, Microsoft Teams Rooms (MTR), Android, iOS, and VDI 2.0. VDI 1.0 is not supported.
 
 Possible values are:
 
