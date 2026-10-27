@@ -99,6 +99,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-LiveStreamingMode <String>]
  [-LobbyChat <string>]
  [-MediaBitRateKb <UInt32>]
+ [-MeetingAI <String>]
  [-MeetingChatEnabledType <String>]
  [-MeetingInviteLanguages <String>]
  [-NewMeetingRecordingExpirationDays <Int32>]
@@ -117,6 +118,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-StreamingAttendeeMode <String>]
  [-TeamsCameraFarEndPTZMode <String>]
  [-Tenant <Guid>]
+ [-TranscriptionWithMeetingAI <String>]
  [-UsersCanAdmitFromLobby <String>]
  [-VideoFiltersMode <String>]
  [-VoiceIsolation <String>]
@@ -1545,6 +1547,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MeetingAI
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+Determines whether AI (Copilot, Facilitator, or Intelligent Recap) can be used in meetings.
+
+This parameter must be used together with -TranscriptionWithMeetingAI.
+
+Possible values are:
+
+- EnabledAllowOrganizerOverride
+- DisabledAllowOrganizerOverride
+- DisabledNoOverride
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: EnabledAllowOrganizerOverride
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MeetingChatEnabledType
 Specifies if users will be able to chat in meetings. Possible values are: Disabled, Enabled, and EnabledExceptAnonymous.
 
@@ -1952,6 +1981,32 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TranscriptionWithMeetingAI
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+Determines whether transcription is turned on along with Copilot. Transcription allows Copilot to continue to use meeting data for questions after the meeting ends.
+
+This parameter must be used together with -MeetingAI.
+
+Possible values are:
+
+- EnabledAllowOrganizerOverride
+- DisabledAllowOrganizerOverride
+- EnabledNoOverride
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: EnabledNoOverride
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
