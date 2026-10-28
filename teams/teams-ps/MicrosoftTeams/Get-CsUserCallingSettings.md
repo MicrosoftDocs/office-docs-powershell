@@ -13,7 +13,11 @@ title: Get-CsUserCallingSettings
 # Get-CsUserCallingSettings
 
 ## SYNOPSIS
-This cmdlet will show the call forwarding, simultaneous ringing, call group, busy on busy and delegation settings for a user.
+
+This cmdlet shows call forwarding, simultaneous ringing, call group, busy-on-busy, and delegation settings for a user.
+
+For phone-centric scenarios, the cmdlet also supports Shared Line Appearance (SLA) for resource account identities. For these resource accounts, it shows immediate forwarding, unanswered call settings, and the maximum number of concurrent calls. Common Area Phone (CAP) devices or users can be configured as delegates for the resource account.
+
 
 ## SYNTAX
 
@@ -35,6 +39,9 @@ Get-CsUserCallingSettings -InputObject <IConfigApiBasedCmdletsIdentity> [-Break]
 This cmdlet shows the call forwarding, simultaneous ringing, call group, busy on busy and delegation settings for a user. It will also show any call groups the user is a member of and
 if someone else has added the user as a delegate.
 
+For phone-centric scenarios, this cmdlet also supports resource accounts configured for Teams Phone Agents, Call Queues, Auto Attendants, and standalone resource accounts. For these resource accounts, the cmdlet shows immediate forwarding, unanswered call settings, and the maximum number of concurrent calls. It also shows Common Area Phone (CAP) users or regular users assigned as delegates for the resource account.
+
+
 ## EXAMPLES
 
 ### Example 1
@@ -53,6 +60,7 @@ UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
 Delegates                 :
 Delegators                :
+MaximumConcurrentCalls    :
 CallGroupOrder            : InOrder
 CallGroupTargets          : {}
 GroupMembershipDetails    :
@@ -78,6 +86,7 @@ UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
 Delegates                 :
 Delegators                :
+MaximumConcurrentCalls    :
 CallGroupOrder            : InOrder
 CallGroupTargets          : {}
 GroupMembershipDetails    :
@@ -105,6 +114,7 @@ UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
 Delegates                 :
 Delegators                :
+MaximumConcurrentCalls    :
 CallGroupOrder            : InOrder
 CallGroupTargets          : {sip:user5@contoso.com}
 GroupMembershipDetails    : CallGroupOwnerId:sip:user6@contoso.com
@@ -142,6 +152,7 @@ UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
 Delegates                 : Id:sip:user8@contoso.com
 Delegators                :
+MaximumConcurrentCalls    :
 CallGroupOrder            : InOrder
 CallGroupTargets          : {}
 GroupMembershipDetails    :
@@ -179,6 +190,7 @@ UnansweredTargetType      : Voicemail
 UnansweredDelay           : 00:00:20
 Delegates                 :
 Delegators                : Id:sip:user10@contoso.com
+MaximumConcurrentCalls    :
 CallGroupOrder            : InOrder
 CallGroupTargets          : {}
 GroupMembershipDetails    :
@@ -216,6 +228,7 @@ UnansweredTargetType      :
 UnansweredDelay           : 00:00:20
 Delegates                 :
 Delegators                :
+MaximumConcurrentCalls    :
 CallGroupOrder            : Simultaneous
 CallGroupTargets          : {}
 GroupMembershipDetails    :
@@ -226,31 +239,30 @@ BusyOnBusyOption          :
 This example shows the default settings for a user that has never changed the call forward settings via Microsoft Teams. Note that for users with settings as shown here,
 unanswered calls will by default be forwarded to voicemail after 30 seconds.
 
-### Example 7
+### Example 7 - View Resource Account Call Delegation Settings
 ```powershell
-Get-CsUserCallingSettings -Identity user12@contoso.com
+Get-CsUserCallingSettings -Identity resource_account1@contoso.com
 ```
 ```output
-SipUri                    : sip:user12@contoso.com
-IsForwardingEnabled       : False
-ForwardingType            : Immediate
+SipUri                    : 
+IsForwardingEnabled       : True
+ForwardingType            : Simultaneous
 ForwardingTarget          :
-ForwardingTargetType      : Voicemail
+ForwardingTargetType      : MyDelegates
 IsUnansweredEnabled       : True
 UnansweredTarget          :
-UnansweredTargetType      : Voicemail
+UnansweredTargetType      : ResourceAccount
 UnansweredDelay           : 00:00:20
-Delegates                 :
+Delegates                 : {CAPphone1@contoso.com, CAPphone2@contoso.com, CAPphone3@contoso.com}
 Delegators                :
-CallGroupOrder            : InOrder
+MaximumConcurrentCalls    : 10
+CallGroupOrder            : Simultaneous
 CallGroupTargets          : {}
 GroupMembershipDetails    :
 GroupNotificationOverride :
-BusyOnBusyOption          : PlayBusySignal
 ```
 
-This example shows that user12@contoso.com has busy on busy enabled (BusyOnBusyOption) so that a new incoming call is rejected with a busy signal while the user is
-already in a call or in a conference.
+This example displays the call delegation settings for a resource account configured with multiple Common Area Phone (CAP) users as delegates. The output shows that incoming calls are simultaneously forwarded to the assigned delegates and that the resource account allows a maximum of 10 concurrent calls. If the number of concurrent calls reaches this limit, the 11th incoming call is handled directly according to the resource account's unanswered call settings. Calls that aren't answered within the configured 20-second delay are also handled according to the resource account's unanswered call settings.
 
 ## PARAMETERS
 
@@ -300,7 +312,8 @@ Accept wildcard characters: False
 ```
 
 ### -Identity
-The Identity of the user to show call forwarding, simultaneous ringing, call group and delegation settings for. Can be specified using the ObjectId or the SIP address.
+
+The identity of the user or resource account to show call forwarding, simultaneous ringing, call group, delegation, and other applicable calling settings for. A user can be specified using the SIP address or ObjectId. A resource account can be specified using its ObjectId.
 
 ```yaml
 Type: System.String
@@ -390,6 +403,8 @@ The cmdlet is available in Teams PowerShell module 4.0.0 or later.
 
 The `BusyOnBusyOption` output property is available in Teams PowerShell module 8.0.0 or later. It shows the per-user busy on busy setting and can be `PlayBusySignal`,
 `RedirectAsUnansweredCall` or `RingUser`. It is empty for a user that has no per-user busy on busy setting. You set this property with Set-CsUserCallingSettings -BusyOnBusyOption.
+
+Resource account delegation is currently in Private Preview. The General Availability (GA) date is not yet determined.
 
 ## RELATED LINKS
 
