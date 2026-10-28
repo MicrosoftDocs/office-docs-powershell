@@ -20,7 +20,7 @@ The CsTeamsMeetingConfiguration cmdlets enable administrators to control the mee
 
 ```powershell
 Set-CsTeamsMeetingConfiguration [-Tenant <Guid>] [-LogoURL <String>] [-LegalURL <String>]
- [-HelpURL <String>] [-CustomFooterText <String>] [-DisableAnonymousJoin <Boolean>] [-EnableAttributedTranscripts <Boolean>] [-EnableGraphTranscriptAccess <Boolean>] [-EnableQoS <Boolean>]
+ [-HelpURL <String>] [-CustomFooterText <String>] [-DisableAnonymousJoin <Boolean>] [-EnableAttributedTranscripts <Boolean>] [-EnableGraphTranscriptAccess <Boolean>] [-EnableWorkIQTranscriptAccess <Boolean>] [-EnableQoS <Boolean>]
  [-ClientAudioPort <UInt32>] [-ClientAudioPortRange <UInt32>] [-ClientVideoPort <UInt32>]
  [-ClientVideoPortRange <UInt32>] [-ClientAppSharingPort <UInt32>] [-ClientAppSharingPortRange <UInt32>]
  [-ClientMediaPortRangeEnabled <Boolean>] [-DisableAppInteractionForAnonymousUsers <Boolean>] [[-Identity] <XdsIdentity>] [-FeedbackSurveyForAnonymousUsers <String>] [-LimitPresenterRolePermissions <Boolean>] [-ReportMeeting <String>]
@@ -32,7 +32,7 @@ Set-CsTeamsMeetingConfiguration [-Tenant <Guid>] [-LogoURL <String>] [-LegalURL 
 
 ```powershell
 Set-CsTeamsMeetingConfiguration [-Tenant <Guid>] [-LogoURL <String>] [-LegalURL <String>]
- [-HelpURL <String>] [-CustomFooterText <String>] [-DisableAnonymousJoin <Boolean>] [-EnableAttributedTranscripts <Boolean>] [-EnableGraphTranscriptAccess <Boolean>] [-EnableQoS <Boolean>]
+ [-HelpURL <String>] [-CustomFooterText <String>] [-DisableAnonymousJoin <Boolean>] [-EnableAttributedTranscripts <Boolean>] [-EnableGraphTranscriptAccess <Boolean>] [-EnableWorkIQTranscriptAccess <Boolean>] [-EnableQoS <Boolean>]
  [-ClientAudioPort <UInt32>] [-ClientAudioPortRange <UInt32>] [-ClientVideoPort <UInt32>]
  [-ClientVideoPortRange <UInt32>] [-ClientAppSharingPort <UInt32>] [-ClientAppSharingPortRange <UInt32>]
  [-ClientMediaPortRangeEnabled <Boolean>] [-DisableAppInteractionForAnonymousUsers <Boolean>] [-FeedbackSurveyForAnonymousUsers <String>] [-LimitPresenterRolePermissions <Boolean>] [-ReportMeeting <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
@@ -262,6 +262,22 @@ Accept wildcard characters: False
 ### -EnableGraphTranscriptAccess
 
 Determines whether transcripts can be accessed via Microsoft Graph API in the tenant. Set this to TRUE to allow Microsoft Graph API access to transcripts, and FALSE to block all Microsoft Graph API access to transcripts in the tenant.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableWorkIQTranscriptAccess
+
+Determines whether WorkIQ can access real-time transcript data in the tenant. Set this to TRUE to allow WorkIQ to request real-time transcript data, as long as all other applicable requirements are met. Set this to FALSE to block WorkIQ from accessing real-time transcript data in the tenant.
 
 ```yaml
 Type: Boolean
