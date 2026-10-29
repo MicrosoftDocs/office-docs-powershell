@@ -56,6 +56,15 @@ If the value of EwsApplicationAccessPolicy is EnforceAllowList, only the applica
 
 If the value of EwsApplicationAccessPolicy is EnforceBlockList, all applications are allowed to access EWS and REST, except those specified in EwsBlockList.
 
+### Example 4
+```powershell
+Get-OrganizationConfig | Format-List DefaultFolderPermissionRestricted
+```
+
+This example shows whether the organization has enabled the restriction that limits Default and Anonymous mailbox folder permissions to None.
+
+This example is available only in the cloud-based service.
+
 ## PARAMETERS
 
 ### -DomainController

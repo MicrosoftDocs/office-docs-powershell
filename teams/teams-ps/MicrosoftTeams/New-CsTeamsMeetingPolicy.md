@@ -135,6 +135,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-EnableRecordingAndTranscriptionCustomMessage <Boolean>]
  [-RecordingAndTranscriptionCustomMessageIdentifier <Guid>]
  [-AllowMeetingKnowledgeGeneration <Boolean>]
+ [-KnowledgeGenerationMeetingTypes <String>]
  [-MeetingKnowledgeExpirationDays <Int32>]
  [-ConditionalAccessAttendeeVerification <Boolean>]
  [-EnablePreMeetingConsent <Boolean>]
@@ -1441,6 +1442,30 @@ Accept wildcard characters: False
 
 ### -IPVideoMode
 Determines whether video can be turned on in meetings and group calls. Set this to ENABLEDOUTGOINGINCOMING to allow outgoing and incoming video in the meeting. Set this to DISABLED to prohibit outgoing and incoming video in the meeting. Invalid value combination IPVideoMode: EnabledOutgoingIncoming and IPAudioMode: Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -KnowledgeGenerationMeetingTypes
+
+Specifies which meetings organized by users assigned this policy can generate an AI-generated meeting knowledge file.
+
+Possible values are:
+
+- **AllMeetings**: Allow generation for all meetings, including meetings without transcription.
+- **TranscribedMeetings**: Allow generation only for meetings with transcription.
+- **None**: Do not generate meeting knowledge files.
+
+This setting applies only when both `AllowIntelligentRecap` and `AllowMeetingKnowledgeGeneration` are set to `$True`. If either parameter is set to `$False`, meeting knowledge files aren't generated, regardless of the `KnowledgeGenerationMeetingTypes` value.
 
 ```yaml
 Type: String
