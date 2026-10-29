@@ -6,6 +6,7 @@ Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
 ms.author: tomkau
+ms.date: 10/19/2026
 ms.reviewer: williamlooney
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamsmeetingpolicy
 schema: 2.0.0
@@ -73,6 +74,14 @@ NewMeetingRecordingExpirationDays : 60
 
 The above command returns expiration date setting currently applied on TMR. For more details, see:
 [Auto-expiration of Teams meeting recordings](https://learn.microsoft.com/microsoftteams/cloud-recording#auto-expiration-of-teams-meeting-recordings).
+
+### Example 5
+
+```powershell
+Get-CsTeamsMeetingPolicy -Identity SalesMeetingPolicy | Select-Object -Property Identity, ExternalBotAccessMode, AllowedExternalBotAppIds
+```
+
+Returns the external bot access mode and allowed external bot application IDs for SalesMeetingPolicy. Use [Get-CsExternalRegisteredBot](Get-CsExternalRegisteredBot.md) to look up registered bots and their application IDs.
 
 ## PARAMETERS
 
@@ -151,3 +160,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CsExternalRegisteredBot](Get-CsExternalRegisteredBot.md)
+
+[New-CsTeamsMeetingPolicy](New-CsTeamsMeetingPolicy.md)
+
+[Set-CsTeamsMeetingPolicy](Set-CsTeamsMeetingPolicy.md)
