@@ -14,10 +14,7 @@ title: Get-CsUserCallingSettings
 
 ## SYNOPSIS
 
-This cmdlet shows call forwarding, simultaneous ringing, call group, busy-on-busy, and delegation settings for a user.
-
-For phone-centric scenarios, the cmdlet also supports Shared Line Appearance (SLA) for resource account identities. For these resource accounts, it shows immediate forwarding, unanswered call settings, and the maximum number of concurrent calls. Common Area Phone (CAP) devices or users can be configured as delegates for the resource account.
-
+This cmdlet shows call forwarding, simultaneous ringing, call group, busy-on-busy, and delegation settings for users. It also supports Shared Line Appearance (SLA) for resource accounts, including forwarding, unanswered call settings, maximum concurrent calls, and CAP or user delegation.
 
 ## SYNTAX
 
