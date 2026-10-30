@@ -28,9 +28,6 @@ Get-CsMainlineAttendantSupportedVoices
 
 The Get-CsMainlineAttendantSupportedVoices cmdlet returns a list of voices that are supported for use with Mainline Attendant.
 
-> [!CAUTION]
-> Teams Phone Agent (formerly Mainline Attendant) is currently only available to customers in the [Frontier](https://www.microsoft.com/microsoft-365-copilot/frontier-program) Public Preview program.
-
 ## EXAMPLES
 
 ### Example 1

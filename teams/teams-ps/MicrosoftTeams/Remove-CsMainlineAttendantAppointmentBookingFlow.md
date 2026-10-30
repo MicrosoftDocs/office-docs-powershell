@@ -26,9 +26,6 @@ Remove-CsMainlineAttendantAppointmentBookingFlow -Identity <Guid> [-Tenant <Guid
 ## DESCRIPTION
 The Remove-CsMainlineAttendantAppointmentBookingFlow cmdlet deletes an existing Mainline attendant appointment booking flow.
 
-> [!CAUTION]
-> Teams Phone Agent (formerly Mainline Attendant) is currently only available to customers in the [Frontier](https://www.microsoft.com/microsoft-365-copilot/frontier-program) Public Preview program.
-
 ## EXAMPLES
 
 ### Example 1
