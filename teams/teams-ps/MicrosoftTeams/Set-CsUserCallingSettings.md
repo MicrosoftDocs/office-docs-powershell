@@ -24,7 +24,6 @@ For phone-centric scenarios, this cmdlet also supports resource account identiti
 ## SYNTAX
 
 ### Identity (Default)
-   
 ```
 Set-CsUserCallingSettings -Identity <String> [-HttpPipelinePrepend <SendAsyncStep[]>] [<CommonParameters>]
 ```
