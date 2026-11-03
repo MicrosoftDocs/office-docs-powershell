@@ -13,7 +13,7 @@ title: Disconnect-ExchangeOnline
 ## SYNOPSIS
 This cmdlet is available only in the Exchange Online PowerShell module. For more information, see [About the Exchange Online PowerShell module](https://aka.ms/exov3-module).
 
-Use the Disconnect-ExchangeOnline cmdlet in the Exchange Online PowerShell module to disconnect the connections that you created using the Connect-ExchangeOnline or Connect-IPPSSession cmdlets.
+Use the Disconnect-ExchangeOnline cmdlet in the Exchange Online PowerShell module to disconnect the connections that you created using the Connect-ExchangeOnline, Connect-IPPSSession, or Connect-DefenderForOffice365 cmdlets.
 
 For information about the parameter sets in the Syntax section below, see [Exchange cmdlet syntax](https://learn.microsoft.com/powershell/exchange/exchange-cmdlet-syntax).
 
@@ -44,7 +44,7 @@ Disconnect-ExchangeOnline -ModulePrefix <String[]>
 ```
 
 ## DESCRIPTION
-This cmdlet is the counterpart to the Connect-ExchangeOnline and Connect-IPPSSession cmdlets.
+This cmdlet is the counterpart to the Connect-ExchangeOnline, Connect-IPPSSession, and Connect-DefenderForOffice365 cmdlets.
 
 This cmdlet disconnects any connections and clears the cache. After a successful disconnect, you can't successfully run any cmdlets for your organization.
 
@@ -57,28 +57,28 @@ Disconnect commands will likely fail if the profile path of the account that you
 Disconnect-ExchangeOnline
 ```
 
-This example asks for confirmation before disconnecting from Exchange Online PowerShell or Security & Compliance PowerShell.
+This example asks for confirmation before disconnecting.
 
 ### Example 2
 ```powershell
 Disconnect-ExchangeOnline -Confirm:$false
 ```
 
-This example silently disconnects from Exchange Online PowerShell or Security & Compliance PowerShell without a confirmation prompt or any notification text.
+This example silently disconnects without a confirmation prompt or any notification text.
 
 ### Example 3
 ```powershell
 Disconnect-ExchangeOnline -ConnectionId 1a9e45e8-e7ec-498f-9ac3-0504e987fa85
 ```
 
-This example disconnects the REST-based Exchange Online PowerShell connection with the specified ConnectionId value. Any other remote PowerShell connections to Exchange Online PowerShell or Security & Compliance PowerShell in the same Windows PowerShell window are also disconnected.
+This example disconnects the REST-based connection with the specified ConnectionId value.
 
 ### Example 4
 ```powershell
 Disconnect-ExchangeOnline -ModulePrefix Contoso,Fabrikam
 ```
 
-This example disconnects the REST-based Exchange Online PowerShell connections that are using the specified prefix values. Any other remote PowerShell connections to Exchange Online PowerShell or Security & Compliance PowerShell in the same Windows PowerShell window are also disconnected.
+This example disconnects the REST-based connections that are using the specified prefix values.
 
 ## PARAMETERS
 
@@ -131,7 +131,7 @@ Accept wildcard characters: False
 
 **Note**: This parameter is available in module version 3.2.0-Preview2 or later.
 
-The ModulePrefix parameter specifies the REST API connections to disconnect by ModulePrefix. When you use the Prefix parameter with the Connect-ExchangeOnline cmdlet, the specified text is added to the names of all Exchange Online cmdlets (for example, Get-InboundConnector becomes Get-ContosoInboundConnector). The ModulePrefix value is visible in the output of the Get-ConnectionInformation cmdlet. You can specify multiple ModulePrefix values separated by commas.
+The ModulePrefix parameter specifies the REST API connections to disconnect by ModulePrefix. When you use the Prefix parameter with the Connect-ExchangeOnline, Connect-IPPSSession, or Connect-DefenderForOffice365 cmdlet, the specified text is added to the names of all imported cmdlets (for example, Get-InboundConnector becomes Get-ContosoInboundConnector). The ModulePrefix value is visible in the output of the Get-ConnectionInformation cmdlet. You can specify multiple ModulePrefix values separated by commas.
 
 Don't use this parameter with the ConnectionId parameter.
 

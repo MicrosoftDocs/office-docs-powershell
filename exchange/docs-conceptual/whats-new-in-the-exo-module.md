@@ -6,16 +6,24 @@ ms.topic: article
 ms.service: exchange-online
 ms.reviewer:
 ms.localizationpriority: medium
+ai-usage: ai-assisted
 ms.collection: Strat_EX_Admin
-ms.custom:
+ms.custom: msecd-doc-authoring-1015
 ms.assetid:
 keywords: what's new in exchange online powershell, what's new in security & compliance powershell, EXO V2 module, EXO V3 module
 description: "Learn about the new features and functionality available in the latest release of the Exchange Online PowerShell module."
+#customer intent: As an admin, I want to review changes to the Exchange Online PowerShell module so that I can plan module updates and use new features.
 ---
 
 # What's new in the Exchange Online PowerShell module
 
-This article lists new features in the Exchange Online PowerShell module used for connecting to Exchange Online PowerShell, Security & Compliance PowerShell, and PowerShell for [the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop). Features that are currently in preview are denoted with **(preview)**.
+This article lists new features in the Exchange Online PowerShell module used for connecting to Exchange Online PowerShell, Security & Compliance PowerShell, Microsoft Defender for Office 365 PowerShell, and PowerShell for [the Built-in security add-on for on-premises mailboxes](/exchange/standalone-eop/standalone-eop).
+
+## August 2026
+
+- Version 3.10.2-Preview1
+
+  - Added the **Connect-DefenderForOffice365** cmdlet for customers who use [Microsoft Defender Unified RBAC](/defender-xdr/manage-rbac) permissions for features in the Defender portal. For more information, see [Microsoft Defender for Office 365 PowerShell overview](defender-office-365-powershell-overview.md).
 
 ## July 2026
 
