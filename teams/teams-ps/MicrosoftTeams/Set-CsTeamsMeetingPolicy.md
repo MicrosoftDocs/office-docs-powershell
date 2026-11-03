@@ -104,6 +104,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-LiveStreamingMode <String>]
  [-LobbyChat <String> ]
  [-MediaBitRateKb <UInt32>]
+ [-MeetingAI <String>]
  [-MeetingChatEnabledType <String>]
  [-MeetingInviteLanguages <String>]
  [-NewMeetingRecordingExpirationDays <Int32>]
@@ -123,6 +124,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-StreamingAttendeeMode <String>]
  [-TeamsCameraFarEndPTZMode <String>]
  [-Tenant <Guid>]
+ [-TranscriptionWithMeetingAI <String>]
  [-UsersCanAdmitFromLobby <String>]
  [-VideoFiltersMode <String>]
  [-VoiceIsolation <String>]
@@ -139,6 +141,7 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-EnableRecordingAndTranscriptionCustomMessage <Boolean>]
  [-RecordingAndTranscriptionCustomMessageIdentifier <Guid>]
  [-AllowMeetingKnowledgeGeneration <Boolean>]
+ [-KnowledgeGenerationMeetingTypes <String>]
  [-MeetingKnowledgeExpirationDays <Int32>]
  [-ConditionalAccessAttendeeVerification <Boolean>]
  [-EnablePreMeetingConsent <Boolean>]
@@ -1383,6 +1386,8 @@ Possible Values:
 
 - **RequireApprovalWhenDetected**: When detected, bots will be enforced to the meeting lobby, regardless of the lobby setting of the meeting. They will require approval before getting access to the meetings. This is the default value.
 
+- **BlockDetectedBots**: When detected, external third-party meeting bots and meeting assistants are blocked from joining meetings hosted in the organization.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -1490,6 +1495,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -KnowledgeGenerationMeetingTypes
+
+Specifies which meetings organized by users assigned this policy can generate an AI-generated meeting knowledge file.
+
+Possible values are:
+
+- **AllMeetings**: Allow generation for all meetings, including meetings without transcription.
+- **TranscribedMeetings**: Allow generation only for meetings with transcription.
+- **None**: Do not generate meeting knowledge files.
+
+This setting applies only when both `AllowIntelligentRecap` and `AllowMeetingKnowledgeGeneration` are set to `$True`. If either parameter is set to `$False`, meeting knowledge files aren't generated, regardless of the `KnowledgeGenerationMeetingTypes` value.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LiveCaptionsEnabledType
 Determines whether real-time captions are available for the user in Teams meetings. Set this to DisabledUserOverride to allow user to turn on live captions. Set this to Disabled to prohibit.
 
@@ -1579,6 +1608,32 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MeetingAI
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+Determines whether AI (Copilot, Facilitator, or Intelligent Recap) can be used in meetings.
+
+This parameter must be used together with -TranscriptionWithMeetingAI.
+
+Possible values are:
+
+- EnabledAllowOrganizerOverride
+- DisabledAllowOrganizerOverride
+- DisabledNoOverride
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: EnabledAllowOrganizerOverride
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -2039,6 +2094,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -TranscriptionWithMeetingAI
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+Determines whether transcription is turned on along with Copilot. Transcription allows Copilot to continue to use meeting data for questions after the meeting ends.
+
+This parameter must be used together with -MeetingAI.
+
+Possible values are:
+
+- EnabledAllowOrganizerOverride
+- DisabledAllowOrganizerOverride
+- EnabledNoOverride
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: EnabledNoOverride
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UsersCanAdmitFromLobby
 
 This policy controls who can admit from the lobby.
@@ -2346,7 +2427,9 @@ Accept wildcard characters: False
 ```
 
 ### -RecordingAndTranscriptionAudioNotification
-Policy to control whether audio notifications will be played when recording or transcription starts/stops for applied users/groups.
+Policy to control whether audio notifications will be played when recording or transcription starts/stops for applied users/groups. This policy applies only to Teams client users in VoIP calls. This policy does not control audio announcements for PSTN users or for Teams client users in one-to-one calls between Teams and PSTN, where audio announcements are enabled by default in both scenarios.
+
+Supported clients include Windows and macOS desktop, web, Microsoft Teams Rooms (MTR), Android, iOS, and VDI 2.0. VDI 1.0 is not supported.
 
 Possible values are:
 

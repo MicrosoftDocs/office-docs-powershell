@@ -1,11 +1,11 @@
 ---
 applicable: Microsoft Teams
-author: garciadaniel
+author: pavellatif
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Locale: en-US
 manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: garciadaniel
+ms.author: pavellatif
 ms.reviewer: garciadaniel
 online version: https://learn.microsoft.com/powershell/module/teams/new-csphonenumberusagechangeorder
 schema: 2.0.0
@@ -15,44 +15,50 @@ title: New-CsPhoneNumberUsageChangeOrder
 # New-CsPhoneNumberUsageChangeOrder
 
 ## SYNOPSIS
-This cmdlet creates a request to to update TN Usage (e.g. from User Type to Service Type).
+Creates an order to change the usage type of one or more telephone numbers.
 
 ## SYNTAX
 
 ```
-New-CsPhoneNumberUsageChangeOrder -TelephoneNumber <String[]> -Usage <String>
+New-CsPhoneNumberUsageChangeOrder -TelephoneNumber <String[]> -Usage <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet creates a order to update the usage of the given phone numbers (e.g. from User Type to Service Type).
+The New-CsPhoneNumberUsageChangeOrder cmdlet creates a request to update the usage type of the specified telephone numbers.
+For example, use `-Usage ServiceType` to request a change from User Type to Service Type.
+The cmdlet returns the order identifier.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> New-CsPhoneNumberUsageChangeOrder -TelephoneNumber "+123456789" -Usage ServiceType
+New-CsPhoneNumberUsageChangeOrder -TelephoneNumber "+12065550100" -Usage ServiceType
 ```
 ```output
-cdf3073a-6fbb-4ade-a8af-e8fa1f3b9c13
+aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee
 ```
 
-In this example, the telephone number "+123456789" would change to Service Type usage.
+This example creates an order to change the usage of telephone number "+12065550100" to Service Type.
+The returned string identifies the order.
 
 ### Example 2
 ```powershell
-[string[]]$tns="+14255551234","+14255551233"
-PS C:\> New-CsPhoneNumberUsageChangeOrder -TelephoneNumber $tns -Usage ServiceType
+$telephoneNumbers = "+12065550100", "+12065550101"
+New-CsPhoneNumberUsageChangeOrder -TelephoneNumber $telephoneNumbers -Usage ServiceType
 ```
 ```output
-cdf3073a-6fbb-4ade-a8af-e8fa1f3b9c13
+aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee
 ```
 
-In this example, the usage of the given list of telephone numbers is being updated to Service Type.
+This example creates one order to change the usage of both telephone numbers to Service Type.
 
 ## PARAMETERS
 
 ### -TelephoneNumber
-Specifies the telephone number(s) to remove. The format can be with or without the prefixed +, but needs to include country code etc.
+Specifies the telephone numbers whose usage type to change.
+Include the country code.
+The leading `+` is optional, for example, "+12065550100" or "12065550100".
+To update multiple numbers in one order, pass an array of strings.
 
 ```yaml
 Type: System.String[]
@@ -67,7 +73,8 @@ Accept wildcard characters: False
 ```
 
 ### -Usage
-Specifies the new usage type for the given telephone numbers.
+Specifies the new usage type for the telephone numbers.
+For example, specify `ServiceType` to request Service Type usage.
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
@@ -81,6 +88,9 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### CommonParameters
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
 ## INPUTS
 
 ### None
@@ -89,9 +99,11 @@ Accept wildcard characters: False
 
 ### System.String
 
-### None
+The identifier of the phone number usage change order.
 
 ## NOTES
-This cmdlet is available in Teams PowerShell module 7.5.0 or later.
+This cmdlet is available in Teams PowerShell module 8.0.0 or later.
 
 ## RELATED LINKS
+
+[Get-CsPhoneNumberAssignment](./Get-CsPhoneNumberAssignment.md)

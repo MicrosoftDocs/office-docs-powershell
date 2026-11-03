@@ -606,6 +606,13 @@ This example restricts EWS access to the two specified Entra applications only. 
 
 **Note**: To remove the application ID restriction on EWS access, use the value `$null` for the EwsAllowedAppIDs parameter. To view the list of configured apps, use the following command: `Get-OrganizationConfig -RetrieveEwsOperationAccessPolicy | Format-List EwsAllowedAppIDs`.
 
+### Example 8
+```powershell
+Set-OrganizationConfig -DefaultFolderPermissionRestricted $true
+```
+
+This example enables the organization-wide restriction that allows Default and Anonymous mailbox folder permission entries to be set only to None. Enabling this restriction doesn't automatically change existing folder permissions.
+
 ## PARAMETERS
 
 ### -ShortenEventScopeDefault
@@ -1780,7 +1787,12 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill DefaultFolderPermissionRestricted Description }}
+The DefaultFolderPermissionRestricted parameter specifies whether to restrict the Default and Anonymous permission entries on mailbox folders to the None permission level across the organization. Valid values are:
+
+- $true: Users and administrators can set Default and Anonymous permission entries only to None. Existing permissions aren't automatically changed when you enable this restriction. However, subsequent changes to Default or Anonymous permission entries can set them only to None. Attempts to set these entries to any other permission level are blocked.
+- $false: This setting doesn't restrict the permission levels that users and administrators can assign to Default and Anonymous permission entries on mailbox folders. This is the default value.
+
+This setting doesn't affect Owner permissions or permissions explicitly granted to specific users.
 
 ```yaml
 Type: Boolean
@@ -1789,7 +1801,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
