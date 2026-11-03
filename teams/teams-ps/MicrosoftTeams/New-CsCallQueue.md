@@ -87,7 +87,7 @@ This example creates a Call Queue for the organization named "Help Desk" with mu
 
 ### Example 3
 ```
-New-CsCallQueue -Name "Support Queue" -EnableWrapTime $true -WrapTimeDuration 30
+New-CsCallQueue -Name "Support Queue" -UseDefaultMusicOnHold $true -EnableWrapTime $true -WrapTimeDuration 30
 ```
 
 This example creates a Call Queue named "Support Queue" that gives agents 30 seconds of wrap time after each call.
