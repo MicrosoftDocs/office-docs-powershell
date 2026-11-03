@@ -48,7 +48,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Set-EventsFromEmailConfiguration -Identity peter@contoso.com -InvoiceProgressingLevel Disabled
+Set-EventsFromEmailConfiguration -Identity peter@contoso.com -InvoiceProcessingLevel Disabled
 ```
 
 This example disables the discovery of invoices from messages for the user.
