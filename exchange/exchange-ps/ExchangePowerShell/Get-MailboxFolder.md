@@ -48,7 +48,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 
 ### Example 1
 ```powershell
-Get-MailboxFolder -Identity :\Inbox | Format List
+Get-MailboxFolder -Identity :\Inbox | Format-List
 ```
 
 This example returns detailed information about the Inbox folder in your own mailbox.
