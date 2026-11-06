@@ -468,8 +468,6 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-> This parameter is reserved for future use and has no effect and should not be used. Any values set will not be applied or retained before this parameter is released
-
 When set to False (the default value), users in the tenant who have `EnableFederationAccess` set to False in their assigned `ExternalAccessPolicy` can be added to group chats that include external users only when the chat is initiated by a user in the same tenant who has `EnableFederationAccess` set to True. 
 
 When set to True, users in the tenant who have `EnableFederationAccess` set to False are blocked from being added to any group chat that includes external users and are removed from existing active group chats that include external users. 
@@ -495,8 +493,6 @@ Accept wildcard characters: False
 ### -EnableMutualFederationForChatParticipants
 
 > Applicable: Microsoft Teams
-
-> This parameter is reserved for future use and has no effect and should not be used. Any values set will not be applied or retained before this parameter is released
 
 This parameter specifies whether additional mutual federation requirements are extended across all participants in a group chat. Mutual federation relationships are determined by each user’s effective external access configuration (`AllowedDomains`, `BlockedDomains`, and `ExternalAccessPolicy`). When enabled, this parameter adds participant‑level mutual federation enforcement to group chat.
 
