@@ -26,12 +26,15 @@ Invoke-HoldRemovalAction -Action <HoldRemovalActionType>
  [-Force]
  [-HoldId <String>]
  [-SharePointLocation <String>]
+ [-TenantScope]
  [-WhatIf]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. Only Compliance Administrator can remove hold for Exchange or Sharepoint locations. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. Only Compliance Administrators can remove holds from Exchange or SharePoint locations. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
+
+By default, SharePoint operations apply to site-level holds. Use the TenantScope switch to view or remove tenant-level SharePoint holds. You can use the SharePointLocation parameter with TenantScope to limit results or removal to tenant-level holds that apply to the specified site's workload. If you don't use SharePointLocation, the operation applies across SharePoint, Microsoft 365 Group, and OneDrive for Business workloads.
 
 ## EXAMPLES
 
@@ -56,6 +59,34 @@ Invoke-HoldRemovalAction -Action GetHoldRemovals
 
 This example displays all hold removals that have been done using this cmdlet.
 
+### Example 4
+```powershell
+Invoke-HoldRemovalAction -Action GetHolds -TenantScope -SharePointLocation "https://contoso.sharepoint.com/sites/finance"
+```
+
+This example displays the tenant-level holds that apply to the workload of the specified SharePoint site. Tenant-level holds that exclude the site or its workload aren't returned.
+
+### Example 5
+```powershell
+Invoke-HoldRemovalAction -Action GetHolds -TenantScope
+```
+
+This example displays all applicable tenant-level holds across SharePoint, Microsoft 365 Group, and OneDrive for Business workloads.
+
+### Example 6
+```powershell
+Invoke-HoldRemovalAction -Action RemoveHold -TenantScope -SharePointLocation "https://contoso-my.sharepoint.com/personal/adelev_contoso_onmicrosoft_com" -HoldId "ecbf89df-74fc-444a-a2dc-c0756c7d3503"
+```
+
+This example removes the specified tenant-level hold if it applies to the OneDrive for Business site and the associated policy is no longer active.
+
+### Example 7
+```powershell
+Invoke-HoldRemovalAction -Action RemoveHold -TenantScope -HoldId "ecbf89df-74fc-444a-a2dc-c0756c7d3503"
+```
+
+This example removes the specified tenant-level hold if the associated policy no longer exists. The removal is included in the results of the GetHoldRemovals action.
+
 ## PARAMETERS
 
 ### -Action
@@ -65,8 +96,8 @@ This example displays all hold removals that have been done using this cmdlet.
 The Action parameter specifies the mode that the cmdlet operates in. Valid values are:
 
 - GetHoldRemovals: Shows all hold removals that were done using this cmdlet.
-- GetHolds: Shows holds on the specified mailbox (the ExchangeLocation parameter) or SharePoint site (the SharePointLocation parameter).
-- RemoveHold: Removes the specified hold (the HoldId parameter) from the specified mailbox (the ExchangeLocation parameter) or SharePoint site (the SharePointLocation parameter).
+- GetHolds: Shows holds on the specified mailbox (the ExchangeLocation parameter) or SharePoint site (the SharePointLocation parameter). When you use the TenantScope switch, this value shows tenant-level SharePoint holds.
+- RemoveHold: Removes the specified hold (the HoldId parameter) from the specified mailbox (the ExchangeLocation parameter) or SharePoint site (the SharePointLocation parameter). When you use the TenantScope switch, this value removes a tenant-level SharePoint hold.
 
 ```yaml
 Type: HoldRemovalActionType
@@ -109,6 +140,8 @@ The ExchangeLocation parameter specifies the email address of the mailbox that c
 
 This parameter is required when you use the value GetHolds or RemoveHold for the Action parameter.
 
+You can't use this parameter with the TenantScope switch.
+
 ```yaml
 Type: String
 Parameter Sets: (All)
@@ -128,6 +161,8 @@ Accept wildcard characters: False
 The Force switch hides warning or confirmation messages. You don't need to specify a value with this switch.
 
 You can use this switch to force remove the hold even when the policy is active. Instead, you should remove the hold from the case hold policy.
+
+You can't use this switch with the TenantScope switch. To remove a tenant-level hold, the associated policy must no longer be active.
 
 ```yaml
 Type: SwitchParameter
@@ -173,6 +208,30 @@ This parameter is required when you use the value GetHolds or RemoveHold for the
 Type: String
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -TenantScope
+
+> Applicable: Security & Compliance
+
+The TenantScope parameter specifies that the cmdlet operates on tenant-level SharePoint holds instead of site-level holds.
+
+You can't use this parameter with the ExchangeLocation or Force parameters.
+
+For the RemoveHold action, the cmdlet can't remove an active, nonexistent, excluded, or inapplicable tenant-level hold. Successful removals are available through the GetHoldRemovals action.
+
+When SharePointLocation is specified, the cmdlet returns or removes only tenant-level holds that apply to the specified site's workload. Tenant-level holds that exclude the site or its workload aren't returned and can't be removed. When SharePointLocation isn't specified, the cmdlet operates on applicable tenant-level holds across SharePoint, Microsoft 365 Group, and OneDrive for Business workloads.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
