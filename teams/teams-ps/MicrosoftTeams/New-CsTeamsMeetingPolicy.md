@@ -1246,15 +1246,21 @@ Accept wildcard characters: False
 
 ### -DisableAudioAnnouncementsForResourceAccounts
 
-Determines whether Teams plays recording announcements in CCaaS/OPS calls. This setting controls all CVA-driven (Conference Voice Announcement) recording announcements across [Azure Communication Services Call Recording](https://learn.microsoft.com/azure/communication-services/concepts/voice-video-calling/call-recording) and Teams convenience recording.
+Determines whether Teams plays recording announcements in Contact Center as a Service (CCaaS) and Teams Phone Extensibility (TPE) calls. This setting controls all Teams-driven recording announcements across [Azure Communication Services Call Recording](https://learn.microsoft.com/azure/communication-services/concepts/voice-video-calling/call-recording) and Teams convenience recording.
+
+To suppress announcements by default across the tenant, set this parameter to `True` in the Global meeting policy. Resource accounts that aren't assigned a custom meeting policy inherit the Global policy. To suppress announcements for a specific resource account, create or update a custom meeting policy with this parameter set to `True`, and then assign the policy to the resource account by using [Grant-CsTeamsMeetingPolicy](/powershell/module/microsoftteams/grant-csteamsmeetingpolicy).
+
+This setting suppresses Teams-driven recording announcements. It doesn't disable recording or announcements played by your application.
 
 > [!NOTE]
 > Microsoft Teams provides participant notifications when recording or transcription is active. If you choose to disable these notifications, you are responsible for ensuring that your contact center solution informs participants in real time in accordance with applicable laws. For full details, see the [Microsoft Teams Terms of Service](https://www.microsoft.com/licensing/terms/productoffering/microsoftteams).
+>
+> This parameter is available in MicrosoftTeams PowerShell module version 7.8.0 and later.
 
 Possible values:
 
 - False: Teams plays all system recording announcements. This is the default value.
-- True: Teams suppresses all announcements and the CCaaS/ISV solution is responsible for compliance notifications.
+- True: Teams suppresses all Teams-driven recording announcements, and the CCaaS or independent software vendor (ISV) solution is responsible for compliance notifications.
 
 ```yaml
 Type: Boolean
