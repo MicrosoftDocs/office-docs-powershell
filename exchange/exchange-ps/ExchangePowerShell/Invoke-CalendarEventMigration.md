@@ -24,22 +24,25 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Invoke-CalendarEventMigration [-Identity] <MailboxIdParameter> -FromWindowsTimeZoneId <string>
- -ToWindowsTimeZoneId <string> [-QueryStartDate <DateTime>] -QueryWindowInDays <int> [-Force] [-PreviewOnly] [-WhatIf] [-Confirm]
+ -ToWindowsTimeZoneId <string> [-QueryStartDate <DateTime>] -QueryWindowInDays <int> [-ExcludeRecurringEvents] [-ExcludeSingleEvents] [-Force] [-PreviewOnly] [-WhatIf] [-Confirm]
 ```
 
 ## DESCRIPTION
 
-When a new time zone is released, affected Outlook users need to update their scheduled events to use the new time zone. The Invoke-CalendarEventMigration cmdlet allows IT administrators to automate the calendar event migration by creating a script that loops through affected users. Invoke-CalendarEventMigration operates on one mailbox at a time and migrates meetings from one time zone to another while keeping the same local time. For example, a meeting at 9 AM Pacific Standard Time is migrated to 9 AM British Columbia Standard Time.
-
-**The initial release supports single instance meetings and appointments only.** Support for recurring meetings and appointments will be delivered in the next version. You can safely rerun the cmdlet when support for recurring events is added.
+When a new time zone is released, affected Outlook users need to update their scheduled events to use the new time zone. The Invoke-CalendarEventMigration cmdlet allows IT administrators to automate the calendar event migration by creating a script that loops through affected users. Invoke-CalendarEventMigration operates on one mailbox at a time and migrates meetings from one time zone to another while keeping the same local time. For example, a meeting at 9 AM Pacific Standard Time is migrated to 9 AM British Columbia Standard Time. The cmdlet also supports migrating recurring meetings (including any exceptions to the normal recurrence pattern).
 
 Only meetings where the mailbox is the organizer are migrated. Meetings where the mailbox is an attendee must be migrated by the organizer, either manually or by running the cmdlet on the organizer's mailbox. Migrated meetings generate a meeting update message for attendees, so their calendars reflect the time zone change.
 
+> [!NOTE]
+> Meeting update messages are subject to [sending and receiving limits in Exchange Online](https://learn.microsoft.com/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits#receiving-and-sending-limits). For large migrations and busy calendars, run the migration in batches and start with a small query window size to stay within service limits.
+
 Only events in the default Calendar folder are migrated. Events in secondary calendars are not migrated.
 
-You can safely rerun after a timeout or when additional features are added.
+You can safely rerun after a timeout.
 
 The cmdlet does not change the mailbox time zone, which is the time zone used to display the calendar and schedule new events. To change the mailbox time zone, use [Set-MailboxRegionalConfiguration](https://learn.microsoft.com/powershell/module/exchangepowershell/set-mailboxregionalconfiguration).
+
+The cmdlet does not change the Working Hours time zone, which is the time zone used for displaying  Working Hours in availability queries and Scheduling Assistant. To change the Working Hours time zone, use [Set-MailboxCalendarConfiguration](https://learn.microsoft.com/powershell/module/exchangepowershell/set-mailboxcalendarconfiguration).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -51,7 +54,7 @@ You need to be assigned permissions before you can run this cmdlet. Although thi
 Invoke-CalendarEventMigration user1@contoso.com -FromWindowsTimeZoneId "Pacific Standard Time" -ToWindowsTimeZoneId "British Columbia Standard Time" -QueryStartDate 2026-11-01 -QueryWindowInDays 365 -Confirm:$false
 ```
 
-This example migrates single instance meetings and appointments on User1's primary calendar from Pacific Standard Time to British Columbia Standard Time. Only events between November 1, 2026 and November 1, 2027 are migrated.
+This example migrates meetings and appointments on User1's primary calendar from Pacific Standard Time to British Columbia Standard Time. Only events between November 1, 2026 and November 1, 2027 are migrated.
 
 ### Example 2
 
@@ -64,6 +67,7 @@ $mailboxes = @(
 
 foreach ($mailbox in $mailboxes) {
   Set-MailboxRegionalConfiguration -Identity $mailbox -TimeZone "British Columbia Standard Time"
+  Set-MailboxCalendarConfiguration -Identity $mailbox -WorkingHoursTimeZone "British Columbia Standard Time"
   Invoke-CalendarEventMigration -Identity $mailbox `
     -FromWindowsTimeZoneId "Pacific Standard Time" `
     -ToWindowsTimeZoneId "British Columbia Standard Time" `
@@ -71,7 +75,7 @@ foreach ($mailbox in $mailboxes) {
 }
 ```
 
-This example migrates affected mailboxes User1, User2, and Shared to British Columbia Standard Time. Each mailbox time zone is updated to British Columbia Standard Time and single instance meetings and appointments are migrated from Pacific Standard Time to British Columbia Standard Time. Only events between November 1, 2026 and November 1, 2027 are migrated.
+This example migrates affected mailboxes User1, User2, and Shared to British Columbia Standard Time. Each mailbox time zone is updated to British Columbia Standard Time. Working Hours are updated to British Columbia Standard Time. Meetings and appointments are migrated from Pacific Standard Time to British Columbia Standard Time. Only events between November 1, 2026 and November 1, 2027 are migrated.
 
 ## PARAMETERS
 
@@ -195,6 +199,48 @@ AcceptedValues: []
 HelpMessage: ''
 ```
 
+### -ExcludeRecurringEvents
+
+When set, recurring events will not be migrated to the new time zone.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+DefaultValue: ''
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: TimeZoneMigration
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
+```
+
+### -ExcludeSingleEvents
+
+When set, single instance events will not be migrated to the new time zone.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+DefaultValue: ''
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: TimeZoneMigration
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
+```
+
 ### -Force
 
 > Applicable: Exchange Online
@@ -208,6 +254,27 @@ SupportsWildcards: false
 Aliases: []
 ParameterSets:
 - Name: TimeZoneMigration
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
+```
+
+### -UseCustomRouting
+
+When set, execution bypasses the proxy server and completes on the target mailbox's server. This is not normally recommended but can be used as a work around in some error cases.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+DefaultValue: ''
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
   Position: Named
   IsRequired: false
   ValueFromPipeline: false
