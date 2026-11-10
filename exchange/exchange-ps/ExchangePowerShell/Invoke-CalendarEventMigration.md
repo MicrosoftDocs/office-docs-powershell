@@ -42,7 +42,7 @@ You can safely rerun after a timeout.
 
 The cmdlet does not change the mailbox time zone, which is the time zone used to display the calendar and schedule new events. To change the mailbox time zone, use [Set-MailboxRegionalConfiguration](https://learn.microsoft.com/powershell/module/exchangepowershell/set-mailboxregionalconfiguration).
 
-The cmdlet does not change the Working Hours time zone, which is the time zone used for displaying  Working Hours in availability queries and Scheduling Assistant. To change the Working Hours time zone, use [Set-MailboxCalendarConfiguration](https://learn.microsoft.com/powershell/module/exchangepowershell/set-mailboxcalendarconfiguration).
+The cmdlet does not change the Working Hours time zone, which is the time zone used for displaying Working Hours in availability queries and Scheduling Assistant. To change the Working Hours time zone, use [Set-MailboxCalendarConfiguration](https://learn.microsoft.com/powershell/module/exchangepowershell/set-mailboxcalendarconfiguration).
 
 You need to be assigned permissions before you can run this cmdlet. Although this topic lists all parameters for the cmdlet, you might not have access to some parameters if they're not included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
