@@ -2361,6 +2361,7 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 ### -SyntheticMediaDetection
 Controls whether synthetic audio/video detection is permitted for meetings organized by users assigned this policy.
 
