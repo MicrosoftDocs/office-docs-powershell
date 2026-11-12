@@ -57,7 +57,7 @@ Example 1 returns the setting overrides configured for the deployment.
 
 ### -Filter
 
-*Applicable: Skype for Business Server Subscription Edition*
+> Applicable: Skype for Business Server Subscription Edition
 
 Enables you to do a wildcard search for setting override settings. Because you can only have a single, global instance of these settings, there is little reason to use the Filter parameter.
 
