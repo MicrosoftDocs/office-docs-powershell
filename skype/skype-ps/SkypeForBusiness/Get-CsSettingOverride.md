@@ -41,13 +41,13 @@ Setting overrides are feature flags that turn individual Skype for Business Serv
 
 The following flags let administrators enable/disable respective features:
 
-**DisableEWSForUserPhoto:** When True, user photos for Exchange Online mailboxes are retrieved through Microsoft Graph instead of Exchange Web Services (EWS). Exchange Server (on-premises) mailboxes continue to use EWS regardless of this setting.
+DisableEWSForUserPhoto: When True, user photos for Exchange Online mailboxes are retrieved through Microsoft Graph instead of Exchange Web Services (EWS). Exchange Server (on-premises) mailboxes continue to use EWS regardless of this setting.
 
-**DisableEWSForConversationHistory:** When True and Microsoft Graph is configured, server-side conversation history for Exchange Online mailboxes uses Microsoft Graph for writing items, reading items, and change-notification subscriptions. When False (the default), new server-side requests use EWS. Exchange Server (on-premises) mailboxes continue to use EWS regardless of this setting.
+DisableEWSForConversationHistory: When True and Microsoft Graph is configured, server-side conversation history for Exchange Online mailboxes uses Microsoft Graph for writing items, reading items, and change-notification subscriptions. When False (the default), new server-side requests use EWS. Exchange Server (on-premises) mailboxes continue to use EWS regardless of this setting.
 
-**DisableUcs:** When True, the unified contact store is retired for all users. Front End servers no longer migrate contact lists to Exchange, and New-CsUserServicesPolicy, Set-CsUserServicesPolicy, and Grant-CsUserServicesPolicy reject any policy where UcsAllowed is True. Invoke-CsUcsRollback remains available.
+DisableUcs: When True, the unified contact store is retired for all users. Front End servers no longer migrate contact lists to Exchange, and New-CsUserServicesPolicy, Set-CsUserServicesPolicy, and Grant-CsUserServicesPolicy reject any policy where UcsAllowed is True. Invoke-CsUcsRollback remains available.
 
-**DisableExchangeArchiving:** When True, new instant messaging sessions are blocked for users whose archiving target is Exchange and whose mailbox is in Exchange Online. Archiving to Exchange Server (on-premises) mailboxes and to SQL Server archiving isn't blocked.
+DisableExchangeArchiving: When True, new instant messaging sessions are blocked for users whose archiving target is Exchange and whose mailbox is in Exchange Online. Archiving to Exchange Server (on-premises) mailboxes and to SQL Server archiving isn't blocked.
 
 The functions carried out by the Get-CsSettingOverride cmdlet are not available in the Skype for Business Server Control Panel.
 
