@@ -102,25 +102,20 @@ Value from remaining arguments: False
 
 Retrieves the setting overrides from the local replica of the Central Management store rather than from the Central Management store itself.
 
-Parameter properties
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
-| **Type:**               | SwitchParameter |
-|-------------------------|-----------------|
-| **Default value:**      | None            |
-| **Supports wildcards:** | False           |
-| **DontShow:**           | False           |
-
-Parameter sets
-
-(All)
-
-|      **Parameter**           |    **Value**   |
-|-------------------------------------------|-------|
-| **Position:**                             | Named |
-| **Mandatory:**                            | False |
-| **Value from pipeline:**                  | False |
-| **Value from pipeline by property name:** | False |
-| **Value from remaining arguments:**       | False |
+Required: False
+Position: Names
+Default value: None
+Supports wildcards: False
+DontShow: False
+Value from pipeline: False
+Value from pipeline by property name: False
+Value from remaining arguments: False
+```
 
 ### Common Parameters
 
