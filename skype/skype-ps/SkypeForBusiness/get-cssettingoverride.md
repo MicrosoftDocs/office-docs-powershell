@@ -74,17 +74,6 @@ Accept wildcard characters: False
 DontShow: False
 ```
 
-Parameter sets
-
-Filter
-
-| **Position:**                             | Named |
-|-------------------------------------------|-------|
-| **Mandatory:**                            | False |
-| **Value from pipeline:**                  | False |
-| **Value from pipeline by property name:** | False |
-| **Value from remaining arguments:**       | False |
-
 ### -Identity
 
 *Applicable: Skype for Business Server Subscription Edition*
