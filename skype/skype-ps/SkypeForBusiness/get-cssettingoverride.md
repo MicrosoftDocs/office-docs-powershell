@@ -69,7 +69,7 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
-Supports wildcards: False
+Supports wildcards: True
 Accept wildcard characters: False
 DontShow: False
 ```
