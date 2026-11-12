@@ -14,7 +14,6 @@ title: Get-CsSettingOverride
 # Get-CsSettingOverride
 
 > [!IMPORTANT]
-
 > Incorrect use of the setting override cmdlets can disrupt Skype for Business Server features for your users. Only change setting overrides as instructed by product documentation or under the direction of Microsoft Customer Service and Support.
 
 Use the Get-CsSettingOverride cmdlet to view the setting overrides (feature flags) that enable or disable individual Skype for Business Server features. This cmdlet was introduced in Skype for Business Server Subscription Edition.
