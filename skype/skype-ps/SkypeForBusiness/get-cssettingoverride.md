@@ -8,10 +8,10 @@ Module Name: SkypeForBusiness
 ms.author: paulkwo
 online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-cssettingoverride
 schema: 2.0.0
-title: Get-CsServerApplication
+title: Get-CsSettingOverride
 ---
 
-# Get-CsServerApplication
+# Get-CsSettingOverride
 
 > [!IMPORTANT]
 
