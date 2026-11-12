@@ -39,16 +39,13 @@ Invoke-ChangeMeetingOrganizer [-Identity] <MailboxIdParameter> [-Subject] <Strin
 ```
 
 ## DESCRIPTION
-This cmdlet changes the organizer of a meeting or meeting series. The change is effective starting from the next instance of the series or from a specified future date. Meeting instances before the effective date remain unchanged in the original organizer's calendar. Meeting instances after the effective date move to the new organizer's calendar, where the new organizer can manage them. The previous organizer isn't included as an attendee on the transferred meeting, but the new organizer can manually re-invite them.
+This cmdlet changes the organizer of a meeting or meeting series. The change is effective starting from the next instance of the series or from a specified future date. Meeting instances before the effective date remain unchanged in the original organizer's calendar. Meeting instances after the effective date move to the new organizer's calendar, where the new organizer can manage them.
 
 Meeting attendees in the same Exchange Online organization don't need to re-RSVP, and the meeting instances on their calendars are silently updated with the new organizer information. Any changes attendees made to local meeting properties, such as Reminder, Category, Show As (Free/Tentative/Busy), and Private, are preserved.
 
 Other meeting attendees, including attendees outside the organization or with mailboxes hosted on-premises in a hybrid deployment, receive a meeting message from the old organizer that ends the meeting series, followed by an invitation message from the new organizer for the new series. More cancellation and invitation messages are sent for each meeting exception (for example, a rescheduled meeting time) after the effective date. External attendees need to re-RSVP and recreate their changes to local meeting properties.
 
 The meeting's properties are transferred to the new organizer's calendar as-is. If the meeting included online meeting information, the new organizer might not have permission to join or manage the existing online meeting, and should manually update the series with new online meeting information. For OneDrive attachments and links, the new organizer might not have permission to access the file, and should manually remove and re-add a copy.
-
-> [!WARNING]
-> For Teams-enabled meetings, changing the meeting organizer doesn't update the organizer of the associated Teams online meeting. The new organizer should manually update the series with new Teams meeting information so they can join and manage the online meeting.
 
 This cmdlet has the following limitations:
 
