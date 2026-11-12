@@ -53,7 +53,7 @@ Get-CsSettingOverride
 
 Example 1 returns the setting overrides configured for the deployment.
 
-## Parameters
+## PARAMETERS
 
 ### -Filter
 
