@@ -32,7 +32,7 @@ Invoke-HoldRemovalAction -Action <HoldRemovalActionType>
 ```
 
 ## DESCRIPTION
-To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. Only Compliance Administrators can remove holds from Exchange or SharePoint locations. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
+To use this cmdlet in Security & Compliance PowerShell, you need to be assigned permissions. Only Compliance Administrator can remove hold for Exchange or Sharepoint locations. For more information, see [Permissions in the Microsoft Purview compliance portal](https://learn.microsoft.com/purview/microsoft-365-compliance-center-permissions).
 
 By default, SharePoint operations apply to site-level holds. Use the TenantScope switch to view or remove tenant-level SharePoint holds or to view tenant-level hold removals. You can use the SharePointLocation parameter with TenantScope to limit results or removal to tenant-level holds that apply to the specified site's workload. If you don't use SharePointLocation, the operation applies across SharePoint, Microsoft 365 Group, and OneDrive for Business workloads.
 
