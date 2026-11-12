@@ -213,64 +213,137 @@ Accept wildcard characters: False
 
 ### -PromptLanguage
 
-The PromptLanguage parameter represents the language that is used to play voicemail prompts.
+The PromptLanguage parameter specifies the language used for voicemail prompts.
 
-The following languages are supported:
+The default value is `en-US`.
 
-- "ar-EG" (Arabic - Egypt)
-- "ar-SA" (Arabic - Saudi Arabia)
-- "bg-BG" (Bulgarian - Bulgaria)
-- "ca-ES" (Catalan - Catalan)
-- "cy-GB" (Welsh - United Kingdom)
-- "cs-CZ" (Czech - Czech Republic)
-- "da-DK" (Danish - Denmark)
-- "de-AT" (German - Austria)
-- "de-CH" (German - Switzerland)
-- "de-DE" (German - Germany)
-- "el-GR" (Greek - Greece)
-- "en-AU" (English - Australia)
-- "en-CA" (English - Canada)
-- "en-GB" (English - United Kingdom)
-- "en-IE" (English - Ireland)
-- "en-IN" (English - India)
-- "en-PH" (English - Philippines)
-- "en-US" (English - United States)
-- "en-ZA" (English - South Africa)
-- "es-ES" (Spanish - Spain)
-- "es-MX" (Spanish - Mexico)
-- "et-EE" (Estonian - Estonia)
-- "fi-FI" (Finnish - Finland)
-- "fr-BE" (French - Belgium)
-- "fr-CA" (French - Canada)
-- "fr-CH" (French - Switzerland)
-- "fr-FR" (French - France)
-- "he-IL" (Hebrew - Israel)
-- "hi-IN" (Hindi - India)
-- "hr-HR" (Croatian - Croatia)
-- "hu-HU" (Hungarian - Hungary)
-- "id-ID" (Indonesian - Indonesia)
-- "it-IT" (Italian - Italy)
-- "ja-JP" (Japanese - Japan)
-- "ko-KR" (Korean - Korea)
-- "lt-LT" (Lithuanian - Lithuania)
-- "lv-LV" (Latvian - Latvia)
-- "nl-BE" (Dutch - Belgium)
-- "nl-NL" (Dutch - Netherlands)
-- "nb-NO" (Norwegian, Bokmål - Norway)
-- "pl-PL" (Polish - Poland)
-- "pt-BR" (Portuguese - Brazil)
-- "pt-PT" (Portuguese - Portugal)
-- "ro-RO" (Romanian - Romania)
-- "ru-RU" (Russian - Russia)
-- "sk-SK" (Slovak - Slovakia)
-- "sl-SI" (Slovenian - Slovenia)
-- "sv-SE" (Swedish - Sweden)
-- "th-TH" (Thai - Thailand)
-- "tr-TR" (Turkish - Türkiye)
-- "vi-VN" (Vietnamese - Viet Nam)
-- "zh-CN" (Chinese - Simplified, PRC)
-- "zh-TW" (Chinese - Traditional, Taiwan)
-- "zh-HK" (Chinese - Traditional, Hong Kong S.A.R.)
+Supported values (115 total):
+
+### -PromptLanguage
+
+The PromptLanguage parameter specifies the language used for voicemail prompts.
+
+The default value is `en-US`.
+
+Supported values:
+
+```csharp
+"ar-EG", // Arabic (Egypt)
+"ar-SA", // Arabic (Saudi Arabia)
+"bg-BG", // Bulgarian (Bulgaria)
+"ca-ES", // Catalan (Catalan)
+"cs-CZ", // Czech (Czech Republic)
+"cy-GB", // Welsh (United Kingdom)
+"da-DK", // Danish (Denmark)
+"de-AT", // German (Austria)
+"de-CH", // German (Switzerland)
+"de-DE", // German (Germany)
+"el-GR", // Greek (Greece)
+"en-AU", // English (Australia)
+"en-CA", // English (Canada)
+"en-GB", // English (United Kingdom)
+"en-IE", // English (Ireland)
+"en-IN", // English (India)
+"en-PH", // English (Philippines)
+"en-US", // English (United States)
+"en-ZA", // English (South Africa)
+"es-ES", // Spanish (Spain)
+"es-MX", // Spanish (Mexico)
+"et-EE", // Estonian (Estonia)
+"fi-FI", // Finnish (Finland)
+"fr-BE", // French (Belgium)
+"fr-CA", // French (Canada)
+"fr-CH", // French (Switzerland)
+"fr-FR", // French (France)
+"he-IL", // Hebrew (Israel)
+"hi-IN", // Hindi (India)
+"hr-HR", // Croatian (Croatia)
+"hu-HU", // Hungarian (Hungary)
+"id-ID", // Indonesian (Indonesia)
+"it-IT", // Italian (Italy)
+"ja-JP", // Japanese (Japan)
+"ko-KR", // Korean (Korea)
+"lt-LT", // Lithuanian (Lithuania)
+"lv-LV", // Latvian (Latvia)
+"nb-NO", // Norwegian, Bokmål (Norway)
+"nl-BE", // Dutch (Belgium)
+"nl-NL", // Dutch (Netherlands)
+"pl-PL", // Polish (Poland)
+"pt-BR", // Portuguese (Brazil)
+"pt-PT", // Portuguese (Portugal)
+"ro-RO", // Romanian (Romania)
+"ru-RU", // Russian (Russia)
+"sk-SK", // Slovak (Slovakia)
+"sl-SI", // Slovenian (Slovenia)
+"sv-SE", // Swedish (Sweden)
+"th-TH", // Thai (Thailand)
+"tr-TR", // Turkish (Turkey)
+"vi-VN", // Vietnamese (Viet Nam)
+"zh-CN", // Chinese (Simplified, PRC)
+"zh-HK", // Chinese (Traditional, Hong Kong S.A.R.)
+"zh-TW", // Chinese (Traditional, Taiwan)
+"af-ZA", // Afrikaans (South Africa)
+"am-ET", // Amharic (Ethiopia)
+"ar-AE", // Arabic (United Arab Emirates)
+"ar-DZ", // Arabic (Algeria)
+"ar-IQ", // Arabic (Iraq)
+"ar-JO", // Arabic (Jordan)
+"ar-KW", // Arabic (Kuwait)
+"ar-LB", // Arabic (Lebanon)
+"ar-MA", // Arabic (Morocco)
+"ar-QA", // Arabic (Qatar)
+"as-IN", // Assamese (India)
+"az-AZ", // Azerbaijani (Azerbaijan)
+"bn-BD", // Bengali (Bangladesh)
+"bn-IN", // Bengali (India)
+"bs-BA", // Bosnian (Bosnia and Herzegovina)
+"en-HK", // English (Hong Kong S.A.R.)
+"en-KE", // English (Kenya)
+"en-NG", // English (Nigeria)
+"en-NZ", // English (New Zealand)
+"en-SG", // English (Singapore)
+"es-AR", // Spanish (Argentina)
+"es-CL", // Spanish (Chile)
+"es-CO", // Spanish (Colombia)
+"es-DO", // Spanish (Dominican Republic)
+"es-EC", // Spanish (Ecuador)
+"es-PE", // Spanish (Peru)
+"es-PR", // Spanish (Puerto Rico)
+"es-US", // Spanish (United States)
+"es-VE", // Spanish (Venezuela)
+"eu-ES", // Basque (Spain)
+"fa-IR", // Persian (Iran)
+"fil-PH", // Filipino (Philippines)
+"ga-IE", // Irish (Ireland)
+"gl-ES", // Galician (Spain)
+"gu-IN", // Gujarati (India)
+"hy-AM", // Armenian (Armenia)
+"is-IS", // Icelandic (Iceland)
+"ka-GE", // Georgian (Georgia)
+"kk-KZ", // Kazakh (Kazakhstan)
+"km-KH", // Khmer (Cambodia)
+"kn-IN", // Kannada (India)
+"lo-LA", // Lao (Laos)
+"mk-MK", // Macedonian (North Macedonia)
+"ml-IN", // Malayalam (India)
+"mr-IN", // Marathi (India)
+"ms-MY", // Malay (Malaysia)
+"mt-MT", // Maltese (Malta)
+"ne-NP", // Nepali (Nepal)
+"or-IN", // Odia (India)
+"pa-IN", // Punjabi (India)
+"sq-AL", // Albanian (Albania)
+"sr-Latn-RS", // Serbian (Latin, Serbia)
+"ta-IN", // Tamil (India)
+"ta-LK", // Tamil (Sri Lanka)
+"ta-MY", // Tamil (Malaysia)
+"ta-SG", // Tamil (Singapore)
+"te-IN", // Telugu (India)
+"uk-UA", // Ukrainian (Ukraine)
+"ur-IN", // Urdu (India)
+"ur-PK", // Urdu (Pakistan)
+"uz-UZ", // Uzbek (Uzbekistan)
+```
 
 ```yaml
 Type: System.String
@@ -279,7 +352,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: en-US
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -334,22 +407,79 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-###  -UrgencyDetectionEnabled 
+### -UrgencyDetectionEnabled
+
+The UrgencyDetectionEnabled parameter specifies whether urgency detection is enabled for voicemail AI triage. If set to $true, time-critical voicemail content can be identified and marked as important.
+
 > [!IMPORTANT]
 > The following configuration parameter is available through the Microsoft Frontier Program. General Availability for this functionality has not been determined at this time.
-tdb
-### -CategoryDetectionEnabled 
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -CategoryDetectionEnabled
+
+The CategoryDetectionEnabled parameter specifies whether category detection is enabled for voicemail AI triage. If set to $true, a category label can be generated from voicemail transcript content.
+
 > [!IMPORTANT]
 > The following configuration parameter is available through the Microsoft Frontier Program. General Availability for this functionality has not been determined at this time.
-tbd
-### -CallToActionDetectionEnabled 
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+### -CallToActionDetectionEnabled
+
+The CallToActionDetectionEnabled parameter specifies whether suggested action detection is enabled for voicemail AI triage. If set to $true, suggested follow-up actions can be generated from voicemail transcript content.
+
 > [!IMPORTANT]
 > The following configuration parameter is available through the Microsoft Frontier Program. General Availability for this functionality has not been determined at this time.
-tbd
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 ### -VoiceToTextSummaryEnabled
+
+The VoiceToTextSummaryEnabled parameter specifies whether summary generation is enabled for voicemail AI triage. If set to $true, a concise summary can be generated from voicemail transcript content.
+
 > [!IMPORTANT]
 > The following configuration parameter is available through the Microsoft Frontier Program. General Availability for this functionality has not been determined at this time.
-tbd
+
+```yaml
+Type: System.Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WhatIf
 
 Describes what would happen if you executed the command without actually executing the command.
