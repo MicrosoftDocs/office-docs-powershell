@@ -62,15 +62,14 @@ Example 1 returns the setting overrides configured for the deployment.
 Enables you to do a wildcard search for setting override settings. Because you can only have a single, global instance of these settings, there is little reason to use the Filter parameter.
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
+Type: String
+Parameter Sets: Filter
 Aliases:
 
 Required: False
 Position: Named
 Default value: None
-Supports wildcards: True
-Accept wildcard characters: False
+Accept wildcard characters: True
 DontShow: False
 ```
 
@@ -83,8 +82,8 @@ Unique Identity of the setting override settings. Because you can only have a si
 -Identity global
 
 ```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
+Type: XdsIdentity
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -108,7 +107,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Names
+Position: Named
 Default value: None
 Supports wildcards: False
 DontShow: False
