@@ -8,34 +8,33 @@ Module Name: SkypeForBusiness
 ms.author: paulkwo
 online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/get-cssettingoverride
 schema: 2.0.0
-title: Get-CsServerApplication
+title: Get-CsSettingOverride
 ---
 
-# Get-CsServerApplication
+# Get-CsSettingOverride
 
-> [!IMPORTANT]
-
-> Incorrect use of the setting override cmdlets can disrupt Skype for Business Server features for your users. Only change setting overrides as instructed by product documentation or under the direction of Microsoft Customer Service and Support.
+## SYNOPSIS
 
 Use the Get-CsSettingOverride cmdlet to view the setting overrides (feature flags) that enable or disable individual Skype for Business Server features. This cmdlet was introduced in Skype for Business Server Subscription Edition.
 
-## Syntax
+## SYNTAX
 
 ### Filter
 
-Get-CsSettingOverride  
-\[-Filter \<String\>\]  
-\[-LocalStore\]  
-\[\<CommonParameters\>\]
+```powershell
+Get-CsSettingOverride [-Filter <String>] [-LocalStore] [<CommonParameters>]
+```
 
 ### Identity
 
-Get-CsSettingOverride  
-\[\[-Identity\] \<XdsIdentity\>\]  
-\[-LocalStore\]  
-\[\<CommonParameters\>\]
+```powershell
+Get-CsSettingOverride [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
+```
 
-## Description
+## DESCRIPTION
+
+> [!IMPORTANT]
+> Incorrect use of the setting override cmdlets can disrupt Skype for Business Server features for your users. Only change setting overrides as instructed by product documentation or under the direction of Microsoft Customer Service and Support.
 
 Setting overrides are feature flags that turn individual Skype for Business Server features or behavior changes on or off. Setting overrides are stored in the Central Management store, apply to every server in the deployment, and persist when you install later cumulative updates. Each flag ships with a default value that preserves the existing behavior, so nothing changes until an administrator modifies the flag by using the Set-CsSettingOverride cmdlet. New flags might be added in future updates.
 
@@ -51,107 +50,90 @@ The following flags let administrators enable/disable respective features:
 
 The functions carried out by the Get-CsSettingOverride cmdlet are not available in the Skype for Business Server Control Panel.
 
-## Examples
+## EXAMPLES
 
 ### Example 1
 
+```powershell
 Get-CsSettingOverride
+```
 
 Example 1 returns the setting overrides configured for the deployment.
 
-## Parameters
+## PARAMETERS
 
 ### -Filter
 
-*Applicable: Skype for Business Server Subscription Edition*
+> Applicable: Skype for Business Server Subscription Edition
 
 Enables you to do a wildcard search for setting override settings. Because you can only have a single, global instance of these settings, there is little reason to use the Filter parameter.
 
-Parameter properties
+```yaml
+Type: String
+Parameter Sets: Filter
+Aliases:
 
-| **Type:**               | String |
-|-------------------------|--------|
-| **Default value:**      | None   |
-| **Supports wildcards:** | False  |
-| **DontShow:**           | False  |
-
-Parameter sets
-
-Filter
-
-| **Position:**                             | Named |
-|-------------------------------------------|-------|
-| **Mandatory:**                            | False |
-| **Value from pipeline:**                  | False |
-| **Value from pipeline by property name:** | False |
-| **Value from remaining arguments:**       | False |
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Identity
 
-*Applicable: Skype for Business Server Subscription Edition*
+> Applicable: Skype for Business Server Subscription Edition
 
 Unique Identity of the setting override settings. Because you can only have a single, global instance of these settings, you do not need to specify an Identity when calling the Get-CsSettingOverride cmdlet. You can, however, use the following syntax to reference the global settings:
 
--Identity global
+`-Identity global`
 
-Parameter properties
+```yaml
+Type: XdsIdentity
+Parameter Sets: Identity
+Aliases:
 
-| **Type:**               | XdsIdentity |
-|-------------------------|-------------|
-| **Default value:**      | None        |
-| **Supports wildcards:** | False       |
-| **DontShow:**           | False       |
-
-Parameter sets
-
-Identity
-
-|      **Parameter**           |    **Value**   |
-|-------------------------------------------|-------|
-| **Position:**                             | 2     |
-| **Mandatory:**                            | False |
-| **Value from pipeline:**                  | False |
-| **Value from pipeline by property name:** | False |
-| **Value from remaining arguments:**       | False |
+Required: False
+Position: 2
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -LocalStore
 
-*Applicable: Skype for Business Server Subscription Edition*
+> Applicable: Skype for Business Server Subscription Edition
 
 Retrieves the setting overrides from the local replica of the Central Management store rather than from the Central Management store itself.
 
-Parameter properties
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
-| **Type:**               | SwitchParameter |
-|-------------------------|-----------------|
-| **Default value:**      | None            |
-| **Supports wildcards:** | False           |
-| **DontShow:**           | False           |
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
-Parameter sets
-
-(All)
-
-|      **Parameter**           |    **Value**   |
-|-------------------------------------------|-------|
-| **Position:**                             | Named |
-| **Mandatory:**                            | False |
-| **Value from pipeline:**                  | False |
-| **Value from pipeline by property name:** | False |
-| **Value from remaining arguments:**       | False |
-
-### Common Parameters
+### CommonParameters
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable, -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## Inputs
+## INPUTS
 
 ### None
 
 The Get-CsSettingOverride cmdlet does not accept pipelined input.
 
-## Outputs
+## OUTPUTS
 
 ### Microsoft.Rtc.Management.WritableConfig.Settings.SettingOverride.SettingOverride
 
 The Get-CsSettingOverride cmdlet returns instances of the Microsoft.Rtc.Management.WritableConfig.Settings.SettingOverride.SettingOverride object.
+
+## NOTES
+
+## RELATED LINKS
