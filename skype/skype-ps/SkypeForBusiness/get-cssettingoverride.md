@@ -88,24 +88,13 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
+Position: 2
 Default value: None
-Supports wildcards: False
-Accept wildcard characters: False
-DontShow: False
+Value from pipeline: False
+Value from pipeline by property name: False
+Value from remaining arguments: False
 ```
 
-Parameter sets
-
-Identity
-
-|      **Parameter**           |    **Value**   |
-|-------------------------------------------|-------|
-| **Position:**                             | 2     |
-| **Mandatory:**                            | False |
-| **Value from pipeline:**                  | False |
-| **Value from pipeline by property name:** | False |
-| **Value from remaining arguments:**       | False |
 
 ### -LocalStore
 
