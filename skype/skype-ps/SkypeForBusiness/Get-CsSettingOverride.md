@@ -69,14 +69,19 @@ Enables you to do a wildcard search for setting override settings. Because you c
 
 ```yaml
 Type: String
-Parameter Sets: Filter
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept wildcard characters: True
-DontShow: False
+DefaultValue: ''
+SupportsWildcards: true
+Aliases: []
+ParameterSets:
+- Name: Filter
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### -Identity
@@ -89,15 +94,19 @@ Unique Identity of the setting override settings. Because you can only have a si
 
 ```yaml
 Type: XdsIdentity
-Parameter Sets: Identity
-Aliases:
-
-Required: False
-Position: 2
-Default value: None
-Value from pipeline: False
-Value from pipeline by property name: False
-Value from remaining arguments: False
+DefaultValue: ''
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: Identity
+  Position: 2
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 
@@ -109,17 +118,19 @@ Retrieves the setting overrides from the local replica of the Central Management
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Supports wildcards: False
-DontShow: False
-Value from pipeline: False
-Value from pipeline by property name: False
-Value from remaining arguments: False
+DefaultValue: ''
+SupportsWildcards: false
+Aliases: []
+ParameterSets:
+- Name: (All)
+  Position: Named
+  IsRequired: false
+  ValueFromPipeline: false
+  ValueFromPipelineByPropertyName: false
+  ValueFromRemainingArguments: false
+DontShow: false
+AcceptedValues: []
+HelpMessage: ''
 ```
 
 ### CommonParameters
