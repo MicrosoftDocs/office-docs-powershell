@@ -22,10 +22,16 @@ Use the Get-CsSettingOverride cmdlet to view the setting overrides (feature flag
 
 ## SYNTAX
 
-```
-Get-CsSettingOverride  [-Filter <String>]  [-LocalStore]  [<CommonParameters>]
+### Filter
 
-Get-CsSettingOverride  [[-Identity] <XdsIdentity>]  [-LocalStore]  [<CommonParameters>]
+```
+Get-CsSettingOverride [-Filter <String>] [-LocalStore] [<CommonParameters>]
+```
+
+### Identity
+
+```
+Get-CsSettingOverride [[-Identity] <XdsIdentity>] [-LocalStore] [<CommonParameters>]
 ```
 
 
