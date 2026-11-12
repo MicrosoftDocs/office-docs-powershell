@@ -76,7 +76,7 @@ DontShow: False
 
 ### -Identity
 
-*Applicable: Skype for Business Server Subscription Edition*
+> Applicable: Skype for Business Server Subscription Edition
 
 Unique Identity of the setting override settings. Because you can only have a single, global instance of these settings, you do not need to specify an Identity when calling the Get-CsSettingOverride cmdlet. You can, however, use the following syntax to reference the global settings:
 
@@ -104,7 +104,7 @@ Identity
 
 ### -LocalStore
 
-*Applicable: Skype for Business Server Subscription Edition*
+> Applicable: Skype for Business Server Subscription Edition
 
 Retrieves the setting overrides from the local replica of the Central Management store rather than from the Central Management store itself.
 
