@@ -127,7 +127,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 The Get-CsSettingOverride cmdlet does not accept pipelined input.
 
-## OUTPUT
+## OUTPUTS
 
 ### Microsoft.Rtc.Management.WritableConfig.Settings.SettingOverride.SettingOverride
 
