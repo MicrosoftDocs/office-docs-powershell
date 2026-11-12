@@ -82,13 +82,18 @@ Unique Identity of the setting override settings. Because you can only have a si
 
 -Identity global
 
-Parameter properties
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
-| **Type:**               | XdsIdentity |
-|-------------------------|-------------|
-| **Default value:**      | None        |
-| **Supports wildcards:** | False       |
-| **DontShow:**           | False       |
+Required: False
+Position: Named
+Default value: None
+Supports wildcards: False
+Accept wildcard characters: False
+DontShow: False
+```
 
 Parameter sets
 
