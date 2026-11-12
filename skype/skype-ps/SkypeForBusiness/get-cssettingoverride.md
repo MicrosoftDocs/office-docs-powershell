@@ -61,13 +61,18 @@ Example 1 returns the setting overrides configured for the deployment.
 
 Enables you to do a wildcard search for setting override settings. Because you can only have a single, global instance of these settings, there is little reason to use the Filter parameter.
 
-Parameter properties
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
 
-| **Type:**               | String |
-|-------------------------|--------|
-| **Default value:**      | None   |
-| **Supports wildcards:** | False  |
-| **DontShow:**           | False  |
+Required: False
+Position: Named
+Default value: None
+Supports wildcards: False
+Accept wildcard characters: False
+DontShow: False
+```
 
 Parameter sets
 
