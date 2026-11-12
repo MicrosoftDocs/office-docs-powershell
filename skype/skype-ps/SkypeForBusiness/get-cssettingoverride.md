@@ -117,17 +117,17 @@ Value from pipeline by property name: False
 Value from remaining arguments: False
 ```
 
-### Common Parameters
+### COMMON PARAMETERS
 
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutBuffer, -OutVariable, -PipelineVariable, -ProgressAction, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
-## Inputs
+## INPUTS
 
 ### None
 
 The Get-CsSettingOverride cmdlet does not accept pipelined input.
 
-## Outputs
+## OUTPUT
 
 ### Microsoft.Rtc.Management.WritableConfig.Settings.SettingOverride.SettingOverride
 
