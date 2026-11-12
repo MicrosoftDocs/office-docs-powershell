@@ -29,7 +29,7 @@ Get-CsSettingOverride  [[-Identity] <XdsIdentity>]  [-LocalStore]  [<CommonParam
 ```
 
 
-## Description
+## DESCRIPTION
 
 Setting overrides are feature flags that turn individual Skype for Business Server features or behavior changes on or off. Setting overrides are stored in the Central Management store, apply to every server in the deployment, and persist when you install later cumulative updates. Each flag ships with a default value that preserves the existing behavior, so nothing changes until an administrator modifies the flag by using the Set-CsSettingOverride cmdlet. New flags might be added in future updates.
 
