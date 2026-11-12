@@ -34,6 +34,7 @@ Set-CsOnlinePSTNGateway [[-Identity] <string>]
  [-IPAddressVersion <string>]
  [-InboundPstnNumberTranslationRules <Object>]
  [-InboundTeamsNumberTranslationRules <Object>]
+ [-InviteWithReplaces <string>]
  [-MaxConcurrentSessions <int>]
  [-MediaBypass <boolean>]
  [-MediaRelayRoutingLocationOverride <string>]
@@ -304,6 +305,23 @@ Accept wildcard characters: False
 
 ### -IPAddressVersion
 Possible values are "IPv4" and '"Pv6". When "IPv6" is set, the SBC must use IPv6 for both signaling and media. **Note: IPv6 is supported only for non-media bypass scenarios.**
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -InviteWithReplaces
+
+> Applicable: Microsoft Teams
+
+Controls how the service handles SIP INVITE requests containing a Replaces header on this trunk. Accepted values are `OptimisticallySupported`, `ForceUnsupported`, and `ForceSupported`. `OptimisticallySupported` follows the SBC's advertised `Supported` header for SIP Replaces (RFC 3891) and optimistically sends an INVITE request containing a Replaces header when the SBC does not advertise it. `ForceUnsupported` ignores the advertisement and does not send INVITE requests containing a Replaces header, while `ForceSupported` ignores the advertisement and always treats Replaces as supported. If this parameter is omitted, the existing value is preserved.
 
 ```yaml
 Type: String
