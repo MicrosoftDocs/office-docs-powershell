@@ -500,6 +500,8 @@ The BlockAccess parameter specifies an action for the DLP rule that blocks acces
 - $true: Blocks further access to the source item that matched the rule. The owner, author, and site owner can still access the item.
 - $false: Allows access to the source item that matched the rule. This value is the default.
 
+You can't use this parameter in a rule of a DLP policy for Microsoft 365 Copilot and Copilot Chat. To restrict what Copilot does with matching content in that policy, use the RestrictAccess or RestrictWebGrounding parameters.
+
 ```yaml
 Type: Boolean
 Parameter Sets: (All)
@@ -3213,7 +3215,18 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-{{ Fill RestrictAccess Description }}
+The RestrictAccess parameter specifies an action for the DLP rule that restricts an activity on content that matches the rule. This parameter uses the following syntax: `@(@{setting="<Setting>"; value="<Value>"},@{setting="<Setting>"; value="<Value>"},...)`.
+
+The available values for `<Value>` are: Audit, Block, None, or Warn.
+
+The settings and values that you can use depend on the locations of the DLP policy. In a DLP policy for Microsoft 365 Copilot and Copilot Chat (the Locations parameter specifies the location `470f2276-e011-4e9d-a6ec-20768be3a4b0` and the EnforcementPlanes parameter specifies the value CopilotExperiences), the only supported value for `<Value>` is Block, and the following settings are available:
+
+- `@{setting="UploadText"; value="Block"}`: Copilot doesn't process prompts that contain the sensitive information types that are specified by the ContentContainsSensitiveInformation parameter. In a rule that uses sensitive information types, this setting is the only one that's supported for this location.
+- `@{setting="ExcludeContentProcessing"; value="Block"}`: Copilot doesn't process the content of files and emails that have the sensitivity labels that are specified in the rule. For an example, see Example 4 in [New-DlpCompliancePolicy](https://learn.microsoft.com/powershell/module/exchangepowershell/new-dlpcompliancepolicy).
+
+For a DLP policy that applies to an app that's registered in Microsoft Entra ID (the EnforcementPlanes parameter value Application), see Example 4 in [New-DlpComplianceRule](https://learn.microsoft.com/powershell/module/exchangepowershell/new-dlpcompliancerule).
+
+For more information about DLP for Microsoft 365 Copilot, see [Learn about using Microsoft Purview Data Loss Prevention to protect interactions with Microsoft 365 Copilot, Copilot Chat, and Cowork](https://learn.microsoft.com/purview/dlp-microsoft365-copilot-location-learn-about).
 
 ```yaml
 Type: System.Collections.Hashtable[]
