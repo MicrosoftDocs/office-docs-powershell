@@ -193,6 +193,23 @@ Set-CsTeamsMeetingPolicy -Identity NonEVNetworkRoamingPolicy -AllowNetworkConfig
 In Example 3, the Set-CsTeamsMeetingPolicy cmdlet is used to update an existing meeting policy with the Identity NonEVNetworkRoamingPolicy.
 This policy will use all the existing values except one: AllowNetworkConfigurationSettingsLookup; in this example, we will fetch network roaming policy for the non-EV user with NonEVNetworkRoamingPolicy based on his current network location.
 
+### EXAMPLE 4
+
+```powershell
+Set-CsTeamsMeetingPolicy -Identity "SyntheticDetectionPolicy" -SyntheticMediaDetection Enabled -SyntheticMediaDetectionAppId "<supported-provider-app-id>"
+```
+
+In Example 4, the Set-CsTeamsMeetingPolicy cmdlet updates an existing meeting policy to permit synthetic audio/video detection using a configured third-party provider for meetings organized by users assigned this policy, when the feature and provider are available.
+Replace `<supported-provider-app-id>` with the Teams App ID of a supported certified detection provider, not an arbitrary Microsoft Entra application ID or bot ID.
+
+### EXAMPLE 5
+
+```powershell
+Set-CsTeamsMeetingPolicy -Identity "SyntheticDetectionPolicy" -SyntheticMediaDetection Disabled
+```
+
+In Example 5, the Set-CsTeamsMeetingPolicy cmdlet disables synthetic audio/video detection for meetings organized by users assigned this policy, regardless of the configured detection provider. The SyntheticMediaDetectionAppId value is unchanged.
+
 ## PARAMETERS
 
 ### -AIInterpreter
@@ -2346,15 +2363,12 @@ Accept wildcard characters: False
 ```
 
 ### -SyntheticMediaDetection
-Controls whether synthetic audio/video detection is enabled for the user's meetings. When Disabled, no detection occurs regardless of other property values.
+Controls whether synthetic audio/video detection is permitted for meetings organized by users assigned this policy.
 
 Possible values are:
 
-- **Enabled**: Synthetic media detection is active for the user's meetings.
-- **Disabled**: Synthetic media detection is inactive; all other detection properties are ignored.
-
-> [!NOTE]
-> This feature has not been fully released yet, so the setting will have no effect.
+- **Enabled**: Permits synthetic media detection when a configured detection provider is available. This is the default value. To configure a third-party provider, also set the SyntheticMediaDetectionAppId parameter.
+- **Disabled**: Disables synthetic media detection regardless of the configured provider or other detection property values.
 
 ```yaml
 Type: String
@@ -2369,10 +2383,12 @@ Accept wildcard characters: False
 ```
 
 ### -SyntheticMediaDetectionAppId
-The Teams App ID (GUID) of the registered detection bot to use for synthetic media analysis. The zero GUID (00000000-0000-0000-0000-000000000000) represents the platform default: resolves to no provider when 1P is not available, or Microsoft Detection when 1P is available.
+Specifies the Teams App ID (GUID) of the detection provider to use for synthetic audio/video analysis. For third-party detection, use only the Teams App ID of a supported certified detection provider and set SyntheticMediaDetection to Enabled.
 
-> [!NOTE]
-> This feature has not been fully released yet, so the setting will have no effect.
+The default value, the zero GUID (00000000-0000-0000-0000-000000000000), selects no provider when Microsoft Detection is unavailable, or Microsoft Detection when it is available. It does not select a third-party provider.
+
+> [!IMPORTANT]
+> Successfully saving the policy does not guarantee that the App ID identifies a supported provider or that the detection bot can join meetings. An incorrect or unsupported App ID can prevent the detection bot from joining eligible meetings.
 
 ```yaml
 Type: Guid
