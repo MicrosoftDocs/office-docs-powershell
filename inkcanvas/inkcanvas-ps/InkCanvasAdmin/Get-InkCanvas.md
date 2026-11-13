@@ -8,6 +8,7 @@ schema: 2.0.0
 author: peterhu
 ms.author: peterhu
 ms.reviewer:
+ms.date: 06/03/2026
 ---
 
 # Get-InkCanvas

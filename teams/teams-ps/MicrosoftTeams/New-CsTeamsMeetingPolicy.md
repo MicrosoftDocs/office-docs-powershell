@@ -99,6 +99,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-LiveStreamingMode <String>]
  [-LobbyChat <string>]
  [-MediaBitRateKb <UInt32>]
+ [-MeetingAI <String>]
  [-MeetingChatEnabledType <String>]
  [-MeetingInviteLanguages <String>]
  [-NewMeetingRecordingExpirationDays <Int32>]
@@ -117,6 +118,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-StreamingAttendeeMode <String>]
  [-TeamsCameraFarEndPTZMode <String>]
  [-Tenant <Guid>]
+ [-TranscriptionWithMeetingAI <String>]
  [-UsersCanAdmitFromLobby <String>]
  [-VideoFiltersMode <String>]
  [-VoiceIsolation <String>]
@@ -133,6 +135,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-EnableRecordingAndTranscriptionCustomMessage <Boolean>]
  [-RecordingAndTranscriptionCustomMessageIdentifier <Guid>]
  [-AllowMeetingKnowledgeGeneration <Boolean>]
+ [-KnowledgeGenerationMeetingTypes <String>]
  [-MeetingKnowledgeExpirationDays <Int32>]
  [-ConditionalAccessAttendeeVerification <Boolean>]
  [-EnablePreMeetingConsent <Boolean>]
@@ -170,6 +173,15 @@ New-CsTeamsMeetingPolicy -Identity HrMeetingPolicy -AutoAdmittedUsers "Everyone"
 In Example 2, the New-CsTeamsMeetingPolicy cmdlet is used to create a meeting policy with the Identity HrMeetingPolicy.
 In this example two different property values are configured: AutoAdmittedUsers is set to Everyone and AllowMeetNow is set to False.
 All other policy properties will use the default values.
+
+### EXAMPLE 3
+
+```powershell
+New-CsTeamsMeetingPolicy -Identity "SyntheticDetectionPolicy" -SyntheticMediaDetection Enabled -SyntheticMediaDetectionAppId "<supported-provider-app-id>"
+```
+
+In Example 3, the New-CsTeamsMeetingPolicy cmdlet creates a meeting policy that permits synthetic audio/video detection using a configured third-party provider for meetings organized by users assigned this policy, when the feature and provider are available.
+Replace `<supported-provider-app-id>` with the Teams App ID of a supported certified detection provider, not an arbitrary Microsoft Entra application ID or bot ID.
 
 ## PARAMETERS
 
@@ -1243,15 +1255,21 @@ Accept wildcard characters: False
 
 ### -DisableAudioAnnouncementsForResourceAccounts
 
-Determines whether Teams plays recording announcements in CCaaS/OPS calls. This setting controls all CVA-driven (Conference Voice Announcement) recording announcements across [Azure Communication Services Call Recording](https://learn.microsoft.com/azure/communication-services/concepts/voice-video-calling/call-recording) and Teams convenience recording.
+Determines whether Teams plays recording announcements in Contact Center as a Service (CCaaS) and Teams Phone Extensibility (TPE) calls. This setting controls all Teams-driven recording announcements across [Azure Communication Services Call Recording](https://learn.microsoft.com/azure/communication-services/concepts/voice-video-calling/call-recording) and Teams convenience recording.
+
+To suppress announcements by default across the tenant, set this parameter to `True` in the Global meeting policy. Resource accounts that aren't assigned a custom meeting policy inherit the Global policy. To suppress announcements for a specific resource account, create or update a custom meeting policy with this parameter set to `True`, and then assign the policy to the resource account by using [Grant-CsTeamsMeetingPolicy](/powershell/module/microsoftteams/grant-csteamsmeetingpolicy).
+
+This setting suppresses Teams-driven recording announcements. It doesn't disable recording or announcements played by your application.
 
 > [!NOTE]
 > Microsoft Teams provides participant notifications when recording or transcription is active. If you choose to disable these notifications, you are responsible for ensuring that your contact center solution informs participants in real time in accordance with applicable laws. For full details, see the [Microsoft Teams Terms of Service](https://www.microsoft.com/licensing/terms/productoffering/microsoftteams).
+>
+> This parameter is available in MicrosoftTeams PowerShell module version 7.8.0 and later.
 
 Possible values:
 
 - False: Teams plays all system recording announcements. This is the default value.
-- True: Teams suppresses all announcements and the CCaaS/ISV solution is responsible for compliance notifications.
+- True: Teams suppresses all Teams-driven recording announcements, and the CCaaS or independent software vendor (ISV) solution is responsible for compliance notifications.
 
 ```yaml
 Type: Boolean
@@ -1452,6 +1470,30 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -KnowledgeGenerationMeetingTypes
+
+Specifies which meetings organized by users assigned this policy can generate an AI-generated meeting knowledge file.
+
+Possible values are:
+
+- **AllMeetings**: Allow generation for all meetings, including meetings without transcription.
+- **TranscribedMeetings**: Allow generation only for meetings with transcription.
+- **None**: Do not generate meeting knowledge files.
+
+This setting applies only when both `AllowIntelligentRecap` and `AllowMeetingKnowledgeGeneration` are set to `$True`. If either parameter is set to `$False`, meeting knowledge files aren't generated, regardless of the `KnowledgeGenerationMeetingTypes` value.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -LiveCaptionsEnabledType
 Determines whether real-time captions are available for the user in Teams meetings. Set this to DisabledUserOverride to allow user to turn on live captions. Set this to Disabled to prohibit.
 
@@ -1541,6 +1583,33 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -MeetingAI
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+Determines whether AI (Copilot, Facilitator, or Intelligent Recap) can be used in meetings.
+
+This parameter must be used together with -TranscriptionWithMeetingAI.
+
+Possible values are:
+
+- EnabledAllowOrganizerOverride
+- DisabledAllowOrganizerOverride
+- DisabledNoOverride
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: EnabledAllowOrganizerOverride
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1956,6 +2025,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -TranscriptionWithMeetingAI
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+Determines whether transcription is turned on along with Copilot. Transcription allows Copilot to continue to use meeting data for questions after the meeting ends.
+
+This parameter must be used together with -MeetingAI.
+
+Possible values are:
+
+- EnabledAllowOrganizerOverride
+- DisabledAllowOrganizerOverride
+- EnabledNoOverride
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: EnabledNoOverride
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UsersCanAdmitFromLobby
 This policy controls who can admit from the lobby.
 
@@ -2267,15 +2362,12 @@ Accept wildcard characters: False
 ```
 
 ### -SyntheticMediaDetection
-Controls whether synthetic audio/video detection is enabled for the user's meetings. When Disabled, no detection occurs regardless of other property values.
+Controls whether synthetic audio/video detection is permitted for meetings organized by users assigned this policy.
 
 Possible values are:
 
-- **Enabled**: Synthetic media detection is active for the user's meetings.
-- **Disabled**: Synthetic media detection is inactive; all other detection properties are ignored.
-
-> [!NOTE]
-> This feature has not been fully released yet, so the setting will have no effect.
+- **Enabled**: Permits synthetic media detection when a configured detection provider is available. This is the default value. To configure a third-party provider, also set the SyntheticMediaDetectionAppId parameter.
+- **Disabled**: Disables synthetic media detection regardless of the configured provider or other detection property values.
 
 ```yaml
 Type: String
@@ -2290,10 +2382,12 @@ Accept wildcard characters: False
 ```
 
 ### -SyntheticMediaDetectionAppId
-The Teams App ID (GUID) of the registered detection bot to use for synthetic media analysis. The zero GUID (00000000-0000-0000-0000-000000000000) represents the platform default: resolves to no provider when 1P is not available, or Microsoft Detection when 1P is available.
+Specifies the Teams App ID (GUID) of the detection provider to use for synthetic audio/video analysis. For third-party detection, use only the Teams App ID of a supported certified detection provider and set SyntheticMediaDetection to Enabled.
 
-> [!NOTE]
-> This feature has not been fully released yet, so the setting will have no effect.
+The default value, the zero GUID (00000000-0000-0000-0000-000000000000), selects no provider when Microsoft Detection is unavailable, or Microsoft Detection when it is available. It does not select a third-party provider.
+
+> [!IMPORTANT]
+> Successfully saving the policy does not guarantee that the App ID identifies a supported provider or that the detection bot can join meetings. An incorrect or unsupported App ID can prevent the detection bot from joining eligible meetings.
 
 ```yaml
 Type: Guid
@@ -2306,6 +2400,7 @@ Default value: 00000000-0000-0000-0000-000000000000
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
 
 ### -AllowMultipleScreenshare
 This setting enables Tenant Admins to turn on the Multiple Screenshare feature. It controls whether Multiple Screenshare is on or off for the entire tenant or for a particular user.
@@ -2354,7 +2449,9 @@ Accept wildcard characters: False
 ```
 
 ### -RecordingAndTranscriptionAudioNotification
-Policy to control whether audio notifications will be played when recording or transcription starts/stops for applied users/groups.
+Policy to control whether audio notifications will be played when recording or transcription starts/stops for applied users/groups. This policy applies only to Teams client users in VoIP calls. This policy does not control audio announcements for PSTN users or for Teams client users in one-to-one calls between Teams and PSTN, where audio announcements are enabled by default in both scenarios.
+
+Supported clients include Windows and macOS desktop, web, Microsoft Teams Rooms (MTR), Android, iOS, and VDI 2.0. VDI 1.0 is not supported.
 
 Possible values are:
 
