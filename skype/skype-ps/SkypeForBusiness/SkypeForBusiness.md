@@ -795,6 +795,7 @@ The following cmdlet references are for Skype for Business Server Management She
 ### [Set-CsRgsWorkflow](Set-CsRgsWorkflow.md)
 ### [Set-CsRoutingConfiguration](Set-CsRoutingConfiguration.md)
 ### [Set-CsServerApplication](Set-CsServerApplication.md)
+### [Set-CsSettingOverride](Set-CsSettingOverride.md)
 ### [Set-CsSimpleUrlConfiguration](Set-CsSimpleUrlConfiguration.md)
 ### [Set-CsSipDomain](Set-CsSipDomain.md)
 ### [Set-CsSipResponseCodeTranslationRule](Set-CsSipResponseCodeTranslationRule.md)
