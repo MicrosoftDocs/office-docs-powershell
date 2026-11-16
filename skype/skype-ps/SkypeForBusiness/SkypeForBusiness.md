@@ -216,6 +216,7 @@ The following cmdlet references are for Skype for Business Server Management She
 ### [Get-CsServerPatchVersion](Get-CsServerPatchVersion.md)
 ### [Get-CsServerVersion](Get-CsServerVersion.md)
 ### [Get-CsService](Get-CsService.md)
+### [Get-CsSettingOverride](Get-CsSettingOverride.md)
 ### [Get-CsSimpleUrlConfiguration](Get-CsSimpleUrlConfiguration.md)
 ### [Get-CsSipDomain](Get-CsSipDomain.md)
 ### [Get-CsSipResponseCodeTranslationRule](Get-CsSipResponseCodeTranslationRule.md)
