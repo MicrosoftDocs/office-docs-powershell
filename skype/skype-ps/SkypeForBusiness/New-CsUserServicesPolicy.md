@@ -1,11 +1,11 @@
 ---
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
-author: hirenshah1
+author: paulkwo-msft2
 external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
-manager: rogupta
+manager: paulkwo
 Module Name: SkypeForBusiness
-ms.author: hirshah
+ms.author: paulkwo
 online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/new-csuserservicespolicy
 schema: 2.0.0
 title: New-CsUserServicesPolicy
