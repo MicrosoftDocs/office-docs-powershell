@@ -9,6 +9,7 @@ ms.author: paulkwo
 online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/new-csuserservicespolicy
 schema: 2.0.0
 title: New-CsUserServicesPolicy
+ms.date: 11/16/2026
 ---
 
 # New-CsUserServicesPolicy
