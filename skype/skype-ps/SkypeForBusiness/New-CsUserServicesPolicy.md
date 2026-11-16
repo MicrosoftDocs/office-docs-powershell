@@ -14,11 +14,16 @@ title: New-CsUserServicesPolicy
 # New-CsUserServicesPolicy
 
 ## SYNOPSIS
-Creates a new User Services policy.
-User Services policies determine whether or not a user's contacts are stored in Skype for Business Server or in the Unified Contact Store.
-The Unified Contact Store provides a way for users to maintain a single set of contacts that can be accessed using Skype for Business, Microsoft Outlook and/or Microsoft Outlook Web Access.
-This cmdlet was introduced in Lync Server 2013.
 
+> [!IMPORTANT]
+
+> Unified Contact Store (UCS) is retired in Skype for Business Server Subscription Edition CU1 HF3. When UCS is disabled (Set-CsSettingOverride -Identity Global -DisableUcs $True), the following cmdlet is impacted: 
+
+> New-CsUserServicesPolicy fails if the new policy has UcsAllowed set to True. Because UcsAllowed defaults to True, you must include -UcsAllowed $False when you create a user services policy. Creating a policy with -UcsAllowed $False is still allowed. 
+
+> Error returned in case of -UcsAllowed $True: Unified Contact Store (UCS) is deprecated and can no longer be enabled. UcsAllowed cannot be set to True. To move existing users' contacts from the Unified Contact Store back to Skype for Business Server, run the Invoke-CsUcsRollback cmdlet. 
+
+Creates a new User Services policy. User Services policies determine whether or not a user's contacts are stored in Skype for Business Server or in the Unified Contact Store. The Unified Contact Store provides a way for users to maintain a single set of contacts that can be accessed using Skype for Business, Microsoft Outlook and/or Microsoft Outlook Web Access. This cmdlet was introduced in Lync Server 2013.
 
 ## SYNTAX
 
