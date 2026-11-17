@@ -1,14 +1,15 @@
 ---
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
-author: hirenshah1
+author: paulkwo-msft2
 external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
-manager: rogupta
+manager: paulkwo
 Module Name: SkypeForBusiness
-ms.author: hirshah
+ms.author: paulkwo
 online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/new-csoauthserver
 schema: 2.0.0
 title: New-CsOAuthServer
+ms.date: 11/16/2026
 ---
 
 # New-CsOAuthServer
@@ -19,14 +20,12 @@ Creates a new Open Authorization (OAuth) server for use by the organization.
 OAuth servers, also known as security token servers, issue security tokens used in server-to-server authentication and authorization.
 This cmdlet was introduced in Lync Server 2013.
 
-
-
 ## SYNTAX
 
 ```
 New-CsOAuthServer [[-Identity] <XdsGlobalRelativeIdentity>] -MetadataUrl <String> [-Confirm] [-Force]
  [-InMemory] [-Realm <String>] [-Tenant <Guid>] [-WhatIf] [-AcceptSecurityIdentifierInformation <Boolean>]
- [-AuthorizationUriOverride <String>] [-Type <String>] [<CommonParameters>]
+ [-AuthorizationUriOverride <String>] [-GraphEndpoint <String>] [-Type <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -41,8 +40,6 @@ These token servers can be managed by using the CsOAuthServer cmdlets.
 
 Skype for Business Server Control Panel: The functions carried out by the New-CsOAuthServer cmdlet are not available in the Skype for Business Server Control Panel.
 
-
-
 ## EXAMPLES
 
 ### Example 1
@@ -53,7 +50,6 @@ New-CsOAuthServer -Identity "Office 365" -MetadataUrl "https://sts.office365.mic
 
 Example 1 creates a new OAuth Server named "Office 365".
 The new server uses the metadata URL `https://sts.office365.microsoft.com/metadata/json/1`.
-
 
 ## PARAMETERS
 
@@ -103,6 +99,28 @@ Suppresses the display of any non-fatal error message that might occur when runn
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GraphEndpoint 
+
+> Applicable: Skype for Business Server Subscription Edition
+
+Microsoft Graph service root that Skype for Business Server uses to reach Exchange Online mailboxes (for example, for user photos and conversation history). For example: 
+
+-GraphEndpoint 'https://graph.microsoft.us' 
+
+The value must be an absolute HTTPS URL. If your tenant is in a sovereign cloud or in an air-gapped environment, set this parameter to the Microsoft Graph endpoint for that cloud. For the public (worldwide) cloud, setting this parameter is not mandatory. 
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 
