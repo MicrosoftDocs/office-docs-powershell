@@ -115,7 +115,7 @@ Accept wildcard characters: False
 
 Microsoft Graph service root that Skype for Business Server uses to reach Exchange Online mailboxes (for example, for user photos and conversation history). For example: 
 
--GraphEndpoint 'https://graph.microsoft.us' 
+-GraphEndpoint "https://graph.microsoft.us" 
 
 The value must be an absolute HTTPS URL. If your tenant is in a sovereign cloud or in an air-gapped environment, set this parameter to the Microsoft Graph endpoint for that cloud. For the public (worldwide) cloud, setting this parameter is not mandatory. 
 
