@@ -151,6 +151,11 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-AllowMultipleScreenshare <Boolean>]
  [-FilterProfanityInTranscript <String>]
  [-RecordingAndTranscriptionAudioNotification <String>]
+ [-AllowedExternalBotAppIds <System.Management.Automation.PSListModifier`1[System.String]>]
+ [-IntelligentRecapForEphemeralMeetings <String>]
+ [-IntelligentRecapForTranscribedMeetings <String>]
+ [-WhoCanRecordAndTranscribeAllowOverride <String>]
+ [-WhoCanRecordAndTranscribeDefaultOption <String>]
  [-WhatIf]
  [<CommonParameters>]
 ```
@@ -211,6 +216,110 @@ Set-CsTeamsMeetingPolicy -Identity "SyntheticDetectionPolicy" -SyntheticMediaDet
 In Example 5, the Set-CsTeamsMeetingPolicy cmdlet disables synthetic audio/video detection for meetings organized by users assigned this policy, regardless of the configured detection provider. The SyntheticMediaDetectionAppId value is unchanged.
 
 ## PARAMETERS
+### -AllowedExternalBotAppIds
+
+Specifies the Microsoft Entra application (client) IDs of external bots that the tenant administrator allows.
+Provide application IDs as strings. To replace the list, specify the complete list of application IDs. To update individual entries, use `@{Add="application-id"}` or `@{Remove="application-id"}`.
+
+```yaml
+Type: System.Management.Automation.PSListModifier`1[System.String]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IntelligentRecapForEphemeralMeetings
+
+Controls whether intelligent recap is on by default for new meetings whose Copilot meeting option is **Only during the meeting**, and whether organizers can change the recap setting. This setting is subject to `AllowIntelligentRecap`.
+
+Possible values are:
+
+- **DefaultEnabledUserOverrideEnabled**: Recap is on by default, and organizers can turn it off. This is the default value.
+- **DefaultDisabledUserOverrideEnabled**: Recap is off by default, and organizers can turn it on.
+- **DefaultDisabledUserOverrideDisabled**: Recap is off, and organizers can't turn it on.
+- **DefaultEnabledUserOverrideDisabled**: Recap is on, and organizers can't turn it off.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: DefaultEnabledUserOverrideEnabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IntelligentRecapForTranscribedMeetings
+
+Controls whether intelligent recap is on by default for new meetings whose Copilot meeting option is **During and after the meeting**, and whether organizers can change the recap setting. This setting is subject to `AllowIntelligentRecap`.
+
+Possible values are:
+
+- **DefaultEnabledUserOverrideEnabled**: Recap is on by default, and organizers can turn it off. This is the default value.
+- **DefaultDisabledUserOverrideEnabled**: Recap is off by default, and organizers can turn it on.
+- **DefaultDisabledUserOverrideDisabled**: Recap is off, and organizers can't turn it on.
+- **DefaultEnabledUserOverrideDisabled**: Recap is on, and organizers can't turn it off.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: DefaultEnabledUserOverrideEnabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhoCanRecordAndTranscribeAllowOverride
+
+Determines whether meeting organizers can change the **Who can record and transcribe** meeting option from the default specified by `WhoCanRecordAndTranscribeDefaultOption`.
+
+Possible values are:
+
+- **Enabled**: Organizers can change the meeting option. This is the default value.
+- **Disabled**: The policy value is enforced, and organizers can't change it. Meeting templates and related meeting options must not broaden the roles permitted by the policy.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -WhoCanRecordAndTranscribeDefaultOption
+
+Sets the default roles that can start recording or transcription in meetings organized by users assigned this policy. Policies that control recording and transcription availability still apply. Use `WhoCanRecordAndTranscribeAllowOverride` to control whether organizers can change this meeting option.
+
+Possible values are:
+
+- **OrganizersAndCoOrganizersOnly**: Organizers and co-organizers can start recording or transcription.
+- **OrganizersAndPresentersOnly**: Organizers, co-organizers, and presenters can start recording or transcription. This is the default value.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: OrganizersAndPresentersOnly
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -AIInterpreter
 
