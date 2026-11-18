@@ -80,6 +80,7 @@
       "uhfHeaderId": "MSDocsHeader-M365-IT",
       "ms.topic": "reference",
       "ms.devlang": "powershell",
+      "ms.service": "ink-canvas-powershell",
       "feedback_system": "Standard",
       "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
     },

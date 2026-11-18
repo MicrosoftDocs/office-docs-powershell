@@ -1,12 +1,13 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Remove-CsAutoRecordingTemplate
+ms.author: colongma
+ms.reviewer: colongma
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csautorecordingtemplate
 schema: 2.0.0
 title: Remove-CsAutoRecordingTemplate
 ---
@@ -23,9 +24,6 @@ Remove-CsAutoRecordingTemplate -Id <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-
-> [!CAUTION]
-> The functionality provided by this cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
 
 Use the Remove-CsAutoRecordingTemplate cmdlet to delete an Auto Recording template. If the template is currently assigned to a call queue, an error will be returned.
 
@@ -45,7 +43,7 @@ This example deletes the Auto Recording template with the identity 5e3a575e-1faa
 The Id parameter is the unique identifier assigned to the Auto Recording template.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -66,7 +64,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Rtc.Management.OAA.Models.AutoAttendant
+### None
 
 ## NOTES
 

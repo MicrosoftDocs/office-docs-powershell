@@ -1,11 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: officedocspr
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: odocspr
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/find-csonlineapplicationinstance
 schema: 2.0.0
 title: Find-CsOnlineApplicationInstance
@@ -25,7 +26,7 @@ Find-CsOnlineApplicationInstance [-SearchQuery] <string> [[-MaxResults] <uint>] 
 ## DESCRIPTION
 Use the Find-CsOnlineApplicationInstance cmdlet to find application instances that match your search criteria.
 
-If MaxResults is not specified, the number of returned applications instances is limited to 10 application instances.
+If MaxResults is not specified, the number of returned application instances is limited to 10 application instances.
 
 ## EXAMPLES
 
@@ -117,7 +118,7 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
-Position: Named
+Position: 1
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -128,12 +129,12 @@ Accept wildcard characters: False
 The SearchQuery parameter defines a query for application instances by display name, telephone number, or GUID of the application instance. This parameter accepts partial queries for display names and telephone numbers. The search is not case sensitive.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
 Required: True
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -174,7 +175,5 @@ This cmdlet supports the common parameters: `-Debug, -ErrorAction, -ErrorVariabl
 [Get-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlineapplicationinstance)
 
 [New-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlineapplicationinstance)
-
-[Find-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/microsoftteams/find-csonlineapplicationinstance)
 
 [Set-CsOnlineApplicationInstance](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlineapplicationinstance)

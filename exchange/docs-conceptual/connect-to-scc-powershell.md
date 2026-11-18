@@ -1,6 +1,6 @@
 ---
 title: Connect to Security & Compliance PowerShell
-ms.date: 06/04/2026
+ms.date: 08/26/2026
 ms.audience: Admin
 ms.topic: article
 ms.reviewer:
@@ -49,6 +49,8 @@ Import-Module ExchangeOnlineManagement
 >     If your Security & Compliance PowerShell connection doesn't meet these requirements, you receive the following error when you try to run eDiscovery cmdlets:
 >
 >     `Please close the current PowerShell session and open a new session using Connect-IPPSSession with the -EnableSearchOnlySession flag. This requires using ExchangeOnlineManagement v3.9.0 or higher.`
+>
+>     The minimum module version 3.9.0 described in this section applies to connections that use interactive sign-in. App-only authentication for eDiscovery cmdlets is unsupported. For existing app-only automations that continue to use this configuration, use module version 3.10.1 or later, include the _EnableSearchOnlySession_ switch, and follow the best-effort guidance in [Configure app-only authentication for eDiscovery PowerShell](/purview/edisc-permissions#configure-app-only-authentication-for-ediscovery-powershell).
 
 The command that you need to run uses the following syntax:
 

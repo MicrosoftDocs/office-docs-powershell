@@ -1,11 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: officedocspr
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: odocspr
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/grant-csonlinevoicemailpolicy
 schema: 2.0.0
 title: Grant-CsOnlineVoicemailPolicy
@@ -74,8 +75,8 @@ Accept wildcard characters: False
 Sets the parameters of the Global policy instance to the values in the specified policy instance.
 
 ```yaml
-Type: String
-Parameter Sets: (All)
+Type: SwitchParameter
+Parameter Sets: GrantToTenant
 Aliases:
 
 Required: False
@@ -106,7 +107,7 @@ Accept wildcard characters: False
 The Identity parameter represents the ID of the specific user in your organization; this can be either a SIP address or an Object ID.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 

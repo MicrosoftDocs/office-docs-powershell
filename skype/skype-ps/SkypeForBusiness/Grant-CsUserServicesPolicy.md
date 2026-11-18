@@ -1,14 +1,15 @@
 ---
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
-author: hirenshah1
+author: paulkwo-msft2
 external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
-manager: rogupta
+manager: paulkwo
 Module Name: SkypeForBusiness
-ms.author: hirshah
+ms.author: paulkwo
 online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/grant-csuserservicespolicy
 schema: 2.0.0
 title: Grant-CsUserServicesPolicy
+ms.date: 11/16/2026
 ---
 
 # Grant-CsUserServicesPolicy
@@ -20,7 +21,13 @@ User Services policies determine whether or not a user's contacts are stored in 
 The Unified Contact Store provides a way for users to maintain a single set of contacts that can be accessed using Skype for Business, Microsoft Outlook, and/or Microsoft Outlook Web Access.
 This cmdlet was introduced in Lync Server 2013.
 
+### IMPORTANT
 
+Unified Contact Store (UCS) is retired in Skype for Business Server Subscription Edition CU1 HF3. When UCS is disabled (Set-CsSettingOverride -Identity Global -DisableUcs $True), the following cmdlet is impacted: 
+
+Grant-CsUserServicesPolicy fails if the user services policy being assigned has UcsAllowed set to True. Assigning a policy that has UcsAllowed set to False, or removing a per-user assignment by using -PolicyName $Null, is still allowed. 
+
+Error returned: Unified Contact Store (UCS) is deprecated and can no longer be enabled. UcsAllowed cannot be set to True. To move existing users' contacts from the Unified Contact Store back to Skype for Business Server, run the Invoke-CsUcsRollback cmdlet.
 
 ## SYNTAX
 

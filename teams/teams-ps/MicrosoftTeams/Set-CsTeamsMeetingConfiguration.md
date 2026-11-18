@@ -20,10 +20,11 @@ The CsTeamsMeetingConfiguration cmdlets enable administrators to control the mee
 
 ```powershell
 Set-CsTeamsMeetingConfiguration [-Tenant <Guid>] [-LogoURL <String>] [-LegalURL <String>]
- [-HelpURL <String>] [-CustomFooterText <String>] [-DisableAnonymousJoin <Boolean>] [-EnableAttributedTranscripts <Boolean>] [-EnableGraphTranscriptAccess <Boolean>] [-EnableQoS <Boolean>]
+ [-HelpURL <String>] [-CustomFooterText <String>] [-DisableAnonymousJoin <Boolean>] [-EnableAttributedTranscripts <Boolean>] [-EnableGraphTranscriptAccess <Boolean>] [-EnableWorkIQTranscriptAccess <Boolean>] [-EnableQoS <Boolean>]
  [-ClientAudioPort <UInt32>] [-ClientAudioPortRange <UInt32>] [-ClientVideoPort <UInt32>]
  [-ClientVideoPortRange <UInt32>] [-ClientAppSharingPort <UInt32>] [-ClientAppSharingPortRange <UInt32>]
- [-ClientMediaPortRangeEnabled <Boolean>] [-DisableAppInteractionForAnonymousUsers <Boolean>] [[-Identity] <XdsIdentity>] [-FeedbackSurveyForAnonymousUsers <String>] [-LimitPresenterRolePermissions <Boolean>] [-ReportMeeting <String>] [-Force] [-WhatIf] [-Confirm]
+ [-ClientMediaPortRangeEnabled <Boolean>] [-DisableAppInteractionForAnonymousUsers <Boolean>] [[-Identity] <XdsIdentity>] [-FeedbackSurveyForAnonymousUsers <String>] [-LimitPresenterRolePermissions <Boolean>] [-ReportMeeting <String>]
+ [-PublishedEntraAuthenticationContexts <PSObject>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -31,7 +32,7 @@ Set-CsTeamsMeetingConfiguration [-Tenant <Guid>] [-LogoURL <String>] [-LegalURL 
 
 ```powershell
 Set-CsTeamsMeetingConfiguration [-Tenant <Guid>] [-LogoURL <String>] [-LegalURL <String>]
- [-HelpURL <String>] [-CustomFooterText <String>] [-DisableAnonymousJoin <Boolean>] [-EnableAttributedTranscripts <Boolean>] [-EnableGraphTranscriptAccess <Boolean>] [-EnableQoS <Boolean>]
+ [-HelpURL <String>] [-CustomFooterText <String>] [-DisableAnonymousJoin <Boolean>] [-EnableAttributedTranscripts <Boolean>] [-EnableGraphTranscriptAccess <Boolean>] [-EnableWorkIQTranscriptAccess <Boolean>] [-EnableQoS <Boolean>]
  [-ClientAudioPort <UInt32>] [-ClientAudioPortRange <UInt32>] [-ClientVideoPort <UInt32>]
  [-ClientVideoPortRange <UInt32>] [-ClientAppSharingPort <UInt32>] [-ClientAppSharingPortRange <UInt32>]
  [-ClientMediaPortRangeEnabled <Boolean>] [-DisableAppInteractionForAnonymousUsers <Boolean>] [-FeedbackSurveyForAnonymousUsers <String>] [-LimitPresenterRolePermissions <Boolean>] [-ReportMeeting <String>] [-Instance <PSObject>] [-Force] [-WhatIf] [-Confirm]
@@ -274,6 +275,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableWorkIQTranscriptAccess
+
+Determines whether WorkIQ can access real-time transcript data in the tenant. Set this to TRUE to allow WorkIQ to request real-time transcript data, as long as all other applicable requirements are met. Set this to FALSE to block WorkIQ from accessing real-time transcript data in the tenant.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableQoS
 
 Determines whether Quality of Service Marking for real-time media (audio, video, screen/app sharing) is enabled in the tenant. Set this to TRUE to enable and FALSE to disable
@@ -439,6 +456,24 @@ Aliases:
 Required: False
 Position: Named
 Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PublishedEntraAuthenticationContexts
+A list of authentication contexts from Microsoft Entra ID that can be applied to Teams meetings for conditional access scenarios. Each entry has a required Id (c1-c99), and optional PublishedName (max 50 characters) and PublishedDescription (max 150 characters). EntraName and EntraDescription are snapshots captured by the service at publish time; caller-supplied values for those fields are ignored.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: PSObject
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

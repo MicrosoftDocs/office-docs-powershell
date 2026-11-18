@@ -1,12 +1,13 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Remove-CsSharedCallQueueHistoryTemplate
+ms.author: colongma
+ms.reviewer: colongma
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-cssharedcallqueuehistorytemplate
 schema: 2.0.0
 title: Remove-CsSharedCallQueueHistoryTemplate
 ---
@@ -45,7 +46,7 @@ This example deletes the Shared Call Queue History template with the identity 5e
 The Id parameter is the unique identifier assigned to the Shared Call Queue History template.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -66,7 +67,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Rtc.Management.OAA.Models.AutoAttendant
+### None
 
 ## NOTES
 

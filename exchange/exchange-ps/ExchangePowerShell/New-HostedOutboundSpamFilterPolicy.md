@@ -119,7 +119,7 @@ Accept wildcard characters: False
 
 The AutoForwardingMode specifies how the policy controls automatic email forwarding to external recipients. Valid values are:
 
-- Automatic: This value is the default. This value is now the same as Off. When this value was originally introduced, it was equivalent to On. Over time, thanks to the principles of [secure by default](https://learn.microsoft.com/defender-office-365/secure-by-default), the effect of this value was eventually changed to Off for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/all-you-need-to-know-about-automatic-email-forwarding-in/ba-p/2074888).
+- Automatic: This value is the default. When this value was introduced, it was equivalent to On. In 2021, the value changed to Off for new organizations and for existing organizations that weren't actively using the Automatic value. For existing organizations that were already using the value, it can remain equivalent to On. Because the behavior can differ by organization, use On or Off instead of Automatic. For more information, see [Automatic email forwarding in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/all-you-need-to-know-about-automatic-email-forwarding-in/ba-p/2074888).
 - On: Automatic external email forwarding isn't disabled by the policy.
 - Off: Automatic external email forwarding is disabled by the policy and results in a non-delivery report (also known as an NDR or bounce message) to the sender.
 

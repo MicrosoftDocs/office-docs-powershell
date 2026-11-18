@@ -4,7 +4,7 @@ external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
-ms.date: 02/26/2025
+ms.date: 07/13/2025
 ms.reviewer: alejandramu
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsmeetingpolicy
 schema: 2.0.0
@@ -36,6 +36,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-AllowExternalNonTrustedMeetingChat <Boolean>]
  [-AllowExternalParticipantGiveRequestControl <Boolean>]
  [-AllowImmersiveView <Boolean>]
+ [-AllowIntelligentRecap <Boolean>]
  [-AllowIPAudio <Boolean>]
  [-AllowIPVideo <Boolean>]
  [-AllowLocalRecording]
@@ -81,6 +82,8 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-Description <String>]
  [-DesignatedPresenterRoleMode <String>]
  [-DetectSensitiveContentDuringScreenSharing <Boolean>]
+ [-DisableAudioAnnouncementsForResourceAccounts <Boolean>]
+ [-EnableExternalRecordingDetection <Boolean>]
  [-EnrollUserOverride <String>]
  [-ExplicitRecordingConsent <String>]
  [-ExternalMeetingJoin <String>]
@@ -90,11 +93,13 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-IPVideoMode <String>]
  [-InfoShownInReportMode <String>]
  [-InMemory]
+ [-IntelligentRecapDocxFileExpirationDays <Int32>]
  [-LiveCaptionsEnabledType <String>]
  [-LiveInterpretationEnabledType <String>]
  [-LiveStreamingMode <String>]
  [-LobbyChat <string>]
  [-MediaBitRateKb <UInt32>]
+ [-MeetingAI <String>]
  [-MeetingChatEnabledType <String>]
  [-MeetingInviteLanguages <String>]
  [-NewMeetingRecordingExpirationDays <Int32>]
@@ -113,6 +118,7 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-StreamingAttendeeMode <String>]
  [-TeamsCameraFarEndPTZMode <String>]
  [-Tenant <Guid>]
+ [-TranscriptionWithMeetingAI <String>]
  [-UsersCanAdmitFromLobby <String>]
  [-VideoFiltersMode <String>]
  [-VoiceIsolation <String>]
@@ -125,10 +131,21 @@ New-CsTeamsMeetingPolicy [-Identity] <XdsIdentity>
  [-AllowedUsersForMeetingDetails <String>]
  [-RealTimeText <String>]
  [-ParticipantSlideControl <string>]
- [-WhatIf]
  [-WhoCanRegister <Object>]
  [-EnableRecordingAndTranscriptionCustomMessage <Boolean>]
  [-RecordingAndTranscriptionCustomMessageIdentifier <Guid>]
+ [-AllowMeetingKnowledgeGeneration <Boolean>]
+ [-KnowledgeGenerationMeetingTypes <String>]
+ [-MeetingKnowledgeExpirationDays <Int32>]
+ [-ConditionalAccessAttendeeVerification <Boolean>]
+ [-EnablePreMeetingConsent <Boolean>]
+ [-PreMeetingConsentContentIdentifier <Guid>]
+ [-SyntheticMediaDetection <String>]
+ [-SyntheticMediaDetectionAppId <Guid>]
+ [-AllowMultipleScreenshare <Boolean>]
+ [-FilterProfanityInTranscript <String>]
+ [-RecordingAndTranscriptionAudioNotification <String>]
+ [-WhatIf]
  [<CommonParameters>]
 ```
 
@@ -156,6 +173,15 @@ New-CsTeamsMeetingPolicy -Identity HrMeetingPolicy -AutoAdmittedUsers "Everyone"
 In Example 2, the New-CsTeamsMeetingPolicy cmdlet is used to create a meeting policy with the Identity HrMeetingPolicy.
 In this example two different property values are configured: AutoAdmittedUsers is set to Everyone and AllowMeetNow is set to False.
 All other policy properties will use the default values.
+
+### EXAMPLE 3
+
+```powershell
+New-CsTeamsMeetingPolicy -Identity "SyntheticDetectionPolicy" -SyntheticMediaDetection Enabled -SyntheticMediaDetectionAppId "<supported-provider-app-id>"
+```
+
+In Example 3, the New-CsTeamsMeetingPolicy cmdlet creates a meeting policy that permits synthetic audio/video detection using a configured third-party provider for meetings organized by users assigned this policy, when the feature and provider are available.
+Replace `<supported-provider-app-id>` with the Teams App ID of a supported certified detection provider, not an arbitrary Microsoft Entra application ID or bot ID.
 
 ## PARAMETERS
 
@@ -474,6 +500,23 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AllowIntelligentRecap
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+Controls whether Intelligent Recap is allowed for the user's meetings.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AllowIPAudio
 Determines whether audio is enabled in  a user's meetings or calls. Set this to TRUE to allow the user to share their audio. Set this to FALSE to prohibit the user from sharing their audio.
 
@@ -530,6 +573,25 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowMeetingKnowledgeGeneration
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+This setting allows admins to control whether an AI-generated meeting knowledge file is created for meetings organized by the user.
+
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -1191,6 +1253,36 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisableAudioAnnouncementsForResourceAccounts
+
+Determines whether Teams plays recording announcements in Contact Center as a Service (CCaaS) and Teams Phone Extensibility (TPE) calls. This setting controls all Teams-driven recording announcements across [Azure Communication Services Call Recording](https://learn.microsoft.com/azure/communication-services/concepts/voice-video-calling/call-recording) and Teams convenience recording.
+
+To suppress announcements by default across the tenant, set this parameter to `True` in the Global meeting policy. Resource accounts that aren't assigned a custom meeting policy inherit the Global policy. To suppress announcements for a specific resource account, create or update a custom meeting policy with this parameter set to `True`, and then assign the policy to the resource account by using [Grant-CsTeamsMeetingPolicy](/powershell/module/microsoftteams/grant-csteamsmeetingpolicy).
+
+This setting suppresses Teams-driven recording announcements. It doesn't disable recording or announcements played by your application.
+
+> [!NOTE]
+> Microsoft Teams provides participant notifications when recording or transcription is active. If you choose to disable these notifications, you are responsible for ensuring that your contact center solution informs participants in real time in accordance with applicable laws. For full details, see the [Microsoft Teams Terms of Service](https://www.microsoft.com/licensing/terms/productoffering/microsoftteams).
+>
+> This parameter is available in MicrosoftTeams PowerShell module version 7.8.0 and later.
+
+Possible values:
+
+- False: Teams plays all system recording announcements. This is the default value.
+- True: Teams suppresses all Teams-driven recording announcements, and the CCaaS or independent software vendor (ISV) solution is responsible for compliance notifications.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnrollUserOverride
 Possible values are:
 
@@ -1315,6 +1407,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -IntelligentRecapDocxFileExpirationDays
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+This setting controls how many days the intelligent recap docx file is stored before it expires. The default value is 120.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 120
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -InMemory
 Creates an object reference without actually committing the object as a permanent change. If you assign the output of this cmdlet called with this parameter to a variable, you can make changes to the properties of the object reference and then commit those changes by calling this cmdlet's matching Set-.
 
@@ -1347,6 +1457,30 @@ Accept wildcard characters: False
 
 ### -IPVideoMode
 Determines whether video can be turned on in meetings and group calls. Set this to ENABLEDOUTGOINGINCOMING to allow outgoing and incoming video in the meeting. Set this to DISABLED to prohibit outgoing and incoming video in the meeting. Invalid value combination IPVideoMode: EnabledOutgoingIncoming and IPAudioMode: Disabled
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -KnowledgeGenerationMeetingTypes
+
+Specifies which meetings organized by users assigned this policy can generate an AI-generated meeting knowledge file.
+
+Possible values are:
+
+- **AllMeetings**: Allow generation for all meetings, including meetings without transcription.
+- **TranscribedMeetings**: Allow generation only for meetings with transcription.
+- **None**: Do not generate meeting knowledge files.
+
+This setting applies only when both `AllowIntelligentRecap` and `AllowMeetingKnowledgeGeneration` are set to `$True`. If either parameter is set to `$False`, meeting knowledge files aren't generated, regardless of the `KnowledgeGenerationMeetingTypes` value.
 
 ```yaml
 Type: String
@@ -1453,6 +1587,33 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MeetingAI
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+Determines whether AI (Copilot, Facilitator, or Intelligent Recap) can be used in meetings.
+
+This parameter must be used together with -TranscriptionWithMeetingAI.
+
+Possible values are:
+
+- EnabledAllowOrganizerOverride
+- DisabledAllowOrganizerOverride
+- DisabledNoOverride
+
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: EnabledAllowOrganizerOverride
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -MeetingChatEnabledType
 Specifies if users will be able to chat in meetings. Possible values are: Disabled, Enabled, and EnabledExceptAnonymous.
 
@@ -1493,6 +1654,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -MeetingKnowledgeExpirationDays
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+This setting controls the number of days meeting knowledge data is retained before it is automatically deleted. The default value is 1825 days.
+
+```yaml
+Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 1825
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -NewMeetingRecordingExpirationDays
 Specifies the number of days before meeting recordings will expire and move to the recycle bin. Value can be from 1 to 99,999 days.
 
@@ -1514,9 +1693,6 @@ Accept wildcard characters: False
 ### -NoiseSuppressionForDialInParticipants
 
 > Applicable: Microsoft Teams
-
->[!NOTE]
->This feature has not been released yet and will have no changes if it is enabled or disabled.
 
 Control Noise Suppression Feature for PSTN legs joining a meeting.
 
@@ -1622,9 +1798,6 @@ Accept wildcard characters: False
 ### -PreventComplianceRecording
 
 > Applicable: Microsoft Teams
-
-> [!NOTE]
-> This feature has not been released yet and will have no changes if it is enabled or disabled.
 
 Controls whether Compliance Recording (CR)-enabled users are blocked from joining meetings organized by the policy-assigned user. When set to `None`, no restriction is applied and compliance recording operates as configured for the tenant. When set to `All`, CR-enabled users are blocked from joining meetings organized by the policy-assigned user. This applies to both internal and external CR-enabled users (including federated and B2B guests). Anonymous and PSTN users are unaffected as they cannot be assigned compliance recording.
 
@@ -1852,6 +2025,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -TranscriptionWithMeetingAI
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+Determines whether transcription is turned on along with Copilot. Transcription allows Copilot to continue to use meeting data for questions after the meeting ends.
+
+This parameter must be used together with -MeetingAI.
+
+Possible values are:
+
+- EnabledAllowOrganizerOverride
+- DisabledAllowOrganizerOverride
+- EnabledNoOverride
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: EnabledNoOverride
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -UsersCanAdmitFromLobby
 This policy controls who can admit from the lobby.
 
@@ -2043,6 +2242,27 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -EnableExternalRecordingDetection
+
+Controls whether Teams detects third-party applications, such as screen recorders, audio recorders, and AI note-takers, capturing audio on the user's device during a meeting.
+
+Possible values are:
+
+- **$true**: The user's client runs external recording detection and participants are notified when a third-party application is detected capturing audio.
+- **$false**: External recording detection does not run. This is the default value.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -EnableRecordingAndTranscriptionCustomMessage
 > [!NOTE]
 > This feature has not been fully released yet, so the setting will have no effect.
@@ -2073,6 +2293,182 @@ Aliases:
 Required: False
 Position: Named
 Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ConditionalAccessAttendeeVerification
+Enables Conditional Access Authentication for users joining meetings organized by this user. Uses the AuthenticationContexts published in the TeamsMeetingConfiguration. If the user has the required claims, they will be able to join the meeting. Otherwise, they will be prompted to choose between retrying to get the token or joining the lobby if enabled.
+
+Possible values are:
+
+- **$true**: Conditional Access Authentication contexts are available for the organizer to select from those published in the Teams Meeting Configuration, defaulting to None in the meeting options dropdown.
+- **$false**: Disables conditional access authentication context enforcement for meetings organized by this user.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnablePreMeetingConsent
+Controls whether participants must explicitly accept a custom consent dialog before they can join any meeting hosted by the tenant. Requires at least one consent content entry configured in TeamsPreMeetingConsentConfiguration.
+
+Possible values are:
+
+- **$true**: All participants must explicitly accept a custom consent dialog before joining any meeting hosted by the tenant.
+- **$false**: No consent dialog is shown to participants before joining meetings.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: False
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PreMeetingConsentContentIdentifier
+A string identifier that references the Id of the PreMeetingConsentContent configuration stored as meeting settings. Used by the Teams client to determine whether its locally cached consent content is up to date. Updated automatically when consent content changes.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyntheticMediaDetection
+Controls whether synthetic audio/video detection is permitted for meetings organized by users assigned this policy.
+
+Possible values are:
+
+- **Enabled**: Permits synthetic media detection when a configured detection provider is available. This is the default value. To configure a third-party provider, also set the SyntheticMediaDetectionAppId parameter.
+- **Disabled**: Disables synthetic media detection regardless of the configured provider or other detection property values.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SyntheticMediaDetectionAppId
+Specifies the Teams App ID (GUID) of the detection provider to use for synthetic audio/video analysis. For third-party detection, use only the Teams App ID of a supported certified detection provider and set SyntheticMediaDetection to Enabled.
+
+The default value, the zero GUID (00000000-0000-0000-0000-000000000000), selects no provider when Microsoft Detection is unavailable, or Microsoft Detection when it is available. It does not select a third-party provider.
+
+> [!IMPORTANT]
+> Successfully saving the policy does not guarantee that the App ID identifies a supported provider or that the detection bot can join meetings. An incorrect or unsupported App ID can prevent the detection bot from joining eligible meetings.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: 00000000-0000-0000-0000-000000000000
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+
+### -AllowMultipleScreenshare
+This setting enables Tenant Admins to turn on the Multiple Screenshare feature. It controls whether Multiple Screenshare is on or off for the entire tenant or for a particular user.
+
+Possible values are:
+
+- **$true**: Multiple VBSS (MultiVBSS) meeting options are available and enabled for the organizer.
+- **$false**: MultiVBSS meeting options are not available (hidden) for the organizer.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -FilterProfanityInTranscript
+Controls whether meeting transcripts filter profanity.
+
+Possible values are:
+
+- **Enabled**: Filters profanity from the meeting transcript.
+- **Disabled**: Does not filter profanity from the meeting transcript.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecordingAndTranscriptionAudioNotification
+Policy to control whether audio notifications will be played when recording or transcription starts/stops for applied users/groups. This policy applies only to Teams client users in VoIP calls. This policy does not control audio announcements for PSTN users or for Teams client users in one-to-one calls between Teams and PSTN, where audio announcements are enabled by default in both scenarios.
+
+Supported clients include Windows and macOS desktop, web, Microsoft Teams Rooms (MTR), Android, iOS, and VDI 2.0. VDI 1.0 is not supported.
+
+Possible values are:
+
+- **Enabled**: Audio notifications play when recording or transcription starts/stops.
+- **Disabled**: Audio notifications do not play when recording or transcription starts/stops.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
