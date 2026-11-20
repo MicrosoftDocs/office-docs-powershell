@@ -83,6 +83,7 @@ New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn>
  [-ApplicationId <String>]
  [-AppSecretKeyVaultUrl <String>]
  [-Confirm]
+ [-UseOauth]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
  [-MaxConcurrentMigrations <Unlimited>]
