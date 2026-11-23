@@ -1,11 +1,11 @@
 ---
 applicable: Microsoft Teams
-author: serdarsoysal
+author: officedocspr
 external help file: Microsoft.TeamsCmdlets.PowerShell.Custom.dll-help.xml
 Locale: en-US
 manager: abnair
 Module Name: MicrosoftTeams
-ms.author: serdars
+ms.author: odocspr
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamscallholdpolicy
 schema: 2.0.0
 title: Get-CsTeamsCallHoldPolicy

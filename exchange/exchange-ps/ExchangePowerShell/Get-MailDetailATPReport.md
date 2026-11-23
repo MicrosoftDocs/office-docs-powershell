@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
-author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-maildetailatpreport
 schema: 2.0.0
 title: Get-MailDetailATPReport
@@ -28,7 +26,6 @@ Get-MailDetailATPReport
  [-Domain <MultiValuedProperty>]
  [-EndDate <DateTime>]
  [-EventType <MultiValuedProperty>]
- [-MalwareName <MultiValuedProperty>]
  [-MessageId <MultiValuedProperty>]
  [-MessageTraceId <MultiValuedProperty>]
  [-Page <Int32>]
@@ -61,7 +58,6 @@ For the reporting period you specify, the cmdlet returns the following informati
 - Verdict Type
 - Action
 - File Name
-- Malware Name
 
 This cmdlet is limited to 10,000 results. If you reach this limit, you can use the available parameters to filter the output.
 
@@ -190,34 +186,6 @@ The EventType parameter filters the report by the event type. Valid values are:
 **Note**: Some values correspond to features that are available only in Defender for Office 365 (plan 1 and plan 2 or plan 2 only).
 
 You can enter multiple values separated by commas. If the values contain spaces or otherwise require quotation marks, use the following syntax: `"Value1","Value2",..."ValueN"`.
-
-```yaml
-Type: MultiValuedProperty
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -MalwareName
-
-> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
-
-The MalwareName parameter filters the results by malware payload. Valid values are:
-
-- Excel
-- EXE
-- Flash
-- Others
-- PDF
-- PowerPoint
-- URL
-
-You can specify multiple values separated by commas.
 
 ```yaml
 Type: MultiValuedProperty

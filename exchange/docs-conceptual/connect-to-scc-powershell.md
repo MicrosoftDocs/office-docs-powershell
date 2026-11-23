@@ -1,18 +1,13 @@
 ---
 title: Connect to Security & Compliance PowerShell
-author: chrisda
-manager: orspodek
-ms.date: 12/05/2025
+ms.date: 08/26/2026
 ms.audience: Admin
-audience: Admin
 ms.topic: article
-ms.service: exchange-powershell
 ms.reviewer:
 ms.localizationpriority: high
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
-search.appverid: MET150
 description: "Learn how to use the Exchange Online PowerShell V3 module to connect to Security & Compliance PowerShell with modern authentication and/or multifactor authentication (MFA)."
 ---
 
@@ -26,9 +21,7 @@ To connect to Security & Compliance PowerShell for automation, see [App-only aut
 
 ## What do you need to know before you begin?
 
-- The requirements for installing and using the module are described in [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
-
-- REST API connections in the Exchange Online PowerShell V3 module require the PowerShellGet and PackageManagement modules. For more information, see [PowerShellGet for REST-based connections in Windows](exchange-online-powershell-v2.md#powershellget-for-rest-api-connections-in-windows).
+- The requirements for installing and using the module are described in [Prerequisites for the Exchange Online PowerShell module](exchange-online-powershell-v2.md#prerequisites-for-the-exchange-online-powershell-module) and [Supported operating systems for the Exchange Online PowerShell module](exchange-online-powershell-v2.md#supported-operating-systems-for-the-exchange-online-powershell-module).
 
 - After you connect, role-based access control (RBAC) controls the cmdlets and parameters that you have or don't have access to. For more information, see [Permissions in the Microsoft Defender portal](/defender-office-365/mdo-portal-permissions) and [Permissions in the Microsoft Purview portal](/purview/purview-permissions).
 
@@ -37,7 +30,7 @@ To connect to Security & Compliance PowerShell for automation, see [App-only aut
 > [!NOTE]
 > If the module is already installed, you can typically skip this step and run **Connect-IPPSSession** without manually loading the module first.
 
-After you [install the module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module), open a PowerShell window and load the module by running the following command:
+After you [install the module](exchange-online-powershell-v2.md#install-and-update-the-exchange-online-powershell-module), open a PowerShell window and load the module by running the following command:
 
 ```powershell
 Import-Module ExchangeOnlineManagement
@@ -46,12 +39,23 @@ Import-Module ExchangeOnlineManagement
 ## Step 2: Connect and authenticate
 
 > [!NOTE]
-> Connect commands likely fail if the profile path of the account that you used to connect contains special PowerShell characters (for example, `$`). The workaround is to connect using a different account that doesn't have special characters in the profile path.
+>
+> - Connect commands likely fail if the profile path of the account that you used to connect contains special PowerShell characters (for example, `$`). The workaround is to connect using a different account that doesn't have special characters in the profile path.
+>
+> - If you plan on running eDiscovery cmdlets (**\*-ComplianceSearch** or **New-ComplianceSearchAction**), the connection must meet the following requirements:
+>   - Version 3.9.0 (August 2025) or later of the Exchange Online PowerShell module.
+>   - The connect command must include the _EnableSearchOnlySession_ switch.
+>
+>     If your Security & Compliance PowerShell connection doesn't meet these requirements, you receive the following error when you try to run eDiscovery cmdlets:
+>
+>     `Please close the current PowerShell session and open a new session using Connect-IPPSSession with the -EnableSearchOnlySession flag. This requires using ExchangeOnlineManagement v3.9.0 or higher.`
+>
+>     The minimum module version 3.9.0 described in this section applies to connections that use interactive sign-in. App-only authentication for eDiscovery cmdlets is unsupported. For existing app-only automations that continue to use this configuration, use module version 3.10.1 or later, include the _EnableSearchOnlySession_ switch, and follow the best-effort guidance in [Configure app-only authentication for eDiscovery PowerShell](/purview/edisc-permissions#configure-app-only-authentication-for-ediscovery-powershell).
 
 The command that you need to run uses the following syntax:
 
 ```powershell
-Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <URL>] [-AzureADAuthorizationEndpointUri <URL>] [-DelegatedOrganization <String>] [-PSSessionOption $ProxyOptions]
+Connect-IPPSSession -UserPrincipalName <UPN> [-ConnectionUri <URL>] [-AzureADAuthorizationEndpointUri <URL>] [-DelegatedOrganization <String>] [-PSSessionOption $ProxyOptions] [-EnableSearchOnlySession]
 ```
 
 For detailed syntax and parameter information, see [Connect-IPPSSession](/powershell/module/exchangepowershell/connect-ippssession).

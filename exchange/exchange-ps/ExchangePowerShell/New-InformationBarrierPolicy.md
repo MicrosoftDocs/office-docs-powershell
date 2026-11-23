@@ -1,10 +1,8 @@
 ---
 applicable: Security & Compliance
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/new-informationbarrierpolicy
 schema: 2.0.0
 title: New-InformationBarrierPolicy
@@ -210,7 +208,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The Confirm switch doesn't work on this cmdlet.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter

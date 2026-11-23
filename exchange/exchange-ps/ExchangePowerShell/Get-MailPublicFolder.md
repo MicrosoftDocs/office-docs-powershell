@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
-author: chrisda
 external help file: Microsoft.Exchange.WebClient-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-mailpublicfolder
 schema: 2.0.0
 title: Get-MailPublicFolder
@@ -278,8 +276,6 @@ Accept wildcard characters: False
 ### -Server
 
 > Applicable: Exchange Server 2010
-
-This parameter is available only in Exchange Server 2010.
 
 The Server parameter filters the results by the specified Exchange server. You can use any value that uniquely identifies the server. For example:
 

@@ -1,10 +1,8 @@
 ---
 applicable: Security & Compliance
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/new-autosensitivitylabelpolicy
 schema: 2.0.0
 title: New-AutoSensitivityLabelPolicy
@@ -23,6 +21,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 New-AutoSensitivityLabelPolicy [-Name] <String> -ApplySensitivityLabel <String>
+ [-ApplySensitivityLabelOverwriteWorkloads <Workload>]
  [-Comment <String>]
  [-Confirm]
  [-ExceptIfOneDriveSharedBy <RecipientIdParameter[]>]
@@ -48,6 +47,7 @@ New-AutoSensitivityLabelPolicy [-Name] <String> -ApplySensitivityLabel <String>
  [-PolicyRBACScopes <MultiValuedProperty>]
  [-PolicyTemplateInfo <PswsHashtable>]
  [-Priority <System.Int32>]
+ [-RemoveLabel]
  [-SharePointAdaptiveScopes <MultiValuedProperty>]
  [-SharePointAdaptiveScopesException <MultiValuedProperty>]
  [-SharePointLocation <MultiValuedProperty>]
@@ -68,6 +68,13 @@ New-AutoSensitivityLabelPolicy -Name "GlobalPolicy" -Comment "Primary policy" -S
 ```
 
 This example creates an auto-labeling policy named GlobalPolicy for the specified SharePoint and OneDrive locations with the label "Test". The new policy has a descriptive comment and is created in simulation mode.
+
+### Example 2
+```powershell
+New-AutoSensitivityLabelPolicy -Name "RemoveLabelPolicy" -SharePointLocation "https://contoso.sharepoint.com/sites/Research" -OneDriveLocation All -Mode TestWithoutNotifications -RemoveLabel -ApplySensitivityLabel "00000000-0000-0000-0000-000000000000"
+```
+
+This example creates an auto-labeling policy in simulation mode that removes an existing sensitivity label from matching content in SharePoint Online and OneDrive. For label removal, the ApplySensitivityLabel parameter requires the empty GUID. The AdvancedRule configuration of the associated rule that you create with New-AutoSensitivityLabelRule identifies the specific label to remove.
 
 ## PARAMETERS
 
@@ -93,7 +100,9 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The ApplySensitivityLabel parameter specifies the label to use for the auto-labeling policy.
+The ApplySensitivityLabel parameter specifies the label to apply with the auto-labeling policy.
+
+When you use the RemoveLabel switch for SharePoint Online or OneDrive, this parameter is still required, but you must use the empty GUID `00000000-0000-0000-0000-000000000000`. The AdvancedRule configuration of the associated New-AutoSensitivityLabelRule identifies the specific existing label to remove. Don't specify the GUID of the label to remove in this parameter; doing so causes policy deployment errors.
 
 ```yaml
 Type: String
@@ -101,6 +110,24 @@ Parameter Sets: (All)
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ApplySensitivityLabelOverwriteWorkloads
+
+> Applicable: Security & Compliance
+
+{{ Fill ApplySensitivityLabelOverwriteWorkloads Description }}
+
+```yaml
+Type: Workload
+Parameter Sets: (All)
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -129,10 +156,10 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -625,6 +652,28 @@ The Priority parameter specifies the priority of the policy. The highest priorit
 
 ```yaml
 Type: System.Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoveLabel
+
+> Applicable: Security & Compliance
+
+The RemoveLabel switch specifies that the auto-labeling policy removes an existing sensitivity label from matching content in SharePoint Online or OneDrive, including labels that users manually applied. Matching content is left unlabeled. You don't need to specify a value with this switch.
+
+When you use this switch, set the ApplySensitivityLabel parameter to the empty GUID `00000000-0000-0000-0000-000000000000`. The AdvancedRule configuration of the associated rule that you create with New-AutoSensitivityLabelRule identifies the specific existing label to remove.
+
+We recommend that you create the policy in simulation mode and review the results before you enable the policy.
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 

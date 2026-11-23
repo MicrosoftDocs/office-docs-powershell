@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
-author: chrisda
 external help file: Microsoft.Exchange.CalendarsAndGroups-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-dynamicdistributiongroup
 schema: 2.0.0
 title: Get-DynamicDistributionGroup
@@ -271,7 +269,7 @@ Accept wildcard characters: False
 
 ### -IncludeAcceptMessagesOnlyFromDLMembersWithDisplayNames
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -293,7 +291,7 @@ Accept wildcard characters: False
 
 ### -IncludeAcceptMessagesOnlyFromSendersOrMembersWithDisplayNames
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -315,7 +313,7 @@ Accept wildcard characters: False
 
 ### -IncludeAcceptMessagesOnlyFromWithDisplayNames
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -337,7 +335,7 @@ Accept wildcard characters: False
 
 ### -IncludeBypassModerationFromSendersOrMembersWithDisplayNames
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -359,7 +357,7 @@ Accept wildcard characters: False
 
 ### -IncludeGrantSendOnBehalfToWithDisplayNames
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -381,7 +379,7 @@ Accept wildcard characters: False
 
 ### -IncludeManagedByWithDisplayNames
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 
@@ -403,7 +401,7 @@ Accept wildcard characters: False
 
 ### -IncludeModeratedByWithDisplayNames
 
-> Applicable: Exchange Online
+> Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
 This parameter is available only in the cloud-based service.
 

@@ -1,10 +1,10 @@
 ---
-author: serdarsoysal
+author: officedocspr
 description: This cmdlet expedites the delicensing operation for an account's assigned plans by removing the grace period, permanently deleting the assigned plans.
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-ms.author: serdars
+ms.author: odocspr
 ms.date: 02/01/2024
 online version: https://learn.microsoft.com/powershell/module/skype/remove-csuserlicensegraceperiod
 schema: 2.0.0

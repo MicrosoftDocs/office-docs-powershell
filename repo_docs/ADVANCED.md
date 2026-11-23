@@ -79,10 +79,10 @@ git clone [URL to your forked repo]
 For example,
 
 ```DOS
-git clone https://github.com/kenwith/office-docs-powershell.git
+git clone https://github.com/your-github-username/office-docs-powershell.git
 ```
 
-Note that in this example my user is **kenwith** so I need to make sure I am cloning the Fork I created and not the upstream original. The user is in the URL for the GitHub repo.
+Note that in this example the user is **your-github-username** so you need to make sure you are cloning the Fork you created and not the upstream original. The user is in the URL for the GitHub repo.
 
 Once you have cloned your repository you can use git push and git pull to push and pull your changes up to your repository. It is best to use your own working branch so this will be covered in the next section.
 

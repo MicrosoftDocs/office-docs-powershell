@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Online
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-reportsubmissionpolicy
 schema: 2.0.0
 title: Set-ReportSubmissionPolicy
@@ -81,6 +79,7 @@ Set-ReportSubmissionPolicy [-Identity] <ReportSubmissionPolicyIdParameter>
  [-PreSubmitMessageTitleForJunk <String>]
  [-PreSubmitMessageTitleForNotJunk <String>]
  [-PreSubmitMessageTitleForPhishing <String>]
+ [-ReportChatMessageAddresses <MultiValuedProperty>]
  [-ReportChatMessageEnabled <Boolean>]
  [-ReportChatMessageToCustomizedAddressEnabled <Boolean>]
  [-ReportJunkAddresses <MultiValuedProperty>]
@@ -97,16 +96,18 @@ Set-ReportSubmissionPolicy [-Identity] <ReportSubmissionPolicyIdParameter>
 ```
 
 ## DESCRIPTION
-The report submission policy controls most of the settings for user submissions in the Microsoft Defender portal at <https://security.microsoft.com/securitysettings/userSubmission>.
+The report submission policy controls most of the settings for user submissions in the Microsoft Defender portal:
 
-The report submission rule (the SentTo parameter \*-ReportSubmissionRule cmdlets) controls the email address of the reporting mailbox where user reported messages are sent.
+- Email user reported settings: <https://security.microsoft.com/securitysettings/userSubmission>.
+- Teams user reported settings: <https://security.microsoft.com/securitysettings/teamsUserSubmission>.
 
 When you set the email address of the reporting mailbox in the Microsoft Defender portal, the same email address is also set in the following parameters in the \*-ReportSubmissionPolicy cmdlets:
 
 - Microsoft integrated reporting using Microsoft reporting tools in Outlook: The ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhishAddresses parameters.
 - Microsoft integrated reporting using non-Microsoft tools in Outlook: The ThirdPartyReportAddresses parameter.
+- User reporting in Teams: The ReportChatMessageAddresses parameter.
 
-Although it's not absolutely required, it makes sense to keep the email address consistent in the related parameters in the \*-ReportSubmissionPolicy and \*-ReportSubmissionRule cmdlets.
+For reporting in Outlook, although it's not absolutely required, it makes sense to keep the email address consistent in the related parameters in the \*-ReportSubmissionPolicy and \*-ReportSubmissionRule cmdlets. User reporting in Teams doesn't use the report submission rule.
 
 You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -185,6 +186,15 @@ This example turns off the Microsoft integrated reporting. Microsoft reporting t
 
 If the report submission rule doesn't already exist (the Get-ReportSubmissionRule command returns no output), you don't need to run the second command to remove it.
 
+### Example 6
+```powershell
+$teamsReports = "teamsreports@contoso.com"
+
+Set-ReportSubmissionPolicy -Identity DefaultReportSubmissionPolicy -ReportChatMessageEnabled $true -ReportChatMessageToCustomizedAddressEnabled $true -ReportChatMessageAddresses $teamsReports
+```
+
+This example sends user reported Teams messages and calls to Microsoft and to the specified reporting mailbox in Exchange Online.
+
 ## PARAMETERS
 
 ### -Identity
@@ -209,10 +219,10 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
 
-- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: -Confirm:$false.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -1340,11 +1350,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ReportChatMessageAddresses
+
+> Applicable: Exchange Online
+
+The ReportChatMessageAddresses parameter specifies the reporting mailbox in Exchange Online that receives user reported messages and calls from Teams. Specify one Exchange Online mailbox.
+
+To send reported Teams items to the specified mailbox, set the ReportChatMessageToCustomizedAddressEnabled parameter to $true. To remove the reporting mailbox, use the value $null for this parameter.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ReportChatMessageEnabled
 
 > Applicable: Exchange Online
 
-This parameter is reserved for internal Microsoft use.
+The ReportChatMessageEnabled parameter specifies whether user reported messages and calls from Teams are sent to Microsoft for analysis. Valid values are:
+
+- $true: User reported Teams items are sent to Microsoft.
+- $false: User reported Teams items aren't sent to Microsoft.
 
 ```yaml
 Type: Boolean
@@ -1362,7 +1395,10 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-{{ Fill ReportChatMessageToCustomizedAddressEnabled Description }}
+The ReportChatMessageToCustomizedAddressEnabled parameter specifies whether user reported messages and calls from Teams are sent to the reporting mailbox specified by the ReportChatMessageAddresses parameter. Valid values are:
+
+- $true: User reported Teams items are sent to the reporting mailbox.
+- $false: User reported Teams items aren't sent to the reporting mailbox.
 
 ```yaml
 Type: Boolean
@@ -1581,7 +1617,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+The WhatIf switch shows what the command does without making any changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

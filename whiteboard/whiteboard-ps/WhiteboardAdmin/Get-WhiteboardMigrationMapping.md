@@ -1,7 +1,7 @@
 ---
 external help file: WhiteboardAdmin-help.xml
 Module Name: WhiteboardAdmin
-online version: https://learn.microsoft.com/powershell/module/whiteboard/get-whiteboardmigrationmapping
+online version: https://learn.microsoft.com/powershell/module/whiteboardadmin/get-whiteboardmigrationmapping
 applicable: Microsoft Whiteboard
 title: Get-WhiteboardMigrationMapping
 schema: 2.0.0

@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-transportrule
 schema: 2.0.0
 title: Set-TransportRule
@@ -1277,10 +1275,10 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -2826,10 +2824,9 @@ This parameter specifies an exception or part of an exception for the rule. The 
 
 In on-premises Exchange, this exception is available on Mailbox servers and Edge Transport servers.
 
-The ExceptIfSCLOver parameter specifies an exception that looks for the SCL value of messages. Valid values are:
+The ExceptIfSCLOver parameter specifies an exception that looks for the SCL value stamped on messages. Valid values are -1 or integers 0 through 9.
 
-- -1: The message is from a trusted sender, so the message bypasses spam filtering.
-- Integers 0 through 9: A higher value indicates that a message is more likely to be spam.
+In on-premises Exchange, an SCL value of -1 indicates that the message bypassed spam filtering, and a higher SCL value indicates that a message is more likely to be spam. In Exchange Online, the SCL value doesn't determine the filtering verdict or action.
 
 The rule looks for messages with an SCL value that's greater than or equal to the specified value.
 
@@ -3713,8 +3710,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2013
 
-This parameter is available only in Exchange Server 2013.
-
 This parameter is deprecated and no longer used. Use the IncidentReportContent parameter instead. The value AttachOriginalMail on the IncidentReportContent parameter is equivalent to setting this parameter to the value IncludeOriginalMail.
 
 This parameter specifies an action or part of an action for the rule.
@@ -4303,8 +4298,8 @@ This parameter is available only in the cloud-based service.
 
 The RecipientAddressType parameter specifies how conditions and exceptions check recipient email addresses. Valid values are:
 
-- Original: The rule checks the original address in the To field of the message.
-- Resolved: The rule checks the recipient's primary SMTP email address without checking any proxy addresses. This value is the default.
+- Original: The rule checks the address that the message was originally addressed to, before the service resolved it.
+- Resolved: The rule checks the recipient's resolved address. For mailboxes, the address resolves to the primary SMTP address. For mail users and mail contacts, the address resolves to the external email address. Proxy addresses aren't checked. This value is the default.
 
 ```yaml
 Type: RecipientAddressType
@@ -4653,10 +4648,9 @@ This parameter specifies a condition or part of a condition for the rule. The na
 
 In on-premises Exchange, this condition is available on Mailbox servers and Edge Transport servers.
 
-The SCLOver parameter specifies a condition that looks for the SCL value of messages. Valid values are:
+The SCLOver parameter specifies a condition that looks for the SCL value stamped on messages. Valid values are -1 or integers 0 through 9.
 
-- -1: The message is from a trusted sender, so the message bypasses spam filtering.
-- Integers 0 through 9: A higher value indicates that a message is more likely to be spam.
+In on-premises Exchange, an SCL value of -1 indicates that the message bypassed spam filtering, and a higher SCL value indicates that a message is more likely to be spam. In Exchange Online, the SCL value doesn't determine the filtering verdict or action.
 
 The rule looks for messages with an SCL value that's greater than or equal to the specified value.
 
@@ -5087,10 +5081,11 @@ This parameter specifies an action or part of an action for the rule.
 
 In on-premises Exchange, this action is available on Mailbox servers and Edge Transport servers.
 
-The SetSCL parameter specifies an action that adds or modifies the SCL value of messages. Valid values are:
+The SetSCL parameter specifies an action that submits an SCL value of -1 or an integer from 0 through 9.
 
-- -1: The message is from a trusted sender, so the message bypasses spam filtering.
-- Integers 0 through 9: A higher value indicates that a message is more likely to be spam.
+In on-premises Exchange, the action adds or modifies the SCL value of messages. An SCL value of -1 bypasses spam filtering, and a higher SCL value indicates that a message is more likely to be spam.
+
+In Exchange Online, the value is an input to filtering, not a final decision. The value -1 requests a bypass from most spam filtering, 5 or 6 requests a spam verdict, and 9 requests a high confidence spam verdict. The SCL value actually stamped on the message might differ from the value configured in the rule, and it doesn't determine the final verdict or action.
 
 ```yaml
 Type: SclValue
@@ -5277,7 +5272,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+The WhatIf switch shows what the command does without making any changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

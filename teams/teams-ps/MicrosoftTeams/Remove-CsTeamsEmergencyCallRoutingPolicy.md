@@ -1,11 +1,11 @@
 ---
 applicable: Microsoft Teams
-author: serdarsoysal
+author: officedocspr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: serdars
+ms.author: odocspr
 ms.reviewer: chenc
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsemergencycallroutingpolicy
 schema: 2.0.0

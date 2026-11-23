@@ -1,12 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendantholidays
 schema: 2.0.0
 title: Get-CsAutoAttendantHolidays
@@ -20,7 +20,7 @@ Use Get-CsAutoAttendantHolidays cmdlet to get the holiday information for an exi
 ## SYNTAX
 
 ```
-Get-CsAutoAttendantHolidays [-Identity] <string> [-Force] [-Names <List[string]>] [-Years <List[int]>] [<CommonParameters>]
+Get-CsAutoAttendantHolidays [-Identity] <string> [-Force] [-Names <String[]>] [-Years <Int32[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -78,7 +78,7 @@ Accept wildcard characters: False
 Represents the identifier for the auto attendant whose holidays are to be retrieved.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -94,7 +94,7 @@ Accept wildcard characters: False
 The Names parameter represents the names for the holidays to be retrieved. If this parameter is not specified, then all holidays in the AA are returned.
 
 ```yaml
-Type: System.Collections.Generic.List[System.Int32]
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
@@ -110,7 +110,7 @@ Accept wildcard characters: False
 The Years parameter represents the years for the holidays to be retrieved. If this parameter is not specified, then holidays for all years in the AA are returned.
 
 ```yaml
-Type: System.Collections.Generic.List[System.String]
+Type: Int32[]
 Parameter Sets: (All)
 Aliases:
 

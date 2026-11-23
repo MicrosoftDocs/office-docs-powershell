@@ -46,8 +46,8 @@ PS C:\> Get-CsPhoneNumberPolicyAssignment -TelephoneNumber 17789493766
 ```output
 TelephoneNumber PolicyType          PolicyName Authority AssignmentType Reference
 --------------- ----------          ---------- --------- -------------- ---------
-17789493766     TenantDialPlan      PolicyFoo  Tenant    Direct         Direct
-17789493766     CallingLineIdentity PolicyBar  Tenant    Direct         Direct
+14255551234     TenantDialPlan      PolicyOne  Tenant    Direct         Direct
+14255551234     CallingLineIdentity PolicyTwo  Tenant    Direct         Direct
 ```
 This example returns all policy assigned for the specified telephone number.
 
@@ -61,9 +61,9 @@ PS C:\> Get-CsPhoneNumberPolicyAssignment
 ```output
 TelephoneNumber PolicyType          PolicyName    Authority AssignmentType Reference
 --------------- ----------          ----------    --------- -------------- ---------
-1234567         TenantDialPlan      BenTestPolicy Tenant    Direct         Direct
-17789493766     TenantDialPlan      PolicyFoo     Tenant    Direct         Direct
-17789493766     CallingLineIdentity PolicyBar     Tenant    Direct         Direct
+1234567         TenantDialPlan      TestPolicy Tenant    Direct         Direct
+14255551234     TenantDialPlan      PolicyOne     Tenant    Direct         Direct
+14255551234     CallingLineIdentity PolicyTwo     Tenant    Direct         Direct
 ```
 This example returns a list of all the telephone numbers in the tenant that have at least one policy assigned.
 
@@ -76,8 +76,8 @@ PS C:\> Get-CsPhoneNumberPolicyAssignment -PolicyType TenantDialPlan
 ```output
 TelephoneNumber PolicyType     PolicyName    Reference
 --------------- ----------     ----------    ---------
-1234567         TenantDialPlan BenTestPolicy Direct
-17789493766     TenantDialPlan PolicyFoo     Direct
+1234567         TenantDialPlan TestPolicy Direct
+14255551234     TenantDialPlan PolicyOne     Direct
 ```
 This example returns a list of all the telephone numbers in tenant that have TenantDialPlan assigned.
 
@@ -90,7 +90,7 @@ PS C:\> Get-CsPhoneNumberPolicyAssignment -PolicyType TenantDialPlan -PolicyName
 ```output
 TelephoneNumber PolicyType     PolicyName Reference
 --------------- ----------     ---------- ---------
-17789493766     TenantDialPlan PolicyFoo  Direct
+14255551234     TenantDialPlan PolicyFoo  Direct
 ```
 This example returns the top 1 telephone number with policy assignment matching the specified type and name.
 

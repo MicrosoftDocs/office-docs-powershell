@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
-author: chrisda
 external help file: Microsoft.Exchange.ServerStatus-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-mailboxdatabase
 schema: 2.0.0
 title: Get-MailboxDatabase
@@ -181,8 +179,6 @@ Accept wildcard characters: False
 ### -IncludePreExchange2010
 
 > Applicable: Exchange Server 2010
-
-This parameter is available only in Exchange Server 2010.
 
 The IncludePreExchange2010 switch specifies whether to return information about Exchange 2007 ore earlier mailbox databases. You don't need to specify a value with this switch.
 

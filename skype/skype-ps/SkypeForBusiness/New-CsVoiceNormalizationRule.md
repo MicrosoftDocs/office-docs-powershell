@@ -5,7 +5,7 @@ external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
 manager: bulenteg
 Module Name: SkypeForBusiness
-ms.author: serdars
+ms.author: odocspr
 online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/new-csvoicenormalizationrule
 schema: 2.0.0
 title: New-CsVoiceNormalizationRule
