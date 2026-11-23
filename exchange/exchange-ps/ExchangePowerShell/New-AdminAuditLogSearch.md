@@ -1,10 +1,8 @@
 ---
-applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
-author: chrisda
+applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 external help file: Microsoft.Exchange.RecordsandEdge-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/new-adminauditlogsearch
 schema: 2.0.0
 title: New-AdminAuditLogSearch
@@ -14,9 +12,9 @@ title: New-AdminAuditLogSearch
 
 ## SYNOPSIS
 > [!NOTE]
-> This cmdlet will be deprecated in the cloud-based service. To access audit log data, use the Search-UnifiedAuditLog cmdlet. For more information, see this blog post: <https://aka.ms/AdminAuditCmdletBlog>.
+> This cmdlet has been deprecated in the cloud-based service. To access audit log data, use the Search-UnifiedAuditLog cmdlet. For more information, see this blog post: <https://aka.ms/AdminAuditCmdletBlog>.
 
-This cmdlet is available in on-premises Exchange and in the cloud-based service. Some parameters and settings might be exclusive to one environment or the other.
+This cmdlet is available only in on-premises Exchange.
 
 Use the New-AdminAuditLogSearch cmdlet to search the contents of the administrator audit log and send the results to one or more mailboxes that you specify.
 
@@ -68,7 +66,7 @@ This example returns entries in the administrator audit log of an Exchange Onlin
 
 ### -EndDate
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The EndDate parameter specifies the end date of the date range.
 
@@ -87,7 +85,7 @@ Accept wildcard characters: False
 
 ### -StartDate
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The StartDate parameter specifies the start date of the date range.
 
@@ -106,7 +104,7 @@ Accept wildcard characters: False
 
 ### -StatusMailRecipients
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The StatusMailRecipients parameter specifies the recipients that should receive the administrator audit log report. The recipient must be a valid SMTP address.
 
@@ -125,7 +123,7 @@ Accept wildcard characters: False
 
 ### -Cmdlets
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Cmdlets parameter specifies the cmdlets you want to search for in the administrator audit log. Only the log entries that contain the cmdlets you specify are returned.
 
@@ -144,12 +142,12 @@ Accept wildcard characters: False
 
 ### -Confirm
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -165,8 +163,6 @@ Accept wildcard characters: False
 ### -DomainController
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
-
-This parameter is available only in on-premises Exchange.
 
 The DomainController parameter specifies the domain controller that's used by this cmdlet to read data from or write data to Active Directory. You identify the domain controller by its fully qualified domain name (FQDN). For example, dc01.contoso.com.
 
@@ -184,9 +180,9 @@ Accept wildcard characters: False
 
 ### -ExternalAccess
 
-> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
+> Applicable: Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
-The ExternalAccess parameter returns only audit log entries for cmdlets that were run by a user outside of your organization. In Exchange Online, use this parameter to return audit log entries for cmdlets run by Microsoft datacenter administrators.
+The ExternalAccess parameter returns only audit log entries for cmdlets that were run by a user outside of your organization. In use this parameter to return audit log entries for cmdlets run by Microsoft datacenter administrators.
 
 ```yaml
 Type: Boolean
@@ -201,7 +197,7 @@ Accept wildcard characters: False
 
 ### -Name
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Name parameter specifies the name of the administrator audit log search. The name is shown in the subject line of the audit log report email message.
 
@@ -220,7 +216,7 @@ Accept wildcard characters: False
 
 ### -ObjectIds
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The ObjectIds parameter specifies that only administrator audit log entries that contain the specified changed objects should be returned. This parameter accepts a variety of objects, such as mailboxes, aliases, Send connector names and so on.
 
@@ -239,7 +235,7 @@ Accept wildcard characters: False
 
 ### -Parameters
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The Parameters parameter specifies the parameters you want to search for in the administrator audit log. Only the log entries that contain the parameters you specify are returned. You can only use this parameter if you use the Cmdlets parameter.
 
@@ -258,7 +254,7 @@ Accept wildcard characters: False
 
 ### -UserIds
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The UserIds parameter specifies that only the administrator audit log entries that contain the specified ID of the user who ran the cmdlet should be returned.
 
@@ -277,11 +273,11 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
+> Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
 
 The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+The WhatIf switch shows what the command does without making any changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

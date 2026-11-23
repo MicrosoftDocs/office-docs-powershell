@@ -1,7 +1,7 @@
-﻿---
+---
 external help file: WhiteboardAdmin-help.xml
 Module Name: WhiteboardAdmin
-online version: https://learn.microsoft.com/powershell/module/whiteboard/get-whiteboardsfortenant
+online version: https://learn.microsoft.com/powershell/module/whiteboardadmin/get-whiteboardsfortenant
 applicable: Microsoft Whiteboard
 title: Get-WhiteboardsForTenant
 schema: 2.0.0

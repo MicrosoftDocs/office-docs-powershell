@@ -35,9 +35,6 @@ The Connect-MicrosoftTeams cmdlet connects an authenticated account for use with
 ### [Disable-CsOnlineSipDomain](Disable-CsOnlineSipDomain.md)
 This cmdlet prevents provisioning of users in Skype for Business Online for the specified domain.
 
-### [Disable-CsTeamsShiftsConnectionErrorReport](Disable-CsTeamsShiftsConnectionErrorReport.md)
-This cmdlet disables an error report.
-
 ### [Disconnect-MicrosoftTeams](Disconnect-MicrosoftTeams.md)
 {{Placeholder}}
 
@@ -58,6 +55,12 @@ Use the Find-CsGroup cmdlet to search groups.
 
 ### [Find-CsOnlineApplicationInstance](Find-CsOnlineApplicationInstance.md)
 Use the Find-CsOnlineApplicationInstance cmdlet to find application instances that match your search criteria.
+
+### [Get-AIGeneratedKnowledgeContainer](Get-AIGeneratedKnowledgeContainer.md)
+This cmdlet returns the SharePoint Embedded container URLs for AI-generated meeting knowledge in Microsoft Teams meeting.
+
+### [Get-CsAgent](Get-CsAgent.md)
+Retrieves the AI Agent(s) in the tenant.
 
 ### [Get-AllM365TeamsApps](Get-AllM365TeamsApps.md)
 This cmdlet returns all Microsoft Teams apps in the app catalog, including Microsoft, custom, and non-Microsoft apps.
@@ -91,6 +94,9 @@ The Get-CsAutoAttendantSupportedTimeZone cmdlet gets supported time zones for th
 
 ### [Get-CsAutoAttendantTenantInformation](Get-CsAutoAttendantTenantInformation.md)
 Gets the default tenant information for Auto Attendant (AA) feature.
+
+### [Get-CsAutoRecordingTemplate](Get-CsAutoRecordingTemplate.md)
+Use the Get-CsAutoRecordingTemplate cmdlet to retrieve a list of Auto Recording templates.
 
 ### [Get-CsBatchPolicyAssignmentOperation](Get-CsBatchPolicyAssignmentOperation.md)
 This cmdlet is used to retrieve the status of batch policy assignment operations.
@@ -139,6 +145,18 @@ Returns information about the Mainline Attendant flows configured in your organi
 
 ### [Get-CsMainlineAttendantQuestionAnswerFlow](Get-CsMainlineAttendantQuestionAnswerFlow.md)
 Returns the identified Mainline attendant question and answer flow.
+
+### [Get-CsMainlineAttendantTenantInformation](Get-CsMainlineAttendantTenantInformation.md)
+Returns the tenant default language and voice for Mainline Attendant.
+
+### [Get-CsMainlineAttendantSupportedLanguages](Get-CsMainlineAttendantSupportedLanguages.md)
+Returns the list of supported languages for Mainline Attendant.
+
+### [Get-CsMainlineAttendantSupportedVoices](Get-CsMainlineAttendantSupportedVoices.md)
+Returns the list of supported voices for Mainline Attendant.
+
+### [Get-CsMainlineAttendantSpamDetectionTemplate](Get-CsMainlineAttendantSpamDetectionTemplate.md)
+Returns the list of spam detection templates in the tenant.
 
 ### [Get-CsMeetingMigrationStatus](Get-CsMeetingMigrationStatus.md)
 You use the `Get-CsMeetingMigrationStatus` cmdlet to check the status of meeting migrations.
@@ -281,8 +299,14 @@ Get the tenant level summary of all bulk sign in requests executed in the past 3
 ### [Get-CsSdgBulkSignInRequestStatus](Get-CsSdgBulkSignInRequestStatus.md)
 Get the status of an active bulk sign in request.
 
+### [Get-CsSharedCallHistoryTemplate](Get-CsSharedCallHistoryTemplate.md)
+Retrieves the list of Shared Call History templates.
+
 ### [Get-CsSharedCallQueueHistoryTemplate](Get-CsSharedCallQueueHistoryTemplate.md)
-```powershell Get-CsSharedCallQueueHistoryTemplate -Id <string> [<CommonParameters>] ```
+Deprecated - new cmdlet is Get-CsSharedCallHistoryTemplate
+
+### [Get-CsSharedVoicemailTriageSettingsTemplate](Get-CsSharedVoicemailTriageSettingsTemplate.md)
+Retrieves the configuration for automatic triage of Shared Voicemails
 
 ### [Get-CsTagsTemplate](Get-CsTagsTemplate.md)
 Retrieves a list of existing Tag templates.
@@ -431,33 +455,6 @@ Use the Get-CsTeamsSharedCallingRoutingPolicy cmdlet to get Teams shared calling
 ### [Get-CsTeamsShiftsAppPolicy](Get-CsTeamsShiftsAppPolicy.md)
 Returns information about the Teams Shifts App policies that have been configured for use in your organization.
 
-### [Get-CsTeamsShiftsConnection](Get-CsTeamsShiftsConnection.md)
-This cmdlet returns the list of existing workforce management (WFM) connections. It can also return the configuration details for a given WFM connection.
-
-### [Get-CsTeamsShiftsConnectionConnector](Get-CsTeamsShiftsConnectionConnector.md)
-This cmdlet supports retrieving the available Shifts Connectors.
-
-### [Get-CsTeamsShiftsConnectionErrorReport](Get-CsTeamsShiftsConnectionErrorReport.md)
-This cmdlet returns the list of all the team mapping error reports. It can also return the configuration details of one mapping error report with its ID provided or other filter parameters.
-
-### [Get-CsTeamsShiftsConnectionInstance](Get-CsTeamsShiftsConnectionInstance.md)
-This cmdlet returns the list of existing connection instances. It can also return the configuration details for a given connection instance.
-
-### [Get-CsTeamsShiftsConnectionOperation](Get-CsTeamsShiftsConnectionOperation.md)
-This cmdlet gets the requested batch mapping operation.
-
-### [Get-CsTeamsShiftsConnectionSyncResult](Get-CsTeamsShiftsConnectionSyncResult.md)
-This cmdlet supports retrieving the list of user details in the mapped teams of last sync.
-
-### [Get-CsTeamsShiftsConnectionTeamMap](Get-CsTeamsShiftsConnectionTeamMap.md)
-This cmdlet supports retrieving the list of team mappings.
-
-### [Get-CsTeamsShiftsConnectionWfmTeam](Get-CsTeamsShiftsConnectionWfmTeam.md)
-This cmdlet supports retrieving the list of available Workforce management (WFM) teams in the connection instance.
-
-### [Get-CsTeamsShiftsConnectionWfmUser](Get-CsTeamsShiftsConnectionWfmUser.md)
-This cmdlet shows the list of Workforce management (WFM) users in a specified WFM team.
-
 ### [Get-CsTeamsShiftsPolicy](Get-CsTeamsShiftsPolicy.md)
 This cmdlet allows you to get properties of a TeamsShiftPolicy instance, including user's Teams off shift warning message-specific settings.
 
@@ -492,7 +489,7 @@ Returns information related to managing the upgrade to Teams from Skype for Busi
 This cmdlet returns the set of instances of this policy.
 
 ### [Get-CsTeamsVdiPolicy](Get-CsTeamsVdiPolicy.md)
-The Get-CsTeamsVdiPolicy cmdlet enables you to return infomration about all the Vdi policies that have been configured for use in your organization.
+The Get-CsTeamsVdiPolicy cmdlet enables you to return information about all the Vdi policies that have been configured for use in your organization.
 
 ### [Get-CsTeamsVideoInteropServicePolicy](Get-CsTeamsVideoInteropServicePolicy.md)
 The Get-CsTeamsVideoInteropServicePolicy cmdlet allows you to identify the pre-constructed policies that you can use in your organization.
@@ -776,6 +773,9 @@ Trigger a new direct assignments to group policy assignments cleanup.
 ### [Invoke-StartDirectToGroupAssignmentMigration](Invoke-StartDirectToGroupAssignmentMigration.md)
 Trigger a new direct assignments to group policy assignments migration
 
+### [New-CsAgent](New-CsAgent.md)
+Create an AI Agent that can be associated with a Teams Phone Resource Account.
+
 ### [New-CsApplicationAccessPolicy](New-CsApplicationAccessPolicy.md)
 Creates a new application access policy. Application access policy contains a list of application (client) IDs.
 
@@ -802,6 +802,9 @@ Use the New-CsAutoAttendantMenuOption cmdlet to create a new menu option.
 
 ### [New-CsAutoAttendantPrompt](New-CsAutoAttendantPrompt.md)
 Use the New-CsAutoAttendantPrompt cmdlet to create a new prompt.
+
+### [New-CsAutoRecordingTemplate](New-CsAutoRecordingTemplate.md)
+Use the New-CsAutoRecordingTemplate cmdlet to create an Auto Recording template for use with call queues.
 
 ### [New-CsBatchPolicyAssignmentOperation](New-CsBatchPolicyAssignmentOperation.md)
 This cmdlet is used to assign or unassign a policy to a batch of users.
@@ -857,6 +860,9 @@ Creates new Mainline Attendant appointment booking flows.
 ### [New-CsMainlineAttendantQuestionAnswerFlow](New-CsMainlineAttendantQuestionAnswerFlow.md)
 Creates new Mainline Attendant question and answer (FAQ) flows.
 
+### [New-CsMainlineAttendantSpamDetectionTemplate](New-CsMainlineAttendantSpamDetectionTemplate.md)
+Creates a new Mainline Attendant Spam Detection template.
+
 ### [New-CsOnlineApplicationInstance](New-CsOnlineApplicationInstance.md)
 Creates an application instance in Microsoft Entra ID.
 
@@ -905,6 +911,18 @@ Creates a new online voice route.
 ### [New-CsOnlineVoiceRoutingPolicy](New-CsOnlineVoiceRoutingPolicy.md)
 Creates a new online voice routing policy. Online voice routing policies manage online PSTN usages for Phone System users.
 
+### [New-CsPhoneNumberBulkUpdateDrNumberAcquiredCapabilitiesOrder](New-CsPhoneNumberBulkUpdateDrNumberAcquiredCapabilitiesOrder.md)
+Creates a new bulk update order for acquired capabilities update.
+
+### [New-CsPhoneNumberBulkUpdateLocationIdOrder](New-CsPhoneNumberBulkUpdateLocationIdOrder.md)
+Creates a new bulk update order for Location Id update.
+
+### [New-CsPhoneNumberBulkUpdateNetworkSiteIdOrder](New-CsPhoneNumberBulkUpdateNetworkSiteIdOrder.md)
+Creates a new bulk update order for Network Site Id update. 
+
+### [New-CsPhoneNumberBulkUpdateReverseNumberLookupOrder](New-CsPhoneNumberBulkUpdateReverseNumberLookupOrder.md)
+Creates a new bulk update order for reverse number lookup option. 
+
 ### [New-CsPhoneNumberBulkUpdateTagsOrder](New-CsPhoneNumberBulkUpdateTagsOrder.md)
 Creates a new bulk update order for phone number tags. 
 
@@ -914,8 +932,14 @@ This cmdlet creates a request for remote log collection for a device.
 ### [New-CsSdgBulkSignInRequest](New-CsSdgBulkSignInRequest.md)
 Use the New-CsSdgBulkSignInRequest cmdlet to sign in a batch of up to 100 devices.
 
+### [New-CsSharedCallHistoryTemplate](New-CsSharedCallHistoryTemplate.md)
+Use the New-CsSharedCallHistoryTemplate cmdlet to create a Shared Call History template.
+
 ### [New-CsSharedCallQueueHistoryTemplate](New-CsSharedCallQueueHistoryTemplate.md)
-Use the New-CsSharedCallQueueHistory cmdlet to create a Shared Call Queue History template.
+Deprecated - new cmdlet is New-CsSharedCallHistoryTemplate
+
+### [New-CsSharedVoicemailTriageSettingsTemplate](New-CsSharedVoicemailTriageSettingsTemplate.md)
+This cmdlet creates an AI triage settings template for Shared Voicemails.
 
 ### [New-CsTag](New-CsTag.md)
 Use the New-CsTag cmdlet to create a new tag that can be added to a Tag template.
@@ -1034,15 +1058,6 @@ Creates a new TeamsRoomVideoTeleConferencingPolicy.
 ### [New-CsTeamsSharedCallingRoutingPolicy](New-CsTeamsSharedCallingRoutingPolicy.md)
 Use the New-CsTeamsSharedCallingRoutingPolicy cmdlet to configure a shared calling routing policy.
 
-### [New-CsTeamsShiftsConnection](New-CsTeamsShiftsConnection.md)
-This cmdlet creates a new workforce management (WFM) connection.
-
-### [New-CsTeamsShiftsConnectionBatchTeamMap](New-CsTeamsShiftsConnectionBatchTeamMap.md)
-This cmdlet submits an operation connecting multiple Microsoft Teams teams and Workforce management (WFM) teams.
-
-### [New-CsTeamsShiftsConnectionInstance](New-CsTeamsShiftsConnectionInstance.md)
-This cmdlet creates a Shifts connection instance.
-
 ### [New-CsTeamsShiftsPolicy](New-CsTeamsShiftsPolicy.md)
 This cmdlet allows you to create a new TeamsShiftPolicy instance and set it's properties.
 
@@ -1118,11 +1133,20 @@ Creates a new app in the Teams tenant app store.
 ### [Register-CsOnlineDialInConferencingServiceNumber](Register-CsOnlineDialInConferencingServiceNumber.md)
 The Register-CsOnlineDialInConferencingServiceNumber command allows you to assign any additional service number that you may have acquired to your conference bridge.
 
+### [Remove-AIGeneratedKnowledge](Remove-AIGeneratedKnowledge.md)
+This cmdlet deletes the AI-generated meeting knowledge for specific metings/calls.
+
+### [Remove-CsAgent](Remove-CsAgent.md)
+Deletes an AI Agent.
+
 ### [Remove-CsApplicationAccessPolicy](Remove-CsApplicationAccessPolicy.md)
 Deletes an existing application access policy.
 
 ### [Remove-CsAutoAttendant](Remove-CsAutoAttendant.md)
 Use the Remove-CsAutoAttendant cmdlet to delete an Auto Attendant (AA).
+
+### [Remove-CsAutoRecordingTemplate](Remove-CsAutoRecordingTemplate.md)
+Use the Remove-CsAutoRecordingTemplate cmdlet to delete an Auto Recording template.
 
 ### [Remove-CsCallingLineIdentity](Remove-CsCallingLineIdentity.md)
 Use the `Remove-CsCallingLineIdentity` cmdlet to remove a Caller ID policy from your organization.
@@ -1156,6 +1180,9 @@ Removes an existing Mainline attendant appointment booking flow.
 
 ### [Remove-CsMainlineAttendantQuestionAnswerFlow](Remove-CsMainlineAttendantQuestionAnswerFlow.md)
 Removes an existing Mainline attendant question and answer flow.
+
+### [Remove-CsMainlineAttendantSpamDetectionTemplate](Remove-CsMainlineAttendantSpamDetectionTemplate.md)
+Removes an existing Mainline Attendant Spam Detection template.
 
 ### [Remove-CsOnlineApplicationInstanceAssociation](Remove-CsOnlineApplicationInstanceAssociation.md)
 Use the Remove-CsOnlineApplicationInstanceAssociation cmdlet to remove the association between an application instance and the associated application configuration.
@@ -1223,8 +1250,14 @@ This cmdlet allows the admins to remove a tenant default configuration that appl
 ### [Remove-CsTeamsRemoteLogCollectionDevice](Remove-CsTeamsRemoteLogCollectionDevice.md)
 This cmdlet will remove/delete a device from the remote log collection configuration.
 
+### [Remove-CsSharedCallHistoryTemplate](Remove-CsSharedCallHistoryTemplate.md)
+Removes Shared Call History template.
+
 ### [Remove-CsSharedCallQueueHistoryTemplate](Remove-CsSharedCallQueueHistoryTemplate.md)
-```powershell Remove-CsSharedCallQueueHistoryTemplate -Id <String> [<CommonParameters>] ```
+Deprecated - use new cmdlet CsSharedCallHistoryTemplate.
+
+### [Remove-CsSharedVoicemailTriageSettingsTemplate](Remove-CsSharedVoicemailTriageSettingsTemplate.md)
+Removes AI Triage SettingsTemplate for Shared Voicemails.
 
 ### [Remove-CsTagsTemplate](Remove-CsTagsTemplate.md)
 Deletes an existing Tag template.
@@ -1325,15 +1358,6 @@ Deletes an existing TeamsRoomVideoTeleConferencingPolicy.
 ### [Remove-CsTeamsSharedCallingRoutingPolicy](Remove-CsTeamsSharedCallingRoutingPolicy.md)
 Deletes an existing Teams shared calling routing policy instance.
 
-### [Remove-CsTeamsShiftsConnection](Remove-CsTeamsShiftsConnection.md)
-This cmdlet deletes a Shifts connection.
-
-### [Remove-CsTeamsShiftsConnectionInstance](Remove-CsTeamsShiftsConnectionInstance.md)
-This cmdlet deletes a Shifts connection instance.
-
-### [Remove-CsTeamsShiftsConnectionTeamMap](Remove-CsTeamsShiftsConnectionTeamMap.md)
-This cmdlet removes the mapping between the Microsoft Teams team and workforce management (WFM) team.
-
 ### [Remove-CsTeamsShiftsPolicy](Remove-CsTeamsShiftsPolicy.md)
 The `Remove-CsTeamsShiftsPolicy` cmdlet removes a previously created TeamsShiftsPolicy.
 
@@ -1424,6 +1448,9 @@ Removes the tenant's hierarchy.
 ### [Remove-TeamUser](Remove-TeamUser.md)
 Remove an owner or member from a team, and from the unified group which backs the team.
 
+### [Set-CsAgent](Set-CsAgent.md)
+Modifies an AI Agent that can be associated with a Teams Phone Resource Account.
+
 ### [Set-CsApplicationAccessPolicy](Set-CsApplicationAccessPolicy.md)
 Modifies an existing application access policy.
 
@@ -1432,6 +1459,9 @@ Modifies an existing application meeting configuration for the tenant.
 
 ### [Set-CsAutoAttendant](Set-CsAutoAttendant.md)
 Use the Set-CsAutoAttendant cmdlet to modify the properties of an existing Auto Attendant (AA).
+
+### [Set-CsAutoRecordingTemplate](Set-CsAutoRecordingTemplate.md)
+Use the Set-CsAutoRecordingTemplate cmdlet to modify the properties of an existing Auto Recording template.
 
 ### [Set-CsCallingLineIdentity](Set-CsCallingLineIdentity.md)
 Use the `Set-CsCallingLineIdentity` cmdlet to modify a Caller ID policy in your organization.
@@ -1456,6 +1486,9 @@ Modifies an existing Mainline Attendant appointment booking flow.
 
 ### [Set-CsMainlineAttendantQuestionAnswerFlow](Set-CsMainlineAttendantQuestionAnswerFlow.md)
 Modifies an existing Mainline Attendant question and answer (FAQ) flow.
+
+### [Set-CsMainlineAttendantSpamDetectionTemplate](Set-CsMainlineAttendantSpamDetectionTemplate.md)
+Modifies an existing Mainline Attendant Spam Detection template.
 
 ### [Set-CsPersonalAttendantSettings](Set-CsPersonalAttendantSettings.md)
 Modifies the personal attendant settings for a user.
@@ -1547,8 +1580,14 @@ This cmdlet allows the admins to set a tenant default configuration that applies
 ### [Set-CsTeamsRemoteLogCollectionDevice](Set-CsTeamsRemoteLogCollectionDevice.md)
 This cmdlet allows the admin to create and edit a device requested for remote log collection.
 
+### [Set-CsSharedCallHistoryTemplate](Set-CsSharedCallHistoryTemplate.md)
+This cmdlet allows to configure Shared Call History template.
+
 ### [Set-CsSharedCallQueueHistoryTemplate](Set-CsSharedCallQueueHistoryTemplate.md)
-```powershell Set-CsSharedCallQueueHistoryTemplate -Instance <instance> [<CommonParameters>] ```
+Deprecated - use new cmdlet Set-CsSharedCallHistoryTemplate.
+
+### [Set-CsSharedVoicemailTriageSettingsTemplate](Set-CsSharedVoicemailTriageSettingsTemplate.md)
+This cmdlet allows to configure AI Triage Settings Template for Shared Voicemails.
 
 ### [Set-CsTagsTemplate](Set-CsTagsTemplate.md)
 Make changes to an existing Tag template.
@@ -1691,12 +1730,6 @@ Use the Set-CsTeamsSharedCallingRoutingPolicy cmdlet to change a shared calling 
 ### [Set-CsTeamsShiftsAppPolicy](Set-CsTeamsShiftsAppPolicy.md)
 Allows you to set or update properties of a Teams Shifts App Policy instance.
 
-### [Set-CsTeamsShiftsConnection](Set-CsTeamsShiftsConnection.md)
-This cmdlet sets an existing workforce management (WFM) connection.
-
-### [Set-CsTeamsShiftsConnectionInstance](Set-CsTeamsShiftsConnectionInstance.md)
-This cmdlet updates a Shifts connection instance.
-
 ### [Set-CsTeamsShiftsPolicy](Set-CsTeamsShiftsPolicy.md)
 This cmdlet allows you to set or update properties of a TeamsShiftPolicy instance, including Teams off shift warning message-specific settings.
 
@@ -1811,9 +1844,6 @@ Use the Test-CsEffectiveTenantDialPlan cmdlet to test a tenant dial plan.
 ### [Test-CsInboundBlockedNumberPattern](Test-CsInboundBlockedNumberPattern.md)
 This cmdlet tests the given number against the created (by using New-CsInboundBlockedNumberPattern cmdlet) blocked numbers pattern.
 
-### [Test-CsTeamsShiftsConnectionValidate](Test-CsTeamsShiftsConnectionValidate.md)
-This cmdlet validates workforce management (WFM) connection settings.
-
 ### [Test-CsTeamsTranslationRule](Test-CsTeamsTranslationRule.md)
 This cmdlet tests a phone number against the configured number manipulation rules and returns information about the matching rule.
 
@@ -1834,12 +1864,6 @@ Use Update-CsAutoAttendant cmdlet to force an update of resources associated wit
 
 ### [Update-CsPhoneNumberTag](Update-CsPhoneNumberTag.md)
 This cmdlet allows admin to update existing telephone number tags.
-
-### [Update-CsTeamsShiftsConnection](Update-CsTeamsShiftsConnection.md)
-This cmdlet updates an existing workforce management (WFM) connection.
-
-### [Update-CsTeamsShiftsConnectionInstance](Update-CsTeamsShiftsConnectionInstance.md)
-This cmdlet updates Shifts connection instance fields.
 
 ### [Update-CsTeamTemplate](Update-CsTeamTemplate.md)
 This cmdlet submits an operation that updates a custom team template with new team template settings.

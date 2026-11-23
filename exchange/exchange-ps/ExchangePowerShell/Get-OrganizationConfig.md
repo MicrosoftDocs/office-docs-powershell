@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
-author: chrisda
 external help file: Microsoft.Exchange.RemoteConnections-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-organizationconfig
 schema: 2.0.0
 title: Get-OrganizationConfig
@@ -57,6 +55,15 @@ This example shows the applications that are allowed access to EWS and REST.
 If the value of EwsApplicationAccessPolicy is EnforceAllowList, only the applications specified in EwsAllowList are allowed to access EWS and REST.
 
 If the value of EwsApplicationAccessPolicy is EnforceBlockList, all applications are allowed to access EWS and REST, except those specified in EwsBlockList.
+
+### Example 4
+```powershell
+Get-OrganizationConfig | Format-List DefaultFolderPermissionRestricted
+```
+
+This example shows whether the organization has enabled the restriction that limits Default and Anonymous mailbox folder permissions to None.
+
+This example is available only in the cloud-based service.
 
 ## PARAMETERS
 

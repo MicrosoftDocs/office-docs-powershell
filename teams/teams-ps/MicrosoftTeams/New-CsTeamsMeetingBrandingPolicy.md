@@ -1,10 +1,10 @@
 ---
-author: serdarsoysal
+author: officedocspr
 external help file: Microsoft.Teams.Policy.Administration.Cmdlets.Core.dll-Help.xml
 Locale: en-US
 manager: stanlythomas
 Module Name: MicrosoftTeams
-ms.author: serdars
+ms.author: odocspr
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamsmeetingbrandingpolicy
 schema: 2.0.0
 title: New-CsTeamsMeetingBrandingPolicy
@@ -22,6 +22,7 @@ New-CsTeamsMeetingBrandingPolicy
  [-MeetingBackgroundImages <PSListModifier>]
  [-MeetingBrandingThemes <PSListModifier>]
  [-DefaultTheme <String>] [-EnableMeetingOptionsThemeOverride <Boolean>]
+ [-EnableMeetingOptionsBrandedReactionsOverride <Boolean>]
  [-EnableNdiAssuranceSlate <Boolean>] [-NdiAssuranceSlateImages <PSListModifier>] [-RequireBackgroundEffect <Boolean>]
  [-EnableMeetingBackgroundImages <Boolean>] [-Identity] <String> [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
@@ -76,6 +77,23 @@ Accept wildcard characters: False
 
 ### -EnableMeetingBackgroundImages
 Enable custom meeting backgrounds.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -EnableMeetingOptionsBrandedReactionsOverride
+Specifies whether meeting organizers can disable branded reactions for individual meetings through Meeting Options.
+Set this parameter to `$true` to allow organizers to disable branded reactions, or `$false` to prevent them from disabling branded reactions through Meeting Options.
+The default policy value is `$false`.
 
 ```yaml
 Type: Boolean

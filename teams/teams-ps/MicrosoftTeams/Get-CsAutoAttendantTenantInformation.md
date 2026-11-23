@@ -1,12 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendanttenantinformation
 schema: 2.0.0
 title: Get-CsAutoAttendantTenantInformation
@@ -42,7 +42,7 @@ Gets the default auto attendant information for the logged in tenant.
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -68,3 +68,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## NOTES
 
 ## RELATED LINKS
+
+[Get-CsAutoAttendantSupportedLanguage](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendantsupportedlanguage)
+
+[Get-CsAutoAttendantSupportedTimeZone](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendantsupportedtimezone)
+
+[Get-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendant)

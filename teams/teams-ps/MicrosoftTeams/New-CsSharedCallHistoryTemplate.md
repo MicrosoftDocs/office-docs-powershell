@@ -1,0 +1,166 @@
+---
+applicable: Microsoft Teams
+author: clyvr
+external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
+Locale: en-US
+manager: roykuntz
+Module Name: MicrosoftTeams
+ms.author: colongma
+ms.reviewer: colongma
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cssharedcallhistorytemplate
+schema: 2.0.0
+title: New-CsSharedCallHistoryTemplate
+---
+
+# New-CsSharedCallHistoryTemplate
+
+## SYNOPSIS
+Creates a Shared Call History template.
+
+## SYNTAX
+
+```
+New-CsSharedCallHistoryTemplate -Name <String> -Description <String>
+ [-IncomingMissedCalls <Object>] [-AnsweredAndOutboundCalls <Object>]  [-IncomingRedirectedCalls <Object>] [<CommonParameters>]
+```
+
+## DESCRIPTION
+Use the New-CsSharedCallHistoryTemplate cmdlet to create a Shared Call History template. The template defines which roles can access Shared Call History and which parts of the history are visible to them.
+
+## EXAMPLES
+
+### Example 1
+```
+New-CsSharedCallHistoryTemplate -Name "Customer Service" -Description "Missed:All Answered:Auth" -IncomingMissedCalls AuthorizedUsersAndAgents -AnsweredAndOutboundCalls AuthorizedUsersOnly
+```
+
+This example creates a new Shared Call History template where incoming missed calls for Call Queue are shown to authorized users and agents and, answered and outbound calls are shown to authorized users only. 
+Visibility to Auto Attendant Shared Voicemails is not defined, so it will be none.
+
+## PARAMETERS
+
+### -AnsweredAndOutboundCalls
+
+Who sees Call Queue answered and outbound calls in the shared call history.
+
+Supported values: None | AuthorizedUsersOnly | AuthorizedUsersAndAgents
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Description
+
+A description for the shared call history template.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncomingMissedCalls
+
+Who sees Call Queue incoming missed calls and shared voicemails in the shared call  history.
+
+Supported values: None | AuthorizedUsersOnly | AuthorizedUsersAndAgents
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncomingRedirectedCalls
+
+Who sees AutoAttendant Shared Voicemails events in the shared call  history. 
+
+Supported values: None | AuthorizedUsersOnly | AuthorizedUsersAndGroupMembers
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+
+The name of the shared call history template.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### CommonParameters
+
+This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
+
+## INPUTS
+
+### None
+
+## OUTPUTS
+
+### Microsoft.Rtc.Management.OAA.Models.AutoAttendant
+
+## NOTES
+
+## RELATED LINKS
+
+[Get-CsSharedCallHistoryTemplate](./Get-CsSharedCallHistoryTemplate.md)
+
+[Set-CsSharedCallHistoryTemplate](./Set-CsSharedCallHistoryTemplate.md)
+
+[Remove-CsSharedCallHistoryTemplate](./Remove-CsSharedCallHistoryTemplate.md)
+
+[New-CsCallQueue](./New-CsCallQueue.md)
+
+[Get-CsCallQueue](./Get-CsCallQueue.md)
+
+[Set-CsCallQueue](./Set-CsCallQueue.md)
+
+[Remove-CsCallQueue](./Remove-CsCallQueue.md)
+
+[New-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendant)
+
+[Get-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/get-csautoattendant)
+
+[Set-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/set-csautoattendant)
+
+[Remove-CsAutoAttendant](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csautoattendant)
+
+

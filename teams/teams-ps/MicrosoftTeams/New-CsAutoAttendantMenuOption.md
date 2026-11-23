@@ -1,12 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantmenuoption
 schema: 2.0.0
 title: New-CsAutoAttendantMenuOption
@@ -25,17 +25,6 @@ New-CsAutoAttendantMenuOption -Action <List> [-DtmfResponse <List>] [-VoiceRespo
 
 ## DESCRIPTION
 The New-CsAutoAttendantMenuOption cmdlet creates a new menu option for the Auto Attendant (AA) service. The AA service uses the menu options to respond to a caller with the appropriate action.
-
-> [!IMPORTANT]
-> The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
->
-> - -Description
-> - -Action AgentsAndQueues
-> - -Action MainLineAttendantFlow
-> - -MainlineAttendantTarget
-> - -AgentTargetType
-> - -AgentTarget
-> - -AgentTargetTagTemplateId
 
 ## EXAMPLES
 
@@ -118,7 +107,7 @@ Used by Mainline Attendant only.
 Limit: 500 characters
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -143,7 +132,7 @@ Type: Object
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -155,7 +144,7 @@ Accept wildcard characters: False
 The Mainline Attendant call flow target identifier.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -243,7 +232,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 

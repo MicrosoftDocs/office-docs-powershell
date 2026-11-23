@@ -1,10 +1,8 @@
 ---
 applicable: Security & Compliance
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-autosensitivitylabelpolicy
 schema: 2.0.0
 title: Set-AutoSensitivityLabelPolicy
@@ -30,7 +28,8 @@ Set-AutoSensitivityLabelPolicy [-Identity] <PolicyIdParameter>
  [-AddSharePointLocation <MultiValuedProperty>]
  [-AddSharePointLocationException <MultiValuedProperty>]
  [-ApplySensitivityLabel <String>]
- [-AutoEnableAfter <Timespan>]
+ [-ApplySensitivityLabelOverwriteWorkloads <Workload>]
+ [-AutoEnableAfter <TimeSpan>]
  [-Comment <String>]
  [-Confirm]
  [-Enabled <Boolean>]
@@ -257,6 +256,24 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ApplySensitivityLabelOverwriteWorkloads
+
+> Applicable: Security & Compliance
+
+{{ Fill ApplySensitivityLabelOverwriteWorkloads Description }}
+
+```yaml
+Type: Workload
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AutoEnableAfter
 
 > Applicable: Security & Compliance
@@ -270,7 +287,7 @@ A valid value is between 1 hour and 25 days. To clear an existing AutoEnableAfte
 You must use this parameter with the -StartSimulation parameter.
 
 ```yaml
-Type: System.TimeSpan
+Type: TimeSpan
 Parameter Sets: Identity
 Aliases:
 
@@ -303,10 +320,10 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter

@@ -883,6 +883,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 ### [Update-OfflineAddressBook](Update-OfflineAddressBook.md)
 
 ## encryption-and-certificates Cmdlets
+### [Add-LdapDirectory](Add-LdapDirectory.md)
+
 ### [Enable-ExchangeCertificate](Enable-ExchangeCertificate.md)
 
 ### [Export-ExchangeCertificate](Export-ExchangeCertificate.md)
@@ -892,6 +894,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 ### [Get-ExchangeCertificate](Get-ExchangeCertificate.md)
 
 ### [Get-IRMConfiguration](Get-IRMConfiguration.md)
+
+### [Get-LdapDirectory](Get-LdapDirectory.md)
 
 ### [Get-M365DataAtRestEncryptionPolicy](Get-M365DataAtRestEncryptionPolicy.md)
 
@@ -919,6 +923,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Remove-ExchangeCertificate](Remove-ExchangeCertificate.md)
 
+### [Remove-LdapDirectory](Remove-LdapDirectory.md)
+
 ### [Remove-MailboxIRMAccess](Remove-MailboxIRMAccess.md)
 
 ### [Remove-OMEConfiguration](Remove-OMEConfiguration.md)
@@ -926,6 +932,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 ### [Set-DataEncryptionPolicy](Set-DataEncryptionPolicy.md)
 
 ### [Set-IRMConfiguration](Set-IRMConfiguration.md)
+
+### [Set-LdapDirectory](Set-LdapDirectory.md)
 
 ### [Set-M365DataAtRestEncryptionPolicy](Set-M365DataAtRestEncryptionPolicy.md)
 
@@ -1191,6 +1199,10 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 ### [Get-UserPhoto](Get-UserPhoto.md)
 
 ### [Import-RecipientDataProperty](Import-RecipientDataProperty.md)
+
+### [Invoke-CalendarEventMigration](Invoke-CalendarEventMigration.md)
+
+### [Invoke-ChangeMeetingOrganizer](Invoke-ChangeMeetingOrganizer.md)
 
 ### [New-App](New-App.md)
 
@@ -1619,6 +1631,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 ### [Test-MigrationServerAvailability](Test-MigrationServerAvailability.md)
 
 ## organization Cmdlets
+### [Add-HVEAppAccess](Add-HVEAppAccess.md)
+
 ### [Disable-CmdletExtensionAgent](Disable-CmdletExtensionAgent.md)
 
 ### [Enable-CmdletExtensionAgent](Enable-CmdletExtensionAgent.md)
@@ -1634,6 +1648,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 ### [Get-AuthenticationPolicy](Get-AuthenticationPolicy.md)
 
 ### [Get-AuthServer](Get-AuthServer.md)
+
+### [Get-BillingPolicy](Get-BillingPolicy.md)
 
 ### [Get-CmdletExtensionAgent](Get-CmdletExtensionAgent.md)
 
@@ -1653,6 +1669,10 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 
 ### [Get-FeatureConfiguration](Get-FeatureConfiguration.md)
 
+### [Get-HVEAccountBillingPolicy](Get-HVEAccountBillingPolicy.md)
+
+### [Get-HVEAccountSettings](Get-HVEAccountSettings.md)
+
 ### [Get-Notification](Get-Notification.md)
 
 ### [Get-OrganizationConfig](Get-OrganizationConfig.md)
@@ -1664,6 +1684,14 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 ### [Get-ServicePrincipal](Get-ServicePrincipal.md)
 
 ### [Get-SettingOverride](Get-SettingOverride.md)
+
+### [Invoke-ProvisioningAcceptedDomainDiagnostic](Invoke-ProvisioningAcceptedDomainDiagnostic.md)
+
+### [Invoke-ProvisioningCompanyObjectDiagnostic](Invoke-ProvisioningCompanyObjectDiagnostic.md)
+
+### [Invoke-ProvisioningRecipientDiagnostic](Invoke-ProvisioningRecipientDiagnostic.md)
+
+### [Invoke-ProvisioningVerifyRbacDiagnostic](Invoke-ProvisioningVerifyRbacDiagnostic.md)
 
 ### [New-ApplicationAccessPolicy](New-ApplicationAccessPolicy.md)
 
@@ -1688,6 +1716,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 ### [Remove-AuthServer](Remove-AuthServer.md)
 
 ### [Remove-FeatureConfiguration](Remove-FeatureConfiguration.md)
+
+### [Remove-HVEAppAccess](Remove-HVEAppAccess.md)
 
 ### [Remove-PartnerApplication](Remove-PartnerApplication.md)
 
@@ -1716,6 +1746,10 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 ### [Set-ExchangeSettings](Set-ExchangeSettings.md)
 
 ### [Set-FeatureConfiguration](Set-FeatureConfiguration.md)
+
+### [Set-HVEAccountBillingPolicy](Set-HVEAccountBillingPolicy.md)
+
+### [Set-HVEAccountSettings](Set-HVEAccountSettings.md)
 
 ### [Set-Notification](Set-Notification.md)
 
@@ -1761,6 +1795,8 @@ Exchange PowerShell is built on PowerShell technology to a powerful command-line
 ### [Execute-AzureADLabelSync](Execute-AzureADLabelSync.md)
 
 ### [Export-JournalRuleCollection](Export-JournalRuleCollection.md)
+
+### [Export-PurviewConfig](Export-PurviewConfig.md)
 
 ### [Export-TransportRuleCollection](Export-TransportRuleCollection.md)
 

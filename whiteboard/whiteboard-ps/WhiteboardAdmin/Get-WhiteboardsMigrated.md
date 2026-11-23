@@ -1,7 +1,7 @@
-﻿---
+---
 external help file: WhiteboardAdmin-help.xml
 Module Name: WhiteboardAdmin
-online version: https://learn.microsoft.com/powershell/module/whiteboard/get-whiteboardsmigrated
+online version: https://learn.microsoft.com/powershell/module/whiteboardadmin/get-whiteboardsmigrated
 applicable: Microsoft Whiteboard
 title: Get-WhiteboardsMigrated
 schema: 2.0.0

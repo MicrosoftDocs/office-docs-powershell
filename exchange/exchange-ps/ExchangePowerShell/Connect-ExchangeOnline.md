@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Online
-author: chrisda
 external help file: ExchangeOnlineManagement-help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/connect-exchangeonline
 schema: 2.0.0
 title: Connect-ExchangeOnline
@@ -922,7 +920,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-**Note**: This parameter is deprecated in module version 3.9.2 or later. Remote PowerShell connections to Exchange Online PowerShell were deprecated in October 2023. For more information, see [Deprecation of Remote PowerShell in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692).
+**Note**: This parameter is deprecated in module version 3.9.2 or later. REST API connections replaced Remote PowerShell connections in Exchange Online PowerShell in October 2023. For more information, see [Deprecation of Remote PowerShell in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/deprecation-of-remote-powershell-in-exchange-online-re-enabling/ba-p/3779692).
 
 ```yaml
 Type: SwitchParameter

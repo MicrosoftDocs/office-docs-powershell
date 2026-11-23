@@ -67,9 +67,9 @@
     "externalReference": [],
     "globalMetadata": {
       "uhfHeaderId": "MSDocsHeader-M365-IT",
-      "author": "serdarsoysal",
-      "ms.author": "serdars",
-      "manager": "serdars",
+      "author": "officedocspr",
+      "ms.author": "odocspr",
+      "manager": "odocspr",
       "ms.topic": "reference",
       "ms.service": "spmt-powershell",
       "products": [
@@ -78,8 +78,20 @@
       ],
       "ms.devlang": "powershell",
       "feedback_system": "Standard",
-            "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
+      "feedback_product_url": "https://github.com/MicrosoftDocs/office-docs-powershell/issues"
     },
+    "contributors_to_exclude": [
+      "aditisrivastava07",
+      "AGuentherinWA",
+      "claydetels19",
+      "dstrome",
+      "garycentric",
+      "padmagit77",
+      "rjagiewich",
+      "Ruchika-mittal01",
+      "Shipra-M09",
+      "techtoons"
+    ],
     "fileMetadata": {},
     "template": [],
     "dest": "spmt-ps"

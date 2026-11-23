@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Online
-author: chrisda
 external help file: Microsoft.Exchange.Management.RestApiClient.dll-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-exomailboxfolderstatistics
 schema: 2.0.0
 title: Get-EXOMailboxFolderStatistics
@@ -28,7 +26,6 @@ Get-EXOMailboxFolderStatistics
  [-ExternalDirectoryObjectId <Guid>]
  [-Folderscope <ElcFolderType>]
  [-Identity <String>]
- [-IncludeAnalysis]
  [-IncludeOldestAndNewestItems]
  [-IncludeSoftDeletedRecipients]
  [-PrimarySmtpAddress <String>]
@@ -90,7 +87,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-This parameter is reserved for internal Microsoft use.
+**Note**: This parameter is deprecated in module version 3.7.0-Preview1 or later.
 
 ```yaml
 Type: String
@@ -192,24 +189,6 @@ Required: False
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
-### -IncludeAnalysis
-
-> Applicable: Exchange Online
-
-This parameter is reserved for internal Microsoft use.
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

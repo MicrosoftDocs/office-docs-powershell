@@ -1,20 +1,24 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Get-CsSharedCallQueueHistoryTemplate
+ms.author: colongma
+ms.reviewer: colongma
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-cssharedcallqueuehistorytemplate
 schema: 2.0.0
 title: Get-CsSharedCallQueueHistoryTemplate
 ---
-
 # Get-CsSharedCallQueueHistoryTemplate
 
 ## SYNOPSIS
-Use the Get-CsSharedCallQueueHistory cmdlet to list the Shared Call Queue History templates.
+
+> [!CAUTION]
+> This PowerShell cmdlet has been deprecated.
+>
+> Please use: [Get-CsSharedCallHistoryTemplate](Get-CsSharedCallHistoryTemplate.md)
 
 ## SYNTAX
 
@@ -23,7 +27,7 @@ Get-CsSharedCallQueueHistoryTemplate [-Id <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use the Get-CsSharedCallQueueHistory cmdlet to list the Shared Call Queue History templates.
+Use the Get-CsSharedCallQueueHistoryTemplate cmdlet to list the Shared Call Queue History templates.
 
 ## EXAMPLES
 
@@ -48,11 +52,11 @@ This example retrieves all the Shared Call Queue History Templates
 The Id of  the shared call queue history template.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: false
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

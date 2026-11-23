@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-hostedoutboundspamfilterpolicy
 schema: 2.0.0
 title: Set-HostedOutboundSpamFilterPolicy
@@ -124,7 +122,7 @@ Accept wildcard characters: False
 
 The AutoForwardingMode specifies how the policy controls automatic email forwarding to external recipients. Valid values are:
 
-- Automatic: This value is the default. This value is now the same as Off. When this value was originally introduced, it was equivalent to On. Over time, thanks to the principles of [secure by default](https://learn.microsoft.com/defender-office-365/secure-by-default), the effect of this value was eventually changed to Off for all customers. For more information, see [this blog post](https://techcommunity.microsoft.com/t5/exchange-team-blog/all-you-need-to-know-about-automatic-email-forwarding-in/ba-p/2074888).
+- Automatic: This value is the default. When this value was introduced, it was equivalent to On. In 2021, the value changed to Off for new organizations and for existing organizations that weren't actively using the Automatic value. For existing organizations that were already using the value, it can remain equivalent to On. Because the behavior can differ by organization, use On or Off instead of Automatic. For more information, see [Automatic email forwarding in Exchange Online](https://techcommunity.microsoft.com/t5/exchange-team-blog/all-you-need-to-know-about-automatic-email-forwarding-in/ba-p/2074888).
 - On: Automatic external email forwarding isn't disabled by the policy.
 - Off: Automatic external email forwarding is disabled by the policy and results in a non-delivery report (also known as an NDR or bounce message) to the sender.
 
@@ -188,10 +186,10 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -308,7 +306,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+The WhatIf switch shows what the command does without making any changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

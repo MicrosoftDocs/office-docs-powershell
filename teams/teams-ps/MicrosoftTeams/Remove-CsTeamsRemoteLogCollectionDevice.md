@@ -19,7 +19,7 @@ Removes a device for which remote log collection was requested for.
 ## SYNTAX
 
 ```
-Remove-CsTeamsRemoteLogCollectionDevice [-Identity] <Guid>> [-Force] [-WhatIf] [-Confirm]
+Remove-CsTeamsRemoteLogCollectionDevice [-Identity <Guid>] [-Id <Guid>] [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -79,6 +79,22 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -Id
+Identity of the record (the remote log collection device).
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -Tenant
 {{ Fill Tenant Description }}

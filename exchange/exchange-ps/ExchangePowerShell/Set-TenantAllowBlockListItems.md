@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
-author: chrisda
 external help file: Microsoft.Exchange.TransportMailflow-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/set-tenantallowblocklistitems
 schema: 2.0.0
 title: Set-TenantAllowBlockListItems
@@ -259,7 +257,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
-The Notes parameters specifies additional information about the object. If the value contains spaces, enclose the value in quotation marks (").
+The Notes parameters specifies additional information about the object. If the value contains spaces, enclose the value in quotation marks ("). If the value contains quotation marks, add a backslash ( \ ) before the quotation mark.
 
 ```yaml
 Type: String

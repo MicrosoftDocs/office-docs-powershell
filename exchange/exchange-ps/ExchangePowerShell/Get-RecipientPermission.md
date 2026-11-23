@@ -1,10 +1,8 @@
 ---
 applicable: Exchange Online
-author: chrisda
 external help file: Microsoft.Exchange.ProvisioningAndMigration-Help.xml
 Locale: en-US
 Module Name: ExchangePowerShell
-ms.author: chrisda
 online version: https://learn.microsoft.com/powershell/module/exchangepowershell/get-recipientpermission
 schema: 2.0.0
 title: Get-RecipientPermission
@@ -26,6 +24,7 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 Get-RecipientPermission [[-Identity] <RecipientIdParameter>]
  [-AccessRights <MultiValuedProperty>]
+ [-IncludeTrusteeWithPrimarySmtpAddress]
  [-ReadFromDomainController]
  [-ResultSize <Unlimited>]
  [-Trustee <SecurityPrincipalIdParameter>]
@@ -101,6 +100,24 @@ The AccessRights parameter filters the results by permission. The only valid val
 
 ```yaml
 Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeTrusteeWithPrimarySmtpAddress
+
+> Applicable: Exchange Online
+
+{{ Fill IncludeTrusteeWithPrimarySmtpAddress Description }}
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
