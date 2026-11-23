@@ -97,6 +97,8 @@ Set-CsTeamsMeetingPolicy [[-Identity] <XdsIdentity>]
  [-Force]
  [-InfoShownInReportMode <String>]
  [-IntelligentRecapDocxFileExpirationDays <Int32>]
+ [-IntelligentRecapForEphemeralMeetings <String>]
+ [-IntelligentRecapForTranscribedMeetings <String>]
  [-IPAudioMode <String>]
  [-IPVideoMode <String>]
  [-LiveCaptionsEnabledType <String>]
@@ -221,7 +223,7 @@ Set-CsTeamsMeetingPolicy -Identity "SalesMeetingPolicy" `
     -IntelligentRecapForTranscribedMeetings DefaultDisabledUserOverrideEnabled
 ```
 
-In this example, Intelligent Recap is off by default for both meeting types, but organizers can turn it on. In PowerShell, you can configure the meeting types independently: use `-IntelligentRecapForEphemeralMeetings` for meetings that don't save a transcript and `-IntelligentRecapForTranscribedMeetings` for meetings that save a transcript. These settings apply only when `AllowIntelligentRecap` is `$true`.
+In this example, Intelligent Recap is off by default for both meeting types, but organizers can turn it on. In PowerShell, you can configure the meeting types independently with [-IntelligentRecapForEphemeralMeetings](#-intelligentrecapforephemeralmeetings) and [-IntelligentRecapForTranscribedMeetings](#-intelligentrecapfortranscribedmeetings). These settings apply only when `AllowIntelligentRecap` is `$true`.
 
 In the Teams admin center, go to **Meetings** > **Meeting policies** > **Copilot and other AI** > **Intelligent recap**. The presets set both meeting types together without changing `AllowIntelligentRecap`:
 
@@ -1510,6 +1512,58 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+
+### -IntelligentRecapForEphemeralMeetings
+
+Controls whether Intelligent Recap is on by default and whether the organizer can change that setting for newly created meetings where the **Copilot** meeting option is **Only during the meeting**.
+
+> [!NOTE]
+> This parameter is rolling out and might not be available in your tenant yet. It applies only when `AllowIntelligentRecap` is `$true`.
+
+Possible values are:
+
+- `DefaultEnabledUserOverrideEnabled` (default): On by default. Organizers can turn it off.
+- `DefaultDisabledUserOverrideEnabled`: Off by default. Organizers can turn it on.
+- `DefaultDisabledUserOverrideDisabled`: Off. Organizers can't turn it on.
+- `DefaultEnabledUserOverrideDisabled`: On. Organizers can't turn it off.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: DefaultEnabledUserOverrideEnabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IntelligentRecapForTranscribedMeetings
+
+Controls whether Intelligent Recap is on by default and whether the organizer can change that setting for newly created meetings where the **Copilot** meeting option is **During and after the meeting**.
+
+> [!NOTE]
+> This parameter is rolling out and might not be available in your tenant yet. It applies only when `AllowIntelligentRecap` is `$true`.
+
+Possible values are:
+
+- `DefaultEnabledUserOverrideEnabled` (default): On by default. Organizers can turn it off.
+- `DefaultDisabledUserOverrideEnabled`: Off by default. Organizers can turn it on.
+- `DefaultDisabledUserOverrideDisabled`: Off. Organizers can't turn it on.
+- `DefaultEnabledUserOverrideDisabled`: On. Organizers can't turn it off.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: DefaultEnabledUserOverrideEnabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -IPAudioMode
 Determines whether audio can be turned on in meetings and group calls. Set this to ENABLEDOUTGOINGINCOMING to allow outgoing and incoming audio in the meeting. Set this to DISABLED to prohibit outgoing and incoming audio in the meeting.
