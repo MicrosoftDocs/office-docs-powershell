@@ -210,6 +210,27 @@ Set-CsTeamsMeetingPolicy -Identity "SyntheticDetectionPolicy" -SyntheticMediaDet
 
 In Example 5, the Set-CsTeamsMeetingPolicy cmdlet disables synthetic audio/video detection for meetings organized by users assigned this policy, regardless of the configured detection provider. The SyntheticMediaDetectionAppId value is unchanged.
 
+### EXAMPLE 6
+
+> [!NOTE]
+> The meeting-type controls for Intelligent Recap are rolling out in the Teams admin center and PowerShell. They might not be available in your tenant yet.
+
+```powershell
+Set-CsTeamsMeetingPolicy -Identity "SalesMeetingPolicy" `
+    -IntelligentRecapForEphemeralMeetings DefaultDisabledUserOverrideEnabled `
+    -IntelligentRecapForTranscribedMeetings DefaultDisabledUserOverrideEnabled
+```
+
+In this example, Intelligent Recap is off by default for both meeting types, but organizers can turn it on. In PowerShell, you can configure the meeting types independently: use `-IntelligentRecapForEphemeralMeetings` for meetings that don't save a transcript and `-IntelligentRecapForTranscribedMeetings` for meetings that save a transcript. These settings apply only when `AllowIntelligentRecap` is `$true`.
+
+In the Teams admin center, go to **Meetings** > **Meeting policies** > **Copilot and other AI** > **Intelligent recap**. The presets set both meeting types together without changing `AllowIntelligentRecap`:
+
+- **For all meetings**: Intelligent Recap is on by default for both meeting types. Organizers can turn it off.
+- **Only for transcribed meetings**: Intelligent Recap is on by default for meetings that save a transcript, and organizers can turn it off. For meetings that don't save a transcript, Intelligent Recap is off and organizers can't turn it on.
+- **Off**: Intelligent Recap is off for both meeting types. Organizers can't turn it on.
+
+The Teams admin center doesn't offer a preset to default Intelligent Recap to off while letting organizers turn it on. It shows **Custom configuration**, not **Off**, for the PowerShell configuration in this example.
+
 ## PARAMETERS
 
 ### -AIInterpreter
@@ -559,6 +580,8 @@ Accept wildcard characters: False
 Controls whether Intelligent Recap is allowed for the user's meetings. Set this parameter to `$false` to turn off Intelligent Recap for meetings with or without a saved transcript. This setting doesn't turn off Copilot.
 
 For newly created meetings that save a transcript, Teams honors the configured value of this policy. This behavior doesn't apply retroactively to meetings created earlier.
+
+See [Example 6](#example-6) for the meeting-type controls and how they differ between the Teams admin center and PowerShell.
 
 ```yaml
 Type: Boolean
