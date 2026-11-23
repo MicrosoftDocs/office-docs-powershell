@@ -556,9 +556,9 @@ Accept wildcard characters: False
 ```
 
 ### -AllowIntelligentRecap
-> [!NOTE]
-> This feature has not been fully released yet, so the setting will have no effect.
-Controls whether Intelligent Recap is allowed for the user's meetings.
+Controls whether Intelligent Recap is allowed for the user's meetings. Set this parameter to `$false` to turn off Intelligent Recap for meetings with or without a saved transcript. This setting doesn't turn off Copilot.
+
+For newly created meetings that save a transcript, Teams honors the configured value of this policy. This behavior doesn't apply retroactively to meetings created earlier.
 
 ```yaml
 Type: Boolean
