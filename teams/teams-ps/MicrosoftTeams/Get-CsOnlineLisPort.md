@@ -1,10 +1,11 @@
 ---
 applicable: Microsoft Teams
-author: officedocspr
+author: pavellatif
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: odocspr
+ms.author: pavellatif
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csonlinelisport
 schema: 2.0.0
 title: Get-CsOnlineLisPort
@@ -18,40 +19,55 @@ Retrieves one or more ports from the location configuration database.
 ## SYNTAX
 
 ```
-Get-CsOnlineLisPort [[-ChassisID] <string>] [-Force] [-IsDebug <bool>] [-NCSApiUrl <string>] [-PortID <string>] [-TargetStore <string>] [<CommonParameters>]
+Get-CsOnlineLisPort [[-ChassisID] <string>] [-Filter <string>] [-Force] [-IsDebug <bool>] [-NCSApiUrl <string>] [-PortID <string>] [-TargetStore <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Each port can be associated with a location, in which case this cmdlet will also retrieve the location information of the ports. This location association is used in an Enhanced 9-1-1 (E9-1-1) Enterprise Voice implementation to notify an emergency services operator of the caller's location.
+Each port can be associated with a location. This cmdlet retrieves the location information for the ports. Use this location association in an Enhanced 9-1-1 (E9-1-1) Enterprise Voice implementation to notify an emergency services operator of the caller's location.
 
-Enhanced 9-1-1 allows an emergency operator to identify the location of a caller without having to ask the caller for that information. In the case where a caller is calling from a Voice over Internet Protocol (VoIP) connection, that information must be extracted based on various connection factors. The VoIP administrator must configure a location map (called a wiremap) that will determine a caller's location. This cmdlet retrieves information on associations between physical locations and the port through which the client is connected.
+Enhanced 9-1-1 allows an emergency operator to identify the location of a caller without asking the caller for that information. When a caller uses a Voice over Internet Protocol (VoIP) connection, the operator extracts location information based on various connection factors. The VoIP administrator configures a location map (called a wiremap) that determines a caller's location. This cmdlet retrieves information on associations between physical locations and the port through which the client is connected.
+
+Use the Filter parameter to retrieve ports that match a filter expression, such as ports on a list of switches identified by their chassis IDs.
 
 ## EXAMPLES
 
 ### Example 1
-```
+```powershell
 Get-CsOnlineLisPort
 ```
 ```output
 PortID  ChassisID         LocationId                           Description
 ------  ---------         ----------                           -----------
-G1/0/30 B8-BE-BF-4A-A3-00 9905bca0-6fb0-11ec-84a4-25019013784a
-S2/0/25 F6-26-79-B5-3D-49 d7714269-ee52-4635-97b0-d7c228801d24
+Port1   AA-BB-CC-DD-EE-01 11111111-1111-1111-1111-111111111111
+Port2   AA-BB-CC-DD-EE-02 22222222-2222-2222-2222-222222222222
 ```
 
 Example 1 retrieves all Location Information Server (LIS) ports and any associated locations.
 
 ### Example 2
-```
-Get-CsOnlineLisPort -ChassisID 'B8-BE-BF-4A-A3-00' -PortID 'G1/0/30'
+```powershell
+Get-CsOnlineLisPort -ChassisID 'AA-BB-CC-DD-EE-01' -PortID 'Port1'
 ```
 ```output
 PortID  ChassisID         LocationId                           Description
 ------  ---------         ----------                           -----------
-G1/0/30 B8-BE-BF-4A-A3-00 9905bca0-6fb0-11ec-84a4-25019013784a
+Port1   AA-BB-CC-DD-EE-01 11111111-1111-1111-1111-111111111111
 ```
 
-Example 2 retrieves the location information for port G1/0/30 with ChassisID B8-BE-BF-4A-A3-00.
+Example 2 retrieves the location information for Port1 with ChassisID AA-BB-CC-DD-EE-01.
+
+### Example 3: Filter by multiple chassis IDs
+```powershell
+Get-CsOnlineLisPort -Filter "ChassisID -in ['AA-BB-CC-DD-EE-01', 'AA-BB-CC-DD-EE-02']"
+```
+```output
+PortID  ChassisID         LocationId                           Description
+------  ---------         ----------                           -----------
+Port1   AA-BB-CC-DD-EE-01 11111111-1111-1111-1111-111111111111
+Port2   AA-BB-CC-DD-EE-02 22222222-2222-2222-2222-222222222222
+```
+
+This example returns ports whose ChassisID matches either value in the filter, together with their associated location information.
 
 ## PARAMETERS
 
@@ -59,7 +75,7 @@ Example 2 retrieves the location information for port G1/0/30 with ChassisID B8-
 
 > Applicable: Microsoft Teams
 
-The Media Access Control (MAC) address of the port's switch. This value will be in the form nn-nn-nn-nn-nn-nn, such as 12-34-56-78-90-ab.
+The Media Access Control (MAC) address of the port's switch. This value is in the form `nn-nn-nn-nn-nn-nn`, such as `12-34-56-78-90-ab`.
 
 ```yaml
 Type: String
@@ -73,13 +89,38 @@ Accept pipeline input: True
 Accept wildcard characters: False
 ```
 
+### -Filter
+
+> Applicable: Microsoft Teams
+
+Filters ports by property values.
+For example, use `ChassisID -in ['AA-BB-CC-DD-EE-01', 'AA-BB-CC-DD-EE-02']` to retrieve ports on either switch.
+
+Pass the filter expression as a string, with double quotation marks around the expression and single quotation marks around string values.
+For `-in`, enclose the comma-separated values in square brackets.
+
+> [!NOTE]
+> The `-Filter` parameter is available in Teams PowerShell module 8.0.0 or later.
+
+```yaml
+Type: System.String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 
 > Applicable: Microsoft Teams
 
-The Force switch specifies whether to suppress warning and confirmation messages.
+The `-Force` switch suppresses warning and confirmation messages.  
 It can be useful in scripting to suppress interactive prompts.
-If the Force switch isn't provided in the command, you're prompted for administrative input if required.
+If you don't include the `-Force` switch in the command, the command prompts you for administrative input if required.
 
 ```yaml
 Type: SwitchParameter
@@ -182,6 +223,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
-[Set-CsOnlineLisPort](https://learn.microsoft.com/powershell/module/microsoftteams/set-csonlinelisport)
+[Set-CsOnlineLisPort](./Set-CsOnlineLisPort.md)
 
-[Remove-CsOnlineLisPort](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csonlinelisport)
+[Remove-CsOnlineLisPort](./Remove-CsOnlineLisPort.md)
