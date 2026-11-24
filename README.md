@@ -4,6 +4,9 @@ ms.date: 09/18/2025
 
 # Overview
 
+> [!IMPORTANT]
+> The repos [office-docs-powershell](https://github.com/MicrosoftDocs/office-docs-powershell) and [windows-powershell-docs](https://github.com/MicrosoftDocs/windows-powershell-docs) will be private and offer no public access after November 30, 2026.
+
 ## Learn how to contribute
 
 Anyone interested can contribute to articles. When you contribute, your work goes into the content set after someone reviews and merges it. Your updates are published to [Microsoft Learn](https://learn.microsoft.com/), and you're listed as a contributor at: <https://github.com/MicrosoftDocs/office-docs-powershell/graphs/contributors>.
