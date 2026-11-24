@@ -22,7 +22,6 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ### Identity
 ```
 Get-PublicFolderMoveRequest [[-Identity] <PublicFolderMoveRequestIdParameter>]
- [-AccountPartition <AccountPartitionIdParameter>]
  [-DomainController <Fqdn>]
  [-Organization <OrganizationIdParameter>]
  [-ResultSize <Unlimited>]
@@ -32,7 +31,6 @@ Get-PublicFolderMoveRequest [[-Identity] <PublicFolderMoveRequestIdParameter>]
 ### Filtering
 ```
 Get-PublicFolderMoveRequest [-BatchName <String>] [-HighPriority <Boolean>] [-Name <String>] [-RequestQueue <DatabaseIdParameter>] [-Status <RequestStatus>] [-Suspend <Boolean>]
- [-AccountPartition <AccountPartitionIdParameter>]
  [-DomainController <Fqdn>]
  [-Organization <OrganizationIdParameter>]
  [-ResultSize <Unlimited>]
@@ -88,26 +86,6 @@ Required: False
 Position: 1
 Default value: None
 Accept pipeline input: True
-Accept wildcard characters: False
-```
-
-### -AccountPartition
-
-> Applicable: Exchange Online
-
-This parameter is available only in the cloud-based service.
-
-{{ Fill AccountPartition Description }}
-
-```yaml
-Type: AccountPartitionIdParameter
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

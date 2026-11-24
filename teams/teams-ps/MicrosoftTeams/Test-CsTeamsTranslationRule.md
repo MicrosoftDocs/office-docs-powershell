@@ -1,10 +1,10 @@
 ---
 applicable: Microsoft Teams
-author: serdarsoysal
+author: officedocspr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 Module Name: MicrosoftTeams
-ms.author: serdars
+ms.author: odocspr
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/test-csteamstranslationrule
 schema: 2.0.0
 title: Test-CsTeamsTranslationRule
@@ -165,6 +165,10 @@ The matching logic used in the cmdlet is the same as when the manipulation rule 
 If a match is found in two or more manipulation rules, the first one is returned.
 
 There is a short delay before newly created manipulation rules are added to the evaluation.
+
+If no matching TeamsTranslationRule is found, then the cmdlet will return error: "No number translation rule matched".
+
+If a matching TeamsTranslationRule is found, but it produces invalid phone number, the cmdlet will return error: "Number translation rule {TeamsTranslationRule.Name} applied to phone number produced invalid phone number: {resultPhoneNumber}".
 
 ## RELATED LINKS
 [New-CsTeamsTranslationRule](https://learn.microsoft.com/powershell/module/microsoftteams/new-csteamstranslationrule)

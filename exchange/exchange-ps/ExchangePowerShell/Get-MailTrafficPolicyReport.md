@@ -37,6 +37,10 @@ Get-MailTrafficPolicyReport [-Action <MultiValuedProperty>]
 ```
 
 ## DESCRIPTION
+
+> [!NOTE]
+> This cmdlet will be updated to require the EventType parameter values TransportRuleHits or TransportRuleActionHits to return Exchange mail flow rule (transport rule) data in the results. For more information, see [MC1323250](https://admin.microsoft.com/Adminportal/Home#/MessageCenter/:/messages/MC1323250).
+
 For the reporting period you specify, the cmdlet returns the following information:
 
 - Domain

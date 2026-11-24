@@ -1,12 +1,13 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Get-CsAutoRecordingTemplate
+ms.author: colongma
+ms.reviewer: colongma
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csautorecordingtemplate
 schema: 2.0.0
 title: Get-CsAutoRecordingTemplate
 ---
@@ -23,9 +24,6 @@ Get-CsAutoRecordingTemplate [-Id <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-
-> [!CAUTION]
-> The functionality provided by this cmdlet will only work for customers that are participating in the Voice Applications private preview for this feature. General Availability for this functionality has not been determined at this time.
 
 Use the Get-CsAutoRecordingTemplate cmdlet to list the Auto Recording templates.
 
@@ -52,11 +50,11 @@ This example retrieves all the Auto Recording templates.
 The Id of the auto recording template.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: false
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

@@ -1,12 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantcallableentity
 schema: 2.0.0
 title: New-CsAutoAttendantCallableEntity
@@ -36,7 +36,7 @@ The New-CsAutoAttendantCallableEntity cmdlet lets you create a callable entity f
 
 >[!IMPORTANT]
 > Authorized users can't edit call queues with these features enabled:
-> - The call exception routing when the destination directly references another another Auto attendant or Call queue
+> - The call exception routing when the destination directly references another Auto attendant or Call queue
 >   - See [Nesting Auto attendants and Call queues](/microsoftteams/plan-auto-attendant-call-queue#nested-auto-attendants-and-call-queues)
 > - Call priorities
 
@@ -86,7 +86,7 @@ This example gets an Office 365 group by name using Find-CsGroup cmdlet. Then th
 
 The Call Priority of the MenuOption, only applies when the `Type` is `ApplicationEndpoint` or `ConfigurationEndpoint`.
 
-PARAMVALUE: 1 | 2 | 3 | 4 | 5
+Supported values: 1 | 2 | 3 | 4 | 5
 
 1 = Very High
 2 = High
@@ -146,7 +146,7 @@ The Identity parameter represents the ID of the callable entity; this can be eit
 - Only PSTN numbers that are acquired and assigned through Skype for Business Online are supported.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -158,11 +158,14 @@ Accept wildcard characters: False
 ```
 ### -SharedVoicemailHistoryTemplateId
 
+>[!IMPORTANT]
+>The following configuration parameters will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
+
 The SharedVoicemailHistoryTemplateId parameter specifies the ID of the Shared Call History template. When this template is assigned to an Auto Attendant, historical data for shared voicemails is collected and displayed in the Shared Call History within the [Teams Queues app](https://learn.microsoft.com/microsoftteams/manage-queues-app). Removing the SharedVoicemailHistoryTemplateId stops further historical data collection for Queues App. This parameter does not affect the [Shared Voicemail](https://learn.microsoft.com/en-us/microsoftteams/manage-shared-voicemail) experience in Outlook.
 
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -178,7 +181,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 

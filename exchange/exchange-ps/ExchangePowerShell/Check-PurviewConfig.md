@@ -21,6 +21,8 @@ For information about the parameter sets in the Syntax section below, see [Excha
 
 ```
 Check-PurviewConfig
+ [[-CaseHoldPolicyNameOrId] <String>]
+ [[-CaseId] <String>]
  [[-Component] <PurviewConfigComponent>]
  [-Confirm]
  [[-DateTimeUTC] <String>]
@@ -30,6 +32,7 @@ Check-PurviewConfig
  [[-IncidentId] <String>]
  [[-ItemId] <String>]
  [[-MessageId] <String>]
+ [[-Organization] <OrganizationIdParameter>]
  [[-PolicyName] <String>]
  [[-RecipientAddress] SmtpAddress>]
  [[-RecordId] <String>]
@@ -96,6 +99,42 @@ This example runs the specified test cases. A UserPrincipalName value is require
 
 ## PARAMETERS
 
+### -CaseHoldPolicyNameOrId
+
+> Applicable: Security & Compliance
+
+{{ Fill CaseHoldPolicyNameOrId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 0
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CaseId
+
+> Applicable: Security & Compliance
+
+{{ Fill CaseId Description }}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Component
 
 > Applicable: Security & Compliance
@@ -123,10 +162,10 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -270,6 +309,24 @@ Aliases:
 
 Required: False
 Position: 5
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Organization
+
+> Applicable: Security & Compliance
+
+{{ Fill Organization Description }}
+
+```yaml
+Type: OrganizationIdParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: 10
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False

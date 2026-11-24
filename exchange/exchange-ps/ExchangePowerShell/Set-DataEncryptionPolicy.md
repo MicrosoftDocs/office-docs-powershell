@@ -59,6 +59,18 @@ Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter>
  [<CommonParameters>]
 ```
 
+### ReplaceKey
+```
+Set-DataEncryptionPolicy [-Identity] <DataEncryptionPolicyIdParameter> -AzureKeyIDs <MultiValuedProperty> -Replace
+ [-Confirm]
+ [-Description <String>]
+ [-DomainController <Fqdn>]
+ [-Enabled <Boolean>]
+ [-Name <String>]
+ [-WhatIf]
+ [<CommonParameters>]
+```
+
 ## DESCRIPTION
 You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -79,6 +91,24 @@ Set-DataEncryptionPolicy -Identity "Europe Mailboxes" -Refresh
 This example updates the data encryption policy named Europe Mailboxes after one of the associated keys is rotated in the Azure Key Vault.
 
 ## PARAMETERS
+
+### -AzureKeyIDs
+
+> Applicable: Exchange Online
+
+{{ Fill AzureKeyIDs Description }}
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: ReplaceKey
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -Identity
 
@@ -182,14 +212,32 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Replace
+
+> Applicable: Exchange Online
+
+{{ Fill Replace Description }}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ReplaceKey
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 
 > Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 This cmdlet has a built-in pause, so use `-Confirm:$false` to skip the confirmation.
 
@@ -304,7 +352,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Built-in security add-on for on-premises mailboxes
 
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+The WhatIf switch shows what the command does without making any changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

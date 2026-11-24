@@ -1,7 +1,12 @@
 ---
+applicable: Microsoft Teams
+author: clyvr
 external help file: MicrosoftTeams-help.xml
 Locale: en-US
+manager: roykuntz
 Module Name: MicrosoftTeams
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/remove-csteamsvoiceapplicationspolicy
 schema: 2.0.0
 title: Remove-CsTeamsVoiceApplicationsPolicy
@@ -24,13 +29,13 @@ TeamsVoiceApplicationsPolicy is used for Supervisor Delegated Administration whi
 
 ## EXAMPLES
 
-### EXAMPLE 1
+### Example 1
 ```
 Remove-CsTeamsVoiceApplicationsPolicy -Identity "SDA-Allow-All"
 ```
 The command shown in Example 1 deletes the Teams voice applications policy SDA-Allow-All.
 
-### EXAMPLE 2
+### Example 2
 ```
 Get-CsTeamsVoiceApplicationsPolicy -Filter "tag:*" | Remove-CsTeamsVoiceApplicationsPolicy
 ```

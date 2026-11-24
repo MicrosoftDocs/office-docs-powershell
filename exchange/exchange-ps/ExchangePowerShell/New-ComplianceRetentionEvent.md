@@ -75,7 +75,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The AssetId parameter specifies the Property:Value pair found in the properties of SharePoint or OneDrive documents that's used for retention. For example:
+The AssetId parameter specifies the ComplianceAssetId value found in the properties of SharePoint or OneDrive documents that's used for retention. For example:
 
 - Product codes that you can use to retain content for only a specific product.
 - Project codes that you can use to retain content for only a specific project.
@@ -115,10 +115,10 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -248,7 +248,7 @@ Accept wildcard characters: False
 
 > Applicable: Security & Compliance
 
-The SharePointAssetIdQuery parameter specifies one or more the Property:Value pairs that you've specified in the properties (also known as Columns) of SharePoint and OneDrive documents to scope the compliance retention event.
+The SharePointAssetIdQuery parameter specifies one or more the Property:Value pairs that you've specified in the properties (also known as Columns) of SharePoint and OneDrive documents to scope the compliance retention event. For example, `"EmployeeNumber:123456 EmployeeNumber:456789"`.
 
 ```yaml
 Type: String

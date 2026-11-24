@@ -167,10 +167,10 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -225,8 +225,6 @@ Accept wildcard characters: False
 ### -DoNotIncludeArchive
 
 > Applicable: Exchange Server 2010
-
-This parameter is available only in Exchange Server 2010.
 
 The DoNotIncludeArchive switch specifies that archive mailboxes are not included in the search. You don't need to specify a value with this switch.
 
@@ -524,8 +522,6 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010
 
-This parameter is available only in Exchange Server 2010.
-
 The SearchDumpster switch specifies whether the dumpster is searched. You don't need to specify a value with this switch.
 
 The dumpster is a storage area in the mailbox where deleted items are temporarily stored after being deleted or removed from the Deleted Items folder, or after being hard-deleted and before being purged from the mailbox based on Deleted Item Retention settings.
@@ -706,7 +702,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online, Built-in security add-on for on-premises mailboxes
 
-The WhatIf switch doesn't work on this cmdlet.
+This parameter is reserved for internal Microsoft use.
 
 ```yaml
 Type: SwitchParameter

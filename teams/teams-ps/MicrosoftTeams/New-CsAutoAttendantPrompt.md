@@ -1,12 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csautoattendantprompt
 schema: 2.0.0
 title: New-CsAutoAttendantPrompt
@@ -68,7 +68,7 @@ This example creates a new prompt that has both audio file and text-to-speech da
 
 ### -ActiveType
 
-PARAMVALUE: None | TextToSpeech | AudioFile
+Supported values: None | TextToSpeech | AudioFile
 
 The ActiveType parameter identifies the active type (modality) of the AA prompt. It can be set to None (the prompt is disabled), TextToSpeech (text-to-speech is played when the prompt is rendered) or AudioFile (audio file data is played when the prompt is rendered).
 
@@ -109,7 +109,7 @@ Accept wildcard characters: False
 This parameter is reserved for Microsoft internal use only.
 
 ```yaml
-Type: System.Guid
+Type: Guid
 Parameter Sets: (All)
 Aliases:
 
@@ -127,7 +127,7 @@ The TextToSpeechPrompt parameter indicates the Text-to-Speech (TTS) prompt that 
 This parameter is required when text to speech prompts are being created.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: TextToSpeech, Dual
 Aliases:
 

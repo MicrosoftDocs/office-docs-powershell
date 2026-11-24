@@ -1,11 +1,11 @@
 ---
 applicable: Microsoft Teams
-author: serdarsoysal
+author: officedocspr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
 manager: bulenteg
 Module Name: MicrosoftTeams
-ms.author: serdars
+ms.author: odocspr
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csonlinevoiceroutingpolicy
 schema: 2.0.0
 title: New-CsOnlineVoiceRoutingPolicy
@@ -28,6 +28,8 @@ New-CsOnlineVoiceRoutingPolicy [-Identity] <string> [-Description <string>] [-On
 Online voice routing policies are used in Microsoft Phone System Direct Routing scenarios. Assigning your Teams users an online voice routing policy enables those users to receive and to place phone calls to the public switched telephone network by using your on-premises SIP trunks.
 
 Note that simply assigning a user an online voice routing policy will not enable them to make PSTN calls via  Teams. Among other things, you will also need to enable those users for Phone System and will need to assign them an appropriate online voice policy.
+
+For more details, please refer to the article [Voice routing policy considerations.](/microsoftteams/direct-routing-voice-routing)
 
 ## EXAMPLES
 

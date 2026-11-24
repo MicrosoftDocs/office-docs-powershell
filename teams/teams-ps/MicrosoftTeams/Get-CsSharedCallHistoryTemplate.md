@@ -1,12 +1,13 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: vijurtse
-ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/Get-CsSharedCallHistoryTemplate
+ms.author: colongma
+ms.reviewer: colongma
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-cssharedcallhistorytemplate
 schema: 2.0.0
 title: Get-CsSharedCallHistoryTemplate
 ---
@@ -15,7 +16,7 @@ title: Get-CsSharedCallHistoryTemplate
 
 
 ## SYNOPSIS
-Use the Get-CsSharedCallHistoryTemplate cmdlet to list the Shared Call History templates.
+Lists the Shared Call History templates.
 
 ## SYNTAX
 
@@ -24,7 +25,7 @@ Get-CsSharedCallHistoryTemplate [-Id <string>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-Use the Get-CsSharedCallHistory cmdlet to list the Shared Call History templates.
+Use the Get-CsSharedCallHistoryTemplate cmdlet to list the Shared Call History templates.
 
 ## EXAMPLES
 
@@ -49,11 +50,11 @@ This example retrieves all the Shared Call History Templates
 The Id of  the shared call history template.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: false
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False

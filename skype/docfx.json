@@ -74,9 +74,9 @@
     "externalReference": [],
     "globalMetadata": {
       "uhfHeaderId": "MSDocsHeader-M365-IT",
-      "author": "serdarsoysal",
-      "ms.author": "serdars",
-      "manager": "serdars",
+      "author": "officedocspr",
+      "ms.author": "odocspr",
+      "manager": "odocspr",
       "ms.date": "04/04/2023",
       "ms.topic": "reference",
       "ms.service": "skypeforbusiness-powershell",

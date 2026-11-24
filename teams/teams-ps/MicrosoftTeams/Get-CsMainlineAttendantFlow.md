@@ -1,11 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
-external help file: Microsoft.Rtc.Management.dll-Help.xml
+author: clyvr
+external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csmainlineattendantflow
 schema: 2.0.0
 title: Get-CsMainlineAttendantFlow
@@ -24,9 +25,6 @@ Get-CsMainlineAttendantFlow  [-RelatedConfigurationIds <String>] [-Type <String>
 
 ## DESCRIPTION
 The Get-CsMainlineAttendantFlow cmdlet returns information about the Mainline Attendant flows configured in your organization.
-
-> [!CAUTION]
-> This cmdlet will only work for customers that are participating in the Voice Applications private preview for these features. General Availability for this functionality has not been determined at this time.
 
 ## EXAMPLES
 
@@ -85,7 +83,7 @@ Accept wildcard characters: False
 ### -Type
 The Mainline Attendant flow type
 
-PARAMVALUE: AppointmentBooking | QuestionAnswer
+Supported values: AppointmentBooking | QuestionAnswer
 
 ```yaml
 Type: String
@@ -121,7 +119,7 @@ When not specified, the default behavior is to return the first 100 Mainline Att
 If a number greater than 100 is supplied, the request will fail.
 
 ```yaml
-Type: Int32
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 
@@ -137,7 +135,7 @@ Accept wildcard characters: False
 The Skip parameter skips the first N Mainline Attendant flows. It is intended to be used in conjunction with the `-First` parameter for pagination purposes.
 
 ```yaml
-Type: Int32
+Type: UInt32
 Parameter Sets: (All)
 Aliases:
 
@@ -157,7 +155,7 @@ Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: Name
 Accept pipeline input: False
@@ -182,14 +180,14 @@ Accept wildcard characters: False
 
 ### -NameFilter
 
-The NameFilter parameter returns appointment booking flows where the name contains specified string
+The NameFilter parameter returns Mainline Attendant flows where the name contains the specified string.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -209,3 +207,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-CsMainlineAttendantAppointmentBookingFlow](https://learn.microsoft.com/powershell/module/microsoftteams/get-csmainlineattendantappointmentbookingflow)
+
+[Get-CsMainlineAttendantQuestionAnswerFlow](https://learn.microsoft.com/powershell/module/microsoftteams/get-csmainlineattendantquestionanswerflow)
