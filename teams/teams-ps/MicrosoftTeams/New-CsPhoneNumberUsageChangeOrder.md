@@ -77,7 +77,7 @@ Specifies the new usage type for the telephone numbers.
 For example, specify `ServiceType` to request Service Type usage.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: System.String
 Parameter Sets: (All)
 Aliases:
 
