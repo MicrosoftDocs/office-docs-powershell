@@ -1,9 +1,11 @@
 ---
 title: "Security & Compliance PowerShell"
-ms.date: 9/1/2023
+ms.date: 07/31/2026
 ms.audience: Admin
 ms.topic: article
 ms.localizationpriority: medium
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1015
 ms.assetid: 2f33bb84-cede-46f6-9d39-d246e8ce3543
 description: "Learn about the articles that are available for using PowerShell for Microsoft Security & Compliance PowerShell."
 ---
@@ -21,7 +23,7 @@ Security & Compliance PowerShell is the administrative interface that enables yo
 
 - To connect to Security & Compliance PowerShell, see [Connect to Security & Compliance PowerShell](connect-to-scc-powershell.md). The connection instructions are different from Exchange Online PowerShell.
 
-  To connect to Security & Compliance PowerShell for unattended scripts, see [App-only authentication for unattended scripts in the Exchange Online PowerShell module](app-only-auth-powershell-v2.md).
+  To connect to Security & Compliance PowerShell for unattended scripts, see [App-only authentication for unattended scripts](app-only-auth-powershell-v2.md).
 
 - To learn about the structure and layout of the cmdlet reference articles in Security & Compliance PowerShell, see [Exchange cmdlet syntax](exchange-cmdlet-syntax.md).
 
@@ -31,6 +33,6 @@ Security & Compliance PowerShell contains the following types of cmdlets:
 - Basic cmdlets that are also available in Exchange Online PowerShell (for example, [Get-User](/powershell/module/exchangepowershell/get-user), and [Get-RoleGroup](/powershell/module/exchangepowershell/get-rolegroup)).
 - A few cmdlets that correspond to default protections for cloud mailboxes and protections in Microsoft Defender for Office 365 in the Microsoft Defender portal (for example, [Set-SecOpsOverridePolicy](/powershell/module/exchangepowershell/set-secopsoverridepolicy)).
 
-  Cmdlets for most built-in security features for all cloud mailboxes and Defender for Office 365 security features (for example, [anti-spam policies](/defender-office-365/anti-spam-protection-about)) are available only in [Exchange Online PowerShell](exchange-online-powershell.md).
+  Cmdlets for most built-in security features for all cloud mailboxes and Defender for Office 365 security features (for example, [anti-spam policies](/defender-office-365/anti-spam-protection-about)) are available in [Exchange Online PowerShell](exchange-online-powershell.md) and [Microsoft Defender for Office 365 PowerShell](defender-office-365-powershell-overview.md).
 
 Check the **Applies to** value in the cmdlet references article to verify the PowerShell environment where the cmdlet actually resides.
