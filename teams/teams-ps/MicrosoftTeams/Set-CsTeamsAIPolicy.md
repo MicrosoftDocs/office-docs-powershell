@@ -23,7 +23,7 @@ Set-CsTeamsAIPolicy [[-Identity] <string>]
  [-EnrollFace <string>]
  [-EnrollVoice <string>]
  [-PassiveVoiceEnrollment <string>]
- [-SpeakerAttributionBYOD <string>]
+ [-SpeakerAttributionForBYOD <string>]
  [-Description <string>]
  [<CommonParameters>]
 ```
@@ -34,9 +34,9 @@ The new csTeamsAIPolicy will replace the existing enrollment settings in csTeams
 
 Starting May 2026, there will be a new setting - _PassiveVoiceEnrollment_, which will allow users in your organization the ability to enroll their voice profile using their in-meeting audio. This is known as Express voice enrollment. This setting can also be individually set to Enabled or Disabled and operates independently of _EnrollVoice_. This setting is typically enabled by default; however any organization that previously had _EnrollVoice_ set to disabled will see a one-time manual state duplication so that both _EnrollVoice_ and _PassiveVoiceEnrollment_ will have the same state when launching this new functionality. As an organization, you have the option to Enable Active enrollment (via _EnrollVoice_) and/or Express enrollment (via _PassiveVoiceEnrollment_) for your users. To turn off voice enrollment completely, make sure to set both parameters to Disable. 
 
-_SpeakerAttributionBYOD_, is also being added to csTeamsAIPolicy. This allows IT admins to turn off speaker attribution in BYOD scenarios, giving them greater control over how voice data is managed in such environments. This setting can be set to Enabled or Disabled, and will be enabled by default. In addition to improving the management of face and voice data, the csTeamsAIPolicy is designed to support future AI-related settings in Teams, making it a scalable solution for evolving needs.
+_SpeakerAttributionForBYOD_, is also being added to csTeamsAIPolicy. This allows IT admins to turn off speaker attribution in BYOD scenarios, giving them greater control over how voice data is managed in such environments. This setting can be set to Enabled or Disabled, and will be enabled by default. In addition to improving the management of face and voice data, the csTeamsAIPolicy is designed to support future AI-related settings in Teams, making it a scalable solution for evolving needs.
 
-This cmdlet sets the _EnrollFace_, _EnrollVoice_, _PassiveVoiceEnrollment_, and _SpeakerAttributionBYOD_ values within the csTeamsAIPolicy. These policies can be assigned to users, and each setting can be configured as "Enabled" or "Disabled".
+This cmdlet sets the _EnrollFace_, _EnrollVoice_, _PassiveVoiceEnrollment_, and _SpeakerAttributionForBYOD_ values within the csTeamsAIPolicy. These policies can be assigned to users, and each setting can be configured as "Enabled" or "Disabled".
 
 ## EXAMPLES
 
@@ -56,10 +56,10 @@ Set Teams AI policy "EnrollVoice" value to "Disabled" for global as default.
 
 ### Example 3
 ```powershell
-PS C:\> Set-CsTeamsAIPolicy -Identity Global -SpeakerAttributionBYOD Disabled
+PS C:\> Set-CsTeamsAIPolicy -Identity Global -SpeakerAttributionForBYOD Disabled
 ```
 
-Set Teams AI policy "SpeakerAttributionBYOD" value to "Disabled" for global as default.
+Set Teams AI policy "SpeakerAttributionForBYOD" value to "Disabled" for global as default.
 
 ### Example 4
 ```powershell
@@ -77,10 +77,10 @@ Set Teams AI policy "EnrollVoice" value to "Enabled" for identity "Test".
 
 ### Example 6
 ```powershell
-PS C:\> Set-CsTeamsAIPolicy -Identity Test -SpeakerAttributionBYOD Enabled
+PS C:\> Set-CsTeamsAIPolicy -Identity Test -SpeakerAttributionForBYOD Enabled
 ```
 
-Set Teams AI policy "SpeakerAttributionBYOD" value to "Enabled" for identity "Test".
+Set Teams AI policy "SpeakerAttributionForBYOD" value to "Enabled" for identity "Test".
 
 ### Example 7
 ```powershell
@@ -98,10 +98,10 @@ Set Teams AI policy "EnrollVoice" value to "Disabled" for identity "Test".
 
 ### Example 9
 ```powershell
-PS C:\> Set-CsTeamsAIPolicy -Identity Test -SpeakerAttributionBYOD Disabled
+PS C:\> Set-CsTeamsAIPolicy -Identity Test -SpeakerAttributionForBYOD Disabled
 ```
 
-Set Teams AI policy "SpeakerAttributionBYOD" value to "Disabled" for identity "Test".
+Set Teams AI policy "SpeakerAttributionForBYOD" value to "Disabled" for identity "Test".
 
 ### Example 10
 ```powershell
@@ -187,8 +187,8 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -SpeakerAttributionBYOD
-Policy value of the Teams AI SpeakerAttributionBYOD policy. Setting to "Enabled" turns on speaker attribution in BYOD scenarios while "Disabled" will turn off the function.
+### -SpeakerAttributionForBYOD
+Policy value of the Teams AI SpeakerAttributionForBYOD policy. Setting to "Enabled" turns on speaker attribution in BYOD scenarios while "Disabled" will turn off the function.
 
 ```yaml
 Type: String
