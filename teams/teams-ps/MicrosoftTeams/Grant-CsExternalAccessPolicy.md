@@ -43,6 +43,8 @@ Grant-CsExternalAccessPolicy [[-PolicyName] <String>] [-Global] [-Force] [<Commo
 ## DESCRIPTION
 For Microsoft Teams group policy assignment, use this cmdlet with the `-Group` and `-Rank` parameters. A directly assigned policy takes precedence over group assignments. If a user has no directly assigned external access policy, the highest-ranked group assignment applies; the allowed-domain lists from multiple policies aren't combined. For details, see [Assign policies to users and groups](https://learn.microsoft.com/microsoftteams/assign-policies-users-and-groups#assign-a-policy-to-a-group).
 
+Group assignments are subject to the per-tenant limit for this policy type, across all external access policy instances. For the default limit and how to request an increase, see [New-CsGroupPolicyAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/new-csgrouppolicyassignment#description).
+
 This cmdlet was introduced in Lync Server 2010.
 
 When you install Microsoft Teams or Skype for Business Server, your users are only allowed to exchange instant messages and presence information among themselves: by default, they can only communicate with other people who have SIP accounts in your Active Directory Domain Services.

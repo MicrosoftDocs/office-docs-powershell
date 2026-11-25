@@ -32,7 +32,7 @@ New-CsGroupPolicyAssignment -GroupId <String> -PolicyType <String> -PolicyName <
 > - Teams Voice Applications Policy
 > - Teams Upgrade Policy
 >
-> This cmdlet will be deprecated in the future. Going forward, group policy assignment can be performed by using the corresponding Grant-Cs[PolicyType] cmdlet with the '-Group' parameter.
+> You can assign a policy to a group by using this cmdlet or the corresponding `Grant-Cs[PolicyType]` cmdlet with the `-Group` parameter. Both methods use the same group assignment limit.
 
 For current group policy assignment methods and precedence rules, see [Assign policies to users and groups](https://learn.microsoft.com/microsoftteams/assign-policies-users-and-groups#assign-a-policy-to-a-group).
 
@@ -43,6 +43,9 @@ The group policy assignment rank is set at the time a policy is assigned to a gr
 Once a group policy assignment is created, the policy assignment will be propagated to the members of the group, including users that are added to the group after the assignment was created. Propagation time of the policy assignments to members of the group varies based on the number of users in the group. Propagation time for subsequent group membership changes also varies based on the number of users being added or removed from the group. For large groups, propagation to all members may take 24 hours or more. When using group policy assignment, the recommended maximum group membership size is 50,000 users per group.
 
 > [!NOTE]
+> - By default, a tenant can have up to 200 group assignments for a given policy type, across all policy instances of that type. This limit applies whether you use `New-CsGroupPolicyAssignment` or the corresponding `Grant-Cs[PolicyType] -Group` command.
+> - To request a higher limit for your tenant, [contact Microsoft Support](https://learn.microsoft.com/microsoft-365/admin/get-help-support). Requests are subject to review and approval.
+> - The limit applies when you add a new group assignment. You can still update existing group assignments if your tenant is at or above its limit.
 > - Policy assignments are only propagated to users that are direct members of the group; the assignments are not propagated to members of nested groups.
 > - Direct user assignments of policy take precedence over any group policy assignments for a given policy type. Group PolicyPolicy assignments only take effect to a user if that user does not have a direct policy assignment.
 > - Get-CsOnlineUser only shows *direct* assignments of policy. It does not show the effect of group policy assignments. To view a specific user's effective policy, use `Get-CsUserPolicyAssignment`. This cmdlet shows whether the effective policy is from a direct assignment or from a group, as well as the ranked order of each group policy assignment in the case where a user is a member of more than 1 group with a group policy assignment of the same policy type. For example, to view all TeamsMeetingPolicy assignments for a given user, $user, run the following powershell cmdlet:  `Get-CsUserPolicyAssignment -Identity $user -PolicyType TeamsMeetingPolicy|select -ExpandProperty PolicySource`.  For details, see [Get-CsUserPolicyAssignment](https://learn.microsoft.com/powershell/module/microsoftteams/get-csuserpolicyassignment).
