@@ -41,6 +41,8 @@ Grant-CsExternalAccessPolicy [[-PolicyName] <String>] [-Global] [-Force] [<Commo
 ```
 
 ## DESCRIPTION
+For Microsoft Teams group policy assignment, use this cmdlet with the `-Group` and `-Rank` parameters. A directly assigned policy takes precedence over group assignments. If a user has no directly assigned external access policy, the highest-ranked group assignment applies; the allowed-domain lists from multiple policies aren't combined. For details, see [Assign policies to users and groups](https://learn.microsoft.com/microsoftteams/assign-policies-users-and-groups#assign-a-policy-to-a-group).
+
 This cmdlet was introduced in Lync Server 2010.
 
 When you install Microsoft Teams or Skype for Business Server, your users are only allowed to exchange instant messages and presence information among themselves: by default, they can only communicate with other people who have SIP accounts in your Active Directory Domain Services.
@@ -127,6 +129,13 @@ Get-CsUser | Grant-CsExternalAccessPolicy -PolicyName $Null
 Example 6 unassigns any per-user external access policy previously assigned to any of the users enabled for Skype for Business Server.
 To do this, the command calls the Get-CsUser cmdlet (without any additional parameters) in order to return a collection of all the users enabled for Skype for Business Server.
 That collection is then piped to the Grant-CsExternalAccessPolicy cmdlet, which uses the syntax "`-PolicyName $Null`" to remove any per-user external access policy previously assigned to these users.
+
+### EXAMPLE 7
+```powershell
+Grant-CsExternalAccessPolicy -Group "00000000-0000-0000-0000-000000000001" -PolicyName "ContosoExternalAccess" -Rank 1
+```
+
+Example 7 assigns the existing ContosoExternalAccess policy to a group with an assignment ranking of 1. Replace the sample group object ID with the ID of your group.
 
 ## PARAMETERS
 
