@@ -524,13 +524,13 @@ To assign custom role groups to the application using service principals, do the
    >
    > In the following commands, **-AppId** is the Application (client) ID, and **-ObjectId** is the Enterprise application Object ID returned in the **Id** property by **Get-MgServicePrincipal** in step 1.
 
+   For example:
+
    ```powershell
    New-ServicePrincipal -AppId $<VariableName1>.AppId -ObjectId $<VariableName1>.Id -DisplayName "<Descriptive Name>"
 
    $<VariableName2> = Get-ServicePrincipal -Identity "<Descriptive Name>"
    ```
-
-   For example:
 
    ```powershell
    New-ServicePrincipal -AppId $AzureADApp.AppId -ObjectId $AzureADApp.Id -DisplayName "SP for Azure AD App ExO PowerShell CBA"
