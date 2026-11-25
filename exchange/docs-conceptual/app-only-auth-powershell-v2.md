@@ -62,8 +62,6 @@ The Exchange Online PowerShell module uses the Active Directory Authentication L
 
 The following examples show how to use the Exchange Online PowerShell module with app-only authentication:
 
-**For existing eDiscovery automations:** A successful app-only connection doesn't confirm that the application has permission to run eDiscovery hold operations. Complete the service principal and role group checks in [Configure app-only authentication for eDiscovery PowerShell](/purview/edisc-permissions#configure-app-only-authentication-for-ediscovery-powershell), in addition to the connection requirements. The following general connection examples don't replace those eDiscovery-specific steps or change the configuration's unsupported status.
-
 > [!IMPORTANT]
 > In the following connection commands, use the primary `.onmicrosoft.com` domain for your organization as the value of the _Organization_ parameter.
 >
@@ -140,8 +138,6 @@ When you configure or verify service principal registration for existing eDiscov
 | Application (client) ID | Identifies the application configured in the running integration. This is the **AppId** value in the eDiscovery setup instructions. |
 | App-registration Object ID | Identifies the application object shown under **App registrations**. Don't substitute it for the enterprise application's service principal Object ID. |
 | Enterprise application Object ID | Identifies the tenant-local service principal shown under **Enterprise applications**. When you create the service principal with **New-ServicePrincipal**, use the customer tenant's Enterprise application Object ID for **-ObjectId**, not the Object ID shown under **App registrations**. |
-
-For multitenant integrations, verify the enterprise application in the customer tenant rather than the application object in the publisher's tenant. Compare identifiers, not just display names. If a service principal was recreated, recheck its Object ID against the registration and role assignment.
 
 For a detailed visual flow about creating applications in Microsoft Entra ID, see <https://aka.ms/azuread-app>.
 
