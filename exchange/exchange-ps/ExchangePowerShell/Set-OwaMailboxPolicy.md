@@ -2219,7 +2219,7 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-The PlacesEnabled parameter specifies whether to enable or disable Places in Outlook on the web. Places lets users search, share, and map location details by using Bing. Valid values are:
+The PlacesEnabled parameter specifies whether to enable or disable Places in Outlook on the web or new Outlook for Windows. Places lets users search, share, and map location details by using Bing. Valid values are:
 
 - $true: Places is enabled. This value is the default.
 - $false: Places is disabled.
