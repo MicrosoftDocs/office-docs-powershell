@@ -1,5 +1,5 @@
 ---
-ms.date: 05/20/2026
+ms.date: 07/22/2026
 ---
 
 # Update existing cmdlet articles
@@ -35,6 +35,8 @@ You probably know how to connect, but the available workloads and connection met
 
 > [!NOTE]
 > Connections from the Exchange Online PowerShell V3 module incorrectly identify many parameter **Type** values as `Object` or `Object[]`. The true parameter type values are visible in product code.
+>
+> Some cmdlets are built directly into an installed PowerShell module and don't require a connection to a PowerShell environment (for example, **Connect-ExchangeOnline** in the [ExchangeOnlineManagement](https://www.powershellgallery.com/packages/ExchangeOnlineManagement) module doesn't require a connection to Exchange Online PowerShell). For cmdlets built into a module, use the module name instead of connecting to a PowerShell environment. For details, see [When to dump cmdlets directly from a module instead of a connection](NEW_CMDLETS.md#when-to-dump-cmdlets-directly-from-a-module-instead-of-a-connection).
 
 ### Step 3: Load platyPS in the PowerShell environment
 

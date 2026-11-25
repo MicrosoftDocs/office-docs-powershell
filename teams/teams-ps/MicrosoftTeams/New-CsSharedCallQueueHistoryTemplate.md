@@ -1,12 +1,13 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
+author: clyvr
 external help file: Microsoft.Rtc.Management.Hosted.dll-help.xml
 Locale: en-US
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
-ms.reviewer: williamlooney
-online version: https://learn.microsoft.com/powershell/module/microsoftteams/New-CsSharedCallQueueHistoryTemplate
+ms.author: colongma
+ms.reviewer: colongma
+online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-cssharedcallqueuehistorytemplate
 schema: 2.0.0
 title: New-CsSharedCallQueueHistoryTemplate
 ---
@@ -15,10 +16,10 @@ title: New-CsSharedCallQueueHistoryTemplate
 
 ## SYNOPSIS
 
-This PowerShell cmdlet is being deprecated, please use the new version [New-CsSharedCallHistoryTemplate](./New-CsSharedCallHistoryTemplate.md) instead
-
-> [!IMPORTANT]
->This PowerShell cmdlet is being deprecated, please use the new version [New-CsSharedCallHistoryTemplate](./New-CsSharedCallHistoryTemplate.md) instead
+> [!CAUTION]
+> This PowerShell cmdlet has been deprecated.
+>
+> Please use: [New-CsSharedCallHistoryTemplate](New-CsSharedCallHistoryTemplate.md)
 
 ## SYNTAX
 
@@ -34,7 +35,7 @@ Use the New-CsSharedCallQueueHistoryTemplate cmdlet to create a Shared Call Queu
 
 ### Example 1
 ```
-New-CsSharedCallQueueHistoryTemplate -Name "Customer Service" -Description "Missed:All Answered:Auth" -IncomingMissedCall AuthorizedUsersAndAgents -AnsweredAndOutboundCalls AuthorizedUsersOnly
+New-CsSharedCallQueueHistoryTemplate -Name "Customer Service" -Description "Missed:All Answered:Auth" -IncomingMissedCalls AuthorizedUsersAndAgents -AnsweredAndOutboundCalls AuthorizedUsersOnly
 ```
 
 This example creates a new Shared CallQueue History template where incoming missed calls are shown to authorized users and agents and, answered and outbound calls are shown to authorized users only.
@@ -45,7 +46,7 @@ This example creates a new Shared CallQueue History template where incoming miss
 
 Who sees answered and outbound calls in the shared call queue history.
 
-PARAMVALUE: None | AuthorizedUsersOnly | AuthorizedUsersAndAgents
+Supported values: None | AuthorizedUsersOnly | AuthorizedUsersAndAgents
 
 ```yaml
 Type: Object
@@ -64,7 +65,7 @@ Accept wildcard characters: False
 A description for the shared call queue history template.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -79,7 +80,7 @@ Accept wildcard characters: False
 
 Who sees incoming missed calls in the shared call queue history.
 
-PARAMVALUE: None | AuthorizedUsersOnly | AuthorizedUsersAndAgents
+Supported values: None | AuthorizedUsersOnly | AuthorizedUsersAndAgents
 
 ```yaml
 Type: Object
@@ -98,7 +99,7 @@ Accept wildcard characters: False
 The name of the shared call queue history template.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: (All)
 Aliases:
 

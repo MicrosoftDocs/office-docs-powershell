@@ -1,14 +1,15 @@
 ---
 applicable: Lync Server 2013, Skype for Business Server 2015, Skype for Business Server 2019
-author: hirenshah1
+author: paulkwo-msft2
 external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
-manager: rogupta
+manager: paulkwo
 Module Name: SkypeForBusiness
-ms.author: hirshah
+ms.author: paulkwo
 online version: https://learn.microsoft.com/powershell/module/skypeforbusiness/set-csoauthserver
 schema: 2.0.0
 title: Set-CsOAuthServer
+ms.date: 11/16/2026
 ---
 
 # Set-CsOAuthServer
@@ -24,7 +25,7 @@ This cmdlet was introduced in Lync Server 2013.
 ```
 Set-CsOAuthServer [-Identity] <XdsGlobalRelativeIdentity> [-Confirm] [-Force] [-Instance <PSObject>]
  [-MetadataUrl <String>] [-Tenant <Guid>] [-WhatIf] [-AcceptSecurityIdentifierInformation <Boolean>]
- [-AuthorizationUriOverride <String>] [-Type <String>] [<CommonParameters>]
+ [-AuthorizationUriOverride <String>] [-GraphEndpoint <String>] [-Type <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -97,6 +98,32 @@ Suppresses the display of any non-fatal error message that might occur when runn
 
 ```yaml
 Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -GraphEndpoint 
+
+> Applicable: Skype for Business Server Subscription Edition
+
+Microsoft Graph service root that Skype for Business Server uses to reach Exchange Online mailboxes (for example, for user photos and conversation history). For example: 
+
+-GraphEndpoint "https://graph.microsoft.us" 
+
+The value must be an absolute HTTPS URL. If your tenant is in a sovereign cloud or in an air-gapped environment, set this parameter to the Microsoft Graph endpoint for that cloud. For the public (worldwide) cloud, setting this parameter is not mandatory. 
+
+To remove the value, set the parameter to an empty string: 
+
+-GraphEndpoint "" 
+
+```yaml
+Type: String
 Parameter Sets: (All)
 Aliases:
 

@@ -1,11 +1,12 @@
 ---
 applicable: Microsoft Teams
-author: tomkau
-external help file: Microsoft.Rtc.Management.dll-Help.xml
+author: clyvr
+external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
-manager: bulenteg
+manager: roykuntz
 Module Name: MicrosoftTeams
-ms.author: tomkau
+ms.author: colongma
+ms.reviewer: colongma
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/new-csmainlineattendantappointmentbookingflow
 schema: 2.0.0
 title: New-CsMainlineAttendantAppointmentBookingFlow
@@ -24,9 +25,6 @@ New-CsMainlineAttendantAppointmentBookingFlow -Name <String> -Description <Strin
 
 ## DESCRIPTION
 The New-CsMainlineAttendantAppointmentBookingFlow cmdlet creates a new appointment booking connection that can be used with Mainline Attendant
-
-> [!CAUTION]
-> Teams Phone Agent (formerly Mainline Attendant) is currently only available to customers in the [Frontier](https://www.microsoft.com/microsoft-365-copilot/frontier-program) Public Preview program.
 
 ## EXAMPLES
 
@@ -66,9 +64,9 @@ Accept wildcard characters: False
 ```
 
 ### -AppointmentBookingPlatform
-The booking platfrom being used.
+The booking platform being used.
 
-PARAVALUES: Custom | MicrosoftBookings
+Supported values: Custom | MicrosoftBookings
 
 If MicrosoftBookings is selected, the `-CallerAuthenticationMethod`, `-ApiAuthenticationType`, and `-ApiDefinitions` will be ignored.
 
@@ -104,7 +102,7 @@ Accept wildcard characters: False
 ###  -CallerAuthenticationMethod
 The method by which the caller is authenticated
 
-PARAVALUES: SMS | Email | VerificationLink | Voiceprint | UserDetails
+Supported values: SMS | Email | VerificationLink | Voiceprint | UserDetails
 
 ```yaml
 Type: String
@@ -121,7 +119,7 @@ Accept wildcard characters: False
 ###  -ApiAuthenticationType
 The method of authentication used by the API
 
-PARAVALUES: Basic | ApiKey | BearerTokenStatic | BearerTokenDynamic
+Supported values: Basic | ApiKey | BearerTokenStatic | BearerTokenDynamic
 
 ```yaml
 Type: String
@@ -150,6 +148,22 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Tenant
+
+This parameter is reserved for Microsoft internal use only.
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).
 
@@ -163,3 +177,8 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## RELATED LINKS
 
+[Get-CsMainlineAttendantAppointmentBookingFlow](https://learn.microsoft.com/powershell/module/microsoftteams/get-csmainlineattendantappointmentbookingflow)
+
+[Set-CsMainlineAttendantAppointmentBookingFlow](https://learn.microsoft.com/powershell/module/microsoftteams/set-csmainlineattendantappointmentbookingflow)
+
+[Remove-CsMainlineAttendantAppointmentBookingFlow](https://learn.microsoft.com/powershell/module/microsoftteams/remove-csmainlineattendantappointmentbookingflow)

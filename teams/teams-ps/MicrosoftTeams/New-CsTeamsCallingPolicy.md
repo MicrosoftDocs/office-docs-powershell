@@ -55,7 +55,11 @@ New-CsTeamsCallingPolicy [-Identity] <string>
  [-SpamFilteringEnabledType <string>]
  [-VoiceSimulationInInterpreter <string>]
  [-RealTimeText <string>]
+ [-RecordingAndTranscriptionAudioNotification <String>]
+ [-ReportCall <String>]
  [-ExplicitRecordingConsent <string>]
+ [-AllowMeetingKnowledgeGeneration <Boolean>]
+ [-VoicePhishingDetection <String>]
  [-WhatIf]
  [-EnableRecordingAndTranscriptionCustomMessage <Boolean>]
  [-RecordingAndTranscriptionCustomMessageIdentifier <Guid>]
@@ -666,9 +670,6 @@ Accept wildcard characters: False
 
 > Applicable: Microsoft Teams
 
-> [!NOTE]
-> This feature has not been released yet and will have no changes if it is enabled or disabled.
-
 Controls whether Compliance Recording (CR)-enabled users are blocked from joining calls owned by the policy-assigned user. When set to `None`, no restriction is applied and compliance recording operates as configured for the tenant. When set to `All`, CR-enabled users are blocked from joining calls initiated by or received by the policy-assigned user. This applies to both internal and external CR-enabled users (including federated and B2B guests). Anonymous and PSTN users are unaffected as they cannot be assigned compliance recording.
 
 Possible values:
@@ -718,6 +719,54 @@ Allows users to use real time text during a call, allowing them to communicate b
 Possible Values:
 - Enabled: User is allowed to turn on real time text.
 - Disabled: User is not allowed to turn on real time text.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Enabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RecordingAndTranscriptionAudioNotification
+Policy to control whether audio notifications will be played when recording or transcription starts/stops for applied users/groups. This policy applies only to Teams client users in VoIP calls. This policy does not control audio announcements for PSTN users or for Teams client users in one-to-one calls between Teams and PSTN, where audio announcements are enabled by default in both scenarios.
+
+Supported clients include Windows and macOS desktop, web, Microsoft Teams Rooms (MTR), Android, iOS, and VDI 2.0. VDI 1.0 is not supported.
+
+Possible values are:
+
+- **Enabled**: Audio notifications play when recording or transcription starts/stops.
+- **Disabled**: Audio notifications do not play when recording or transcription starts/stops.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ReportCall
+Controls if the Report call toggle should show up in calling settings for a tenant.
+
+Possible values are:
+
+- **Enabled**: Report call toggle is shown in calling settings.
+- **Disabled**: Report call is hidden in calling settings.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
 
 ```yaml
 Type: String
@@ -804,6 +853,54 @@ Aliases:
 Required: False
 Position: Named
 Default value: Disabled
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AllowMeetingKnowledgeGeneration
+This policy controls whether meeting knowledge generation is allowed for calling when the user starts recording/transcript/copilot.
+
+Possible values are:
+
+- **$true**: Allow meeting knowledge generation for calling.
+- **$false**: Don't allow meeting knowledge generation for calling.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: True
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -VoicePhishingDetection
+The Voice Phishing Detection policy enables AI-based detection of voice phishing (vishing) attempts during live inbound Microsoft Teams calls.
+
+Possible values are:
+
+- **BannerAndAudio**: Both visual and voice alerts when a voice phishing attempt is detected.
+- **Banner**: Visual alert only.
+- **Audio**: Voice alert only.
+- **None**: No alerts.
+
+> [!NOTE]
+> This feature has not been fully released yet, so the setting will have no effect.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: BannerAndAudio
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
