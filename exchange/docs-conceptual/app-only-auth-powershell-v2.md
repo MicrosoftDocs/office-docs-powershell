@@ -147,6 +147,14 @@ The following examples show how to use the Exchange Online PowerShell module wit
 
 An initial onboarding is required for authentication using application objects. Application and service principal are used interchangeably, but an application is like a class object while a service principal is like an instance of the class. For more information, see [Application and service principal objects in Microsoft Entra ID](/entra/identity-platform/app-objects-and-service-principals).
 
+When you configure or verify service principal registration for existing eDiscovery automations, distinguish these identifiers:
+
+| Identifier | Use |
+|:-|:-|
+| Application (client) ID | Identifies the application configured in the running integration. This is the **AppId** value in the eDiscovery setup instructions. |
+| App-registration Object ID | Identifies the application object shown under **App registrations**. Don't substitute it for the enterprise application's service principal Object ID. |
+| Enterprise application Object ID | Identifies the tenant-local service principal shown under **Enterprise applications**. When you create the service principal with **New-ServicePrincipal**, use the customer tenant's Enterprise application Object ID for **-ObjectId**, not the Object ID shown under **App registrations**. |
+
 For a detailed visual flow about creating applications in Microsoft Entra ID, see <https://aka.ms/azuread-app>.
 
 1. [Register the application in Microsoft Entra ID](#step-1-register-the-application-in-microsoft-entra-id).
@@ -547,13 +555,18 @@ To assign custom role groups to the application using service principals, do the
    - Create a service principal object for the Microsoft Entra application.
    - Store the details of the service principal in a variable to use in the next step.
 
+   > [!IMPORTANT]
+   > When you create the service principal with **New-ServicePrincipal**, set **-ObjectId** to the **Object ID** shown under **Enterprise applications** in the customer tenant. **Don't use the Object ID shown under App registrations**; it identifies the application object, not the tenant's service principal, and can cause configuration and authorization failures.
+   >
+   > In the following commands, **-AppId** is the Application (client) ID, and **-ObjectId** is the Enterprise application Object ID returned in the **Id** property by **Get-MgServicePrincipal** in step 1.
+
+   For example:
+
    ```powershell
    New-ServicePrincipal -AppId $<VariableName1>.AppId -ObjectId $<VariableName1>.Id -DisplayName "<Descriptive Name>"
 
    $<VariableName2> = Get-ServicePrincipal -Identity "<Descriptive Name>"
    ```
-
-   For example:
 
    ```powershell
    New-ServicePrincipal -AppId $AzureADApp.AppId -ObjectId $AzureADApp.Id -DisplayName "SP for Azure AD App ExO PowerShell CBA"
