@@ -20,7 +20,7 @@ Returns a list of devices for which remote log collection has been initiated for
 
 ### Identity (Default)
 ```
-Get-CsTeamsRemoteLogCollectionDevice [[-Identity] <Guid>]
+Get-CsTeamsRemoteLogCollectionDevice [[-Identity] <Guid>] [-Id <Guid>]
 [<CommonParameters>]
 ```
 
@@ -54,6 +54,22 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -Id
+Identity of the record (the remote log collection device).
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### CommonParameters
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](https://go.microsoft.com/fwlink/?LinkID=113216).

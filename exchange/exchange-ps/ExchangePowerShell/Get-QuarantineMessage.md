@@ -59,6 +59,10 @@ Get-QuarantineMessage
 ```
 
 ## DESCRIPTION
+Don't use the _PermissionTo\*_ properties returned to an admin in the output of this cmdlet to determine the actions available to message recipients. Instead, use the **Get-QuarantinePolicy** cmdlet to view the end-user permissions configured in the assigned quarantine policy. The _PermissionTo\*_ properties reflect the permissions of the user who runs the cmdlet. They don't necessarily represent the actions available to message recipients under the quarantine policy assigned to the message.
+
+For example, admins who have permission to release quarantined messages might see the value `True` for the _PermissionToRelease_, _PermissionToAllowSender_, and _PermissionToDownload_ properties, even when the assigned quarantine policy is `AdminOnlyAccessPolicy`. Admins without release permissions and regular users see the applicable end-user permission values.
+
 You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
 ## EXAMPLES

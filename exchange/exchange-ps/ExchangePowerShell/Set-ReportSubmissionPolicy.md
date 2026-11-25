@@ -79,6 +79,7 @@ Set-ReportSubmissionPolicy [-Identity] <ReportSubmissionPolicyIdParameter>
  [-PreSubmitMessageTitleForJunk <String>]
  [-PreSubmitMessageTitleForNotJunk <String>]
  [-PreSubmitMessageTitleForPhishing <String>]
+ [-ReportChatMessageAddresses <MultiValuedProperty>]
  [-ReportChatMessageEnabled <Boolean>]
  [-ReportChatMessageToCustomizedAddressEnabled <Boolean>]
  [-ReportJunkAddresses <MultiValuedProperty>]
@@ -95,16 +96,18 @@ Set-ReportSubmissionPolicy [-Identity] <ReportSubmissionPolicyIdParameter>
 ```
 
 ## DESCRIPTION
-The report submission policy controls most of the settings for user submissions in the Microsoft Defender portal at <https://security.microsoft.com/securitysettings/userSubmission>.
+The report submission policy controls most of the settings for user submissions in the Microsoft Defender portal:
 
-The report submission rule (the SentTo parameter \*-ReportSubmissionRule cmdlets) controls the email address of the reporting mailbox where user reported messages are sent.
+- Email user reported settings: <https://security.microsoft.com/securitysettings/userSubmission>.
+- Teams user reported settings: <https://security.microsoft.com/securitysettings/teamsUserSubmission>.
 
 When you set the email address of the reporting mailbox in the Microsoft Defender portal, the same email address is also set in the following parameters in the \*-ReportSubmissionPolicy cmdlets:
 
 - Microsoft integrated reporting using Microsoft reporting tools in Outlook: The ReportJunkAddresses, ReportNotJunkAddresses, and ReportPhishAddresses parameters.
 - Microsoft integrated reporting using non-Microsoft tools in Outlook: The ThirdPartyReportAddresses parameter.
+- User reporting in Teams: The ReportChatMessageAddresses parameter.
 
-Although it's not absolutely required, it makes sense to keep the email address consistent in the related parameters in the \*-ReportSubmissionPolicy and \*-ReportSubmissionRule cmdlets.
+For reporting in Outlook, although it's not absolutely required, it makes sense to keep the email address consistent in the related parameters in the \*-ReportSubmissionPolicy and \*-ReportSubmissionRule cmdlets. User reporting in Teams doesn't use the report submission rule.
 
 You need to be assigned permissions before you can run this cmdlet. Although this article lists all parameters for the cmdlet, you might not have access to some parameters if they aren't included in the permissions assigned to you. To find the permissions required to run any cmdlet or parameter in your organization, see [Find the permissions required to run any Exchange cmdlet](https://learn.microsoft.com/powershell/exchange/find-exchange-cmdlet-permissions).
 
@@ -182,6 +185,15 @@ Get-ReportSubmissionRule | Remove-ReportSubmissionRule
 This example turns off the Microsoft integrated reporting. Microsoft reporting tools in Outlook are not available to users and messages reported by non-Microsoft tools in Outlook are not available on the Submissions page in the Microsoft Defender portal.
 
 If the report submission rule doesn't already exist (the Get-ReportSubmissionRule command returns no output), you don't need to run the second command to remove it.
+
+### Example 6
+```powershell
+$teamsReports = "teamsreports@contoso.com"
+
+Set-ReportSubmissionPolicy -Identity DefaultReportSubmissionPolicy -ReportChatMessageEnabled $true -ReportChatMessageToCustomizedAddressEnabled $true -ReportChatMessageAddresses $teamsReports
+```
+
+This example sends user reported Teams messages and calls to Microsoft and to the specified reporting mailbox in Exchange Online.
 
 ## PARAMETERS
 
@@ -1338,11 +1350,34 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -ReportChatMessageAddresses
+
+> Applicable: Exchange Online
+
+The ReportChatMessageAddresses parameter specifies the reporting mailbox in Exchange Online that receives user reported messages and calls from Teams. Specify one Exchange Online mailbox.
+
+To send reported Teams items to the specified mailbox, set the ReportChatMessageToCustomizedAddressEnabled parameter to $true. To remove the reporting mailbox, use the value $null for this parameter.
+
+```yaml
+Type: MultiValuedProperty
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ReportChatMessageEnabled
 
 > Applicable: Exchange Online
 
-This parameter is reserved for internal Microsoft use.
+The ReportChatMessageEnabled parameter specifies whether user reported messages and calls from Teams are sent to Microsoft for analysis. Valid values are:
+
+- $true: User reported Teams items are sent to Microsoft.
+- $false: User reported Teams items aren't sent to Microsoft.
 
 ```yaml
 Type: Boolean
@@ -1360,7 +1395,10 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-{{ Fill ReportChatMessageToCustomizedAddressEnabled Description }}
+The ReportChatMessageToCustomizedAddressEnabled parameter specifies whether user reported messages and calls from Teams are sent to the reporting mailbox specified by the ReportChatMessageAddresses parameter. Valid values are:
+
+- $true: User reported Teams items are sent to the reporting mailbox.
+- $false: User reported Teams items aren't sent to the reporting mailbox.
 
 ```yaml
 Type: Boolean

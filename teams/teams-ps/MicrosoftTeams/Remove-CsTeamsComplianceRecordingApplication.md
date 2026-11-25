@@ -20,7 +20,7 @@ Automatic policy-based recording is only applicable to Microsoft Teams users.
 ## SYNTAX
 
 ```
-Remove-CsTeamsComplianceRecordingApplication [-Tenant <System.Guid>] [-Identity <XdsIdentity>]
+Remove-CsTeamsComplianceRecordingApplication [-Tenant <System.Guid>] [-Identity <XdsIdentity>] [-Id <Guid>] [-Parent <String>]
  [-Force] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
@@ -125,6 +125,36 @@ Parameter Sets: (All)
 Aliases:
 
 Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Id
+The object ID of the compliance recording application (bot) in Microsoft Entra ID (Azure Active Directory).
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Parent
+The identity of the parent Teams Compliance Recording Policy that contains this compliance recording application.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: True
 Position: Named
 Default value: None
 Accept pipeline input: False

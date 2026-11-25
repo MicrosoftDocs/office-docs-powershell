@@ -21,7 +21,7 @@ This cmdlet allows you to edit the properties of an existing TeamsRemoteLogColle
 
 ```powershell
 Set-CsTeamsRemoteLogCollectionDevice [-Identity <Guid>] [-UserId <String>]
- [-DeviceId <String>] [-ExpireAfter <String>] [-WhatIf] [-Confirm]
+ [-DeviceId <String>] [-ExpireAfter <String>] [-Id <Guid>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -125,6 +125,22 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
+
+### -Id
+Identity of the record (the remote log collection device).
+
+```yaml
+Type: Guid
+Parameter Sets: (All)
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 
 ### -WhatIf
 Shows what would happen if the cmdlet runs.
