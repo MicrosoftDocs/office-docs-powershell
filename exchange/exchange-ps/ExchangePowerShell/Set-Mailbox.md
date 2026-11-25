@@ -4042,7 +4042,14 @@ Accept wildcard characters: False
 
 This parameter is available only in the cloud-based service.
 
-{{ Fill IsExchangeCloudManaged Description }}
+The IsExchangeCloudManaged parameter specifies whether the Exchange attributes of a directory-synchronized mailbox are managed in Exchange Online or on-premises.
+
+Valid values are:
+
+- `$true`: Exchange attributes are managed in Exchange Online. Inbound updates to Exchange attributes from on-premises Active Directory are blocked. The user's identity attributes remain authoritative on-premises.
+- `$false`: Exchange attributes are managed on-premises. The next inbound directory synchronization cycle can update the mailbox's Exchange attributes from on-premises Active Directory.
+
+This parameter applies only to mailboxes associated with users where `IsDirSynced` is `true`. Don't use this parameter together with other Set-Mailbox parameters.
 
 ```yaml
 Type: Boolean
