@@ -25,14 +25,24 @@ For information about the parameter sets in the Syntax section below, see [Excha
 ```
 New-InboxRule [-Name] <String>
  [-AlwaysDeleteOutlookRulesBlob]
+ [-AnyCategory <Boolean>]
+ [-AssignedCategories <String[]>]
  [-ApplyCategory <MultiValuedProperty>]
  [-ApplySystemCategory <MultiValuedProperty>]
  [-BodyContainsWords <MultiValuedProperty>]
+ [-BulkCategory <Boolean>]
+ [-ClearCategories <Boolean>]
+ [-ClearFlag <Boolean>]
+ [-CompleteFlag <Boolean>]
  [-Confirm]
  [-CopyToFolder <MailboxFolderIdParameter>]
  [-DeleteMessage <Boolean>]
  [-DeleteSystemCategory <MultiValuedProperty>]
+ [-DisplayAlert <String>]
  [-DomainController <Fqdn>]
+ [-ExceptIfAnyCategory <Boolean>]
+ [-ExceptIfAssignedCategories <String[]>]
+ [-ExceptIfBulkCategory <Boolean>]
  [-ExceptIfBodyContainsWords <MultiValuedProperty>]
  [-ExceptIfFlaggedForAction <String>]
  [-ExceptIfFrom <RecipientIdParameter[]>]
@@ -57,6 +67,7 @@ New-InboxRule [-Name] <String>
  [-ExceptIfWithinSizeRangeMinimum <ByteQuantifiedSize>]
  [-ExceptIfWithSensitivity <Sensitivity>]
  [-FlaggedForAction <String>]
+ [-FlagMessage <String>]
  [-Force]
  [-ForwardAsAttachmentTo <RecipientIdParameter[]>]
  [-ForwardTo <RecipientIdParameter[]>]
@@ -74,7 +85,9 @@ New-InboxRule [-Name] <String>
  [-MyNameInToBox <Boolean>]
  [-MyNameInToOrCcBox <Boolean>]
  [-MyNameNotInToBox <Boolean>]
+ [-PermanentDelete <Boolean>]
  [-PinMessage <Boolean>]
+ [-PlaySound <String>]
  [-Priority <Int32>]
  [-ReceivedAfterDate <ExDateTime>]
  [-ReceivedBeforeDate <ExDateTime>]
@@ -209,6 +222,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AnyCategory
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill AnyCategory Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AssignedCategories
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill AssignedCategories Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -ApplyCategory
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
@@ -298,14 +351,94 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -BulkCategory
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill BulkCategory Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearCategories
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill ClearCategories Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ClearFlag
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill ClearFlag Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CompleteFlag
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill CompleteFlag Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Confirm
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
@@ -418,6 +551,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -DisplayAlert
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill DisplayAlert Description }}
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -DomainController
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE
@@ -429,6 +582,66 @@ The DomainController parameter specifies the domain controller that's used by th
 ```yaml
 Type: Fqdn
 Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfAnyCategory
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill ExceptIfAnyCategory Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfAssignedCategories
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill ExceptIfAssignedCategories Description }}
+
+```yaml
+Type: String[]
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExceptIfBulkCategory
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill ExceptIfBulkCategory Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity
 Aliases:
 
 Required: False
@@ -1047,6 +1260,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -FlagMessage
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill FlagMessage Description }}
+
+```yaml
+Type: String
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Force
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
@@ -1470,6 +1703,26 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -PermanentDelete
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill PermanentDelete Description }}
+
+```yaml
+Type: Boolean
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -PinMessage
 
 > Applicable: Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
@@ -1481,6 +1734,26 @@ The PinMessage parameter specifies an action for the Inbox rule that pins messag
 
 ```yaml
 Type: Boolean
+Parameter Sets: Identity
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PlaySound
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+{{ Fill PlaySound Description }}
+
+```yaml
+Type: String
 Parameter Sets: Identity
 Aliases:
 
@@ -1769,7 +2042,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Server 2010, Exchange Server 2013, Exchange Server 2016, Exchange Server 2019, Exchange Server SE, Exchange Online
 
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+The WhatIf switch shows what the command does without making any changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

@@ -2,7 +2,6 @@
 title: Use Azure managed identities to connect to Exchange Online PowerShell
 ms.date: 8/24/2023
 ms.audience: Admin
-audience: Admin
 ms.topic: article
 ms.service: exchange-online
 ms.reviewer:
@@ -10,7 +9,6 @@ ms.localizationpriority: high
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
-search.appverid: MET150
 description: "Learn about using the Exchange Online PowerShell V3 module and Azure managed identity to connect to Exchange Online PowerShell."
 ---
 
@@ -288,7 +286,7 @@ For detailed syntax and parameter information, see [New-AzAutomationModule](/pow
 
 #### Add the Exchange Online PowerShell module to Azure VMs with system-assigned managed identities
 
-Install the Exchange Online PowerShell module in the Azure VM. For instructions, see [Install and maintain the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-maintain-the-exchange-online-powershell-module).
+Install the Exchange Online PowerShell module in the Azure VM. For instructions, see [Install and update the Exchange Online PowerShell module](exchange-online-powershell-v2.md#install-and-update-the-exchange-online-powershell-module).
 
 ### Step 4: Grant the Exchange.ManageAsApp API permission for the managed identity to call Exchange Online
 
@@ -326,7 +324,7 @@ The procedures in this step require the Microsoft Graph PowerShell SDK. For inst
 
 For detailed syntax and parameter information, see the following articles:
 
-- [Connect-MgGraph](/powershell/module/microsoft.graph.applications/new-mgserviceprincipalapproleassignment)
+- [Connect-MgGraph](/powershell/module/microsoft.graph.authentication/connect-mggraph)
 - [Get-MgServicePrincipal](/powershell/module/microsoft.graph.applications/get-mgserviceprincipal)
 - [New-MgServicePrincipalAppRoleAssignment](/powershell/module/microsoft.graph.applications/new-mgserviceprincipalapproleassignment)
 
@@ -428,7 +426,7 @@ To assign a role to the managed identity in Microsoft Graph PowerShell, do the f
 
 For detailed syntax and parameter information, see the following articles:
 
-- [Connect-MgGraph](/powershell/module/microsoft.graph.applications/new-mgserviceprincipalapproleassignment).
+- [Connect-MgGraph](/powershell/module/microsoft.graph.authentication/connect-mggraph)
 - [New-MgRoleManagementDirectoryRoleAssignment](/powershell/module/microsoft.graph.identity.governance/new-mgrolemanagementdirectoryroleassignment)
 
 ## Create and configure a user-assigned managed identity

@@ -2,7 +2,6 @@
 title: "Control remote PowerShell access to Exchange servers"
 ms.date: 9/7/2023
 ms.audience: ITPro
-audience: ITPro
 ms.topic: article
 ms.localizationpriority: medium
 ms.assetid: 064e3bb0-38bf-495e-9994-784f823b88dd

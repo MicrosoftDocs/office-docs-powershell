@@ -1,10 +1,10 @@
 ---
-author: serdarsoysal
+author: officedocspr
 external help file: Microsoft.Teams.ConfigAPI.Cmdlets-help.xml
 Locale: en-US
 manager: farahf
 Module Name: MicrosoftTeams
-ms.author: serdars
+ms.author: odocspr
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/get-csteamtemplate
 schema: 2.0.0
 title: Get-CsTeamTemplate

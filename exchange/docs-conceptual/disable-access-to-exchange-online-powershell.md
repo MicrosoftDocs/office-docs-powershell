@@ -2,11 +2,9 @@
 title: "Enable or disable access to Exchange Online PowerShell"
 ms.date: 07/11/2025
 ms.audience: Admin
-audience: Admin
 ms.topic: article
 ms.localizationpriority: medium
 ms.assetid: f969816a-2607-4655-9d47-9e8767fb5633
-search.appverid: MET150
 description: "Admins can learn how to disable or enable access to Exchange Online PowerShell for users in their organization"
 ---
 

@@ -39,7 +39,6 @@ Set-Place [-Identity] <RecipientIdParameter>
  [-Label <String>]
  [-MTREnabled <Boolean>]
  [-ParentId <String>]
- [-ParentType <Microsoft.Exchange.Management.RecipientTasks.SetPlaceParentType>]
  [-Phone <String>]
  [-PostalCode <String>]
  [-State <String>]
@@ -375,31 +374,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ParentType
-
-> Applicable: Exchange Online
-
-**Note**: This feature is experimental and is available only for organizations using Microsoft Places.
-
-The ParentType parameter specifies the parent type of the ParentId in Microsoft Places. Valid values are:
-
-- Floor
-- Section
-
-Organizations that are onboarding Rooms and Workspaces to Microsoft Places need to use the ParentId and ParentType parameters in a Set-Place command so Microsoft Places works properly.
-
-```yaml
-Type: Microsoft.Exchange.Management.RecipientTasks.SetPlaceParentType
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Phone
 
 > Applicable: Exchange Online
@@ -516,7 +490,7 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online
 
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
+The WhatIf switch shows what the command does without making any changes. You don't need to specify a value with this switch.
 
 ```yaml
 Type: SwitchParameter

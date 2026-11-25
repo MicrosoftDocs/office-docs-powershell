@@ -1,11 +1,11 @@
 ---
 applicable: Microsoft Teams
-author: serdarsoysal
+author: officedocspr
 external help file: Microsoft.Rtc.Management.dll-help.xml
 Locale: en-US
 manager: prkosh
 Module Name: MicrosoftTeams
-ms.author: serdars
+ms.author: odocspr
 ms.reviewer: mhayrapetyan
 online version: https://learn.microsoft.com/powershell/module/microsoftteams/set-csteamsapppermissionpolicy
 schema: 2.0.0

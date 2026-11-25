@@ -27,7 +27,6 @@ Release-QuarantineMessage -User <String[]> [-Identities <QuarantineMessageIdenti
  [-Identity <QuarantineMessageIdentity>]
  [-AllowSender]
  [-Confirm]
- [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
  [-Force]
  [-ReportFalsePositive]
  [-WhatIf]
@@ -40,7 +39,6 @@ Release-QuarantineMessage [-Identities <QuarantineMessageIdentity[]>] [-Identity
  [-ReleaseToAll]
  [-AllowSender]
  [-Confirm]
- [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
  [-Force]
  [-ReportFalsePositive]
  [-WhatIf]
@@ -54,7 +52,6 @@ Release-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
  [-ActionType <ReleaseActionType>]
  [-AllowSender]
  [-Confirm]
- [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
  [-Force]
  [-ReportFalsePositive]
  [-WhatIf]
@@ -66,7 +63,6 @@ Release-QuarantineMessage -Identities <QuarantineMessageIdentity[]>
 Release-QuarantineMessage -Identity <QuarantineMessageIdentity>
  [-AllowSender]
  [-Confirm]
- [-EntityType <Microsoft.Exchange.Management.FfoQuarantine.EntityType>]
  [-Force]
  [-ReportFalsePositive]
  [-WhatIf]
@@ -246,38 +242,15 @@ Accept wildcard characters: False
 
 > Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 
-The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on if the cmdlet requires confirmation before proceeding.
+The Confirm switch specifies whether to show or hide the confirmation prompt. How this switch affects the cmdlet depends on whether the cmdlet requires confirmation before proceeding.
 
 - Destructive cmdlets (for example, Remove-\* cmdlets) have a built-in pause that forces you to acknowledge the command before proceeding. For these cmdlets, you can skip the confirmation prompt by using this exact syntax: `-Confirm:$false`.
-- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you acknowledge the command before proceeding.
+- Most other cmdlets (for example, New-\* and Set-\* cmdlets) don't have a built-in pause. For these cmdlets, specifying the Confirm switch without a value introduces a pause that forces you to acknowledge the command before proceeding.
 
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -EntityType
-
-> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
-
-The EntityType parameter filters the results by EntityType. Valid values are:
-
-- Email
-- SharePointOnline
-- Teams (currently in Preview)
-- DataLossPrevention
-
-```yaml
-Type: Microsoft.Exchange.Management.FfoQuarantine.EntityType
-Parameter Sets: (All)
-Aliases:
 
 Required: False
 Position: Named
@@ -328,12 +301,11 @@ Accept wildcard characters: False
 
 ### -WhatIf
 
-> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
-
-The WhatIf switch simulates the actions of the command. You can use this switch to view the changes that would occur without actually applying those changes. You don't need to specify a value with this switch.
-
 The WhatIf switch doesn't work in Security & Compliance PowerShell.
 
+The WhatIf switch shows what the command does without making any changes. You don't need to specify a value with this switch.
+
+> Applicable: Exchange Online, Security & Compliance, Built-in security add-on for on-premises mailboxes
 ```yaml
 Type: SwitchParameter
 Parameter Sets: (All)

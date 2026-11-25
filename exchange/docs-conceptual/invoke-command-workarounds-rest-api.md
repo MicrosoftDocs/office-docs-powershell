@@ -2,14 +2,12 @@
 title: Workarounds for Invoke-Command scenarios in REST API connections
 ms.date: 7/5/2023
 ms.audience: Admin
-audience: Admin
 ms.topic: article
 ms.reviewer:
 ms.localizationpriority: medium
 ms.collection: Strat_EX_Admin
 ms.custom:
 ms.assetid:
-search.appverid: MET150
 description: "Learn about the alternatives to Invoke-Command commands in REST API connections using the EXO V3 module."
 ---
 
