@@ -46,7 +46,7 @@ This example adds the AeD (for eDiscovery Premium events) record type to the pol
 
 ### Example 2
 ```powershell
-Set-UnifiedAuditLogRetentionPolicy -Name "SearchQueryPerformed by app@sharepoint" -Operations SearchQueryPerformed,FileAccessed -UserIds $null -RetentionDuration SixMonths -Priority 10000
+Set-UnifiedAuditLogRetentionPolicy -Identity "SearchQueryPerformed by app@sharepoint" -Operations SearchQueryPerformed,FileAccessed -UserIds $null -RetentionDuration SixMonths -Priority 10000
 ```
 
 This example modifies an audit log retention policy and changes to retention duration to six months, adds an additional activity to the Operations parameter, and removes all values from the UserId property so the policy applies to all users.
