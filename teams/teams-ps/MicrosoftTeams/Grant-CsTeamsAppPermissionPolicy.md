@@ -29,12 +29,6 @@ Grant-CsTeamsAppPermissionPolicy [<CommonParameters>]
 Grant-CsTeamsAppPermissionPolicy [-Identity] <String> [[-PolicyName] <String>] [<CommonParameters>]
 ```
 
-### GrantToGroup
-```
-Grant-CsTeamsAppPermissionPolicy [[-PolicyName] <String>] [-Group] <String> [-Rank] <Int32>
- [<CommonParameters>]
-```
-
 ### GrantToTenant
 ```
 Grant-CsTeamsAppPermissionPolicy [[-PolicyName] <String>] [-Global] [-Force] [<CommonParameters>]
@@ -103,21 +97,6 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Group
-Specifies the group used for the group policy assignment.
-
-```yaml
-Type: String
-Parameter Sets: GrantToGroup
-Aliases:
-
-Required: True
-Position: 0
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Identity
 The user to whom the policy should be assigned.
 
@@ -158,22 +137,6 @@ Aliases:
 
 Required: True
 Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Rank
-The rank of the policy assignment, relative to other group policy assignments for the same policy type.
-
-```yaml
-Type: Int32
-Parameter Sets: GrantToGroup
-Aliases:
-
-Required: True
-Position: Named
-
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
