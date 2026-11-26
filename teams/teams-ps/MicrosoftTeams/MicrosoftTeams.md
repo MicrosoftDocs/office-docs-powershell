@@ -1130,6 +1130,9 @@ Add a new channel to a team.
 ### [New-TeamsApp](New-TeamsApp.md)
 Creates a new app in the Teams tenant app store.
 
+### [New-TeamsCustomEmoji](New-TeamsCustomEmoji.md)
+Uploads custom emojis to a Microsoft Teams tenant.
+
 ### [Register-CsOnlineDialInConferencingServiceNumber](Register-CsOnlineDialInConferencingServiceNumber.md)
 The Register-CsOnlineDialInConferencingServiceNumber command allows you to assign any additional service number that you may have acquired to your conference bridge.
 
@@ -1441,6 +1444,9 @@ Removes a user from a channel in Microsoft Teams.
 
 ### [Remove-TeamsApp](Remove-TeamsApp.md)
 Removes an app in the Teams tenant app store.
+
+### [Remove-TeamsCustomEmoji](Remove-TeamsCustomEmoji.md)
+Removes all custom emojis from a Microsoft Teams tenant.
 
 ### [Remove-TeamTargetingHierarchy](Remove-TeamTargetingHierarchy.md)
 Removes the tenant's hierarchy.
