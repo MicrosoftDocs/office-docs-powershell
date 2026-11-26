@@ -83,6 +83,7 @@ New-MigrationEndpoint -Name <String> -RemoteServer <Fqdn>
  [-ApplicationId <String>]
  [-AppSecretKeyVaultUrl <String>]
  [-Confirm]
+ [-UseOauth]
  [-DomainController <Fqdn>]
  [-MaxConcurrentIncrementalSyncs <Unlimited>]
  [-MaxConcurrentMigrations <Unlimited>]
@@ -432,7 +433,7 @@ The ExchangeRemoteMove switch specifies the type of endpoint for cross-forest mo
 
 ```yaml
 Type: SwitchParameter
-Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeRemoteMove
+Parameter Sets: ExchangeRemoteMoveAutoDiscover, ExchangeRemoteMove, ExchangeRemoteMoveOAuth
 Aliases:
 
 Required: True
@@ -591,7 +592,7 @@ The RemoteServer parameter specifies the FQDN of the remote server, which depend
 
 ```yaml
 Type: Fqdn
-Parameter Sets: ExchangeRemoteMove, PSTImport, IMAP, Compliance, MrsProxyPublicFolderToUnifiedGroup, MrsProxyPublicFolder
+Parameter Sets: ExchangeRemoteMove, PSTImport, IMAP, Compliance, MrsProxyPublicFolderToUnifiedGroup, MrsProxyPublicFolder, ExchangeRemoteMoveOAuth
 Aliases:
 
 Required: True
@@ -1051,6 +1052,26 @@ If you don't use this parameter, the migration service uses the migration arbitr
 ```yaml
 Type: MailboxIdParameter
 Parameter Sets: ExchangeOutlookAnywhereAutoDiscover, ExchangeOutlookAnywhere, Gmail, GoogleMarketplaceApp, PublicFolder, MrsProxyPublicFolderToUnifiedGroup, LegacyPublicFolderToUnifiedGroup
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -UseOauth
+
+> Applicable: Exchange Online
+
+This parameter is available only in the cloud-based service.
+
+The UseOauth switch specifies the endpoint will use OAuth authorization to connect to the source endpoint for Exchange remote move migrations. When using this switch you do not need to specify the -Credentials parameter.
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: ExchangeRemoteMoveOAuth
 Aliases:
 
 Required: False
