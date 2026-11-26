@@ -287,6 +287,9 @@ This cmdlet displays existing tenant level telephone number default configuratio
 ### [Get-CsPolicyPackage](Get-CsPolicyPackage.md)
 This cmdlet supports retrieving all the policy packages available on a tenant.
 
+### [Get-CsPreMeetingConsent](Get-CsPreMeetingConsent.md)
+Gets pre-meeting consent configurations.
+
 ### [Get-CsTeamsRemoteLogCollectionConfiguration](Get-CsTeamsRemoteLogCollectionConfiguration.md)
 This cmdlet displays all the devices added to the configuration for remote log collection.
 
@@ -926,6 +929,9 @@ Creates a new bulk update order for reverse number lookup option.
 ### [New-CsPhoneNumberBulkUpdateTagsOrder](New-CsPhoneNumberBulkUpdateTagsOrder.md)
 Creates a new bulk update order for phone number tags. 
 
+### [New-CsPreMeetingConsent](New-CsPreMeetingConsent.md)
+Creates a pre-meeting consent configuration with localized content.
+
 ### [New-CsTeamsRemoteLogCollectionDevice](New-CsTeamsRemoteLogCollectionDevice.md)
 This cmdlet creates a request for remote log collection for a device.
 
@@ -1024,6 +1030,9 @@ This cmdlet is used to create a `HiddenTemplate` object.
 
 ### [New-CsTeamsIPPhonePolicy](New-CsTeamsIPPhonePolicy.md)
 New-CsTeamsIPPhonePolicy allows you to create a policy to manage features related to Teams phone experiences.
+
+### [New-CsTeamsLocalizedContent](New-CsTeamsLocalizedContent.md)
+Creates a localized entry for pre-meeting consent.
 
 ### [New-CsTeamsMediaConnectivityPolicy](New-CsTeamsMediaConnectivityPolicy.md)
 This cmdlet creates a Teams media connectivity policy.
@@ -1246,6 +1255,9 @@ This cmdlet allows admin to remove a tag from phone number.
 
 ### [Remove-CsPhoneNumberTenantConfiguration](Remove-CsPhoneNumberTenantConfiguration.md)
 This cmdlet allows the admins to remove a tenant default configuration that applies to all telephone numbers within the tenant.
+
+### [Remove-CsPreMeetingConsent](Remove-CsPreMeetingConsent.md)
+Removes a pre-meeting consent configuration.
 
 ### [Remove-CsTeamsRemoteLogCollectionDevice](Remove-CsTeamsRemoteLogCollectionDevice.md)
 This cmdlet will remove/delete a device from the remote log collection configuration.
@@ -1576,6 +1588,9 @@ This cmdlet allows the admin to create and assign a tag to a phone number.
 
 ### [Set-CsPhoneNumberTenantConfiguration](Set-CsPhoneNumberTenantConfiguration.md)
 This cmdlet allows the admins to set a tenant default configuration that applies to all telephone numbers within the tenant.
+
+### [Set-CsPreMeetingConsent](Set-CsPreMeetingConsent.md)
+Updates the localized content of a pre-meeting consent configuration.
 
 ### [Set-CsTeamsRemoteLogCollectionDevice](Set-CsTeamsRemoteLogCollectionDevice.md)
 This cmdlet allows the admin to create and edit a device requested for remote log collection.
