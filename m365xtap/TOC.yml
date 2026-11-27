@@ -1,2 +1,30 @@
-- name: Index
+- name: Microsoft 365 cross-tenant access PowerShell
   href: index.md
+- name: New-PartnerEntraXTAP
+  href: index.md#new-partnerentraxtap
+- name: Get-PartnerEntraXTAP
+  href: index.md#get-partnerentraxtap
+- name: Set-PartnerEntraXTAP
+  href: index.md#set-partnerentraxtap
+- name: Remove-PartnerEntraXTAP
+  href: index.md#remove-partnerentraxtap
+- name: Get-DefaultEntraXTAP
+  href: index.md#get-defaultentraxtap
+- name: Set-DefaultEntraXTAP
+  href: index.md#set-defaultentraxtap
+- name: Reset-DefaultEntraXTAP
+  href: index.md#reset-defaultentraxtap
+- name: New-PartnerM365XTAPCapability
+  href: index.md#new-partnerm365xtapcapability
+- name: Get-PartnerM365XTAPCapability
+  href: index.md#get-partnerm365xtapcapability
+- name: Set-PartnerM365XTAPCapability
+  href: index.md#set-partnerm365xtapcapability
+- name: Remove-PartnerM365XTAPCapability
+  href: index.md#remove-partnerm365xtapcapability
+- name: New-DefaultM365XTAPCapability
+  href: index.md#new-defaultm365xtapcapability
+- name: Get-DefaultM365XTAPCapability
+  href: index.md#get-defaultm365xtapcapability
+- name: Set-DefaultM365XTAPCapability
+  href: index.md#set-defaultm365xtapcapability
