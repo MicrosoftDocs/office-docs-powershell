@@ -602,6 +602,8 @@ Set-PartnerEntraXTAP `
 
 ### Parameters
 
+The parameters are the same as New-PartnerEntraXTAP, except that -PartnerTenantId maps to the route key (CrossTenantAccessPolicyConfigurationPartnerTenantId) rather than the body field.
+
 The Microsoft 365 Collaboration and App Service Connect parameters are described under New-PartnerEntraXTAP. Set-PartnerEntraXTAP also supports the -PassThru parameter.
 
 #### PassThru
@@ -1031,7 +1033,7 @@ Resets the tenant-wide default XTAP configuration. This cmdlet doesn't require -
 > [!WARNING]
 > Resetting default settings can affect multiple external organizations and settings beyond Microsoft 365 Collaboration. Review the impact and obtain approval before running this command.
 
-To confirm that the default configuration has been restored to the system defaults, run **Get-DefaultEntraXTAP**and confirm that **isSystemDefault** is set to true
+To confirm that the default configuration has been restored to the system defaults, run **Get-DefaultEntraXTAP** and confirm that **isSystemDefault** is set to true.
 
 ### Syntax
 
